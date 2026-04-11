@@ -75,6 +75,10 @@ func NewDefaultOAuthConfig(port int) *oauth2.Config {
 		ClientID:    libspot.ClientIdHex,
 		RedirectURL: fmt.Sprintf("http://127.0.0.1:%d/login", port),
 		Scopes:      AllScopes(),
-		Endpoint:    spotify.Endpoint,
+		Endpoint: oauth2.Endpoint{
+			AuthURL:   spotify.Endpoint.AuthURL,
+			TokenURL:  spotify.Endpoint.TokenURL,
+			AuthStyle: oauth2.AuthStyleInParams,
+		},
 	}
 }

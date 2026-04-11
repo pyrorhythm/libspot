@@ -2,6 +2,7 @@ package auth
 
 import (
 	"context"
+	"log/slog"
 	"net/http"
 	"strconv"
 	"time"
@@ -35,6 +36,7 @@ func handleCallbackHTTP(codeCh chan<- string) func(http.ResponseWriter, *http.Re
 			http.Error(w, "missing code", http.StatusBadRequest)
 			return
 		}
+		slog.Debug("oauth server: got code", "code", code)
 		w.Header().Set("Content-Type", "text/html")
 		_, _ = w.Write(
 			[]byte("<html><body>Login successful! You can close this tab.</body></html>"),

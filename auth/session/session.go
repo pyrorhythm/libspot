@@ -10,12 +10,13 @@ import (
 	"encoding/pem"
 	"errors"
 	"fmt"
+	"log/slog"
 	"net/http"
 	"sync"
 
 	"github.com/pyrorhythm/libspot"
 	"github.com/pyrorhythm/libspot/auth/dpop"
-	"github.com/pyrorhythm/libspot/auth/kchain"
+	"github.com/pyrorhythm/libspot/auth/store"
 	"golang.org/x/oauth2"
 )
 
@@ -28,12 +29,13 @@ type storedCredentials struct {
 	UserName    string `json:"userName,omitempty"`
 	DeviceId    string `json:"deviceId,omitempty"`
 
-	// DPoP private key in PEM format (EC PRIVATE KEY)
-	DPoPPrivateKey string `json:"dpopPrivateKey,omitempty"`
+	DpopPkey string `json:"dpopPrivateKey,omitempty"`
 }
 
-type Session struct {
+type session struct {
 	mu sync.RWMutex
+
+	kcer store.Keychainer[storedCredentials]
 
 	creds *storedCredentials
 	conf  *oauth2.Config
@@ -41,9 +43,13 @@ type Session struct {
 	dpopClient *http.Client
 }
 
-func New(conf *oauth2.Config) *Session {
-	return &Session{
+func New(
+	conf *oauth2.Config,
+	keychainerFunc func(key string) store.Keychainer[storedCredentials],
+) Session {
+	return &session{
 		conf:  conf,
+		kcer:  keychainerFunc(sessionKey),
 		creds: &storedCredentials{Token: &oauth2.Token{}},
 	}
 }
@@ -65,9 +71,9 @@ func validateDeviceId(deviceId string) bool {
 
 // getOrCreateDPoPKey returns the private key. It either loads a stored key
 // or generates a new one and saves it to the keychain.
-func (s *Session) getOrCreateDPoPKey() (*ecdsa.PrivateKey, error) {
-	if s.creds.DPoPPrivateKey != "" {
-		block, _ := pem.Decode([]byte(s.creds.DPoPPrivateKey))
+func (s *session) getOrCreateDPoPKey() (*ecdsa.PrivateKey, error) {
+	if s.creds.DpopPkey != "" {
+		block, _ := pem.Decode([]byte(s.creds.DpopPkey))
 		if block == nil {
 			return nil, errors.New("invalid DPoP key PEM")
 		}
@@ -91,13 +97,13 @@ func (s *Session) getOrCreateDPoPKey() (*ecdsa.PrivateKey, error) {
 		Type:  "EC PRIVATE KEY",
 		Bytes: der,
 	})
-	s.creds.DPoPPrivateKey = string(pemBlock)
+	s.creds.DpopPkey = string(pemBlock)
 
 	return key, nil
 }
 
 // safeClientToken returns the Client‑Token, fetching it if necessary.
-func (s *Session) safeClientToken() (string, error) {
+func (s *session) safeClientToken() (string, error) {
 	clientToken := s.creds.ClientToken
 	deviceId := s.creds.DeviceId
 
@@ -119,9 +125,7 @@ func (s *Session) safeClientToken() (string, error) {
 	return token, nil
 }
 
-// InjectDPoPClient returns a context with an HTTP client that adds DPoP proofs.
-// The client is created lazily and reused.
-func (s *Session) InjectDPoPClient(ctx context.Context) (context.Context, error) {
+func (s *session) injectDPoPClient(ctx context.Context) (context.Context, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -140,19 +144,21 @@ func (s *Session) InjectDPoPClient(ctx context.Context) (context.Context, error)
 }
 
 // AuthURL generates the authorization URL and PKCE verifier.
-func (s *Session) AuthURL(state string) (url, pkce string) {
+func (s *session) AuthUrl(state string) (url, pkce string) {
 	pkce = oauth2.GenerateVerifier()
 	return s.conf.AuthCodeURL(state, oauth2.S256ChallengeOption(pkce)), pkce
 }
 
-// ProcessCode exchanges an authorization code for tokens.
-func (s *Session) ProcessCode(ctx context.Context, code, pkce string) error {
-	ctx, err := s.InjectDPoPClient(ctx)
+// AuthCode exchanges an authorization code for tokens.
+func (s *session) AuthCode(ctx context.Context, code, pkce string) error {
+	ctx, err := s.injectDPoPClient(ctx)
 	if err != nil {
 		return fmt.Errorf("prepare DPoP client: %w", err)
 	}
 
-	tok, err := s.conf.Exchange(ctx, code, oauth2.S256ChallengeOption(pkce))
+	slog.Debug("processing code", "code", code, "code_verifier", pkce)
+
+	tok, err := s.conf.Exchange(ctx, code, oauth2.VerifierOption(pkce))
 	if err != nil {
 		return fmt.Errorf("code exchange failed: %w", err)
 	}
@@ -162,7 +168,7 @@ func (s *Session) ProcessCode(ctx context.Context, code, pkce string) error {
 
 // AccessToken returns a valid access token, refreshing if necessary.
 // It does NOT attempt a refresh if no refresh token is available.
-func (s *Session) AccessToken(ctx context.Context) (string, error) {
+func (s *session) AccessToken(ctx context.Context) (string, error) {
 	s.mu.RLock()
 	valid := s.creds.Valid()
 	accessToken := s.creds.AccessToken
@@ -177,7 +183,7 @@ func (s *Session) AccessToken(ctx context.Context) (string, error) {
 	}
 
 	// Refresh required.
-	ctx, err := s.InjectDPoPClient(ctx)
+	ctx, err := s.injectDPoPClient(ctx)
 	if err != nil {
 		return "", err
 	}
@@ -197,7 +203,7 @@ func (s *Session) AccessToken(ctx context.Context) (string, error) {
 }
 
 // SaveToken updates the stored token and persists it to the keychain.
-func (s *Session) SaveToken(tok *oauth2.Token) error {
+func (s *session) SaveToken(tok *oauth2.Token) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -206,32 +212,30 @@ func (s *Session) SaveToken(tok *oauth2.Token) error {
 	if username, ok := tok.Extra("username").(string); ok {
 		s.creds.UserName = username
 	}
-	// The DPoP‑Nonce from the response is handled automatically by the transport.
-	// No need to store it separately here.
 
-	return kchain.Save(sessionKey, s.creds)
+	return s.kcer.Save(s.creds)
 }
 
-func (s *Session) RefreshToken() string {
+func (s *session) RefreshToken() string {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.creds.RefreshToken
 }
 
-func (s *Session) User() string {
+func (s *session) User() string {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.creds.UserName
 }
 
-func (s *Session) DeviceId() string {
+func (s *session) DeviceId() string {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.creds.DeviceId
 }
 
-func (s *Session) Load() error {
-	creds, err := kchain.Load[storedCredentials](sessionKey)
+func (s *session) Load() error {
+	creds, err := s.kcer.Load(false)
 	if err != nil {
 		return err
 	}
@@ -241,19 +245,23 @@ func (s *Session) Load() error {
 	return nil
 }
 
-func (s *Session) Valid() bool {
+func (s *session) Valid() bool {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.creds.Valid()
 }
 
-func (s *Session) Clear() error {
+func (s *session) Clear(clearKeychain bool) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	if err := kchain.Delete(sessionKey); err != nil {
-		return err
+	if clearKeychain {
+		if err := s.kcer.Delete(); err != nil {
+			return err
+		}
 	}
+
 	s.creds = &storedCredentials{Token: &oauth2.Token{}}
 	s.dpopClient = nil
+
 	return nil
 }

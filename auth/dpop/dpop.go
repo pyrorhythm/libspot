@@ -24,6 +24,44 @@ import (
 	"github.com/google/uuid"
 )
 
+type loggingTransport struct{}
+
+func (s *loggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
+	id := uuid.Must(uuid.NewV7())
+
+	body, err := io.ReadAll(r.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	r.Body = io.NopCloser(bytes.NewBuffer(body))
+
+	slog.Debug(
+		"request",
+		"id", id.String(),
+		//"headers", r.Header,
+		"dest", r.URL.String(),
+		"body", string(body),
+	)
+
+	resp, err := http.DefaultTransport.RoundTrip(r)
+	if err != nil {
+		return nil, err
+	}
+	respBody, err := io.ReadAll(resp.Body)
+	resp.Body = io.NopCloser(bytes.NewBuffer(respBody))
+
+	slog.Debug(
+		"response",
+		"id", id.String(),
+		//"headers", resp.Header,
+		"code", resp.StatusCode,
+		"body", string(respBody),
+	)
+
+	return resp, err
+}
+
 type Transport struct {
 	Base           http.RoundTripper
 	ClientToken    string
@@ -46,7 +84,7 @@ func NewClientWithKey(
 ) *http.Client {
 	return &http.Client{
 		Transport: &Transport{
-			Base:           http.DefaultTransport,
+			Base:           &loggingTransport{},
 			ClientToken:    clientToken,
 			GetAccessToken: getToken,
 			key:            key,
@@ -67,27 +105,28 @@ func (t *Transport) Nonce() string {
 }
 
 func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
-	resp, err := t.roundTripWithNonce(req, t.Nonce())
+	firstReq := req.Clone(req.Context())
+
+	resp, err := t.roundTripWithNonce(firstReq, t.Nonce())
 	if err != nil {
 		return nil, err
 	}
 
 	serverNonce, needRetry := t.extractNonceFromResponse(resp)
 
-	if nonceHeader := resp.Header.Get("DPoP-Nonce"); nonceHeader != "" {
-		t.SetNonce(nonceHeader)
-	}
-
 	if !needRetry {
 		return resp, nil
 	}
 
-	io.Copy(io.Discard, resp.Body)
-	resp.Body.Close()
+	t.SetNonce(serverNonce)
+
+	_, _ = io.Copy(io.Discard, resp.Body)
+	_ = resp.Body.Close()
 
 	slog.Debug("dpop: retrying with server nonce", "nonce", serverNonce)
 
 	retryReq := req.Clone(req.Context())
+
 	if req.Body != nil {
 		if req.GetBody == nil {
 			return nil, errors.New("dpop: request body cannot be re‑read for retry")
@@ -104,14 +143,19 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 		return nil, err
 	}
 
-	if nonceHeader := retryResp.Header.Get("DPoP-Nonce"); nonceHeader != "" {
-		t.SetNonce(nonceHeader)
+	if nonce, ok := t.extractNonceFromResponse(retryResp); ok {
+		t.SetNonce(nonce)
 	}
+
 	return retryResp, nil
 }
 
 func (t *Transport) extractNonceFromResponse(resp *http.Response) (nonce string, retry bool) {
 	if n, ok := parseUseDPoPNonceWWW(resp); ok {
+		return n, true
+	}
+
+	if n, ok := parseDPoPNonceHeader(resp); ok {
 		return n, true
 	}
 
@@ -167,6 +211,12 @@ func parseUseDPoPNonceBody(resp *http.Response) (nonce string, found bool) {
 		return errResp.Nonce, true
 	}
 	return "", false
+}
+
+func parseDPoPNonceHeader(resp *http.Response) (string, bool) {
+	nonce := resp.Header.Get("Dpop-Nonce")
+
+	return nonce, nonce != ""
 }
 
 func (t *Transport) roundTripWithNonce(req *http.Request, nonce string) (*http.Response, error) {
