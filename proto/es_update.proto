@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_context.proto";
+import "es_context_page.proto";
+import "es_context_track.proto";
+import "es_logging_params.proto";
+
+message UpdateContextRequest {
+  string session_id = 1;
+  .spotify.player.esperanto.proto.Context context = 2;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 3;
+}
+
+message UpdateContextPageRequest {
+  string session_id = 1;
+  .spotify.player.esperanto.proto.ContextPage context_page = 2;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 3;
+}
+
+message UpdateContextTrackRequest {
+  string session_id = 1;
+  .spotify.player.esperanto.proto.ContextTrack context_track = 2;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 3;
+}
+
+message UpdateViewUriRequest {
+  string session_id = 1;
+  string view_uri = 2;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 3;
+}
+

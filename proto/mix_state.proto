@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package spotify.playlistmixing.extensions.mixstate;
+
+option java_package = "com.spotify.playlistmixing.extensions.mixstate.proto";
+option java_outer_classname = "MixStateProto";
+
+message MixState {
+  bool is_mixed = 1;
+}
+

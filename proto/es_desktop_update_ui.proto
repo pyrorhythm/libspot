@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package spotify.desktop.update_ui_esperanto.proto;
+
+service DesktopUpdateUi {
+  rpc UpdateTitlebarHeight (.spotify.desktop.update_ui_esperanto.proto.UpdateTitlebarHeightRequest) returns (.spotify.desktop.update_ui_esperanto.proto.UpdateTitlebarResponse) {}
+  rpc SetButtonsVisibility (.spotify.desktop.update_ui_esperanto.proto.SetButtonsVisibilityRequest) returns (.spotify.desktop.update_ui_esperanto.proto.SetButtonsVisibilityResponse) {}
+  rpc UpdateMenuState (.spotify.desktop.update_ui_esperanto.proto.UpdateMenuStateRequest) returns (.spotify.desktop.update_ui_esperanto.proto.UpdateMenuStateResponse) {}
+}
+
+message UpdateTitlebarHeightRequest {
+  int32 height = 1;
+}
+
+message UpdateTitlebarResponse {
+}
+
+message SetButtonsVisibilityRequest {
+  bool show_buttons = 1;
+}
+
+message SetButtonsVisibilityResponse {
+}
+
+message FieldState {
+  .spotify.desktop.update_ui_esperanto.proto.MenuField field = 1;
+  bool enable = 2;
+}
+
+message UpdateMenuStateRequest {
+  repeated .spotify.desktop.update_ui_esperanto.proto.FieldState fields = 1;
+}
+
+message UpdateMenuStateResponse {
+}
+
+enum MenuField {
+  MENU_FIELD_UNSPECIFIED = 0;
+  MENU_FIELD_FILTER = 1;
+  MENU_FIELD_SCTA_INFO = 2;
+}
+

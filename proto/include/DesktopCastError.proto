@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopCastError {
+  optional string device_id = 1;
+  optional string cast_error = 2;
+  optional string error_msg = 3;
+  optional int64 platform_error_code = 4;
+}
+

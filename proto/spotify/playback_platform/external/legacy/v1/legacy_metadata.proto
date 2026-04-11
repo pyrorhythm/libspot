@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package spotify.playback_platform.external.legacy.v1;
+
+option java_package = "spotify.playback_platform.external.legacy.v1";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message Image {
+  string url = 1;
+  string small_url = 2;
+  string large_url = 3;
+  string xlarge_url = 4;
+}
+
+message Artist {
+  string uri = 1;
+  string name = 2;
+  .spotify.playback_platform.external.legacy.v1.ArtistRole role = 3;
+}
+
+message Album {
+  string uri = 1;
+  string title = 2;
+  .spotify.playback_platform.external.legacy.v1.Artist artist = 3;
+}
+
+message LegacyMetadata {
+  message UnmappedEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  .spotify.playback_platform.external.legacy.v1.Image image = 2;
+  repeated .spotify.playback_platform.external.legacy.v1.Artist artists = 3;
+  .spotify.playback_platform.external.legacy.v1.Album album = 4;
+  repeated .spotify.playback_platform.external.legacy.v1.LegacyMetadata.UnmappedEntry unmapped = 7;
+  optional string title = 1;
+  optional .google.protobuf.Duration start_position = 5;
+  optional .google.protobuf.Duration stop_position = 6;
+}
+
+enum ArtistRole {
+  ARTIST_ROLE_UNSPECIFIED = 0;
+  ARTIST_ROLE_MAIN_ARTIST = 1;
+  ARTIST_ROLE_FEATURED_ARTIST = 2;
+  ARTIST_ROLE_REMIXER = 3;
+  ARTIST_ROLE_ACTOR = 4;
+  ARTIST_ROLE_COMPOSER = 5;
+  ARTIST_ROLE_CONDUCTOR = 6;
+  ARTIST_ROLE_ORCHESTRA = 7;
+}
+

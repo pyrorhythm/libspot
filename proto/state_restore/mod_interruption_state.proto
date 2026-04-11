@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "context_track.proto";
+import "state_restore/provided_track.proto";
+
+message StoredInterruption {
+  required .spotify.player.proto.ContextTrack context_track = 1;
+  required int64 fetched_at = 2;
+}
+
+message ModInterruptionState {
+  message ActivePlayCountEntry {
+    optional string key = 1;
+    optional int32 value = 2;
+  }
+
+  optional string context_uri = 1;
+  optional .spotify.player.proto.state_restore.ProvidedTrack last_track = 2;
+  repeated .spotify.player.proto.state_restore.ModInterruptionState.ActivePlayCountEntry active_play_count = 3;
+  repeated .spotify.player.proto.state_restore.StoredInterruption active_play_interruptions = 4;
+  repeated .spotify.player.proto.state_restore.StoredInterruption repeat_play_interruptions = 5;
+}
+

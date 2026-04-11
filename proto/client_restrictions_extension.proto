@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.clientrestrictions.v1;
+
+option java_package = "com.spotify.clientrestrictions.v1";
+option java_outer_classname = "ClientRestrictionsExtensionProto";
+option java_multiple_files = true;
+
+message ClientRestrictionsExtensionData {
+  repeated string restriction_id = 1;
+}
+

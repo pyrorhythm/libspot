@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.playback_platform.common.v1;
+
+option java_package = "spotify.playback_platform.common.v1";
+option java_multiple_files = true;
+
+message Locale {
+  string language_tag = 1;
+  string date_format = 2;
+  string time_format = 3;
+}
+

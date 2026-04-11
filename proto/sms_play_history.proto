@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package spotify.enhancedplaylistlens;
+
+message HistoryItem {
+  string uri = 1;
+  bytes item_id = 2;
+  optional int64 start_timestamp = 3;
+  optional int64 time_played_ms = 4;
+  optional int64 track_length_ms = 5;
+}
+
+message CurrentItem {
+  string uri = 1;
+  bytes item_id = 2;
+  optional int64 start_timestamp = 3;
+  optional int64 time_played_ms = 4;
+  optional int64 track_length_ms = 5;
+}
+
+message PlayHistory {
+  repeated .spotify.enhancedplaylistlens.HistoryItem history = 2;
+  optional .spotify.enhancedplaylistlens.CurrentItem current = 1;
+}
+
+message SignalPayload {
+  .spotify.enhancedplaylistlens.PlayHistory play_history = 1;
+}
+

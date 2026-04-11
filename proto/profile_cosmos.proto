@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.profile_cosmos.proto;
+
+import "identity.proto";
+
+message GetProfilesRequest {
+  repeated string usernames = 1;
+}
+
+message GetProfilesResponse {
+  repeated .spotify.identity.v3.UserProfile profiles = 1;
+}
+
+message ChangeDisplayNameRequest {
+  string username = 1;
+  string display_name = 2;
+}
+

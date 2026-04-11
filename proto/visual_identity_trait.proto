@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+import "image.proto";
+import "video.proto";
+
+message VisualIdentityTrait {
+  .spotify.contentagnostic.v2.Image square_cover_image = 1;
+  optional .spotify.contentagnostic.v2.Image sixteen_by_nine_cover_image = 2;
+  optional .spotify.contentagnostic.v2.Image nine_by_sixteen_cover_image = 3;
+  optional .spotify.contentagnostic.v2.Video nine_by_sixteen_cover_video = 4;
+}
+

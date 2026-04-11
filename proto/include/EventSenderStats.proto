@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message EventSenderStats {
+  message StorageSizeEntry {
+    optional string key = 1;
+    optional int64 value = 2;
+  }
+
+  message SequenceNumberMinEntry {
+    optional string key = 1;
+    optional int64 value = 2;
+  }
+
+  message SequenceNumberNextEntry {
+    optional string key = 1;
+    optional int64 value = 2;
+  }
+
+  repeated .spotify.event_sender.proto.EventSenderStats.StorageSizeEntry storage_size = 1;
+  repeated .spotify.event_sender.proto.EventSenderStats.SequenceNumberMinEntry sequence_number_min = 2;
+  repeated .spotify.event_sender.proto.EventSenderStats.SequenceNumberNextEntry sequence_number_next = 3;
+}
+

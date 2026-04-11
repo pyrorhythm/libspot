@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package spotify.playback_platform.common.v1;
+
+option java_package = "spotify.playback_platform.common.v1";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message RequestError {
+  message NotFound {
+  }
+
+  message Disallowed {
+  }
+
+  message Unplayable {
+  }
+
+  message BadRequest {
+    string reason = 1;
+  }
+
+  message RequestTimeout {
+  }
+
+  message PermanentError {
+    string reason = 1;
+  }
+
+  message TemporaryError {
+    string reason = 1;
+    .google.protobuf.Duration retry_in = 2;
+  }
+
+  oneof error {
+    .spotify.playback_platform.common.v1.RequestError.NotFound not_found = 1;
+    .spotify.playback_platform.common.v1.RequestError.Disallowed disallowed = 2;
+    .spotify.playback_platform.common.v1.RequestError.Unplayable unplayable = 3;
+    .spotify.playback_platform.common.v1.RequestError.BadRequest bad_request = 4;
+    .spotify.playback_platform.common.v1.RequestError.RequestTimeout request_timeout = 5;
+    .spotify.playback_platform.common.v1.RequestError.PermanentError permanent_error = 6;
+    .spotify.playback_platform.common.v1.RequestError.TemporaryError temporary_error = 7;
+  }
+}
+

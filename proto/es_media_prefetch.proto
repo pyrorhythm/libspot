@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package spotify.prefetch_esperanto.proto;
+
+option java_package = "com.spotify.prefetch_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/empty.proto";
+
+service MediaPrefetch {
+  rpc UpdateFuture (.spotify.prefetch_esperanto.proto.UpdateFutureRequest) returns (.google.protobuf.Empty) {}
+}
+
+message AudioPreviewResource {
+  string url = 1;
+}
+
+message ProgressiveVideoResource {
+  string url = 1;
+}
+
+message SegmentedVideoResource {
+  bytes video_id = 1;
+  optional int32 start_ms = 2;
+  optional int32 end_ms = 3;
+}
+
+message Item {
+  oneof resource {
+    .spotify.prefetch_esperanto.proto.AudioPreviewResource audio_preview_resource = 1;
+    .spotify.prefetch_esperanto.proto.ProgressiveVideoResource progressive_video_resource = 2;
+    .spotify.prefetch_esperanto.proto.SegmentedVideoResource segmented_video_resource = 3;
+  }
+}
+
+message Future {
+  repeated .spotify.prefetch_esperanto.proto.Item items = 1;
+}
+
+message UpdateFutureRequest {
+  string feature_id = 1;
+  .spotify.prefetch_esperanto.proto.Future future = 2;
+}
+

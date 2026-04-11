@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package spotify.desktop.proxy_settings_esperanto.proto;
+
+import "google/protobuf/empty.proto";
+
+service DesktopProxySettings {
+  rpc GetProxySettings (.google.protobuf.Empty) returns (.spotify.desktop.proxy_settings_esperanto.proto.ProxySettings) {}
+  rpc SetProxySettings (.spotify.desktop.proxy_settings_esperanto.proto.ProxySettings) returns (.google.protobuf.Empty) {}
+}
+
+message ProxySettings {
+  .spotify.desktop.proxy_settings_esperanto.proto.ProxyOption mode = 1;
+  optional string addr = 2;
+  optional string user = 3;
+  optional string pass = 4;
+}
+
+enum ProxyOption {
+  AUTO = 0;
+  NONE = 1;
+  HTTP = 2;
+  SOCKS4 = 3;
+  SOCKS5 = 4;
+}
+

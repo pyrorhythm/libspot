@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.download.proto;
+
+message StorageResolveResponse {
+  enum Result {
+    CDN = 0;
+    STORAGE = 1;
+    RESTRICTED = 3;
+  }
+
+  .spotify.download.proto.StorageResolveResponse.Result result = 1;
+  repeated string cdnurl = 2;
+  bytes fileid = 4;
+}
+

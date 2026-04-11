@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package spotify.player.proto.transfer;
+
+import "context.proto";
+import "context_player_options.proto";
+import "play_origin.proto";
+import "suppressions.proto";
+import "instrumentation_params.proto";
+import "playlist_play.proto";
+
+message Session {
+  optional .spotify.player.proto.PlayOrigin play_origin = 1;
+  optional .spotify.player.proto.Context context = 2;
+  optional string current_uid = 3;
+  optional .spotify.player.proto.ContextPlayerOptionOverrides option_overrides = 4;
+  optional .spotify.player.proto.Suppressions suppressions = 5;
+  optional .spotify.player.proto.transfer.InstrumentationParams instrumentation_params = 6;
+  optional string shuffle_seed = 7;
+  optional .spotify.player.proto.Context main_context = 8;
+  optional string original_session_id = 9;
+  optional .spotify.playlist.proto.PlaylistPlayRequest playlist_play_request = 10;
+}
+

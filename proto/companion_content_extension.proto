@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package spotify.figs.companion_content.v0;
+
+option java_package = "com.spotify.figs.companion.content.v0";
+option java_outer_classname = "CompanionContentProto";
+option java_multiple_files = true;
+
+message CompanionContent {
+  string uri = 1;
+  repeated .spotify.figs.companion_content.v0.Component components = 2;
+}
+
+message Component {
+  int32 start_ms = 1;
+  oneof body {
+    .spotify.figs.companion_content.v0.ImageComponent image = 3;
+    .spotify.figs.companion_content.v0.LoopingVideoComponent looping_video = 4;
+  }
+  optional int32 end_ms = 2;
+}
+
+message ImageComponent {
+  enum ViewMode {
+    UNSPECIFIED = 0;
+    ARTWORK = 1;
+    FULL_SCREEN = 2;
+  }
+
+  string image_url = 1;
+  string alt_text = 2;
+  .spotify.figs.companion_content.v0.ImageComponent.ViewMode view_mode = 4;
+  optional string caption = 3;
+}
+
+message LoopingVideoComponent {
+  enum ViewMode {
+    UNSPECIFIED = 0;
+    ARTWORK = 1;
+    FULL_SCREEN = 2;
+  }
+
+  string video_url = 1;
+  string alt_text = 2;
+  .spotify.figs.companion_content.v0.LoopingVideoComponent.ViewMode view_mode = 4;
+  optional string caption = 3;
+}
+

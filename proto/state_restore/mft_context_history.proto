@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "context_track.proto";
+
+message MftContextHistoryEntry {
+  required .spotify.player.proto.ContextTrack track = 1;
+  required int64 timestamp = 2;
+  optional int64 position = 3;
+}
+
+message MftContextHistory {
+  message LookupEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.state_restore.MftContextHistoryEntry value = 2;
+  }
+
+  repeated .spotify.player.proto.state_restore.MftContextHistory.LookupEntry lookup = 1;
+}
+

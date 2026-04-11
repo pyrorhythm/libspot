@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.playbacksettingsinternal;
+
+option java_package = "com.spotify.playbacksettings.model";
+option java_multiple_files = true;
+
+import "playback-settings.proto";
+import "google/protobuf/empty.proto";
+
+message ScopeKey {
+  oneof scope {
+    .google.protobuf.Empty user_scope = 1;
+    string content_id = 2;
+  }
+}
+
+message CacheEntry {
+  .spotify.playbacksettingsinternal.ScopeKey setting_scope_key = 1;
+  .spotify.playbacksettings.FieldId setting_id = 2;
+  .spotify.playbacksettings.FieldValue setting_value = 3;
+}
+
+message CacheFile {
+  repeated .spotify.playbacksettingsinternal.CacheEntry entries = 1;
+}
+

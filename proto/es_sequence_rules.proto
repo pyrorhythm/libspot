@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+service SequenceRules {
+  rpc skipsRemaining (.spotify.player.esperanto.proto.RemainingSkipsRequest) returns (.spotify.player.esperanto.proto.RemainingSkipsResponse) {}
+  rpc resetSkips (.spotify.player.esperanto.proto.ResetSkipsRequest) returns (.spotify.player.esperanto.proto.ResetSkipResponse) {}
+}
+
+message RemainingSkipsRequest {
+}
+
+message ResetSkipsRequest {
+}
+
+message RemainingSkipsResponse {
+  enum Status {
+    OK = 0;
+    GONE = 1;
+  }
+
+  uint32 remaining_skips = 1;
+  .spotify.player.esperanto.proto.RemainingSkipsResponse.Status status = 2;
+}
+
+message ResetSkipResponse {
+  enum Status {
+    OK = 0;
+    FORBIDDEN = 1;
+  }
+
+  .spotify.player.esperanto.proto.ResetSkipResponse.Status status = 1;
+}
+

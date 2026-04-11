@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.stream_reporting_esperanto.proto;
+
+option java_package = "com.spotify.stream_reporting_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "status_code.proto";
+
+message StatusResponse {
+  .spotify.stream_reporting_esperanto.proto.StatusCode status_code = 1;
+}
+

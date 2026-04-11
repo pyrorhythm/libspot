@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message Prefetch {
+  optional int64 strategies = 1;
+  optional int64 strategy = 2;
+  optional bytes file_id = 3;
+  optional string track = 4;
+  optional int64 prefetch_index = 5;
+  optional int64 current_window_size = 6;
+  optional int64 max_window_size = 7;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AudioResolve {
+  optional bytes playback_id = 1;
+  optional int64 latency_ms = 2;
+  optional string entity_uri = 3;
+  optional bytes audio_id = 4;
+  optional bytes generated_audio_id = 5;
+}
+

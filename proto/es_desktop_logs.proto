@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package spotify.desktop.logs_esperanto.proto;
+
+service DesktopLogs {
+  rpc CopyLogsToTempFolder (.spotify.desktop.logs_esperanto.proto.CopyLogsToTempFolderRequest) returns (.spotify.desktop.logs_esperanto.proto.CopyLogsToTempFolderResponse) {}
+  rpc OpenFolder (.spotify.desktop.logs_esperanto.proto.OpenFolderRequest) returns (.spotify.desktop.logs_esperanto.proto.OpenFolderResponse) {}
+}
+
+message CopyLogsToTempFolderRequest {
+}
+
+message CopyLogsToTempFolderResponse {
+  string temp_folder = 1;
+}
+
+message OpenFolderRequest {
+  string folder = 1;
+}
+
+message OpenFolderResponse {
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+import "flat_file.proto";
+import "transcript.proto";
+
+message Audio {
+  .spotify.contentagnostic.v2.FlatFile flat_file = 1;
+  optional .spotify.contentagnostic.v2.Transcript transcript = 2;
+}
+

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.restrictions.proto;
+
+message PlaybackObserverObservedState {
+  message MetadataEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  string playback_id = 1;
+  string uri = 2;
+  string uid = 3;
+  repeated .spotify.restrictions.proto.PlaybackObserverObservedState.MetadataEntry metadata = 4;
+}
+
+message PlaybackObserver {
+  .spotify.restrictions.proto.PlaybackObserverObservedState observed_state = 1;
+  int64 accumulated_consumption = 2;
+}
+

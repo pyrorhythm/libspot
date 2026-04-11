@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "ResponseInfoProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/caching.proto";
+import "spotify/list/v1/model/lenses.proto";
+import "spotify/list/v1/model/request_error.proto";
+
+message ResponseInfo {
+  reserved 2;
+  reserved 4;
+  reserved 5;
+  reserved 6;
+  reserved 9;
+  optional .spotify.list.v1.model.RequestError request_error = 1;
+  optional .spotify.list.v1.model.CacheHint cache_hint = 3;
+  optional bytes revision = 7;
+  optional .spotify.list.v1.model.AppliedLenses applied_lenses = 8;
+}
+

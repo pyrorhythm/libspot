@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package spotify.desktop.audio_observer_esperanto.proto;
+
+import "google/protobuf/empty.proto";
+
+service DesktopAudioObserver {
+  rpc GetAudioOutputDevices (.google.protobuf.Empty) returns (stream .spotify.desktop.audio_observer_esperanto.proto.AudioDevicesResponse) {}
+}
+
+message AudioDevice {
+  string id = 1;
+  string name = 2;
+  string full_name = 3;
+  .spotify.desktop.audio_observer_esperanto.proto.TerminalType terminal_type = 4;
+  string terminal_type_raw = 5;
+  .spotify.desktop.audio_observer_esperanto.proto.TransportType transport_type = 6;
+  string transport_type_raw = 7;
+  bool is_default_device = 8;
+}
+
+message AudioDevicesResponse {
+  repeated .spotify.desktop.audio_observer_esperanto.proto.AudioDevice devices = 1;
+}
+
+enum TerminalType {
+  TERMINAL_TYPE_UNSPECIFIED = 0;
+  TERMINAL_TYPE_UNKNOWN = 1;
+  TERMINAL_TYPE_SPEAKERS = 2;
+  TERMINAL_TYPE_HEADPHONES = 3;
+  TERMINAL_TYPE_DISPLAY_DEVICE = 4;
+}
+
+enum TransportType {
+  TRANSPORT_TYPE_UNSPECIFIED = 0;
+  TRANSPORT_TYPE_UNKNOWN = 1;
+  TRANSPORT_TYPE_BUILT_IN = 2;
+  TRANSPORT_TYPE_VIRTUAL = 3;
+  TRANSPORT_TYPE_USB = 4;
+  TRANSPORT_TYPE_BLUETOOTH = 5;
+  TRANSPORT_TYPE_DISPLAY_DEVICE = 6;
+  TRANSPORT_TYPE_AIRPLAY = 7;
+}
+

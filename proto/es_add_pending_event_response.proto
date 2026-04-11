@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.pending_events.esperanto.proto;
+
+option java_package = "com.spotify.pending_events.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "es_pending_events_error.proto";
+
+message AddPendingEventResponse {
+  bool success = 1;
+  .spotify.pending_events.esperanto.proto.PendingEventsError error = 2;
+  string token_event_name = 3;
+  uint32 token_sequence_no = 4;
+}
+

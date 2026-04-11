@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.autodownload_esperanto.proto;
+
+option java_package = "spotify.autodownload.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message EnabledShowsCountRequest {
+  int32 update_throttling = 1;
+}
+
+message EnabledShowsCountResponse {
+  int32 count = 1;
+  string error = 2;
+}
+

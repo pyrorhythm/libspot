@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+package spotify.desktop.login_esperanto.proto;
+
+service DesktopLogin {
+  rpc LoginWithQRCode (.spotify.desktop.login_esperanto.proto.LoginWithQRCodeRequest) returns (stream .spotify.desktop.login_esperanto.proto.LoginWithQRCodeResponse) {}
+  rpc LoginWithAccounts (.spotify.desktop.login_esperanto.proto.LoginWithAccountsRequest) returns (.spotify.desktop.login_esperanto.proto.LoginWithAccountsResponse) {}
+  rpc LoginWithConnect (.spotify.desktop.login_esperanto.proto.LoginWithConnectRequest) returns (stream .spotify.desktop.login_esperanto.proto.LoginWithConnectResponse) {}
+  rpc ApproveConnectLogin (.spotify.desktop.login_esperanto.proto.ApproveConnectLoginRequest) returns (.spotify.desktop.login_esperanto.proto.ApproveConnectLoginResponse) {}
+  rpc Logout (.spotify.desktop.login_esperanto.proto.LogoutRequest) returns (.spotify.desktop.login_esperanto.proto.LogoutResponse) {}
+}
+
+message AuthorizationRequired {
+  string verification_uri = 1;
+  string user_code = 2;
+}
+
+message ConfirmationRequired {
+}
+
+message LoginError {
+  int32 error_code = 1;
+  string error_category = 2;
+  string error_reference = 3;
+}
+
+message LoginSuccess {
+}
+
+message LoginWithQRCodeRequest {
+}
+
+message LoginWithQRCodeResponse {
+  oneof entity {
+    .spotify.desktop.login_esperanto.proto.AuthorizationRequired authorization_required = 1;
+    .spotify.desktop.login_esperanto.proto.LoginSuccess success = 2;
+    bool timeout = 3;
+    .spotify.desktop.login_esperanto.proto.LoginError error = 4;
+  }
+}
+
+message LoginWithAccountsRequest {
+  bool enable_signup = 1;
+  string action_hash = 2;
+  bool use_dpop = 3;
+}
+
+message LoginWithAccountsResponse {
+  oneof entity {
+    .spotify.desktop.login_esperanto.proto.LoginSuccess success = 1;
+    .spotify.desktop.login_esperanto.proto.LoginError error = 2;
+  }
+}
+
+message LoginWithConnectRequest {
+}
+
+message LoginWithConnectResponse {
+  oneof entity {
+    .spotify.desktop.login_esperanto.proto.ConfirmationRequired confirmation_required = 1;
+    .spotify.desktop.login_esperanto.proto.AuthorizationRequired authorization_required = 2;
+    .spotify.desktop.login_esperanto.proto.LoginSuccess success = 3;
+    bool timeout = 4;
+    .spotify.desktop.login_esperanto.proto.LoginError error = 5;
+  }
+}
+
+message ApproveConnectLoginRequest {
+  bool approved = 1;
+}
+
+message ApproveConnectLoginResponse {
+}
+
+message LogoutRequest {
+}
+
+message LogoutResponse {
+}
+

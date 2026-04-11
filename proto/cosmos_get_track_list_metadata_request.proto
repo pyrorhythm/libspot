@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.collection_cosmos.proto;
+
+option objc_class_prefix = "SPTCollectionCosmos";
+
+message TrackListMetadata {
+  optional uint32 unfiltered_length = 1;
+  optional uint32 length = 2;
+  optional string offline = 3;
+  optional uint32 sync_progress = 4;
+}
+

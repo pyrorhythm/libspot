@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package spotify.cosmos_util.proto;
+
+option java_package = "com.spotify.cosmos.util.proto";
+option java_multiple_files = true;
+
+message ImageGroup {
+  optional string standard_link = 1;
+  optional string small_link = 2;
+  optional string large_link = 3;
+  optional string xlarge_link = 4;
+}
+

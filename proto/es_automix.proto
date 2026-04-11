@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+package spotify.automix.esperanto.proto;
+
+option java_package = "com.spotify.automix.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "transition.proto";
+import "google/protobuf/empty.proto";
+
+service Automix {
+  rpc GetComputedTransitions (.spotify.automix.esperanto.proto.GetComputedTransitionsRequest) returns (.spotify.automix.esperanto.proto.GetComputedTransitionsResponse) {}
+  rpc GetStylesForPresetId (.spotify.automix.esperanto.proto.GetStylesForPresetIdRequest) returns (.spotify.automix.esperanto.proto.GetStylesForPresetIdResponse) {}
+  rpc GetVolumeStylesForVolumeStyleId (.spotify.automix.esperanto.proto.GetVolumeStylesForVolumeStyleIdRequest) returns (.spotify.automix.esperanto.proto.GetVolumeStylesForVolumeStyleIdResponse) {}
+  rpc GetEqStylesForEqStyleId (.spotify.automix.esperanto.proto.GetEqStylesForEqStyleIdRequest) returns (.spotify.automix.esperanto.proto.GetEqStylesForEqStyleIdResponse) {}
+  rpc GetFilterFxStylesForFilterFxStyleId (.spotify.automix.esperanto.proto.GetFilterFxStylesForFilterFxStyleIdRequest) returns (.spotify.automix.esperanto.proto.GetFilterFxStylesForFilterFxStyleIdResponse) {}
+  rpc GetFxStylesForFxStyleId (.spotify.automix.esperanto.proto.GetFxStylesForFxStyleIdRequest) returns (.spotify.automix.esperanto.proto.GetFxStylesForFxStyleIdResponse) {}
+  rpc GetMaxTransitionLength (.google.protobuf.Empty) returns (.spotify.automix.esperanto.proto.GetMaxTransitionLengthResponse) {}
+}
+
+message TrackPair {
+  string track_a_uri = 1;
+  string track_b_uri = 2;
+}
+
+message GetComputedTransitionsRequest {
+  repeated .spotify.automix.esperanto.proto.TrackPair track_pairs = 1;
+}
+
+message ComputedPreset {
+  .spotify.automix.proto.Preset preset = 1;
+  float computed_score = 2;
+}
+
+message ComputedTransition {
+  .spotify.automix.proto.Overlap overlap = 1;
+  float computed_score = 2;
+  repeated .spotify.automix.esperanto.proto.ComputedPreset ranked_presets = 3;
+}
+
+message ComputedTransitions {
+  repeated .spotify.automix.esperanto.proto.ComputedTransition ranked_transitions = 1;
+}
+
+message GetComputedTransitionsResponse {
+  repeated .spotify.automix.esperanto.proto.ComputedTransitions computed_transitions = 1;
+}
+
+message GetStylesForPresetIdRequest {
+  repeated int32 preset_ids = 1;
+}
+
+message PresetIdStyle {
+  int32 preset_id = 1;
+  .spotify.automix.proto.VolumeStyle volume_style = 2;
+  .spotify.automix.proto.EqStyle eq_style = 3;
+  .spotify.automix.proto.FilterFxStyle filter_fx_style = 4;
+}
+
+message GetStylesForPresetIdResponse {
+  repeated .spotify.automix.esperanto.proto.PresetIdStyle preset_styles = 1;
+}
+
+message GetVolumeStylesForVolumeStyleIdRequest {
+  repeated int32 volume_style_ids = 1;
+  int32 num_bars = 2;
+}
+
+message GetVolumeStylesForVolumeStyleIdResponse {
+  repeated .spotify.automix.proto.VolumeStyleCurves volume_styles = 1;
+}
+
+message GetEqStylesForEqStyleIdRequest {
+  repeated int32 eq_style_ids = 1;
+  int32 num_bars = 2;
+}
+
+message GetEqStylesForEqStyleIdResponse {
+  repeated .spotify.automix.proto.EqStyleCurves eq_styles = 1;
+}
+
+message GetFilterFxStylesForFilterFxStyleIdRequest {
+  repeated int32 filter_fx_style_ids = 1;
+  int32 num_bars = 2;
+}
+
+message GetFilterFxStylesForFilterFxStyleIdResponse {
+  repeated .spotify.automix.proto.FilterFxStyleCurves filter_fx_styles = 1;
+}
+
+message GetFxStylesForFxStyleIdRequest {
+  repeated int32 fx_style_ids = 1;
+  float bpm = 2;
+  int32 num_bars = 3;
+}
+
+message GetFxStylesForFxStyleIdResponse {
+  repeated .spotify.automix.proto.FxStyleCurves fx_styles = 1;
+}
+
+message GetMaxTransitionLengthResponse {
+  int32 milliseconds = 1;
+}
+

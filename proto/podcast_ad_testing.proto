@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service PodcastTesting {
+  rpc GetNextAdSegment (.spotify.ads.esperanto.proto.GetNextAdSegmentRequest) returns (.spotify.ads.esperanto.proto.GetNextAdSegmentResponse) {}
+  rpc OverrideMetadata (.spotify.ads.esperanto.proto.OverrideMetadataRequest) returns (.spotify.ads.esperanto.proto.OverrideMetadataResponse) {}
+}
+
+message PodcastAdSegment {
+  string slot_id = 1;
+  uint64 start_ms = 2;
+  uint64 stop_ms = 3;
+}
+
+message GetNextAdSegmentRequest {
+}
+
+message GetNextAdSegmentResponse {
+  enum Status {
+    OK = 0;
+    NOT_FOUND = 1;
+  }
+
+  .spotify.ads.esperanto.proto.GetNextAdSegmentResponse.Status status = 1;
+  .spotify.ads.esperanto.proto.PodcastAdSegment segment = 2;
+}
+
+message OverrideMetadataRequest {
+  repeated .spotify.ads.esperanto.proto.PodcastAdSegment segments = 1;
+}
+
+message OverrideMetadataResponse {
+}
+

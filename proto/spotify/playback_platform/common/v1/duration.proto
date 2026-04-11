@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package spotify.playback_platform.common.v1;
+
+option java_package = "spotify.playback_platform.common.v1";
+option java_multiple_files = true;
+
+message Duration {
+  uint32 timescale = 2;
+  optional sint64 value = 1;
+}
+
+message Durations {
+  repeated sint64 values = 1;
+  uint32 timescale = 2;
+}
+
+message StochasticDuration {
+  uint32 timescale = 2;
+  optional sint64 value_mu = 1;
+  optional uint64 value_sd = 3;
+}
+
+message ExtrapolatedDuration {
+  uint32 timescale = 2;
+  optional sint64 value_y0 = 1;
+  optional sint64 value_dy = 3;
+  optional sint64 value_lower_bound = 4;
+  optional sint64 value_upper_bound = 5;
+}
+

@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message WebsocketConnectionNonAuth {
+  message NumDealerErrorsEntry {
+    optional string key = 1;
+    optional int32 value = 2;
+  }
+
+  message AvgMsToDealerResponseEntry {
+    optional string key = 1;
+    optional double value = 2;
+  }
+
+  message ReceivedConnIdsEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional int32 number_of_connects = 1;
+  optional int32 number_of_messages = 2;
+  repeated .spotify.event_sender.proto.WebsocketConnectionNonAuth.NumDealerErrorsEntry num_dealer_errors = 3;
+  repeated .spotify.event_sender.proto.WebsocketConnectionNonAuth.AvgMsToDealerResponseEntry avg_ms_to_dealer_response = 4;
+  optional int32 num_received_conn_id = 5;
+  optional int32 num_miss_conn_id = 6;
+  optional int32 num_timeouts_conn_id = 7;
+  optional int32 num_failure_parse_message = 8;
+  repeated .spotify.event_sender.proto.WebsocketConnectionNonAuth.ReceivedConnIdsEntry received_conn_ids = 9;
+}
+

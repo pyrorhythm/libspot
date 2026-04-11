@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package spotify.list_player.proto;
+
+import "google/protobuf/timestamp.proto";
+
+message PlayHistory {
+  message Item {
+    reserved 5;
+    string uri = 1;
+    string list_uri = 2;
+    string uid = 3;
+    .google.protobuf.Timestamp played_at = 4;
+    string play_request_id = 6;
+    uint64 mft_played_at = 8;
+    optional string shuffle_seed = 7;
+  }
+
+  repeated .spotify.list_player.proto.PlayHistory.Item items = 1;
+  optional string current_item_uid = 2;
+}
+

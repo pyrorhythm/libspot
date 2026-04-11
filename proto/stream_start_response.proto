@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.stream_reporting_esperanto.proto;
+
+option java_package = "com.spotify.stream_reporting_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "status_response.proto";
+import "stream_handle.proto";
+
+message StreamStartResponse {
+  .spotify.stream_reporting_esperanto.proto.StatusResponse status = 1;
+  .spotify.stream_reporting_esperanto.proto.StreamHandle stream_handle = 2;
+}
+

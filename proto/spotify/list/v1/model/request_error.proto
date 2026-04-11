@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "RequestErrorProto";
+option java_multiple_files = true;
+
+message RequestError {
+  message RetryStrategy {
+    optional bool can_retry = 1;
+  }
+
+  message NotFound {
+    optional bool permanently_removed = 1;
+  }
+
+  message LegalReasons {
+    optional bool dsa = 1;
+  }
+
+  message Forbidden {
+    optional .spotify.list.v1.model.RequestError.LegalReasons legal_reasons = 1;
+    optional bool no_access = 2;
+  }
+
+  message BadRequest {
+    optional bool malformed_request = 1;
+    optional bool revision_mismatch = 2;
+    optional bool failed_precondition = 3;
+    optional bool not_supported = 4;
+    optional bool already_exists = 5;
+  }
+
+  message Transport {
+    optional bool timed_out = 1;
+    optional bool rate_limit_exceeded = 2;
+    optional bool too_many_requests = 3;
+    optional bool upstream_error = 4;
+  }
+
+  optional .spotify.list.v1.model.RequestError.RetryStrategy retry_strategy = 1;
+  optional .spotify.list.v1.model.RequestError.NotFound not_found = 2;
+  optional .spotify.list.v1.model.RequestError.Forbidden forbidden = 3;
+  optional .spotify.list.v1.model.RequestError.BadRequest bad_request = 4;
+  optional .spotify.list.v1.model.RequestError.Transport transport = 5;
+  optional string message = 6;
+}
+

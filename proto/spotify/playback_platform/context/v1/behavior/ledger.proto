@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+message Ledger {
+  reserved "enabled";
+  reserved 1;
+  optional string entry_id = 2;
+  optional bool include_playing_info = 3;
+}
+

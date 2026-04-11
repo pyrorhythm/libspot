@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package spotify.autodownloadservice.v1.proto;
+
+import "google/protobuf/timestamp.proto";
+
+message Identifiers {
+  string device_id = 1;
+  string cache_id = 2;
+}
+
+message Settings {
+  oneof episode_download {
+    bool most_recent_no_limit = 1;
+    int32 most_recent_count = 2;
+  }
+}
+
+message SetSettingsRequest {
+  .spotify.autodownloadservice.v1.proto.Identifiers identifiers = 1;
+  .spotify.autodownloadservice.v1.proto.Settings settings = 2;
+  .google.protobuf.Timestamp client_timestamp = 3;
+}
+
+message GetSettingsRequest {
+  .spotify.autodownloadservice.v1.proto.Identifiers identifiers = 1;
+}
+
+message GetSettingsResponse {
+  .spotify.autodownloadservice.v1.proto.Settings settings = 1;
+}
+
+message ShowRequest {
+  .spotify.autodownloadservice.v1.proto.Identifiers identifiers = 1;
+  string show_uri = 2;
+  .google.protobuf.Timestamp client_timestamp = 3;
+}
+
+message ReplaceIdentifiersRequest {
+  .spotify.autodownloadservice.v1.proto.Identifiers old_identifiers = 1;
+  .spotify.autodownloadservice.v1.proto.Identifiers new_identifiers = 2;
+}
+
+message PendingItem {
+  .google.protobuf.Timestamp client_timestamp = 1;
+  oneof pending {
+    bool is_removed = 2;
+    .spotify.autodownloadservice.v1.proto.Settings settings = 3;
+  }
+}
+

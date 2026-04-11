@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.nextepisode;
+
+message NextEpisode {
+  string uri = 1;
+  double score = 2;
+}
+
+message NextEpisodes {
+  repeated .spotify.nextepisode.NextEpisode next = 1;
+}
+
+message NextEpisodeRecs {
+  string show_uri = 1;
+  .spotify.nextepisode.NextEpisodes next_episodes = 2;
+}
+

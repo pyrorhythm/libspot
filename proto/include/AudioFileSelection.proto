@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AudioFileSelection {
+  optional bytes playback_id = 1;
+  optional string strategy_name = 2;
+  optional int64 bitrate = 3;
+  optional bytes predict_id = 4;
+  optional string file_origin = 5;
+  optional int32 target_bitrate = 6;
+  optional string downgrade_reason = 7;
+}
+

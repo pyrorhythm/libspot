@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.list_player.impl.proto;
+
+message PlaybackSettings {
+  enum MediaPreference {
+    UNSPECIFIED = 0;
+    AUDIO = 1;
+    VIDEO = 2;
+  }
+
+  .spotify.list_player.impl.proto.PlaybackSettings.MediaPreference media_preference = 1;
+  bool repeat_list = 2;
+  bool repeat_item = 3;
+}
+

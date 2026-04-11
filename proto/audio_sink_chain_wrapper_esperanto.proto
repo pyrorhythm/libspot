@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package spotify.audio_sink_chain_wrapper_esperanto.proto;
+
+option java_package = "com.spotify.audio_sink_chain_wrapper_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+message AudioFormat {
+  int32 sample_rate = 1;
+  .spotify.audio_sink_chain_wrapper_esperanto.proto.SampleFormat sample_format = 2;
+  .spotify.audio_sink_chain_wrapper_esperanto.proto.ChannelConfig channel_config = 3;
+}
+
+message PcmAudioBuffer {
+  bytes samples = 1;
+}
+
+message CreateRequest {
+  .spotify.audio_sink_chain_wrapper_esperanto.proto.AudioFormat format = 1;
+  bool is_talk = 4;
+  optional float true_peak = 2;
+  optional float loudness = 3;
+}
+
+message CreateResponse {
+  int64 id = 1;
+}
+
+message DestroyRequest {
+  int64 id = 1;
+}
+
+message WriteRequest {
+  int64 id = 1;
+  .spotify.audio_sink_chain_wrapper_esperanto.proto.PcmAudioBuffer pcm = 2;
+  bool final = 3;
+}
+
+message WriteResponse {
+  bool success = 1;
+}
+
+message ReadRequest {
+  int64 id = 1;
+}
+
+message ReadResponse {
+  .spotify.audio_sink_chain_wrapper_esperanto.proto.PcmAudioBuffer pcm = 1;
+}
+
+message FlushRequest {
+  int64 id = 1;
+  int64 frame = 2;
+}
+
+message EofRequest {
+  int64 id = 1;
+}
+
+message EofResponse {
+  bool eof = 1;
+}
+
+enum SampleFormat {
+  SIXTEEN_BITS_PER_SAMPLE = 0;
+  IEEE_FLOAT = 1;
+}
+
+enum ChannelConfig {
+  MONO = 0;
+  STEREO = 1;
+}
+

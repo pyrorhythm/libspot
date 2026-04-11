@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.connectivity.auth.storage.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.auth.storage.esperanto.proto";
+
+import "google/protobuf/struct.proto";
+import "es_auth_blob.proto";
+
+message StoredUserInfo {
+  string username = 1;
+  .spotify.connectivity.auth.common.esperanto.proto.AuthBlob auth_blob = 2;
+}
+
+message NullableStoredUserInfo {
+  oneof user_info {
+    .spotify.connectivity.auth.storage.esperanto.proto.StoredUserInfo stored_user_info = 1;
+    .google.protobuf.NullValue null = 2;
+  }
+}
+

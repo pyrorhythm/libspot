@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.player.sequence.proto;
+
+import "player_sequence/player/state/context_stack.proto";
+import "player_sequence/player/state/context_tree.proto";
+
+message SessionContextState {
+  string root_context_id = 1;
+  .spotify.player.sequence.proto.ContextStack stack = 2;
+  .spotify.player.sequence.proto.ContextTree context_tree = 3;
+}
+

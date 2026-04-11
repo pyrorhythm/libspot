@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/sequence_start.proto";
+
+message ContextState {
+  reserved 4;
+  optional bytes cookie = 1;
+  optional string shuffle_seed = 2;
+  optional string context_id = 3;
+  optional .spotify.playback_platform.context.v1.SequenceStart start = 5;
+}
+

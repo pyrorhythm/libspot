@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message CommonCappingInitRetry {
+  optional int64 number_of_retries = 1;
+  optional string local_state_sync_state = 2;
+  optional string result = 3;
+}
+

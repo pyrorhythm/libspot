@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package spotify.contentpopularity.v1;
+
+option java_package = "com.spotify.contentpopularity.v1";
+option java_multiple_files = true;
+
+message EntityPopularity {
+  int32 popularity_score = 1;
+}
+

@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ApPermanentErrorNonAuth {
+  optional string error_code_description = 1;
+}
+

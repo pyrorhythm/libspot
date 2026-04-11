@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package spotify.autodownload_esperanto.proto;
+
+option java_package = "spotify.autodownload.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message DecoratedFollowedShowsRequest {
+  int32 skip = 1;
+  int32 length = 2;
+  int32 update_throttling = 3;
+}
+
+message DecoratedShow {
+  string uri = 1;
+  string title = 2;
+  string img_uri = 3;
+  string publisher = 4;
+  bool music_and_talk = 5;
+  bool has_video = 6;
+  bool auto_dl_enabled = 7;
+}
+
+message DecoratedFollowedShowsResponse {
+  repeated .spotify.autodownload_esperanto.proto.DecoratedShow shows = 1;
+  int32 remaining_shows = 2;
+  string error = 99;
+}
+

@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package spotify.cosmos_util.proto;
+
+option java_package = "com.spotify.cosmos.util.proto";
+option java_multiple_files = true;
+
+import "played_state/playability_restriction.proto";
+
+message TrackPlayState {
+  optional bool is_playable = 1;
+  optional .spotify.cosmos_util.proto.PlayabilityRestriction playability_restriction = 2 [default = UNKNOWN];
+}
+

@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopCoreInitializedNonAuth {
+  optional string buildsystem = 1;
+}
+

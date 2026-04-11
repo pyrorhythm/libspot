@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+import "track_instance.proto";
+
+message SegmentSwitchNode {
+  optional .spotify.player.proto.TrackInstance injected_full_episode = 1;
+  optional bool should_play_injected_track = 2;
+  optional int64 full_episode_position_ms = 3;
+}
+

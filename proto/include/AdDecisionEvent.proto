@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AdDecisionEvent {
+  optional string request_id = 1;
+  optional string decision_request_id = 2;
+  optional string decision_type = 3;
+  optional string ad_id = 4;
+  optional string decision_state = 5;
+}
+

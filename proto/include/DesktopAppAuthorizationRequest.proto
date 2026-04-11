@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopAppAuthorizationRequest {
+  optional string client_id = 1;
+  optional bool success = 2;
+  optional string error_description = 3;
+  optional string error_step = 4;
+  optional int64 request_duration_ms = 5;
+  optional string auth_method = 6;
+  optional string prompt_type = 7;
+  optional string internal_error = 8;
+  optional string app_variant = 9;
+}
+

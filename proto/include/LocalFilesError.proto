@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message LocalFilesError {
+  optional int64 error_code = 1;
+  optional string context = 2;
+  optional string info = 3;
+}
+

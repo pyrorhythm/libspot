@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package spotify.on_demand_set_cosmos.proto;
+
+option java_package = "com.spotify.on_demand_set.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "SPT";
+
+message Set {
+  repeated string uris = 1;
+}
+
+message Temporary {
+  optional string uri = 1;
+  optional int64 valid_for_in_seconds = 2;
+}
+

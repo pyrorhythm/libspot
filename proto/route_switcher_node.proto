@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message RouteSwitcherNode {
+  enum Mode {
+    PRIMARY = 0;
+    SECONDARY = 1;
+  }
+
+  optional .spotify.player.proto.RouteSwitcherNode.Mode mode = 1;
+}
+

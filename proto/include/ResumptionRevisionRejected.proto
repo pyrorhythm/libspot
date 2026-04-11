@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionRevisionRejected {
+  optional string key = 1;
+  optional string reason = 2;
+  optional string revision = 3;
+}
+

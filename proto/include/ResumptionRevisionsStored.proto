@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionRevisionsStored {
+  optional int32 revisions_written = 1;
+  optional int32 keys_written = 2;
+  optional int32 keys_deleted = 3;
+  optional float seconds_writing = 4;
+  optional int64 bytes_written = 5;
+}
+

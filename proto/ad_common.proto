@@ -1,0 +1,195 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+
+message UrlArray {
+  repeated string urls = 1;
+}
+
+message AdMedia {
+  string mime_type = 1;
+  int32 bitrate = 2;
+  uint64 duration = 3;
+  int32 width = 4;
+  int32 height = 5;
+  oneof media_file {
+    string url = 6;
+    string audio_file_id = 7;
+    string image_file_id = 8;
+    string text = 9;
+    string video_manifest_id = 10;
+  }
+}
+
+message Ad {
+  message MetadataEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  message TrackingEventsEntry {
+    string key = 1;
+    .spotify.ads.esperanto.proto.UrlArray value = 2;
+  }
+
+  string ad_id = 1;
+  repeated .spotify.ads.esperanto.proto.Ad.MetadataEntry metadata = 2;
+  bool is_dummy = 3;
+  repeated .spotify.ads.esperanto.proto.AdMedia cover_art = 4;
+  repeated .spotify.ads.esperanto.proto.AdMedia audio = 5;
+  repeated .spotify.ads.esperanto.proto.AdMedia video = 6;
+  repeated .spotify.ads.esperanto.proto.AdMedia display = 7;
+  string clickthrough_url = 8;
+  repeated .spotify.ads.esperanto.proto.Ad.TrackingEventsEntry tracking_events = 9;
+  string slot = 10;
+  string request_id = 11;
+  .spotify.ads.esperanto.proto.AdFormat format = 12;
+  bool is_dsa_eligible = 13;
+  repeated .spotify.ads.esperanto.proto.Companion companions = 14;
+  repeated .spotify.ads.esperanto.proto.Verification verifications = 15;
+}
+
+message AdSlotEvent {
+  enum AdSlotEventType {
+    AVAILABLE = 0;
+    PLAY = 1;
+    DISCARD = 2;
+  }
+
+  .spotify.ads.esperanto.proto.AdSlotEvent.AdSlotEventType event_type = 1;
+  string slot_id = 2;
+  .spotify.ads.esperanto.proto.AdFormat format = 3;
+  .spotify.ads.esperanto.proto.Ad ad = 4;
+}
+
+message AdSlot {
+  string slot_id = 1;
+  bool has_available_ads = 2;
+  bool has_active_ad = 3;
+  bool has_listeners = 4;
+  bool has_audio_listeners = 5;
+  bool has_video_listeners = 6;
+  bool has_display_listeners = 7;
+  repeated .spotify.ads.esperanto.proto.Ad available_ads = 8;
+}
+
+message AdQueue {
+  repeated .spotify.ads.esperanto.proto.Ad ads = 1;
+}
+
+message SurveyQuestionOption {
+  string id = 1;
+  string primary_text = 2;
+  bool is_exclusive = 3;
+}
+
+message SurveyQuestion {
+  string id = 1;
+  .spotify.ads.esperanto.proto.SurveyQuestionType survey_question_type = 2;
+  string primary_text = 3;
+  string secondary_text = 4;
+  repeated .spotify.ads.esperanto.proto.SurveyQuestionOption survey_question_options = 5;
+}
+
+message SurveyTransparencyContent {
+  string transparency_label = 1;
+  string transparency_url = 2;
+}
+
+message Survey {
+  repeated .spotify.ads.esperanto.proto.SurveyQuestion survey_questions = 1;
+  .spotify.ads.esperanto.proto.SurveyTransparencyContent survey_transparency_content = 2;
+}
+
+message CanvasImage {
+  string media_type = 1;
+  uint32 width = 2;
+  uint32 height = 3;
+  oneof media_file {
+    string url = 4;
+  }
+}
+
+message CanvasVideo {
+  string media_type = 1;
+  uint32 duration_seconds = 2;
+  uint32 width = 3;
+  uint32 height = 4;
+  oneof media_file {
+    string url = 5;
+    string video_manifest_id = 6;
+  }
+}
+
+message ItemPrice {
+  string price = 1;
+}
+
+message ItemSalePrice {
+  string price = 1;
+  string sale_price = 2;
+}
+
+message CarouselItem {
+  string item_id = 1;
+  string tagline = 2;
+  string clickthrough_url = 3;
+  oneof media {
+    .spotify.ads.esperanto.proto.AdMedia image = 4;
+    .spotify.ads.esperanto.proto.AdMedia video = 5;
+  }
+  oneof pricing {
+    .spotify.ads.esperanto.proto.ItemPrice price = 6;
+    .spotify.ads.esperanto.proto.ItemSalePrice sale_price = 7;
+  }
+}
+
+message Carousel {
+  string carousel_id = 1;
+  repeated .spotify.ads.esperanto.proto.CarouselItem items = 2;
+}
+
+message Companion {
+  oneof type {
+    .spotify.ads.esperanto.proto.CanvasImage canvas_image = 1;
+    .spotify.ads.esperanto.proto.CanvasVideo canvas_video = 2;
+    .spotify.ads.esperanto.proto.Survey survey = 3;
+    .spotify.ads.esperanto.proto.Carousel carousel = 4;
+  }
+}
+
+message SKAdNetworkData {
+  string signature_store_kit = 1;
+  string signature_view_through = 2;
+  string version = 3;
+  string network_identifier = 4;
+  string source_identifier = 5;
+  int64 timestamp = 6;
+  string nonce = 7;
+  string source_app_identifier = 8;
+  string advertised_app_identifier = 9;
+}
+
+message Verification {
+  oneof type {
+    .spotify.ads.esperanto.proto.SKAdNetworkData sk_ad_network = 1;
+  }
+}
+
+enum AdFormat {
+  UNKNOWN = 0;
+  AUDIO = 1;
+  VIDEO = 2;
+  DISPLAY = 3;
+  DUMMY = 4;
+}
+
+enum SurveyQuestionType {
+  SURVEY_QUESTION_TYPE_UNKNOWN = 0;
+  SINGLE_SELECT = 1;
+  MULTI_SELECT = 2;
+}
+

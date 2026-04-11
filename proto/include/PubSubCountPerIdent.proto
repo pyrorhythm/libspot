@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message PubSubCountPerIdent {
+  optional string ident_filter = 1;
+  optional int32 no_of_messages_received = 2;
+  optional int32 no_of_failed_conversions = 3;
+  optional string implementation = 4;
+}
+

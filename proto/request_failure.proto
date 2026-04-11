@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.image.proto;
+
+message RequestFailure {
+  optional string request = 1;
+  optional string source = 2;
+  optional string error = 3;
+  optional int64 result = 4;
+}
+

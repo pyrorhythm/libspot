@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.proto";
+option java_multiple_files = true;
+
+message User {
+  optional string link = 1;
+  optional string username = 2;
+  optional string display_name = 3;
+  optional string image_uri = 4;
+  optional string thumbnail_uri = 5;
+  optional int32 color = 6;
+}
+

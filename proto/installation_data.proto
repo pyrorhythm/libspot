@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message InstallationEntity {
+  int32 file_format_version = 1;
+  bytes encrypted_part = 2;
+}
+
+message InstallationData {
+  bytes installation_id = 1;
+  bytes last_seen_device_id = 2;
+  int64 monotonic_clock_id = 3;
+}
+

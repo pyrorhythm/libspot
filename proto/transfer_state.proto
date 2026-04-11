@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package spotify.player.proto.transfer;
+
+import "context_player_options.proto";
+import "playback.proto";
+import "play_history_entry.proto";
+import "session.proto";
+import "sleep_timer.proto";
+import "queue.proto";
+
+message TransferState {
+  reserved 5;
+  optional .spotify.player.proto.ContextPlayerOptions options = 1;
+  optional .spotify.player.proto.transfer.Playback playback = 2;
+  optional .spotify.player.proto.transfer.Session current_session = 3;
+  optional .spotify.player.proto.transfer.Queue queue = 4;
+  repeated .spotify.player.proto.transfer.PlayHistoryEntry play_history_entries = 6;
+  optional .spotify.player.proto.transfer.SleepTimer sleep_timer = 7;
+}
+

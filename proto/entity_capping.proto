@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.capping.metadata.v1;
+
+option java_package = "com.spotify.capping.metadata.v1";
+option java_multiple_files = true;
+
+message EntityCapping {
+  enum CappingGroup {
+    NO_CAPPING = 0;
+    ABP = 1;
+  }
+
+  .spotify.capping.metadata.v1.EntityCapping.CappingGroup capping_group = 1;
+}
+

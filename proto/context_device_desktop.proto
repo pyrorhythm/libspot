@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message DeviceDesktop {
+  string platform_type = 1;
+  string device_manufacturer = 2;
+  string device_model = 3;
+  string device_id = 4;
+  string os_version = 5;
+}
+

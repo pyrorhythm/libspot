@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.on_demand_set_esperanto.proto;
+
+option java_package = "com.spotify.on_demand_set.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message ResponseStatus {
+  int32 status_code = 1;
+  string reason = 2;
+}
+

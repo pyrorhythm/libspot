@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package spotify.mdata.proto;
+
+option cc_enable_arenas = true;
+
+import "extension_kind.proto";
+import "google/protobuf/any.proto";
+
+message LocalExtensionQuery {
+  .spotify.extendedmetadata.ExtensionKind extension_kind = 1;
+  repeated string entity_uri = 2;
+}
+
+message LocalBatchedEntityRequest {
+  repeated .spotify.mdata.proto.LocalExtensionQuery extension_query = 1;
+}
+
+message LocalBatchedExtensionResponse {
+  message ExtensionHeader {
+    bool cache_valid = 1;
+    bool offline_valid = 2;
+    int32 status_code = 3;
+    bool is_empty = 4;
+    int64 cache_expiry_timestamp = 5;
+    int64 offline_expiry_timestamp = 6;
+    string etag = 7;
+  }
+
+  message EntityExtension {
+    string entity_uri = 1;
+    .spotify.mdata.proto.LocalBatchedExtensionResponse.ExtensionHeader header = 2;
+    .google.protobuf.Any extension_data = 3;
+  }
+
+  message Extension {
+    .spotify.extendedmetadata.ExtensionKind extension_kind = 1;
+    repeated .spotify.mdata.proto.LocalBatchedExtensionResponse.EntityExtension entity_extension = 2;
+  }
+
+  repeated .spotify.mdata.proto.LocalBatchedExtensionResponse.Extension extension = 1;
+}
+

@@ -1,0 +1,53 @@
+syntax = "proto2";
+
+package spotify.playlist4.proto;
+
+option java_package = "com.spotify.playlist4.proto";
+option java_outer_classname = "Playlist4PubSubProto";
+
+import "google/protobuf/timestamp.proto";
+import "playlist_api.proto";
+
+message SubscribeRequest {
+  repeated bytes uris = 1;
+}
+
+message UnsubscribeRequest {
+  repeated bytes uris = 1;
+}
+
+message PlaylistModificationInfo {
+  optional bytes uri = 1;
+  optional bytes new_revision = 2;
+  optional bytes parent_revision = 3;
+  repeated .spotify.playlist4.proto.Op ops = 4;
+  optional .google.protobuf.Timestamp modified_at = 5;
+  optional string server_domain = 6;
+  optional bool truncated_ops = 7;
+  optional bool skip_publish_to_clients = 8;
+}
+
+message RootlistModificationInfo {
+  optional bytes new_revision = 1;
+  optional bytes parent_revision = 2;
+  repeated .spotify.playlist4.proto.Op ops = 3;
+  optional .google.protobuf.Timestamp modified_at = 4;
+  optional string server_domain = 5;
+  optional bool truncated_ops = 6;
+}
+
+message FollowerUpdate {
+  optional string uri = 1;
+  optional string username = 2;
+  optional bool is_following = 3;
+  optional uint64 timestamp = 4;
+}
+
+message PlaylistCreationInfo {
+  optional bytes owner_user_id = 1;
+  optional string owner_username = 2;
+  optional bytes new_revision = 3;
+  repeated .spotify.playlist4.proto.Delta deltas = 4;
+  optional bool truncated_ops = 5;
+}
+

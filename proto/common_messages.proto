@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package spotify.connect.esperanto.proto;
+
+option java_package = "com.spotify.connect.esperanto.proto";
+
+message StatusResponse {
+  .spotify.connect.esperanto.proto.Status status = 1;
+}
+
+message LoggingParams {
+  repeated string page_instance_ids = 3;
+  repeated string interaction_ids = 4;
+  optional int64 command_initiated_time = 1;
+  optional int64 command_received_time = 2;
+  optional string command_id = 5;
+  optional string feature_identifier = 6;
+}
+
+enum Status {
+  OK = 0;
+  NOT_FOUND = 1;
+  INVALID_ARGUMENTS = 2;
+  BACKEND_FAILURE = 3;
+}
+

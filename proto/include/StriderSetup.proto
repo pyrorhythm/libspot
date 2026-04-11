@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message StriderSetup {
+  optional string algo = 1;
+  optional string seed = 2;
+  optional string variant = 3;
+  optional string window = 4;
+  optional string cache_id = 5;
+}
+

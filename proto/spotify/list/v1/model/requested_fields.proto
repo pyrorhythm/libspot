@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "RequestedFieldsProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/attribute_kinds.proto";
+
+message AttributesRequestedFields {
+  repeated .spotify.list.v1.model.AttributeKind requested_field = 1;
+}
+
+message ItemRequestedFields {
+  optional bool id = 1;
+  optional .spotify.list.v1.model.AttributesRequestedFields attributes = 2;
+}
+
+message MetaItemsRequestedFields {
+  reserved 2;
+  optional .spotify.list.v1.model.AttributesRequestedFields attributes = 1;
+}
+
+message LensRemovedItemsRequestedFields {
+  optional .spotify.list.v1.model.ItemRequestedFields items = 1;
+}
+
+message LensEffectRequestedFields {
+  optional .spotify.list.v1.model.LensRemovedItemsRequestedFields lens_removed_items = 1;
+}
+
+message ListEntityRequestedFields {
+  optional .spotify.list.v1.model.AttributesRequestedFields attributes = 1;
+  optional .spotify.list.v1.model.ItemRequestedFields items = 2;
+  optional .spotify.list.v1.model.MetaItemsRequestedFields meta_items = 3;
+  optional .spotify.list.v1.model.LensEffectRequestedFields lens_effect = 4;
+}
+
+message ListResponseRequestedFields {
+  reserved 2;
+  optional .spotify.list.v1.model.ListEntityRequestedFields entity = 1;
+}
+
+message RequestedFields {
+  optional bool all = 1;
+  optional .spotify.list.v1.model.ListResponseRequestedFields list_response = 2;
+}
+

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package spotify.bumblebee.audio_associations.v1;
+
+option java_package = "com.spotify.bumblebee.AudioAssociations.v1";
+option java_multiple_files = true;
+
+message AudioAssociations {
+  repeated .spotify.bumblebee.audio_associations.v1.AudioAssociation audio_association = 1;
+}
+
+message AudioAssociation {
+  string track_uri = 1;
+  .spotify.bumblebee.audio_associations.v1.ImageGroup images = 2;
+}
+
+message ImageGroup {
+  repeated .spotify.bumblebee.audio_associations.v1.Image image = 1;
+}
+
+message Image {
+  enum Size {
+    DEFAULT = 0;
+    SMALL = 1;
+    LARGE = 2;
+    XLARGE = 3;
+    XXLARGE = 4;
+  }
+
+  optional bytes file_id = 1;
+  optional .spotify.bumblebee.audio_associations.v1.Image.Size size = 2;
+  optional sint32 width = 3;
+  optional sint32 height = 4;
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionProgressUpdate {
+  optional string key = 1;
+  optional int64 position_ms = 2;
+  optional int64 duration_ms = 3;
+  optional string reason = 4;
+  optional string client = 5;
+  optional string page_identifier = 6;
+  optional string use_case_identifier = 7;
+  optional string playback_id = 8;
+}
+

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/empty.proto";
+
+service Capabilities {
+  rpc addCapability (.spotify.ads.esperanto.proto.CapabilityRequest) returns (.google.protobuf.Empty) {}
+  rpc removeCapability (.spotify.ads.esperanto.proto.CapabilityRequest) returns (.google.protobuf.Empty) {}
+}
+
+message CapabilityRequest {
+  .spotify.ads.esperanto.proto.Capability capability = 1;
+}
+
+enum Capability {
+  RESERVED = 0;
+  AUDIO_ONLY = 1;
+  DISTRACTED_DRIVER = 2;
+}
+

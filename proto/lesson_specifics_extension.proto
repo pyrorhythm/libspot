@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.learning.v1;
+
+option java_package = "com.spotify.learning.v1";
+option java_outer_classname = "LessonSpecificsProto";
+option java_multiple_files = true;
+
+message LessonSpecifics {
+  bool is_lesson = 1;
+}
+

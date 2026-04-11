@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package spotify.player.sequence.proto;
+
+import "player_sequence/player/state/context_stack_entry.proto";
+
+message ContextStack {
+  repeated .spotify.player.sequence.proto.ContextStackEntry stack = 1;
+}
+

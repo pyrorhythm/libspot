@@ -1,0 +1,276 @@
+syntax = "proto2";
+
+package spotify.playlist_permission.proto;
+
+option java_package = "com.spotify.playlist.proto";
+option java_multiple_files = true;
+
+import "google/protobuf/timestamp.proto";
+
+message Permission {
+  reserved 4;
+  reserved 5;
+  optional bytes revision = 1;
+  optional .spotify.playlist_permission.proto.PermissionLevel permission_level = 2;
+  optional .spotify.playlist_permission.proto.PermissionLevelState permission_level_state = 3;
+}
+
+message GrantableLevels {
+  repeated .spotify.playlist_permission.proto.PermissionLevel base = 1;
+  repeated .spotify.playlist_permission.proto.PermissionLevel member = 2;
+}
+
+message AdministratePermissionCapabilities {
+  optional bool can_set = 1;
+  optional bool can_remove = 2;
+  optional bool can_remove_own = 3;
+}
+
+message AdministratePermissionKindCapabilities {
+  reserved "abuse";
+  reserved "profile";
+  reserved "authorized";
+  reserved 3;
+  reserved 4;
+  reserved 5;
+  optional .spotify.playlist_permission.proto.AdministratePermissionCapabilities base = 1;
+  optional .spotify.playlist_permission.proto.AdministratePermissionCapabilities member = 2;
+  optional .spotify.playlist_permission.proto.AdministratePermissionCapabilities grant = 6;
+}
+
+message AttributeCapabilities {
+  optional bool can_edit = 1;
+}
+
+message AttributeKindCapabilities {
+  optional .spotify.playlist_permission.proto.AttributeKind attribute_kind = 1;
+  optional .spotify.playlist_permission.proto.AttributeCapabilities capabilities = 2;
+}
+
+message ListAttributeCapabilities {
+  optional .spotify.playlist_permission.proto.AttributeCapabilities name = 1;
+  optional .spotify.playlist_permission.proto.AttributeCapabilities description = 2;
+  optional .spotify.playlist_permission.proto.AttributeCapabilities picture = 3;
+  optional .spotify.playlist_permission.proto.AttributeCapabilities collaborative = 4;
+  optional .spotify.playlist_permission.proto.AttributeCapabilities deleted_by_owner = 6;
+  optional .spotify.playlist_permission.proto.AttributeCapabilities ai_curation_reference_id = 15;
+}
+
+message Capabilities {
+  optional bool can_view = 1;
+  optional bool can_administrate_permissions = 2;
+  repeated .spotify.playlist_permission.proto.PermissionLevel grantable_level = 3;
+  optional bool can_edit_metadata = 4;
+  optional bool can_edit_items = 5;
+  optional bool can_cancel_membership = 6;
+  optional .spotify.playlist_permission.proto.GrantableLevels grantable_levels = 7;
+  optional .spotify.playlist_permission.proto.ListAttributeCapabilities list_attribute_capabilities = 8;
+  repeated .spotify.playlist_permission.proto.AttributeKindCapabilities attribute_kind_capabilities = 9;
+  optional bool can_mix_playlist = 10;
+  optional bool can_send_messages = 11;
+  optional .spotify.playlist_permission.proto.AdministratePermissionKindCapabilities administrate_permission_kind_capabilities = 12;
+  optional bool can_delete = 13;
+  optional bool can_abuse_report = 14;
+}
+
+message CapabilitiesMultiRequest {
+  repeated .spotify.playlist_permission.proto.CapabilitiesRequest request = 1;
+  optional string fallback_username = 2;
+  optional string fallback_user_id = 3;
+  optional string fallback_uri = 4;
+}
+
+message CapabilitiesRequestOptions {
+  optional bool can_view_only = 1;
+}
+
+message CapabilitiesRequest {
+  optional string username = 1;
+  optional string user_id = 2;
+  optional string uri = 3;
+  optional bool user_is_owner = 4;
+  optional string permission_grant_token = 5;
+  optional .spotify.playlist_permission.proto.CapabilitiesRequestOptions request_options = 6;
+}
+
+message CapabilitiesMultiResponse {
+  repeated .spotify.playlist_permission.proto.CapabilitiesResponse response = 1;
+}
+
+message CapabilitiesResponse {
+  optional .spotify.playlist_permission.proto.ResponseStatus status = 1;
+  optional .spotify.playlist_permission.proto.Capabilities capabilities = 2;
+}
+
+message SetPermissionLevelRequest {
+  optional .spotify.playlist_permission.proto.PermissionLevel permission_level = 1;
+}
+
+message SetPermissionResponse {
+  optional .spotify.playlist_permission.proto.Permission resulting_permission = 1;
+}
+
+message GetMemberPermissionsResponse {
+  message MemberPermissionsEntry {
+    optional string key = 1;
+    optional .spotify.playlist_permission.proto.Permission value = 2;
+  }
+
+  repeated .spotify.playlist_permission.proto.GetMemberPermissionsResponse.MemberPermissionsEntry member_permissions = 1;
+}
+
+message Permissions {
+  optional .spotify.playlist_permission.proto.Permission base_permission = 1;
+}
+
+message PermissionState {
+  optional .spotify.playlist_permission.proto.Permissions permissions = 1;
+  optional .spotify.playlist_permission.proto.Capabilities capabilities = 2;
+  optional bool is_private = 3;
+  optional bool is_collaborative = 4;
+}
+
+message PermissionStatePub {
+  optional .spotify.playlist_permission.proto.PermissionState permission_state = 1;
+}
+
+message PermissionGrantOptions {
+  optional .spotify.playlist_permission.proto.Permission permission = 1;
+  optional int64 ttl_ms = 2;
+  optional int64 max_usages = 3;
+}
+
+message PermissionGrant {
+  optional string token = 1;
+  optional .spotify.playlist_permission.proto.PermissionGrantOptions permission_grant_options = 2;
+  optional .google.protobuf.Timestamp created_at = 3;
+  optional string created_by_username = 4;
+  optional string created_by_user_id = 5;
+}
+
+message PermissionGrantDetails {
+  optional bool permission_level_downgraded = 1;
+}
+
+message PermissionGrantDescription {
+  enum ClaimFailReason {
+    CLAIM_FAIL_REASON_UNSPECIFIED = 0;
+    CLAIM_FAIL_REASON_ANONYMOUS = 1;
+    CLAIM_FAIL_REASON_NO_GRANT_FOUND = 2;
+    CLAIM_FAIL_REASON_GRANT_EXPIRED = 3;
+  }
+
+  optional .spotify.playlist_permission.proto.PermissionGrantOptions permission_grant_options = 1;
+  optional .spotify.playlist_permission.proto.PermissionGrantDescription.ClaimFailReason claim_fail_reason = 2;
+  optional bool is_effective = 3;
+  optional .spotify.playlist_permission.proto.Capabilities capabilities = 4;
+  repeated .spotify.playlist_permission.proto.PermissionGrantDetails details = 5;
+}
+
+message ClaimPermissionGrantResponse {
+  optional .spotify.playlist_permission.proto.Permission user_permission = 1;
+  optional .spotify.playlist_permission.proto.Capabilities capabilities = 2;
+  repeated .spotify.playlist_permission.proto.PermissionGrantDetails details = 3;
+}
+
+message ResponseStatus {
+  optional int32 status_code = 1;
+  optional string status_message = 2;
+}
+
+message PermissionIdentifier {
+  required .spotify.playlist_permission.proto.PermissionIdentifierKind kind = 1;
+  optional string user_id = 2;
+}
+
+message PermissionEntry {
+  optional .spotify.playlist_permission.proto.PermissionIdentifier identifier = 1;
+  optional .spotify.playlist_permission.proto.Permission permission = 2;
+}
+
+message CreateInitialPermissions {
+  repeated .spotify.playlist_permission.proto.PermissionEntry permission_entry = 1;
+}
+
+message CreateInitialPermissionsResponse {
+  repeated .spotify.playlist_permission.proto.PermissionEntry permission_entry = 1;
+}
+
+message DefaultOwnerCapabilitiesResponse {
+  optional .spotify.playlist_permission.proto.Capabilities capabilities = 1;
+}
+
+message ListPermissionGrantsResponse {
+  repeated .spotify.playlist_permission.proto.PermissionGrant permission_grant = 1;
+}
+
+message PermissionHistoryEntryUser {
+  optional string username = 1;
+}
+
+message PermissionHistoryEntry {
+  optional .spotify.playlist_permission.proto.PermissionIdentifierKind kind = 1;
+  optional .spotify.playlist_permission.proto.Permission permission = 2;
+  optional .google.protobuf.Timestamp timestamp = 3;
+  optional .spotify.playlist_permission.proto.PermissionHistoryEntryUser user = 4;
+}
+
+message GetPermissionHistoryResponse {
+  repeated .spotify.playlist_permission.proto.PermissionHistoryEntry entry = 1;
+}
+
+enum PermissionLevel {
+  UNKNOWN = 0;
+  BLOCKED = 1;
+  VIEWER = 2;
+  CONTRIBUTOR = 3;
+  MADE_FOR = 4;
+  ADMIN = 5;
+}
+
+enum PermissionLevelState {
+  PERMISSION_LEVEL_STATE_UNSPECIFIED = 0;
+  PERMISSION_LEVEL_STATE_PENDING = 1;
+  PERMISSION_LEVEL_STATE_ACCEPTED = 2;
+  PERMISSION_LEVEL_STATE_REJECTED = 3;
+}
+
+enum AttributeKind {
+  KIND_UNSPECIFIED = 0;
+  KIND_URI = 1;
+  KIND_NAME = 3;
+  KIND_DESCRIPTION = 4;
+  KIND_UPDATED_AT = 5;
+  KIND_ADDED_BY_USERNAME = 6;
+  KIND_OWNER_USERNAME = 7;
+  KIND_CREATED_AT = 8;
+  KIND_CAPABILITIES = 9;
+  KIND_GEOBLOCK = 10;
+  KIND_SEEN_AT = 11;
+  KIND_ABUSE_REPORTING_ENABLED = 12;
+  KIND_APPROXIMATE_LENGTH = 13;
+  KIND_AVAILABLE_SIGNALS = 14;
+  KIND_PUBLISHED_TO_PROFILE = 15;
+  KIND_RECOMMENDATION_INFO = 16;
+  KIND_AI_CURATION = 17;
+  KIND_ADDED_AT = 18;
+  KIND_DELETED_BY_OWNER = 19;
+  KIND_PICTURE_FILE_ID = 20;
+  KIND_PICTURE_SIZES = 21;
+  KIND_CLIENT_ID = 22;
+  KIND_FORMAT = 23;
+  KIND_FORMAT_LIST_ATTRIBUTES = 24;
+  KIND_ITEM_ID_ALGORITHM = 25;
+  KIND_RECOVERABLE = 26;
+  KIND_SOURCE_LENS = 27;
+}
+
+enum PermissionIdentifierKind {
+  PERMISSION_IDENTIFIER_KIND_UNSPECIFIED = 0;
+  PERMISSION_IDENTIFIER_KIND_BASE = 1;
+  PERMISSION_IDENTIFIER_KIND_MEMBER = 2;
+  PERMISSION_IDENTIFIER_KIND_ABUSE = 3;
+  PERMISSION_IDENTIFIER_KIND_PROFILE = 4;
+  PERMISSION_IDENTIFIER_KIND_AUTHORIZED = 5;
+}
+

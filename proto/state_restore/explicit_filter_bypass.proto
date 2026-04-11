@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message ExplicitFilterBypass {
+  repeated string uris = 1;
+}
+

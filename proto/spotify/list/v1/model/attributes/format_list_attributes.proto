@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.list.v1.model.attributes;
+
+option java_package = "com.spotify.list.v1.model.attributes";
+option java_outer_classname = "FormatListAttributesProto";
+option java_multiple_files = true;
+
+message FormatListAttributes {
+  message AttributesEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.list.v1.model.attributes.FormatListAttributes.AttributesEntry attributes = 1;
+}
+

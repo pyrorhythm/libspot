@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package spotify.recently_played_esperanto.proto;
+
+option java_package = "com.spotify.recently_played_esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "recently_played_decoration_policy.proto";
+import "recently_played_item.proto";
+
+message GetRecentlyPlayedRequest {
+  uint32 limit = 1;
+  uint32 playlist_resync_limit = 2;
+  bool exclude_shows_mixed = 3;
+  bool exclude_shows_audio = 4;
+  bool exclude_shows_video = 5;
+  bool exclude_track_contexts = 6;
+  bool include_hidden = 7;
+  bool include_collection_songs = 8;
+  bool include_your_episodes = 9;
+  bool include_own_deleted_playlists = 10;
+  bool include_podcast_shorts = 11;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedArtistDecorationPolicy artist_policy = 12;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedAlbumDecorationPolicy album_policy = 13;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedTrackDecorationPolicy track_policy = 14;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedShowDecorationPolicy show_policy = 15;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedPlaylistDecorationPolicy playlist_policy = 16;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedCollectionTracksDecorationPolicy collection_tracks_policy = 17;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedProfileDecorationPolicy profile_policy = 18;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedEpisodeDecorationPolicy episode_policy = 19;
+  uint32 update_throttling = 20;
+  bool initial_response_from_cache = 21;
+}
+
+message RecentlyPlayedContext {
+  oneof context {
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedArtist artist = 1;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedAlbum album = 2;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedTrack track = 3;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedShow show = 4;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedProfile profile = 5;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedPlaylist playlist = 6;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedCollectionTracks collection_tracks = 7;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedEpisode episode = 8;
+  }
+}
+
+message GetRecentlyPlayedResponse {
+  repeated .spotify.recently_played_esperanto.proto.RecentlyPlayedContext context = 1;
+  bool loaded = 2;
+  uint32 status = 3;
+  string error = 4;
+}
+
+message HideRecentlyPlayedRequest {
+  repeated string uri = 1;
+}
+
+message HideRecentlyPlayedResponse {
+  uint32 status = 1;
+  string error = 2;
+}
+

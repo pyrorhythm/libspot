@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.list.v1.model.attributes;
+
+option java_package = "com.spotify.list.v1.model.attributes";
+option java_outer_classname = "RecommendationInfoProto";
+option java_multiple_files = true;
+
+message RecommendationInfo {
+  optional bool is_recommendation = 1;
+}
+

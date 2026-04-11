@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message Strings {
+  repeated string strings = 1;
+}
+
+message RemoveBannedTracksRules {
+  message BannedContextTracksEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.state_restore.Strings value = 2;
+  }
+
+  repeated string banned_tracks = 1;
+  repeated string banned_albums = 2;
+  repeated string banned_artists = 3;
+  repeated .spotify.player.proto.state_restore.RemoveBannedTracksRules.BannedContextTracksEntry banned_context_tracks = 4;
+}
+

@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+import "flat_file.proto";
+
+message Image {
+  repeated .spotify.contentagnostic.v2.ImageInstance instances = 1;
+  .spotify.contentagnostic.v2.ColorSetContrastOptions extracted_color_set = 2;
+}
+
+message ImageInstance {
+  .spotify.contentagnostic.v2.FlatFile flat_file = 1;
+  .spotify.contentagnostic.v2.ImageSize size = 2;
+}
+
+message ColorSetContrastOptions {
+  .spotify.contentagnostic.v2.ColorSet min_contrast = 1;
+  .spotify.contentagnostic.v2.ColorSet high_contrast = 2;
+  .spotify.contentagnostic.v2.ColorSet higher_contrast = 3;
+  .spotify.contentagnostic.v2.RgbaColor encore_base_set_text_color = 4;
+}
+
+message ColorSet {
+  .spotify.contentagnostic.v2.RgbaColor background_base = 1;
+  .spotify.contentagnostic.v2.RgbaColor background_tinted_base = 2;
+  .spotify.contentagnostic.v2.RgbaColor text_base = 3;
+  .spotify.contentagnostic.v2.RgbaColor text_subdued = 4;
+  .spotify.contentagnostic.v2.RgbaColor text_bright_accent = 5;
+}
+
+message RgbaColor {
+  int32 r = 1;
+  int32 g = 2;
+  int32 b = 3;
+  int32 a = 4;
+}
+
+enum ImageSize {
+  IMAGE_SIZE_UNSPECIFIED = 0;
+  IMAGE_SIZE_SMALL = 1;
+  IMAGE_SIZE_DEFAULT = 2;
+  IMAGE_SIZE_LARGE = 3;
+  IMAGE_SIZE_XLARGE = 4;
+  IMAGE_SIZE_XXLARGE = 5;
+}
+

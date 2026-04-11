@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "SPTPlaylistEsperanto";
+
+message ResponseStatus {
+  int32 status_code = 1;
+  string reason = 2;
+}
+

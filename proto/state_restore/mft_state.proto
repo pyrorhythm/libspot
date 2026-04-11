@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message EventList {
+  repeated uint64 event_times = 1;
+}
+
+message LastEvent {
+  required string uri = 1;
+  required uint64 when = 2;
+}
+
+message History {
+  message WhenEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.state_restore.EventList value = 2;
+  }
+
+  repeated .spotify.player.proto.state_restore.History.WhenEntry when = 1;
+  required .spotify.player.proto.state_restore.LastEvent last = 2;
+}
+
+message MftState {
+  required .spotify.player.proto.state_restore.History track = 1;
+  required .spotify.player.proto.state_restore.History social_track = 2;
+  required .spotify.player.proto.state_restore.History album = 3;
+  required .spotify.player.proto.state_restore.History artist = 4;
+  optional .spotify.player.proto.state_restore.EventList skip = 5;
+  required uint64 time = 6;
+  required bool did_skip = 7;
+}
+

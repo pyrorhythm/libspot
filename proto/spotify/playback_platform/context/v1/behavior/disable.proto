@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/common/v1/restriction.proto";
+
+message Disable {
+  repeated .spotify.playback_platform.common.v1.Restriction restrictions = 1;
+}
+

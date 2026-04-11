@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_optional.proto";
+
+message ContextPlayerOptions {
+  message ModesEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  bool shuffling_context = 1;
+  bool repeating_context = 2;
+  bool repeating_track = 3;
+  repeated .spotify.player.esperanto.proto.ContextPlayerOptions.ModesEntry modes = 5;
+  optional float playback_speed = 4;
+}
+
+message ContextPlayerOptionOverrides {
+  message ModesEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  .spotify.player.esperanto.proto.OptionalBoolean shuffling_context = 1;
+  .spotify.player.esperanto.proto.OptionalBoolean repeating_context = 2;
+  .spotify.player.esperanto.proto.OptionalBoolean repeating_track = 3;
+  repeated .spotify.player.esperanto.proto.ContextPlayerOptionOverrides.ModesEntry modes = 5;
+  optional float playback_speed = 4;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message CanPlayContentPermissionsMissingMetadataEvent {
+  repeated string content_uris = 1;
+  optional int32 number_of_total_content_uris = 2;
+  optional string caller_source = 3;
+}
+

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.queue.proto;
+
+import "item_reporting_context.proto";
+
+message Item {
+  string uid = 1;
+  string uri = 2;
+  .spotify.timeline_reporter.proto.ItemReportingContext item_reporting_context = 3;
+}
+
+message UserQueue {
+  repeated .spotify.queue.proto.Item items = 1;
+}
+

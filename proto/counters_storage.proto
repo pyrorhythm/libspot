@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.pending_events.proto;
+
+message CountersStorage {
+  message CountersByEventNameEntry {
+    string key = 1;
+    .spotify.pending_events.proto.CountersArray value = 2;
+  }
+
+  repeated .spotify.pending_events.proto.CountersStorage.CountersByEventNameEntry counters_by_event_name = 1;
+}
+
+message CountersArray {
+  repeated int64 counters = 1;
+}
+

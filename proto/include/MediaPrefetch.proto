@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message MediaPrefetch {
+  optional string feature_id = 1;
+  optional bytes file_id = 2;
+  optional string resource_id = 3;
+  optional string resource_type = 4;
+  optional int64 error_code = 5;
+  optional string error_details = 6;
+}
+

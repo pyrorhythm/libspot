@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message TransitionMap {
+  optional .spotify.player.proto.TransitionDirection direction = 1;
+  optional .spotify.player.proto.TimeMap time_map = 2;
+}
+
+message TimeMap {
+  repeated sint64 from = 1;
+  repeated sint64 to = 2;
+}
+
+enum TransitionDirection {
+  TRANSITION_DIRECTION_UNSPECIFIED = 0;
+  TRANSITION_DIRECTION_BIDIRECTIONAL = 1;
+  TRANSITION_DIRECTION_FORWARD = 2;
+}
+

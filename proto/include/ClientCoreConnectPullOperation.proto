@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ClientCoreConnectPullOperation {
+  message FailureReasonsEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional string result = 1;
+  repeated .spotify.event_sender.proto.ClientCoreConnectPullOperation.FailureReasonsEntry failure_reasons = 2;
+  optional int64 duration = 3;
+  optional string interaction_ids = 4;
+  optional string intent_id = 5;
+  optional string device_id = 6;
+  optional string active_device_id = 7;
+  optional string feature_identifier = 8;
+}
+

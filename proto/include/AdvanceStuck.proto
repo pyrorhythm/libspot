@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AdvanceStuck {
+  optional string track = 1;
+  optional bytes playback_id = 2;
+  optional string source_start = 3;
+  optional string reason_start = 4;
+  optional string audio_driver = 5;
+  optional string reason_stuck = 6;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+message AdBreakContext {
+  uint64 max_seconds_remaining = 1;
+  uint64 position_in_current_ad_break = 2;
+  uint64 total_ads_in_break_estimate = 3;
+}
+

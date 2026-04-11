@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.karaoke_esperanto.proto;
+
+option java_package = "com.spotify.karaoke.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "karaoke_status.proto";
+
+message KaraokePostStatusRequest {
+  .spotify.karaoke_esperanto.proto.KaraokeStatus status = 1;
+}
+
+message KaraokePostStatusResponse {
+  bool success = 1;
+}
+

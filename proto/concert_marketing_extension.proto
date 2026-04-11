@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.concerts.metadata.v1;
+
+message Image {
+  enum Size {
+    SIZE_UNKNOWN = 0;
+    SIZE_DEFAULT = 1;
+    SIZE_SMALL = 2;
+    SIZE_LARGE = 3;
+    SIZE_XLARGE = 4;
+  }
+
+  bytes file_id = 1;
+  .spotify.concerts.metadata.v1.Image.Size size = 2;
+  optional int32 pixel_width = 3;
+  optional int32 pixel_height = 4;
+}
+
+message ImageGroup {
+  repeated .spotify.concerts.metadata.v1.Image image = 1;
+}
+
+message Marketing {
+  optional .spotify.concerts.metadata.v1.ImageGroup cover_image = 1;
+}
+

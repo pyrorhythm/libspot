@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package spotify.mdata_debug_esperanto.proto;
+
+option java_package = "com.spotify.mdata.debug.esperanto.proto";
+option java_multiple_files = true;
+
+import "extension_kind.proto";
+import "google/protobuf/any.proto";
+
+message ListAllInCacheRequest {
+}
+
+message ListAllInCacheResponse {
+  message Entry {
+    .spotify.extendedmetadata.ExtensionKind extension_kind = 1;
+    string entity_uri = 2;
+  }
+
+  repeated .spotify.mdata_debug_esperanto.proto.ListAllInCacheResponse.Entry entries = 1;
+  string error = 2;
+}
+
+message PurgeAllInCacheRequest {
+}
+
+message PurgeAllInCacheResponse {
+  string error = 1;
+}
+
+message PeekCacheEntryRequest {
+  .spotify.extendedmetadata.ExtensionKind extension_kind = 1;
+  string entity_uri = 2;
+}
+
+message PeekCacheEntryResponse {
+  enum Status {
+    STATUS_UNKNOWN = 0;
+    STATUS_OK = 1;
+    STATUS_NOT_RESOLVED = 2;
+    STATUS_NOT_FOUND = 3;
+    STATUS_UNAVAILABLE_FOR_LEGAL_REASONS = 4;
+  }
+
+  .spotify.mdata_debug_esperanto.proto.PeekCacheEntryResponse.Status status = 1;
+  string etag = 2;
+  int64 online_expiry_timestamp = 3;
+  int64 offline_expiry_timestamp = 4;
+  int32 status_code = 5;
+  int64 last_modified_timestamp = 6;
+  bool is_online_fresh = 7;
+  bool is_offline_fresh = 8;
+  .google.protobuf.Any extension_data = 9;
+}
+

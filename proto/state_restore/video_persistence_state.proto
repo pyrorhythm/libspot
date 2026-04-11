@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message VideoPersistenceState {
+  enum MediaType {
+    AUDIO = 1;
+    VIDEO = 2;
+  }
+
+  enum VideoContextType {
+    NONE = 1;
+    IS_VIDEO_FIRST = 2;
+    PLAYLIST_VIDEO_TOGGLE = 3;
+    IS_SINGLE_TRACK_VIDEO_CONTENT = 4;
+  }
+
+  optional .spotify.player.proto.state_restore.VideoPersistenceState.MediaType current_media_type = 1;
+  optional .spotify.player.proto.state_restore.VideoPersistenceState.VideoContextType video_context_type = 2;
+}
+

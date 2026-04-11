@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message TracksClusterReport {
+  optional int64 num_tracks = 1;
+  optional int64 num_dimensions = 2;
+  optional int64 num_iterations = 3;
+  optional int64 converged = 4;
+  optional int64 num_clusters = 5;
+  optional int64 total_time = 6;
+  optional int64 num_batches = 7;
+  optional string tracks = 8;
+  optional int64 total_processing_time = 9;
+}
+

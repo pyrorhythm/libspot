@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/context.proto";
+import "spotify/playback_platform/context/v1/sequence_child.proto";
+
+message ContextStack {
+  message Entry {
+    .spotify.playback_platform.context.v1.SequenceChild child = 1;
+    optional .spotify.playback_platform.context.v1.Context context = 2;
+  }
+
+  repeated .spotify.playback_platform.context.v1.ContextStack.Entry entries = 1;
+}
+

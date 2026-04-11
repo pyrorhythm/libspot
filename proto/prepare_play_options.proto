@@ -1,0 +1,40 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+import "context_player_options.proto";
+import "player_license.proto";
+import "skip_to_track.proto";
+
+message PreparePlayOptions {
+  message ConfigurationOverrideEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional .spotify.player.proto.ContextPlayerOptionOverrides player_options_override = 1;
+  optional .spotify.player.proto.PlayerLicense license = 2;
+  repeated .spotify.player.proto.PreparePlayOptions.ConfigurationOverrideEntry configuration_override = 3;
+  optional string playback_id = 4;
+  optional bool always_play_something = 5;
+  optional .spotify.player.proto.SkipToTrack skip_to_track = 6;
+  optional int64 seek_to = 7;
+  optional bool initially_paused = 8;
+  optional bool system_initiated = 9;
+  repeated string suppressions = 10;
+  optional .spotify.player.proto.PrefetchLevel prefetch_level = 11;
+  optional string session_id = 12;
+  optional .spotify.player.proto.AudioStream audio_stream = 13;
+  optional string seek_to_creator_timestamp = 14;
+}
+
+enum PrefetchLevel {
+  NONE = 0;
+  MEDIA = 1;
+}
+
+enum AudioStream {
+  DEFAULT = 0;
+  ALARM = 1;
+}
+

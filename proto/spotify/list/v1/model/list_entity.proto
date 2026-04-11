@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "ListEntityProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/attributes.proto";
+import "spotify/list/v1/model/response_info.proto";
+
+message MetaItem {
+  optional .spotify.list.v1.model.Attributes attributes = 1;
+  optional .spotify.list.v1.model.ResponseInfo info = 2;
+}
+
+message Item {
+  optional bytes id = 1;
+  optional .spotify.list.v1.model.Attributes attributes = 2;
+}
+
+message ListEntity {
+  message MetaItemsEntry {
+    string key = 1;
+    .spotify.list.v1.model.MetaItem value = 2;
+  }
+
+  repeated .spotify.list.v1.model.Item items = 2;
+  repeated .spotify.list.v1.model.ListEntity.MetaItemsEntry meta_items = 3;
+  optional .spotify.list.v1.model.Attributes attributes = 1;
+  optional .spotify.list.v1.model.LensEffect lens_effect = 4;
+}
+
+message LensEffect {
+  optional .spotify.list.v1.model.LensRemovedItems lens_removed_items = 1;
+}
+
+message LensRemovedItems {
+  repeated .spotify.list.v1.model.Item items = 1;
+}
+

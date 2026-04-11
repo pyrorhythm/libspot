@@ -1,0 +1,14 @@
+version: v2
+modules:
+    - path: proto
+      name: buf.build/pyrorhythm/spotd/pkg/libspot
+deps:
+    - buf.build/googleapis/googleapis
+lint:
+    use:
+        - STANDARD
+    except:
+        - IMPORT_USED
+        - RPC_RESPONSE_STANDARD_NAME
+        - RPC_REQUEST_STANDARD_NAME
+        - RPC_REQUEST_RESPONSE_UNIQUE

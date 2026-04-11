@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/empty.proto";
+
+service ContextResolveMock {
+  rpc UpdateContext (.spotify.player.esperanto.proto.ContextUpdate) returns (.google.protobuf.Empty) {}
+  rpc GetRequestInfo (.spotify.player.esperanto.proto.RequestInfoRequest) returns (.spotify.player.esperanto.proto.RequestInfo) {}
+  rpc GetLastAutoplayRequestInfo (.google.protobuf.Empty) returns (.spotify.player.esperanto.proto.AutoplayRequestInfo) {}
+}
+
+message ContextUpdate {
+  string url = 1;
+  string context = 2;
+}
+
+message RequestInfoRequest {
+  string url = 1;
+}
+
+message RequestInfo {
+  int32 request_count = 1;
+}
+
+message AutoplayRequestInfo {
+  repeated string recent_tracks = 2;
+  optional string context_uri = 1;
+}
+

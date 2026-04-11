@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/sequence_options.proto";
+import "spotify/playback_platform/context/v1/sequence_patch.proto";
+
+message ContextEnvironment {
+  message LegacySkipToTrack {
+    reserved "page_index";
+    reserved "page_url";
+    reserved 4;
+    reserved 5;
+    optional string uid = 1;
+    optional string context_id = 2;
+    optional string item_index = 3;
+  }
+
+  .spotify.playback_platform.context.v1.SequenceOptions sequence_options = 1;
+  .spotify.playback_platform.context.v1.ContextEnvironment.LegacySkipToTrack skip_to = 2;
+  int32 iteration = 5;
+  optional .spotify.playback_platform.context.v1.SequencePatch patch = 4;
+}
+

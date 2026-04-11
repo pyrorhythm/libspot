@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_context_track.proto";
+
+message ProvidedTrack {
+  .spotify.player.esperanto.proto.ContextTrack context_track = 1;
+  repeated string removed = 2;
+  repeated string blocked = 3;
+  string provider = 4;
+}
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.chapterspecifics;
+
+option java_package = "com.spotify.chapterspecifics.proto";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message ChapterSpecifics {
+  .google.protobuf.Duration cumulative_duration = 1;
+}
+
+message EpisodeMetadata {
+  .google.protobuf.Duration cumulative_duration = 1;
+}
+

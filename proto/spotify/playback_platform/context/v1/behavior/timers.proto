@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "spotify/playback_platform/common/v1/duration.proto";
+import "spotify/playback_platform/context/v1/behavior/handler.proto";
+
+message Timers {
+  message OnTriggerPlayTimer {
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    string timer_id = 3;
+    oneof when {
+      .spotify.playback_platform.common.v1.Duration duration = 4;
+      .spotify.playback_platform.common.v1.Duration periodic = 5;
+      .spotify.playback_platform.common.v1.Duration duration_nominal = 6;
+      .spotify.playback_platform.common.v1.Duration periodic_nominal = 7;
+    }
+  }
+
+  message OnTriggerWallTimer {
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    string timer_id = 3;
+    oneof when {
+      .google.protobuf.Timestamp timestamp = 4;
+    }
+  }
+
+  message OnTriggerIdleTimer {
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    string timer_id = 3;
+    oneof when {
+      .google.protobuf.Duration duration = 4;
+    }
+  }
+
+  repeated .spotify.playback_platform.context.v1.behavior.Timers.OnTriggerPlayTimer on_trigger_play_timer = 1;
+  repeated .spotify.playback_platform.context.v1.behavior.Timers.OnTriggerWallTimer on_trigger_wall_timer = 2;
+  repeated .spotify.playback_platform.context.v1.behavior.Timers.OnTriggerIdleTimer on_trigger_idle_timer = 3;
+}
+

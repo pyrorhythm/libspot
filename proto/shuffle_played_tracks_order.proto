@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message ShuffleTrack {
+  optional string uid = 1;
+  optional string uri = 2;
+}
+
+message ShufflePlayedTracksOrder {
+  optional string context_id = 1;
+  optional string shuffle_seed = 2;
+  repeated .spotify.player.proto.ShuffleTrack backward_tracks = 3;
+  repeated .spotify.player.proto.ShuffleTrack forward_tracks = 4;
+}
+

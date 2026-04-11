@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message VideoSwitchNode {
+  enum MediaType {
+    UNKNOWN = 0;
+    AUDIO = 1;
+    VIDEO = 2;
+  }
+
+  optional bool switched_to_audio = 1;
+  optional .spotify.player.proto.VideoSwitchNode.MediaType persisted_media_type = 2;
+}
+

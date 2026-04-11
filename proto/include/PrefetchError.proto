@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message PrefetchError {
+  optional int64 strategy = 1;
+  optional string description = 2;
+}
+

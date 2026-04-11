@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.automix.proto;
+
+option java_package = "com.spotify.automix.proto";
+
+import "cuepoints.proto";
+import "transition.proto";
+
+message Preview {
+  string track_uri_1 = 1;
+  string track_uri_2 = 2;
+  string automix_mode = 3;
+  string transition_uri = 4;
+  int64 start_position_ms = 5;
+  bool relative_start_position = 6;
+  .spotify.automix.proto.Cuepoints cuepoints = 7;
+  string playable_track_uri_1 = 10;
+  string playable_track_uri_2 = 11;
+  string context_uri = 12;
+  string arm_id = 13;
+  optional int64 stop_position_ms = 8;
+  optional .spotify.automix.proto.Transition transition_recipe = 9;
+}
+

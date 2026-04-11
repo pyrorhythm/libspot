@@ -1,0 +1,213 @@
+syntax = "proto3";
+
+package spotify.resumption_progress_esperanto.proto;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+service ResumptionProgress {
+  rpc GetState (.spotify.resumption_progress_esperanto.proto.GetStateRequest) returns (.spotify.resumption_progress_esperanto.proto.GetStateResponse) {}
+  rpc SubState (.spotify.resumption_progress_esperanto.proto.GetStateRequest) returns (stream .spotify.resumption_progress_esperanto.proto.GetStateResponse) {}
+  rpc GetDetails (.spotify.resumption_progress_esperanto.proto.GetDetailsRequest) returns (.spotify.resumption_progress_esperanto.proto.GetDetailsResponse) {}
+  rpc SubDetails (.spotify.resumption_progress_esperanto.proto.GetDetailsRequest) returns (stream .spotify.resumption_progress_esperanto.proto.GetDetailsResponse) {}
+  rpc GetAllDetails (.spotify.resumption_progress_esperanto.proto.GetAllDetailsRequest) returns (.spotify.resumption_progress_esperanto.proto.GetAllDetailsResponse) {}
+  rpc MarkAsFinished (.spotify.resumption_progress_esperanto.proto.MarkAsFinishedRequest) returns (.spotify.resumption_progress_esperanto.proto.MarkAsFinishedResponse) {}
+  rpc MarkAsNotStarted (.spotify.resumption_progress_esperanto.proto.MarkAsNotStartedRequest) returns (.spotify.resumption_progress_esperanto.proto.MarkAsNotStartedResponse) {}
+  rpc GetResumePoint (.spotify.resumption_progress_esperanto.proto.GetResumePointRequest) returns (.spotify.resumption_progress_esperanto.proto.GetResumePointResponse) {}
+  rpc SubResumePoint (.spotify.resumption_progress_esperanto.proto.GetResumePointRequest) returns (stream .spotify.resumption_progress_esperanto.proto.GetResumePointResponse) {}
+}
+
+message ItemState {
+  string item = 1;
+  .spotify.resumption_progress_esperanto.proto.ItemResult result = 2;
+  .spotify.resumption_progress_esperanto.proto.State state = 3;
+  .spotify.resumption_progress_esperanto.proto.State current_progress_state = 4;
+}
+
+message CurrentProgress {
+  .google.protobuf.Duration time_left = 1;
+  .google.protobuf.Duration time_played = 2;
+  .google.protobuf.Duration duration = 3;
+  uint32 position_percentage = 4;
+  .spotify.resumption_progress_esperanto.proto.State state = 5;
+}
+
+message ItemDetails {
+  string item = 1;
+  .spotify.resumption_progress_esperanto.proto.ItemResult result = 2;
+  .spotify.resumption_progress_esperanto.proto.CurrentProgress current_progress = 3;
+  .spotify.resumption_progress_esperanto.proto.State state = 4;
+  .google.protobuf.Timestamp last_played_at = 5;
+}
+
+message GetStateRequest {
+  repeated string item = 1;
+  optional string page_identifier = 2;
+}
+
+message GetStateResponse {
+  .spotify.resumption_progress_esperanto.proto.ResponseResult result = 1;
+  repeated .spotify.resumption_progress_esperanto.proto.ItemState item_state = 2;
+}
+
+message GetDetailsRequest {
+  repeated string item = 1;
+  optional string page_identifier = 2;
+}
+
+message GetDetailsResponse {
+  .spotify.resumption_progress_esperanto.proto.ResponseResult result = 1;
+  repeated .spotify.resumption_progress_esperanto.proto.ItemDetails item_details = 2;
+}
+
+message TimeRange {
+  optional .google.protobuf.Duration min = 1;
+  optional .google.protobuf.Duration max = 2;
+}
+
+message PercentageRange {
+  optional uint32 min = 1;
+  optional uint32 max = 2;
+}
+
+message CurrentProgressFilter {
+  .spotify.resumption_progress_esperanto.proto.TimeRange time_left = 1;
+  .spotify.resumption_progress_esperanto.proto.TimeRange time_played = 2;
+  .spotify.resumption_progress_esperanto.proto.PercentageRange position_percentage = 3;
+}
+
+message LastPlayedFilter {
+  optional .google.protobuf.Timestamp min = 1;
+  optional .google.protobuf.Timestamp max = 2;
+}
+
+message Filter {
+  .spotify.resumption_progress_esperanto.proto.CurrentProgressFilter current_progress_filter = 1;
+  .spotify.resumption_progress_esperanto.proto.StateFilter state_filter = 2;
+  .spotify.resumption_progress_esperanto.proto.LastPlayedFilter last_played_filter = 3;
+  .spotify.resumption_progress_esperanto.proto.ContentType type_filter = 4;
+  optional string parent_uri_filter = 5;
+}
+
+message GetAllDetailsRequest {
+  .spotify.resumption_progress_esperanto.proto.Filter filter = 1;
+  .spotify.resumption_progress_esperanto.proto.Sort sort = 2;
+  uint32 max_items_per_parent_uri = 3;
+  uint32 max_items_in_response = 4;
+  optional string page_identifier = 5;
+}
+
+message GetAllDetailsResponse {
+  .spotify.resumption_progress_esperanto.proto.ResponseResult result = 1;
+  repeated .spotify.resumption_progress_esperanto.proto.ItemDetails item_details = 2;
+}
+
+message ItemMarkResult {
+  string item = 1;
+  .spotify.resumption_progress_esperanto.proto.ItemResult result = 2;
+}
+
+message MarkAsFinishedRequest {
+  repeated string item = 1;
+}
+
+message MarkAsFinishedResponse {
+  .spotify.resumption_progress_esperanto.proto.ResponseResult result = 1;
+  repeated .spotify.resumption_progress_esperanto.proto.ItemMarkResult item_result = 2;
+}
+
+message MarkAsNotStartedRequest {
+  repeated string item = 1;
+}
+
+message MarkAsNotStartedResponse {
+  .spotify.resumption_progress_esperanto.proto.ResponseResult result = 1;
+  repeated .spotify.resumption_progress_esperanto.proto.ItemMarkResult item_result = 2;
+}
+
+message GetResumePointRequest {
+  repeated string items = 1;
+  string page_identifier = 2;
+  string use_case_identifier = 3;
+  .spotify.resumption_progress_esperanto.proto.ResumePointView view = 4;
+}
+
+message GetResumePointResponse {
+  message ResumePointsEntry {
+    string key = 1;
+    .spotify.resumption_progress_esperanto.proto.ItemResumePoint value = 2;
+  }
+
+  .spotify.resumption_progress_esperanto.proto.ResponseResult result = 1;
+  repeated .spotify.resumption_progress_esperanto.proto.GetResumePointResponse.ResumePointsEntry resume_points = 2;
+}
+
+message ItemResumePoint {
+  .spotify.resumption_progress_esperanto.proto.ItemResult result = 1;
+  optional .spotify.resumption_progress_esperanto.proto.ResumePoint resume_point = 2;
+}
+
+message ItemResumePointEntry {
+  string uri = 1;
+  .spotify.resumption_progress_esperanto.proto.ItemResumePoint resume_point = 2;
+}
+
+message ResumePoint {
+  .google.protobuf.Timestamp last_updated = 2;
+  oneof value {
+    .google.protobuf.Duration position = 1;
+    .spotify.resumption_progress_esperanto.proto.ItemResumePointEntry resume_point = 3;
+    string uri = 4;
+  }
+}
+
+enum ResponseResult {
+  RESPONSE_RESULT_UNSPECIFIED = 0;
+  RESPONSE_RESULT_SUCCESS = 1;
+  RESPONSE_RESULT_NO_ITEMS_IN_REQUEST = 2;
+  RESPONSE_RESULT_INVALID_ITEM_IN_REQUEST = 3;
+  RESPONSE_RESULT_INVALID_FILTER_IN_REQUEST = 4;
+  RESPONSE_RESULT_PAGE_IDENTIFIER_TOO_LONG = 5;
+  RESPONSE_RESULT_PAGE_IDENTIFIER_EMPTY = 6;
+  RESPONSE_RESULT_USE_CASE_IDENTIFIER_TOO_LONG = 7;
+  RESPONSE_RESULT_USE_CASE_IDENTIFIER_EMPTY = 8;
+}
+
+enum ItemResult {
+  ITEM_RESULT_UNSPECIFIED = 0;
+  ITEM_RESULT_SUCCESS = 1;
+  ITEM_RESULT_NOT_AVAILABLE = 2;
+}
+
+enum State {
+  STATE_UNSPECIFIED = 0;
+  STATE_NOT_STARTED = 1;
+  STATE_IN_PROGRESS = 2;
+  STATE_FINISHED = 3;
+}
+
+enum StateFilter {
+  STATE_FILTER_UNSPECIFIED = 0;
+  STATE_FILTER_IN_PROGRESS = 1;
+}
+
+enum ContentType {
+  CONTENT_TYPE_UNSPECIFIED = 0;
+  CONTENT_TYPE_PODCAST_EPISODE = 1;
+  CONTENT_TYPE_PODCAST_CHAPTER = 2;
+  CONTENT_TYPE_AUDIOBOOK_CHAPTER = 3;
+  CONTENT_TYPE_USER_HIGHLIGHT = 4;
+  CONTENT_TYPE_CLIP = 5;
+}
+
+enum Sort {
+  SORT_UNSPECIFIED = 0;
+  SORT_LAST_PLAYED_AT = 1;
+}
+
+enum ResumePointView {
+  RESUME_POINT_VIEW_UNSPECIFIED = 0;
+  RESUME_POINT_VIEW_BASIC = 1;
+  RESUME_POINT_VIEW_FULL = 2;
+}
+

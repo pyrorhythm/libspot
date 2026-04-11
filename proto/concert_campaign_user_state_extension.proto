@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package spotify.concertcampaignextension.v1;
+
+import "google/protobuf/timestamp.proto";
+
+message ConcertCampaignUserState {
+  oneof state {
+    .spotify.concertcampaignextension.v1.CampaignUserStateReserved reserved = 1;
+    .spotify.concertcampaignextension.v1.CampaignUserStateFCFS fcfs = 2;
+    .spotify.concertcampaignextension.v1.CampaignUserStateWaitlistable waitlistable = 3;
+    .spotify.concertcampaignextension.v1.CampaignUserStateWaitlisted waitlisted = 4;
+    .spotify.concertcampaignextension.v1.CampaignUserStateIneligible ineligible = 5;
+    .spotify.concertcampaignextension.v1.CampaignUserStatePurchased purchased = 6;
+  }
+}
+
+message CampaignUserStateReserved {
+  int32 allocated_count = 1;
+  .google.protobuf.Timestamp reservation_start = 3;
+  .google.protobuf.Timestamp reservation_end = 4;
+  bool few_left = 6;
+}
+
+message CampaignUserStateFCFS {
+  int32 allocated_count = 1;
+  .google.protobuf.Timestamp sale_start = 3;
+  .google.protobuf.Timestamp sale_end = 4;
+  bool few_left = 6;
+}
+
+message CampaignUserStateWaitlistable {
+}
+
+message CampaignUserStateWaitlisted {
+}
+
+message CampaignUserStateIneligible {
+  .spotify.concertcampaignextension.v1.CampaignUserStateIneligibleReason reason = 1;
+}
+
+message CampaignUserStatePurchased {
+  repeated .spotify.concertcampaignextension.v1.CampaignUserStatePurchase purchases = 1;
+  int32 total_count = 2;
+}
+
+message CampaignUserStatePurchase {
+  string concert_uri = 1;
+  int32 count = 2;
+}
+
+enum CampaignUserStateIneligibleReason {
+  CAMPAIGN_USER_STATE_INELIGIBLE_REASON_UNSPECIFIED = 0;
+  CAMPAIGN_USER_STATE_INELIGIBLE_FRAUD_SUSPECTED = 1;
+  CAMPAIGN_USER_STATE_INELIGIBLE_ACCOUNT_AGE = 2;
+  CAMPAIGN_USER_STATE_INELIGIBLE_AGE_RESTRICTION = 3;
+  CAMPAIGN_USER_STATE_INELIGIBLE_SOLD_OUT = 4;
+  CAMPAIGN_USER_STATE_INELIGIBLE_CANCELLED = 5;
+  CAMPAIGN_USER_STATE_INELIGIBLE_SALE_ENDED = 6;
+}
+

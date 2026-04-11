@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package spotify.your_library_tags_esperanto.proto;
+
+option java_package = "spotify.your_library_tags_esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message DecoratedTag {
+  string tag_uri = 1;
+  string tag_name = 3;
+  int32 entity_count = 4;
+}
+
+message DecoratedClass {
+  string class_uri = 1;
+  string class_name = 2;
+  repeated .spotify.your_library_tags_esperanto.proto.DecoratedTag tag = 3;
+}
+
+message YourLibraryTagsResponse {
+  repeated .spotify.your_library_tags_esperanto.proto.DecoratedClass class_group = 3;
+}
+
+message YourLibraryTagsRequest {
+  int32 update_throttling = 1;
+}
+

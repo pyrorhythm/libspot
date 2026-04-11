@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.policy.proto";
+option java_multiple_files = true;
+
+message FolderDecorationPolicy {
+  bool row_id = 1;
+  bool id = 2;
+  bool link = 3;
+  bool name = 4;
+  bool folders = 5;
+  bool playlists = 6;
+  bool recursive_folders = 7;
+  bool recursive_playlists = 8;
+  bool rows = 9;
+}
+

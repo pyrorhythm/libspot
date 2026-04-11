@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "modification_request.proto";
+import "response_status.proto";
+
+message PlaylistModificationRequest {
+  string uri = 1;
+  .spotify.playlist.cosmos.proto.ModificationRequest request = 2;
+}
+
+message PlaylistModificationResponse {
+  .spotify.playlist_esperanto.proto.ResponseStatus status = 1;
+  repeated string added_row_ids = 2;
+}
+

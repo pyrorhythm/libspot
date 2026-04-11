@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.curation_state.proto;
+
+message CuratedPlaylistItem {
+  string item_uri = 1;
+  bytes item_id = 2;
+}
+
+message CuratedPlaylist {
+  repeated .spotify.curation_state.proto.CuratedPlaylistItem item = 1;
+  bytes revision = 2;
+}
+

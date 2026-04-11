@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "CachingProto";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message CacheControl {
+  optional string etag = 1;
+}
+
+message CacheInfo {
+  optional .spotify.list.v1.model.CachePolicy policy = 1;
+  optional .google.protobuf.Duration ttl = 2;
+  optional string etag = 3;
+  optional bool not_modified = 4;
+}
+
+message CacheHint {
+  optional .google.protobuf.Duration next_expected_content_update = 1;
+}
+
+enum CachePolicy {
+  CACHE_POLICY_UNSPECIFIED = 0;
+  CACHE_POLICY_NO = 1;
+  CACHE_POLICY_PRIVATE = 2;
+  CACHE_POLICY_PUBLIC = 3;
+}
+

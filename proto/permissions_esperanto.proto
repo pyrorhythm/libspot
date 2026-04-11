@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+package spotify.restrictions.permissions.permissions_proto;
+
+import "google/protobuf/empty.proto";
+
+service Permissions {
+  rpc CanSeeQueue (.google.protobuf.Empty) returns (.spotify.restrictions.permissions.permissions_proto.QueueQueryResponse) {}
+  rpc CanAddToQueue (.google.protobuf.Empty) returns (.spotify.restrictions.permissions.permissions_proto.QueueQueryResponse) {}
+  rpc CanSetQueue (.google.protobuf.Empty) returns (.spotify.restrictions.permissions.permissions_proto.QueueQueryResponse) {}
+  rpc CanSwitchToMusicVideo (.google.protobuf.Empty) returns (.spotify.restrictions.permissions.permissions_proto.MusicVideoAccessPermissionQueryResponse) {}
+  rpc CanSkipPodcastVideoAd (.google.protobuf.Empty) returns (.spotify.restrictions.permissions.permissions_proto.PodcastVideoAdSkipPermissionQueryResponse) {}
+  rpc CanPlayContent (.spotify.restrictions.permissions.permissions_proto.CanPlayContentRequest) returns (.spotify.restrictions.permissions.permissions_proto.CanPlayContentResponse) {}
+  rpc ObserveInvalidation (.google.protobuf.Empty) returns (stream .spotify.restrictions.permissions.permissions_proto.ObserveInvalidationResponse) {}
+}
+
+message QueueQueryResponse {
+  .spotify.restrictions.permissions.permissions_proto.QueuePermissionResults result = 1;
+  bool is_allowed = 2;
+}
+
+message MusicVideoAccessPermissionQueryResponse {
+  .spotify.restrictions.permissions.permissions_proto.MusicVideoAccessPermissionResult result = 1;
+}
+
+message PodcastVideoAdSkipPermissionQueryResponse {
+  .spotify.restrictions.permissions.permissions_proto.PodcastVideoAdSkipPermissionResult result = 1;
+}
+
+message CanPlayContentRequest {
+  repeated string content_uri = 1;
+  string caller_source = 2;
+  bool force_fetch = 3;
+}
+
+message CanPlayContentResponse {
+  repeated .spotify.restrictions.permissions.permissions_proto.CanPlayContentResult result = 1;
+}
+
+message CanPlayContentResult {
+  message AssuranceRequiredDetails {
+    int32 age_threshold = 1;
+  }
+
+  enum AgeAssuranceReason {
+    AGE_ASSURANCE_REASON_UNKNOWN = 0;
+    AGE_ASSURANCE_REASON_UNAVAILABLE = 1;
+    AGE_ASSURANCE_REASON_REQUIRES_AGE_ASSURANCE = 2;
+    AGE_ASSURANCE_REASON_ALLOW = 3;
+  }
+
+  enum RestrictionReason {
+    RESTRICTION_REASON_UNSPECIFIED = 0;
+    RESTRICTION_REASON_AGE_ASSURANCE = 1;
+    RESTRICTION_REASON_EXPLICIT_CONTENT = 2;
+    RESTRICTION_REASON_AGE_ASSURANCE_19_PLUS = 3;
+    RESTRICTION_REASON_UNAVAILABLE_CONTENT = 4;
+    RESTRICTION_REASON_OFFLINE_UNAVAILABLE_CONTENT = 5;
+  }
+
+  string content_uri = 1;
+  bool can_play = 2;
+  .spotify.restrictions.permissions.permissions_proto.CanPlayContentResult.AgeAssuranceReason reason = 3;
+  .spotify.restrictions.permissions.permissions_proto.CanPlayContentResult.AssuranceRequiredDetails assurance_required_details = 4;
+  repeated .spotify.restrictions.permissions.permissions_proto.CanPlayContentResult.RestrictionReason restriction_reason = 5;
+}
+
+message ObserveInvalidationResponse {
+  bool was_invalidated = 1;
+}
+
+enum QueuePermissionResults {
+  QUEUE_PERMISSION_RESULTS_ALLOWED = 0;
+  QUEUE_PERMISSION_RESULTS_ALLOWED_UNCAPPED_PNS = 1;
+  QUEUE_PERMISSION_RESULTS_DISALLOWED_MFT = 2;
+  QUEUE_PERMISSION_RESULTS_DISALLOWED_CAPPED_PNS = 3;
+}
+
+enum MusicVideoAccessPermissionResult {
+  MUSIC_VIDEO_ACCESS_PERMISSION_RESULT_ALLOWED = 0;
+  MUSIC_VIDEO_ACCESS_PERMISSION_RESULT_DISALLOWED = 1;
+}
+
+enum PodcastVideoAdSkipPermissionResult {
+  PODCAST_VIDEO_AD_SKIP_PERMISSION_RESULT_ALLOWED = 0;
+  PODCAST_VIDEO_AD_SKIP_PERMISSION_RESULT_DISALLOWED_NOT_PREMIUM = 1;
+  PODCAST_VIDEO_AD_SKIP_PERMISSION_RESULT_DISALLOWED_NOT_PODCAST_VIDEO = 2;
+}
+

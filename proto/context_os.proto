@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message Os {
+  string name = 1;
+  string version = 2;
+}
+

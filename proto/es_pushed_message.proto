@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.connectivity.pubsub.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.pubsub.esperanto.proto";
+
+import "es_ident.proto";
+import "es_key.proto";
+
+message PushedMessage {
+  message AttributesEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  .spotify.connectivity.pubsub.esperanto.proto.Ident Ident = 1;
+  repeated bytes Payloads = 2;
+  repeated .spotify.connectivity.pubsub.esperanto.proto.PushedMessage.AttributesEntry Attributes = 3;
+  .spotify.connectivity.pubsub.esperanto.proto.Key Key = 4;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopUIShellInteractionNonAuth {
+  optional string section_id = 1;
+  optional string interaction_type = 2;
+  optional string user_intent = 3;
+}
+

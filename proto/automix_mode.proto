@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package spotify.automix.proto;
+
+message AutomixMode {
+  .spotify.automix.proto.AutomixStyle style = 1;
+}
+
+enum AutomixStyle {
+  NONE = 0;
+  DEFAULT = 1;
+  REGULAR = 2;
+  AIRBAG = 3;
+  RADIO_AIRBAG = 4;
+  SLEEP = 5;
+  MIXED = 6;
+  CUSTOM = 7;
+  HEURISTIC = 8;
+  BACKEND = 9;
+  PRO = 10;
+  CUT = 11;
+}
+

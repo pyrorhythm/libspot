@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message PlaybackQuality {
+  enum BitrateLevel {
+    UNKNOWN_BITRATE_LEVEL = 0;
+    LOW = 1;
+    NORMAL = 2;
+    HIGH = 3;
+    VERY_HIGH = 4;
+    HI_FI = 5;
+    HI_FI24 = 6;
+  }
+
+  enum BitrateStrategy {
+    UNKNOWN_BITRATE_STRATEGY = 0;
+    BEST_MATCHING = 1;
+    BACKEND_ADVISED = 2;
+    OFFLINED_FILE = 3;
+    CACHED_FILE = 4;
+    LOCAL_FILE = 5;
+  }
+
+  enum HiFiStatus {
+    NONE = 0;
+    OFF = 1;
+    ON = 2;
+  }
+
+  optional .spotify.player.proto.state_restore.PlaybackQuality.BitrateLevel bitrate_level = 1;
+  optional .spotify.player.proto.state_restore.PlaybackQuality.BitrateStrategy strategy = 2;
+  optional .spotify.player.proto.state_restore.PlaybackQuality.BitrateLevel target_bitrate_level = 3;
+  optional bool target_bitrate_available = 4;
+  optional .spotify.player.proto.state_restore.PlaybackQuality.HiFiStatus hifi_status = 5;
+}
+

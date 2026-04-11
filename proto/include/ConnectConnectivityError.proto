@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ConnectConnectivityError {
+  optional string software_version = 1;
+  optional string error = 2;
+  optional string connection_type_initial = 3;
+  optional string connection_type_error = 4;
+  optional string reason = 5;
+}
+

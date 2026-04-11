@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.karaoke_esperanto.proto;
+
+option java_package = "com.spotify.karaoke.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message KaraokePostVocalVolumeRequest {
+  float volume = 1;
+}
+
+message KaraokePostVocalVolumeResponse {
+  bool success = 1;
+}
+

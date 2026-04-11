@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.playlistmixing.extensions.mixvocalactivity;
+
+option java_package = "com.spotify.playlistmixing.extensions.mixvocalactivity.proto";
+option java_outer_classname = "MixVocalActivityProto";
+
+message VocalActivity {
+  float source_sample_rate_hz = 1;
+  int32 smoothing_window_size = 2;
+  int32 first_window_sample_start = 3;
+  int32 samples_between_windows = 4;
+  repeated int32 vocal_activity_probabilities = 5;
+}
+

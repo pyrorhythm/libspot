@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "collection_decoration_policy.proto";
+import "status.proto";
+import "collection_item.proto";
+
+message CollectionGetUnplayedEpisodesRequest {
+  .spotify.collection_cosmos.proto.CollectionEpisodeDecorationPolicy episode_policy = 1;
+  uint32 start = 2;
+  uint32 length = 3;
+  string sort = 4;
+  string filter = 5;
+  bool group = 6;
+  uint32 update_throttling = 7;
+}
+
+message UnplayedEpisodeItem {
+  string header = 1;
+  .spotify.collection_cosmos.proto.CollectionEpisode episode = 2;
+}
+
+message CollectionGetUnplayedEpisodesResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+  repeated .spotify.collection_cosmos.proto.UnplayedEpisodeItem item = 2;
+  uint32 unfiltered_length = 3;
+  uint32 unranged_length = 4;
+  bool loading_content = 5;
+}
+

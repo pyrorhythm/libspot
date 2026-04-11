@@ -1,0 +1,344 @@
+syntax = "proto2";
+
+package spotify.metadata;
+
+option java_package = "com.spotify.metadata.proto";
+option java_outer_classname = "Metadata";
+
+import "spotify/metadata/contentratings/v1/content_ratings.proto";
+
+message Artist {
+  reserved 9;
+  optional bytes gid = 1;
+  optional string name = 2;
+  optional sint32 popularity = 3;
+  repeated .spotify.metadata.TopTracks top_track = 4;
+  repeated .spotify.metadata.AlbumGroup album_group = 5;
+  repeated .spotify.metadata.AlbumGroup single_group = 6;
+  repeated .spotify.metadata.AlbumGroup compilation_group = 7;
+  repeated .spotify.metadata.AlbumGroup appears_on_group = 8;
+  repeated .spotify.metadata.ExternalId external_id = 10;
+  repeated .spotify.metadata.Image portrait = 11;
+  repeated .spotify.metadata.Biography biography = 12;
+  repeated .spotify.metadata.ActivityPeriod activity_period = 13;
+  repeated .spotify.metadata.Restriction restriction = 14;
+  repeated .spotify.metadata.Artist related = 15;
+  optional bool is_portrait_album_cover = 16;
+  optional .spotify.metadata.ImageGroup portrait_group = 17;
+  repeated .spotify.metadata.SalePeriod sale_period = 18;
+  repeated .spotify.metadata.Availability availability = 20;
+}
+
+message Album {
+  reserved 8;
+  enum Type {
+    ALBUM = 1;
+    SINGLE = 2;
+    COMPILATION = 3;
+    EP = 4;
+    AUDIOBOOK = 5;
+    PODCAST = 6;
+  }
+
+  optional bytes gid = 1;
+  optional string name = 2;
+  repeated .spotify.metadata.Artist artist = 3;
+  optional .spotify.metadata.Album.Type type = 4;
+  optional string label = 5;
+  optional .spotify.metadata.Date date = 6;
+  optional sint32 popularity = 7;
+  repeated .spotify.metadata.Image cover = 9;
+  repeated .spotify.metadata.ExternalId external_id = 10;
+  repeated .spotify.metadata.Disc disc = 11;
+  repeated string review = 12;
+  repeated .spotify.metadata.Copyright copyright = 13;
+  repeated .spotify.metadata.Restriction restriction = 14;
+  repeated .spotify.metadata.Album related = 15;
+  repeated .spotify.metadata.SalePeriod sale_period = 16;
+  optional .spotify.metadata.ImageGroup cover_group = 17;
+  optional string original_title = 18;
+  optional string version_title = 19;
+  optional string type_str = 20;
+  repeated .spotify.metadata.Availability availability = 23;
+  optional int64 prerelease_end_date = 42;
+}
+
+message Track {
+  optional bytes gid = 1;
+  optional string name = 2;
+  optional .spotify.metadata.Album album = 3;
+  repeated .spotify.metadata.Artist artist = 4;
+  optional sint32 number = 5;
+  optional sint32 disc_number = 6;
+  optional sint32 duration = 7;
+  optional sint32 popularity = 8;
+  optional bool explicit = 9;
+  repeated .spotify.metadata.ExternalId external_id = 10;
+  repeated .spotify.metadata.Restriction restriction = 11;
+  repeated .spotify.metadata.AudioFile file = 12;
+  repeated .spotify.metadata.Track alternative = 13;
+  repeated .spotify.metadata.SalePeriod sale_period = 14;
+  repeated .spotify.metadata.AudioFile preview = 15;
+  repeated string tags = 16;
+  optional int64 earliest_live_timestamp = 17;
+  optional bool has_lyrics = 18;
+  repeated .spotify.metadata.Availability availability = 19;
+  optional .spotify.metadata.Licensor licensor = 21;
+  repeated string language_of_performance = 22;
+  optional .spotify.metadata.Audio original_audio = 24;
+  repeated .spotify.metadata.ContentRating content_rating = 25;
+  optional string original_title = 27;
+  optional string version_title = 28;
+  repeated .spotify.metadata.ArtistWithRole artist_with_role = 32;
+  optional string canonical_uri = 36;
+  repeated .spotify.metadata.Video original_video = 38;
+  repeated .spotify.metadata.TrackAudioFormat audio_formats = 41;
+}
+
+message TrackAudioFormat {
+  optional .spotify.metadata.Audio original_audio = 1;
+}
+
+message ArtistWithRole {
+  enum ArtistRole {
+    ARTIST_ROLE_UNKNOWN = 0;
+    ARTIST_ROLE_MAIN_ARTIST = 1;
+    ARTIST_ROLE_FEATURED_ARTIST = 2;
+    ARTIST_ROLE_REMIXER = 3;
+    ARTIST_ROLE_ACTOR = 4;
+    ARTIST_ROLE_COMPOSER = 5;
+    ARTIST_ROLE_CONDUCTOR = 6;
+    ARTIST_ROLE_ORCHESTRA = 7;
+  }
+
+  optional bytes artist_gid = 1;
+  optional string artist_name = 2;
+  optional .spotify.metadata.ArtistWithRole.ArtistRole role = 3;
+}
+
+message Show {
+  enum MediaType {
+    MIXED = 0;
+    AUDIO = 1;
+    VIDEO = 2;
+  }
+
+  enum ConsumptionOrder {
+    SEQUENTIAL = 1;
+    EPISODIC = 2;
+    RECENT = 3;
+  }
+
+  optional bytes gid = 1;
+  optional string name = 2;
+  optional string description = 64;
+  optional sint32 deprecated_popularity = 65;
+  optional string publisher = 66;
+  optional string language = 67;
+  optional bool explicit = 68;
+  optional .spotify.metadata.ImageGroup cover_image = 69;
+  repeated .spotify.metadata.Episode episode = 70;
+  repeated .spotify.metadata.Copyright copyright = 71;
+  repeated .spotify.metadata.Restriction restriction = 72;
+  repeated string keyword = 73;
+  optional .spotify.metadata.Show.MediaType media_type = 74;
+  optional .spotify.metadata.Show.ConsumptionOrder consumption_order = 75;
+  repeated .spotify.metadata.Availability availability = 78;
+  optional string trailer_uri = 83;
+  optional bool music_and_talk = 85;
+  optional bool is_audiobook = 89;
+  optional bool is_creator_channel = 90;
+}
+
+message Episode {
+  enum EpisodeType {
+    FULL = 0;
+    TRAILER = 1;
+    BONUS = 2;
+  }
+
+  optional bytes gid = 1;
+  optional string name = 2;
+  optional sint32 duration = 7;
+  repeated .spotify.metadata.AudioFile audio = 12;
+  optional string description = 64;
+  optional sint32 number = 65;
+  optional .spotify.metadata.Date publish_time = 66;
+  optional sint32 deprecated_popularity = 67;
+  optional .spotify.metadata.ImageGroup cover_image = 68;
+  optional string language = 69;
+  optional bool explicit = 70;
+  optional .spotify.metadata.Show show = 71;
+  repeated .spotify.metadata.VideoFile video = 72;
+  repeated .spotify.metadata.VideoFile video_preview = 73;
+  repeated .spotify.metadata.AudioFile audio_preview = 74;
+  repeated .spotify.metadata.Restriction restriction = 75;
+  optional .spotify.metadata.ImageGroup freeze_frame = 76;
+  repeated string keyword = 77;
+  optional bool allow_background_playback = 81;
+  repeated .spotify.metadata.Availability availability = 82;
+  optional string external_url = 83;
+  optional .spotify.metadata.Audio original_audio = 84;
+  optional .spotify.metadata.Episode.EpisodeType type = 87;
+  optional bool music_and_talk = 91;
+  repeated .spotify.metadata.ContentRating content_rating = 95;
+  optional bool is_audiobook_chapter = 96;
+  optional bool is_podcast_short = 97;
+  repeated .spotify.metadata.contentratings.v1.ContentRatingTagWithMarkets episode_content_rating = 102;
+}
+
+message Licensor {
+  optional bytes uuid = 1;
+}
+
+message Audio {
+  enum Format {
+    UNKNOWN = 0;
+    DEFAULT = 1;
+    PARROT = 2;
+  }
+
+  optional bytes uuid = 1;
+  optional .spotify.metadata.Audio.Format format = 2;
+}
+
+message TopTracks {
+  optional string country = 1;
+  repeated .spotify.metadata.Track track = 2;
+}
+
+message ActivityPeriod {
+  optional sint32 start_year = 1;
+  optional sint32 end_year = 2;
+  optional sint32 decade = 3;
+}
+
+message AlbumGroup {
+  repeated .spotify.metadata.Album album = 1;
+}
+
+message Date {
+  optional sint32 year = 1;
+  optional sint32 month = 2;
+  optional sint32 day = 3;
+  optional sint32 hour = 4;
+  optional sint32 minute = 5;
+}
+
+message Image {
+  enum Size {
+    DEFAULT = 0;
+    SMALL = 1;
+    LARGE = 2;
+    XLARGE = 3;
+  }
+
+  optional bytes file_id = 1;
+  optional .spotify.metadata.Image.Size size = 2;
+  optional sint32 width = 3;
+  optional sint32 height = 4;
+}
+
+message ImageGroup {
+  repeated .spotify.metadata.Image image = 1;
+}
+
+message Biography {
+  optional string text = 1;
+  repeated .spotify.metadata.Image portrait = 2;
+  repeated .spotify.metadata.ImageGroup portrait_group = 3;
+}
+
+message Disc {
+  optional sint32 number = 1;
+  optional string name = 2;
+  repeated .spotify.metadata.Track track = 3;
+}
+
+message Copyright {
+  enum Type {
+    P = 0;
+    C = 1;
+  }
+
+  optional .spotify.metadata.Copyright.Type type = 1;
+  optional string text = 2;
+}
+
+message Restriction {
+  enum Catalogue {
+    AD = 0;
+    SUBSCRIPTION = 1;
+    CATALOGUE_ALL = 2;
+    SHUFFLE = 3;
+    COMMERCIAL = 4;
+  }
+
+  enum Type {
+    STREAMING = 0;
+  }
+
+  repeated .spotify.metadata.Restriction.Catalogue catalogue = 1;
+  optional .spotify.metadata.Restriction.Type type = 4;
+  repeated string catalogue_str = 5;
+  oneof country_restriction {
+    string countries_allowed = 2;
+    string countries_forbidden = 3;
+  }
+}
+
+message Availability {
+  repeated string catalogue_str = 1;
+  optional .spotify.metadata.Date start = 2;
+}
+
+message SalePeriod {
+  repeated .spotify.metadata.Restriction restriction = 1;
+  optional .spotify.metadata.Date start = 2;
+  optional .spotify.metadata.Date end = 3;
+}
+
+message ExternalId {
+  optional string type = 1;
+  optional string id = 2;
+}
+
+message AudioFile {
+  enum Format {
+    OGG_VORBIS_96 = 0;
+    OGG_VORBIS_160 = 1;
+    OGG_VORBIS_320 = 2;
+    MP3_256 = 3;
+    MP3_320 = 4;
+    MP3_160 = 5;
+    MP3_96 = 6;
+    MP3_160_ENC = 7;
+    AAC_24 = 8;
+    AAC_48 = 9;
+    FLAC_FLAC = 16;
+    XHE_AAC_24 = 18;
+    XHE_AAC_16 = 19;
+    XHE_AAC_12 = 20;
+    FLAC_FLAC_24BIT = 22;
+    PHONO_LOW = 54;
+    PHONO_HIGH = 55;
+    PHONO_CLEAR = 56;
+  }
+
+  optional bytes file_id = 1;
+  optional .spotify.metadata.AudioFile.Format format = 2;
+}
+
+message Video {
+  optional bytes gid = 1;
+}
+
+message VideoFile {
+  optional bytes file_id = 1;
+}
+
+message ContentRating {
+  optional string country = 1;
+  repeated string tag = 2;
+}
+

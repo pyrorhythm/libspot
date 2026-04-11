@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ClientAllowlistFetchNonAuth {
+  optional bool fallback_used = 1;
+  optional bool expired_used = 2;
+}
+

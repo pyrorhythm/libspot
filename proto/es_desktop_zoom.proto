@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package spotify.desktop.zoom_esperanto.proto;
+
+service DesktopZoom {
+  rpc GetZoomLevel (.spotify.desktop.zoom_esperanto.proto.GetZoomLevelRequest) returns (.spotify.desktop.zoom_esperanto.proto.GetZoomLevelResponse) {}
+  rpc SetZoomLevel (.spotify.desktop.zoom_esperanto.proto.SetZoomLevelRequest) returns (.spotify.desktop.zoom_esperanto.proto.SetZoomLevelResponse) {}
+  rpc ZoomIn (.spotify.desktop.zoom_esperanto.proto.ZoomInRequest) returns (.spotify.desktop.zoom_esperanto.proto.ZoomInResponse) {}
+  rpc ZoomOut (.spotify.desktop.zoom_esperanto.proto.ZoomOutRequest) returns (.spotify.desktop.zoom_esperanto.proto.ZoomOutResponse) {}
+}
+
+message GetZoomLevelRequest {
+}
+
+message SetZoomLevelRequest {
+  double zoomLevel = 1;
+}
+
+message GetZoomLevelResponse {
+  double zoomLevel = 1;
+}
+
+message SetZoomLevelResponse {
+}
+
+message ZoomInRequest {
+}
+
+message ZoomInResponse {
+}
+
+message ZoomOutRequest {
+}
+
+message ZoomOutResponse {
+}
+

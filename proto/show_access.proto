@@ -1,0 +1,118 @@
+syntax = "proto3";
+
+package spotify.podcast_paywalls;
+
+option java_package = "com.spotify.podcast.access.proto";
+option java_outer_classname = "ShowAccessProto";
+option java_multiple_files = true;
+option objc_class_prefix = "SPT";
+
+import "spotify/audiobookcashier/v1/audiobook_price.proto";
+
+message ShowAccess {
+  reserved 7;
+  .spotify.podcast_paywalls.AccountLinkPrompt prompt = 5;
+  bool is_user_member_of_at_least_one_group = 8;
+  repeated .spotify.podcast_paywalls.UnlockingMethod unlocked_by = 10;
+  repeated .spotify.podcast_paywalls.UnlockingMethod unlocking_methods = 14;
+  .spotify.podcast_paywalls.Signifier signifier = 15;
+  .spotify.podcast_paywalls.Disclaimer disclaimer = 16;
+  oneof explanation {
+    .spotify.podcast_paywalls.NoExplanation none = 1;
+    .spotify.podcast_paywalls.LegacyExplanation legacy = 2;
+    .spotify.podcast_paywalls.BasicExplanation basic = 3;
+    .spotify.podcast_paywalls.UpsellLinkExplanation upsellLink = 4;
+    .spotify.podcast_paywalls.EngagementExplanation engagement = 6;
+    .spotify.podcast_paywalls.MultiPassExplanation multiPass = 9;
+    .spotify.podcast_paywalls.CheckoutOnWebOverlayExplanation checkoutOnWebOverlay = 11;
+    .spotify.podcast_paywalls.FreeCheckoutExplanation freeCheckout = 12;
+    .spotify.podcast_paywalls.ConsumptionCappedExplanation consumptionCapped = 13;
+  }
+}
+
+message Signifier {
+  string text = 1;
+}
+
+message BasicExplanation {
+  string title = 1;
+  string body = 2;
+  string cta = 3;
+}
+
+message LegacyExplanation {
+}
+
+message NoExplanation {
+}
+
+message UpsellLinkExplanation {
+  string title = 1;
+  string body = 2;
+  string cta = 3;
+  string url = 4;
+}
+
+message EngagementExplanation {
+  string header = 1;
+  string title = 2;
+  string body = 3;
+  string cta = 4;
+  string dismiss = 5;
+  string action_type = 6;
+  string body_secondary = 7;
+}
+
+message CheckoutOnWebOverlayExplanation {
+  string cta = 1;
+  string snackbar_success = 2;
+  string snackbar_error = 3;
+  string snackbar_fulfilment_complete = 4;
+  .spotify.audiobookcashier.v1.AudiobookPrice price = 5;
+  bool is_price_displayed = 6;
+}
+
+message FreeCheckoutExplanation {
+  string snackbar_awaiting_fulfilment = 1;
+}
+
+message ConsumptionCappedExplanation {
+  string title = 1;
+  string body = 2;
+  string cta = 3;
+}
+
+message MultiPassExplanation {
+  string title = 1;
+  string soa_description = 2;
+  repeated .spotify.podcast_paywalls.SOAPartner soa_partner = 3;
+}
+
+message SOAPartner {
+  string display_name = 1;
+  string link_url = 2;
+  string logo_url = 3;
+}
+
+message AccountLinkPrompt {
+  string title = 1;
+  string body = 2;
+  string cta = 3;
+  string url = 4;
+}
+
+message Disclaimer {
+  string title = 1;
+  string body = 2;
+}
+
+enum UnlockingMethod {
+  UNKNOWN = 0;
+  ANCHOR_PAYWALL = 1;
+  OAP_OTP = 2;
+  OAP_LINKING = 3;
+  AUDIOBOOK_DIRECT_SALES = 4;
+  ABP = 5;
+  AUDIOBOOK_PROMOTION = 6;
+}
+

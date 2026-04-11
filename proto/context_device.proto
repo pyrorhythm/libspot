@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message Device {
+  string manufacturer = 1;
+  string model = 2;
+  string type = 3;
+}
+

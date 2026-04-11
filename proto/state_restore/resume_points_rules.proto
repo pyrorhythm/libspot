@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message ResumePoint {
+  required bool is_fully_played = 1;
+  required int64 position = 2;
+  required int64 timestamp = 3;
+}
+
+message ResumePointsRules {
+  message ResumePointsEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.state_restore.ResumePoint value = 2;
+  }
+
+  repeated .spotify.player.proto.state_restore.ResumePointsRules.ResumePointsEntry resume_points = 1;
+}
+

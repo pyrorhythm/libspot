@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package spotify.image.esperanto.proto;
+
+option java_package = "com.spotify.image.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/empty.proto";
+import "image_resolve.proto";
+
+service Image {
+  rpc GetImage (.spotify.image.esperanto.proto.GetImageParams) returns (.spotify.image.esperanto.proto.ImageData) {}
+  rpc GetCacheStatus (.spotify.image.esperanto.proto.GetCacheStatusParams) returns (.spotify.image.esperanto.proto.CacheStatus) {}
+  rpc SetProjectionMap (.spotify.image.esperanto.proto.SetProjectionMapParams) returns (.google.protobuf.Empty) {}
+}
+
+message ImageData {
+  int32 error = 1;
+  .spotify.image.esperanto.proto.ImageSource source = 2;
+  bytes data = 3;
+  optional float scale_factor = 4;
+}
+
+message Size {
+  int32 width = 1;
+  int32 height = 2;
+}
+
+message GetImageParams {
+  message Resolve {
+    .spotify.image.esperanto.proto.Size size = 1;
+  }
+
+  string uri = 1;
+  .spotify.image.esperanto.proto.GetImageParams.Resolve resolve = 2;
+}
+
+message CacheStatus {
+  message StatusEntry {
+    string key = 1;
+    bool value = 2;
+  }
+
+  repeated .spotify.image.esperanto.proto.CacheStatus.StatusEntry status = 1;
+}
+
+message GetCacheStatusParams {
+  repeated string urls = 1;
+}
+
+message SetProjectionMapParams {
+  .spotify.imageresolve.proto.ProjectionMap projection_map = 1;
+}
+
+enum ImageSource {
+  UNKNOWN = 0;
+  LOCAL_FILE = 1;
+  CACHE = 2;
+  NETWORK = 3;
+}
+

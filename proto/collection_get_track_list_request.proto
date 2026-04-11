@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "status.proto";
+import "collection_decoration_policy.proto";
+import "collection_item.proto";
+
+message CollectionGetTrackListRequest {
+  .spotify.collection_cosmos.proto.CollectionTrackDecorationPolicy track_policy = 1;
+  bool add_time = 2;
+  bool index = 3;
+  bool group_label = 5;
+  uint32 update_throttling = 7;
+  uint32 start = 8;
+  uint32 length = 9;
+  string sort = 10;
+  string filter = 11;
+  string id = 12;
+}
+
+message TrackListItem {
+  string header_field = 1;
+  .spotify.collection_cosmos.proto.CollectionTrack track = 2;
+  string group_label = 3;
+}
+
+message GroupHeader {
+  string header_field = 1;
+  uint32 index = 2;
+  uint32 length = 3;
+}
+
+message CollectionGetTrackListResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+  uint32 unfiltered_length = 2;
+  uint32 unranged_length = 3;
+  bool loading_contents = 4;
+  string offline = 5;
+  uint32 sync_progress = 6;
+  repeated .spotify.collection_cosmos.proto.TrackListItem item = 8;
+}
+

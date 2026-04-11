@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package spotify.prefs.esperanto.proto;
+
+option java_package = "com.spotify.prefs.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+service Prefs {
+  rpc Get (.spotify.prefs.esperanto.proto.GetParams) returns (.spotify.prefs.esperanto.proto.PrefValues) {}
+  rpc Sub (.spotify.prefs.esperanto.proto.SubParams) returns (stream .spotify.prefs.esperanto.proto.PrefValues) {}
+  rpc GetAll (.spotify.prefs.esperanto.proto.GetAllParams) returns (.spotify.prefs.esperanto.proto.PrefValues) {}
+  rpc SubAll (.spotify.prefs.esperanto.proto.SubAllParams) returns (stream .spotify.prefs.esperanto.proto.PrefValues) {}
+  rpc Set (.spotify.prefs.esperanto.proto.SetParams) returns (.spotify.prefs.esperanto.proto.PrefValues) {}
+  rpc Create (.spotify.prefs.esperanto.proto.CreateParams) returns (.spotify.prefs.esperanto.proto.PrefValues) {}
+}
+
+message GetParams {
+  string key = 1;
+}
+
+message SubParams {
+  string key = 1;
+}
+
+message GetAllParams {
+}
+
+message SubAllParams {
+}
+
+message Value {
+  oneof value {
+    int64 number = 1;
+    bool bool = 2;
+    string string = 3;
+  }
+}
+
+message SetParams {
+  message EntriesEntry {
+    string key = 1;
+    .spotify.prefs.esperanto.proto.Value value = 2;
+  }
+
+  repeated .spotify.prefs.esperanto.proto.SetParams.EntriesEntry entries = 1;
+}
+
+message CreateParams {
+  message EntriesEntry {
+    string key = 1;
+    .spotify.prefs.esperanto.proto.Value value = 2;
+  }
+
+  repeated .spotify.prefs.esperanto.proto.CreateParams.EntriesEntry entries = 1;
+}
+
+message PrefValues {
+  message EntriesEntry {
+    string key = 1;
+    .spotify.prefs.esperanto.proto.Value value = 2;
+  }
+
+  repeated .spotify.prefs.esperanto.proto.PrefValues.EntriesEntry entries = 1;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message SeekToPosition {
+  optional uint64 value = 1;
+  optional uint32 revision = 2;
+}
+

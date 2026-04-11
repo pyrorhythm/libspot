@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.your_library.proto;
+
+option java_package = "spotify.your_library.esperanto.proto";
+option java_multiple_files = true;
+
+import "your_library_config.proto";
+
+message YourLibraryDecorateRequest {
+  repeated string requested_uri = 3;
+  .spotify.your_library.proto.YourLibraryPredefinedPlaylistConfigs predefined_playlist_configs = 6;
+  int32 update_throttling = 7;
+}
+

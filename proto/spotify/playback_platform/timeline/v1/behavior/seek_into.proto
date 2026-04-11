@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.playback_platform.timeline.v1.behavior;
+
+option java_package = "spotify.playback_platform.timeline.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/common/v1/duration.proto";
+import "spotify/playback_platform/timeline/v1/timeline_match.proto";
+
+message SeekInto {
+  enum Carry {
+    CARRY_MERGED = 0;
+    CARRY_ALWAYS = 1;
+    CARRY_NEVER = 15;
+  }
+
+  .spotify.playback_platform.timeline.v1.TimelineMatch from_prev_timelines = 2;
+  .spotify.playback_platform.timeline.v1.TimelineMatch from_next_timelines = 3;
+  .spotify.playback_platform.common.v1.Duration from_prev_threshold = 4;
+  .spotify.playback_platform.common.v1.Duration from_next_threshold = 5;
+  optional .spotify.playback_platform.timeline.v1.behavior.SeekInto.Carry carry = 1;
+}
+

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+message SequenceQuery {
+  enum Order {
+    ORDER_RELATIVE_NATURAL = 0;
+    ORDER_RELATIVE_REVERSE = 1;
+    ORDER_FIRST_TO_LAST = 3;
+    ORDER_LAST_TO_FIRST = 4;
+  }
+
+  repeated string include_uids = 1;
+  repeated string exclude_uids = 2;
+  repeated uint64 include_tags = 3;
+  repeated uint64 exclude_tags = 4;
+  .spotify.playback_platform.context.v1.SequenceQuery.Order order = 5;
+}
+

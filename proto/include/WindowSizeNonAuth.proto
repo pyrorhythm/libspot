@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message WindowSizeNonAuth {
+  optional int64 inner_width = 1;
+  optional int64 inner_height = 2;
+  optional int64 shell_width = 3;
+  optional int64 shell_height = 4;
+  optional int64 mode = 5;
+}
+

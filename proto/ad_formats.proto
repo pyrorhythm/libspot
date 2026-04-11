@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "ad_common.proto";
+
+service Formats {
+  rpc SubFormat (.spotify.ads.esperanto.proto.SubFormatRequest) returns (stream .spotify.ads.esperanto.proto.SubFormatResponse) {}
+}
+
+message SubFormatRequest {
+  .spotify.ads.esperanto.proto.AdFormat format = 1;
+}
+
+message SubFormatResponse {
+  .spotify.ads.esperanto.proto.AdSlotEvent ad_slot_event = 1;
+}
+

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package spotify.desktop.watchdog_esperanto.proto;
+
+import "google/protobuf/empty.proto";
+
+service DesktopWatchdog {
+  rpc Subscribe (.spotify.desktop.watchdog_esperanto.proto.SubscribeRequest) returns (stream .spotify.desktop.watchdog_esperanto.proto.SubscribeResponse) {}
+  rpc Ping (.spotify.desktop.watchdog_esperanto.proto.PingRequest) returns (.google.protobuf.Empty) {}
+}
+
+message SubscribeRequest {
+  string url = 1;
+}
+
+message SubscribeResponse {
+  fixed32 id = 1;
+}
+
+message PingRequest {
+  fixed32 id = 1;
+}
+

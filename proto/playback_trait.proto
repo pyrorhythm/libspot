@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+import "flat_file.proto";
+import "shared_enums.proto";
+import "spotify/playback_platform/transition/v1/transition_maps.proto";
+
+message PlaybackOffsets {
+  .google.protobuf.Duration start = 1;
+  .google.protobuf.Duration end = 2;
+}
+
+message VideoHosted {
+  bytes video_id = 1;
+}
+
+message VideoPlayback {
+  string reporting_uri = 2;
+  oneof asset {
+    .spotify.contentagnostic.v2.VideoHosted hosted = 1;
+  }
+  optional .spotify.contentagnostic.v2.PlaybackOffsets offsets = 3;
+}
+
+message AdDetection {
+  optional .spotify.contentagnostic.v2.PlaybackOffsets fallback_offsets = 1;
+}
+
+message AudioPassThrough {
+  reserved 2;
+  .spotify.contentagnostic.v2.FlatFile flat_file = 1;
+  optional .spotify.contentagnostic.v2.AudioHosted fallback = 3;
+  optional .spotify.contentagnostic.v2.AdDetection ad_detection = 4;
+  optional .spotify.contentagnostic.v2.PlaybackOffsets offsets = 5;
+}
+
+message AudioFile {
+  bytes file_id = 1;
+  .spotify.audiophile.Format format = 2;
+  int32 average_bitrate = 3;
+}
+
+message NormalizationParams {
+  float loudness_db = 1;
+  float true_peak_db = 2;
+}
+
+message AudioHosted {
+  repeated .spotify.contentagnostic.v2.AudioFile files = 1;
+  bytes audio_id = 2;
+  .spotify.contentagnostic.v2.NormalizationParams file_norm = 3;
+  optional .spotify.contentagnostic.v2.NormalizationParams group_norm = 4;
+  optional .spotify.contentagnostic.v2.PlaybackOffsets offsets = 5;
+}
+
+message AudioHls {
+  oneof hls_type {
+    .spotify.contentagnostic.v2.FlatFile flat_file = 1;
+  }
+  optional .spotify.contentagnostic.v2.PlaybackOffsets offsets = 2;
+}
+
+message AudioPlayback {
+  string reporting_uri = 3;
+  oneof asset {
+    .spotify.contentagnostic.v2.AudioPassThrough pass_through = 1;
+    .spotify.contentagnostic.v2.AudioHosted hosted = 2;
+    .spotify.contentagnostic.v2.AudioHls hls = 5;
+  }
+  optional .spotify.contentagnostic.v2.PlaybackOffsets offsets = 4;
+}
+
+message PlaybackTrait {
+  message AudioMapEntry {
+    .spotify.contentagnostic.v2.AudioMediaFormat key = 1;
+    .spotify.contentagnostic.v2.AudioPlayback value = 2;
+  }
+
+  message VideoMapEntry {
+    .spotify.contentagnostic.v2.VideoMediaFormat key = 1;
+    .spotify.contentagnostic.v2.VideoPlayback value = 2;
+  }
+
+  repeated .spotify.contentagnostic.v2.PlaybackTrait.AudioMapEntry audio = 1;
+  repeated .spotify.contentagnostic.v2.PlaybackTrait.VideoMapEntry video = 2;
+  optional .spotify.playback_platform.transition.v1.TransitionMaps transition_maps = 3;
+}
+
+enum VideoMediaFormat {
+  VIDEO_MEDIA_FORMAT_UNSPECIFIED = 0;
+  VIDEO_MEDIA_FORMAT_ADAPTIVE = 1;
+}
+
+enum AudioMediaFormat {
+  AUDIO_MEDIA_FORMAT_UNSPECIFIED = 0;
+  AUDIO_MEDIA_FORMAT_STEREO = 1;
+  AUDIO_MEDIA_FORMAT_SPATIAL = 2;
+  AUDIO_MEDIA_FORMAT_ADAPTIVE = 3;
+}
+

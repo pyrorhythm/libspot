@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "ad_common.proto";
+
+service Slots {
+  rpc GetSlots (.spotify.ads.esperanto.proto.GetSlotsRequest) returns (.spotify.ads.esperanto.proto.GetSlotsResponse) {}
+  rpc GetSlot (.spotify.ads.esperanto.proto.GetSlotRequest) returns (.spotify.ads.esperanto.proto.GetSlotResponse) {}
+  rpc CreateSlot (.spotify.ads.esperanto.proto.CreateSlotRequest) returns (.spotify.ads.esperanto.proto.CreateSlotResponse) {}
+  rpc SubSlot (.spotify.ads.esperanto.proto.SubSlotRequest) returns (stream .spotify.ads.esperanto.proto.SubSlotResponse) {}
+  rpc FetchSlot (.spotify.ads.esperanto.proto.PrepareSlotRequest) returns (.spotify.ads.esperanto.proto.PrepareSlotResponse) {}
+  rpc PrepareNextTrackSlot (.spotify.ads.esperanto.proto.PrepareSlotRequest) returns (.spotify.ads.esperanto.proto.PrepareSlotResponse) {}
+  rpc PrepareNextContextSlot (.spotify.ads.esperanto.proto.PrepareSlotRequest) returns (.spotify.ads.esperanto.proto.PrepareSlotResponse) {}
+  rpc TriggerSlot (.spotify.ads.esperanto.proto.TriggerSlotRequest) returns (.spotify.ads.esperanto.proto.TriggerSlotResponse) {}
+  rpc ClearAvailableAds (.spotify.ads.esperanto.proto.ClearSlotRequest) returns (.spotify.ads.esperanto.proto.ClearSlotResponse) {}
+  rpc ClearAllAds (.spotify.ads.esperanto.proto.ClearSlotRequest) returns (.spotify.ads.esperanto.proto.ClearSlotResponse) {}
+  rpc ClearNextSlotIntent (.spotify.ads.esperanto.proto.ClearNextSlotIntentRequest) returns (.spotify.ads.esperanto.proto.ClearNextSlotIntentResponse) {}
+}
+
+message GetSlotsRequest {
+}
+
+message GetSlotsResponse {
+  repeated .spotify.ads.esperanto.proto.AdSlot ad_slots = 1;
+}
+
+message GetSlotRequest {
+  string slot_id = 1;
+}
+
+message GetSlotResponse {
+  .spotify.ads.esperanto.proto.AdSlot ad_slot = 1;
+}
+
+message CreateSlotRequest {
+  string slot_id = 1;
+}
+
+message CreateSlotResponse {
+  optional string error = 1;
+}
+
+message SubSlotRequest {
+  string slot_id = 1;
+  optional .spotify.ads.esperanto.proto.AdFormat format = 2;
+}
+
+message SubSlotResponse {
+  .spotify.ads.esperanto.proto.AdSlotEvent ad_slot_event = 1;
+}
+
+message PrepareSlotRequest {
+  message TargetingMapEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  string slot_id = 1;
+  repeated .spotify.ads.esperanto.proto.PrepareSlotRequest.TargetingMapEntry targeting_map = 2;
+}
+
+message PrepareSlotResponse {
+  optional string error = 1;
+}
+
+message TriggerSlotRequest {
+  string slot_id = 1;
+}
+
+message TriggerSlotResponse {
+  optional string error = 1;
+}
+
+message ClearSlotRequest {
+  string slot_id = 1;
+  optional string clear_reason = 2;
+}
+
+message ClearSlotResponse {
+}
+
+message ClearNextSlotIntentRequest {
+}
+
+message ClearNextSlotIntentResponse {
+}
+

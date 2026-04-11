@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package spotify.player.proto.transfer;
+
+message SleepTimer {
+  message None {
+  }
+
+  message Timestamp {
+    optional int64 timestamp = 1;
+  }
+
+  message EndOfTrack {
+  }
+
+  oneof timer_type {
+    .spotify.player.proto.transfer.SleepTimer.None none = 1;
+    .spotify.player.proto.transfer.SleepTimer.Timestamp timestamp = 2;
+    .spotify.player.proto.transfer.SleepTimer.EndOfTrack end_of_track = 3;
+  }
+}
+

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "status.proto";
+
+message CollectionBanRequest {
+  string context_source = 1;
+  repeated string uri = 2;
+}
+
+message CollectionBanResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+  repeated bool success = 2;
+}
+

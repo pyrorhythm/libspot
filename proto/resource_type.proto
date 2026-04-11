@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.offline.proto;
+
+enum ResourceType {
+  OTHER = 0;
+  AUDIO = 1;
+  DRM = 2;
+  IMAGE = 3;
+  VIDEO = 4;
+}
+

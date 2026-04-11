@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package spotify.player.context_view.proto;
+
+import "context_track.proto";
+import "context_view_cyclic_list.proto";
+
+message ContextView {
+  reserved 4;
+  message PatchMapEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.ContextTrack value = 2;
+  }
+
+  repeated .spotify.player.context_view.proto.ContextView.PatchMapEntry patch_map = 1;
+  optional uint32 iteration_size = 2;
+  optional .spotify.player.context_view.cyclic_list.proto.CyclicEntryKeyList cyclic_list = 3;
+}
+

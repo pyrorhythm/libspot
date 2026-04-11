@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "OpsProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/attribute_kinds.proto";
+import "spotify/list/v1/model/attributes.proto";
+import "spotify/list/v1/model/list_entity.proto";
+
+message Target {
+  oneof Kind {
+    bool last = 1;
+    bool first = 2;
+    .spotify.list.v1.model.Item before_item = 3;
+    .spotify.list.v1.model.Item after_item = 4;
+  }
+}
+
+message Add {
+  repeated .spotify.list.v1.model.Item items = 1;
+  optional .spotify.list.v1.model.Target target = 2;
+}
+
+message Rem {
+  repeated .spotify.list.v1.model.Item items = 1;
+}
+
+message Mov {
+  repeated .spotify.list.v1.model.Item items = 1;
+  optional .spotify.list.v1.model.Target target = 2;
+}
+
+message Set {
+  repeated .spotify.list.v1.model.Item items = 1;
+}
+
+message UpdateAttributes {
+  repeated .spotify.list.v1.model.AttributeKind no_value = 3;
+  optional .spotify.list.v1.model.Item target_item = 1;
+  optional .spotify.list.v1.model.Attributes values = 2;
+  optional bool replace = 4;
+}
+
+message UpdateItemId {
+  optional .spotify.list.v1.model.Item target_item = 1;
+  optional bytes new_id = 2;
+}
+
+message Op {
+  oneof Kind {
+    .spotify.list.v1.model.Add add = 1;
+    .spotify.list.v1.model.Rem rem = 2;
+    .spotify.list.v1.model.Mov mov = 3;
+    .spotify.list.v1.model.Set set = 4;
+    .spotify.list.v1.model.UpdateAttributes update_attributes = 5;
+    .spotify.list.v1.model.UpdateItemId update_item_id = 6;
+  }
+}
+

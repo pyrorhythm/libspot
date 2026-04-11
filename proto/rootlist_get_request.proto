@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "policy/rootlist_request_decoration_policy.proto";
+import "rootlist_query.proto";
+import "rootlist_request.proto";
+import "response_status.proto";
+
+message RootlistGetRequest {
+  .spotify.playlist_esperanto.proto.RootlistQuery query = 1;
+  .spotify.playlist.cosmos.proto.RootlistRequestDecorationPolicy policy = 2;
+}
+
+message RootlistGetResponse {
+  .spotify.playlist_esperanto.proto.ResponseStatus status = 1;
+  .spotify.playlist.cosmos.rootlist_request.proto.Response data = 2;
+  .spotify.playlist_esperanto.proto.RootlistQuery query = 3;
+}
+

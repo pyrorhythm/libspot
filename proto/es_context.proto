@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_context_page.proto";
+import "es_restrictions.proto";
+
+message Context {
+  message MetadataEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.player.esperanto.proto.ContextPage pages = 1;
+  repeated .spotify.player.esperanto.proto.Context.MetadataEntry metadata = 2;
+  string uri = 3;
+  string url = 4;
+  bool is_loading = 5;
+  .spotify.player.esperanto.proto.Restrictions restrictions = 6;
+}
+

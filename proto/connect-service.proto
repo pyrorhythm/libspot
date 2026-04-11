@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.connectstate;
+
+option java_package = "com.spotify.connectstate.model";
+
+import "connect.proto";
+
+message PutStateRequestWrapper {
+  string device_id = 1;
+  string connection_id = 2;
+  bool ignore_response = 3;
+  .spotify.connectstate.PutStateRequest put_state_request = 4;
+  optional bool wake_devices = 5;
+}
+
+message UpdateLocalDevicesRequest {
+  string reporting_device_id = 1;
+  repeated .spotify.connectstate.LocalDevice local_devices = 2;
+}
+
+message UpdateLocalDevicesResponse {
+}
+

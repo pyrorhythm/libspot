@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.list.v1.model.attributes;
+
+option java_package = "com.spotify.list.v1.model.attributes";
+option java_outer_classname = "ItemIdAlgorithmProto";
+option java_multiple_files = true;
+
+enum ItemIdAlgorithm {
+  ALGORITHM_UNSPECIFIED = 0;
+  ALGORITHM_TRUNCATED_SHA1 = 1;
+}
+

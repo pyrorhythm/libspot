@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package spotify.venueextendedmetadata.v1;
+
+option java_package = "com.spotify.venueextendedmetadata.v1";
+option java_multiple_files = true;
+
+message VenueArtistsPreview {
+  string artists = 1;
+}
+
+message VenueLocation {
+  string address = 1;
+  string city = 2;
+  string country = 3;
+  string state = 4;
+  string region = 5;
+  double latitude = 6;
+  double longitude = 7;
+  string postalcode = 8;
+  string timezone = 9;
+}
+

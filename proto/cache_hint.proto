@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.playlist.messages;
+
+option java_package = "com.spotify.playlist.messages.proto";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message CacheHint {
+  .google.protobuf.Duration next_expected_content_update = 1;
+}
+

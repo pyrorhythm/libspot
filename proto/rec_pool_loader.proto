@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.list_player.impl.proto;
+
+message RecPoolLoaderState {
+  message Rec {
+    string item_uri = 1;
+    string album_uri = 2;
+    string uid = 3;
+  }
+
+  message RecPool {
+    repeated .spotify.list_player.impl.proto.RecPoolLoaderState.Rec recs = 1;
+  }
+
+  string list_uri = 1;
+  optional string next_page_url = 2;
+  optional .spotify.list_player.impl.proto.RecPoolLoaderState.RecPool rec_pool = 3;
+}
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.list.v1.model.attributes;
+
+option java_package = "com.spotify.list.v1.model.attributes";
+option java_outer_classname = "SignalsListProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/signals.proto";
+
+message SignalsList {
+  repeated .spotify.list.v1.model.Signal available_signals = 1;
+}
+

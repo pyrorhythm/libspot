@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.restrictions.impl.proto;
+
+import "google/protobuf/timestamp.proto";
+
+message SkipNexts {
+  message SkipNext {
+    .google.protobuf.Timestamp timestamp = 1;
+  }
+
+  repeated .spotify.restrictions.impl.proto.SkipNexts.SkipNext skip_next = 1;
+}
+

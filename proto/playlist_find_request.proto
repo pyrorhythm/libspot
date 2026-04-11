@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "response_status.proto";
+
+message PlaylistFindRequest {
+  string playlist_uri = 1;
+  repeated string item_uris = 2;
+}
+
+message ItemUriToRowIds {
+  string uri = 1;
+  repeated string row_ids = 2;
+}
+
+message PlaylistFindResponse {
+  .spotify.playlist_esperanto.proto.ResponseStatus status = 1;
+  repeated .spotify.playlist_esperanto.proto.ItemUriToRowIds items = 2;
+}
+

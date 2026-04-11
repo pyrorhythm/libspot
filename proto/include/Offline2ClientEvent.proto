@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message Offline2ClientEvent {
+  optional string event = 1;
+  optional string device_id = 2;
+  optional string cache_id = 3;
+}
+

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.playlist.proto;
+
+message PlayState {
+  message ShuffleState {
+    reserved 2;
+    enum ShuffleType {
+      NONE = 0;
+      NORMAL_SHUFFLE = 1;
+      SMART_SHUFFLE = 2;
+    }
+
+    .spotify.playlist.proto.PlayState.ShuffleState.ShuffleType type = 1;
+    optional string head_uid = 3;
+    optional string shuffle_seed = 4;
+  }
+
+  optional .spotify.playlist.proto.PlayState.ShuffleState shuffle_state = 1;
+}
+

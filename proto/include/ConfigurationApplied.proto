@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ConfigurationApplied {
+  message IdentifiersEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional int64 last_rcs_fetch_time = 1;
+  optional string installation_id = 2;
+  repeated int32 policy_group_ids = 3;
+  optional string configuration_assignment_id = 4;
+  optional string rc_client_id = 5;
+  optional string rc_client_version = 6;
+  optional string platform = 7;
+  optional string fetch_type = 8;
+  repeated .spotify.event_sender.proto.ConfigurationApplied.IdentifiersEntry identifiers = 9;
+  optional string type = 10;
+}
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.socialgraph.v4;
+
+option java_package = "com.spotify.socialgraph.v4.proto";
+option java_outer_classname = "SocialgraphV4SchemaProto";
+option java_multiple_files = true;
+
+message UsernameUser {
+  optional string username = 1;
+  optional int64 timestamp = 2;
+}
+
+message GetRelationsUsernameResponse {
+  repeated .spotify.socialgraph.v4.UsernameUser users = 1;
+  optional string next_page_token = 2;
+}
+

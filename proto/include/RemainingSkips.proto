@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message RemainingSkips {
+  optional string interaction_id = 1;
+  optional int32 remaining_skips_before_skip = 2;
+  optional int32 remaining_skips_after_skip = 3;
+  repeated string interaction_ids = 4;
+}
+

@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package spotify.extendedmetadata;
+
+option java_package = "com.spotify.extendedmetadata.proto";
+option java_multiple_files = true;
+option cc_enable_arenas = true;
+
+import "extension_kind.proto";
+import "entity_extension_data.proto";
+
+message ExtensionQuery {
+  .spotify.extendedmetadata.ExtensionKind extension_kind = 1;
+  string etag = 2;
+}
+
+message EntityRequest {
+  string entity_uri = 1;
+  repeated .spotify.extendedmetadata.ExtensionQuery query = 2;
+}
+
+message BatchedEntityRequestHeader {
+  string country = 1;
+  string catalogue = 2;
+  bytes task_id = 3;
+}
+
+message BatchedEntityRequest {
+  .spotify.extendedmetadata.BatchedEntityRequestHeader header = 1;
+  repeated .spotify.extendedmetadata.EntityRequest entity_request = 2;
+}
+
+message EntityExtensionDataArrayHeader {
+  int32 provider_error_status = 1;
+  int64 cache_ttl_in_seconds = 2;
+  int64 offline_ttl_in_seconds = 3;
+  .spotify.extendedmetadata.ExtensionType extension_type = 4;
+}
+
+message EntityExtensionDataArray {
+  .spotify.extendedmetadata.EntityExtensionDataArrayHeader header = 1;
+  .spotify.extendedmetadata.ExtensionKind extension_kind = 2;
+  repeated .spotify.extendedmetadata.EntityExtensionData extension_data = 3;
+}
+
+message BatchedExtensionResponseHeader {
+}
+
+message BatchedExtensionResponse {
+  .spotify.extendedmetadata.BatchedExtensionResponseHeader header = 1;
+  repeated .spotify.extendedmetadata.EntityExtensionDataArray extended_metadata = 2;
+}
+
+enum ExtensionType {
+  UNKNOWN = 0;
+  GENERIC = 1;
+  ASSOC = 2;
+}
+

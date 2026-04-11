@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message PlaybackRetry {
+  optional string track = 1;
+  optional bytes playback_id = 2;
+  optional string method = 3;
+  optional string status = 4;
+  optional string reason = 5;
+  optional string prev_etag = 6;
+  optional int64 prev_expiry = 7;
+  optional string etag = 8;
+  optional int64 expiry = 9;
+}
+

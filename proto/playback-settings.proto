@@ -1,0 +1,154 @@
+syntax = "proto3";
+
+package spotify.playbacksettings;
+
+option java_package = "com.spotify.playbacksettings.model";
+option java_multiple_files = true;
+
+import "media.proto";
+
+service PlaybackSettingsService {
+  rpc GetDeviceSettings (.spotify.playbacksettings.GetDeviceSettingsRequest) returns (.spotify.playbacksettings.GetDeviceSettingsResponse) {}
+  rpc WriteDeviceValue (.spotify.playbacksettings.WriteDeviceValueRequest) returns (.spotify.playbacksettings.WriteDeviceValueResponse) {}
+  rpc GetContentSettings (.spotify.playbacksettings.GetContentSettingsRequest) returns (.spotify.playbacksettings.GetContentSettingsResponse) {}
+  rpc WriteContentValue (.spotify.playbacksettings.WriteContentValueRequest) returns (.spotify.playbacksettings.WriteContentValueResponse) {}
+  rpc GetAllStoredContentValues (.spotify.playbacksettings.GetAllStoredContentValuesRequest) returns (.spotify.playbacksettings.GetAllStoredContentValuesResponse) {}
+  rpc GetSettingsDeviceSelection (.spotify.playbacksettings.GetSettingsDeviceSelectionRequest) returns (.spotify.playbacksettings.GetSettingsDeviceSelectionResponse) {}
+}
+
+message GetDeviceSettingsRequest {
+  repeated .spotify.playbacksettings.Device devices = 1;
+}
+
+message GetDeviceSettingsResponse {
+  repeated .spotify.playbacksettings.Device devices = 1;
+  repeated .spotify.playbacksettings.DeviceSettings device_settings = 2;
+}
+
+message WriteDeviceValueRequest {
+  .spotify.playbacksettings.DeviceDescriptor device_descriptor = 1;
+  repeated .spotify.playbacksettings.Field field = 2;
+}
+
+message WriteDeviceValueResponse {
+}
+
+message Device {
+  .spotify.playbacksettings.DeviceDescriptor device_descriptor = 1;
+  optional .spotify.playbacksettings.DeviceCapabilities device_capabilities = 2;
+}
+
+message DeviceDescriptor {
+  string device_id = 1;
+  string device_name = 2;
+  string client_id = 3;
+  string device_model = 4;
+}
+
+message DeviceSettings {
+  .spotify.common.media.AudioQuality audio_quality = 1;
+  bool social_discoverable = 2;
+}
+
+message GetContentSettingsRequest {
+  repeated string content_identifiers = 1;
+  optional .spotify.playbacksettings.DeviceCapabilities device_capabilities = 2;
+}
+
+message GetContentSettingsResponse {
+  repeated string content_identifiers = 1;
+  repeated .spotify.playbacksettings.ContentSettings content_settings = 2;
+}
+
+message WriteContentValueRequest {
+  string content_identifier = 1;
+  repeated .spotify.playbacksettings.Field field = 2;
+}
+
+message WriteContentValueResponse {
+}
+
+message GetAllStoredContentValuesRequest {
+  uint32 limit = 1;
+}
+
+message GetAllStoredContentValuesResponse {
+  message Fields {
+    repeated .spotify.playbacksettings.FieldId ids = 1;
+    repeated .spotify.playbacksettings.FieldValue values = 2;
+  }
+
+  repeated string content_identifiers = 1;
+  repeated .spotify.playbacksettings.GetAllStoredContentValuesResponse.Fields stored_fields = 2;
+}
+
+message ContentSettings {
+  float playback_speed = 3;
+  bool shuffle = 4;
+  .spotify.playbacksettings.ContextEnhancement context_enhancement = 5;
+}
+
+message WriteUserSettingValueRequest {
+  repeated .spotify.playbacksettings.Field user_settings = 1;
+}
+
+message WriteUserSettingValueResponse {
+}
+
+message UserSettings {
+  bool disable_smart_shuffle = 6;
+}
+
+message GetSettingsDeviceSelectionRequest {
+  repeated .spotify.playbacksettings.FieldId requested_setting_fields = 2;
+  repeated string content_identifiers = 4;
+  optional .spotify.playbacksettings.DeviceCapabilities device_capabilities = 1;
+  optional .spotify.playbacksettings.DeviceDescriptor device_descriptor = 3;
+  optional bool include_user_settings = 5;
+}
+
+message GetSettingsDeviceSelectionResponse {
+  message ContentSettingsEntry {
+    string key = 1;
+    .spotify.playbacksettings.ContentSettings value = 2;
+  }
+
+  repeated .spotify.playbacksettings.GetSettingsDeviceSelectionResponse.ContentSettingsEntry content_settings = 2;
+  optional .spotify.playbacksettings.DeviceSettings device_settings = 1;
+  optional .spotify.playbacksettings.UserSettings user_settings = 3;
+}
+
+message DeviceCapabilities {
+  .spotify.common.media.AudioQuality supported_audio_quality = 1;
+  bool supports_playback_speed = 2;
+}
+
+message FieldValue {
+  oneof value {
+    string string_value = 1;
+    bool bool_value = 2;
+    int32 int_value = 3;
+    float float_value = 4;
+  }
+}
+
+message Field {
+  .spotify.playbacksettings.FieldId id = 1;
+  .spotify.playbacksettings.FieldValue value = 2;
+}
+
+enum ContextEnhancement {
+  NOT_ENHANCED = 0;
+  RECOMMENDATION = 1;
+}
+
+enum FieldId {
+  UNKNOWN_FIELD_ID = 0;
+  AUDIO_QUALITY = 1;
+  SOCIAL_DISCOVERABLE = 2;
+  PLAYBACK_SPEED = 3;
+  SHUFFLE = 4;
+  CONTEXT_ENHANCEMENT = 5;
+  DISABLE_SMART_SHUFFLE = 6;
+}
+

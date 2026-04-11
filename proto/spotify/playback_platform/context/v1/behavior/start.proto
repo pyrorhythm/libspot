@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/sequence_start.proto";
+
+message Start {
+  repeated .spotify.playback_platform.context.v1.SequenceStart move_onto_from_prev = 1;
+  repeated .spotify.playback_platform.context.v1.SequenceStart move_onto_from_next = 2;
+  repeated .spotify.playback_platform.context.v1.SequenceStart move_onto_from_play = 3;
+  repeated .spotify.playback_platform.context.v1.SequenceStart skip_onto_from_prev = 4;
+  repeated .spotify.playback_platform.context.v1.SequenceStart skip_onto_from_next = 5;
+  repeated .spotify.playback_platform.context.v1.SequenceStart fail_onto_from_prev = 6;
+  repeated .spotify.playback_platform.context.v1.SequenceStart fail_onto_from_next = 7;
+}
+

@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package spotify.playback_platform.media.v1;
+
+option java_package = "spotify.playback_platform.media.v1";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "spotify/playback_platform/common/v1/audio_format.proto";
+import "spotify/playback_platform/common/v1/duration.proto";
+import "spotify/playback_platform/common/v1/video_format.proto";
+
+message TrackManifest {
+  reserved 2 to 9;
+  bytes manifest = 1;
+  .spotify.playback_platform.common.v1.StochasticDuration duration = 10;
+}
+
+message AudioManifest {
+  reserved 2 to 9;
+  bytes manifest = 1;
+  .spotify.playback_platform.common.v1.StochasticDuration duration = 10;
+}
+
+message VideoManifest {
+  reserved 2 to 9;
+  bytes manifest = 1;
+  .spotify.playback_platform.common.v1.StochasticDuration duration = 10;
+}
+
+message GeneratedAudioStream {
+  string url = 1;
+  .google.protobuf.Timestamp expiry = 2;
+  .spotify.playback_platform.common.v1.AudioFormat format = 3;
+  .spotify.playback_platform.common.v1.StochasticDuration duration = 4;
+  optional uint64 size_lower_bound = 5;
+  optional uint64 size_upper_bound = 6;
+  optional .google.protobuf.Duration latency_lower_bound = 7;
+  optional .google.protobuf.Duration latency_upper_bound = 8;
+}
+
+message GeneratedVideoStream {
+  string url = 1;
+  .google.protobuf.Timestamp expiry = 2;
+  .spotify.playback_platform.common.v1.VideoFormat format = 3;
+  .spotify.playback_platform.common.v1.StochasticDuration duration = 4;
+  optional uint64 size_lower_bound = 5;
+  optional uint64 size_upper_bound = 6;
+  optional .google.protobuf.Duration latency_lower_bound = 7;
+  optional .google.protobuf.Duration latency_upper_bound = 8;
+}
+
+message GeneratedAudioManifest {
+  repeated .spotify.playback_platform.media.v1.GeneratedAudioStream streams = 1;
+  optional .spotify.playback_platform.media.v1.AudioManifest audio_fallback = 2;
+}
+
+message GeneratedVideoManifest {
+  repeated .spotify.playback_platform.media.v1.GeneratedVideoStream streams = 1;
+  optional .spotify.playback_platform.media.v1.VideoManifest video_fallback = 2;
+}
+
+message StreamingAudioManifest {
+}
+
+message StreamingVideoManifest {
+}
+

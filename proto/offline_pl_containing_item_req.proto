@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "offline_playlists_containing.proto";
+import "response_status.proto";
+
+message GetOfflinePlaylistsContainingItemRequest {
+  string item_uri = 1;
+}
+
+message GetOfflinePlaylistsContainingItemResponse {
+  .spotify.playlist_esperanto.proto.ResponseStatus status = 1;
+  .spotify.playlist.cosmos.proto.OfflinePlaylistsContainingItemResponse response = 2;
+}
+

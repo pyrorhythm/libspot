@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message PlaylistSyncEvent {
+  optional string playlist_id = 1;
+  optional bool is_playlist = 2;
+  optional int64 timestamp_ms = 3;
+  optional int32 error_code = 4;
+  optional string event_description = 5;
+}
+

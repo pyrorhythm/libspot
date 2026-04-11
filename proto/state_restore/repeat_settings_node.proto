@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message RepeatSettingsNode {
+  optional bool search_tracks_repeat = 1;
+  optional bool non_search_tracks_repeat = 2;
+}
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+message PlayOrigin {
+  string feature_identifier = 1;
+  string feature_version = 2;
+  string view_uri = 3;
+  string external_referrer = 4;
+  string referrer_identifier = 5;
+  string device_identifier = 6;
+  repeated string feature_classes = 7;
+  string restriction_identifier = 8;
+}
+

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.fingerprintfilterservice;
+
+option java_package = "com.spotify.fingerprintfilterservice";
+option java_outer_classname = "EpisodeAdPlacementsProto";
+option java_multiple_files = true;
+
+message EpisodeAdPlacements {
+  int32 audio_duration_ms = 1;
+  repeated .spotify.fingerprintfilterservice.AdPlacement placements = 2;
+  string audio_uri = 4;
+  optional string fingerprints_cdn_url = 3;
+}
+
+message AdPlacement {
+  int32 start_ms = 1;
+  int32 duration_ms = 2;
+  int32 roll_position = 3;
+}
+

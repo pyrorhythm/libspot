@@ -1,0 +1,122 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/behavior/handler.proto";
+
+message Events {
+  message OnMoveOnto {
+    reserved 14 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool move_from_play = 7;
+    bool move_from_prev = 8;
+    bool move_from_next = 9;
+    bool skip_from_prev = 10;
+    bool skip_from_next = 11;
+    bool fail_from_prev = 12;
+    bool fail_from_next = 13;
+  }
+
+  message OnMovePast {
+    reserved 14 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool move_to_next = 8;
+    bool move_to_prev = 9;
+    bool skip_to_next = 10;
+    bool skip_to_prev = 11;
+    bool fail_to_next = 12;
+    bool fail_to_prev = 13;
+  }
+
+  message OnEnterTimespan {
+    reserved 12 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool enter_at_beginning_by_playing = 8;
+    bool enter_at_beginning_by_seeking = 9;
+    bool enter_at_end_by_playing = 10;
+    bool enter_at_end_by_seeking = 11;
+  }
+
+  message OnLeaveTimespan {
+    reserved 12 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool leave_at_end_by_playing = 8;
+    bool leave_at_end_by_seeking = 9;
+    bool leave_at_beginning_by_playing = 10;
+    bool leave_at_beginning_by_seeking = 11;
+  }
+
+  message OnChangePlaying {
+    reserved 16 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool position = 8;
+    bool duration = 9;
+    bool buffered = 10;
+    bool playtime = 11;
+    bool paused = 12;
+    bool resumed = 13;
+    bool stalled_buffering_media = 14;
+    bool stalled_loading_context = 15;
+  }
+
+  message OnChangeSequenceOptions {
+    reserved 12 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool shuffling_sequence = 8;
+    bool enhancing_sequence = 9;
+    bool repeating_sequence = 10;
+    bool repeating_timeline = 11;
+  }
+
+  message OnChangeTimelineOptions {
+    reserved 9 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool playback_speed = 8;
+  }
+
+  message OnChangeDevice {
+    reserved 8 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+  }
+
+  message OnChangeLocale {
+    reserved 11 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool language_tag = 8;
+    bool date_format = 9;
+    bool time_format = 10;
+  }
+
+  message OnChangeQueue {
+    reserved 9 to 31;
+    .spotify.playback_platform.context.v1.behavior.Trigger trigger = 1;
+    .spotify.playback_platform.context.v1.behavior.Actions actions = 2;
+    bool sequence_patch = 8;
+  }
+
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnMoveOnto on_move_onto = 1;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnMoveOnto on_move_onto_child = 2;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnMovePast on_move_past = 3;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnMovePast on_move_past_child = 4;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnEnterTimespan on_enter_timespan = 5;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnLeaveTimespan on_leave_timespan = 6;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnChangePlaying on_change_playing = 7;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnChangeSequenceOptions on_change_sequence_options = 8;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnChangeTimelineOptions on_change_timeline_options = 9;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnChangeDevice on_change_device = 12;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnChangeLocale on_change_locale = 13;
+  repeated .spotify.playback_platform.context.v1.behavior.Events.OnChangeQueue on_change_queue = 14;
+}
+

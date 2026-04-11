@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ListPlayerErrorEvent {
+  optional string error = 1;
+  optional string error_description = 2;
+  optional string list_uri = 3;
+  optional bytes list_ref = 4;
+  optional string list_instance_id = 5;
+  optional int32 number_of_items = 6;
+}
+

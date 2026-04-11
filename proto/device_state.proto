@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service DeviceState {
+  rpc SetDeviceVolume (.spotify.ads.esperanto.proto.SetDeviceVolumeRequest) returns (.spotify.ads.esperanto.proto.SetDeviceVolumeResponse) {}
+  rpc GetDeviceVolume (.spotify.ads.esperanto.proto.GetDeviceVolumeRequest) returns (.spotify.ads.esperanto.proto.GetDeviceVolumeResponse) {}
+}
+
+message SetDeviceVolumeRequest {
+  double volume = 1;
+}
+
+message SetDeviceVolumeResponse {
+  enum Status {
+    ACCEPTED = 0;
+    BAD_REQUEST = 1;
+  }
+
+  .spotify.ads.esperanto.proto.SetDeviceVolumeResponse.Status status = 1;
+}
+
+message GetDeviceVolumeRequest {
+}
+
+message GetDeviceVolumeResponse {
+  optional double volume = 1;
+}
+

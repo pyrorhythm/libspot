@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package spotify.stream_reporting_esperanto.proto;
+
+option java_package = "com.spotify.stream_reporting_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/timestamp.proto";
+import "media_type.proto";
+import "play_reason.proto";
+import "playback_stack_v2.proto";
+import "streaming_rule.proto";
+import "stream_handle.proto";
+import "video_surface.proto";
+
+message StreamStartV2Request {
+  reserved 32;
+  reserved 35;
+  .spotify.stream_reporting_esperanto.proto.StreamHandle stream_handle = 1;
+  bytes parent_playback_id = 2;
+  string video_session_id = 3;
+  string play_context = 4;
+  string content_uri = 5;
+  string displayed_content_uri = 6;
+  string provider = 7;
+  string referrer = 8;
+  .spotify.stream_reporting_esperanto.proto.StreamingRule streaming_rule = 9;
+  string connect_controller_device_id = 10;
+  string page_instance_id = 11;
+  string interaction_id = 12;
+  string source_start = 13;
+  .spotify.stream_reporting_esperanto.proto.PlayReason reason_start = 14;
+  bool is_shuffle = 15;
+  string media_id = 16;
+  .spotify.stream_reporting_esperanto.proto.MediaType media_type = 17;
+  uint64 playback_start_time = 18;
+  uint64 start_position = 19;
+  bool is_live = 20;
+  bool content_is_downloaded = 21;
+  bool client_offline = 22;
+  string feature_uuid = 23;
+  string decision_id = 24;
+  string custom_reporting_attribution = 25;
+  string play_context_decision_id = 26;
+  .google.protobuf.Timestamp client_timestamp = 27;
+  bool is_video_on = 31;
+  string player_session_id = 33;
+  .spotify.stream_reporting_esperanto.proto.PlaybackStackV2 playback_stack = 39;
+  optional bool is_repeating_track = 28;
+  optional bool is_repeating_context = 29;
+  optional bool is_audio_on = 30;
+  optional string preview_impression_uri = 34;
+  optional .spotify.stream_reporting_esperanto.proto.VideoSurface video_surface_v2 = 36;
+  optional string on_demand_type = 37;
+  optional string entrypoint_uri = 38;
+  optional string agentic_product_type = 40;
+}
+

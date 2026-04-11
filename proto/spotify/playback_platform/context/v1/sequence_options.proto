@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+message SequenceOptions {
+  optional bool shuffling_sequence = 1;
+  optional bool enhancing_sequence = 2;
+  optional bool repeating_sequence = 3;
+  optional bool repeating_timeline = 4;
+}
+

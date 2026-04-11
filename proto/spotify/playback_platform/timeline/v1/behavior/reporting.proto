@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.playback_platform.timeline.v1.behavior;
+
+option java_package = "spotify.playback_platform.timeline.v1.behavior";
+option java_multiple_files = true;
+
+message Reporting {
+  message PlayContext {
+    string uri = 1;
+  }
+
+  repeated .spotify.playback_platform.timeline.v1.behavior.Reporting.PlayContext play_contexts = 1;
+  optional string decision_id = 2;
+  optional string custom_reporting_attribution = 3;
+  optional string sequence_provider_id = 4;
+}
+

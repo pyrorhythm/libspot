@@ -1,0 +1,181 @@
+syntax = "proto3";
+
+package spotify.offline.proto;
+
+import "google/protobuf/timestamp.proto";
+import "offline.proto";
+
+message ListDevicesRequest {
+  string user_id = 1;
+}
+
+message ListDevicesResponse {
+  repeated .spotify.offline.proto.Device devices = 1;
+}
+
+message PutDeviceRequest {
+  message Body {
+    .spotify.offline.proto.Device device = 1;
+  }
+
+  string user_id = 1;
+  .spotify.offline.proto.PutDeviceRequest.Body body = 2;
+}
+
+message BasicDeviceRequest {
+  .spotify.offline.proto.DeviceKey key = 1;
+}
+
+message GetDeviceResponse {
+  .spotify.offline.proto.Device device = 1;
+}
+
+message OfflineEnableDeviceRequest {
+  message Body {
+    bool auto_opc = 1;
+  }
+
+  .spotify.offline.proto.DeviceKey key = 1;
+  .spotify.offline.proto.OfflineEnableDeviceRequest.Body body = 2;
+  string name = 9;
+  int32 platform = 7;
+  string client_id = 8;
+}
+
+message OfflineEnableDeviceResponse {
+  enum StatusCode {
+    UNKNOWN = 0;
+    OK = 1;
+    DEVICE_LIMIT_REACHED = 2;
+  }
+
+  .spotify.offline.proto.Restrictions restrictions = 1;
+  .spotify.offline.proto.OfflineEnableDeviceResponse.StatusCode status_code = 2;
+}
+
+message ListResourcesRequest {
+  .spotify.offline.proto.DeviceKey key = 1;
+  string username = 2;
+}
+
+message ListResourcesResponse {
+  repeated .spotify.offline.proto.Resource resources = 1;
+  .google.protobuf.Timestamp server_time = 2;
+}
+
+message WriteResourcesRequest {
+  message Body {
+    repeated .spotify.offline.proto.ResourceOperation operations = 1;
+    string source_device_id = 2;
+    string source_cache_id = 3;
+  }
+
+  .spotify.offline.proto.DeviceKey key = 1;
+  .spotify.offline.proto.WriteResourcesRequest.Body body = 2;
+  string pushMessageIdentifier = 3;
+}
+
+message ResourcesUpdate {
+  string source_device_id = 1;
+  string source_cache_id = 2;
+}
+
+message DeltaResourcesRequest {
+  message Body {
+    .google.protobuf.Timestamp last_known_server_time = 1;
+  }
+
+  .spotify.offline.proto.DeviceKey key = 1;
+  string username = 3;
+  .spotify.offline.proto.DeltaResourcesRequest.Body body = 2;
+}
+
+message DeltaResourcesResponse {
+  bool delta_update_possible = 1;
+  repeated .spotify.offline.proto.ResourceOperation operations = 2;
+  .google.protobuf.Timestamp server_time = 3;
+}
+
+message GetResourceRequest {
+  .spotify.offline.proto.DeviceKey key = 1;
+  string username = 3;
+  string uri = 2;
+}
+
+message GetResourceResponse {
+  .spotify.offline.proto.Resource resource = 1;
+}
+
+message WriteResourcesDetailsRequest {
+  message Body {
+    repeated .spotify.offline.proto.Resource resources = 1;
+  }
+
+  .spotify.offline.proto.DeviceKey key = 1;
+  .spotify.offline.proto.WriteResourcesDetailsRequest.Body body = 2;
+}
+
+message ListDevicesWithResourceRequest {
+  message Body {
+    message Filters {
+      bool include_only_is_supported = 1;
+      bool include_only_remote_downloads_enabled = 2;
+    }
+
+    string uri = 1;
+    .spotify.offline.proto.ListDevicesWithResourceRequest.Body.Filters filters = 2;
+  }
+
+  string user_id = 1;
+  string username = 2;
+  .spotify.offline.proto.ListDevicesWithResourceRequest.Body body = 3;
+}
+
+message ListDevicesWithResourceResponse {
+  message DeviceWithResource {
+    .spotify.offline.proto.Device device = 1;
+    bool is_supported = 2;
+    optional .spotify.offline.proto.Resource resource = 3;
+  }
+
+  repeated .spotify.offline.proto.ListDevicesWithResourceResponse.DeviceWithResource deviceWithResource = 1;
+  .spotify.offline.proto.FetchStrategy fetch_strategy = 2;
+}
+
+message FetchStrategy {
+  oneof fetch_strategy {
+    .spotify.offline.proto.PollStrategy poll_strategy = 1;
+    .spotify.offline.proto.SubStrategy sub_strategy = 2;
+  }
+}
+
+message PollStrategy {
+  int32 interval_ms = 1;
+}
+
+message SubStrategy {
+}
+
+message ClearUserDataRequest {
+  string user_id = 1;
+}
+
+message ClearDeltaResourcesRequest {
+  string user_id = 1;
+  string cache_id = 2;
+}
+
+message DeleteResourceListRequest {
+  string user_id = 1;
+  string cache_id = 2;
+}
+
+message LicenseStatusRequest {
+  string user_id = 1;
+}
+
+message LicenseStatusResponse {
+  int32 max_licenses = 1;
+  int32 free_licenses = 2;
+}
+

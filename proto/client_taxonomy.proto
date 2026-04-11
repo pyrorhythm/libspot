@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package spotify.ubiquity.v1;
+
+option java_package = "com.spotify.ubiquity.v1";
+option java_multiple_files = true;
+
+message Output {
+  optional string name = 1;
+  optional string brand = 2;
+  optional string model = 3;
+  optional .spotify.ubiquity.v1.OutputCategory category = 4;
+  optional .spotify.ubiquity.v1.OutputConnectionType connection_type = 5;
+}
+
+message Device {
+  optional string brand = 1;
+  optional string model = 2;
+  optional string device_type = 3;
+  optional .spotify.ubiquity.v1.Output output = 4;
+}
+
+message ClientTaxonomy {
+  optional .spotify.ubiquity.v1.Device streaming_device = 1;
+}
+
+enum OutputCategory {
+  OUTPUT_CATEGORY_UNKNOWN = 0;
+  OUTPUT_CATEGORY_CAR = 1;
+  OUTPUT_CATEGORY_HEADPHONES = 2;
+  OUTPUT_CATEGORY_SPEAKER = 3;
+  OUTPUT_CATEGORY_WEARABLE = 4;
+  OUTPUT_CATEGORY_GLASSES = 5;
+  OUTPUT_CATEGORY_APP = 6;
+}
+
+enum OutputConnectionType {
+  OUTPUT_CONNECTION_TYPE_UNKNOWN = 0;
+  OUTPUT_CONNECTION_TYPE_WIRED = 1;
+  OUTPUT_CONNECTION_TYPE_CAR_PROJECTED = 2;
+  OUTPUT_CONNECTION_TYPE_BLUETOOTH = 3;
+  OUTPUT_CONNECTION_TYPE_AIRPLAY = 4;
+  OUTPUT_CONNECTION_TYPE_BUILT_IN_SPEAKER = 5;
+}
+

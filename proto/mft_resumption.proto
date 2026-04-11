@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.list_player.proto;
+
+message MftResumptionEntry {
+  string skip_to_uid = 1;
+  string skip_to_uri = 2;
+  int64 seek_to_position_ms = 3;
+  int64 timestamp_ms = 4;
+}
+
+message MftResumptionState {
+  message EntriesEntry {
+    string key = 1;
+    .spotify.list_player.proto.MftResumptionEntry value = 2;
+  }
+
+  repeated .spotify.list_player.proto.MftResumptionState.EntriesEntry entries = 1;
+}
+

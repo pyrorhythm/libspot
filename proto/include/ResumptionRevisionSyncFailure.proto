@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionRevisionSyncFailure {
+  optional int32 number_revisions = 1;
+  optional int32 http_status_code = 2;
+}
+

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.policy.proto";
+option java_multiple_files = true;
+
+import "policy/episode_decoration_policy.proto";
+import "policy/show_decoration_policy.proto";
+import "policy/user_decoration_policy.proto";
+
+message PlaylistEpisodeDecorationPolicy {
+  .spotify.cosmos_util.proto.EpisodeDecorationPolicy episode = 1;
+  bool row_id = 2;
+  bool add_time = 3;
+  bool format_list_attributes = 4;
+  .spotify.cosmos_util.proto.EpisodeCollectionDecorationPolicy collection = 5;
+  .spotify.cosmos_util.proto.EpisodeSyncDecorationPolicy sync = 6;
+  .spotify.cosmos_util.proto.EpisodePlayedStateDecorationPolicy played_state = 7;
+  .spotify.playlist.cosmos.proto.UserDecorationPolicy added_by = 8;
+  .spotify.cosmos_util.proto.ShowDecorationPolicy show = 9;
+  bool signals = 10;
+  bool is_recommendation = 11;
+}
+

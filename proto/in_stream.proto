@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "ad_common.proto";
+import "google/protobuf/empty.proto";
+
+service InStream {
+  rpc SubInStream (.spotify.ads.esperanto.proto.SubInStreamRequest) returns (stream .spotify.ads.esperanto.proto.SubInStreamResponse) {}
+  rpc SubBreakChanged (.google.protobuf.Empty) returns (stream .spotify.ads.esperanto.proto.SubBreakChangedResponse) {}
+}
+
+message SubInStreamRequest {
+}
+
+message SubInStreamResponse {
+  .spotify.ads.esperanto.proto.Ad ad = 1;
+}
+
+message SubBreakChangedResponse {
+  bool in_break = 1;
+}
+

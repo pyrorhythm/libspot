@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message BoomboxPlaybackNonCriticalError {
+  optional bytes file_id = 1;
+  optional bytes playback_id = 2;
+  optional string track_id = 3;
+  optional int64 bitrate = 4;
+  optional string audiocodec = 5;
+  optional bool external_track = 6;
+  optional int64 position_ms = 7;
+  optional int64 error = 8;
+  optional string error_description = 9;
+}
+

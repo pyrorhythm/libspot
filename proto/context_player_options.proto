@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message ContextPlayerOptions {
+  message ModesEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional bool shuffling_context = 1;
+  optional bool repeating_context = 2;
+  optional bool repeating_track = 3;
+  optional float playback_speed = 4;
+  repeated .spotify.player.proto.ContextPlayerOptions.ModesEntry modes = 5;
+}
+
+message ContextPlayerOptionOverrides {
+  message ModesEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional bool shuffling_context = 1;
+  optional bool repeating_context = 2;
+  optional bool repeating_track = 3;
+  optional float playback_speed = 4;
+  repeated .spotify.player.proto.ContextPlayerOptionOverrides.ModesEntry modes = 5;
+}
+

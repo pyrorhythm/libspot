@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.tags_info_request.proto;
+
+option objc_class_prefix = "SPTCollectionCosmosTagsInfo";
+
+message Request {
+}
+
+message Response {
+  bool is_synced = 1;
+}
+

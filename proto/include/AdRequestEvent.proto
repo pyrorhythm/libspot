@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AdRequestEvent {
+  optional string feature_identifier = 1;
+  optional string requested_ad_type = 2;
+  optional int64 latency_ms = 3;
+  repeated string requested_ad_types = 4;
+  optional string request_id = 5;
+  optional int32 http_error_code = 6;
+  optional string content_uri = 7;
+  optional string app_startup_id = 8;
+  optional string connection_type = 9;
+}
+

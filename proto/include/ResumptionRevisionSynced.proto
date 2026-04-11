@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionRevisionSynced {
+  optional string key = 1;
+  optional string resume_point = 2;
+  optional string sync_type = 3;
+  optional string revision_id = 4;
+  optional string create_time = 5;
+  optional string update_time = 6;
+}
+

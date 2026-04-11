@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.playlist.proto.mft_lens_poc;
+
+import "google/protobuf/timestamp.proto";
+
+message PlayHistoryItem {
+  string item_uri = 1;
+  .google.protobuf.Timestamp timestamp = 2;
+}
+
+message CurrentContext {
+  string track_uri = 1;
+  string context_uri = 2;
+  string playback_id = 3;
+  string session_id = 4;
+  string track_uid = 5;
+}
+
+message PlayHistory {
+  repeated .spotify.playlist.proto.mft_lens_poc.PlayHistoryItem items = 1;
+  .spotify.playlist.proto.mft_lens_poc.CurrentContext current_context = 2;
+}
+

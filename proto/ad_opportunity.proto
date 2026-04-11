@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service AdOpportunity {
+  rpc postEvent (.spotify.ads.esperanto.proto.PostEventRequest) returns (.spotify.ads.esperanto.proto.PostEventResponse) {}
+  rpc postEventV2 (.spotify.ads.esperanto.proto.PostEventV2Request) returns (.spotify.ads.esperanto.proto.PostEventV2Response) {}
+}
+
+message PostEventRequest {
+  string slot_id = 1;
+  bool decision = 2;
+  string reason = 3;
+  string content_uri = 4;
+}
+
+message PostEventResponse {
+  enum Status {
+    SUCCESS = 0;
+    FAIL = 1;
+  }
+
+  .spotify.ads.esperanto.proto.PostEventResponse.Status status = 1;
+}
+
+message PostEventV2Request {
+  string slot_id = 1;
+  string content_uri = 2;
+  string demand_status = 3;
+  string eligibility_status = 4;
+  string trigger_origin = 5;
+  repeated string trigger_states = 6;
+}
+
+message PostEventV2Response {
+  enum Status {
+    SUCCESS = 0;
+    FAIL = 1;
+    INVALID_SLOT = 2;
+    INVALID_DEMAND_STATUS = 3;
+    INVALID_ELIGIBILITY_STATUS = 4;
+  }
+
+  .spotify.ads.esperanto.proto.PostEventV2Response.Status status = 1;
+}
+

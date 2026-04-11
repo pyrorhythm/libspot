@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.player.proto.transfer;
+
+message InstrumentationParams {
+  repeated string interaction_ids = 6;
+  repeated string page_instance_ids = 7;
+}
+

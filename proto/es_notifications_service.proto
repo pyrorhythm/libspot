@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package spotify.desktop.notifications.proto;
+
+import "google/protobuf/empty.proto";
+
+service NotificationsService {
+  rpc ShowToast (.spotify.desktop.notifications.proto.NotificationRequest) returns (stream .spotify.desktop.notifications.proto.NotificationResponse) {}
+  rpc GetAvailability (.google.protobuf.Empty) returns (.spotify.desktop.notifications.proto.AvailabilityResponse) {}
+  rpc OpenNotificationsSetting (.google.protobuf.Empty) returns (.google.protobuf.Empty) {}
+}
+
+message ToastAction {
+  string label = 1;
+}
+
+message NotificationRequest {
+  string title = 1;
+  string body = 2;
+  optional string subtitle = 3;
+  optional .spotify.desktop.notifications.proto.ToastAction action = 4;
+  optional string image_url = 5;
+  optional string launch_uri = 6;
+}
+
+message NotificationResponse {
+}
+
+message AvailabilityResponse {
+  .spotify.desktop.notifications.proto.NotificationAvailability availability = 1;
+}
+
+enum NotificationAvailability {
+  AVAILABLE = 0;
+  UNAUTHORIZED = 1;
+  UNAVAILABLE = 2;
+}
+

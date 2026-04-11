@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package spotify.exclusive_mode_esperanto.proto;
+
+option java_package = "com.spotify.exclusive_mode_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+message SetEnableRequest {
+  bool enable = 1;
+}
+
+message GetEnableResponse {
+  bool enable = 1;
+}
+
+message GetDeviceResponse {
+  .spotify.exclusive_mode_esperanto.proto.ResponseCode response = 1;
+  .spotify.exclusive_mode_esperanto.proto.DeviceId device_id = 2;
+}
+
+message Response {
+  .spotify.exclusive_mode_esperanto.proto.ResponseCode response = 1;
+}
+
+message DeviceId {
+  string id = 1;
+  optional bool persist = 2;
+}
+
+message Device {
+  .spotify.exclusive_mode_esperanto.proto.DeviceId device_id = 1;
+  string description = 2;
+  string interface = 3;
+  bool present = 4;
+  bool exclusive = 5;
+  string friendly_name = 6;
+}
+
+message EnumerateDevicesResponse {
+  .spotify.exclusive_mode_esperanto.proto.ResponseCode response = 1;
+  repeated .spotify.exclusive_mode_esperanto.proto.Device devices = 2;
+}
+
+enum ResponseCode {
+  UNKNOWN_ERROR = 0;
+  OK = 1;
+  NOT_SUPPORTED = 2;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ClientCoreConnectPlayCommand {
+  optional int64 observer_duration = 1;
+  optional int64 state_duration = 2;
+  optional string intent_id = 3;
+  optional string context_url = 4;
+}
+

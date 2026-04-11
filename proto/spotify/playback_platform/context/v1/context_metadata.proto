@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/metadata/basic.proto";
+
+message ContextMetadata {
+  message UnmappedEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.playback_platform.context.v1.ContextMetadata.UnmappedEntry unmapped = 1;
+  .spotify.playback_platform.context.v1.metadata.Basic basic = 2064;
+}
+

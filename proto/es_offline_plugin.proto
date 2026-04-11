@@ -1,0 +1,134 @@
+syntax = "proto3";
+
+package spotify.offline.proto.v2;
+
+option java_package = "com.spotify.offline.offlineplugin_proto";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "extension_kind.proto";
+
+service OfflinePlugin {
+  rpc identify (.spotify.offline.proto.v2.IdentifyCommand) returns (.spotify.offline.proto.v2.IdentifyResponse) {}
+  rpc download (.spotify.offline.proto.v2.DownloadCommand) returns (stream .spotify.offline.proto.v2.DownloadResponse) {}
+  rpc stopDownload (.spotify.offline.proto.v2.StopDownloadCommand) returns (.google.protobuf.Empty) {}
+  rpc remove (.spotify.offline.proto.v2.RemoveCommand) returns (.google.protobuf.Empty) {}
+}
+
+message TargetFormat {
+  int32 bitrate = 1;
+}
+
+message Metadata {
+  message Header {
+    int32 status_code = 1;
+    bool is_empty = 2;
+  }
+
+  .spotify.offline.proto.v2.Metadata.Header header = 1;
+  .google.protobuf.Any extension_data = 2;
+}
+
+message IdentifyCommand {
+  message Header {
+    .spotify.offline.proto.v2.TargetFormat target_format = 1;
+  }
+
+  message Query {
+    message MetadataEntry {
+      int32 key = 1;
+      .spotify.offline.proto.v2.Metadata value = 2;
+    }
+
+    string link = 1;
+    repeated .spotify.offline.proto.v2.IdentifyCommand.Query.MetadataEntry metadata = 2;
+  }
+
+  .spotify.offline.proto.v2.IdentifyCommand.Header header = 1;
+  repeated .spotify.offline.proto.v2.IdentifyCommand.Query query = 2;
+}
+
+message IdentifyResponse {
+  message Result {
+    enum Status {
+      UNKNOWN = 0;
+      MISSING = 1;
+      COMPLETE = 2;
+      NOT_APPLICABLE = 3;
+    }
+
+    .spotify.offline.proto.v2.IdentifyResponse.Result.Status status = 1;
+    int64 estimated_file_size = 2;
+  }
+
+  message ResultsEntry {
+    string key = 1;
+    .spotify.offline.proto.v2.IdentifyResponse.Result value = 2;
+  }
+
+  repeated .spotify.offline.proto.v2.IdentifyResponse.ResultsEntry results = 1;
+}
+
+message DownloadCommand {
+  message MetadataEntry {
+    int32 key = 1;
+    .spotify.offline.proto.v2.Metadata value = 2;
+  }
+
+  string link = 1;
+  .spotify.offline.proto.v2.TargetFormat target_format = 2;
+  repeated .spotify.offline.proto.v2.DownloadCommand.MetadataEntry metadata = 3;
+}
+
+message DownloadResponse {
+  enum Error {
+    OK = 0;
+    TEMPORARY_ERROR = 1;
+    PERMANENT_ERROR = 2;
+    DISK_FULL = 3;
+  }
+
+  string link = 1;
+  bool complete = 2;
+  int64 file_size = 3;
+  int64 bytes_downloaded = 4;
+  .spotify.offline.proto.v2.DownloadResponse.Error error = 5;
+}
+
+message StopDownloadCommand {
+  string link = 1;
+}
+
+message RemoveCommand {
+  message Header {
+  }
+
+  message Query {
+    string link = 1;
+  }
+
+  .spotify.offline.proto.v2.RemoveCommand.Header header = 1;
+  repeated .spotify.offline.proto.v2.RemoveCommand.Query query = 2;
+}
+
+message PluginMetadata {
+  string name = 1;
+  repeated .spotify.offline.proto.v2.LinkType supported_link_types = 2;
+  .spotify.offline.proto.v2.ResourceType resource_type = 3;
+  repeated .spotify.extendedmetadata.ExtensionKind extension_kinds = 4;
+}
+
+enum LinkType {
+  EMPTY = 0;
+  TRACK = 1;
+  EPISODE = 2;
+}
+
+enum ResourceType {
+  OTHER = 0;
+  AUDIO = 1;
+  DRM = 2;
+  IMAGE = 3;
+  VIDEO = 4;
+}
+

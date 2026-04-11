@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "status.proto";
+import "es_context.proto";
+import "es_play_options.proto";
+import "es_logging_params.proto";
+import "es_prepare_play_options.proto";
+import "es_play_origin.proto";
+
+message CollectionPlayRequest {
+  string sort = 1;
+  string filter = 2;
+  .spotify.player.esperanto.proto.Context context = 4;
+  .spotify.player.esperanto.proto.PlayOptions play_options = 5;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 6;
+  .spotify.player.esperanto.proto.PreparePlayOptions prepare_play_options = 7;
+  .spotify.player.esperanto.proto.PlayOrigin play_origin = 8;
+  string id = 9;
+}
+
+message CollectionPlayResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+}
+

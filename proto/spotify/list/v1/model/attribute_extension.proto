@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "AttributeExtensionProto";
+option java_multiple_files = true;
+
+import "google/protobuf/descriptor.proto";
+
+enum MappingKind {
+  KIND_NAME_MAPPING_UNSPECIFIED = 0;
+  KIND_LOWER_KEBAB_CASE = 1;
+  KIND_CAMEL_CASE = 2;
+  KIND_PASCAL_CASE = 3;
+  KIND_LOWER_SNAKE_CASE = 4;
+  KIND_UPPER_SNAKE_CASE = 5;
+  KIND_COMPLEX_TYPE = 6;
+}
+

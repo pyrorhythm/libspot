@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package spotify.recently_played_esperanto.proto;
+
+option java_package = "com.spotify.recently_played_esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "recently_played_decoration_policy.proto";
+import "recently_played_item.proto";
+
+message GetRecentlyPlayedTracksRequest {
+  bool include_hidden = 1;
+  bool include_episodes = 2;
+  bool include_local_tracks = 3;
+  uint32 update_throttling = 4;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedTrackDecorationPolicy track_policy = 5;
+  .spotify.recently_played_esperanto.proto.RecentlyPlayedEpisodeDecorationPolicy episode_policy = 6;
+}
+
+message RecentlyPlayedEntity {
+  oneof entity {
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedTrack track = 1;
+    .spotify.recently_played_esperanto.proto.RecentlyPlayedEpisode episode = 2;
+  }
+}
+
+message GetRecentlyPlayedTracksResponse {
+  repeated .spotify.recently_played_esperanto.proto.RecentlyPlayedEntity entity = 1;
+  uint32 missing_metadata_count = 2;
+  bool loaded = 3;
+  uint32 original_length = 4;
+  uint32 unfiltered_length = 5;
+  uint32 status = 6;
+  string error = 7;
+}
+

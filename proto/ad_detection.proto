@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package spotify.ad_detection.impl.ad_detection_proto;
+
+option java_package = "com.spotify.ad.detection.esperanto.proto";
+
+service AdDetection {
+  rpc Detect (.spotify.ad_detection.impl.ad_detection_proto.DetectRequest) returns (stream .spotify.ad_detection.impl.ad_detection_proto.DetectResponse) {}
+  rpc MapTimestamp (.spotify.ad_detection.impl.ad_detection_proto.MapTimestampRequest) returns (.spotify.ad_detection.impl.ad_detection_proto.MapTimestampResponse) {}
+}
+
+message DetectRequest {
+  reserved 1;
+  string episode_uri = 2;
+  string playback_id = 3;
+}
+
+message DetectResponse {
+  reserved 1;
+  message InternalTimelineResync {
+    int32 adjustment_ms = 1;
+  }
+
+  message Range {
+    int32 start_ms = 1;
+    int32 end_ms = 2;
+    int32 duration_ms = 3;
+    int32 start_byte = 4;
+    int32 end_byte = 5;
+    .spotify.ad_detection.impl.ad_detection_proto.Precision precision = 6;
+    .spotify.ad_detection.impl.ad_detection_proto.DetectResponse.InternalTimelineResync resync = 7;
+  }
+
+  repeated .spotify.ad_detection.impl.ad_detection_proto.DetectResponse.Range ad_breaks = 2;
+  repeated .spotify.ad_detection.impl.ad_detection_proto.DetectResponse.Range degraded_ranges = 3;
+  int32 total_ad_duration = 4;
+  int32 remaining_ad_duration = 5;
+  int32 total_bytes = 6;
+  .spotify.ad_detection.impl.ad_detection_proto.Precision precision = 7;
+  .spotify.ad_detection.impl.ad_detection_proto.DetectStatus status = 8;
+}
+
+message MapTimestampRequest {
+  string episode_uri = 1;
+  int32 user_timestamp_ms = 2;
+  string playback_id = 3;
+  .spotify.ad_detection.impl.ad_detection_proto.CreatorTimestampType creator_timestamp_type = 4;
+}
+
+message CreatorTimestamp {
+  int32 creator_timestamp_ms = 1;
+}
+
+message MapTimestampResponse {
+  bool error = 1;
+  .spotify.ad_detection.impl.ad_detection_proto.CreatorTimestamp creator_timestamp = 2;
+}
+
+enum DetectStatus {
+  DETECT_STATUS_UNKNOWN = 0;
+  DETECT_STATUS_ERROR = 1;
+  DETECT_STATUS_IN_PROGRESS = 2;
+  DETECT_STATUS_FINISHED = 3;
+  DETECT_STATUS_AUDIO_UNAVAILABLE = 4;
+  DETECT_STATUS_FINISHED_BASED_ON_METADATA_ONLY = 5;
+}
+
+enum Precision {
+  PRECISION_UNKNOWN = 0;
+  PRECISION_LOW = 1;
+  PRECISION_HIGH = 2;
+}
+
+enum CreatorTimestampType {
+  CLIENT_PRODUCED = 0;
+  INFERRED = 1;
+}
+

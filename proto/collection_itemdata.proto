@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package spotify.collection.itemdata;
+
+option java_package = "com.spotify.collection2.itemdata.proto";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "save_source.proto";
+
+message ItemData {
+  oneof data {
+    .spotify.collection.itemdata.PlayContextBansItemData play_context_bans_item_data = 1001;
+    .spotify.collection.itemdata.BanItemData ban_item_data = 1002;
+    .spotify.collection.itemdata.ArtistBanItemData artistban_item_data = 1003;
+    .spotify.collection.itemdata.BanIntentItemData ban_intent_item_data = 1004;
+    .spotify.collection.itemdata.SnoozedRecsItemData snoozedrecs_item_data = 1005;
+    .spotify.collection.itemdata.RatingItemData rating_item_data = 1006;
+    .spotify.collection.itemdata.PageMatchItemData page_match_item_data = 1007;
+  }
+  optional .spotify.list_collection.save_source.proto.SaveSource save_source = 1;
+}
+
+message PlayContextBansItemData {
+  enum ItemProvider {
+    PROVIDER_UNSPECIFIED = 0;
+    PROVIDER_CONTEXT = 1;
+    PROVIDER_AUTOPLAY = 2;
+    PROVIDER_ENHANCE = 3;
+  }
+
+  .spotify.collection.itemdata.PlayContextBansItemData.ItemProvider item_provider = 1;
+}
+
+message BanItemData {
+  bool banned_for_managed_account = 1;
+}
+
+message ArtistBanItemData {
+  bool banned_for_managed_account = 1;
+}
+
+message BanIntentItemData {
+  bool banned_for_managed_account = 1;
+}
+
+message SnoozedRecsItemData {
+  .google.protobuf.Timestamp expires_at = 1;
+  optional string snooze_context_uri = 2;
+}
+
+message RatingItemData {
+  enum RatingValue {
+    UNSET = 0;
+    RATING_1 = 1;
+    RATING_2 = 2;
+    RATING_3 = 3;
+    RATING_4 = 4;
+    RATING_5 = 5;
+  }
+
+  .spotify.collection.itemdata.RatingItemData.RatingValue rating_value = 1;
+}
+
+message PageMatchItemData {
+  .google.protobuf.Duration page_match_offset = 1;
+}
+

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.mdata_esperanto.proto;
+
+option java_package = "com.spotify.mdata.esperanto.proto";
+option java_multiple_files = true;
+
+import "extension_kind.proto";
+
+message ObserveRequest {
+  message ExtensionQuery {
+    string entity_uri = 1;
+    .spotify.extendedmetadata.ExtensionKind extension_kind = 2;
+  }
+
+  repeated .spotify.mdata_esperanto.proto.ObserveRequest.ExtensionQuery extension_query = 1;
+  string feature_id = 2;
+  bool notify_on_changes = 3;
+}
+

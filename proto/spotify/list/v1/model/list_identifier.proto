@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "ListIdentifierProto";
+option java_multiple_files = true;
+
+message ListIdentifier {
+  optional string uri = 1;
+  optional bytes revision = 2;
+}
+

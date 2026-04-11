@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+package spotify.metadata_cosmos.proto;
+
+option java_package = "com.spotify.metadata.cosmos.proto";
+option java_outer_classname = "MetadataCosmos";
+
+import "metadata.proto";
+
+message MetadataItem {
+  oneof item {
+    sint32 error = 1;
+    .spotify.metadata.Artist artist = 2;
+    .spotify.metadata.Album album = 3;
+    .spotify.metadata.Track track = 4;
+    .spotify.metadata.Show show = 5;
+    .spotify.metadata.Episode episode = 6;
+  }
+}
+
+message MultiResponse {
+  repeated .spotify.metadata_cosmos.proto.MetadataItem items = 1;
+}
+
+message MultiRequest {
+  repeated string uris = 1;
+}
+

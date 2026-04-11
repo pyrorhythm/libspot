@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/context.proto";
+
+message Preloaded {
+  message PreloadedContext {
+    string context_id = 1;
+    .spotify.playback_platform.context.v1.Context context = 2;
+  }
+
+  repeated .spotify.playback_platform.context.v1.Preloaded.PreloadedContext contexts = 1;
+}
+

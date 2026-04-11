@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ClientOAuthMigrationFailure {
+  optional int32 error_code = 1;
+  optional string error_message = 2;
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/sequence_query.proto";
+
+message Skips {
+  .spotify.playback_platform.context.v1.SequenceQuery skip_to_prev = 2;
+  .spotify.playback_platform.context.v1.SequenceQuery skip_to_next = 3;
+  optional bool allow = 1;
+}
+

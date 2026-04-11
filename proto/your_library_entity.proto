@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package spotify.your_library.proto;
+
+import "your_library_index.proto";
+import "collection_index.proto";
+
+message YourLibraryEntity {
+  oneof entity {
+    .spotify.collection.proto.CollectionAlbumEntry album = 1;
+    .spotify.collection.proto.CollectionArtistEntry artist = 2;
+    .spotify.your_library.proto.YourLibraryRootlistEntity rootlist_entity = 3;
+    .spotify.collection.proto.CollectionShowEntry show = 4;
+    .spotify.collection.proto.CollectionBookEntry book = 5;
+    .spotify.your_library.proto.YourLibraryPreReleaseEntity prerelease = 7;
+    .spotify.your_library.proto.YourLibraryEventEntity event = 8;
+    .spotify.collection.proto.CollectionAuthorEntry author = 9;
+    .spotify.your_library.proto.YourLibraryVenueEntity venue = 10;
+    .spotify.your_library.proto.YourLibraryConcertCampaignEntity concert_campaign = 11;
+  }
+}
+

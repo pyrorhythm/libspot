@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package spotify.common_capping.impl.common_capping_proto;
+
+option java_package = "com.spotify.common_capping.esperanto.proto";
+
+import "google/protobuf/empty.proto";
+
+service CommonCapping {
+  rpc IsCapped (.spotify.common_capping.impl.common_capping_proto.IsCappedRequest) returns (.spotify.common_capping.impl.common_capping_proto.IsCappedResponse) {}
+  rpc ReportConsumption (.spotify.common_capping.impl.common_capping_proto.ReportConsumptionRequest) returns (.google.protobuf.Empty) {}
+  rpc ObserveCapStateChanged (.spotify.common_capping.impl.common_capping_proto.ObserveCapStateChangedRequest) returns (stream .spotify.common_capping.impl.common_capping_proto.ObserveCapStateChangedResponse) {}
+  rpc ObserveCapInfo (.spotify.common_capping.impl.common_capping_proto.ObserveCapInfoRequest) returns (stream .spotify.common_capping.impl.common_capping_proto.ObserveCapInfoResponse) {}
+  rpc GetCapInfo (.spotify.common_capping.impl.common_capping_proto.GetCapInfoRequest) returns (.spotify.common_capping.impl.common_capping_proto.GetCapInfoResponse) {}
+  rpc Refresh (.spotify.common_capping.impl.common_capping_proto.RefreshRequest) returns (.google.protobuf.Empty) {}
+  rpc GetQuotaStateAt (.spotify.common_capping.impl.common_capping_proto.GetQuotaStateAtRequest) returns (.spotify.common_capping.impl.common_capping_proto.GetQuotaStateAtResponse) {}
+}
+
+message IsCappedRequest {
+  .spotify.common_capping.impl.common_capping_proto.Feature feature = 1;
+}
+
+message IsCappedResponse {
+  bool is_capped = 1;
+}
+
+message ReportConsumptionRequest {
+  .spotify.common_capping.impl.common_capping_proto.Feature feature = 1;
+  string event_id = 2;
+  int64 consumption_value = 3;
+  string event_details = 4;
+}
+
+message ObserveCapStateChangedRequest {
+  .spotify.common_capping.impl.common_capping_proto.Feature feature = 1;
+}
+
+message ObserveCapStateChangedResponse {
+  bool is_capped = 1;
+  bool is_change_from_local_consumption = 2;
+}
+
+message ObserveCapInfoRequest {
+  .spotify.common_capping.impl.common_capping_proto.Feature feature = 1;
+}
+
+message ObserveCapInfoResponse {
+  bool is_capped = 1;
+  int64 consumption = 2;
+  int64 allowance = 3;
+  bool is_capping_enabled = 4;
+}
+
+message GetCapInfoRequest {
+  .spotify.common_capping.impl.common_capping_proto.Feature feature = 1;
+}
+
+message GetCapInfoResponse {
+  bool is_capped = 1;
+  int64 consumption = 2;
+  int64 allowance = 3;
+  bool is_capping_enabled = 4;
+}
+
+message RefreshRequest {
+}
+
+message GetQuotaStateAtRequest {
+  .spotify.common_capping.impl.common_capping_proto.Feature feature = 1;
+  int32 days_offset = 2;
+}
+
+message GetQuotaStateAtResponse {
+  .spotify.common_capping.impl.common_capping_proto.QuotaState quota_state = 1;
+}
+
+enum Feature {
+  PICK_AND_SHUFFLE = 0;
+  AUDIOBOOKS = 1;
+  LYRICS = 2;
+}
+
+enum QuotaState {
+  NO_QUOTA_DATA = 0;
+  HAS_REMAINING_QUOTA = 1;
+  QUOTA_FULLY_CONSUMED = 2;
+}
+

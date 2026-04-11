@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/behavior/action.proto";
+import "spotify/playback_platform/context/v1/sequence_query.proto";
+import "spotify/playback_platform/timeline/v1/timeline_query.proto";
+
+message Trigger {
+  .spotify.playback_platform.context.v1.behavior.Enabled execute = 1;
+  .spotify.playback_platform.context.v1.behavior.EventType event_type = 2;
+  .spotify.playback_platform.context.v1.SequenceQuery children = 3;
+  .spotify.playback_platform.timeline.v1.TimelineQuery timespans = 4;
+}
+
+message Actions {
+  repeated .spotify.playback_platform.context.v1.behavior.Action actions = 1;
+}
+
+enum Enabled {
+  ENABLED_ACTIVE = 0;
+  ENABLED_ALWAYS = 1;
+}
+
+enum EventType {
+  EVENT_TYPE_UNSPECIFIED = 0;
+  EVENT_TYPE_OBSERVED_ONLY = 1;
+  EVENT_TYPE_PREDICTED_ONLY = 2;
+  EVENT_TYPE_ALL = 3;
+}
+

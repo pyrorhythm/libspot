@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.extendedmetadata.audiofiles;
+
+option java_package = "com.spotify.audiophile.proto";
+
+import "metadata.proto";
+
+message NormalizationParams {
+  float loudness_db = 1;
+  float true_peak_db = 2;
+}
+
+message ExtendedAudioFile {
+  reserved 2;
+  reserved 3;
+  .spotify.metadata.AudioFile file = 1;
+  int32 average_bitrate = 4;
+}
+
+message AudioFilesExtensionResponse {
+  repeated .spotify.extendedmetadata.audiofiles.ExtendedAudioFile files = 1;
+  .spotify.extendedmetadata.audiofiles.NormalizationParams default_file_normalization_params = 2;
+  .spotify.extendedmetadata.audiofiles.NormalizationParams default_album_normalization_params = 3;
+  bytes audio_id = 4;
+}
+

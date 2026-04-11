@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+import "context.proto";
+import "logging_params.proto";
+import "play_origin.proto";
+import "prepare_play_options.proto";
+import "track_instantiator.proto";
+import "player_sequence/player/state/session_context_state.proto";
+
+message SequencePlayerNode {
+  message SequenceSession {
+    required .spotify.player.sequence.proto.SessionContextState session_context_state = 1;
+    required sint32 iteration = 2;
+  }
+
+  optional .spotify.player.proto.Context context = 1;
+  optional .spotify.player.proto.SequencePlayerNode.SequenceSession sequence_session = 2;
+  optional .spotify.player.proto.TrackInstantiator instantiate = 3;
+  optional .spotify.player.proto.PlayOrigin play_origin = 4;
+  optional .spotify.player.proto.PreparePlayOptions prepare_options = 5;
+  optional .spotify.player.proto.LoggingParams logging_params = 6;
+}
+

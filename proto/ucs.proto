@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package spotify.remote_config.ucs.proto;
+
+import "resolve.proto";
+import "useraccount.proto";
+
+message UcsRequest {
+  message CallerInfo {
+    string request_origin_id = 1;
+    string request_orgin_version = 2;
+    string reason = 3;
+  }
+
+  message AccountAttributesRequest {
+  }
+
+  .spotify.remote_config.ucs.proto.UcsRequest.CallerInfo caller_info = 1;
+  .spotify.remote_config.ucs.proto.ResolveRequest resolve_request = 2;
+  .spotify.remote_config.ucs.proto.UcsRequest.AccountAttributesRequest account_attributes_request = 3;
+}
+
+message UcsResponseWrapper {
+  message UcsResponse {
+    int64 fetch_time_millis = 5;
+    oneof resolve_result {
+      .spotify.remote_config.ucs.proto.ResolveResponse resolve_success = 1;
+      .spotify.remote_config.ucs.proto.UcsResponseWrapper.Error resolve_error = 2;
+    }
+    oneof account_attributes_result {
+      .spotify.remote_config.ucs.proto.UcsResponseWrapper.AccountAttributesResponse account_attributes_success = 3;
+      .spotify.remote_config.ucs.proto.UcsResponseWrapper.Error account_attributes_error = 4;
+    }
+  }
+
+  message AccountAttributesResponse {
+    message AccountAttributesEntry {
+      string key = 1;
+      .spotify.remote_config.ucs.proto.AccountAttribute value = 2;
+    }
+
+    repeated .spotify.remote_config.ucs.proto.UcsResponseWrapper.AccountAttributesResponse.AccountAttributesEntry account_attributes = 1;
+  }
+
+  message Error {
+    int32 error_code = 1;
+    string error_message = 2;
+  }
+
+  oneof result {
+    .spotify.remote_config.ucs.proto.UcsResponseWrapper.UcsResponse success = 1;
+    .spotify.remote_config.ucs.proto.UcsResponseWrapper.Error error = 2;
+  }
+}
+

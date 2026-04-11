@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ConductorErrorEvent {
+  optional string list_uri = 1;
+  optional bytes list_ref = 2;
+  optional string list_instance_id = 3;
+  optional string item_uri = 4;
+  optional string item_uid = 5;
+  optional string item_instance_id = 6;
+  optional string clip_uri = 7;
+  optional string clip_uid = 8;
+  optional string error = 9;
+  optional string error_description = 10;
+}
+

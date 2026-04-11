@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message BoomboxTimelineContents {
+  optional bytes timeline_instance_id = 1;
+  optional string timeline_instance_contents = 2;
+}
+

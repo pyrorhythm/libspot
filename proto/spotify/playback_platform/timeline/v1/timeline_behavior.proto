@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package spotify.playback_platform.timeline.v1;
+
+option java_package = "spotify.playback_platform.timeline.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/timeline/v1/behavior/reporting.proto";
+import "spotify/playback_platform/timeline/v1/behavior/restrictions.proto";
+import "spotify/playback_platform/timeline/v1/behavior/seek_into.proto";
+import "spotify/playback_platform/timeline/v1/behavior/seek_skip.proto";
+import "spotify/playback_platform/timeline/v1/behavior/seek_snap.proto";
+
+message TimelineBehavior {
+  .spotify.playback_platform.timeline.v1.behavior.Restrictions restrictions = 1;
+  .spotify.playback_platform.timeline.v1.behavior.Reporting reporting = 2;
+  .spotify.playback_platform.timeline.v1.behavior.SeekSkip seek_to_prev = 3;
+  .spotify.playback_platform.timeline.v1.behavior.SeekSkip seek_to_next = 4;
+  .spotify.playback_platform.timeline.v1.behavior.SeekSnap seek_snap = 5;
+  .spotify.playback_platform.timeline.v1.behavior.SeekInto seek_into = 6;
+}
+

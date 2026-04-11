@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.connectivity.auth.common.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.auth.common.esperanto.proto";
+option objc_class_prefix = "SPTAuthEsperanto";
+
+import "es_encrypted_stored_credentials.proto";
+import "es_unencrypted_stored_credentials.proto";
+
+message AuthBlob {
+  .spotify.connectivity.auth.common.esperanto.proto.UnencryptedStoredCredentials unencryptedStoredCredentials = 2;
+  oneof blob {
+    .spotify.connectivity.auth.common.esperanto.proto.EncryptedStoredCredentials storedCredentials = 1;
+  }
+}
+

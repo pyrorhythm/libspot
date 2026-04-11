@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message PartnerApiConnectLoginNonAuth {
+  optional bool success = 1;
+  optional string error_category = 2;
+  optional int32 error_code = 3;
+  optional string error_message = 4;
+  optional string source = 5;
+  optional string utm_campaign = 6;
+}
+

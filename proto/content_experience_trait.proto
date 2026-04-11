@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+message ContentExperienceTrait {
+  enum ContentExperience {
+    CONTENT_EXPERIENCE_UNSPECIFIED = 0;
+    CONTENT_EXPERIENCE_MUSIC = 1;
+    CONTENT_EXPERIENCE_TALK = 2;
+  }
+
+  .spotify.contentagnostic.v2.ContentExperienceTrait.ContentExperience content_experience = 1;
+}
+

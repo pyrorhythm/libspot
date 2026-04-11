@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package spotify.playlist.proto;
+
+import "es_logging_params.proto";
+import "es_play_origin.proto";
+import "playlist_query.proto";
+import "playlist_play_options.proto";
+import "playlist_play_state.proto";
+import "playlist_resolved_list.proto";
+
+message PlaylistPlayRequest {
+  enum Source {
+    PLAYLIST_PLAY_REQUEST_SOURCE_UNKNOWN = 0;
+    PLAYLIST_PLAY_REQUEST_SOURCE_PLAYLIST_ESPERANTO = 1;
+    PLAYLIST_PLAY_REQUEST_SOURCE_PLAYLIST_COSMOS = 2;
+    PLAYLIST_PLAY_REQUEST_SOURCE_CONTEXT_PLAYER_ESPERANTO = 3;
+    PLAYLIST_PLAY_REQUEST_SOURCE_STATE_RESTORE = 4;
+    PLAYLIST_PLAY_REQUEST_SOURCE_CONNECT_TRANSFER = 5;
+    PLAYLIST_PLAY_REQUEST_SOURCE_CONNECT_PLAY = 6;
+  }
+
+  string uri = 1;
+  .spotify.playlist.proto.PlayOptions play_options = 4;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 5;
+  .spotify.player.esperanto.proto.PlayOrigin play_origin = 6;
+  .spotify.playlist.proto.PlaylistPlayRequest.Source source = 7;
+  .spotify.playlist.proto.PlayState play_state = 8;
+  .spotify.playlist.proto.ReasonStart reason_start = 9;
+  string play_context_decision_id = 10;
+  oneof list {
+    .spotify.playlist_esperanto.proto.PlaylistQuery playlist_query = 2;
+    .spotify.playlist.proto.ResolvedList resolved_list = 3;
+  }
+}
+
+message ResponseStatus {
+  int32 status_code = 1;
+  string reason = 2;
+}
+
+message PlaylistPlayResponse {
+  .spotify.playlist.proto.ResponseStatus status = 1;
+}
+
+enum ReasonStart {
+  REASON_START_UNKNOWN = 0;
+  REASON_START_CONNECT_PLAY = 1;
+  REASON_START_CONNECT_TRANSFER = 2;
+  REASON_START_CONNECT_RESTORE = 3;
+  REASON_START_STATE_RESTORE = 4;
+  REASON_START_LOCAL_PLAY = 5;
+}
+

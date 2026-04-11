@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message OfflineError {
+  optional int64 error_code = 1;
+  optional string track = 2;
+  optional string cache_id = 3;
+  optional string details = 4;
+}
+

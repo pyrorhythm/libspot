@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/context_behavior.proto";
+import "spotify/playback_platform/context/v1/context_metadata.proto";
+import "spotify/playback_platform/context/v1/sequences.proto";
+import "spotify/playback_platform/timeline/v1/timeline.proto";
+import "spotify/playback_platform/timeline/v1/timeline_behavior.proto";
+import "spotify/playback_platform/timeline/v1/timeline_metadata.proto";
+
+message Context {
+  reserved "timeline_behavior_override";
+  reserved "timeline_metadata_override";
+  reserved 5 to 6;
+  .spotify.playback_platform.context.v1.ContextBehavior behavior = 1;
+  .spotify.playback_platform.context.v1.ContextMetadata metadata = 2;
+  .spotify.playback_platform.timeline.v1.TimelineBehavior timeline_behavior = 3;
+  .spotify.playback_platform.timeline.v1.TimelineMetadata timeline_metadata = 4;
+  oneof structure {
+    .spotify.playback_platform.context.v1.Sequence sequence = 7;
+    .spotify.playback_platform.context.v1.PagedSequence paged_sequence = 8;
+    .spotify.playback_platform.context.v1.ChainSequence chain_sequence = 9;
+    .spotify.playback_platform.timeline.v1.Timeline timeline = 10;
+  }
+}
+

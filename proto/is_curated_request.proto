@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package spotify.your_library.proto;
+
+option java_package = "spotify.your_library.esperanto.proto";
+option java_multiple_files = true;
+
+message IsCuratedRequest {
+  enum Filter {
+    NONE = 0;
+    IN_CONTEXT = 1;
+  }
+
+  int32 update_throttling = 1;
+  repeated string uri = 2;
+  string context_uri = 3;
+  .spotify.your_library.proto.IsCuratedRequest.Filter filter = 4;
+}
+
+message IsCuratedResponse {
+  repeated .spotify.your_library.proto.IsCuratedItem item = 1;
+  uint32 status_code = 98;
+  string error = 99;
+}
+
+message IsCuratedItem {
+  string uri = 1;
+  bool is_curated = 2;
+  bool is_in_collection = 3;
+  bool is_banned = 4;
+}
+

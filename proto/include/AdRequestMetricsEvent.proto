@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AdRequestMetricsEvent {
+  message DecoratorTimes {
+    optional string decorator = 1;
+    optional int64 start = 2;
+    optional int64 end = 3;
+  }
+
+  optional string request_id = 1;
+  repeated string slots = 2;
+  optional int64 bytes_sent = 3;
+  optional int64 bytes_received = 4;
+  optional int32 response_status = 5;
+  optional bool is_cellular = 6;
+  optional bool is_proxy_connection = 7;
+  optional bool is_reused_connection = 8;
+  optional string fetch_type = 9;
+  optional int64 request_create_time = 10;
+  optional int64 connect_start_time = 11;
+  optional int64 connect_end_time = 12;
+  optional int64 request_start_time = 13;
+  optional int64 request_end_time = 14;
+  optional int64 response_start_time = 15;
+  optional int64 response_end_time = 16;
+  optional int64 callback_start_time = 17;
+  repeated .spotify.event_sender.proto.AdRequestMetricsEvent.DecoratorTimes decorator_times = 18;
+}
+

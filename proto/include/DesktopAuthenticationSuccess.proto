@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopAuthenticationSuccess {
+  optional string action_hash = 1;
+  optional string oauth_user_agent = 2;
+  optional string auth_method = 3;
+  optional bool use_auth_client = 4;
+  optional int32 attempt = 5;
+  optional bool use_dpop = 6;
+}
+

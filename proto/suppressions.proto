@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message Suppressions {
+  repeated string providers = 1;
+}
+

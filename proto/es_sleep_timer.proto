@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+message SleepTimer {
+  message None {
+  }
+
+  message Timestamp {
+    int64 timestamp = 1;
+  }
+
+  message EndOfTrack {
+  }
+
+  oneof timer_type {
+    .spotify.player.esperanto.proto.SleepTimer.None none = 1;
+    .spotify.player.esperanto.proto.SleepTimer.Timestamp timestamp = 2;
+    .spotify.player.esperanto.proto.SleepTimer.EndOfTrack end_of_track = 3;
+  }
+}
+

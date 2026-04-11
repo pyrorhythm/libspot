@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_command_options.proto";
+import "es_logging_params.proto";
+
+message SeekToRequest {
+  enum Relative {
+    BEGINNING = 0;
+    END = 1;
+    CURRENT = 2;
+  }
+
+  .spotify.player.esperanto.proto.CommandOptions options = 1;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 2;
+  int64 position = 3;
+  .spotify.player.esperanto.proto.SeekToRequest.Relative relative = 4;
+  optional int64 creator_timestamp_position_ms = 5;
+}
+

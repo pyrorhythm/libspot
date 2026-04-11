@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ListPlayerEvent {
+  optional string event = 1;
+  optional string list_uri = 2;
+  optional bytes list_ref = 3;
+  optional string list_instance_id = 4;
+  optional int32 number_of_items = 5;
+  optional string transformer_id = 6;
+  optional string transform_reason = 7;
+  optional string changeset = 8;
+}
+

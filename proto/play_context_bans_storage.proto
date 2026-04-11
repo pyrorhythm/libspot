@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.collection.proto.storage;
+
+message PlayContextBansTimestamp {
+  required int64 timestamp = 1;
+}
+

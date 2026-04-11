@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "metadata/album_metadata.proto";
+import "metadata/artist_metadata.proto";
+import "metadata/track_metadata.proto";
+import "metadata/show_metadata.proto";
+import "metadata/episode_metadata.proto";
+import "collection/artist_collection_state.proto";
+import "collection/album_collection_state.proto";
+import "collection/track_collection_state.proto";
+import "collection/show_collection_state.proto";
+import "collection/episode_collection_state.proto";
+import "sync/artist_sync_state.proto";
+import "sync/album_sync_state.proto";
+import "sync/track_sync_state.proto";
+import "sync/episode_sync_state.proto";
+import "played_state/track_played_state.proto";
+import "played_state/show_played_state.proto";
+import "played_state/episode_played_state.proto";
+
+message CollectionTrack {
+  uint32 index = 1;
+  uint32 add_time = 2;
+  .spotify.cosmos_util.proto.TrackMetadata track_metadata = 3;
+  .spotify.cosmos_util.proto.TrackCollectionState track_collection_state = 4;
+  .spotify.cosmos_util.proto.TrackPlayState track_play_state = 5;
+  .spotify.cosmos_util.proto.TrackSyncState track_sync_state = 6;
+  bool decorated = 7;
+  .spotify.collection_cosmos.proto.CollectionAlbum album = 8;
+  string cover = 9;
+  string link = 10;
+  repeated .spotify.cosmos_util.proto.ArtistCollectionState artist_collection_state = 11;
+}
+
+message CollectionAlbum {
+  uint32 add_time = 1;
+  .spotify.cosmos_util.proto.AlbumMetadata album_metadata = 2;
+  .spotify.cosmos_util.proto.AlbumCollectionState album_collection_state = 3;
+  .spotify.cosmos_util.proto.AlbumSyncState album_sync_state = 4;
+  bool decorated = 5;
+  string album_type = 6;
+  repeated .spotify.collection_cosmos.proto.CollectionTrack track = 7;
+  string link = 11;
+}
+
+message CollectionArtist {
+  .spotify.cosmos_util.proto.ArtistMetadata artist_metadata = 1;
+  .spotify.cosmos_util.proto.ArtistCollectionState artist_collection_state = 2;
+  .spotify.cosmos_util.proto.ArtistSyncState artist_sync_state = 3;
+  bool decorated = 4;
+  repeated .spotify.collection_cosmos.proto.CollectionAlbum album = 5;
+  string link = 6;
+}
+
+message CollectionShow {
+  .spotify.cosmos_util.proto.ShowMetadata show_metadata = 1;
+  .spotify.cosmos_util.proto.ShowCollectionState show_collection_state = 2;
+  .spotify.cosmos_util.proto.ShowPlayState show_play_state = 3;
+  uint32 add_time = 4;
+  string link = 5;
+}
+
+message CollectionEpisode {
+  .spotify.cosmos_util.proto.EpisodeMetadata episode_metadata = 1;
+  .spotify.cosmos_util.proto.EpisodeCollectionState episode_collection_state = 2;
+  .spotify.cosmos_util.proto.EpisodeSyncState episode_offline_state = 3;
+  .spotify.cosmos_util.proto.EpisodePlayState episode_play_state = 4;
+  .spotify.collection_cosmos.proto.CollectionShow show = 5;
+  string link = 6;
+}
+

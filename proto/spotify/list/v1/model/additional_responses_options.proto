@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "AdditionalResponsesOptionsProto";
+option java_multiple_files = true;
+
+message AdditionalResponsesOptions {
+  bool allow_additional_responses = 1;
+}
+

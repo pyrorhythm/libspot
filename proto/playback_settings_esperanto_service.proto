@@ -1,0 +1,187 @@
+syntax = "proto3";
+
+package spotify.playback_settings.esperanto.proto;
+
+option java_package = "com.spotify.playback_settings.esperanto.proto";
+option objc_class_prefix = "SPTPlaybackSettingsEsperanto";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+service PlaybackSettings {
+  rpc GetShuffleState (.google.protobuf.StringValue) returns (.spotify.playback_settings.esperanto.proto.ShuffleState) {}
+  rpc SetShuffleState (.spotify.playback_settings.esperanto.proto.SetShuffleStateRequest) returns (.google.protobuf.Empty) {}
+  rpc GetSettings (.spotify.playback_settings.esperanto.proto.GetSettingsRequest) returns (.spotify.playback_settings.esperanto.proto.GetSettingsResponse) {}
+  rpc SetSettings (.spotify.playback_settings.esperanto.proto.SetSettingsRequest) returns (.google.protobuf.Empty) {}
+  rpc StreamSettingChanges (.spotify.playback_settings.esperanto.proto.StreamSettingChangesRequest) returns (stream .spotify.playback_settings.esperanto.proto.StreamSettingChange) {}
+  rpc GetDeviceSettings (.spotify.playback_settings.esperanto.proto.GetDeviceSettingsRequest) returns (.spotify.playback_settings.esperanto.proto.GetDeviceSettingsResponse) {}
+  rpc SetDeviceStreamQuality (.spotify.playback_settings.esperanto.proto.SetDeviceStreamQualityRequest) returns (.spotify.playback_settings.esperanto.proto.StatusResponse) {}
+  rpc StreamDeviceSettingFieldChanges (.spotify.playback_settings.esperanto.proto.StreamDeviceSettingFieldChangesRequest) returns (stream .spotify.playback_settings.esperanto.proto.DeviceSettingFieldChange) {}
+}
+
+message ContentSettings {
+  float playback_speed = 3;
+  bool shuffle = 4;
+  .spotify.playback_settings.esperanto.proto.ContextEnhancement context_enhancement = 5;
+}
+
+message UserSettings {
+  optional bool disable_smart_shuffle = 6;
+}
+
+message FieldValue {
+  oneof value {
+    string string_value = 1;
+    bool bool_value = 2;
+    int32 int_value = 3;
+    float float_value = 4;
+  }
+}
+
+message ShuffleState {
+  optional bool shuffle = 1;
+  optional .spotify.playback_settings.esperanto.proto.ContextEnhancement context_enhancement = 2;
+}
+
+message SetShuffleStateRequest {
+  string id = 1;
+  bool shuffle_on = 2;
+  .spotify.playback_settings.esperanto.proto.ContextEnhancement context_enhancement = 3;
+}
+
+message SetDisableSmartShuffleRequest {
+  bool disable_smart_shuffle = 1;
+}
+
+message GetSettingsRequest {
+  repeated .spotify.playback_settings.esperanto.proto.FieldId requested_setting_fields = 1;
+  repeated string content_ids = 2;
+  optional bool include_user_settings = 3;
+}
+
+message GetSettingsResponse {
+  message ContentSettingsEntry {
+    string key = 1;
+    .spotify.playback_settings.esperanto.proto.ContentSettings value = 2;
+  }
+
+  repeated .spotify.playback_settings.esperanto.proto.GetSettingsResponse.ContentSettingsEntry content_settings = 1;
+  optional .spotify.playback_settings.esperanto.proto.UserSettings user_settings = 2;
+}
+
+message FieldUpdate {
+  .spotify.playback_settings.esperanto.proto.FieldId id = 1;
+  .spotify.playback_settings.esperanto.proto.FieldValue value = 2;
+}
+
+message ContentSettingUpdate {
+  string content_id = 1;
+  repeated .spotify.playback_settings.esperanto.proto.FieldUpdate fields = 2;
+}
+
+message SetSettingsRequest {
+  repeated .spotify.playback_settings.esperanto.proto.FieldUpdate user_settings = 1;
+  repeated .spotify.playback_settings.esperanto.proto.ContentSettingUpdate content_settings = 2;
+}
+
+message StreamSettingsRequest {
+  repeated .spotify.playback_settings.esperanto.proto.FieldId requested_setting_fields = 1;
+  repeated string content_ids = 2;
+  optional bool include_user_settings = 3;
+}
+
+message StreamSettingsUpdate {
+  message ContentSettingsEntry {
+    string key = 1;
+    .spotify.playback_settings.esperanto.proto.ContentSettings value = 2;
+  }
+
+  repeated .spotify.playback_settings.esperanto.proto.StreamSettingsUpdate.ContentSettingsEntry content_settings = 1;
+  optional .spotify.playback_settings.esperanto.proto.UserSettings user_settings = 2;
+}
+
+message StreamSettingChangesRequest {
+  repeated .spotify.playback_settings.esperanto.proto.FieldId requested_setting_fields = 1;
+}
+
+message ContentSettingChange {
+  string content_id = 1;
+  oneof field {
+    float playback_speed = 3;
+    bool shuffle = 4;
+    .spotify.playback_settings.esperanto.proto.ContextEnhancement context_enhancement = 5;
+  }
+}
+
+message UserSettingChange {
+  oneof field {
+    bool disable_smart_shuffle = 6;
+  }
+}
+
+message StreamSettingChange {
+  oneof change_type {
+    .spotify.playback_settings.esperanto.proto.ContentSettingChange content_change = 1;
+    .spotify.playback_settings.esperanto.proto.UserSettingChange user_change = 2;
+  }
+}
+
+message GetDeviceSettingsRequest {
+  string device_id = 1;
+}
+
+message GetDeviceSettingsResponse {
+  .spotify.playback_settings.esperanto.proto.Status status = 1;
+  .spotify.playback_settings.esperanto.proto.DeviceSettings device_settings = 2;
+}
+
+message SetDeviceStreamQualityRequest {
+  string device_id = 1;
+  int32 quality = 2;
+}
+
+message StatusResponse {
+  .spotify.playback_settings.esperanto.proto.Status status = 1;
+}
+
+message DeviceSettings {
+  message DeviceCapabilities {
+    int32 max_supported_stream_quality = 1;
+  }
+
+  int32 stream_quality = 1;
+  .spotify.playback_settings.esperanto.proto.DeviceSettings.DeviceCapabilities capabilities = 2;
+}
+
+message StreamDeviceSettingFieldChangesRequest {
+}
+
+message DeviceSettingFieldChange {
+  string device_id = 1;
+  string device_name = 2;
+  .spotify.playback_settings.esperanto.proto.FieldId field_id = 3;
+  .spotify.playback_settings.esperanto.proto.FieldValue value = 4;
+}
+
+enum Status {
+  OK = 0;
+  NOT_FOUND = 1;
+  INVALID_ARGUMENTS = 2;
+  BACKEND_FAILURE = 3;
+}
+
+enum FieldId {
+  UNKNOWN_FIELD_ID = 0;
+  AUDIO_QUALITY = 1;
+  SOCIAL_DISCOVERABLE = 2;
+  PLAYBACK_SPEED = 3;
+  SHUFFLE = 4;
+  CONTEXT_ENHANCEMENT = 5;
+  DISABLE_SMART_SHUFFLE = 6;
+}
+
+enum ContextEnhancement {
+  NOT_ENHANCED = 0;
+  RECOMMENDATION = 1;
+}
+

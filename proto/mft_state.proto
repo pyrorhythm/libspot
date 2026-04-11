@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package spotify.list_player.proto;
+
+import "item_reporting_context.proto";
+
+message SequenceSpecEntry {
+  .spotify.list_player.proto.SequenceSpecItemType type = 1;
+  string id = 2;
+}
+
+message SequenceSpec {
+  repeated .spotify.list_player.proto.SequenceSpecEntry entries = 2;
+}
+
+message PlayedItemsInfo {
+  optional string sequence_spec_id = 1;
+}
+
+message PlayedItemsCurrentItem {
+  string list_item_uid = 1;
+  string uri = 2;
+  .spotify.list_player.proto.PlayedItemsSource source = 3;
+  optional .spotify.timeline_reporter.proto.ItemReportingContext reporting_context = 4;
+}
+
+message PlayedItems {
+  message ItemsEntry {
+    string key = 1;
+    .spotify.list_player.proto.PlayedItemsInfo value = 2;
+  }
+
+  repeated .spotify.list_player.proto.PlayedItems.ItemsEntry items = 1;
+  optional .spotify.list_player.proto.PlayedItemsCurrentItem current_item = 2;
+}
+
+message MftState {
+  optional string list_uri = 1;
+  optional .spotify.list_player.proto.SequenceSpec sequence_spec = 2;
+  optional .spotify.list_player.proto.PlayedItems played_items = 3;
+}
+
+enum SequenceSpecItemType {
+  SEQUENCE_SPEC_ITEM_TYPE_UNKNOWN = 0;
+  SEQUENCE_SPEC_ITEM_TYPE_LIST = 1;
+  SEQUENCE_SPEC_ITEM_TYPE_RECOMMENDATION = 2;
+}
+
+enum PlayedItemsSource {
+  PLAYED_ITEMS_SOURCE_UNKNOWN = 0;
+  PLAYED_ITEMS_SOURCE_LIST = 1;
+  PLAYED_ITEMS_SOURCE_QUEUE = 2;
+  PLAYED_ITEMS_SOURCE_AUTOPLAY = 3;
+  PLAYED_ITEMS_SOURCE_MFT = 4;
+}
+

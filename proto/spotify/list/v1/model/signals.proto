@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "SignalsProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/lenses.proto";
+
+message Signal {
+  optional string identifier = 1;
+  optional bytes data = 2;
+  optional bytes client_payload = 3;
+}
+
+message SignalData {
+  oneof target {
+    string identifier = 1;
+    .spotify.list.v1.model.Lens lens = 5;
+  }
+  optional string uri = 2;
+  optional bytes item_id = 3;
+  optional bytes additional_data = 4;
+}
+

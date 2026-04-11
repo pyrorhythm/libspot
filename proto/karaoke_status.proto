@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.karaoke_esperanto.proto;
+
+option java_package = "com.spotify.karaoke.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+enum KaraokeStatus {
+  ENABLED = 0;
+  DISABLED = 1;
+}
+

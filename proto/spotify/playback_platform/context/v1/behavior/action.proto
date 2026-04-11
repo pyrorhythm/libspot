@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+import "spotify/playback_platform/common/v1/duration.proto";
+import "spotify/playback_platform/context/v1/behavior/navigation.proto";
+import "spotify/playback_platform/context/v1/context_state.proto";
+import "spotify/playback_platform/context/v1/ledger_query.proto";
+import "spotify/playback_platform/timeline/v1/timeline_query.proto";
+
+message Action {
+  message Remote {
+    .google.protobuf.Duration timeout = 5;
+    repeated .spotify.playback_platform.context.v1.behavior.Action fallback_actions = 6;
+    optional string context_id = 1;
+    optional string action_id = 2;
+    optional bytes parameters = 3;
+    optional .spotify.playback_platform.context.v1.LedgerQuery ledger_query = 4;
+  }
+
+  message Report {
+    .google.protobuf.Duration max_shaping_delay = 5;
+    optional string context_id = 1;
+    optional string action_id = 2;
+    optional bytes parameters = 3;
+    optional .spotify.playback_platform.context.v1.LedgerQuery ledger = 4;
+    optional uint64 singleton_report_id = 6;
+  }
+
+  message Reload {
+    .spotify.playback_platform.context.v1.ContextState state = 1;
+  }
+
+  message Unload {
+    .spotify.playback_platform.context.v1.ContextState state = 1;
+  }
+
+  message Signal {
+    string signal_id = 1;
+    bytes parameters = 2;
+  }
+
+  message Player {
+    message MoveToward {
+      repeated .spotify.playback_platform.context.v1.behavior.Navigation.Transitions transitions = 1;
+    }
+
+    message SkipToward {
+      repeated .spotify.playback_platform.context.v1.behavior.Navigation.Transitions transitions = 1;
+    }
+
+    message FailToward {
+      repeated .spotify.playback_platform.context.v1.behavior.Navigation.Transitions transitions = 1;
+    }
+
+    message SeekByDuration {
+      .spotify.playback_platform.common.v1.StochasticDuration duration = 1;
+    }
+
+    message SeekToPosition {
+      .spotify.playback_platform.common.v1.StochasticDuration position = 1;
+    }
+
+    message SeekToTimespan {
+      .spotify.playback_platform.timeline.v1.TimelineQuery timespans = 1;
+    }
+
+    message SeekToLive {
+    }
+
+    message SeekToward {
+    }
+
+    message Stop {
+    }
+
+    oneof operation {
+      .spotify.playback_platform.context.v1.behavior.Action.Player.MoveToward move_to_prev = 1;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.MoveToward move_to_next = 2;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SkipToward skip_to_prev = 3;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SkipToward skip_to_next = 4;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.FailToward fail_to_prev = 5;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.FailToward fail_to_next = 6;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekByDuration seek_by_duration = 9;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToPosition seek_to_position = 10;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToTimespan seek_to_enter_timespan = 11;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToTimespan seek_to_leave_timespan = 12;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToTimespan seek_back_to_enter_timespan = 13;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToTimespan seek_back_to_leave_timespan = 14;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToLive seek_to_live = 15;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToward seek_to_prev = 16;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.SeekToward seek_to_next = 17;
+      .spotify.playback_platform.context.v1.behavior.Action.Player.Stop stop = 18;
+    }
+  }
+
+  oneof action {
+    .spotify.playback_platform.context.v1.behavior.Action.Remote remote = 1;
+    .spotify.playback_platform.context.v1.behavior.Action.Report report = 2;
+    .spotify.playback_platform.context.v1.behavior.Action.Reload reload = 3;
+    .spotify.playback_platform.context.v1.behavior.Action.Unload unload = 4;
+    .spotify.playback_platform.context.v1.behavior.Action.Signal signal = 5;
+    .spotify.playback_platform.context.v1.behavior.Action.Player player = 6;
+  }
+}
+

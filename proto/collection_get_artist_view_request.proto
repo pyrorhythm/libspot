@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "collection_decoration_policy.proto";
+import "collection_item.proto";
+import "status.proto";
+
+message CollectionGetArtistViewRequest {
+  string artist_uri = 1;
+  uint32 update_throttling = 2;
+  .spotify.collection_cosmos.proto.CollectionArtistDecorationPolicy artist_policy = 3;
+  .spotify.collection_cosmos.proto.CollectionAlbumDecorationPolicy album_policy = 4;
+  .spotify.collection_cosmos.proto.CollectionTrackDecorationPolicy track_policy = 5;
+}
+
+message CollectionGetArtistViewResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+  .spotify.collection_cosmos.proto.CollectionArtist artist = 2;
+}
+

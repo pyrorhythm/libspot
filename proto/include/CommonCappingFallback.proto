@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message CommonCappingFallback {
+  optional string feature = 1;
+  optional int64 pending_consumption = 2;
+}
+

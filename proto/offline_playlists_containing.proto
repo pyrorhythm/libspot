@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "SPTPlaylist";
+
+message OfflinePlaylistContainingItem {
+  required string playlist_link = 1;
+  optional string playlist_name = 2;
+}
+
+message OfflinePlaylistsContainingItemResponse {
+  repeated .spotify.playlist.cosmos.proto.OfflinePlaylistContainingItem playlists = 1;
+}
+

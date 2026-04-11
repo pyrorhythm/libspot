@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message CircuitBreakerRules {
+  repeated string discarded_track_uids = 1;
+  required int32 num_errored_tracks = 2;
+  required bool context_track_played = 3;
+}
+

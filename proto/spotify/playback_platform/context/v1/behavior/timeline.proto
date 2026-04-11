@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+message Timeline {
+  optional bool merge = 1;
+  optional bool break = 2;
+  optional bool ghost = 3;
+}
+

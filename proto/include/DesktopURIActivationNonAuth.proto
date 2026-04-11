@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopURIActivationNonAuth {
+  optional string uri = 1;
+  optional string activation_source = 2;
+}
+

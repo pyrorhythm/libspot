@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package spotify.playback_platform.media.v1;
+
+option java_package = "spotify.playback_platform.media.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/common/v1/client.proto";
+import "spotify/playback_platform/common/v1/request_error.proto";
+import "spotify/playback_platform/media/v1/manifests.proto";
+
+message AudioManifestRequest {
+  string format_id = 1;
+  bytes media_id = 2;
+  .spotify.playback_platform.common.v1.Client client = 3;
+}
+
+message VideoManifestRequest {
+  string format_id = 1;
+  bytes media_id = 2;
+  .spotify.playback_platform.common.v1.Client client = 3;
+}
+
+message AudioManifestResponse {
+  oneof manifest {
+    .spotify.playback_platform.media.v1.TrackManifest track = 1;
+    .spotify.playback_platform.media.v1.AudioManifest audio = 2;
+    .spotify.playback_platform.media.v1.GeneratedAudioManifest generated = 3;
+    .spotify.playback_platform.media.v1.StreamingAudioManifest streaming = 4;
+    .spotify.playback_platform.common.v1.RequestError error = 5;
+  }
+}
+
+message VideoManifestResponse {
+  oneof manifest {
+    .spotify.playback_platform.media.v1.TrackManifest track = 1;
+    .spotify.playback_platform.media.v1.VideoManifest video = 2;
+    .spotify.playback_platform.media.v1.GeneratedVideoManifest generated = 3;
+    .spotify.playback_platform.media.v1.StreamingVideoManifest streaming = 4;
+    .spotify.playback_platform.common.v1.RequestError error = 5;
+  }
+}
+

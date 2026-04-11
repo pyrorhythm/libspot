@@ -1,0 +1,131 @@
+syntax = "proto3";
+
+package spotify.offline_playable_cache_esperanto.proto;
+
+option java_package = "com.spotify.offline_playable_cache_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/duration.proto";
+import "policy/playlist_track_decoration_policy.proto";
+import "playlist_track_state.proto";
+import "metadata/track_metadata.proto";
+
+service OfflinePlayableCache {
+  rpc HasEnoughTracks (.spotify.offline_playable_cache_esperanto.proto.HasEnoughTracksRequest) returns (.spotify.offline_playable_cache_esperanto.proto.HasEnoughTracksResponse) {}
+  rpc SubscribeHasEnoughTracks (.spotify.offline_playable_cache_esperanto.proto.HasEnoughTracksRequest) returns (stream .spotify.offline_playable_cache_esperanto.proto.HasEnoughTracksResponse) {}
+  rpc GetTracks (.spotify.offline_playable_cache_esperanto.proto.GetTracksRequest) returns (.spotify.offline_playable_cache_esperanto.proto.GetTracksResponse) {}
+  rpc SubscribeTracks (.spotify.offline_playable_cache_esperanto.proto.GetTracksRequest) returns (stream .spotify.offline_playable_cache_esperanto.proto.GetTracksResponse) {}
+  rpc RemoveTrack (.spotify.offline_playable_cache_esperanto.proto.RemoveTrackRequest) returns (.spotify.offline_playable_cache_esperanto.proto.RemoveTrackResponse) {}
+}
+
+message Item {
+  optional uint32 add_time = 1;
+  optional .spotify.cosmos_util.proto.TrackMetadata metadata = 2;
+  optional .spotify.playlist.cosmos.proto.TrackCollectionState collection_state = 3;
+  optional string row_id = 4;
+  optional int32 relevance = 5;
+  optional string cluster = 6;
+}
+
+message Concept {
+  string concept_uri = 1;
+  string localized_term = 2;
+}
+
+message Response {
+  reserved 4;
+  repeated .spotify.offline_playable_cache_esperanto.proto.Item item = 1;
+  repeated .spotify.offline_playable_cache_esperanto.proto.Concept available_concepts = 6;
+  bool is_loading = 7;
+  optional uint32 unfiltered_length = 2;
+  optional .google.protobuf.Duration total_content_duration = 3;
+  optional .google.protobuf.Duration response_content_duration = 5;
+}
+
+message ResponseStatus {
+  int32 status_code = 1;
+  string reason = 2;
+}
+
+message Range {
+  int32 start = 1;
+  int32 length = 2;
+}
+
+message SmartSortParameters {
+  optional int32 num_descriptors = 1;
+  optional int32 min_tracks_per_decriptor = 2;
+  optional int32 tracks_subset = 3;
+  optional int32 max_iterations = 4;
+  optional int32 convergence_criteria = 5;
+  optional float damping = 6;
+  optional float median_factor = 7;
+  optional float weight_threshold = 8;
+}
+
+message Query {
+  enum SortBy {
+    NO_SORT = 0;
+    ALBUM_ARTIST_NAME_ASC = 1;
+    ALBUM_ARTIST_NAME_DESC = 2;
+    TRACK_NUMBER_ASC = 3;
+    TRACK_NUMBER_DESC = 4;
+    DISC_NUMBER_ASC = 5;
+    DISC_NUMBER_DESC = 6;
+    ALBUM_NAME_ASC = 7;
+    ALBUM_NAME_DESC = 8;
+    ARTIST_NAME_ASC = 9;
+    ARTIST_NAME_DESC = 10;
+    NAME_ASC = 11;
+    NAME_DESC = 12;
+    ADD_TIME_ASC = 13;
+    ADD_TIME_DESC = 14;
+    LENGTH_ASC = 15;
+    LENGTH_DESC = 16;
+    RELEVANCE = 17;
+    SMART = 18;
+  }
+
+  string text_filter = 1;
+  .spotify.offline_playable_cache_esperanto.proto.Query.SortBy sort_by = 2;
+  .spotify.offline_playable_cache_esperanto.proto.Range range = 3;
+  uint32 min_length = 4;
+  bool remove_duplicate_links = 5;
+  bool ignore_drm = 6;
+  repeated string descriptor_filter = 7;
+  uint32 min_items = 12;
+  uint32 max_items = 8;
+  bool remove_no_descriptor = 10;
+  optional .spotify.offline_playable_cache_esperanto.proto.SmartSortParameters smart_sort_parameters = 9;
+  optional float filter_weight_threshold = 11;
+  optional uint32 max_concepts = 13;
+}
+
+message GetTracksRequest {
+  .spotify.offline_playable_cache_esperanto.proto.Query query = 1;
+  .spotify.playlist.cosmos.proto.PlaylistTrackDecorationPolicy policy = 2;
+  int32 update_throttling_ms = 3;
+}
+
+message GetTracksResponse {
+  .spotify.offline_playable_cache_esperanto.proto.ResponseStatus status = 1;
+  .spotify.offline_playable_cache_esperanto.proto.Response data = 2;
+}
+
+message RemoveTrackRequest {
+  string uri = 1;
+}
+
+message RemoveTrackResponse {
+  .spotify.offline_playable_cache_esperanto.proto.ResponseStatus status = 1;
+}
+
+message HasEnoughTracksRequest {
+  uint32 min_items = 1;
+  int32 update_throttling_ms = 2;
+}
+
+message HasEnoughTracksResponse {
+  bool has_enough_tracks = 1;
+}
+

@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+message ShufflePlacement {
+  message Uniform {
+    float a = 1;
+    float b = 2;
+  }
+
+  message Normal {
+    float mu = 1;
+    float sd = 2;
+  }
+
+  message Dirac {
+    float x = 1;
+  }
+
+  enum Layout {
+    LAYOUT_UNSPECIFIED = 0;
+    LAYOUT_FORWARD = 1;
+    LAYOUT_SHUFFLE = 2;
+    LAYOUT_REVERSE = 3;
+  }
+
+  oneof distribution {
+    .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Uniform uniform = 8;
+    .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Uniform uniform_strict = 9;
+    .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Normal normal = 10;
+    .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Normal normal_strict = 11;
+    .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Dirac dirac = 12;
+    .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Dirac dirac_strict = 13;
+  }
+  optional uint32 partition_number = 1;
+  optional .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Layout partition_layout = 2;
+  optional uint64 group_number = 3;
+  optional .spotify.playback_platform.context.v1.behavior.ShufflePlacement.Layout group_layout = 4;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "state_restore/mft_context_switch_rules.proto";
+import "state_restore/mft_rules_inject_filler_tracks.proto";
+
+message MftRulesCore {
+  required .spotify.player.proto.state_restore.MftRulesInjectFillerTracks inject_filler_tracks = 1;
+  required .spotify.player.proto.state_restore.MftContextSwitchRules context_switch_rules = 2;
+  repeated string feature_classes = 3;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.playlistmixing.extensions.mixability;
+
+option java_package = "com.spotify.playlistmixing.extensions.mixability.proto";
+option java_outer_classname = "MixabilityProto";
+
+message Mixability {
+  bool mixable = 1;
+  double genre_based_beatmatchability = 2;
+}
+

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message LedgerQuery {
+  message EntryIdQuery {
+    bool include_ids = 1;
+    optional string filter_with_prefix = 2;
+    optional string filter_with_suffix = 3;
+  }
+
+  bool enabled = 1;
+  .google.protobuf.Duration window = 2;
+  .spotify.playback_platform.context.v1.LedgerQuery.EntryIdQuery entry_query = 3;
+  bool include_uids = 4;
+  bool include_tags = 5;
+}
+

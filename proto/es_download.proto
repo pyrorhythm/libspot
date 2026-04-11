@@ -1,0 +1,183 @@
+syntax = "proto3";
+
+package spotify.download.esperanto.proto;
+
+option java_package = "com.spotify.download.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+import "esperanto_options.proto";
+
+service Download {
+  rpc CreateProgressiveFileStreamer (.spotify.download.esperanto.proto.ProgressiveFileStreamerParams) returns (.spotify.download.esperanto.proto.FileStreamerId) {}
+  rpc DestroyFileStreamer (.spotify.download.esperanto.proto.FileStreamerId) returns (.google.protobuf.Empty) {}
+  rpc RequestData (.spotify.download.esperanto.proto.RequestDataParams) returns (stream .spotify.download.esperanto.proto.RequestDataResponse) {}
+  rpc IsFileFullyCached (.spotify.download.esperanto.proto.IsFileFullyCachedParams) returns (.google.protobuf.BoolValue) {}
+  rpc GetFirstCachedSegmentIndex (.spotify.download.esperanto.proto.GetFirstCachedSegmentIndexParams) returns (.spotify.download.esperanto.proto.GetFirstCachedSegmentIndexResponse) {}
+  rpc GetFirstCachedSegmentIndexAsync (.spotify.download.esperanto.proto.GetFirstCachedSegmentIndexParams) returns (.spotify.download.esperanto.proto.GetFirstCachedSegmentIndexResponse) {}
+  rpc CreateSegmentFileStreamer (.spotify.download.esperanto.proto.SegmentFileStreamerParams) returns (.spotify.download.esperanto.proto.SegmentFileStreamerId) {}
+  rpc DestroySegmentFileStreamer (.spotify.download.esperanto.proto.SegmentFileStreamerId) returns (.google.protobuf.Empty) {}
+  rpc RequestSegmentData (.spotify.download.esperanto.proto.RequestSegmentDataParams) returns (stream .spotify.download.esperanto.proto.RequestDataResponse) {}
+  rpc FinishSegmentDataRequest (.spotify.download.esperanto.proto.FinishSegmentDataRequestParams) returns (.google.protobuf.Empty) {}
+  rpc GetVideoManifest (.spotify.download.esperanto.proto.VideoManifestParams) returns (.spotify.download.esperanto.proto.VideoManifestResponse) {}
+  rpc GetMediaHandleId (.spotify.download.esperanto.proto.GetMediaHandleParams) returns (stream .spotify.download.esperanto.proto.GetMediaHandleIdResponse) {}
+  rpc SubscribeVideoBandwidth (.google.protobuf.Empty) returns (stream .spotify.download.esperanto.proto.VideoBandwidthResponse) {}
+}
+
+message FileStreamerId {
+  uint32 id = 1;
+}
+
+message RequestDataParams {
+  .spotify.download.esperanto.proto.FileStreamerId file_streamer = 1;
+  uint64 start = 2;
+  uint64 end = 3;
+}
+
+message RequestDataResponse {
+  uint64 position = 1;
+  uint64 total_size = 2;
+  bool final = 3;
+  .spotify.download.esperanto.proto.Error error = 4;
+  bytes data = 5;
+  uint64 previously_cached = 6;
+  uint64 from_network = 7;
+  bool had_cache_error = 8;
+}
+
+message SegmentFileStreamerId {
+  uint32 id = 1;
+}
+
+message SegmentFileStreamerParams {
+  string media_url = 1;
+  string playback_id = 2;
+  string session_id = 3;
+  .spotify.download.esperanto.proto.ContentType content_type = 4;
+  .spotify.download.esperanto.proto.ContentForm content_form = 5;
+}
+
+message RequestSegmentDataParams {
+  .spotify.download.esperanto.proto.SegmentFileStreamerId segment_file_streamer = 1;
+  string url_path = 2;
+  repeated string cdn_base_url = 3;
+  uint64 start = 4;
+  uint64 end = 5;
+}
+
+message FinishSegmentDataRequestParams {
+  .spotify.download.esperanto.proto.SegmentFileStreamerId segment_file_streamer = 1;
+  string url_path = 2;
+}
+
+message VideoManifestParams {
+  enum MediaType {
+    VIDEO = 0;
+    AUDIO = 1;
+  }
+
+  string video_id = 1;
+  string playback_id = 2;
+  string session_id = 3;
+  .spotify.download.esperanto.proto.VideoManifestRequestType request_type = 4;
+  .spotify.download.esperanto.proto.VideoManifestParams.MediaType media_type = 5;
+}
+
+message VideoManifestResponse {
+  bytes manifest_data = 1;
+  bool had_cache_error = 2;
+  uint64 bytes_from_network = 3;
+  .spotify.download.esperanto.proto.VideoManifestError manifest_error = 4;
+  string manifest_url = 5;
+}
+
+message ProgressiveFileStreamerParams {
+  string url = 1;
+  string playback_id = 2;
+  string session_id = 3;
+  bool disable_range_requests = 4;
+}
+
+message IsFileFullyCachedParams {
+  message ProgressiveFileParams {
+    string url = 1;
+  }
+
+  message SegmentFileParams {
+    string url_path = 1;
+    .spotify.download.esperanto.proto.ContentForm content_form = 2;
+  }
+
+  oneof file {
+    .spotify.download.esperanto.proto.IsFileFullyCachedParams.ProgressiveFileParams progressive_file = 1;
+    .spotify.download.esperanto.proto.IsFileFullyCachedParams.SegmentFileParams segment_file = 2;
+  }
+}
+
+message GetFirstCachedSegmentIndexParams {
+  repeated string url_paths = 1;
+  .spotify.download.esperanto.proto.ContentType content_type = 2;
+  .spotify.download.esperanto.proto.ContentForm content_form = 3;
+}
+
+message GetFirstCachedSegmentIndexResponse {
+  int32 index = 1;
+}
+
+message GetMediaHandleParams {
+  enum MediaType {
+    VIDEO = 0;
+    AUDIO = 1;
+  }
+
+  .spotify.download.esperanto.proto.GetMediaHandleParams.MediaType media_type = 1;
+  string id = 2;
+}
+
+message GetMediaHandleIdResponse {
+  uint32 handle_id = 1;
+  optional .spotify.download.esperanto.proto.VerificationStatus status = 2;
+}
+
+message VideoBandwidthResponse {
+  uint64 advised_max_bitrate = 1;
+}
+
+enum Error {
+  SUCCESS = 0;
+  GENERIC = 1;
+}
+
+enum VerificationStatus {
+  OK = 0;
+  FAILED = 1;
+  SUNSET = 2;
+}
+
+enum ContentType {
+  VIDEO = 0;
+  AUDIO = 1;
+  SUBTITLE = 2;
+}
+
+enum ContentForm {
+  LONG = 0;
+  SHORT = 1;
+}
+
+enum VideoManifestRequestType {
+  INTERACTIVE = 0;
+  PREFETCH = 1;
+  OTHER = 2;
+}
+
+enum VideoManifestError {
+  VIDEO_MANIFEST_SUCCESS = 0;
+  VIDEO_MANIFEST_INVALID_VIDEO_ID = 1;
+  VIDEO_MANIFEST_CONNECTION_ERROR = 2;
+  VIDEO_MANIFEST_HTTP_ERROR = 3;
+  VIDEO_MANIFEST_CONNECTION_TIMEOUT = 4;
+  VIDEO_MANIFEST_HTTP_FORBIDDEN = 5;
+}
+

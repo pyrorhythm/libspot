@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_provided_track.proto";
+
+message Queue {
+  uint64 queue_revision = 1;
+  .spotify.player.esperanto.proto.ProvidedTrack track = 2;
+  repeated .spotify.player.esperanto.proto.ProvidedTrack next_tracks = 3;
+  repeated .spotify.player.esperanto.proto.ProvidedTrack prev_tracks = 4;
+}
+

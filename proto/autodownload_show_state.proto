@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.autodownload_esperanto.proto;
+
+option java_package = "spotify.autodownload.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message ShowStateRequest {
+  string uri = 1;
+  int32 update_throttling = 2;
+}
+
+message ShowStateResponse {
+  string uri = 1;
+  bool enabled = 2;
+  string error = 3;
+}
+

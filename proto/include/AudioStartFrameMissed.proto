@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AudioStartFrameMissed {
+  optional bytes playback_id = 1;
+  optional int64 missed_by_ms = 2;
+}
+

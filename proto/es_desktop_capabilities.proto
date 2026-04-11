@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package spotify.desktop.capabilities_esperanto.proto;
+
+import "google/protobuf/empty.proto";
+
+service DesktopCapabilities {
+  rpc GetCapabilities (.google.protobuf.Empty) returns (.spotify.desktop.capabilities_esperanto.proto.Capabilities) {}
+}
+
+message Capabilities {
+  bool can_autostart = 1;
+  bool can_restart = 2;
+  bool can_minimize_or_exit_on_close = 3;
+  bool can_show_track_notifications = 4;
+  bool can_show_system_media_controls = 5;
+}
+

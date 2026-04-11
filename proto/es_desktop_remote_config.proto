@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package spotify.desktop.remote_config_esperanto.proto;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "rcs.proto";
+
+service DesktopRemoteConfig {
+  rpc GetProperties (.google.protobuf.Empty) returns (.spotify.desktop.remote_config_esperanto.proto.GetPropertiesResponse) {}
+  rpc GetConfiguration (.google.protobuf.Empty) returns (.spotify.desktop.remote_config_esperanto.proto.GetConfigurationResponse) {}
+  rpc GetOverrides (.google.protobuf.Empty) returns (.spotify.desktop.remote_config_esperanto.proto.GetOverridesResponse) {}
+  rpc SetOverride (.spotify.desktop.remote_config_esperanto.proto.SetOverrideRequest) returns (.spotify.desktop.remote_config_esperanto.proto.SetOverrideResponse) {}
+  rpc ClearOverrides (.google.protobuf.Empty) returns (.spotify.desktop.remote_config_esperanto.proto.ClearOverridesResponse) {}
+}
+
+message GetPropertiesResponse {
+  .spotify.remote_config.proto.ClientPropertySet properties = 1;
+}
+
+message GetConfigurationResponse {
+  .spotify.remote_config.proto.GranularConfiguration configuration = 1;
+}
+
+message GetOverridesResponse {
+  .spotify.remote_config.proto.GranularConfiguration overrides = 1;
+}
+
+message SetOverrideRequest {
+  .spotify.remote_config.proto.GranularConfiguration.AssignedPropertyValue property = 1;
+  .google.protobuf.Timestamp expiry = 2;
+}
+
+message SetOverrideResponse {
+  bool success = 1;
+}
+
+message ClearOverridesResponse {
+  bool success = 1;
+}
+

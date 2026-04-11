@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message OAuthTokenFileStorageClientErrorNonAuth {
+  optional string filename = 1;
+  optional string error_description = 2;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message EventSenderInternalError2NonAuth {
+  repeated string error_types = 1;
+  repeated int32 error_total_counts = 2;
+  repeated int32 error_unreported_counts = 3;
+}
+

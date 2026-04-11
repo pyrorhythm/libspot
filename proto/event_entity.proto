@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message EventEntity {
+  uint32 file_format_version = 1;
+  string event_name = 2;
+  bytes sequence_id = 3;
+  uint64 sequence_number = 4;
+  bytes payload = 5;
+  string owner = 6;
+  bool authenticated = 7;
+  uint64 record_id = 8;
+}
+

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.policy.proto";
+option java_multiple_files = true;
+
+import "policy/artist_decoration_policy.proto";
+import "policy/track_decoration_policy.proto";
+import "policy/playlist_album_decoration_policy.proto";
+import "policy/user_decoration_policy.proto";
+
+message PlaylistTrackDecorationPolicy {
+  .spotify.cosmos_util.proto.TrackDecorationPolicy track = 1;
+  bool row_id = 2;
+  bool add_time = 3;
+  bool in_collection = 4;
+  bool can_add_to_collection = 5;
+  bool is_banned = 6;
+  bool can_ban = 7;
+  bool local_file = 8;
+  bool offline = 9;
+  bool format_list_attributes = 10;
+  bool display_covers = 11;
+  .spotify.playlist.cosmos.proto.UserDecorationPolicy added_by = 12;
+  .spotify.playlist.cosmos.proto.PlaylistAlbumDecorationPolicy album = 13;
+  .spotify.cosmos_util.proto.ArtistDecorationPolicy artist = 14;
+  bool signals = 15;
+  bool is_recommendation = 16;
+}
+

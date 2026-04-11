@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+
+message ConsumptionExperienceTrait {
+  .google.protobuf.Duration duration = 1;
+  repeated .spotify.contentagnostic.v2.ContentRating content_ratings = 2;
+  repeated .spotify.contentagnostic.v2.Genre genres = 3;
+  repeated .spotify.contentagnostic.v2.Format formats = 4;
+}
+
+message Genre {
+  string name = 1;
+  optional string uri = 2;
+}
+
+enum ContentRating {
+  CONTENT_RATING_UNSPECIFIED = 0;
+  CONTENT_RATING_EXPLICIT = 1;
+  CONTENT_RATING_18_PLUS = 2;
+  CONTENT_RATING_SOUTH_KOREA_19 = 3;
+  CONTENT_RATING_EROTICA = 4;
+}
+
+enum Format {
+  FORMAT_UNSPECIFIED = 0;
+  FORMAT_AUDIO = 1;
+  FORMAT_VIDEO = 2;
+  FORMAT_PARROT = 3;
+}
+

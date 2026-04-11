@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package spotify.list.v1;
+
+option java_package = "com.spotify.list.v1";
+option java_outer_classname = "ListReadServiceProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/list_diff.proto";
+import "spotify/list/v1/model/list_entity.proto";
+import "spotify/list/v1/model/list_identifier.proto";
+import "spotify/list/v1/model/request_info.proto";
+import "spotify/list/v1/model/response_info.proto";
+
+message GetListRequest {
+  .spotify.list.v1.model.ListIdentifier identifier = 1;
+  .spotify.list.v1.model.RequestOptions options = 2;
+}
+
+message GetListsRequest {
+  repeated .spotify.list.v1.GetListRequest requests = 1;
+  optional .spotify.list.v1.model.RequestInfo info = 2;
+  optional .spotify.list.v1.model.MultiListRequestOptions multi_list_request_options = 3;
+}
+
+message GetListResponse {
+  .spotify.list.v1.model.ResponseInfo info = 2;
+  optional .spotify.list.v1.model.ListEntity entity = 1;
+}
+
+message AdditionalResponse {
+  .spotify.list.v1.GetListRequest request = 1;
+  .spotify.list.v1.GetListResponse response = 2;
+}
+
+message GetListsResponse {
+  repeated .spotify.list.v1.GetListResponse responses = 1;
+  repeated .spotify.list.v1.AdditionalResponse additional_responses = 2;
+}
+
+message DiffListRequest {
+  .spotify.list.v1.model.ListIdentifier identifier = 1;
+  .spotify.list.v1.model.RequestOptions options = 2;
+}
+
+message DiffListsRequest {
+  repeated .spotify.list.v1.DiffListRequest requests = 1;
+  optional .spotify.list.v1.model.RequestInfo info = 2;
+}
+
+message DiffListResponse {
+  optional .spotify.list.v1.model.ListEntity entity = 1;
+  optional .spotify.list.v1.model.ListDiff diff = 2;
+  optional .spotify.list.v1.model.ResponseInfo info = 3;
+}
+
+message DiffListsResponse {
+  repeated .spotify.list.v1.DiffListResponse responses = 1;
+}
+

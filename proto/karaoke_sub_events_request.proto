@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package spotify.karaoke_esperanto.proto;
+
+option java_package = "com.spotify.karaoke.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message KaraokeSubEventsRequest {
+}
+
+message KaraokeSubEventsResponse {
+  enum Id {
+    MASK_READY = 0;
+    ERROR = 1;
+  }
+
+  .spotify.karaoke_esperanto.proto.KaraokeSubEventsResponse.Id id = 1;
+  string track_uri = 2;
+  string error_message = 3;
+  int32 error_code = 4;
+}
+

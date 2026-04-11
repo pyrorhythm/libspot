@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message RateLimitedEventsEntity {
+  message MapFieldEntry {
+    string key = 1;
+    uint32 value = 2;
+  }
+
+  int32 file_format_version = 1;
+  repeated .spotify.event_sender.proto.RateLimitedEventsEntity.MapFieldEntry map_field = 2;
+}
+

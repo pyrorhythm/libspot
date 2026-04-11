@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_restrictions.proto";
+import "es_play_origin.proto";
+import "es_optional.proto";
+import "es_provided_track.proto";
+import "es_context_player_options.proto";
+import "es_prepare_play_options.proto";
+import "es_ad_break_context.proto";
+import "es_sleep_timer.proto";
+
+message ContextIndex {
+  uint64 page = 1;
+  uint64 track = 2;
+}
+
+message PlaybackQuality {
+  enum BitrateLevel {
+    UNKNOWN = 0;
+    LOW = 1;
+    NORMAL = 2;
+    HIGH = 3;
+    VERY_HIGH = 4;
+    HIFI = 5;
+    HIFI24 = 6;
+  }
+
+  enum BitrateStrategy {
+    UNKNOWN_STRATEGY = 0;
+    BEST_MATCHING = 1;
+    BACKEND_ADVISED = 2;
+    OFFLINED_FILE = 3;
+    CACHED_FILE = 4;
+    LOCAL_FILE = 5;
+  }
+
+  enum HiFiStatus {
+    NONE = 0;
+    OFF = 1;
+    ON = 2;
+  }
+
+  .spotify.player.esperanto.proto.PlaybackQuality.BitrateLevel bitrate_level = 1;
+  .spotify.player.esperanto.proto.PlaybackQuality.BitrateStrategy strategy = 2;
+  .spotify.player.esperanto.proto.PlaybackQuality.BitrateLevel target_bitrate_level = 3;
+  bool target_bitrate_available = 4;
+  .spotify.player.esperanto.proto.PlaybackQuality.HiFiStatus hifi_status = 5;
+}
+
+message ContextPlayerState {
+  message ContextMetadataEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  message PageMetadataEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  enum Format {
+    UNKNOWN = 0;
+    DEFAULT = 1;
+    PARROT = 2;
+  }
+
+  uint64 timestamp = 1;
+  string context_uri = 2;
+  string context_url = 3;
+  .spotify.player.esperanto.proto.Restrictions context_restrictions = 4;
+  .spotify.player.esperanto.proto.PlayOrigin play_origin = 5;
+  .spotify.player.esperanto.proto.ContextIndex index = 6;
+  .spotify.player.esperanto.proto.ProvidedTrack track = 7;
+  bytes playback_id = 8;
+  .spotify.player.esperanto.proto.PlaybackQuality playback_quality = 9;
+  .spotify.player.esperanto.proto.OptionalDouble playback_speed = 10;
+  .spotify.player.esperanto.proto.OptionalInt64 position_as_of_timestamp = 11;
+  .spotify.player.esperanto.proto.OptionalInt64 duration = 12;
+  bool is_playing = 13;
+  bool is_paused = 14;
+  bool is_buffering = 15;
+  bool is_system_initiated = 16;
+  .spotify.player.esperanto.proto.ContextPlayerOptions options = 17;
+  .spotify.player.esperanto.proto.Restrictions restrictions = 18;
+  repeated string suppressions = 19;
+  repeated .spotify.player.esperanto.proto.ProvidedTrack prev_tracks = 20;
+  repeated .spotify.player.esperanto.proto.ProvidedTrack next_tracks = 21;
+  repeated .spotify.player.esperanto.proto.ContextPlayerState.ContextMetadataEntry context_metadata = 22;
+  repeated .spotify.player.esperanto.proto.ContextPlayerState.PageMetadataEntry page_metadata = 23;
+  string session_id = 24;
+  uint64 queue_revision = 25;
+  .spotify.player.esperanto.proto.PreparePlayOptions.AudioStream audio_stream = 26;
+  repeated string signals = 27;
+  string session_command_id = 28;
+  optional .spotify.player.esperanto.proto.ContextPlayerState.Format format = 29;
+  optional .spotify.player.esperanto.proto.AdBreakContext ad_break_context = 30;
+  optional .spotify.player.esperanto.proto.SleepTimer sleep_timer = 31;
+}
+

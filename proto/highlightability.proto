@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package spotify.bookmarks.entity.v1;
+
+option java_package = "spotify.bookmarks.entity.v1";
+
+message Highlightability {
+  bool user_highlightable = 1;
+}
+

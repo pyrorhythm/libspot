@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.corex.transcripts.metadata;
+
+option java_package = "com.spotify.corex.transcripts.metadata.proto";
+option java_outer_classname = "TranscriptMetadataProto";
+option java_multiple_files = true;
+
+message EpisodeTranscript {
+  string episode_uri = 1;
+  repeated .spotify.corex.transcripts.metadata.Transcript transcripts = 2;
+}
+
+message Transcript {
+  string uri = 1;
+  string language = 2;
+  bool curated = 3;
+  string cdn_url = 4;
+  bool is_static = 5;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message HostsProviderNonAuth {
+  optional int32 number_of_hosts_rotations = 1;
+  optional string resolved_backend_rpc_host = 2;
+  optional string resolved_dealer_host = 3;
+  optional string stored_backend_rpc_host = 4;
+  optional string stored_dealer_host = 5;
+}
+

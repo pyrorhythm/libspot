@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopUpdateMessageProcessed {
+  optional bool success = 1;
+  optional string source = 2;
+  optional int64 revision = 3;
+  optional bool is_critical = 4;
+  optional string binary_hash = 5;
+  optional bool is_employee = 6;
+}
+

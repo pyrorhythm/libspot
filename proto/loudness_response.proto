@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.analyzer_esperanto.proto;
+
+option java_package = "com.spotify.analyzer_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+message LoudnessResponse {
+  repeated int32 loudness = 1;
+  string playback_id = 2;
+  uint64 position = 3;
+}
+

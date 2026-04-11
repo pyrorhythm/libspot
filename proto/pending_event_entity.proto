@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package spotify.pending_events.proto;
+
+message PendingEventEntity {
+  string event_name = 1;
+  bytes payload = 2;
+  string username = 3;
+}
+

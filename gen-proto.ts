@@ -1,0 +1,118 @@
+#!/usr/bin/env bun
+
+import { $ } from "bun";
+import { cp, mkdir, readdir, rm, stat } from "fs/promises";
+import { basename, dirname, extname, join } from "path";
+import { fileURLToPath } from "url";
+
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
+const ROOT = SCRIPT_DIR;
+const PROTO_DIR = join(ROOT, "proto");
+const OUT_DIR = join(ROOT, "api");
+const TMP_DIR = "/tmp/spdproto";
+
+let goMod = Bun.file(join(SCRIPT_DIR, `go.mod`));
+let contents = (await goMod.text()).split("\n")[0]
+let rema = (contents ?? "").match(/([a-zA-Z0-9./-_]+)/g)
+const MODULE = rema?.at(1);
+
+if (MODULE === undefined) {
+  throw Error('could not get go.mod');
+}
+
+const sedRules: [RegExp, string][] = [
+  [/\/proto/g, ""],
+  [/list\/v1\/model\/attributes/g, "list/v1/model"],
+  [/player\/context_view\/cyclic_list/g, "player/context_view"],
+  [/player\/context_view/g, "player"],
+  [/timeline\/v1\/behavior/g, "timeline/v1"],
+  [/context\/v1\/behavior/g, "context/v1"],
+  // [],
+];
+
+
+async function walkDir(dir: string): Promise<string[]> {
+  const protos: string[] = [];
+  for (const entry of await readdir(dir)) {
+    const full = join(dir, entry);
+    const dirstat = await stat(full);
+    if (dirstat.isDirectory()) {
+      protos.push(...await walkDir(full));
+    } else if (entry.endsWith(".proto")) {
+      protos.push(full);
+    }
+  }
+  return protos.sort();
+}
+
+async function processProto(protoPath: string): Promise<string> {
+  const file = Bun.file(protoPath);
+  const content = await file.text();
+  const baseName = basename(protoPath, extname(protoPath));
+
+
+  const match = content.match(/^package\s+(\S+);/m);
+  if (!match) throw new Error(`No package in ${protoPath}`);
+
+  let pkg = match[1].replace(/\./g, "/");
+
+  if (baseName === "ledger" && dirname(protoPath).endsWith("behavior")) {
+    const alias = pkg.split("/").pop() ?? pkg;
+    const goPackage = `${MODULE}/api/${pkg};${alias}`;
+    const goPackageLine = `option go_package="${goPackage}";`;
+
+    await Bun.write(file, content.replace(/^syntax\s*=\s*"[^"]+";/m, `$&\n${goPackageLine}`))
+    return protoPath
+  }
+
+  for (const [re, replacement] of sedRules) {
+    if (re.test(pkg)) {
+      pkg = pkg.replace(re, replacement);
+    }
+  }
+
+  const alias = pkg.split("/").pop() ?? pkg;
+  const goPackage = `${MODULE}/api/${pkg};${alias}`;
+  const goPackageLine = `option go_package="${goPackage}";`;
+
+  let patched = content;
+  if (/^option go_package/m.test(content)) {
+    patched = content.replace(/^option go_package="[^"]+";/m, goPackageLine);
+  } else {
+    patched = content.replace(/^syntax\s*=\s*"[^"]+";/m, `$&\n${goPackageLine}`);
+  }
+
+  await Bun.write(protoPath, patched);
+
+  return protoPath;
+}
+
+// Cleanup and setup temp directory
+await rm(TMP_DIR, { recursive: true, force: true });
+try {
+  await rm(OUT_DIR, { recursive: true });
+} catch (_) { }
+await mkdir(TMP_DIR, { recursive: true });
+await mkdir(OUT_DIR, { recursive: true });
+// Copy *contents* of PROTO_DIR into TMP_DIR (not the folder itself)
+await cp(join(PROTO_DIR, "."), TMP_DIR, { recursive: true });
+
+try {
+  var protos = await walkDir(TMP_DIR);
+  var newProtos = new Array<string>();
+  for (const proto of protos) {
+    const newProto = await processProto(proto)
+    if (newProto) newProtos.push(proto);
+  }
+
+  console.log(`Generating ${newProtos.length} protos`);
+
+  // Run protoc with explicit cwd - no need for process.chdir()
+  await $`protoc --proto_path=${TMP_DIR} --go_out=${OUT_DIR} --go_opt=module=${MODULE}/api ${newProtos}`.cwd(TMP_DIR);
+} finally {
+  // Always cleanup temp directory
+  await rm(TMP_DIR, { recursive: true, force: true });
+}
+
+const count = (await walkDir(OUT_DIR)).length;
+console.log(`${count} .pb.go files in ${OUT_DIR}`);

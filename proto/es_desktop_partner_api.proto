@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package spotify.desktop.partner_api_esperanto.proto;
+
+service DesktopPartnerApi {
+  rpc EnablePartnerApiEndpoint (.spotify.desktop.partner_api_esperanto.proto.EnablePartnerApiEndpointRequest) returns (.spotify.desktop.partner_api_esperanto.proto.EnablePartnerApiEndpointResponse) {}
+  rpc SetPartnerApiTcpPorts (.spotify.desktop.partner_api_esperanto.proto.PartnerApiTcpPortsRequest) returns (.spotify.desktop.partner_api_esperanto.proto.PartnerApiTcpPortsResponse) {}
+  rpc NotifyUIReady (.spotify.desktop.partner_api_esperanto.proto.UIReadyRequest) returns (.spotify.desktop.partner_api_esperanto.proto.UIReadyResponse) {}
+}
+
+message EnablePartnerApiEndpointRequest {
+  bool enable = 1;
+}
+
+message EnablePartnerApiEndpointResponse {
+}
+
+message PartnerApiTcpPortsRequest {
+  optional uint32 preferredPort = 1;
+  optional uint32 minPortRange = 2;
+  optional uint32 maxPortRange = 3;
+}
+
+message PartnerApiTcpPortsResponse {
+}
+
+message UIReadyRequest {
+}
+
+message UIReadyResponse {
+}
+

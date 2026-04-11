@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package spotify.collection_platform.proto;
+
+option java_package = "com.spotify.collection_platform.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "collection_platform_items.proto";
+
+message CollectionPlatformItemsRequest {
+  .spotify.collection_platform.proto.CollectionSet set = 1;
+  repeated string items = 2;
+  repeated .spotify.collection_platform.proto.CollectionPlatformItem collection_items = 3;
+  bool include_item_data = 4;
+}
+
+enum CollectionSet {
+  UNKNOWN = 0;
+  IGNOREINRECS = 4;
+  BANNED_ARTISTS = 8;
+  CONCERTS = 10;
+  PRERELEASE = 12;
+  MARKED_AS_FINISHED = 13;
+  NOT_INTERESTED = 14;
+  PAGE_MATCH = 16;
+}
+

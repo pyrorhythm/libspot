@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message UctStreamedDecision {
+  optional string decision_id = 1;
+  optional bytes playback_id = 2;
+  optional string play_context_decision_id = 3;
+}
+

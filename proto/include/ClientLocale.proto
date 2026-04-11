@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ClientLocale {
+  optional string client_default_locale = 1;
+  optional string user_specified_locale = 2;
+}
+

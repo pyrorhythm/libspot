@@ -1,0 +1,160 @@
+syntax = "proto3";
+
+package spotify.narration.proto;
+
+message ResolveRequest {
+  enum AudioFormat {
+    UNSPECIFIED = 0;
+    WAV = 1;
+    PCM = 2;
+    OPUS = 3;
+    VORBIS = 4;
+    MP3 = 5;
+  }
+
+  enum TtsVoice {
+    UNSET_TTS_VOICE = 0;
+    VOICE1 = 1;
+    VOICE2 = 2;
+    VOICE3 = 3;
+    VOICE4 = 4;
+    VOICE5 = 5;
+    VOICE6 = 6;
+    VOICE7 = 7;
+    VOICE8 = 8;
+    VOICE9 = 9;
+    VOICE10 = 10;
+    VOICE11 = 11;
+    VOICE12 = 12;
+    VOICE13 = 13;
+    VOICE14 = 14;
+    VOICE15 = 15;
+    VOICE16 = 16;
+    VOICE17 = 17;
+    VOICE18 = 18;
+    VOICE19 = 19;
+    VOICE20 = 20;
+    VOICE21 = 21;
+    VOICE22 = 22;
+    VOICE23 = 23;
+    VOICE24 = 24;
+    VOICE25 = 25;
+    VOICE26 = 26;
+    VOICE27 = 27;
+    VOICE28 = 28;
+    VOICE29 = 29;
+    VOICE30 = 30;
+    VOICE31 = 31;
+    VOICE32 = 32;
+    VOICE33 = 33;
+    VOICE34 = 34;
+    VOICE35 = 35;
+    VOICE36 = 36;
+    VOICE37 = 37;
+    VOICE38 = 38;
+    VOICE39 = 39;
+    VOICE40 = 40;
+    VOICE41 = 41;
+    VOICE42 = 42;
+    VOICE43 = 43;
+    VOICE44 = 44;
+    VOICE45 = 45;
+    VOICE46 = 46;
+    VOICE47 = 47;
+    VOICE48 = 48;
+    VOICE49 = 49;
+    VOICE50 = 50;
+    VOICE51 = 51;
+    VOICE52 = 52;
+    VOICE53 = 53;
+    VOICE54 = 54;
+    VOICE55 = 55;
+    VOICE56 = 56;
+    VOICE57 = 57;
+    VOICE58 = 58;
+    VOICE59 = 59;
+    VOICE60 = 60;
+    VOICE61 = 61;
+    VOICE62 = 62;
+    VOICE63 = 63;
+    VOICE64 = 64;
+    VOICE65 = 65;
+    VOICE66 = 66;
+    VOICE67 = 67;
+    VOICE68 = 68;
+    VOICE69 = 69;
+    VOICE70 = 70;
+    VOICE71 = 71;
+    VOICE72 = 72;
+    VOICE73 = 73;
+    VOICE74 = 74;
+    VOICE75 = 75;
+    VOICE76 = 76;
+    VOICE77 = 77;
+    VOICE78 = 78;
+    VOICE79 = 79;
+    VOICE80 = 80;
+    VOICE81 = 81;
+    VOICE82 = 82;
+    VOICE83 = 83;
+    VOICE84 = 84;
+    VOICE85 = 85;
+    VOICE86 = 86;
+    VOICE87 = 87;
+    VOICE88 = 88;
+    VOICE89 = 89;
+    VOICE90 = 90;
+    VOICE91 = 91;
+    VOICE92 = 92;
+    VOICE93 = 93;
+    VOICE94 = 94;
+  }
+
+  enum TtsVoiceStyle {
+    NEUTRAL = 0;
+    CHILL = 1;
+    UPBEAT = 2;
+  }
+
+  enum TtsProvider {
+    UNSET_TTS_PROVIDER = 0;
+    CLOUD_TTS = 1;
+    READSPEAKER = 2;
+    POLLY = 3;
+    WELL_SAID = 4;
+    SONANTIC_DEPRECATED = 5;
+    SONANTIC_FAST = 6;
+    OPENAI = 7;
+    SONANTIC_LARGE = 8;
+    ELEVEN_LABS_DEPRECATED = 9;
+    ADS_PUBLIC = 10;
+  }
+
+  .spotify.narration.proto.ResolveRequest.AudioFormat audio_format = 3;
+  string language = 4;
+  .spotify.narration.proto.ResolveRequest.TtsVoice tts_voice = 5;
+  .spotify.narration.proto.ResolveRequest.TtsProvider tts_provider = 6;
+  int32 sample_rate_hz = 7;
+  .spotify.narration.proto.ResolveRequest.TtsVoiceStyle tts_voice_style = 8;
+  int32 tts_voice_style_percent = 9;
+  int32 seed = 10;
+  oneof prompt {
+    string text = 1;
+    string ssml = 2;
+  }
+}
+
+message ResolveResponse {
+  string url = 1;
+  int64 expiry = 2;
+}
+
+message TtsPrompt {
+  string language = 3;
+  string url = 4;
+  oneof tts {
+    string text = 1;
+    string ssml = 2;
+  }
+}
+

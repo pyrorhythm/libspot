@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.collection_esperanto.proto;
+
+option java_package = "com.spotify.collection_esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message BanGlobalRequest {
+  string uri = 1;
+}
+
+message UnbanGlobalRequest {
+  string uri = 1;
+}
+

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.fingerprintfilterservice;
+
+option java_package = "com.spotify.fingerprintfilterservice";
+option java_multiple_files = true;
+
+message FingerprintedAudio {
+  repeated .spotify.fingerprintfilterservice.FingerprintedRange ranges = 1;
+  int32 max_frame_gap = 2;
+  optional int32 max_sample_rate = 3;
+}
+
+message FingerprintedRange {
+  repeated fixed32 hashes = 1;
+  int64 start_position_ms = 2;
+  int64 range_duration_ms = 3;
+  optional int32 sample_rate = 4;
+}
+

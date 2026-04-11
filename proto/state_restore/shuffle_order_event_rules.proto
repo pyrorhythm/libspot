@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message ShuffleOrderEventRules {
+  enum ShuffleMode {
+    RANDOM = 0;
+    FRESH = 1;
+  }
+
+  optional .spotify.player.proto.state_restore.ShuffleOrderEventRules.ShuffleMode shuffle_mode = 1;
+}
+

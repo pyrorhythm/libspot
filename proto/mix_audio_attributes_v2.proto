@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package spotify.playlistmixing.extensions.audio_attributes.v2;
+
+option java_package = "com.spotify.playlistmixing.extensions.audio_attributes.v2.proto";
+
+message AudioAttributes {
+  message Key {
+    message CamelotKey {
+      string value = 1;
+      string color = 2;
+    }
+
+    enum Mode {
+      MODE_UNKNOWN = 0;
+      MODE_MINOR = 1;
+      MODE_MAJOR = 2;
+    }
+
+    string key = 1;
+    .spotify.playlistmixing.extensions.audio_attributes.v2.AudioAttributes.Key.Mode mode = 2;
+    .spotify.playlistmixing.extensions.audio_attributes.v2.AudioAttributes.Key.CamelotKey camelot_key = 3;
+  }
+
+  double bpm = 1;
+  .spotify.playlistmixing.extensions.audio_attributes.v2.AudioAttributes.Key key = 2;
+}
+

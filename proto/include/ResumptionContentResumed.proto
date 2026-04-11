@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionContentResumed {
+  optional string playback_id = 1;
+  optional string key = 2;
+  optional int64 client_timestamp = 3;
+  optional string play_position = 4;
+}
+

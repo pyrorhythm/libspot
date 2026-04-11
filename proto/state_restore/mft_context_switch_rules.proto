@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message MftContextSwitchRules {
+  required bool has_played_track = 1;
+  required bool enabled = 2;
+}
+

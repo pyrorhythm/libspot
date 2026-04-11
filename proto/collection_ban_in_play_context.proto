@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.collection_esperanto.proto;
+
+option java_package = "com.spotify.collection_esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message BanInPlayContextRequest {
+  string context_uri = 1;
+  string item_uri = 2;
+  string provider = 3;
+}
+
+message UnbanInPlayContextRequest {
+  string context_uri = 1;
+  string item_uri = 2;
+}
+

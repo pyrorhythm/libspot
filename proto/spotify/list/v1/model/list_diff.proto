@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "DiffProto";
+option java_multiple_files = true;
+
+import "spotify/list/v1/model/ops.proto";
+
+message ListDiff {
+  repeated .spotify.list.v1.model.Op ops = 1;
+}
+

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/sequence_query.proto";
+
+message Queue {
+  .spotify.playback_platform.context.v1.SequenceQuery include = 7;
+  optional bool display_children = 1;
+  optional bool reorder = 2;
+  optional bool remove = 3;
+  optional bool restore = 4;
+  optional bool insert = 5;
+  optional bool migrate = 6;
+  optional bool clear_user_queue_when_loading = 8;
+  optional bool display = 9;
+}
+

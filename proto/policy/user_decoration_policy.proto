@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.policy.proto";
+option java_multiple_files = true;
+
+message UserDecorationPolicy {
+  bool username = 1;
+  bool link = 2;
+  bool name = 3;
+  bool image = 4;
+  bool thumbnail = 5;
+  bool color = 6;
+}
+
+message CollaboratorPolicy {
+  .spotify.playlist.cosmos.proto.UserDecorationPolicy user = 1;
+  bool number_of_items = 2;
+  bool number_of_tracks = 3;
+  bool number_of_episodes = 4;
+  bool is_owner = 5;
+}
+
+message CollaboratingUsersDecorationPolicy {
+  bool count = 1;
+  int32 limit = 2;
+  .spotify.playlist.cosmos.proto.CollaboratorPolicy collaborator = 3;
+}
+

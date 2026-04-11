@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+package spotify.playlist.cosmos.proto;
+
+option java_package = "com.spotify.playlist.proto";
+option java_multiple_files = true;
+
+import "playlist_permission.proto";
+
+message SetMemberPermissionRequest {
+  optional string playlist_uri = 1;
+  optional string username = 2;
+  optional .spotify.playlist_permission.proto.PermissionLevel permission_level = 3;
+  optional uint32 timeout_ms = 4;
+}
+

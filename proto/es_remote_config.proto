@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package spotify.remote_config.esperanto.proto;
+
+option java_package = "com.spotify.remoteconfig.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "esperanto_options.proto";
+
+service RemoteConfig {
+  rpc lookupBool (.spotify.remote_config.esperanto.proto.LookupRequest) returns (.spotify.remote_config.esperanto.proto.BoolResponse) {}
+  rpc lookupInt (.spotify.remote_config.esperanto.proto.LookupRequest) returns (.spotify.remote_config.esperanto.proto.IntResponse) {}
+  rpc lookupEnum (.spotify.remote_config.esperanto.proto.LookupRequest) returns (.spotify.remote_config.esperanto.proto.EnumResponse) {}
+}
+
+message LookupRequest {
+  string scope = 1;
+  string name = 2;
+}
+
+message BoolResponse {
+  optional bool value = 1;
+}
+
+message IntResponse {
+  optional int32 value = 1;
+}
+
+message EnumResponse {
+  optional string value = 1;
+}
+

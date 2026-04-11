@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package socialconnect;
+
+message Session {
+  reserved "type";
+  reserved "is_discoverable";
+  reserved "quick_blend";
+  reserved 8;
+  reserved 12;
+  reserved 22;
+  int64 timestamp = 1;
+  string session_id = 2;
+  repeated .socialconnect.SessionMember session_members = 6;
+  bool is_session_owner = 9;
+  bool active = 17;
+  bool redirect_commands = 25;
+}
+
+message SessionMember {
+}
+
+message SessionUpdate {
+  .socialconnect.Session session = 1;
+  .socialconnect.SessionUpdateReason reason = 2;
+}
+
+enum SessionUpdateReason {
+  UNKNOWN_UPDATE_TYPE = 0;
+  NEW_SESSION = 1;
+  USER_JOINED = 2;
+  USER_LEFT = 3;
+  SESSION_DELETED = 4;
+  YOU_LEFT = 5;
+  YOU_WERE_KICKED = 6;
+  YOU_JOINED = 7;
+  USER_KICKED = 10;
+  VOLUME_CONTROL_PERMISSIONS_CHANGED = 11;
+  QUEUE_ONLY_MODE_CONTROL_CHANGED = 12;
+  WIFI_BROADCAST_CHANGED = 13;
+  ACTIVE_DEVICE_CHANGED = 14;
+  SESSION_MEMBER_UPDATED = 16;
+  SESSION_ACTIVATED = 17;
+}
+

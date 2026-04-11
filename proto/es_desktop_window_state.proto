@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package spotify.desktop.window_state_esperanto.proto;
+
+import "google/protobuf/empty.proto";
+
+service DesktopWindowState {
+  rpc SubscribeWindowState (.google.protobuf.Empty) returns (stream .spotify.desktop.window_state_esperanto.proto.WindowStateResponse) {}
+  rpc GetWindowState (.google.protobuf.Empty) returns (.spotify.desktop.window_state_esperanto.proto.GetWindowStateResponse) {}
+  rpc SetWindowState (.spotify.desktop.window_state_esperanto.proto.SetWindowStateRequest) returns (.google.protobuf.Empty) {}
+  rpc FocusWindow (.google.protobuf.Empty) returns (.google.protobuf.Empty) {}
+  rpc CloseWindow (.google.protobuf.Empty) returns (.google.protobuf.Empty) {}
+}
+
+message WindowStateResponse {
+  .spotify.desktop.window_state_esperanto.proto.WindowState state = 1;
+}
+
+message SetWindowStateRequest {
+  .spotify.desktop.window_state_esperanto.proto.WindowState state = 1;
+}
+
+message GetWindowStateResponse {
+  .spotify.desktop.window_state_esperanto.proto.WindowState state = 1;
+}
+
+enum WindowState {
+  WINDOW_STATE_UNSPECIFIED = 0;
+  WINDOW_STATE_NORMAL = 1;
+  WINDOW_STATE_MAXIMIZED = 2;
+  WINDOW_STATE_MINIMIZED = 3;
+  WINDOW_STATE_HIDDEN = 4;
+}
+

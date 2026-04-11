@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+import "context_index.proto";
+import "context_track.proto";
+import "seek_to_position.proto";
+
+message TrackInstance {
+  reserved 3;
+  optional .spotify.player.proto.ContextTrack track = 1;
+  optional uint64 id = 2;
+  optional .spotify.player.proto.SeekToPosition seek_to_position = 7;
+  optional bool initially_paused = 4;
+  optional .spotify.player.proto.ContextIndex index = 5;
+  optional string provider = 6;
+  optional string seek_to_creator_timestamp = 9;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AudioDriverError {
+  optional int64 error_code = 1;
+  optional string location = 2;
+  optional string driver_name = 3;
+  optional string additional_data = 4;
+}
+

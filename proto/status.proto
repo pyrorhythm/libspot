@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+message Status {
+  int32 code = 1;
+  string reason = 2;
+}
+

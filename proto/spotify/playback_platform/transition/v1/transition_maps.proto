@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package spotify.playback_platform.transition.v1;
+
+option java_package = "spotify.playback_platform.transition.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/common/v1/duration.proto";
+
+message TargetId {
+  oneof target_id {
+    bytes audio_id = 1;
+    bytes video_id = 2;
+  }
+}
+
+message TargetTag {
+  oneof target_tag {
+    bytes file_id = 1;
+    bytes encoding_id = 2;
+  }
+}
+
+message TransitionMaps {
+  repeated .spotify.playback_platform.transition.v1.TransitionMap transition_maps = 1;
+}
+
+message TransitionMap {
+  repeated .spotify.playback_platform.transition.v1.TargetId from_id = 1;
+  repeated .spotify.playback_platform.transition.v1.TargetId to_id = 2;
+  repeated .spotify.playback_platform.transition.v1.TimeMap time_maps = 4;
+  optional .spotify.playback_platform.transition.v1.TransitionDirection direction = 3;
+  optional .spotify.playback_platform.transition.v1.TargetTag from_tag = 5;
+  optional .spotify.playback_platform.transition.v1.TargetTag to_tag = 6;
+}
+
+message TimeMap {
+  .spotify.playback_platform.common.v1.Durations from_t = 1;
+  .spotify.playback_platform.common.v1.Durations to_t = 2;
+}
+
+enum TransitionDirection {
+  TRANSITION_DIRECTION_UNSPECIFIED = 0;
+  TRANSITION_DIRECTION_BIDIRECTIONAL = 1;
+  TRANSITION_DIRECTION_FORWARD = 2;
+}
+

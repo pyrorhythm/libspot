@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.connectivity.hosts.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.hosts.esperanto.proto";
+
+import "es_service_type.proto";
+
+message ConnectionError {
+  .spotify.connectivity.hosts.esperanto.proto.ServiceType service_type = 1;
+  int32 error_code = 2;
+}
+

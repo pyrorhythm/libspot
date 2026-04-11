@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package spotify.connect.esperanto.proto;
+
+option java_package = "com.spotify.connect.esperanto.proto";
+
+import "common_messages.proto";
+
+message VolumeUpRequest {
+  .spotify.connect.esperanto.proto.LoggingParams logging_params = 1;
+  optional string group_device_identifier = 2;
+}
+
+message VolumeDownRequest {
+  .spotify.connect.esperanto.proto.LoggingParams logging_params = 1;
+  optional string group_device_identifier = 2;
+}
+
+message VolumeSetRequest {
+  int32 volume = 1;
+  .spotify.connect.esperanto.proto.LoggingParams logging_params = 2;
+  optional string group_device_identifier = 3;
+}
+
+message VolumeResponse {
+  message GroupDeviceVolumesEntry {
+    string key = 1;
+    uint32 value = 2;
+  }
+
+  .spotify.connect.esperanto.proto.Status status = 2;
+  repeated .spotify.connect.esperanto.proto.VolumeResponse.GroupDeviceVolumesEntry group_device_volumes = 4;
+  optional int32 volume = 1;
+  optional string active_device_connect_state_identifier = 3;
+}
+
+message LocalVolumeResponse {
+  enum Reason {
+    USER = 0;
+    SYSTEM = 1;
+  }
+
+  int32 volume = 1;
+  .spotify.connect.esperanto.proto.LocalVolumeResponse.Reason reason = 2;
+}
+

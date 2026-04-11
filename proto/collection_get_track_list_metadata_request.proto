@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "cosmos_get_track_list_metadata_request.proto";
+import "status.proto";
+
+message CollectionGetTrackListMetadataRequest {
+  string filter = 2;
+  uint32 update_throttling = 3;
+}
+
+message CollectionGetTrackListMetadataResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+  .spotify.collection_cosmos.proto.TrackListMetadata metadata = 2;
+}
+

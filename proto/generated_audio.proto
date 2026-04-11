@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package spotify.playback_metadata.proto;
+
+import "spotify/playback_platform/timeline/v1/timespan.proto";
+
+message GeneratedAudioFile {
+  string context_id = 1;
+  .spotify.playback_platform.timeline.v1.Timespan.GeneratedAudio generated_audio = 2;
+}
+

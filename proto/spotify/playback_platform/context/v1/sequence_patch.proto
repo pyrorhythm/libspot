@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+message SequencePatch {
+  message Change {
+    repeated string select = 1;
+    repeated string insert = 3;
+    repeated string remove = 4;
+    optional string before = 2;
+    optional int32 iteration = 5;
+  }
+
+  repeated .spotify.playback_platform.context.v1.SequencePatch.Change changes = 1;
+}
+

@@ -1,0 +1,94 @@
+syntax = "proto3";
+
+package spotify.connectivity.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.esperanto.proto";
+option java_multiple_files = true;
+
+service ConnectivityPolicy {
+  rpc setRules (.spotify.connectivity.esperanto.proto.PutRulesRequest) returns (.spotify.connectivity.esperanto.proto.PutRulesResponse) {}
+  rpc setForceOffline (.spotify.connectivity.esperanto.proto.ForceOfflineRequest) returns (.spotify.connectivity.esperanto.proto.ForceOfflineResponse) {}
+  rpc subState (.spotify.connectivity.esperanto.proto.SubStateRequest) returns (stream .spotify.connectivity.esperanto.proto.GetStateResponse) {}
+  rpc getState (.spotify.connectivity.esperanto.proto.GetStateRequest) returns (.spotify.connectivity.esperanto.proto.GetStateResponse) {}
+  rpc getRules (.spotify.connectivity.esperanto.proto.GetRulesRequest) returns (.spotify.connectivity.esperanto.proto.GetRulesResponse) {}
+  rpc setConnectionType (.spotify.connectivity.esperanto.proto.SetConnectionTypeRequest) returns (.spotify.connectivity.esperanto.proto.SetConnectionTypeResponse) {}
+}
+
+message PutRulesRequest {
+  optional bool allow_sync_over_cellular = 1;
+  optional bool allow_network = 2;
+  optional bool allow_network_if_roaming = 3;
+  optional bool allow_sync_over_wifi = 4;
+}
+
+message ForceOfflineRequest {
+  bool force_offline = 1;
+}
+
+message SubStateRequest {
+}
+
+message GetStateRequest {
+}
+
+message GetRulesRequest {
+}
+
+message SetConnectionTypeRequest {
+  .spotify.connectivity.esperanto.proto.ConnectionType type = 1;
+  bool roaming = 2;
+}
+
+message PutRulesResponse {
+}
+
+message ForceOfflineResponse {
+  enum StatusCode {
+    SUCCESS = 0;
+    NOT_FOUND = 2;
+  }
+
+  .spotify.connectivity.esperanto.proto.ForceOfflineResponse.StatusCode status_code = 1;
+  optional string error_message = 2;
+}
+
+message GetStateResponse {
+  enum StatusCode {
+    SUCCESS = 0;
+    NOT_FOUND = 2;
+  }
+
+  .spotify.connectivity.esperanto.proto.GetStateResponse.StatusCode status_code = 1;
+  string status = 3;
+  optional string error_message = 2;
+}
+
+message GetRulesResponse {
+  bool allow_network = 1;
+  bool allow_network_if_roaming = 2;
+  bool allow_sync_over_cellular = 3;
+  bool allow_sync_over_wifi = 4;
+}
+
+message SetConnectionTypeResponse {
+  enum StatusCode {
+    SUCCESS = 0;
+    BAD_REQUEST = 1;
+  }
+
+  .spotify.connectivity.esperanto.proto.SetConnectionTypeResponse.StatusCode status_code = 1;
+  optional string error_message = 2;
+}
+
+enum ConnectionType {
+  CONNECTION_TYPE_UNKNOWN = 0;
+  CONNECTION_TYPE_NONE = 1;
+  CONNECTION_TYPE_GPRS = 2;
+  CONNECTION_TYPE_EDGE = 3;
+  CONNECTION_TYPE_3G = 4;
+  CONNECTION_TYPE_4G = 5;
+  CONNECTION_TYPE_WLAN = 6;
+  CONNECTION_TYPE_ETHERNET = 7;
+  CONNECTION_TYPE_5G = 8;
+}
+

@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message CoreAutoplayLoadingResults {
+  optional int32 response_status = 1;
+  optional string context_uri = 2;
+  optional string endpoint = 3;
+  optional string session_id = 4;
+  optional int32 request_latency = 5;
+  optional int32 autoplay_tracks_count = 6;
+  optional int32 client_error_code = 7;
+}
+

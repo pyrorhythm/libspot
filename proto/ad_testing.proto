@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service Testing {
+  rpc AddPlaytime (.spotify.ads.esperanto.proto.AddPlaytimeRequest) returns (.spotify.ads.esperanto.proto.AddPlaytimeResponse) {}
+  rpc RequestOverride (.spotify.ads.esperanto.proto.RequestOverrideRequest) returns (.spotify.ads.esperanto.proto.RequestOverrideResponse) {}
+  rpc InsertAds (.spotify.ads.esperanto.proto.InsertAdsRequest) returns (.spotify.ads.esperanto.proto.InsertAdsResponse) {}
+}
+
+message AddPlaytimeRequest {
+  uint32 seconds = 1;
+}
+
+message AddPlaytimeResponse {
+}
+
+message RequestOverrideRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message RequestOverrideResponse {
+  enum Status {
+    OK = 0;
+    NOT_FOUND = 1;
+  }
+
+  .spotify.ads.esperanto.proto.RequestOverrideResponse.Status status = 1;
+}
+
+message InsertAdsRequest {
+  string ads_json = 1;
+}
+
+message InsertAdsResponse {
+  enum Status {
+    OK = 0;
+    FAILED = 1;
+  }
+
+  .spotify.ads.esperanto.proto.InsertAdsResponse.Status status = 1;
+}
+

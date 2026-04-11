@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "es_context.proto";
+import "es_play_options.proto";
+import "es_logging_params.proto";
+import "es_prepare_play_options.proto";
+import "es_play_origin.proto";
+import "playlist_query.proto";
+import "response_status.proto";
+
+message PlaylistPlayRequest {
+  .spotify.playlist_esperanto.proto.PlaylistQuery playlist_query = 1;
+  .spotify.player.esperanto.proto.Context context = 2;
+  .spotify.player.esperanto.proto.PlayOptions play_options = 3;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 4;
+  .spotify.player.esperanto.proto.PreparePlayOptions prepare_play_options = 5;
+  .spotify.player.esperanto.proto.PlayOrigin play_origin = 6;
+}
+
+message PlaylistPlayResponse {
+  .spotify.playlist_esperanto.proto.ResponseStatus status = 1;
+}
+

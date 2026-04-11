@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package spotify.cappingapi.v1;
+
+option java_package = "com.spotify.cappingapi.v1";
+option java_multiple_files = true;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+message Quota {
+  .google.protobuf.Timestamp valid_from = 1;
+  .google.protobuf.Timestamp valid_to = 2;
+  int32 priority = 3;
+  int64 allowance = 4;
+  int64 consumption = 5;
+}
+
+message QuotaInfo {
+  .spotify.cappingapi.v1.Feature feature = 1;
+  bool is_capping_enabled = 2;
+  .google.protobuf.Timestamp refresh_at = 3;
+  repeated .spotify.cappingapi.v1.Quota quotas = 4;
+}
+
+message ConsumptionEvent {
+  int64 consumption_value = 2;
+  string consumption_details = 3;
+  string deduplication_id = 4;
+  .google.protobuf.Timestamp consumption_ts = 5;
+}
+
+message FeatureConsumption {
+  .spotify.cappingapi.v1.Feature feature = 1;
+  repeated .spotify.cappingapi.v1.ConsumptionEvent consumption = 2;
+}
+
+message GetQuotasRequest {
+  repeated .spotify.cappingapi.v1.Feature features = 1;
+  .google.protobuf.Duration timezone_offset = 2;
+}
+
+message GetQuotasResponse {
+  repeated .spotify.cappingapi.v1.QuotaInfo quota_info = 1;
+}
+
+message PutConsumptionRequest {
+  repeated .spotify.cappingapi.v1.Feature get_features = 1;
+  .google.protobuf.Duration timezone_offset = 2;
+  repeated .spotify.cappingapi.v1.FeatureConsumption consumption = 3;
+}
+
+message PutConsumptionResponse {
+  repeated .spotify.cappingapi.v1.QuotaInfo quota_info = 1;
+}
+
+enum Feature {
+  UNDEFINED = 0;
+  AUDIOBOOK_SUBSCRIPTION = 1;
+  PICK_AND_SHUFFLE = 2;
+  LYRICS = 3;
+}
+

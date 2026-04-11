@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.search_esperanto.proto;
+
+option java_package = "com.spotify.search.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "SPTSearchEsperanto";
+
+import "search.proto";
+
+service OfflineSearchService {
+  rpc Query (.spotify.search_esperanto.proto.OfflineSearchRequest) returns (.spotify.search_esperanto.proto.OfflineSearchResponse) {}
+}
+
+message OfflineSearchRequest {
+  string query = 1;
+  int32 limit = 2;
+  bool include_chapters = 3;
+}
+
+message OfflineSearchResponse {
+  repeated .spotify.search.proto.OfflineAlbum albums = 1;
+  repeated .spotify.search.proto.OfflineAudioEpisode audio_episodes = 2;
+  repeated .spotify.search.proto.OfflinePlaylist playlists = 3;
+  repeated .spotify.search.proto.OfflineTrack tracks = 4;
+}
+

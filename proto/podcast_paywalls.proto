@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.podcast_paywalls_esperanto.proto;
+
+option java_package = "com.spotify.podcast_paywalls_esperanto.proto";
+option java_multiple_files = true;
+
+service PodcastPaywalls {
+  rpc PutShowSubscription (.spotify.podcast_paywalls_esperanto.proto.PodcastPaywallsShowSubscriptionRequest) returns (.spotify.podcast_paywalls_esperanto.proto.PodcastPaywallsShowSubscriptionResponse) {}
+}
+
+message PodcastPaywallsShowSubscriptionRequest {
+  string show_uri = 1;
+}
+
+message PodcastPaywallsShowSubscriptionResponse {
+  bool is_user_subscribed = 1;
+}
+

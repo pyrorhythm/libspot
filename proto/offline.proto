@@ -1,0 +1,92 @@
+syntax = "proto3";
+
+package spotify.offline.proto;
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+message Capacity {
+  double total_space = 1;
+  double free_space = 2;
+  double offline_space = 3;
+  uint64 track_count = 4;
+  uint64 episode_count = 5;
+}
+
+message Capabilities {
+  bool remote_downloads_enabled = 1;
+}
+
+message Device {
+  string device_id = 1;
+  string cache_id = 2;
+  string name = 3;
+  int32 type = 4;
+  int32 platform = 5;
+  string client_id = 12;
+  bool offline_enabled = 6;
+  .spotify.offline.proto.Capacity capacity = 7;
+  .spotify.offline.proto.Capabilities capabilities = 8;
+  .google.protobuf.Timestamp updated_at = 9;
+  .google.protobuf.Timestamp last_seen_at = 10;
+}
+
+message Restrictions {
+  .google.protobuf.Duration allowed_duration_tracks = 1;
+  uint64 max_tracks = 2;
+  .google.protobuf.Duration allowed_duration_episodes = 3;
+  uint64 max_episodes = 4;
+  .google.protobuf.Duration allowed_duration_abp_chapters = 5;
+}
+
+message Resource {
+  string uri = 1;
+  .spotify.offline.proto.ResourceState state = 2;
+  int32 progress = 3;
+  .google.protobuf.Timestamp updated_at = 4;
+  string failure_message = 5;
+  .spotify.offline.proto.ChangeReason add_reason = 6;
+}
+
+message DeviceKey {
+  string user_id = 1;
+  string device_id = 2;
+  string cache_id = 3;
+}
+
+message ResourceOperation {
+  enum Operation {
+    INVALID = 0;
+    ADD = 1;
+    REMOVE = 2;
+  }
+
+  .spotify.offline.proto.ResourceOperation.Operation operation = 2;
+  string uri = 3;
+  .spotify.offline.proto.ChangeReason change_reason = 4;
+}
+
+message PlaylistAdditionalData {
+  repeated string music_video_uris = 1;
+}
+
+enum ResourceState {
+  UNSPECIFIED = 0;
+  REQUESTED = 1;
+  PENDING = 2;
+  DOWNLOADING = 3;
+  DOWNLOADED = 4;
+  FAILURE = 5;
+}
+
+enum ChangeReason {
+  CHANGE_REASON_UNSPECIFIED = 0;
+  CHANGE_REASON_USER_ACTION_LOCAL_DEVICE = 1;
+  CHANGE_REASON_USER_ACTION_REMOTE_DEVICE = 2;
+  CHANGE_REASON_AUTO_DOWNLOAD_SHOW = 3;
+  CHANGE_REASON_USER_ACTION_DISALLOW_OFFLINE_PLAYBACK = 4;
+  CHANGE_REASON_DEVICE_LIMIT_REACHED = 5;
+  CHANGE_REASON_UNSUPPORTED_LINK_PRUNED = 6;
+  CHANGE_REASON_REMOVED_FROM_LISTEN_LATER = 7;
+}
+

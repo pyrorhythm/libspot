@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.perf_metrics.esperanto.proto;
+
+option java_package = "com.spotify.performance.perfmetricsproto";
+
+service PerfMetricsService {
+  rpc TerminateState (.spotify.perf_metrics.esperanto.proto.PerfMetricsRequest) returns (.spotify.perf_metrics.esperanto.proto.PerfMetricsResponse) {}
+}
+
+message PerfMetricsRequest {
+  string terminal_state = 1;
+  bool foreground_startup = 2;
+}
+
+message PerfMetricsResponse {
+  bool success = 1;
+}
+

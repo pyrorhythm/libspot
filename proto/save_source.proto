@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package spotify.list_collection.save_source.proto;
+
+option java_package = "com.spotify.list_collection.save_source.proto";
+option java_multiple_files = true;
+
+message SaveSource {
+  optional string original_uri = 1;
+  optional string interaction_id = 2;
+}
+

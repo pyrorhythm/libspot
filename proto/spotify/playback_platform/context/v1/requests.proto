@@ -1,0 +1,133 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/common/v1/cache_control.proto";
+import "spotify/playback_platform/common/v1/client.proto";
+import "spotify/playback_platform/common/v1/request_error.proto";
+import "spotify/playback_platform/context/v1/behavior/action.proto";
+import "spotify/playback_platform/context/v1/context.proto";
+import "spotify/playback_platform/context/v1/context_environment.proto";
+import "spotify/playback_platform/context/v1/context_state.proto";
+import "spotify/playback_platform/context/v1/ledger.proto";
+import "spotify/playback_platform/context/v1/sequence_child.proto";
+
+message ContextRequest {
+  message Cache {
+    message ChildrenEntry {
+      string key = 1;
+      .spotify.playback_platform.context.v1.ContextRequest.Cache value = 2;
+    }
+
+    repeated .spotify.playback_platform.context.v1.ContextRequest.Cache.ChildrenEntry children = 2;
+    optional bytes entity_tag = 1;
+  }
+
+  message State {
+    message ChildrenEntry {
+      string key = 1;
+      .spotify.playback_platform.context.v1.ContextRequest.State value = 2;
+    }
+
+    .spotify.playback_platform.context.v1.ContextState state = 1;
+    repeated .spotify.playback_platform.context.v1.ContextRequest.State.ChildrenEntry children = 2;
+  }
+
+  message Query {
+    string context_id = 1;
+    .spotify.playback_platform.context.v1.ContextRequest.Cache cache = 2;
+    .spotify.playback_platform.context.v1.ContextRequest.State state = 3;
+    .spotify.playback_platform.context.v1.ContextEnvironment env = 4;
+  }
+
+  repeated .spotify.playback_platform.context.v1.ContextRequest.Query queries = 1;
+  .spotify.playback_platform.common.v1.Client client = 2;
+}
+
+message SequencePageRequest {
+  message Query {
+    bytes page_id = 1;
+    .spotify.playback_platform.context.v1.ContextRequest.Query context_query = 2;
+  }
+
+  repeated .spotify.playback_platform.context.v1.SequencePageRequest.Query queries = 1;
+  .spotify.playback_platform.common.v1.Client client = 2;
+}
+
+message ContextResponse {
+  message Result {
+    message PreloadedChildrenEntry {
+      string key = 1;
+      .spotify.playback_platform.context.v1.ContextResponse.Result value = 2;
+    }
+
+    .spotify.playback_platform.common.v1.RequestError error = 1;
+    .spotify.playback_platform.context.v1.Context context = 2;
+    .spotify.playback_platform.common.v1.CacheControl cache_control = 3;
+    .spotify.playback_platform.context.v1.ContextState state = 4;
+    .spotify.playback_platform.context.v1.ContextEnvironment env = 5;
+    repeated .spotify.playback_platform.context.v1.ContextResponse.Result.PreloadedChildrenEntry preloaded_children = 6;
+  }
+
+  message ResultsEntry {
+    uint32 key = 1;
+    .spotify.playback_platform.context.v1.ContextResponse.Result value = 2;
+  }
+
+  repeated .spotify.playback_platform.context.v1.ContextResponse.ResultsEntry results = 1;
+}
+
+message SequencePageResponse {
+  message Result {
+    message PreloadedChildrenEntry {
+      string key = 1;
+      .spotify.playback_platform.context.v1.ContextResponse.Result value = 2;
+    }
+
+    .spotify.playback_platform.common.v1.RequestError error = 1;
+    repeated .spotify.playback_platform.context.v1.SequenceChild children = 2;
+    repeated .spotify.playback_platform.context.v1.SequencePageResponse.Result.PreloadedChildrenEntry preloaded_children = 5;
+    optional bytes prev_page_id = 3;
+    optional bytes next_page_id = 4;
+  }
+
+  message ResultsEntry {
+    uint32 key = 1;
+    .spotify.playback_platform.context.v1.SequencePageResponse.Result value = 2;
+  }
+
+  repeated .spotify.playback_platform.context.v1.SequencePageResponse.ResultsEntry results = 1;
+}
+
+message RemoteActionRequest {
+  string context_id = 1;
+  .spotify.playback_platform.context.v1.ContextRequest.Query context_query = 4;
+  .spotify.playback_platform.common.v1.Client client = 5;
+  .spotify.playback_platform.context.v1.Ledger ledger = 6;
+  optional string action_id = 2;
+  optional bytes parameters = 3;
+}
+
+message RemoteActionResponse {
+  repeated .spotify.playback_platform.context.v1.RemoteAction actions = 1;
+  .spotify.playback_platform.common.v1.RequestError error = 2;
+}
+
+message RemoteAction {
+  message Replace {
+    .spotify.playback_platform.context.v1.ContextResponse.Result result = 1;
+  }
+
+  oneof action {
+    .spotify.playback_platform.context.v1.RemoteAction.Replace replace = 1;
+    .spotify.playback_platform.context.v1.behavior.Action.Report report = 2;
+    .spotify.playback_platform.context.v1.behavior.Action.Reload reload = 3;
+    .spotify.playback_platform.context.v1.behavior.Action.Unload unload = 4;
+    .spotify.playback_platform.context.v1.behavior.Action.Signal signal = 5;
+    .spotify.playback_platform.context.v1.behavior.Action.Player player = 6;
+  }
+}
+

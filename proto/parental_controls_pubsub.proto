@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package spotify.parental_controls.proto;
+
+message KeyValuePair {
+  required string key = 1;
+  required string value = 2;
+}
+
+message UserAttributesUpdate {
+  repeated .spotify.parental_controls.proto.KeyValuePair pairs = 1;
+}
+

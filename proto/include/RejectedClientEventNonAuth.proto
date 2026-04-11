@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message RejectedClientEventNonAuth {
+  optional string reject_reason = 1;
+  optional string event_name = 2;
+}
+

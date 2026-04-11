@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.connectivity.auth.storage.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.auth.storage.esperanto.proto";
+
+message AuthStorageResult {
+  enum Result {
+    success = 0;
+    userNotFound = 1;
+    userAlreadyExists = 2;
+  }
+
+  .spotify.connectivity.auth.storage.esperanto.proto.AuthStorageResult.Result result = 1;
+}
+

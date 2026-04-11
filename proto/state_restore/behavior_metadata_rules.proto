@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+message BehaviorMetadataRules {
+  repeated string page_instance_ids = 1;
+  repeated string interaction_ids = 2;
+}
+

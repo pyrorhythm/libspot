@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.playability.esperanto.proto;
+
+option java_package = "com.spotify.playability.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+service Playability {
+  rpc GetLocallyPlayable (.spotify.playability.esperanto.proto.GetLocallyPlayableRequest) returns (.spotify.playability.esperanto.proto.GetLocallyPlayableResponse) {}
+  rpc SubscribeLocallyPlayable (.spotify.playability.esperanto.proto.GetLocallyPlayableRequest) returns (stream .spotify.playability.esperanto.proto.GetLocallyPlayableResponse) {}
+}
+
+message GetLocallyPlayableRequest {
+  repeated string uris = 1;
+}
+
+message LocallyPlayable {
+  string uri = 1;
+  bool locally_playable = 2;
+}
+
+message GetLocallyPlayableResponse {
+  repeated .spotify.playability.esperanto.proto.LocallyPlayable items = 1;
+}
+

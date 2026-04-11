@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package spotify.mdata_esperanto.proto;
+
+option java_package = "com.spotify.mdata.esperanto.proto";
+option java_multiple_files = true;
+
+import "extension_kind.proto";
+import "google/protobuf/any.proto";
+
+message ObserveResponse {
+  message ExtensionResult {
+    enum Status {
+      MISSING = 0;
+      OK = 1;
+    }
+
+    string entity_uri = 1;
+    .spotify.extendedmetadata.ExtensionKind extension_kind = 2;
+    .google.protobuf.Any extension_data = 3;
+    .spotify.mdata_esperanto.proto.ObserveResponse.ExtensionResult.Status status = 4;
+    .spotify.mdata_esperanto.proto.ObserveResponse.Details details = 5;
+  }
+
+  message Details {
+    enum CacheStatus {
+      UNKNOWN = 0;
+      OK = 1;
+      NOT_RESOLVED = 2;
+      NOT_FOUND = 3;
+      UNAVAILABLE_FOR_LEGAL_REASONS = 4;
+    }
+
+    .spotify.mdata_esperanto.proto.ObserveResponse.Details.CacheStatus cache_status = 1;
+    bool fresh = 2;
+  }
+
+  repeated .spotify.mdata_esperanto.proto.ObserveResponse.ExtensionResult extension_result = 1;
+  bool pending_response = 2;
+}
+

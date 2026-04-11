@@ -1,0 +1,80 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "state_restore/ads_rules_inject_tracks.proto";
+import "state_restore/automix_rules.proto";
+import "state_restore/automix_talk_rules.proto";
+import "state_restore/behavior_metadata_rules.proto";
+import "state_restore/circuit_breaker_rules.proto";
+import "state_restore/explicit_content_rules.proto";
+import "state_restore/kitteh_box_rules.proto";
+import "state_restore/mft_rules_core.proto";
+import "state_restore/mod_rules_interruptions.proto";
+import "state_restore/music_injection_rules.proto";
+import "state_restore/remove_banned_tracks_rules.proto";
+import "state_restore/resume_points_rules.proto";
+import "state_restore/shuffle_order_event_rules.proto";
+import "state_restore/track_error_rules.proto";
+
+message PlayEvents {
+  required uint64 max_consecutive = 1;
+  required uint64 max_occurrences_in_period = 2;
+  required int64 period = 3;
+}
+
+message SkipEvents {
+  required uint64 max_occurrences_in_period = 1;
+  required int64 period = 2;
+}
+
+message Context {
+  required uint64 min_tracks = 1;
+}
+
+message MftConfiguration {
+  optional .spotify.player.proto.state_restore.PlayEvents track = 1;
+  optional .spotify.player.proto.state_restore.PlayEvents album = 2;
+  optional .spotify.player.proto.state_restore.PlayEvents artist = 3;
+  optional .spotify.player.proto.state_restore.SkipEvents skip = 4;
+  optional .spotify.player.proto.state_restore.Context context = 5;
+  optional .spotify.player.proto.state_restore.PlayEvents social_track = 6;
+}
+
+message MftRules {
+  message OldForwardRulesEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.state_restore.ContextPlayerRules value = 2;
+  }
+
+  required bool locked = 1;
+  optional .spotify.player.proto.state_restore.MftConfiguration config = 2;
+  repeated .spotify.player.proto.state_restore.MftRules.OldForwardRulesEntry old_forward_rules = 3;
+  optional .spotify.player.proto.state_restore.ContextPlayerRules forward_rules = 4;
+}
+
+message ContextPlayerRules {
+  message SubRulesEntry {
+    optional string key = 1;
+    optional .spotify.player.proto.state_restore.ContextPlayerRules value = 2;
+  }
+
+  optional .spotify.player.proto.state_restore.BehaviorMetadataRules behavior_metadata_rules = 1;
+  optional .spotify.player.proto.state_restore.CircuitBreakerRules circuit_breaker_rules = 2;
+  optional .spotify.player.proto.state_restore.ExplicitContentRules explicit_content_rules = 3;
+  optional .spotify.player.proto.state_restore.MusicInjectionRules music_injection_rules = 5;
+  optional .spotify.player.proto.state_restore.RemoveBannedTracksRules remove_banned_tracks_rules = 6;
+  optional .spotify.player.proto.state_restore.ResumePointsRules resume_points_rules = 7;
+  optional .spotify.player.proto.state_restore.TrackErrorRules track_error_rules = 8;
+  optional .spotify.player.proto.state_restore.AdsRulesInjectTracks ads_rules_inject_tracks = 9;
+  optional .spotify.player.proto.state_restore.MftRulesCore mft_rules_core = 10;
+  optional .spotify.player.proto.state_restore.ModRulesInterruptions mod_rules_interruptions = 11;
+  optional .spotify.player.proto.state_restore.KittehBoxRules kitteh_box_rules = 12;
+  optional .spotify.player.proto.state_restore.AutomixRules automix_rules = 13;
+  optional .spotify.player.proto.state_restore.AutomixTalkRules automix_talk_rules = 14;
+  optional .spotify.player.proto.state_restore.MftRules mft_rules = 15;
+  repeated .spotify.player.proto.state_restore.ContextPlayerRules.SubRulesEntry sub_rules = 16;
+  optional bool is_adaptor_only = 17;
+  optional .spotify.player.proto.state_restore.ShuffleOrderEventRules shuffle_order_event_rules = 18;
+}
+

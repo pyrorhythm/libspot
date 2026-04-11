@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package spotify.podcast.extensions;
+
+option java_package = "com.spotify.podcastextensions.proto";
+option java_outer_classname = "PodcastExtensionsProto";
+option java_multiple_files = true;
+option objc_class_prefix = "SPT";
+
+message PodcastTopics {
+  repeated .spotify.podcast.extensions.PodcastTopic topics = 1;
+}
+
+message PodcastTopic {
+  string uri = 1;
+  string title = 2;
+}
+
+message PodcastHtmlDescription {
+  message Header {
+  }
+
+  .spotify.podcast.extensions.PodcastHtmlDescription.Header header = 1;
+  string html_description = 2;
+}
+

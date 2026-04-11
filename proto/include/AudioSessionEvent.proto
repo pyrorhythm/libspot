@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AudioSessionEvent {
+  optional string event = 1;
+  optional string context = 2;
+  optional string json_data = 3;
+  optional bytes playback_id = 4;
+  optional string reason = 5;
+  optional string feature_identifier = 6;
+  optional int32 seek_position = 7;
+  optional bool paused = 8;
+  optional int64 speed = 9;
+  optional int32 fade_start_position = 10;
+  optional int32 seek_creator_position = 11;
+}
+

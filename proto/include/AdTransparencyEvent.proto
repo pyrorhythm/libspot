@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message AdTransparencyEvent {
+  optional string info_provider = 1;
+  optional bool has_skipton_decision = 2;
+  optional string request_id = 3;
+  optional int32 max_count_remaining = 4;
+  optional int32 max_duration_remaining = 5;
+  optional int32 last_played_duration = 6;
+  optional int32 position_in_ad_break = 7;
+  optional int32 total_ads_estimate = 8;
+  repeated string played_ad_ids = 9;
+  optional string slot = 10;
+}
+

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package spotify.ads.proto;
+
+option java_multiple_files = true;
+
+message SKAdNetworkData {
+  string signature_store_kit = 1;
+  string signature_view_through = 2;
+  string version = 3;
+  string network_identifier = 4;
+  string source_identifier = 5;
+  int64 timestamp = 6;
+  string nonce = 7;
+  string source_app_identifier = 8;
+  string advertised_app_identifier = 9;
+}
+
+message Verification {
+  oneof type {
+    .spotify.ads.proto.SKAdNetworkData sk_ad_network = 1;
+  }
+}
+
+message VerificationAd {
+  repeated .spotify.ads.proto.Verification verifications = 17;
+}
+

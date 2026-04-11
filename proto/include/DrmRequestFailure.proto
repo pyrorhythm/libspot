@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DrmRequestFailure {
+  optional string reason = 1;
+  optional int64 error_code = 2;
+  optional bool fatal = 3;
+  optional bytes playback_id = 4;
+}
+

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_command_options.proto";
+import "es_logging_params.proto";
+
+message SetShufflingContextRequest {
+  bool shuffling_context = 1;
+  .spotify.player.esperanto.proto.CommandOptions options = 2;
+  .spotify.player.esperanto.proto.LoggingParams logging_params = 3;
+}
+

@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message PodcastSAILoopEvent {
+  optional string event = 1;
+  optional string current_track_uri = 2;
+  optional string episode_with_ads = 3;
+  optional string selected_segment = 4;
+  optional int32 start = 5;
+  optional int32 stop = 6;
+  repeated string effects = 7;
+  optional string playback_id = 8;
+  optional string app_startup_id = 9;
+  optional string request_id = 10;
+  optional string loop_id = 11;
+}
+

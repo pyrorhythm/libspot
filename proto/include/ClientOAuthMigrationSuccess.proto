@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ClientOAuthMigrationSuccess {
+}
+

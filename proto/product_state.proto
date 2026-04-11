@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+package spotify.product_state.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.product_state.esperanto.proto";
+option java_multiple_files = true;
+
+service ProductState {
+  rpc GetValues (.spotify.product_state.esperanto.proto.GetValuesRequest) returns (.spotify.product_state.esperanto.proto.GetValuesResponse) {}
+  rpc SubValues (.spotify.product_state.esperanto.proto.SubValuesRequest) returns (stream .spotify.product_state.esperanto.proto.GetValuesResponse) {}
+  rpc PutValues (.spotify.product_state.esperanto.proto.PutValuesRequest) returns (.spotify.product_state.esperanto.proto.PutValuesResponse) {}
+  rpc PutValuesSync (.spotify.product_state.esperanto.proto.PutValuesSyncRequest) returns (.spotify.product_state.esperanto.proto.PutValuesSyncResponse) {}
+  rpc PutOverridesValues (.spotify.product_state.esperanto.proto.PutOverridesValuesRequest) returns (.spotify.product_state.esperanto.proto.PutOverridesValuesResponse) {}
+  rpc DelOverridesValues (.spotify.product_state.esperanto.proto.DelOverridesValuesRequest) returns (.spotify.product_state.esperanto.proto.DelOverridesValuesResponse) {}
+}
+
+message GetValuesRequest {
+}
+
+message SubValuesRequest {
+}
+
+message PutOverridesValuesRequest {
+  message PairsEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.product_state.esperanto.proto.PutOverridesValuesRequest.PairsEntry pairs = 1;
+}
+
+message DelOverridesValuesRequest {
+  repeated string keys = 1;
+}
+
+message PutValuesRequest {
+  message PairsEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.product_state.esperanto.proto.PutValuesRequest.PairsEntry pairs = 1;
+}
+
+message PutValuesResponse {
+}
+
+message PutValuesSyncRequest {
+  message PairsEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.product_state.esperanto.proto.PutValuesSyncRequest.PairsEntry pairs = 1;
+}
+
+message PutValuesSyncResponse {
+  uint32 error_code = 1;
+}
+
+message GetValuesResponse {
+  message PairsEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.product_state.esperanto.proto.GetValuesResponse.PairsEntry pairs = 1;
+}
+
+message PutOverridesValuesResponse {
+}
+
+message DelOverridesValuesResponse {
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message BrokenObject {
+  optional string type = 1;
+  optional string id = 2;
+  optional int64 error_code = 3;
+  optional bytes playback_id = 4;
+}
+

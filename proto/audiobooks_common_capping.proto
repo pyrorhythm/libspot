@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message AudiobooksCommonCapping {
+  optional bool should_block_resume = 3;
+}
+

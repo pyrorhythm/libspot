@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "restrictions.proto";
+
+message ProvidedTrack {
+  message MetadataEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  message InternalMetadataEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  optional string uid = 1;
+  optional string uri = 2;
+  repeated .spotify.player.proto.state_restore.ProvidedTrack.MetadataEntry metadata = 3;
+  optional string provider = 4;
+  repeated string removed = 5;
+  repeated string blocked = 6;
+  repeated .spotify.player.proto.state_restore.ProvidedTrack.InternalMetadataEntry internal_metadata = 7;
+  optional .spotify.player.proto.Restrictions restrictions = 8;
+}
+

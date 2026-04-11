@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package spotify.cosmos_util.proto;
+
+option java_package = "com.spotify.cosmos.util.proto";
+option java_multiple_files = true;
+
+message EpisodeSyncState {
+  optional string offline_state = 1;
+  optional uint32 sync_progress = 2;
+}
+

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package spotify.offline_esperanto.proto;
+
+option java_package = "com.spotify.offline_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/empty.proto";
+
+service OfflineDebug {
+  rpc OnKeyStats (.google.protobuf.Empty) returns (stream .spotify.offline_esperanto.proto.KeyStatsResponse) {}
+}
+
+message KeyStatsResponse {
+  int64 cached = 1;
+  int64 offline = 2;
+  int64 memory = 3;
+}
+

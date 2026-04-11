@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package spotify.playback_platform.timeline.v1;
+
+option java_package = "spotify.playback_platform.timeline.v1";
+option java_multiple_files = true;
+
+message TimelineOptions {
+  optional float playback_speed = 1;
+}
+

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package spotify.playbacksettings.pubsub;
+
+option java_package = "com.spotify.playbacksettings.model.pubsub";
+option java_multiple_files = true;
+
+import "playback-settings.proto";
+
+message DeviceSettingsFieldsChangedEvent {
+  reserved 1;
+  string device_id = 2;
+  string device_name = 3;
+  repeated .spotify.playbacksettings.Field changed_fields = 4;
+}
+
+message ContentSettingsChangedEvent {
+  reserved 1;
+  string content_id = 2;
+  repeated .spotify.playbacksettings.Field changed_fields = 3;
+}
+
+message UserSettingsChangedEvent {
+  reserved 1;
+  repeated .spotify.playbacksettings.Field changed_fields = 2;
+}
+

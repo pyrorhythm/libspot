@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package spotify.list.v1.model;
+
+option java_package = "com.spotify.list.v1.model";
+option java_outer_classname = "LensesProto";
+option java_multiple_files = true;
+
+message Lens {
+  optional string identifier = 1;
+}
+
+message LensStatus {
+  optional int32 http_code = 1;
+}
+
+message LensState {
+  optional .spotify.list.v1.model.Lens lens = 1;
+  optional bytes revision = 2;
+  optional .spotify.list.v1.model.LensStatus status = 3;
+}
+
+message LensOptions {
+  repeated .spotify.list.v1.model.Lens apply_lenses = 1;
+  repeated .spotify.list.v1.model.LensState client_lens_state = 2;
+}
+
+message AppliedLenses {
+  repeated .spotify.list.v1.model.LensState states = 1;
+}
+

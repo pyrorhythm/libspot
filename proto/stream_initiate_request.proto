@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package spotify.stream_reporting_esperanto.proto;
+
+option java_package = "com.spotify.stream_reporting_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/timestamp.proto";
+import "media_type.proto";
+import "orchestration_stack.proto";
+import "play_reason.proto";
+import "playback_stack.proto";
+import "streaming_rule.proto";
+
+message StreamInitiateRequest {
+  reserved 3;
+  bytes playback_id = 1;
+  string video_session_id = 4;
+  .spotify.stream_reporting_esperanto.proto.PlaybackStack playback_stack = 8;
+  .google.protobuf.Timestamp client_timestamp = 29;
+  bool is_ready_to_play = 30;
+  repeated string config_params = 49;
+  optional bytes parent_playback_id = 2;
+  optional string play_context = 5;
+  optional string content_uri = 6;
+  optional string displayed_content_uri = 7;
+  optional string provider = 9;
+  optional string referrer = 10;
+  optional .spotify.stream_reporting_esperanto.proto.StreamingRule streaming_rule = 11;
+  optional string connect_controller_device_id = 12;
+  optional string page_instance_id = 13;
+  optional string interaction_id = 14;
+  optional string source_start = 15;
+  optional .spotify.stream_reporting_esperanto.proto.PlayReason reason_start = 16;
+  optional bool is_shuffle = 17;
+  optional bool is_repeating_track = 18;
+  optional bool is_repeating_context = 19;
+  optional string media_id = 20;
+  optional .spotify.stream_reporting_esperanto.proto.MediaType media_type = 21;
+  optional bool is_live = 22;
+  optional bool content_is_downloaded = 23;
+  optional bool client_offline = 24;
+  optional string decision_id = 25;
+  optional string custom_reporting_attribution = 26;
+  optional string play_context_decision_id = 27;
+  optional string feature_uuid = 28;
+  optional .spotify.stream_reporting_esperanto.proto.OrchestrationStack orchestration_stack = 50;
+  optional string list_uri = 51;
+}
+

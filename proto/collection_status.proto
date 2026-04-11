@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package spotify.collection_esperanto.proto;
+
+option java_package = "com.spotify.collection_esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+message Status {
+  int32 code = 1;
+  string reason = 2;
+}
+

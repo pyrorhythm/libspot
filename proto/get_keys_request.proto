@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package spotify.your_library.proto;
+
+option java_package = "spotify.your_library.esperanto.proto";
+option java_multiple_files = true;
+
+import "your_library_config.proto";
+
+message GetKeysRequest {
+  .spotify.your_library.proto.YourLibrarySortOrder sort_order = 1;
+  repeated string str = 2;
+  repeated int64 nr = 3;
+}
+
+message GetKeysResponse {
+  repeated string key = 1;
+  uint32 status_code = 98;
+  string error = 99;
+}
+

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package spotify.conceptmetadata;
+
+message Concept {
+  string translated_library_name = 1;
+  .spotify.conceptmetadata.ConceptClass libraryClass = 5;
+}
+
+message ConceptClass {
+  string uri = 1;
+  string translated_name = 2;
+}
+

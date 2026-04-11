@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package spotify.collection_cosmos.proto;
+
+option java_package = "spotify.collection.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "collection_decoration_policy.proto";
+import "collection_item.proto";
+import "status.proto";
+
+message CollectionDecorateRequest {
+  repeated string uri = 1;
+  string context_uri = 2;
+  uint32 update_throttling = 3;
+  .spotify.collection_cosmos.proto.CollectionArtistDecorationPolicy artist_policy = 4;
+  .spotify.collection_cosmos.proto.CollectionAlbumDecorationPolicy album_policy = 5;
+  .spotify.collection_cosmos.proto.CollectionTrackDecorationPolicy track_policy = 6;
+  .spotify.collection_cosmos.proto.CollectionShowDecorationPolicy show_policy = 7;
+  .spotify.collection_cosmos.proto.CollectionEpisodeDecorationPolicy episode_policy = 8;
+}
+
+message CollectionDecorateResponse {
+  .spotify.collection_cosmos.proto.Status status = 1;
+  repeated .spotify.collection_cosmos.proto.CollectionShow show = 2;
+  repeated .spotify.collection_cosmos.proto.CollectionEpisode episode = 3;
+  repeated .spotify.collection_cosmos.proto.CollectionAlbum album = 4;
+  repeated .spotify.collection_cosmos.proto.CollectionArtist artist = 5;
+  repeated .spotify.collection_cosmos.proto.CollectionTrack track = 6;
+}
+

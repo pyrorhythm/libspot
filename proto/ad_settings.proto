@@ -1,0 +1,107 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service Settings {
+  rpc getAllSlotSettings (.spotify.ads.esperanto.proto.GetAllSlotSettingsRequest) returns (.spotify.ads.esperanto.proto.GetSlotSettingsResponse) {}
+  rpc getSlotSettings (.spotify.ads.esperanto.proto.GetSlotSettingsRequest) returns (.spotify.ads.esperanto.proto.GetSlotSettingsResponse) {}
+  rpc updateAdServerEndpoint (.spotify.ads.esperanto.proto.UpdateAdServerEndpointRequest) returns (.spotify.ads.esperanto.proto.UpdateSlotResponse) {}
+  rpc updateDisplayTimeInterval (.spotify.ads.esperanto.proto.UpdateTimeIntervalRequest) returns (.spotify.ads.esperanto.proto.UpdateSlotResponse) {}
+  rpc updateExpiryTimeInterval (.spotify.ads.esperanto.proto.UpdateTimeIntervalRequest) returns (.spotify.ads.esperanto.proto.UpdateSlotResponse) {}
+  rpc updateStreamTimeInterval (.spotify.ads.esperanto.proto.UpdateTimeIntervalRequest) returns (.spotify.ads.esperanto.proto.UpdateSlotResponse) {}
+  rpc updateSlotEnabled (.spotify.ads.esperanto.proto.UpdateSlotEnabledRequest) returns (.spotify.ads.esperanto.proto.UpdateSlotResponse) {}
+  rpc getRequestHeaders (.spotify.ads.esperanto.proto.GetRequestHeadersRequest) returns (.spotify.ads.esperanto.proto.GetRequestHeadersResponse) {}
+  rpc setRequestHeaders (.spotify.ads.esperanto.proto.SetRequestHeadersRequest) returns (.spotify.ads.esperanto.proto.SetRequestHeadersResponse) {}
+  rpc deleteRequestHeaders (.spotify.ads.esperanto.proto.DeleteRequestHeadersRequest) returns (.spotify.ads.esperanto.proto.DeleteRequestHeadersResponse) {}
+  rpc updateAdStateEndpoint (.spotify.ads.esperanto.proto.UpdateAdStateEndpointRequest) returns (.spotify.ads.esperanto.proto.UpdateAdStateEndpointResponse) {}
+}
+
+message SlotSettings {
+  string id = 1;
+  bool enabled = 2;
+  optional uint64 display_time_interval = 3;
+  optional uint64 expiry_time_interval = 4;
+  optional uint64 stream_time_interval = 5;
+}
+
+message GetAllSlotSettingsRequest {
+}
+
+message GetSlotSettingsRequest {
+  string slot_id = 1;
+}
+
+message UpdateAdServerEndpointRequest {
+  repeated string slot_ids = 1;
+  string url = 2;
+}
+
+message UpdateTimeIntervalRequest {
+  string slot_id = 1;
+  uint64 time_interval = 2;
+}
+
+message UpdateSlotEnabledRequest {
+  string slot_id = 1;
+  bool enabled = 2;
+}
+
+message GetRequestHeadersRequest {
+  string field = 1;
+}
+
+message SetRequestHeadersRequest {
+  message RequestHeadersEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.ads.esperanto.proto.SetRequestHeadersRequest.RequestHeadersEntry request_headers = 1;
+  bool refresh_inventory = 2;
+}
+
+message DeleteRequestHeadersRequest {
+  string field = 1;
+  bool refresh_inventory = 2;
+}
+
+message UpdateAdStateEndpointRequest {
+  string url = 1;
+}
+
+message GetSlotSettingsResponse {
+  repeated .spotify.ads.esperanto.proto.SlotSettings slot_settings = 1;
+}
+
+message UpdateSlotResponse {
+  enum Status {
+    OK = 0;
+    INVALID_SLOT = 1;
+    BAD_REQUEST = 2;
+  }
+
+  .spotify.ads.esperanto.proto.UpdateSlotResponse.Status status = 1;
+}
+
+message GetRequestHeadersResponse {
+  message RequestHeadersEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.ads.esperanto.proto.GetRequestHeadersResponse.RequestHeadersEntry request_headers = 1;
+}
+
+message SetRequestHeadersResponse {
+}
+
+message DeleteRequestHeadersResponse {
+}
+
+message UpdateAdStateEndpointResponse {
+}
+

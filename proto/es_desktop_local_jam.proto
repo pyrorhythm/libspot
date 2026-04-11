@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+package spotify.desktop.local_jam.proto;
+
+service DesktopLocalJam {
+  rpc StartScanning (.spotify.desktop.local_jam.proto.StartScanRequest) returns (stream .spotify.desktop.local_jam.proto.ScanResponse) {}
+  rpc StopScanning (.spotify.desktop.local_jam.proto.StopScanRequest) returns (.spotify.desktop.local_jam.proto.StopScanResponse) {}
+  rpc StartBroadcasting (.spotify.desktop.local_jam.proto.StartBroadcastRequest) returns (.spotify.desktop.local_jam.proto.StartBroadcastResponse) {}
+  rpc StopBroadcasting (.spotify.desktop.local_jam.proto.StopBroadcastRequest) returns (.spotify.desktop.local_jam.proto.StopBroadcastResponse) {}
+  rpc StartBleBroadcasting (.spotify.desktop.local_jam.proto.StartBleBroadcastRequest) returns (.spotify.desktop.local_jam.proto.StartBleBroadcastResponse) {}
+  rpc StopBleBroadcasting (.spotify.desktop.local_jam.proto.StopBleBroadcastRequest) returns (.spotify.desktop.local_jam.proto.StopBleBroadcastResponse) {}
+  rpc SubNetworkInterfaces (.spotify.desktop.local_jam.proto.SubNetworkInterfacesRequest) returns (stream .spotify.desktop.local_jam.proto.NetworkInterfacesResponse) {}
+}
+
+message LocalNetDevice {
+  .spotify.desktop.local_jam.proto.Tech tech = 1;
+  .spotify.desktop.local_jam.proto.Type type = 2;
+  string title = 3;
+  string token = 4;
+  string device_id = 5;
+}
+
+message LocalBleDevice {
+  string token = 1;
+}
+
+message NetworkInterface {
+  int32 prefix_length = 1;
+  .spotify.desktop.local_jam.proto.IpVersion ip_version = 2;
+}
+
+message StartScanRequest {
+}
+
+message ScanResponse {
+  repeated .spotify.desktop.local_jam.proto.LocalNetDevice devices = 1;
+}
+
+message StopScanRequest {
+}
+
+message StopScanResponse {
+}
+
+message StartBroadcastRequest {
+  .spotify.desktop.local_jam.proto.LocalNetDevice device = 1;
+}
+
+message StartBroadcastResponse {
+}
+
+message StartBleBroadcastRequest {
+  .spotify.desktop.local_jam.proto.LocalBleDevice device = 1;
+}
+
+message StartBleBroadcastResponse {
+}
+
+message StopBroadcastRequest {
+}
+
+message StopBroadcastResponse {
+}
+
+message StopBleBroadcastRequest {
+}
+
+message StopBleBroadcastResponse {
+}
+
+message SubNetworkInterfacesRequest {
+}
+
+message NetworkInterfacesResponse {
+  repeated .spotify.desktop.local_jam.proto.NetworkInterface network_interfaces = 1;
+}
+
+enum Tech {
+  UNSPECIFIED_TECH = 0;
+  CONNECT = 1;
+  CAST_JS = 2;
+  CAST = 3;
+  BLUETOOTH = 4;
+  AIRPLAY = 5;
+  CARPLAY = 6;
+  WIRED = 7;
+}
+
+enum Type {
+  UNKNOWN_TYPE = 0;
+  COMPUTER = 1;
+  TABLET = 2;
+  SMARTPHONE = 3;
+  SPEAKER = 4;
+  SPEAKER_GROUP = 5;
+  TV = 6;
+  AVR = 7;
+  STB = 8;
+  AUDIO_DONGLE = 9;
+  GAME_CONSOLE = 10;
+  CAST_VIDEO = 11;
+  CAST_AUDIO = 12;
+  AUTOMOBILE = 13;
+  SMARTWATCH = 14;
+  CARTHING = 15;
+  HOMETHING = 16;
+  MAYBE_HEADPHONES = 17;
+}
+
+enum IpVersion {
+  UNSPECIFIED_VERSION = 0;
+  V4 = 1;
+  V6 = 2;
+}
+

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.playlist_esperanto.proto;
+
+option java_package = "spotify.playlist.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "response_status.proto";
+
+message LensDefinition {
+  string identifier = 1;
+  bool active = 2;
+  bool remove_by_prefix = 3;
+}
+
+message PlaylistLensRequest {
+  string uri = 1;
+  repeated .spotify.playlist_esperanto.proto.LensDefinition lenses = 2;
+}
+
+message PlaylistLensResponse {
+  .spotify.playlist_esperanto.proto.ResponseStatus status = 1;
+}
+

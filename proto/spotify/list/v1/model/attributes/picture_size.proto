@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.list.v1.model.attributes;
+
+option java_package = "com.spotify.list.v1.model.attributes";
+option java_outer_classname = "PictureSizesProto";
+option java_multiple_files = true;
+
+message PictureSizes {
+  repeated .spotify.list.v1.model.attributes.PictureSize picture_size = 1;
+}
+
+message PictureSize {
+  optional string target_name = 1;
+  optional string url = 2;
+}
+

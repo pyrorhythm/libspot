@@ -1,0 +1,163 @@
+syntax = "proto3";
+
+package spotify.ads.proto;
+
+import "google/protobuf/struct.proto";
+import "companion_ad.proto";
+import "verification_ad.proto";
+
+message AdPodResponse {
+  reserved 4;
+  reserved 7;
+  message PodEntry {
+    string key = 1;
+    .spotify.ads.proto.AdlogicAdList value = 2;
+  }
+
+  message SlotRealtimeDecisionsEntry {
+    string key = 1;
+    .spotify.ads.proto.Decision value = 2;
+  }
+
+  message AdDecisionTreeEntry {
+    string key = 1;
+    .spotify.ads.proto.AdDecisionTree value = 2;
+  }
+
+  repeated .spotify.ads.proto.AdPodResponse.PodEntry pod = 1;
+  int64 next_request = 2;
+  string result_details = 3;
+  .spotify.ads.proto.Decision realtime_decision = 5;
+  repeated .spotify.ads.proto.AdPodResponse.SlotRealtimeDecisionsEntry slot_realtime_decisions = 6;
+  repeated .spotify.ads.proto.AdPodResponse.AdDecisionTreeEntry ad_decision_tree = 8;
+}
+
+message AdDecisionTree {
+  repeated string ad_ids = 1;
+}
+
+message SlotRealtimeDecisions {
+  .spotify.ads.proto.Decision podcast_preroll = 1;
+  .spotify.ads.proto.Decision podcast_midroll_1 = 2;
+  .spotify.ads.proto.Decision podcast_midroll_2 = 3;
+  .spotify.ads.proto.Decision podcast_midroll_3 = 4;
+  .spotify.ads.proto.Decision podcast_midroll_4 = 5;
+  .spotify.ads.proto.Decision podcast_midroll_5 = 6;
+  .spotify.ads.proto.Decision podcast_postroll = 7;
+}
+
+message AdlogicAd {
+  message TrackingEventsEntry {
+    string key = 1;
+    .spotify.ads.proto.StringList value = 2;
+  }
+
+  message MetadataEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  string id = 1;
+  bool dummy = 2;
+  string clickthrough = 3;
+  repeated .spotify.ads.proto.AdlogicAd.TrackingEventsEntry tracking_events = 4;
+  repeated .spotify.ads.proto.AdlogicAd.MetadataEntry metadata = 5;
+  repeated .spotify.ads.proto.CoverArt cover_art = 6;
+  repeated .spotify.ads.proto.AudioFile audio = 7;
+  repeated .spotify.ads.proto.VideoFile video = 8;
+  repeated .spotify.ads.proto.DisplayFile display = 9;
+  repeated .spotify.ads.proto.UriFile uri = 10;
+  string html = 11;
+  bool is_dsa_eligible = 15;
+  repeated .spotify.ads.proto.Companion companions = 16;
+  repeated .spotify.ads.proto.Verification verifications = 17;
+  oneof cleanupTimeoutMsOptional {
+    int32 cleanup_timeout_ms = 12;
+  }
+  oneof sameFrameOptional {
+    bool same_frame = 13;
+  }
+  oneof flexResponse {
+    .google.protobuf.Struct json_payload = 14;
+  }
+}
+
+message AdlogicAdList {
+  repeated .spotify.ads.proto.AdlogicAd ads = 1;
+}
+
+message StringList {
+  repeated string list = 1;
+}
+
+message TrackingEvents {
+  repeated string paused = 1;
+  repeated string saved = 2;
+  repeated string collapsed = 3;
+  repeated string moat = 4;
+  repeated string started = 5;
+  repeated string clicked = 6;
+  repeated string skipped = 7;
+  repeated string archived = 8;
+  repeated string expanded = 9;
+  repeated string first_quartile = 10;
+  repeated string rewind = 11;
+  repeated string viewed = 12;
+  repeated string unmuted = 13;
+  repeated string ended = 14;
+  repeated string midpoint = 15;
+  repeated string resumed = 16;
+  repeated string muted = 17;
+  repeated string errored = 18;
+  repeated string third_quartile = 19;
+  repeated string dismissed = 20;
+  repeated string viewable_impression = 21;
+  repeated string foregrounded = 22;
+  repeated string backgrounded = 23;
+  repeated string seeked_to = 24;
+}
+
+message CoverArt {
+  int32 width = 1;
+  int32 height = 2;
+  string mimetype = 3;
+  string media_file = 4;
+}
+
+message AudioFile {
+  int32 bitrate = 1;
+  string mimetype = 2;
+  string media_file = 3;
+  int32 duration_sec = 4;
+}
+
+message VideoFile {
+  int32 width = 1;
+  int32 height = 2;
+  int32 bitrate = 3;
+  string mimetype = 4;
+  string media_file = 5;
+  int32 duration_sec = 6;
+}
+
+message DisplayFile {
+  int32 width = 1;
+  int32 height = 2;
+  string mimetype = 3;
+  string media_file = 4;
+}
+
+message UriFile {
+  string id = 1;
+  int32 width = 2;
+  int32 height = 3;
+  string type = 4;
+  string media_file = 5;
+  int32 duration_sec = 6;
+}
+
+message Decision {
+  int32 max_ads = 1;
+  int32 max_length_seconds = 2;
+}
+

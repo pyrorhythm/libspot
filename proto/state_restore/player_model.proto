@@ -1,0 +1,41 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "google/protobuf/timestamp.proto";
+import "context_player_options.proto";
+import "state_restore/player_session_queue.proto";
+
+message PlayerModel {
+  message ConfigurationEntry {
+    optional string key = 1;
+    optional string value = 2;
+  }
+
+  enum AdvanceReason {
+    SKIP_TO_PREV_TRACK = 1;
+    SKIP_TO_NEXT_TRACK = 2;
+    EXTERNAL_ADVANCE = 3;
+    INTERRUPTED = 4;
+    SWITCHED_TO_VIDEO = 5;
+    SWITCHED_TO_AUDIO = 6;
+  }
+
+  enum StartReason {
+    PLAY_CONTEXT = 1;
+    PLAY_CONTEXT_TRACK = 2;
+    STATE_RESTORE = 3;
+    REMOTE_TRANSFER = 4;
+    REMOTE_RESTORE = 5;
+  }
+
+  required .spotify.player.proto.ContextPlayerOptions options = 1;
+  repeated .spotify.player.proto.state_restore.PlayerModel.ConfigurationEntry configuration = 2;
+  required .spotify.player.proto.state_restore.PlayerSessionQueue session_queue = 3;
+  required .spotify.player.proto.state_restore.PlayerModel.AdvanceReason last_advance_reason = 4;
+  optional .spotify.player.proto.state_restore.PlayerModel.StartReason last_start_reason = 5;
+  required string prev_state_id = 6;
+  optional string override_state_id = 7;
+  optional .google.protobuf.Timestamp play_queue_expiration_timer_start = 8;
+}
+

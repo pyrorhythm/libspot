@@ -1,0 +1,157 @@
+syntax = "proto2";
+
+package spotify.playlist.cosmos.playlist_request.proto;
+
+option java_package = "com.spotify.playlist.proto";
+option objc_class_prefix = "SPTPlaylistCosmosPlaylist";
+
+import "google/protobuf/timestamp.proto";
+import "collection/episode_collection_state.proto";
+import "metadata/episode_metadata.proto";
+import "played_state/track_played_state.proto";
+import "played_state/episode_played_state.proto";
+import "sync/episode_sync_state.proto";
+import "metadata/image_group.proto";
+import "on_demand_in_free_reason.proto";
+import "playlist_permission.proto";
+import "playlist_playlist_state.proto";
+import "playlist_track_state.proto";
+import "playlist_user_state.proto";
+import "policy/supported_link_types_in_playlists.proto";
+import "metadata/track_metadata.proto";
+import "metadata/extension.proto";
+
+message AvailableConcepts {
+  optional string concept_uri = 1;
+  optional string localized_term = 2;
+}
+
+message AvailableSignal {
+  optional string name = 1;
+  optional .spotify.playlist.cosmos.playlist_request.proto.SignalState state = 2;
+}
+
+message ItemOfflineState {
+  optional string offline = 1;
+  optional uint32 sync_progress = 2;
+  optional bool locally_playable = 3;
+}
+
+message ItemCollectionState {
+  optional bool is_in_collection = 1;
+  optional bool is_banned = 2;
+}
+
+message ItemMetadata {
+  optional string name = 1;
+  optional string image = 2;
+  optional bool is_explicit = 3;
+}
+
+message ItemCurationState {
+  optional bool is_curated = 1;
+}
+
+message Item {
+  optional string header_field = 1;
+  optional uint32 add_time = 2;
+  optional .spotify.playlist.cosmos.proto.User added_by = 3;
+  optional .spotify.cosmos_util.proto.TrackMetadata track_metadata = 4;
+  optional .spotify.playlist.cosmos.proto.TrackCollectionState track_collection_state = 5;
+  optional .spotify.playlist.cosmos.proto.TrackOfflineState track_offline_state = 6;
+  optional string row_id = 7;
+  optional .spotify.cosmos_util.proto.TrackPlayState track_play_state = 8;
+  repeated .spotify.playlist.cosmos.proto.FormatListAttribute format_list_attributes = 9;
+  optional .spotify.cosmos_util.proto.EpisodeMetadata episode_metadata = 10;
+  optional .spotify.cosmos_util.proto.EpisodeSyncState episode_offline_state = 11;
+  optional .spotify.cosmos_util.proto.EpisodeCollectionState episode_collection_state = 12;
+  optional .spotify.cosmos_util.proto.EpisodePlayState episode_play_state = 13;
+  optional .spotify.cosmos_util.proto.ImageGroup display_covers = 14;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.AvailableSignal available_signals = 15;
+  optional bool is_recommendation = 16;
+  repeated .spotify.cosmos_util.proto.Extension extension = 17;
+  optional string uri = 18;
+  optional .spotify.playlist.cosmos.playlist_request.proto.ItemOfflineState offline_state = 19;
+  optional .spotify.playlist.cosmos.playlist_request.proto.ItemCollectionState collection_state = 20;
+  optional .spotify.playlist.cosmos.playlist_request.proto.ItemMetadata metadata = 21;
+  optional .spotify.playlist.cosmos.playlist_request.proto.ItemCurationState curation_state = 22;
+  optional bool should_be_obfuscated = 23;
+}
+
+message Lens {
+  optional string name = 1;
+}
+
+message LensState {
+  repeated .spotify.playlist.cosmos.playlist_request.proto.Lens requested_lenses = 1;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.Lens applied_lenses = 2;
+}
+
+message Playlist {
+  optional .spotify.playlist.cosmos.proto.PlaylistMetadata playlist_metadata = 1;
+  optional .spotify.playlist.cosmos.proto.PlaylistOfflineState playlist_offline_state = 2;
+  optional .spotify.playlist.cosmos.playlist_request.proto.LensState lenses = 3;
+}
+
+message RecommendationItem {
+  optional .spotify.cosmos_util.proto.TrackMetadata track_metadata = 1;
+  optional .spotify.playlist.cosmos.proto.TrackCollectionState track_collection_state = 2;
+  optional .spotify.playlist.cosmos.proto.TrackOfflineState track_offline_state = 3;
+  optional .spotify.cosmos_util.proto.TrackPlayState track_play_state = 4;
+}
+
+message Collaborator {
+  optional .spotify.playlist.cosmos.proto.User user = 1;
+  optional uint32 number_of_items = 2;
+  optional uint32 number_of_tracks = 3;
+  optional uint32 number_of_episodes = 4;
+  optional bool is_owner = 5;
+}
+
+message Collaborators {
+  optional uint32 count = 1;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.Collaborator collaborator = 2;
+}
+
+message NumberOfItemsForLinkType {
+  optional .spotify.playlist.cosmos.proto.LinkType link_type = 1;
+  optional int32 num_items = 2;
+}
+
+message Response {
+  repeated .spotify.playlist.cosmos.playlist_request.proto.Item item = 1;
+  optional .spotify.playlist.cosmos.playlist_request.proto.Playlist playlist = 2;
+  optional uint32 unfiltered_length = 3;
+  optional uint32 unranged_length = 4;
+  optional uint64 duration = 5;
+  optional bool loading_contents = 6;
+  optional uint64 last_modification = 7;
+  optional uint32 num_followers = 8;
+  optional bool playable = 9;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.RecommendationItem recommendations = 10;
+  optional bool has_explicit_content = 11;
+  optional bool contains_spotify_tracks = 12;
+  optional bool contains_episodes = 13;
+  optional bool only_contains_explicit = 14;
+  optional bool contains_audio_episodes = 15;
+  optional bool contains_tracks = 16;
+  optional bool is_on_demand_in_free = 17;
+  optional uint32 number_of_tracks = 18;
+  optional uint32 number_of_episodes = 19;
+  optional bool prefer_linear_playback = 20;
+  optional .spotify.on_demand_set.proto.OnDemandInFreeReason on_demand_in_free_reason = 21;
+  optional .spotify.playlist.cosmos.playlist_request.proto.Collaborators collaborators = 22;
+  optional .spotify.playlist_permission.proto.Permission base_permission = 23;
+  optional .spotify.playlist_permission.proto.Capabilities user_capabilities = 24;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.NumberOfItemsForLinkType number_of_items_per_link_type = 25;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.AvailableSignal available_signals = 26;
+  optional .google.protobuf.Timestamp created_at = 27;
+  repeated .spotify.playlist.cosmos.playlist_request.proto.AvailableConcepts available_concepts = 28;
+  optional string content_signature = 29;
+}
+
+enum SignalState {
+  READY = 0;
+  PENDING = 1;
+}
+

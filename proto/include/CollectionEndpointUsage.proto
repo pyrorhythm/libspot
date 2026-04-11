@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message CollectionEndpointUsage {
+  optional int32 point = 1;
+}
+

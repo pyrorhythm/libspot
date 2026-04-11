@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service State {
+  rpc GetState (.spotify.ads.esperanto.proto.StateRequest) returns (.spotify.ads.esperanto.proto.StateResponse) {}
+  rpc SubState (.spotify.ads.esperanto.proto.StateRequest) returns (stream .spotify.ads.esperanto.proto.StateResponse) {}
+  rpc PutState (.spotify.ads.esperanto.proto.PutStateRequest) returns (.spotify.ads.esperanto.proto.PutStateResponse) {}
+}
+
+message AdStateValue {
+  string value = 1;
+  uint64 changed = 2;
+}
+
+message StateRequest {
+}
+
+message StateResponse {
+  message StateEntry {
+    string key = 1;
+    .spotify.ads.esperanto.proto.AdStateValue value = 2;
+  }
+
+  repeated .spotify.ads.esperanto.proto.StateResponse.StateEntry state = 1;
+}
+
+message PutStateRequest {
+  message StateEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  repeated .spotify.ads.esperanto.proto.PutStateRequest.StateEntry state = 1;
+}
+
+message PutStateResponse {
+}
+

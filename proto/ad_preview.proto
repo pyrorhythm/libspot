@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+service Preview {
+  rpc Preview (.spotify.ads.esperanto.proto.PreviewRequest) returns (.spotify.ads.esperanto.proto.PreviewResponse) {}
+}
+
+message PreviewRequest {
+  string ad_id = 1;
+}
+
+message PreviewResponse {
+  bool success = 1;
+}
+

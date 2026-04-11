@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+message FlatFile {
+  string cdn_url = 1;
+}
+

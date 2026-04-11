@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ResumptionRevisionUpdate {
+  optional string key = 1;
+  optional string position = 2;
+  optional string reason = 3;
+  optional string playback_id = 4;
+}
+

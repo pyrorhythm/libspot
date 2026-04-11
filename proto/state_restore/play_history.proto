@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "context_track.proto";
+
+message PlayHistory {
+  repeated .spotify.player.proto.ContextTrack tracks = 1;
+}
+
+message PlayHistoryV1 {
+  message Entry {
+    required uint64 timestamp = 1;
+    required .spotify.player.proto.ContextTrack track = 2;
+  }
+
+  repeated .spotify.player.proto.state_restore.PlayHistoryV1.Entry entries = 1;
+}
+

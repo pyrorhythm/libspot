@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message StreamReportingError {
+  optional bytes playback_id = 1;
+  optional string error_type = 2;
+  optional string error_reason = 3;
+  optional string request_type = 4;
+  optional string playback_stack = 5;
+  optional int64 core_version = 6;
+  optional bytes stream_id = 7;
+  optional string error_message = 8;
+  optional string client_timestamp = 9;
+  optional string orchestration_stack = 10;
+}
+

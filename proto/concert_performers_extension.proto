@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.concerts.metadata.v1;
+
+message Performer {
+  string artist_uri = 1;
+  .spotify.concerts.metadata.v1.Act act = 2;
+  string artist_name = 3;
+}
+
+message PerformerGroup {
+  repeated .spotify.concerts.metadata.v1.Performer performers = 1;
+}
+
+enum Act {
+  ACT_UNKNOWN = 0;
+  ACT_HEADLINER = 1;
+  ACT_SUPPORTING = 2;
+}
+

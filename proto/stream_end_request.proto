@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.stream_reporting_esperanto.proto;
+
+option java_package = "com.spotify.stream_reporting_esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "google/protobuf/timestamp.proto";
+import "stream_handle.proto";
+import "play_reason.proto";
+import "audio_format.proto";
+
+message StreamEndRequest {
+  .spotify.stream_reporting_esperanto.proto.StreamHandle stream_handle = 1;
+  string source_end = 2;
+  .spotify.stream_reporting_esperanto.proto.PlayReason reason_end = 3;
+  .google.protobuf.Timestamp client_timestamp = 5;
+  optional .spotify.stream_reporting_esperanto.proto.AudioFormat format = 4;
+}
+

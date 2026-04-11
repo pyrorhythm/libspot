@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package spotify.playlist.proto;
+
+message ItemReportingContext {
+  reserved 3;
+  reserved 4;
+  reserved 5;
+  reserved 6;
+  reserved 8;
+  reserved 12;
+  reserved 13;
+  reserved 14;
+  reserved 15;
+  string content_uri = 1;
+  string displayed_content_uri = 2;
+  string provider = 7;
+  string decision_id = 9;
+  string custom_reporting_attribution = 10;
+  string connect_controller_device_id = 11;
+  string entrypoint_uri = 16;
+  string interaction_id = 17;
+  string page_instance_id = 18;
+}
+

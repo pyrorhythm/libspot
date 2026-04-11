@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1;
+
+option java_package = "spotify.playback_platform.context.v1";
+option java_multiple_files = true;
+
+import "spotify/playback_platform/context/v1/sequence_child.proto";
+
+message Sequence {
+  repeated .spotify.playback_platform.context.v1.SequenceChild children = 1;
+}
+
+message PagedSequence {
+  repeated .spotify.playback_platform.context.v1.SequencePage pages = 1;
+}
+
+message ChainSequence {
+  .spotify.playback_platform.context.v1.SequencePage page = 1;
+  optional bytes prev_page_id = 2;
+  optional bytes next_page_id = 3;
+}
+
+message SequencePage {
+  repeated .spotify.playback_platform.context.v1.SequenceChild children = 2;
+  optional bytes page_id = 1;
+}
+

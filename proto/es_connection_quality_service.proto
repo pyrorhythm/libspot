@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package spotify.connectivity.connection_quality.esperanto.proto;
+
+option java_package = "com.spotify.connectivity.quality.esperanto.proto";
+
+import "google/protobuf/empty.proto";
+
+service ConnectionQualityService {
+  rpc listenToConnectionQualityEvents (.google.protobuf.Empty) returns (stream .spotify.connectivity.connection_quality.esperanto.proto.ConnectionQualityEvent) {}
+}
+
+message ConnectionQualityEvent {
+  .spotify.connectivity.connection_quality.esperanto.proto.ConnectionQuality connection_quality = 1;
+}
+
+enum ConnectionQuality {
+  UNKNOWN = 0;
+  GOOD = 1;
+  AVERAGE = 2;
+  POOR = 3;
+  ABSENT = 4;
+}
+

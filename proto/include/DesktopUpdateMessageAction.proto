@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message DesktopUpdateMessageAction {
+  optional bool will_download = 1;
+  optional int64 this_message_from_revision = 2;
+  optional int64 this_message_to_revision = 3;
+  optional bool is_critical = 4;
+  optional int64 already_downloaded_from_revision = 5;
+  optional int64 already_downloaded_to_revision = 6;
+  optional string source = 7;
+  optional bool is_employee = 8;
+}
+

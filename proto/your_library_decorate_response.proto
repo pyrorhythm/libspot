@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package spotify.your_library.proto;
+
+option java_package = "spotify.your_library.esperanto.proto";
+option java_multiple_files = true;
+
+import "your_library_decorated_entity.proto";
+
+message YourLibraryDecorateResponseHeader {
+  bool is_loading = 2;
+}
+
+message YourLibraryDecorateResponse {
+  .spotify.your_library.proto.YourLibraryDecorateResponseHeader header = 1;
+  repeated .spotify.your_library.proto.YourLibraryDecoratedEntity entity = 2;
+  uint32 status_code = 98;
+  string error = 99;
+}
+

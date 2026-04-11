@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package spotify.ads.esperanto.proto;
+
+option java_package = "com.spotify.ads.esperanto.proto";
+option java_multiple_files = true;
+option objc_class_prefix = "ESP";
+
+import "ad_common.proto";
+
+service Break {
+  rpc SubBreak (.spotify.ads.esperanto.proto.SubBreakRequest) returns (stream .spotify.ads.esperanto.proto.SubBreakResponse) {}
+  rpc SubBreakState (.spotify.ads.esperanto.proto.SubBreakStateRequest) returns (stream .spotify.ads.esperanto.proto.SubBreakStateResponse) {}
+}
+
+message SubBreakRequest {
+}
+
+message SubBreakResponse {
+  .spotify.ads.esperanto.proto.Ad ad = 1;
+}
+
+message SubBreakStateRequest {
+}
+
+message SubBreakStateResponse {
+  bool active = 1;
+}
+

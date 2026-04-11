@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package spotify.event_sender.proto;
+
+message ApplicationDesktop {
+  string version_string = 1;
+  int64 version_code = 2;
+  bytes session_id = 3;
+}
+

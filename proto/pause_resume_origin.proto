@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package spotify.player.proto;
+
+message PauseResumeOrigin {
+  optional string feature_identifier = 1;
+}
+

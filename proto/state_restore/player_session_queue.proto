@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+package spotify.player.proto.state_restore;
+
+import "state_restore/player_session.proto";
+
+message QueuedSession {
+  enum Trigger {
+    DID_GO_PAST_TRACK = 1;
+    DID_GO_PAST_CONTEXT = 2;
+  }
+
+  optional .spotify.player.proto.state_restore.QueuedSession.Trigger trigger = 1;
+  optional .spotify.player.proto.state_restore.PlayerSession session = 2;
+}
+
+message PlayerSessionQueue {
+  optional .spotify.player.proto.state_restore.PlayerSession active = 1;
+  repeated .spotify.player.proto.state_restore.PlayerSession pushed = 2;
+  repeated .spotify.player.proto.state_restore.QueuedSession queued = 3;
+}
+

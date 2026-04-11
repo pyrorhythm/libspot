@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package spotify.playback_platform.context.v1.behavior;
+
+option java_package = "spotify.playback_platform.context.v1.behavior";
+option java_multiple_files = true;
+
+message ShuffleAlgorithm {
+  message Permutation {
+    repeated uint32 indices = 1;
+  }
+
+  message Stable {
+    repeated uint32 prescribed_pages = 1;
+    optional uint32 min_num_children = 2;
+  }
+
+  message Format {
+    message PermutationsEntry {
+      string key = 1;
+      .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm.Permutation value = 2;
+    }
+
+    repeated .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm.Format.PermutationsEntry permutations = 1;
+    optional .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm fallback = 2;
+  }
+
+  message Burned {
+    string shuffle_seed = 1;
+  }
+
+  enum Simple {
+    SIMPLE_UNSPECIFIED = 0;
+    SIMPLE_FORWARD = 1;
+    SIMPLE_SHUFFLE = 2;
+    SIMPLE_REVERSE = 3;
+  }
+
+  oneof algorithm {
+    .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm.Simple simple = 1;
+    .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm.Stable stable = 2;
+    .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm.Format format = 3;
+    .spotify.playback_platform.context.v1.behavior.ShuffleAlgorithm.Burned burned = 4;
+  }
+}
+

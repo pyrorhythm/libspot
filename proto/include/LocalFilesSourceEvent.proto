@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message LocalFilesSourceEvent {
+  optional string id = 1;
+  optional string event = 2;
+}
+

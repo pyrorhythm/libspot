@@ -1,0 +1,26 @@
+# IDE files
+*.iml
+/.idea
+
+# Configuration files
+/config.yml
+/credentials.json
+/state.json
+/lockfile
+
+**/.*
+!.gitignore
+!.golangci.yml
+
+# Build files
+/.gocache
+/vcpkg
+/vcpkg_installed
+/dist
+/vendor
+/node_modules
+package.json
+bun.lock
+tsconfig.json
+
+/go.sum

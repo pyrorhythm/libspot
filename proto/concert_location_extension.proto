@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.concerts.metadata.v1;
+
+message PhysicalLocation {
+  string city = 1;
+}
+
+message Location {
+  reserved 1;
+  reserved 3;
+  string name = 2;
+  oneof details {
+    .spotify.concerts.metadata.v1.PhysicalLocation physical_location = 4;
+  }
+}
+

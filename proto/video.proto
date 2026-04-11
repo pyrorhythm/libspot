@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package spotify.contentagnostic.v2;
+
+option java_package = "com.spotify.contentagnostic.v2";
+option java_multiple_files = true;
+
+import "audio.proto";
+import "flat_file.proto";
+import "image.proto";
+import "transcript.proto";
+
+message Video {
+  .spotify.contentagnostic.v2.VideoAsset asset = 1;
+  .spotify.contentagnostic.v2.Image fallback_image = 2;
+  optional .spotify.contentagnostic.v2.Audio fallback_audio = 3;
+  optional .spotify.contentagnostic.v2.Transcript transcript = 4;
+}
+
+message VideoAsset {
+  oneof video_type {
+    .spotify.contentagnostic.v2.FlatFile flat_file = 1;
+    .spotify.contentagnostic.v2.HLSVideo hls = 2;
+  }
+}
+
+message HLSVideo {
+  string manifest_id = 1;
+}
+

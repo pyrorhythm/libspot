@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package spotify.player.esperanto.proto;
+
+option java_package = "com.spotify.player.esperanto.proto";
+option objc_class_prefix = "ESP";
+
+import "es_context.proto";
+import "es_play_origin.proto";
+import "es_prepare_play_options.proto";
+
+message PreparePlayRequest {
+  .spotify.player.esperanto.proto.Context context = 1;
+  .spotify.player.esperanto.proto.PreparePlayOptions options = 2;
+  .spotify.player.esperanto.proto.PlayOrigin play_origin = 3;
+}
+

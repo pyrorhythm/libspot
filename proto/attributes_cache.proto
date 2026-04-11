@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package spotify.playlist_cache.proto;
+
+option java_package = "com.spotify.playlist.proto";
+
+message CachedPlaylistAttributes {
+  message FormatListAttributesEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  message PictureSizesEntry {
+    string key = 1;
+    string value = 2;
+  }
+
+  message NumItemsPerLinkTypeEntry {
+    int32 key = 1;
+    int32 value = 2;
+  }
+
+  repeated .spotify.playlist_cache.proto.CachedPlaylistAttributes.FormatListAttributesEntry format_list_attributes = 10;
+  repeated .spotify.playlist_cache.proto.CachedPlaylistAttributes.PictureSizesEntry picture_sizes = 11;
+  repeated int32 geoblocked_attributes = 13;
+  repeated .spotify.playlist_cache.proto.CachedPlaylistAttributes.NumItemsPerLinkTypeEntry num_items_per_link_type = 14;
+  optional string name = 1;
+  optional int32 length = 2;
+  optional bool collaborative = 3;
+  optional string description = 4;
+  optional string picture = 5;
+  optional string owner = 6;
+  optional bytes revision = 7;
+  optional string format_list_type = 8;
+  optional string mosaic_uri = 9;
+  optional bytes encoded_capabilities = 12;
+  optional string ai_curation_id = 15;
+  optional int32 status_code = 16;
+  optional int32 item_id_algorithm = 17;
+}
+

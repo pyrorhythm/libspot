@@ -1,0 +1,36 @@
+syntax = "proto2";
+
+package spotify.event_sender.proto;
+
+message ShowRequestDebug {
+  optional int32 num_replies_is_online_false = 1;
+  optional int32 num_replies_is_online_true = 2;
+  optional bytes last_reply_episode_id_0 = 3;
+  optional bytes last_reply_episode_id_1 = 4;
+  optional bytes last_reply_episode_id_2 = 5;
+  optional int32 num_load_show_ok_is_online_false = 6;
+  optional int32 num_load_show_ok_is_online_true = 7;
+  optional int32 num_load_show_fail_is_online_false = 8;
+  optional int32 num_load_show_fail_is_online_true = 9;
+  optional bytes last_load_show_v4_episode_id_0 = 10;
+  optional int32 last_load_show_v4_episode_0_cache_availability = 11;
+  optional bytes last_load_show_v4_episode_id_1 = 12;
+  optional int32 last_load_show_v4_episode_1_cache_availability = 13;
+  optional bytes last_load_show_v4_episode_id_2 = 14;
+  optional int32 last_load_show_v4_episode_2_cache_availability = 15;
+  optional string last_load_show_v4_etag = 16;
+  optional int32 last_load_error = 17;
+  optional bool is_online = 18;
+  optional int32 optimization_level = 19;
+  optional int32 env_now = 20;
+  optional string show_uri = 21;
+  optional int32 last_load_show_v4_stored_at_timestamp = 22;
+  repeated string last_load_show_v4_episode_uris = 23;
+  repeated int32 last_load_show_v4_episode_cache_availabilities = 24;
+  repeated int32 last_load_show_v4_episode_cache_expiry_timestamps = 25;
+  repeated int32 last_load_show_v4_episode_offline_expiry_timestamps = 26;
+  repeated string last_load_show_v4_episode_etags = 27;
+  repeated int32 last_load_show_v4_episode_status_codes = 28;
+  repeated int32 last_load_show_v4_episode_stored_at_timestamps = 29;
+}
+
