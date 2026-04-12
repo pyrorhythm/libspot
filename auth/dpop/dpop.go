@@ -4,8 +4,6 @@ import (
 	"bytes"
 	"context"
 	"crypto/ecdsa"
-	"crypto/elliptic"
-	"crypto/rand"
 	"crypto/sha256"
 	"encoding/base64"
 	"errors"
@@ -22,6 +20,7 @@ import (
 	"github.com/go-jose/go-jose/v4"
 	"github.com/go-jose/go-jose/v4/jwt"
 	"github.com/google/uuid"
+	"github.com/pyrorhythm/libspot"
 )
 
 type loggingTransport struct{}
@@ -62,68 +61,60 @@ func (s *loggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 	return resp, err
 }
 
-type Transport struct {
-	Base           http.RoundTripper
-	ClientToken    string
-	GetAccessToken func(context.Context) (string, error)
-
-	key   *ecdsa.PrivateKey
-	nonce string
-	mu    sync.RWMutex
+type provider interface {
+	libspot.TokenProvider
+	GetNonce() (string, bool)
+	SetNonce(string)
 }
 
-func NewClient(clientToken string, getToken func(context.Context) (string, error)) *http.Client {
-	key, _ := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
-	return NewClientWithKey(clientToken, getToken, key)
+type Transport struct {
+	base        http.RoundTripper
+	clientToken string
+	prov        provider
+
+	key *ecdsa.PrivateKey
+	mu  sync.RWMutex
 }
 
 func NewClientWithKey(
 	clientToken string,
-	getToken func(context.Context) (string, error),
+	provider provider,
 	key *ecdsa.PrivateKey,
 ) *http.Client {
 	return &http.Client{
 		Transport: &Transport{
-			Base:           &loggingTransport{},
-			ClientToken:    clientToken,
-			GetAccessToken: getToken,
-			key:            key,
+			base:        &loggingTransport{},
+			clientToken: clientToken,
+			prov:        provider,
+			key:         key,
 		},
 	}
-}
-
-func (t *Transport) SetNonce(nonce string) {
-	t.mu.Lock()
-	defer t.mu.Unlock()
-	t.nonce = nonce
-}
-
-func (t *Transport) Nonce() string {
-	t.mu.RLock()
-	defer t.mu.RUnlock()
-	return t.nonce
 }
 
 func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	firstReq := req.Clone(req.Context())
 
-	resp, err := t.roundTripWithNonce(firstReq, t.Nonce())
+	resp, err := t.roundTripWithNonce(firstReq)
 	if err != nil {
 		return nil, err
 	}
 
-	serverNonce, needRetry := t.extractNonceFromResponse(resp)
+	hasUseDPoPNonce := t.respHasUseDPoPNonce(resp)
 
-	if !needRetry {
+	if !hasUseDPoPNonce {
 		return resp, nil
 	}
 
-	t.SetNonce(serverNonce)
+	if nonce, ok := parseDPoPNonceHeader(resp); !ok {
+		return nil, fmt.Errorf("server requests dpop with nonce but could not find it in header")
+	} else {
+		t.prov.SetNonce(nonce)
+	}
 
 	_, _ = io.Copy(io.Discard, resp.Body)
 	_ = resp.Body.Close()
 
-	slog.Debug("dpop: retrying with server nonce", "nonce", serverNonce)
+	slog.Debug("dpop: retrying with server nonce")
 
 	retryReq := req.Clone(req.Context())
 
@@ -138,79 +129,53 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 		retryReq.Body = body
 	}
 
-	retryResp, err := t.roundTripWithNonce(retryReq, serverNonce)
+	retryResp, err := t.roundTripWithNonce(retryReq)
 	if err != nil {
 		return nil, err
 	}
 
-	if nonce, ok := t.extractNonceFromResponse(retryResp); ok {
-		t.SetNonce(nonce)
+	if nonce, ok := parseDPoPNonceHeader(retryResp); ok {
+		t.prov.SetNonce(nonce)
 	}
 
 	return retryResp, nil
 }
 
-func (t *Transport) extractNonceFromResponse(resp *http.Response) (nonce string, retry bool) {
-	if n, ok := parseUseDPoPNonceWWW(resp); ok {
-		return n, true
-	}
-
-	if n, ok := parseDPoPNonceHeader(resp); ok {
-		return n, true
-	}
-
-	if n, ok := parseUseDPoPNonceBody(resp); ok {
-		return n, true
-	}
-
-	return "", false
+func (t *Transport) respHasUseDPoPNonce(resp *http.Response) (retry bool) {
+	return parseUseDPoPNonceBody(resp) || parseUseDPoPNonceWWW(resp)
 }
 
-func parseUseDPoPNonceWWW(resp *http.Response) (nonce string, found bool) {
+func parseUseDPoPNonceWWW(resp *http.Response) (found bool) {
 	auth := resp.Header.Get("WWW-Authenticate")
 	if auth == "" {
-		return "", false
-	}
-	if !strings.Contains(auth, "error=\"use_dpop_nonce\"") &&
-		!strings.Contains(auth, "error=use_dpop_nonce") {
-		return "", false
+		return false
 	}
 
-	parts := strings.Split(auth, ",")
-	for _, part := range parts {
-		part = strings.TrimSpace(part)
-		if strings.HasPrefix(part, "nonce=") {
-			val := strings.TrimPrefix(part, "nonce=")
-			return strings.Trim(val, "\""), true
-		}
-	}
-	return "", false
+	return strings.Contains(auth, "error=\"use_dpop_nonce\"") ||
+		strings.Contains(auth, "error=use_dpop_nonce")
 }
 
-func parseUseDPoPNonceBody(resp *http.Response) (nonce string, found bool) {
+func parseUseDPoPNonceBody(resp *http.Response) (found bool) {
 	bodyBytes, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return "", false
+		return false
 	}
 
 	resp.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
 
 	contentType := resp.Header.Get("Content-Type")
 	if !strings.Contains(contentType, "application/json") {
-		return "", false
+		return false
 	}
 
 	var errResp struct {
-		Error string `json:"error"`
-		Nonce string `json:"nonce"`
+		Error           string `json:"error"`
+		ErrorDescrption string `json:"error_descrption"`
 	}
 	if err := sonic.Unmarshal(bodyBytes, &errResp); err != nil {
-		return "", false
+		return false
 	}
-	if errResp.Error == "use_dpop_nonce" && errResp.Nonce != "" {
-		return errResp.Nonce, true
-	}
-	return "", false
+	return errResp.Error == "use_dpop_nonce"
 }
 
 func parseDPoPNonceHeader(resp *http.Response) (string, bool) {
@@ -219,18 +184,18 @@ func parseDPoPNonceHeader(resp *http.Response) (string, bool) {
 	return nonce, nonce != ""
 }
 
-func (t *Transport) roundTripWithNonce(req *http.Request, nonce string) (*http.Response, error) {
-	proof, err := t.createProof(req.Context(), req, nonce)
+func (t *Transport) roundTripWithNonce(req *http.Request) (*http.Response, error) {
+	proof, err := t.createProof(req.Context(), req)
 	if err != nil {
 		return nil, err
 	}
 
 	req.Header.Set("DPoP", proof)
-	if t.ClientToken != "" {
-		req.Header.Set("Client-Token", t.ClientToken)
+	if t.clientToken != "" {
+		req.Header.Set("Client-Token", t.clientToken)
 	}
 
-	base := t.Base
+	base := t.base
 	if base == nil {
 		base = http.DefaultTransport
 	}
@@ -240,7 +205,6 @@ func (t *Transport) roundTripWithNonce(req *http.Request, nonce string) (*http.R
 func (t *Transport) createProof(
 	ctx context.Context,
 	req *http.Request,
-	nonce string,
 ) (string, error) {
 	pub := jose.JSONWebKey{
 		Key:       &t.key.PublicKey,
@@ -273,11 +237,11 @@ func (t *Transport) createProof(
 		"htu": htu.String(),
 	}
 
-	if nonce != "" {
+	if nonce, ok := t.prov.GetNonce(); ok {
 		claims["nonce"] = nonce
 	}
 
-	if accessToken, err := t.GetAccessToken(ctx); err == nil && accessToken != "" {
+	if accessToken, err := t.prov.AccessToken(ctx); err == nil && accessToken != "" {
 		hash := sha256.Sum256([]byte(accessToken))
 		claims["ath"] = base64.RawURLEncoding.EncodeToString(hash[:])
 	} else if err != nil {

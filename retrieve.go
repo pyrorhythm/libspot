@@ -9,12 +9,14 @@ import (
 	"net/url"
 	"runtime"
 
-	datav0 "github.com/pyrorhythm/libspot/api/spotify/clienttoken/data/v0"
-	httpv0 "github.com/pyrorhythm/libspot/api/spotify/clienttoken/http/v0"
+	datav0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0"
+	httpv0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/http/v0"
 	"google.golang.org/protobuf/proto"
 )
 
 // RetrieveClientToken fetches a Spotify client token using the client-token API.
+//
+// sourced from devgianlu/go-librespot
 func RetrieveClientToken(c *http.Client, deviceId string) (string, error) {
 	body, err := proto.Marshal(clientTokenRequest(deviceId))
 	if err != nil {
@@ -55,34 +57,30 @@ func RetrieveClientToken(c *http.Client, deviceId string) (string, error) {
 		return "", fmt.Errorf("failed unmarshalling clienttoken response: %w", err)
 	}
 
-	switch protoResp.ResponseType {
+	switch protoResp.GetResponseType() {
 	case httpv0.ClientTokenResponseType_RESPONSE_GRANTED_TOKEN_RESPONSE:
 		granted := protoResp.GetGrantedToken()
 		if granted == nil {
 			return "", errors.New("invalid granted token response")
 		}
-		return granted.Token, nil
+		return granted.GetToken(), nil
 	case httpv0.ClientTokenResponseType_RESPONSE_CHALLENGES_RESPONSE:
 		return "", errors.New("clienttoken challenge not supported")
 	default:
-		return "", fmt.Errorf("unknown clienttoken response type: %v", protoResp.ResponseType)
+		return "", fmt.Errorf("unknown clienttoken response type: %v", protoResp.GetResponseType())
 	}
 }
 
 func clientTokenRequest(deviceID string) *httpv0.ClientTokenRequest {
-	return &httpv0.ClientTokenRequest{
+	return httpv0.ClientTokenRequest_builder{
 		RequestType: httpv0.ClientTokenRequestType_REQUEST_CLIENT_DATA_REQUEST,
-		Request: &httpv0.ClientTokenRequest_ClientData{
-			ClientData: &httpv0.ClientDataRequest{
-				ClientId:      ClientIdHex,
-				ClientVersion: "0.0.0",
-				Data: &httpv0.ClientDataRequest_ConnectivitySdkData{
-					ConnectivitySdkData: &datav0.ConnectivitySdkData{
-						DeviceId:             deviceID,
-						PlatformSpecificData: platformSpecificData(),
-					},
-				},
-			},
-		},
-	}
+		ClientData: httpv0.ClientDataRequest_builder{
+			ClientId:      ClientIdHex,
+			ClientVersion: "0.0.0",
+			ConnectivitySdkData: datav0.ConnectivitySdkData_builder{
+				DeviceId:             deviceID,
+				PlatformSpecificData: platformSpecificData(),
+			}.Build(),
+		}.Build(),
+	}.Build()
 }

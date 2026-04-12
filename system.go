@@ -3,42 +3,24 @@ package libspot
 import (
 	"runtime"
 
-	pbdata "github.com/pyrorhythm/libspot/api/spotify/clienttoken/data/v0"
+	datav0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0"
 )
 
-func platformSpecificData() *pbdata.PlatformSpecificData {
+func platformSpecificData() *datav0.PlatformSpecificData {
+	psd := datav0.PlatformSpecificData_builder{}
+
 	switch runtime.GOOS {
 	case "android":
-		return &pbdata.PlatformSpecificData{
-			Data: &pbdata.PlatformSpecificData_Android{
-				Android: &pbdata.NativeAndroidData{},
-			},
-		}
+		psd.Android = &datav0.NativeAndroidData{}
 	case "darwin":
-		return &pbdata.PlatformSpecificData{
-			Data: &pbdata.PlatformSpecificData_Mac{
-				Mac: &pbdata.NativeDesktopMacOSData{},
-			},
-		}
+		psd.Mac = &datav0.NativeDesktopMacOSData{}
 	case "ios":
-		return &pbdata.PlatformSpecificData{
-			Data: &pbdata.PlatformSpecificData_Ios{
-				Ios: &pbdata.NativeIOSData{},
-			},
-		}
+		psd.Ios = &datav0.NativeIOSData{}
 	case "linux", "freebsd":
-		return &pbdata.PlatformSpecificData{
-			Data: &pbdata.PlatformSpecificData_Linux{
-				Linux: &pbdata.NativeDesktopLinuxData{},
-			},
-		}
+		psd.Linux = &datav0.NativeDesktopLinuxData{}
 	case "windows":
-		return &pbdata.PlatformSpecificData{
-			Data: &pbdata.PlatformSpecificData_Win{
-				Win: &pbdata.NativeDesktopWindowsData{},
-			},
-		}
+		psd.Win = &datav0.NativeDesktopWindowsData{}
 	}
 
-	return nil
+	return psd.Build()
 }

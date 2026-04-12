@@ -29,11 +29,15 @@ type storedCredentials struct {
 	UserName    string `json:"userName,omitempty"`
 	DeviceId    string `json:"deviceId,omitempty"`
 
-	DpopPkey string `json:"dpopPrivateKey,omitempty"`
+	Proof struct {
+		Privkey   string `json:"privKey,omitempty"`
+		LastNonce string `json:"lastNonce,omitempty"`
+	} `json:"proof,omitempty"`
 }
 
 type session struct {
-	mu sync.RWMutex
+	mu      sync.RWMutex
+	nonceMu sync.RWMutex
 
 	kcer store.Keychainer[storedCredentials]
 
@@ -41,6 +45,18 @@ type session struct {
 	conf  *oauth2.Config
 
 	dpopClient *http.Client
+}
+
+func (s *session) GetNonce() (string, bool) {
+	s.nonceMu.RLock()
+	defer s.nonceMu.RUnlock()
+	return s.creds.Proof.LastNonce, s.creds.Proof.LastNonce != ""
+}
+
+func (s *session) SetNonce(nonce string) {
+	s.nonceMu.Lock()
+	defer s.nonceMu.Unlock()
+	s.creds.Proof.LastNonce = nonce
 }
 
 func New(
@@ -54,7 +70,6 @@ func New(
 	}
 }
 
-// generateDeviceId creates a random 20-byte hex string.
 func generateDeviceId() string {
 	b := make([]byte, 20)
 	_, _ = rand.Read(b)
@@ -62,18 +77,16 @@ func generateDeviceId() string {
 }
 
 func validateDeviceId(deviceId string) bool {
-	if len(deviceId) != 40 { // 20 bytes hex encoded = 40 chars
+	if len(deviceId) != 40 {
 		return false
 	}
 	_, err := hex.DecodeString(deviceId)
 	return err == nil
 }
 
-// getOrCreateDPoPKey returns the private key. It either loads a stored key
-// or generates a new one and saves it to the keychain.
 func (s *session) getOrCreateDPoPKey() (*ecdsa.PrivateKey, error) {
-	if s.creds.DpopPkey != "" {
-		block, _ := pem.Decode([]byte(s.creds.DpopPkey))
+	if s.creds.Proof.Privkey != "" {
+		block, _ := pem.Decode([]byte(s.creds.Proof.Privkey))
 		if block == nil {
 			return nil, errors.New("invalid DPoP key PEM")
 		}
@@ -97,7 +110,7 @@ func (s *session) getOrCreateDPoPKey() (*ecdsa.PrivateKey, error) {
 		Type:  "EC PRIVATE KEY",
 		Bytes: der,
 	})
-	s.creds.DpopPkey = string(pemBlock)
+	s.creds.Proof.Privkey = string(pemBlock)
 
 	return key, nil
 }
@@ -138,18 +151,16 @@ func (s *session) injectDPoPClient(ctx context.Context) (context.Context, error)
 		if err != nil {
 			return nil, err
 		}
-		s.dpopClient = dpop.NewClientWithKey(clientToken, s.AccessToken, key)
+		s.dpopClient = dpop.NewClientWithKey(clientToken, s, key)
 	}
 	return context.WithValue(ctx, oauth2.HTTPClient, s.dpopClient), nil
 }
 
-// AuthURL generates the authorization URL and PKCE verifier.
 func (s *session) AuthUrl(state string) (url, pkce string) {
 	pkce = oauth2.GenerateVerifier()
 	return s.conf.AuthCodeURL(state, oauth2.S256ChallengeOption(pkce)), pkce
 }
 
-// AuthCode exchanges an authorization code for tokens.
 func (s *session) AuthCode(ctx context.Context, code, pkce string) error {
 	ctx, err := s.injectDPoPClient(ctx)
 	if err != nil {
@@ -166,8 +177,6 @@ func (s *session) AuthCode(ctx context.Context, code, pkce string) error {
 	return s.SaveToken(tok)
 }
 
-// AccessToken returns a valid access token, refreshing if necessary.
-// It does NOT attempt a refresh if no refresh token is available.
 func (s *session) AccessToken(ctx context.Context) (string, error) {
 	s.mu.RLock()
 	valid := s.creds.Valid()
@@ -182,7 +191,7 @@ func (s *session) AccessToken(ctx context.Context) (string, error) {
 		return "", errors.New("no refresh token available")
 	}
 
-	// Refresh required.
+	// refresh required
 	ctx, err := s.injectDPoPClient(ctx)
 	if err != nil {
 		return "", err

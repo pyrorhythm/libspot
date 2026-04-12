@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const ROOT = SCRIPT_DIR;
 const PROTO_DIR = join(ROOT, "proto");
-const OUT_DIR = join(ROOT, "api");
+const OUT_DIR = join(ROOT, "gen");
 const TMP_DIR = "/tmp/spdproto";
 
 let goMod = Bun.file(join(SCRIPT_DIR, `go.mod`));
@@ -54,7 +54,7 @@ async function processProto(protoPath: string): Promise<string> {
   const match = content.match(/^package\s+(\S+);/m);
   if (!match) throw new Error(`No package in ${protoPath}`);
 
-  let pkg = match[1].replace(/\./g, "/");
+  let pkg = (match[1] ?? "").replace(/\./g, "/");
 
   if (baseName === "ledger" && dirname(protoPath).endsWith("behavior")) {
     const alias = pkg.split("/").pop() ?? pkg;
@@ -87,14 +87,15 @@ async function processProto(protoPath: string): Promise<string> {
   return protoPath;
 }
 
-// Cleanup and setup temp directory
-await rm(TMP_DIR, { recursive: true, force: true });
-try {
-  await rm(OUT_DIR, { recursive: true });
-} catch (_) { }
-await mkdir(TMP_DIR, { recursive: true });
-await mkdir(OUT_DIR, { recursive: true });
-// Copy *contents* of PROTO_DIR into TMP_DIR (not the folder itself)
+async function rmmk(dir: string): Promise<void> {
+  try {
+    await rm(dir, { recursive: true });
+    await mkdir(dir, { recursive: true });
+  } catch (_) { }
+}
+
+await rmmk(TMP_DIR);
+await rmmk(OUT_DIR);
 await cp(join(PROTO_DIR, "."), TMP_DIR, { recursive: true });
 
 try {
@@ -108,11 +109,9 @@ try {
   console.log(`Generating ${newProtos.length} protos`);
 
   // Run protoc with explicit cwd - no need for process.chdir()
-  await $`protoc --proto_path=${TMP_DIR} --go_out=${OUT_DIR} --go_opt=module=${MODULE}/api ${newProtos}`.cwd(TMP_DIR);
+  await $`protoc --proto_path=${TMP_DIR} --go_out=${OUT_DIR} --go_opt=default_api_level=API_OPAQUE --go_opt=module=${MODULE}/api ${newProtos}`.cwd(TMP_DIR);
 } finally {
   // Always cleanup temp directory
   await rm(TMP_DIR, { recursive: true, force: true });
+  console.log("OK")
 }
-
-const count = (await walkDir(OUT_DIR)).length;
-console.log(`${count} .pb.go files in ${OUT_DIR}`);
