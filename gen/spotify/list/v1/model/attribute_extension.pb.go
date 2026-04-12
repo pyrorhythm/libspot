@@ -90,7 +90,7 @@ const file_spotify_list_v1_model_attribute_extension_proto_rawDesc = "" +
 	"\x15KIND_LOWER_SNAKE_CASE\x10\x04\x12\x19\n" +
 	"\x15KIND_UPPER_SNAKE_CASE\x10\x05\x12\x15\n" +
 	"\x11KIND_COMPLEX_TYPE\x10\x06Bu\n" +
-	"\x19com.spotify.list.v1.modelB\x17AttributeExtensionProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x17AttributeExtensionProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attribute_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_attribute_extension_proto_goTypes = []any{

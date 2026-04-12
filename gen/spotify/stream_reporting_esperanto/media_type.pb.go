@@ -81,7 +81,7 @@ const file_media_type_proto_rawDesc = "" +
 	"\x10MEDIA_TYPE_AUDIO\x10\x00\x12\x14\n" +
 	"\x10MEDIA_TYPE_VIDEO\x10\x01\x12\x16\n" +
 	"\x12MEDIA_TYPE_UNKNOWN\x10\x02\x1a\x02\x10\x01B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_media_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_media_type_proto_goTypes = []any{

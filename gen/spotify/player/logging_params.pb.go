@@ -231,7 +231,7 @@ const file_logging_params_proto_rawDesc = "" +
 	"\x0finteraction_ids\x18\x04 \x03(\tR\x0einteractionIds\x12+\n" +
 	"\x11device_identifier\x18\x05 \x01(\tR\x10deviceIdentifier\x12\x1d\n" +
 	"\n" +
-	"command_id\x18\x06 \x01(\tR\tcommandIdB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"command_id\x18\x06 \x01(\tR\tcommandIdB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_logging_params_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_logging_params_proto_goTypes = []any{

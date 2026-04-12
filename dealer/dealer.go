@@ -2,57 +2,23 @@ package dealer
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"time"
 
 	ws "github.com/coder/websocket"
+	"github.com/pyrorhythm/libspot/dealer/types"
 )
 
-var ErrNotConnected = errors.New("dealer: not connected")
+func (d *Dealer) loop(ctx context.Context) {
+	var globalAttempt int64
 
-func (d *DealerG2) Start() error {
-	if !d.running.CompareAndSwap(false, true) {
-		return errors.New("dealer: already started")
-	}
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		default:
+		}
 
-	ctx, cancel := context.WithCancel(context.Background())
-	d.runningCtx = ctx
-	d.runningCancel = cancel
-
-	go d.reconnectLoop(ctx)
-	return nil
-}
-
-func (d *DealerG2) Stop() error {
-	if !d.running.CompareAndSwap(true, false) {
-		return nil
-	}
-	d.runningCancel()
-	return nil
-}
-
-func (d *DealerG2) Send(msg []byte) error {
-	d.mu.RLock()
-	ch := d.sendCh
-	d.mu.RUnlock()
-
-	if ch == nil {
-		return ErrNotConnected
-	}
-
-	select {
-	case ch <- msg:
-		return nil
-	default:
-		return errors.New("dealer: send buffer full")
-	}
-}
-
-func (d *DealerG2) reconnectLoop(ctx context.Context) {
-	var globalAttempt uint = 0
-
-	for ctx.Err() == nil {
 		eps, err := d.fetchEndpoints()
 		if err != nil {
 			select {
@@ -63,13 +29,17 @@ func (d *DealerG2) reconnectLoop(ctx context.Context) {
 			continue
 		}
 
+		d.connMu.Lock()
 		if wsConn, ok := d.tryEndpoints(ctx, eps); ok {
-			c := d.newConn(wsConn)
-			d.runConn(ctx, c)
+			d.newConn(wsConn)
+			d.connMu.Unlock()
+			// /
+			d.runConn(ctx)
 			// blocking here
 			globalAttempt = 0
 			continue
 		}
+		d.connMu.Unlock()
 
 		globalAttempt++
 		if d.RetryCap > 0 && globalAttempt > d.RetryCap {
@@ -86,24 +56,18 @@ func (d *DealerG2) reconnectLoop(ctx context.Context) {
 	}
 }
 
-func (d *DealerG2) runConn(ctx context.Context, c *conn) {
-	d.mu.Lock()
-	d.state = ConnStateConnected
-	d.sendCh = c.send
-	d.mu.Unlock()
-
+func (d *Dealer) runConn(ctx context.Context) {
 	defer func() {
-		c.closeWS()
-		d.mu.Lock()
-		d.sendCh = nil
-		d.state = ConnStateIdle
-		d.mu.Unlock()
+		d.connMu.Lock()
+		defer d.connMu.Unlock()
+
+		d.conn.closeWS()
 	}()
 
-	c.run(ctx)
+	d.conn.run(ctx)
 }
 
-func (d *DealerG2) newConn(ws *ws.Conn) *conn {
+func (d *Dealer) newConn(ws *ws.Conn) {
 	pingIv := 30 * time.Second
 	pingTo := 10 * time.Second
 	if d.PingIntervalSec > 0 {
@@ -113,14 +77,14 @@ func (d *DealerG2) newConn(ws *ws.Conn) *conn {
 		pingTo = time.Duration(d.PingTimeout) * time.Second
 	}
 
-	c := &conn{
+	d.conn = &conn{
+		dealer:       d,
 		ws:           ws,
 		send:         make(chan []byte, 256),
+		reqCh:        make(chan *types.Request, 64),
 		pingInterval: pingIv,
 		pingTimeout:  pingTo,
 	}
 
-	c.suicideTimer = time.AfterFunc(pingIv+pingTo, func() { c.Close() })
-
-	return c
+	d.conn.suicideTimer = time.AfterFunc(pingIv+pingTo, func() { _ = d.conn.Close() })
 }

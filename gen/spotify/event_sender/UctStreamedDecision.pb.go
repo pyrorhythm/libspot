@@ -174,7 +174,7 @@ const file_include_UctStreamedDecision_proto_rawDesc = "" +
 	"decisionId\x12\x1f\n" +
 	"\vplayback_id\x18\x02 \x01(\fR\n" +
 	"playbackId\x127\n" +
-	"\x18play_context_decision_id\x18\x03 \x01(\tR\x15playContextDecisionIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x18play_context_decision_id\x18\x03 \x01(\tR\x15playContextDecisionIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_UctStreamedDecision_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_UctStreamedDecision_proto_goTypes = []any{

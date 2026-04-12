@@ -5,6 +5,8 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
+
+	"github.com/pyrorhythm/libspot/dealer/types"
 )
 
 type router struct {
@@ -12,18 +14,18 @@ type router struct {
 	mr   map[string]*msgRouter
 
 	reqMu sync.RWMutex
-	req   map[string]func(*Msg) bool
+	req   map[string]func(*types.Request) bool
 }
 
 type msgRouter struct {
 	id   atomic.Uint64
 	mu   sync.RWMutex
-	subs map[uint64]func(*Msg)
+	subs map[uint64]func(*types.Message)
 }
 
 type unsubFn func()
 
-func (r *msgRouter) notify(msg *Msg) {
+func (r *msgRouter) notify(msg *types.Message) {
 	r.mu.RLock()
 	defer r.mu.RUnlock()
 	for _, v := range r.subs {
@@ -31,7 +33,7 @@ func (r *msgRouter) notify(msg *Msg) {
 	}
 }
 
-func (r *msgRouter) add(cb func(*Msg)) unsubFn {
+func (r *msgRouter) add(cb func(*types.Message)) unsubFn {
 	r.mu.Lock()
 	defer r.mu.Unlock()
 	idx := r.id.Add(1)
@@ -44,20 +46,20 @@ func (r *msgRouter) add(cb func(*Msg)) unsubFn {
 }
 
 type Router interface {
-	handleMsg(msg *Msg)
-	handleReq(ctx context.Context, msg *Msg) (reply chan bool, found bool)
-	onMsgUri(uri string, cb func(*Msg)) unsubFn
-	onReqUri(uri string, cb func(*Msg) bool) unsubFn
+	handleMsg(msg *types.Message)
+	handleReq(ctx context.Context, req *types.Request) (reply chan bool, found bool)
+	onMsgUri(uri string, cb func(*types.Message)) unsubFn
+	onReqUri(uri string, cb func(*types.Request) bool) unsubFn
 }
 
 func newRouter() Router {
 	return &router{
 		mr:  make(map[string]*msgRouter),
-		req: make(map[string]func(*Msg) bool),
+		req: make(map[string]func(*types.Request) bool),
 	}
 }
 
-func (r *router) handleMsg(msg *Msg) {
+func (r *router) handleMsg(msg *types.Message) {
 	r.mrMu.RLock()
 	defer r.mrMu.RUnlock()
 	for uri, mr := range r.mr {
@@ -68,10 +70,13 @@ func (r *router) handleMsg(msg *Msg) {
 	}
 }
 
-func (r *router) handleReq(ctx context.Context, msg *Msg) (replyChan chan bool, found bool) {
+func (r *router) handleReq(
+	ctx context.Context,
+	msg *types.Request,
+) (replyChan chan bool, found bool) {
 	var reqsub struct {
 		plen int
-		cb   func(*Msg) bool
+		cb   func(*types.Request) bool
 	}
 
 	r.reqMu.RLock()
@@ -102,12 +107,13 @@ func (r *router) handleReq(ctx context.Context, msg *Msg) (replyChan chan bool, 
 	return replyChan, true
 }
 
-func (r *router) onReqUri(uri string, cb func(*Msg) bool) unsubFn {
+func (r *router) onReqUri(uri string, cb func(*types.Request) bool) unsubFn {
 	r.reqMu.Lock()
 	defer r.reqMu.Unlock()
 
 	if _, ok := r.req[uri]; ok {
-		panic("libspot: dealer request can have only 1 sub")
+		// single-sub contract; ignore duplicate rather than panic
+		return func() {}
 	}
 
 	r.req[uri] = cb
@@ -115,19 +121,18 @@ func (r *router) onReqUri(uri string, cb func(*Msg) bool) unsubFn {
 	return func() {
 		r.reqMu.Lock()
 		defer r.reqMu.Unlock()
-
 		delete(r.req, uri)
 	}
 }
 
-func (r *router) onMsgUri(uri string, cb func(*Msg)) unsubFn {
+func (r *router) onMsgUri(uri string, cb func(*types.Message)) unsubFn {
 	r.mrMu.Lock()
-	defer r.mrMu.Unlock()
-
 	mr, ok := r.mr[uri]
 	if !ok {
-		mr = &msgRouter{subs: make(map[uint64]func(*Msg))}
+		mr = &msgRouter{subs: make(map[uint64]func(*types.Message))}
+		r.mr[uri] = mr
 	}
+	r.mrMu.Unlock()
 
 	return mr.add(cb)
 }

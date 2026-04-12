@@ -86,7 +86,7 @@ const file_spotify_list_v1_model_attributes_signals_list_proto_rawDesc = "" +
 	"3spotify/list/v1/model/attributes/signals_list.proto\x12 spotify.list.v1.model.attributes\x1a#spotify/list/v1/model/signals.proto\"Y\n" +
 	"\vSignalsList\x12J\n" +
 	"\x11available_signals\x18\x01 \x03(\v2\x1d.spotify.list.v1.model.SignalR\x10availableSignalsBy\n" +
-	"$com.spotify.list.v1.model.attributesB\x10SignalsListProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x10SignalsListProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_signals_list_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_attributes_signals_list_proto_goTypes = []any{

@@ -272,7 +272,7 @@ const file_playlist_user_state_proto_rawDesc = "" +
 	"\timage_uri\x18\x04 \x01(\tR\bimageUri\x12#\n" +
 	"\rthumbnail_uri\x18\x05 \x01(\tR\fthumbnailUri\x12\x14\n" +
 	"\x05color\x18\x06 \x01(\x05R\x05colorB`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_playlist_user_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_playlist_user_state_proto_goTypes = []any{

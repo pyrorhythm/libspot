@@ -296,7 +296,7 @@ const file_include_SAIMetadataReceived_proto_rawDesc = "" +
 	"\x10http_status_code\x18\x04 \x01(\x05R\x0ehttpStatusCode\x12\x1b\n" +
 	"\tis_online\x18\x05 \x01(\bR\bisOnline\x12\x19\n" +
 	"\bis_stale\x18\x06 \x01(\bR\aisStale\x12*\n" +
-	"\x11fetch_duration_ms\x18\a \x01(\x03R\x0ffetchDurationMsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11fetch_duration_ms\x18\a \x01(\x03R\x0ffetchDurationMsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_SAIMetadataReceived_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_SAIMetadataReceived_proto_goTypes = []any{

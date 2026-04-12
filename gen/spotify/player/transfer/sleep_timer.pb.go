@@ -413,7 +413,7 @@ const file_sleep_timer_proto_rawDesc = "" +
 	"\n" +
 	"EndOfTrackB\f\n" +
 	"\n" +
-	"timer_typeBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/transfer;transfer"
+	"timer_typeBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/transfer;transfer"
 
 var file_sleep_timer_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_sleep_timer_proto_goTypes = []any{

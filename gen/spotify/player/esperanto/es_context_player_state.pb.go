@@ -1277,7 +1277,7 @@ const file_es_context_player_state_proto_rawDesc = "" +
 	"\a_formatB\x13\n" +
 	"\x11_ad_break_contextB\x0e\n" +
 	"\f_sleep_timerBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_context_player_state_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_es_context_player_state_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

@@ -388,7 +388,7 @@ const file_social_connect_v2_proto_rawDesc = "" +
 	"\x16WIFI_BROADCAST_CHANGED\x10\r\x12\x19\n" +
 	"\x15ACTIVE_DEVICE_CHANGED\x10\x0e\x12\x1a\n" +
 	"\x16SESSION_MEMBER_UPDATED\x10\x10\x12\x15\n" +
-	"\x11SESSION_ACTIVATED\x10\x11B?Z=github.com/pyrorhythm/libspot/api/socialconnect;socialconnectb\x06proto3"
+	"\x11SESSION_ACTIVATED\x10\x11B?Z=github.com/pyrorhythm/libspot/gen/socialconnect;socialconnectb\x06proto3"
 
 var file_social_connect_v2_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_social_connect_v2_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

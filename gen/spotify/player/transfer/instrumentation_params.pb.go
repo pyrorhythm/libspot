@@ -98,7 +98,7 @@ const file_instrumentation_params_proto_rawDesc = "" +
 	"\x1cinstrumentation_params.proto\x12\x1dspotify.player.proto.transfer\"l\n" +
 	"\x15InstrumentationParams\x12'\n" +
 	"\x0finteraction_ids\x18\x06 \x03(\tR\x0einteractionIds\x12*\n" +
-	"\x11page_instance_ids\x18\a \x03(\tR\x0fpageInstanceIdsBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/transfer;transfer"
+	"\x11page_instance_ids\x18\a \x03(\tR\x0fpageInstanceIdsBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/transfer;transfer"
 
 var file_instrumentation_params_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_instrumentation_params_proto_goTypes = []any{

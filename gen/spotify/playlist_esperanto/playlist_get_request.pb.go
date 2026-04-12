@@ -7,8 +7,8 @@
 package playlist_esperanto
 
 import (
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
-	playlist_request "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos/playlist_request"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
+	playlist_request "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos/playlist_request"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -620,7 +620,7 @@ const file_playlist_get_request_proto_rawDesc = "" +
 	"\x18PlaylistMultiGetResponse\x12H\n" +
 	"\x06status\x18\x01 \x01(\v20.spotify.playlist_esperanto.proto.ResponseStatusR\x06status\x12^\n" +
 	"\tresponses\x18\x02 \x03(\v2@.spotify.playlist_esperanto.proto.PlaylistMultiGetSingleResponseR\tresponsesB{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playlist_get_request_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_playlist_get_request_proto_goTypes = []any{

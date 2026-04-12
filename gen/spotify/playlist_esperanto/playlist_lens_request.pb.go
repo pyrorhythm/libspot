@@ -262,7 +262,7 @@ const file_playlist_lens_request_proto_rawDesc = "" +
 	"\x06lenses\x18\x02 \x03(\v20.spotify.playlist_esperanto.proto.LensDefinitionR\x06lenses\"`\n" +
 	"\x14PlaylistLensResponse\x12H\n" +
 	"\x06status\x18\x01 \x01(\v20.spotify.playlist_esperanto.proto.ResponseStatusR\x06statusB{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playlist_lens_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_playlist_lens_request_proto_goTypes = []any{

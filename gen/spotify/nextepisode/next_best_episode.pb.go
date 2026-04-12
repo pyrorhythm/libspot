@@ -244,7 +244,7 @@ const file_next_best_episode_proto_rawDesc = "" +
 	"\x04next\x18\x01 \x03(\v2 .spotify.nextepisode.NextEpisodeR\x04next\"t\n" +
 	"\x0fNextEpisodeRecs\x12\x19\n" +
 	"\bshow_uri\x18\x01 \x01(\tR\ashowUri\x12F\n" +
-	"\rnext_episodes\x18\x02 \x01(\v2!.spotify.nextepisode.NextEpisodesR\fnextEpisodesBCZAgithub.com/pyrorhythm/libspot/api/spotify/nextepisode;nextepisodeb\x06proto3"
+	"\rnext_episodes\x18\x02 \x01(\v2!.spotify.nextepisode.NextEpisodesR\fnextEpisodesBCZAgithub.com/pyrorhythm/libspot/gen/spotify/nextepisode;nextepisodeb\x06proto3"
 
 var file_next_best_episode_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_next_best_episode_proto_goTypes = []any{

@@ -169,7 +169,7 @@ const file_include_CommonCappingInitRetry_proto_rawDesc = "" +
 	"\x16CommonCappingInitRetry\x12*\n" +
 	"\x11number_of_retries\x18\x01 \x01(\x03R\x0fnumberOfRetries\x123\n" +
 	"\x16local_state_sync_state\x18\x02 \x01(\tR\x13localStateSyncState\x12\x16\n" +
-	"\x06result\x18\x03 \x01(\tR\x06resultBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x06result\x18\x03 \x01(\tR\x06resultBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CommonCappingInitRetry_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CommonCappingInitRetry_proto_goTypes = []any{

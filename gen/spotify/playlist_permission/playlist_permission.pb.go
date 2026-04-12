@@ -4539,7 +4539,7 @@ const file_playlist_permission_proto_rawDesc = "" +
 	" PERMISSION_IDENTIFIER_KIND_ABUSE\x10\x03\x12&\n" +
 	"\"PERMISSION_IDENTIFIER_KIND_PROFILE\x10\x04\x12)\n" +
 	"%PERMISSION_IDENTIFIER_KIND_AUTHORIZED\x10\x05Bq\n" +
-	"\x1acom.spotify.playlist.protoP\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/playlist_permission;playlist_permission"
+	"\x1acom.spotify.playlist.protoP\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/playlist_permission;playlist_permission"
 
 var file_playlist_permission_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
 var file_playlist_permission_proto_msgTypes = make([]protoimpl.MessageInfo, 35)

@@ -90,7 +90,7 @@ const file_media_proto_rawDesc = "" +
 	"\tVERY_HIGH\x10\x04\x12\b\n" +
 	"\x04HIFI\x10\x05\x12\v\n" +
 	"\aHIFI_24\x10\x06BX\n" +
-	"\x18com.spotify.common.protoZ<github.com/pyrorhythm/libspot/api/spotify/common/media;mediab\x06proto3"
+	"\x18com.spotify.common.protoZ<github.com/pyrorhythm/libspot/gen/spotify/common/media;mediab\x06proto3"
 
 var file_media_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_media_proto_goTypes = []any{

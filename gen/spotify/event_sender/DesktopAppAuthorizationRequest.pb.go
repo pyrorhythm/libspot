@@ -374,7 +374,7 @@ const file_include_DesktopAppAuthorizationRequest_proto_rawDesc = "" +
 	"promptType\x12%\n" +
 	"\x0einternal_error\x18\b \x01(\tR\rinternalError\x12\x1f\n" +
 	"\vapp_variant\x18\t \x01(\tR\n" +
-	"appVariantBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"appVariantBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopAppAuthorizationRequest_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopAppAuthorizationRequest_proto_goTypes = []any{

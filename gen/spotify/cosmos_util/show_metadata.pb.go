@@ -589,7 +589,7 @@ const file_metadata_show_metadata_proto_rawDesc = "" +
 	"\textension\x18\x0f \x03(\v2$.spotify.cosmos_util.proto.ExtensionR\textension\x12\x17\n" +
 	"\ais_book\x18\x10 \x01(\bR\x06isBook\x12,\n" +
 	"\x12is_creator_channel\x18\x11 \x01(\bR\x10isCreatorChannelBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_show_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metadata_show_metadata_proto_goTypes = []any{

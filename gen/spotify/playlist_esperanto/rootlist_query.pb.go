@@ -569,7 +569,7 @@ const file_rootlist_query_proto_rawDesc = "" +
 	"\x12ALL_ROOTLIST_ITEMS\x10\x00\x12\x19\n" +
 	"\x15PLAYLISTS_IN_ROOTLIST\x10\x01\x12\x17\n" +
 	"\x13FOLDERS_IN_ROOTLIST\x10\x02B{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_rootlist_query_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_rootlist_query_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

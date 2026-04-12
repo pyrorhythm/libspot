@@ -340,7 +340,7 @@ const file_your_library_tags_backend_proto_rawDesc = "" +
 	"\x04rank\x18\x04 \x01(\x05R\x04rank\"A\n" +
 	"\x04Item\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12'\n" +
-	"\x0frelevance_score\x18\x02 \x01(\x05R\x0erelevanceScoreBOZMgithub.com/pyrorhythm/libspot/api/spotify/your_library_tags;your_library_tagsb\x06proto3"
+	"\x0frelevance_score\x18\x02 \x01(\x05R\x0erelevanceScoreBOZMgithub.com/pyrorhythm/libspot/gen/spotify/your_library_tags;your_library_tagsb\x06proto3"
 
 var file_your_library_tags_backend_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_your_library_tags_backend_proto_goTypes = []any{

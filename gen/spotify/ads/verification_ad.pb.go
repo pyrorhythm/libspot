@@ -394,7 +394,7 @@ const file_verification_ad_proto_rawDesc = "" +
 	"\rsk_ad_network\x18\x01 \x01(\v2\".spotify.ads.proto.SKAdNetworkDataH\x00R\vskAdNetworkB\x06\n" +
 	"\x04type\"W\n" +
 	"\x0eVerificationAd\x12E\n" +
-	"\rverifications\x18\x11 \x03(\v2\x1f.spotify.ads.proto.VerificationR\rverificationsB5P\x01Z1github.com/pyrorhythm/libspot/api/spotify/ads;adsb\x06proto3"
+	"\rverifications\x18\x11 \x03(\v2\x1f.spotify.ads.proto.VerificationR\rverificationsB5P\x01Z1github.com/pyrorhythm/libspot/gen/spotify/ads;adsb\x06proto3"
 
 var file_verification_ad_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_verification_ad_proto_goTypes = []any{

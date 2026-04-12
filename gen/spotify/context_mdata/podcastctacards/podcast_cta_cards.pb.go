@@ -83,7 +83,7 @@ const file_podcast_cta_cards_proto_rawDesc = "" +
 	"\n" +
 	"\x17podcast_cta_cards.proto\x12%spotify.context_mdata.podcastctacards\"#\n" +
 	"\x04Card\x12\x1b\n" +
-	"\thas_cards\x18\x01 \x01(\bR\bhasCardsBYZWgithub.com/pyrorhythm/libspot/api/spotify/context_mdata/podcastctacards;podcastctacardsb\x06proto3"
+	"\thas_cards\x18\x01 \x01(\bR\bhasCardsBYZWgithub.com/pyrorhythm/libspot/gen/spotify/context_mdata/podcastctacards;podcastctacardsb\x06proto3"
 
 var file_podcast_cta_cards_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_podcast_cta_cards_proto_goTypes = []any{

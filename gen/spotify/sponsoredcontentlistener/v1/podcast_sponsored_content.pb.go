@@ -83,7 +83,7 @@ const file_podcast_sponsored_content_proto_rawDesc = "" +
 	"\n" +
 	"\x1fpodcast_sponsored_content.proto\x12#spotify.sponsoredcontentlistener.v1\"_\n" +
 	"\x1fSponsoredContentListenerPayload\x12<\n" +
-	"\x1acontains_sponsored_content\x18\x01 \x01(\bR\x18containsSponsoredContentBJZHgithub.com/pyrorhythm/libspot/api/spotify/sponsoredcontentlistener/v1;v1b\x06proto3"
+	"\x1acontains_sponsored_content\x18\x01 \x01(\bR\x18containsSponsoredContentBJZHgithub.com/pyrorhythm/libspot/gen/spotify/sponsoredcontentlistener/v1;v1b\x06proto3"
 
 var file_podcast_sponsored_content_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_podcast_sponsored_content_proto_goTypes = []any{

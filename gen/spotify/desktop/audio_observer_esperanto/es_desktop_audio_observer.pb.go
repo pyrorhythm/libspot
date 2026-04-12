@@ -376,7 +376,7 @@ const file_es_desktop_audio_observer_proto_rawDesc = "" +
 	"\x1dTRANSPORT_TYPE_DISPLAY_DEVICE\x10\x06\x12\x1a\n" +
 	"\x16TRANSPORT_TYPE_AIRPLAY\x10\a2\x91\x01\n" +
 	"\x14DesktopAudioObserver\x12y\n" +
-	"\x15GetAudioOutputDevices\x12\x16.google.protobuf.Empty\x1aD.spotify.desktop.audio_observer_esperanto.proto.AudioDevicesResponse\"\x000\x01BeZcgithub.com/pyrorhythm/libspot/api/spotify/desktop/audio_observer_esperanto;audio_observer_esperantob\x06proto3"
+	"\x15GetAudioOutputDevices\x12\x16.google.protobuf.Empty\x1aD.spotify.desktop.audio_observer_esperanto.proto.AudioDevicesResponse\"\x000\x01BeZcgithub.com/pyrorhythm/libspot/gen/spotify/desktop/audio_observer_esperanto;audio_observer_esperantob\x06proto3"
 
 var file_es_desktop_audio_observer_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_es_desktop_audio_observer_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

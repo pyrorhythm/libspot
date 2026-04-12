@@ -7,7 +7,7 @@
 package list_player
 
 import (
-	timeline_reporter "github.com/pyrorhythm/libspot/api/spotify/timeline_reporter"
+	timeline_reporter "github.com/pyrorhythm/libspot/gen/spotify/timeline_reporter"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -770,7 +770,7 @@ const file_mft_state_proto_rawDesc = "" +
 	"\x18PLAYED_ITEMS_SOURCE_LIST\x10\x01\x12\x1d\n" +
 	"\x19PLAYED_ITEMS_SOURCE_QUEUE\x10\x02\x12 \n" +
 	"\x1cPLAYED_ITEMS_SOURCE_AUTOPLAY\x10\x03\x12\x1b\n" +
-	"\x17PLAYED_ITEMS_SOURCE_MFT\x10\x04BCZAgithub.com/pyrorhythm/libspot/api/spotify/list_player;list_playerb\x06proto3"
+	"\x17PLAYED_ITEMS_SOURCE_MFT\x10\x04BCZAgithub.com/pyrorhythm/libspot/gen/spotify/list_player;list_playerb\x06proto3"
 
 var file_mft_state_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_mft_state_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

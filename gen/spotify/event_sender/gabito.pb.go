@@ -439,7 +439,7 @@ const file_gabito_proto_rawDesc = "" +
 	"EventError\x12\x14\n" +
 	"\x05index\x18\x01 \x01(\x05R\x05index\x12\x1c\n" +
 	"\ttransient\x18\x02 \x01(\bR\ttransient\x12\x16\n" +
-	"\x06reason\x18\x03 \x01(\x05R\x06reasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x06reason\x18\x03 \x01(\x05R\x06reasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_gabito_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_gabito_proto_goTypes = []any{

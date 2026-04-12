@@ -277,7 +277,7 @@ const file_state_restore_player_session_queue_proto_rawDesc = "" +
 	"\x12PlayerSessionQueue\x12I\n" +
 	"\x06active\x18\x01 \x01(\v21.spotify.player.proto.state_restore.PlayerSessionR\x06active\x12I\n" +
 	"\x06pushed\x18\x02 \x03(\v21.spotify.player.proto.state_restore.PlayerSessionR\x06pushed\x12I\n" +
-	"\x06queued\x18\x03 \x03(\v21.spotify.player.proto.state_restore.QueuedSessionR\x06queuedBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x06queued\x18\x03 \x03(\v21.spotify.player.proto.state_restore.QueuedSessionR\x06queuedBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_player_session_queue_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_state_restore_player_session_queue_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

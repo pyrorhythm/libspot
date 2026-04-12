@@ -205,7 +205,7 @@ const file_es_desktop_watchdog_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\aR\x02id2\xf5\x01\n" +
 	"\x0fDesktopWatchdog\x12\x88\x01\n" +
 	"\tSubscribe\x12:.spotify.desktop.watchdog_esperanto.proto.SubscribeRequest\x1a;.spotify.desktop.watchdog_esperanto.proto.SubscribeResponse\"\x000\x01\x12W\n" +
-	"\x04Ping\x125.spotify.desktop.watchdog_esperanto.proto.PingRequest\x1a\x16.google.protobuf.Empty\"\x00BYZWgithub.com/pyrorhythm/libspot/api/spotify/desktop/watchdog_esperanto;watchdog_esperantob\x06proto3"
+	"\x04Ping\x125.spotify.desktop.watchdog_esperanto.proto.PingRequest\x1a\x16.google.protobuf.Empty\"\x00BYZWgithub.com/pyrorhythm/libspot/gen/spotify/desktop/watchdog_esperanto;watchdog_esperantob\x06proto3"
 
 var file_es_desktop_watchdog_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_es_desktop_watchdog_proto_goTypes = []any{

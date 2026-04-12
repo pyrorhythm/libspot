@@ -114,7 +114,7 @@ const file_es_ad_break_context_proto_rawDesc = "" +
 	"\x15max_seconds_remaining\x18\x01 \x01(\x04R\x13maxSecondsRemaining\x12>\n" +
 	"\x1cposition_in_current_ad_break\x18\x02 \x01(\x04R\x18positionInCurrentAdBreak\x12<\n" +
 	"\x1btotal_ads_in_break_estimate\x18\x03 \x01(\x04R\x17totalAdsInBreakEstimateBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_ad_break_context_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_ad_break_context_proto_goTypes = []any{

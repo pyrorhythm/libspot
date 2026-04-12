@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -217,7 +217,7 @@ const file_spotify_playback_platform_timeline_v1_behavior_seek_snap_proto_rawDes
 	"\x0esnap_positions\x18\x01 \x01(\v21.spotify.playback_platform.timeline.v1.TimepointsR\rsnapPositions\x12E\n" +
 	"\x06radius\x18\x02 \x01(\v2-.spotify.playback_platform.common.v1.DurationR\x06radiusB\t\n" +
 	"\a_cutoffB~\n" +
-	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_behavior_seek_snap_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_timeline_v1_behavior_seek_snap_proto_goTypes = []any{

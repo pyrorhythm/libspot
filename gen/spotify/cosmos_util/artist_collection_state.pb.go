@@ -291,7 +291,7 @@ const file_collection_artist_collection_state_proto_rawDesc = "" +
 	"\tis_banned\x18\x05 \x01(\bR\bisBanned\x12\x17\n" +
 	"\acan_ban\x18\x06 \x01(\bR\x06canBan\x12=\n" +
 	"\x1bnum_explicitly_liked_tracks\x18\a \x01(\rR\x18numExplicitlyLikedTracksBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_collection_artist_collection_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_collection_artist_collection_state_proto_goTypes = []any{

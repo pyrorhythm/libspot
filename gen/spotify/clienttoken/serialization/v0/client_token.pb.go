@@ -190,7 +190,7 @@ const file_client_token_proto_rawDesc = "" +
 	"\x14expires_at_timestamp\x18\x02 \x01(\x03R\x12expiresAtTimestamp\x120\n" +
 	"\x14refresh_at_timestamp\x18\x03 \x01(\x03R\x12refreshAtTimestamp\x12K\n" +
 	"\adomains\x18\x04 \x03(\v21.spotify.clienttoken.serialization.v0.TokenDomainR\adomainsBs\n" +
-	"$spotify.clienttoken.serialization.v0P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/clienttoken/serialization/v0;v0b\x06proto3"
+	"$spotify.clienttoken.serialization.v0P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/clienttoken/serialization/v0;v0b\x06proto3"
 
 var file_client_token_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_client_token_proto_goTypes = []any{

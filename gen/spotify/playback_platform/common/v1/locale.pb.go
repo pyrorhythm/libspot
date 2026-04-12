@@ -116,7 +116,7 @@ const file_spotify_playback_platform_common_v1_locale_proto_rawDesc = "" +
 	"dateFormat\x12\x1f\n" +
 	"\vtime_format\x18\x03 \x01(\tR\n" +
 	"timeFormatBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_locale_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_common_v1_locale_proto_goTypes = []any{

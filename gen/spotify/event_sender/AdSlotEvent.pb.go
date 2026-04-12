@@ -411,7 +411,7 @@ const file_include_AdSlotEvent_proto_rawDesc = "" +
 	"\n" +
 	"request_id\x18\t \x01(\tR\trequestId\x12\x16\n" +
 	"\x06reason\x18\n" +
-	" \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdSlotEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdSlotEvent_proto_goTypes = []any{

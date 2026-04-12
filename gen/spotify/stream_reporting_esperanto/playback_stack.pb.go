@@ -73,7 +73,7 @@ const file_playback_stack_proto_rawDesc = "" +
 	"\aBOOMBOX\x10\x00\x12\v\n" +
 	"\aBETAMAX\x10\x01\x12\v\n" +
 	"\aUNKNOWN\x10\x02B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playback_stack_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playback_stack_proto_goTypes = []any{

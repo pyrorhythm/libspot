@@ -7,7 +7,7 @@
 package v1
 
 import (
-	model "github.com/pyrorhythm/libspot/api/spotify/list/v1/model"
+	model "github.com/pyrorhythm/libspot/gen/spotify/list/v1/model"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -882,7 +882,7 @@ const file_spotify_list_v1_list_read_service_proto_rawDesc = "" +
 	"\x05_info\"T\n" +
 	"\x11DiffListsResponse\x12?\n" +
 	"\tresponses\x18\x01 \x03(\v2!.spotify.list.v1.DiffListResponseR\tresponsesBc\n" +
-	"\x13com.spotify.list.v1B\x14ListReadServiceProtoP\x01Z4github.com/pyrorhythm/libspot/api/spotify/list/v1;v1b\x06proto3"
+	"\x13com.spotify.list.v1B\x14ListReadServiceProtoP\x01Z4github.com/pyrorhythm/libspot/gen/spotify/list/v1;v1b\x06proto3"
 
 var file_spotify_list_v1_list_read_service_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_spotify_list_v1_list_read_service_proto_goTypes = []any{

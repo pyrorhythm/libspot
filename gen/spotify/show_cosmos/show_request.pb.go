@@ -7,7 +7,7 @@
 package show_cosmos
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1288,7 +1288,7 @@ const file_show_request_proto_rawDesc = "" +
 	"\x0fFIRST_PUBLISHED\x10\x05\"\x84\x01\n" +
 	"\x14SavedEpisodesSection\x120\n" +
 	"\x14saved_episodes_count\x18\x01 \x01(\rR\x12savedEpisodesCount\x12:\n" +
-	"\x19downloaded_episodes_count\x18\x02 \x01(\rR\x17downloadedEpisodesCountBSZAgithub.com/pyrorhythm/libspot/api/spotify/show_cosmos;show_cosmos\xa2\x02\rSPTShowCosmos"
+	"\x19downloaded_episodes_count\x18\x02 \x01(\rR\x17downloadedEpisodesCountBSZAgithub.com/pyrorhythm/libspot/gen/spotify/show_cosmos;show_cosmos\xa2\x02\rSPTShowCosmos"
 
 var file_show_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_show_request_proto_msgTypes = make([]protoimpl.MessageInfo, 9)

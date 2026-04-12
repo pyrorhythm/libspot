@@ -84,7 +84,7 @@ const file_lesson_specifics_extension_proto_rawDesc = "" +
 	" lesson_specifics_extension.proto\x12\x13spotify.learning.v1\".\n" +
 	"\x0fLessonSpecifics\x12\x1b\n" +
 	"\tis_lesson\x18\x01 \x01(\bR\bisLessonBk\n" +
-	"\x17com.spotify.learning.v1B\x14LessonSpecificsProtoP\x01Z8github.com/pyrorhythm/libspot/api/spotify/learning/v1;v1b\x06proto3"
+	"\x17com.spotify.learning.v1B\x14LessonSpecificsProtoP\x01Z8github.com/pyrorhythm/libspot/gen/spotify/learning/v1;v1b\x06proto3"
 
 var file_lesson_specifics_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_lesson_specifics_extension_proto_goTypes = []any{

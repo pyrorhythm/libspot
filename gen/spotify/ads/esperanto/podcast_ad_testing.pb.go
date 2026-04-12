@@ -395,7 +395,7 @@ const file_podcast_ad_testing_proto_rawDesc = "" +
 	"\x0ePodcastTesting\x12\x81\x01\n" +
 	"\x10GetNextAdSegment\x124.spotify.ads.esperanto.proto.GetNextAdSegmentRequest\x1a5.spotify.ads.esperanto.proto.GetNextAdSegmentResponse\"\x00\x12\x81\x01\n" +
 	"\x10OverrideMetadata\x124.spotify.ads.esperanto.proto.OverrideMetadataRequest\x1a5.spotify.ads.esperanto.proto.OverrideMetadataResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_podcast_ad_testing_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_podcast_ad_testing_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

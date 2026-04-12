@@ -113,7 +113,7 @@ const file_local_list_config_proto_rawDesc = "" +
 	"\x0fLocalListConfig\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x1b\n" +
 	"\timage_uri\x18\x02 \x01(\tR\bimageUri\x12 \n" +
-	"\vdescription\x18\x03 \x01(\tR\vdescriptionBXZVgithub.com/pyrorhythm/libspot/api/spotify/playlist/local_list_config;local_list_configb\x06proto3"
+	"\vdescription\x18\x03 \x01(\tR\vdescriptionBXZVgithub.com/pyrorhythm/libspot/gen/spotify/playlist/local_list_config;local_list_configb\x06proto3"
 
 var file_local_list_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_local_list_config_proto_goTypes = []any{

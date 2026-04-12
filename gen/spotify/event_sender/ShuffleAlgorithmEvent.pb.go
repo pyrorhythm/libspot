@@ -104,7 +104,7 @@ const file_include_ShuffleAlgorithmEvent_proto_rawDesc = "" +
 	"\n" +
 	"#include/ShuffleAlgorithmEvent.proto\x12\x1aspotify.event_sender.proto\"D\n" +
 	"\x15ShuffleAlgorithmEvent\x12+\n" +
-	"\x11shuffle_algorithm\x18\x01 \x01(\tR\x10shuffleAlgorithmBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11shuffle_algorithm\x18\x01 \x01(\tR\x10shuffleAlgorithmBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ShuffleAlgorithmEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ShuffleAlgorithmEvent_proto_goTypes = []any{

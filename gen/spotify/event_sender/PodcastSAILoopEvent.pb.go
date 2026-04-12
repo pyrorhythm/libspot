@@ -422,7 +422,7 @@ const file_include_PodcastSAILoopEvent_proto_rawDesc = "" +
 	"\n" +
 	"request_id\x18\n" +
 	" \x01(\tR\trequestId\x12\x17\n" +
-	"\aloop_id\x18\v \x01(\tR\x06loopIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\aloop_id\x18\v \x01(\tR\x06loopIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PodcastSAILoopEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PodcastSAILoopEvent_proto_goTypes = []any{

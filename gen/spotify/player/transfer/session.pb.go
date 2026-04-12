@@ -7,8 +7,8 @@
 package transfer
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
-	playlist "github.com/pyrorhythm/libspot/api/spotify/playlist"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
+	playlist "github.com/pyrorhythm/libspot/gen/spotify/playlist"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -359,7 +359,7 @@ const file_session_proto_rawDesc = "" +
 	"\fmain_context\x18\b \x01(\v2\x1d.spotify.player.proto.ContextR\vmainContext\x12.\n" +
 	"\x13original_session_id\x18\t \x01(\tR\x11originalSessionId\x12_\n" +
 	"\x15playlist_play_request\x18\n" +
-	" \x01(\v2+.spotify.playlist.proto.PlaylistPlayRequestR\x13playlistPlayRequestBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/transfer;transfer"
+	" \x01(\v2+.spotify.playlist.proto.PlaylistPlayRequestR\x13playlistPlayRequestBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/transfer;transfer"
 
 var file_session_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_session_proto_goTypes = []any{

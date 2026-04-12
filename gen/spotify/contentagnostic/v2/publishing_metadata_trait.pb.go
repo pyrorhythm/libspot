@@ -605,7 +605,7 @@ const file_publishing_metadata_trait_proto_rawDesc = "" +
 	"\x04year\x18\x01 \x01(\x05R\x04year\x12\x14\n" +
 	"\x05month\x18\x02 \x01(\x05R\x05month\x12\x10\n" +
 	"\x03day\x18\x03 \x01(\x05R\x03dayBc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_publishing_metadata_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_publishing_metadata_trait_proto_goTypes = []any{

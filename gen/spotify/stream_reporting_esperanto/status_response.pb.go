@@ -85,7 +85,7 @@ const file_status_response_proto_rawDesc = "" +
 	"\x0eStatusResponse\x12U\n" +
 	"\vstatus_code\x18\x01 \x01(\x0e24.spotify.stream_reporting_esperanto.proto.StatusCodeR\n" +
 	"statusCodeB\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_status_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_status_response_proto_goTypes = []any{

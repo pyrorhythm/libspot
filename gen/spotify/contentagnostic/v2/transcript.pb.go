@@ -96,7 +96,7 @@ const file_transcript_proto_rawDesc = "" +
 	"\n" +
 	"Transcript\x12A\n" +
 	"\tflat_file\x18\x01 \x01(\v2$.spotify.contentagnostic.v2.FlatFileR\bflatFileBc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_transcript_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_transcript_proto_goTypes = []any{

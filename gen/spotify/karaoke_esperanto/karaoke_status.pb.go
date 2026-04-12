@@ -69,7 +69,7 @@ const file_karaoke_status_proto_rawDesc = "" +
 	"\rKaraokeStatus\x12\v\n" +
 	"\aENABLED\x10\x00\x12\f\n" +
 	"\bDISABLED\x10\x01B|\n" +
-	"#com.spotify.karaoke.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/karaoke_esperanto;karaoke_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#com.spotify.karaoke.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/karaoke_esperanto;karaoke_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_karaoke_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_karaoke_status_proto_goTypes = []any{

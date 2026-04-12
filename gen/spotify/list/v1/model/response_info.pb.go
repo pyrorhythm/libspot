@@ -189,7 +189,7 @@ const file_spotify_list_v1_model_response_info_proto_rawDesc = "" +
 	"\t_revisionB\x11\n" +
 	"\x0f_applied_lensesJ\x04\b\x02\x10\x03J\x04\b\x04\x10\x05J\x04\b\x05\x10\x06J\x04\b\x06\x10\aJ\x04\b\t\x10\n" +
 	"Bo\n" +
-	"\x19com.spotify.list.v1.modelB\x11ResponseInfoProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x11ResponseInfoProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_response_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_response_info_proto_goTypes = []any{

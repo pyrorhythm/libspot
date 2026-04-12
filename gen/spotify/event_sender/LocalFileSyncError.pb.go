@@ -104,7 +104,7 @@ const file_include_LocalFileSyncError_proto_rawDesc = "" +
 	"\n" +
 	" include/LocalFileSyncError.proto\x12\x1aspotify.event_sender.proto\"*\n" +
 	"\x12LocalFileSyncError\x12\x14\n" +
-	"\x05error\x18\x01 \x01(\tR\x05errorBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05error\x18\x01 \x01(\tR\x05errorBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_LocalFileSyncError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_LocalFileSyncError_proto_goTypes = []any{

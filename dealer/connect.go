@@ -2,6 +2,7 @@ package dealer
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"net/http"
 	"strings"
@@ -11,7 +12,9 @@ import (
 	"github.com/pyrorhythm/libspot"
 )
 
-func (d *DealerG2) fetchEndpoints() ([]string, error) {
+var ErrEndpointRetriesExceeded = errors.New("dealer: endpoint retries exceeded")
+
+func (d *Dealer) fetchEndpoints() ([]string, error) {
 	if eps, ok := d.rslv.Endpoints(); ok {
 		if dg2Eps := eps.DealerG2(); len(dg2Eps) > 0 {
 			return dg2Eps, nil
@@ -28,7 +31,7 @@ func (d *DealerG2) fetchEndpoints() ([]string, error) {
 	return dg2Eps, nil
 }
 
-func (d *DealerG2) tryEndpoints(ctx context.Context, endpoints []string) (*ws.Conn, bool) {
+func (d *Dealer) tryEndpoints(ctx context.Context, endpoints []string) (*ws.Conn, bool) {
 	for _, ep := range endpoints {
 		select {
 		case <-ctx.Done():
@@ -42,8 +45,8 @@ func (d *DealerG2) tryEndpoints(ctx context.Context, endpoints []string) (*ws.Co
 	return nil, false
 }
 
-func (d *DealerG2) tryEndpointWithRetry(ctx context.Context, endpoint string) (*ws.Conn, error) {
-	for attempt := uint(0); ; attempt++ {
+func (d *Dealer) tryEndpointWithRetry(ctx context.Context, endpoint string) (*ws.Conn, error) {
+	for attempt := range d.RetryCap {
 		select {
 		case <-ctx.Done():
 			return nil, ctx.Err()
@@ -55,7 +58,7 @@ func (d *DealerG2) tryEndpointWithRetry(ctx context.Context, endpoint string) (*
 			return wsConn, nil
 		}
 
-		delay := d.delay(time.Second, attempt)
+		delay := d.delay(attempt)
 		t := time.NewTimer(delay)
 		select {
 		case <-ctx.Done():
@@ -64,10 +67,12 @@ func (d *DealerG2) tryEndpointWithRetry(ctx context.Context, endpoint string) (*
 		case <-t.C:
 		}
 	}
+	
+	return nil, ErrEndpointRetriesExceeded
 }
 
-func (d *DealerG2) connectEndpoint(ctx context.Context, endpoint string) (*ws.Conn, error) {
-	token, err := d.prov.AccessToken(ctx)
+func (d *Dealer) connectEndpoint(ctx context.Context, endpoint string) (*ws.Conn, error) {
+	token, err := d.prov.GetOrRefreshToken(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("token provider: %w", err)
 	}

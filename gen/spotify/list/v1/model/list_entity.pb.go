@@ -590,7 +590,7 @@ const file_spotify_list_v1_model_list_entity_proto_rawDesc = "" +
 	"\x13_lens_removed_items\"E\n" +
 	"\x10LensRemovedItems\x121\n" +
 	"\x05items\x18\x01 \x03(\v2\x1b.spotify.list.v1.model.ItemR\x05itemsBm\n" +
-	"\x19com.spotify.list.v1.modelB\x0fListEntityProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x0fListEntityProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_list_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_spotify_list_v1_model_list_entity_proto_goTypes = []any{

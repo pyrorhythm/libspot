@@ -1394,7 +1394,7 @@ const file_state_restore_context_player_rules_proto_rawDesc = "" +
 	"\x19shuffle_order_event_rules\x18\x12 \x01(\v2:.spotify.player.proto.state_restore.ShuffleOrderEventRulesR\x16shuffleOrderEventRules\x1ao\n" +
 	"\rSubRulesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12L\n" +
-	"\x05value\x18\x02 \x01(\v26.spotify.player.proto.state_restore.ContextPlayerRulesR\x05valueBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x05value\x18\x02 \x01(\v26.spotify.player.proto.state_restore.ContextPlayerRulesR\x05valueBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_context_player_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_state_restore_context_player_rules_proto_goTypes = []any{

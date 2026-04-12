@@ -96,7 +96,7 @@ const file_cache_hint_proto_rawDesc = "" +
 	"\x10cache_hint.proto\x12\x19spotify.playlist.messages\x1a\x1egoogle/protobuf/duration.proto\"g\n" +
 	"\tCacheHint\x12Z\n" +
 	"\x1cnext_expected_content_update\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\x19nextExpectedContentUpdateBm\n" +
-	"#com.spotify.playlist.messages.protoP\x01ZDgithub.com/pyrorhythm/libspot/api/spotify/playlist/messages;messagesb\x06proto3"
+	"#com.spotify.playlist.messages.protoP\x01ZDgithub.com/pyrorhythm/libspot/gen/spotify/playlist/messages;messagesb\x06proto3"
 
 var file_cache_hint_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_cache_hint_proto_goTypes = []any{

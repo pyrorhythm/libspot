@@ -69,7 +69,7 @@ const file_spotify_playback_platform_common_v1_video_format_proto_rawDesc = "" +
 	"\n" +
 	"6spotify/playback_platform/common/v1/video_format.proto\x12#spotify.playback_platform.common.v1\"\r\n" +
 	"\vVideoFormatBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_video_format_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_common_v1_video_format_proto_goTypes = []any{

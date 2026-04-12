@@ -624,7 +624,7 @@ const file_include_HeadFileDownload_proto_rawDesc = "" +
 	"\x10bytes_from_cache\x18\x0e \x01(\x03R\x0ebytesFromCache\x12!\n" +
 	"\fsocket_reuse\x18\x0f \x01(\tR\vsocketReuse\x12!\n" +
 	"\frequest_type\x18\x10 \x01(\tR\vrequestType\x12,\n" +
-	"\x12initial_disk_state\x18\x11 \x01(\tR\x10initialDiskStateBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12initial_disk_state\x18\x11 \x01(\tR\x10initialDiskStateBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_HeadFileDownload_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_HeadFileDownload_proto_goTypes = []any{

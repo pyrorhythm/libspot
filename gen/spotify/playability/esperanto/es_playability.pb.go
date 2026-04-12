@@ -222,7 +222,7 @@ const file_es_playability_proto_rawDesc = "" +
 	"\vPlayability\x12\x97\x01\n" +
 	"\x12GetLocallyPlayable\x12>.spotify.playability.esperanto.proto.GetLocallyPlayableRequest\x1a?.spotify.playability.esperanto.proto.GetLocallyPlayableResponse\"\x00\x12\x9f\x01\n" +
 	"\x18SubscribeLocallyPlayable\x12>.spotify.playability.esperanto.proto.GetLocallyPlayableRequest\x1a?.spotify.playability.esperanto.proto.GetLocallyPlayableResponse\"\x000\x01Bz\n" +
-	"'com.spotify.playability.esperanto.protoZIgithub.com/pyrorhythm/libspot/api/spotify/playability/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"'com.spotify.playability.esperanto.protoZIgithub.com/pyrorhythm/libspot/gen/spotify/playability/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_playability_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_es_playability_proto_goTypes = []any{

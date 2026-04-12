@@ -462,7 +462,7 @@ const file_spotify_list_v1_model_lenses_proto_rawDesc = "" +
 	"\x11client_lens_state\x18\x02 \x03(\v2 .spotify.list.v1.model.LensStateR\x0fclientLensState\"I\n" +
 	"\rAppliedLenses\x128\n" +
 	"\x06states\x18\x01 \x03(\v2 .spotify.list.v1.model.LensStateR\x06statesBi\n" +
-	"\x19com.spotify.list.v1.modelB\vLensesProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\vLensesProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_lenses_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_spotify_list_v1_model_lenses_proto_goTypes = []any{

@@ -183,7 +183,7 @@ const file_context_stack_proto_rawDesc = "" +
 	"\x05child\x18\x01 \x01(\v23.spotify.playback_platform.context.v1.SequenceChildR\x05child\x12L\n" +
 	"\acontext\x18\x02 \x01(\v2-.spotify.playback_platform.context.v1.ContextH\x00R\acontext\x88\x01\x01B\n" +
 	"\n" +
-	"\b_contextBMP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"\b_contextBMP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_context_stack_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_context_stack_proto_goTypes = []any{

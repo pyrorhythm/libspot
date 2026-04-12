@@ -814,7 +814,7 @@ const file_spotify_playback_platform_common_v1_request_error_proto_rawDesc = "" 
 	"\x06reason\x18\x01 \x01(\tR\x06reason\x124\n" +
 	"\bretry_in\x18\x02 \x01(\v2\x19.google.protobuf.DurationR\aretryInB\a\n" +
 	"\x05errorBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_request_error_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_spotify_playback_platform_common_v1_request_error_proto_goTypes = []any{

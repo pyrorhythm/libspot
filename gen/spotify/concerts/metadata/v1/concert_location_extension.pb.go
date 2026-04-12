@@ -228,7 +228,7 @@ const file_concert_location_extension_proto_rawDesc = "" +
 	"\bLocation\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12]\n" +
 	"\x11physical_location\x18\x04 \x01(\v2..spotify.concerts.metadata.v1.PhysicalLocationH\x00R\x10physicalLocationB\t\n" +
-	"\adetailsJ\x04\b\x01\x10\x02J\x04\b\x03\x10\x04BCZAgithub.com/pyrorhythm/libspot/api/spotify/concerts/metadata/v1;v1b\x06proto3"
+	"\adetailsJ\x04\b\x01\x10\x02J\x04\b\x03\x10\x04BCZAgithub.com/pyrorhythm/libspot/gen/spotify/concerts/metadata/v1;v1b\x06proto3"
 
 var file_concert_location_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_concert_location_extension_proto_goTypes = []any{

@@ -892,7 +892,7 @@ const file_media_manifest_proto_rawDesc = "" +
 	"\x05files\x18\x01 \x03(\v2\".spotify.media_manifest.proto.FileR\x05files*#\n" +
 	"\x0eEncryptionType\x12\b\n" +
 	"\x04NONE\x10\x00\x12\a\n" +
-	"\x03AES\x10\x01BIZGgithub.com/pyrorhythm/libspot/api/spotify/media_manifest;media_manifestb\x06proto3"
+	"\x03AES\x10\x01BIZGgithub.com/pyrorhythm/libspot/gen/spotify/media_manifest;media_manifestb\x06proto3"
 
 var file_media_manifest_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_media_manifest_proto_msgTypes = make([]protoimpl.MessageInfo, 6)

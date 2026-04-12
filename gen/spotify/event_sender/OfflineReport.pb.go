@@ -1146,7 +1146,7 @@ const file_include_OfflineReport_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x03R\x05value\x1a=\n" +
 	"\x13UpdateStatsMapEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x03R\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05value\x18\x02 \x01(\x03R\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_OfflineReport_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_include_OfflineReport_proto_goTypes = []any{

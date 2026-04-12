@@ -202,7 +202,7 @@ const file_in_stream_proto_rawDesc = "" +
 	"\bInStream\x12t\n" +
 	"\vSubInStream\x12/.spotify.ads.esperanto.proto.SubInStreamRequest\x1a0.spotify.ads.esperanto.proto.SubInStreamResponse\"\x000\x01\x12c\n" +
 	"\x0fSubBreakChanged\x12\x16.google.protobuf.Empty\x1a4.spotify.ads.esperanto.proto.SubBreakChangedResponse\"\x000\x01Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_in_stream_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_in_stream_proto_goTypes = []any{

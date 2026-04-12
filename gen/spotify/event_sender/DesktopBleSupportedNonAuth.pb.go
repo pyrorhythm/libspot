@@ -135,7 +135,7 @@ const file_include_DesktopBleSupportedNonAuth_proto_rawDesc = "" +
 	"(include/DesktopBleSupportedNonAuth.proto\x12\x1aspotify.event_sender.proto\"R\n" +
 	"\x1aDesktopBleSupportedNonAuth\x12\x1c\n" +
 	"\tsupported\x18\x01 \x01(\bR\tsupported\x12\x16\n" +
-	"\x06reason\x18\x02 \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x06reason\x18\x02 \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopBleSupportedNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopBleSupportedNonAuth_proto_goTypes = []any{

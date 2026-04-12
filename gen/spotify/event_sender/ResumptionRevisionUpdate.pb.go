@@ -207,7 +207,7 @@ const file_include_ResumptionRevisionUpdate_proto_rawDesc = "" +
 	"\bposition\x18\x02 \x01(\tR\bposition\x12\x16\n" +
 	"\x06reason\x18\x03 \x01(\tR\x06reason\x12\x1f\n" +
 	"\vplayback_id\x18\x04 \x01(\tR\n" +
-	"playbackIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"playbackIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionRevisionUpdate_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionRevisionUpdate_proto_goTypes = []any{

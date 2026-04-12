@@ -98,7 +98,7 @@ const file_state_restore_behavior_metadata_rules_proto_rawDesc = "" +
 	"+state_restore/behavior_metadata_rules.proto\x12\"spotify.player.proto.state_restore\"l\n" +
 	"\x15BehaviorMetadataRules\x12*\n" +
 	"\x11page_instance_ids\x18\x01 \x03(\tR\x0fpageInstanceIds\x12'\n" +
-	"\x0finteraction_ids\x18\x02 \x03(\tR\x0einteractionIdsBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x0finteraction_ids\x18\x02 \x03(\tR\x0einteractionIdsBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_behavior_metadata_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_behavior_metadata_rules_proto_goTypes = []any{

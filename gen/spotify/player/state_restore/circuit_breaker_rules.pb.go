@@ -147,7 +147,7 @@ const file_state_restore_circuit_breaker_rules_proto_rawDesc = "" +
 	"\x13CircuitBreakerRules\x120\n" +
 	"\x14discarded_track_uids\x18\x01 \x03(\tR\x12discardedTrackUids\x12,\n" +
 	"\x12num_errored_tracks\x18\x02 \x02(\x05R\x10numErroredTracks\x120\n" +
-	"\x14context_track_played\x18\x03 \x02(\bR\x12contextTrackPlayedBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x14context_track_played\x18\x03 \x02(\bR\x12contextTrackPlayedBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_circuit_breaker_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_circuit_breaker_rules_proto_goTypes = []any{

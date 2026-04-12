@@ -101,7 +101,7 @@ const file_include_DesktopBleAdvertisingNonAuth_proto_rawDesc = "" +
 	"\n" +
 	"*include/DesktopBleAdvertisingNonAuth.proto\x12\x1aspotify.event_sender.proto\"8\n" +
 	"\x1cDesktopBleAdvertisingNonAuth\x12\x18\n" +
-	"\astarted\x18\x01 \x01(\bR\astartedBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\astarted\x18\x01 \x01(\bR\astartedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopBleAdvertisingNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopBleAdvertisingNonAuth_proto_goTypes = []any{

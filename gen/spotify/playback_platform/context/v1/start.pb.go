@@ -188,7 +188,7 @@ const file_spotify_playback_platform_context_v1_behavior_start_proto_rawDesc = "
 	"\x13skip_onto_from_next\x18\x05 \x03(\v23.spotify.playback_platform.context.v1.SequenceStartR\x10skipOntoFromNext\x12b\n" +
 	"\x13fail_onto_from_prev\x18\x06 \x03(\v23.spotify.playback_platform.context.v1.SequenceStartR\x10failOntoFromPrev\x12b\n" +
 	"\x13fail_onto_from_next\x18\a \x03(\v23.spotify.playback_platform.context.v1.SequenceStartR\x10failOntoFromNextB|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_start_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_context_v1_behavior_start_proto_goTypes = []any{

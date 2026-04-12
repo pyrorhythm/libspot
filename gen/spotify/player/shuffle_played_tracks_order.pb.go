@@ -287,7 +287,7 @@ const file_shuffle_played_tracks_order_proto_rawDesc = "" +
 	"context_id\x18\x01 \x01(\tR\tcontextId\x12!\n" +
 	"\fshuffle_seed\x18\x02 \x01(\tR\vshuffleSeed\x12K\n" +
 	"\x0fbackward_tracks\x18\x03 \x03(\v2\".spotify.player.proto.ShuffleTrackR\x0ebackwardTracks\x12I\n" +
-	"\x0eforward_tracks\x18\x04 \x03(\v2\".spotify.player.proto.ShuffleTrackR\rforwardTracksB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x0eforward_tracks\x18\x04 \x03(\v2\".spotify.player.proto.ShuffleTrackR\rforwardTracksB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_shuffle_played_tracks_order_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_shuffle_played_tracks_order_proto_goTypes = []any{

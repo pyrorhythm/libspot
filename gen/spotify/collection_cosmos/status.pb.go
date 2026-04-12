@@ -98,7 +98,7 @@ const file_status_proto_rawDesc = "" +
 	"\fstatus.proto\x12\x1fspotify.collection_cosmos.proto\"4\n" +
 	"\x06Status\x12\x12\n" +
 	"\x04code\x18\x01 \x01(\x05R\x04code\x12\x16\n" +
-	"\x06reason\x18\x02 \x01(\tR\x06reasonBOZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmosb\x06proto3"
+	"\x06reason\x18\x02 \x01(\tR\x06reasonBOZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmosb\x06proto3"
 
 var file_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_status_proto_goTypes = []any{

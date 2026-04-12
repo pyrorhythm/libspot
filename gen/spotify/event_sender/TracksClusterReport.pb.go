@@ -355,7 +355,7 @@ const file_include_TracksClusterReport_proto_rawDesc = "" +
 	"\vnum_batches\x18\a \x01(\x03R\n" +
 	"numBatches\x12\x16\n" +
 	"\x06tracks\x18\b \x01(\tR\x06tracks\x122\n" +
-	"\x15total_processing_time\x18\t \x01(\x03R\x13totalProcessingTimeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15total_processing_time\x18\t \x01(\x03R\x13totalProcessingTimeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_TracksClusterReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_TracksClusterReport_proto_goTypes = []any{

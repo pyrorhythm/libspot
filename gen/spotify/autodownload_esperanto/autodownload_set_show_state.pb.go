@@ -158,7 +158,7 @@ const file_autodownload_set_show_state_proto_rawDesc = "" +
 	"\aenabled\x18\x02 \x01(\bR\aenabled\",\n" +
 	"\x14SetShowStateResponse\x12\x14\n" +
 	"\x05error\x18\x01 \x01(\tR\x05errorB\x87\x01\n" +
-	"$spotify.autodownload.esperanto.protoP\x01ZWgithub.com/pyrorhythm/libspot/api/spotify/autodownload_esperanto;autodownload_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$spotify.autodownload.esperanto.protoP\x01ZWgithub.com/pyrorhythm/libspot/gen/spotify/autodownload_esperanto;autodownload_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_autodownload_set_show_state_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_autodownload_set_show_state_proto_goTypes = []any{

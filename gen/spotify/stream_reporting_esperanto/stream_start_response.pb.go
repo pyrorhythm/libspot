@@ -121,7 +121,7 @@ const file_stream_start_response_proto_rawDesc = "" +
 	"\x13StreamStartResponse\x12P\n" +
 	"\x06status\x18\x01 \x01(\v28.spotify.stream_reporting_esperanto.proto.StatusResponseR\x06status\x12[\n" +
 	"\rstream_handle\x18\x02 \x01(\v26.spotify.stream_reporting_esperanto.proto.StreamHandleR\fstreamHandleB\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_stream_start_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_stream_start_response_proto_goTypes = []any{

@@ -173,7 +173,7 @@ const file_autodownload_episode_limit_proto_rawDesc = "" +
 	"\x0ftheres_no_limit\x18\x01 \x01(\bR\rtheresNoLimit\x12\x14\n" +
 	"\x05limit\x18\x02 \x01(\x05R\x05limit\x12\x14\n" +
 	"\x05error\x18\x03 \x01(\tR\x05errorB\x87\x01\n" +
-	"$spotify.autodownload.esperanto.protoP\x01ZWgithub.com/pyrorhythm/libspot/api/spotify/autodownload_esperanto;autodownload_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$spotify.autodownload.esperanto.protoP\x01ZWgithub.com/pyrorhythm/libspot/gen/spotify/autodownload_esperanto;autodownload_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_autodownload_episode_limit_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_autodownload_episode_limit_proto_goTypes = []any{

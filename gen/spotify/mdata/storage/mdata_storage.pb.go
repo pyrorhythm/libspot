@@ -7,7 +7,7 @@
 package storage
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	anypb "google.golang.org/protobuf/types/known/anypb"
@@ -547,7 +547,7 @@ const file_mdata_storage_proto_rawDesc = "" +
 	"AudioFiles\x12\x17\n" +
 	"\afile_id\x18\x01 \x01(\tR\x06fileId\",\n" +
 	"\x0fTrackDescriptor\x12\x19\n" +
-	"\btrack_id\x18\x01 \x01(\x05R\atrackIdBDZ?github.com/pyrorhythm/libspot/api/spotify/mdata/storage;storage\xf8\x01\x01b\x06proto3"
+	"\btrack_id\x18\x01 \x01(\x05R\atrackIdBDZ?github.com/pyrorhythm/libspot/gen/spotify/mdata/storage;storage\xf8\x01\x01b\x06proto3"
 
 var file_mdata_storage_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_mdata_storage_proto_goTypes = []any{

@@ -377,7 +377,7 @@ const file_include_PartnerApiEventNonAuth_proto_rawDesc = "" +
 	"\atime_ms\x18\a \x01(\x03R\x06timeMs\x12\x1f\n" +
 	"\vapp_variant\x18\b \x01(\tR\n" +
 	"appVariant\x12%\n" +
-	"\x0eclient_version\x18\t \x01(\tR\rclientVersionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0eclient_version\x18\t \x01(\tR\rclientVersionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PartnerApiEventNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PartnerApiEventNonAuth_proto_goTypes = []any{

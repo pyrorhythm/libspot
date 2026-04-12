@@ -147,7 +147,7 @@ const file_es_desktop_capabilities_proto_rawDesc = "" +
 	"\x1ccan_show_track_notifications\x18\x04 \x01(\bR\x19canShowTrackNotifications\x12B\n" +
 	"\x1ecan_show_system_media_controls\x18\x05 \x01(\bR\x1acanShowSystemMediaControls2~\n" +
 	"\x13DesktopCapabilities\x12g\n" +
-	"\x0fGetCapabilities\x12\x16.google.protobuf.Empty\x1a:.spotify.desktop.capabilities_esperanto.proto.Capabilities\"\x00BaZ_github.com/pyrorhythm/libspot/api/spotify/desktop/capabilities_esperanto;capabilities_esperantob\x06proto3"
+	"\x0fGetCapabilities\x12\x16.google.protobuf.Empty\x1a:.spotify.desktop.capabilities_esperanto.proto.Capabilities\"\x00BaZ_github.com/pyrorhythm/libspot/gen/spotify/desktop/capabilities_esperanto;capabilities_esperantob\x06proto3"
 
 var file_es_desktop_capabilities_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_desktop_capabilities_proto_goTypes = []any{

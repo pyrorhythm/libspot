@@ -2996,7 +2996,7 @@ const file_resumption_progress_esperanto_proto_rawDesc = "" +
 	"\x0eMarkAsFinished\x12B.spotify.resumption_progress_esperanto.proto.MarkAsFinishedRequest\x1aC.spotify.resumption_progress_esperanto.proto.MarkAsFinishedResponse\"\x00\x12\xa1\x01\n" +
 	"\x10MarkAsNotStarted\x12D.spotify.resumption_progress_esperanto.proto.MarkAsNotStartedRequest\x1aE.spotify.resumption_progress_esperanto.proto.MarkAsNotStartedResponse\"\x00\x12\x9b\x01\n" +
 	"\x0eGetResumePoint\x12B.spotify.resumption_progress_esperanto.proto.GetResumePointRequest\x1aC.spotify.resumption_progress_esperanto.proto.GetResumePointResponse\"\x00\x12\x9d\x01\n" +
-	"\x0eSubResumePoint\x12B.spotify.resumption_progress_esperanto.proto.GetResumePointRequest\x1aC.spotify.resumption_progress_esperanto.proto.GetResumePointResponse\"\x000\x01BgZegithub.com/pyrorhythm/libspot/api/spotify/resumption_progress_esperanto;resumption_progress_esperantob\x06proto3"
+	"\x0eSubResumePoint\x12B.spotify.resumption_progress_esperanto.proto.GetResumePointRequest\x1aC.spotify.resumption_progress_esperanto.proto.GetResumePointResponse\"\x000\x01BgZegithub.com/pyrorhythm/libspot/gen/spotify/resumption_progress_esperanto;resumption_progress_esperantob\x06proto3"
 
 var file_resumption_progress_esperanto_proto_enumTypes = make([]protoimpl.EnumInfo, 7)
 var file_resumption_progress_esperanto_proto_msgTypes = make([]protoimpl.MessageInfo, 25)

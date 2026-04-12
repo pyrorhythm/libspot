@@ -1155,7 +1155,7 @@ const file_include_StreamReportingApiDebug_proto_rawDesc = "" +
 	"\x12is_repeating_track\x18\x1e \x01(\bR\x10isRepeatingTrack\x120\n" +
 	"\x14is_repeating_context\x18\x1f \x01(\bR\x12isRepeatingContext\x12!\n" +
 	"\frequest_type\x18  \x01(\tR\vrequestType\x122\n" +
-	"\x15sequence_provider_ids\x18! \x03(\tR\x13sequenceProviderIdsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15sequence_provider_ids\x18! \x03(\tR\x13sequenceProviderIdsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_StreamReportingApiDebug_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_StreamReportingApiDebug_proto_goTypes = []any{

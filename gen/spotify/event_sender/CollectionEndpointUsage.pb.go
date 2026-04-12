@@ -101,7 +101,7 @@ const file_include_CollectionEndpointUsage_proto_rawDesc = "" +
 	"\n" +
 	"%include/CollectionEndpointUsage.proto\x12\x1aspotify.event_sender.proto\"/\n" +
 	"\x17CollectionEndpointUsage\x12\x14\n" +
-	"\x05point\x18\x01 \x01(\x05R\x05pointBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05point\x18\x01 \x01(\x05R\x05pointBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CollectionEndpointUsage_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CollectionEndpointUsage_proto_goTypes = []any{

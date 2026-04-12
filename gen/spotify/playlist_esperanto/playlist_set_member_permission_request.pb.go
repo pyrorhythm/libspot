@@ -95,7 +95,7 @@ const file_playlist_set_member_permission_request_proto_rawDesc = "" +
 	",playlist_set_member_permission_request.proto\x12 spotify.playlist_esperanto.proto\x1a\x15response_status.proto\"o\n" +
 	"#PlaylistSetMemberPermissionResponse\x12H\n" +
 	"\x06status\x18\x01 \x01(\v20.spotify.playlist_esperanto.proto.ResponseStatusR\x06statusB{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playlist_set_member_permission_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_playlist_set_member_permission_request_proto_goTypes = []any{

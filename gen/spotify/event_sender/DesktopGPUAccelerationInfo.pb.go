@@ -102,7 +102,7 @@ const file_include_DesktopGPUAccelerationInfo_proto_rawDesc = "" +
 	"(include/DesktopGPUAccelerationInfo.proto\x12\x1aspotify.event_sender.proto\";\n" +
 	"\x1aDesktopGPUAccelerationInfo\x12\x1d\n" +
 	"\n" +
-	"is_enabled\x18\x01 \x01(\bR\tisEnabledBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"is_enabled\x18\x01 \x01(\bR\tisEnabledBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopGPUAccelerationInfo_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopGPUAccelerationInfo_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package cosmos
 
 import (
-	playlist_permission "github.com/pyrorhythm/libspot/api/spotify/playlist_permission"
+	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -207,7 +207,7 @@ const file_playlist_set_permission_request_proto_rawDesc = "" +
 	"timeout_ms\x18\x02 \x01(\rR\ttimeoutMs\"s\n" +
 	"\x19SetBasePermissionResponse\x12V\n" +
 	"\x0fbase_permission\x18\x01 \x01(\v2-.spotify.playlist_permission.proto.PermissionR\x0ebasePermissionB`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_playlist_set_permission_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_playlist_set_permission_request_proto_goTypes = []any{

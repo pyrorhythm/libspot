@@ -373,7 +373,7 @@ const file_include_PlaybackSettingsCoreOperation_proto_rawDesc = "" +
 	"\n" +
 	"content_id\x18\a \x01(\tR\tcontentId\x12\x1a\n" +
 	"\bsettings\x18\b \x01(\tR\bsettings\x12\x1c\n" +
-	"\ttimestamp\x18\t \x01(\tR\ttimestampBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\ttimestamp\x18\t \x01(\tR\ttimestampBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PlaybackSettingsCoreOperation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PlaybackSettingsCoreOperation_proto_goTypes = []any{

@@ -1851,7 +1851,7 @@ const file_resolve_proto_rawDesc = "" +
 	"\x15KNOWN_CONTEXT_INVALID\x10\x00\x12\x19\n" +
 	"\x15KNOWN_CONTEXT_USER_ID\x10\x01\x12!\n" +
 	"\x1dKNOWN_CONTEXT_INSTALLATION_ID\x10\x02\x12\x19\n" +
-	"\x15KNOWN_CONTEXT_VERSION\x10\x03BAZ?github.com/pyrorhythm/libspot/api/spotify/remote_config/ucs;ucsb\x06proto3"
+	"\x15KNOWN_CONTEXT_VERSION\x10\x03BAZ?github.com/pyrorhythm/libspot/gen/spotify/remote_config/ucs;ucsb\x06proto3"
 
 var file_resolve_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_resolve_proto_msgTypes = make([]protoimpl.MessageInfo, 16)

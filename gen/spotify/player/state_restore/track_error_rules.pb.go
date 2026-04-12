@@ -147,7 +147,7 @@ const file_state_restore_track_error_rules_proto_rawDesc = "" +
 	"\x0fTrackErrorRules\x12\x18\n" +
 	"\areasons\x18\x01 \x03(\tR\areasons\x120\n" +
 	"\x14num_attempted_tracks\x18\x02 \x02(\x05R\x12numAttemptedTracks\x12*\n" +
-	"\x11num_failed_tracks\x18\x03 \x02(\x05R\x0fnumFailedTracksBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x11num_failed_tracks\x18\x03 \x02(\x05R\x0fnumFailedTracksBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_track_error_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_track_error_rules_proto_goTypes = []any{

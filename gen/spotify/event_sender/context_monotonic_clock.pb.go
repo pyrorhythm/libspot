@@ -98,7 +98,7 @@ const file_context_monotonic_clock_proto_rawDesc = "" +
 	"\x1dcontext_monotonic_clock.proto\x12\x1aspotify.event_sender.proto\"6\n" +
 	"\x0eMonotonicClock\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x03R\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x05value\x18\x02 \x01(\x03R\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_monotonic_clock_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_monotonic_clock_proto_goTypes = []any{

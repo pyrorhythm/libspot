@@ -228,7 +228,7 @@ const file_include_DesktopWatchdogSessionExpirationNonAuth_proto_rawDesc = "" +
 	"\x10session_duration\x18\x02 \x01(\x03R\x0fsessionDuration\x12%\n" +
 	"\x0epings_received\x18\x03 \x01(\x03R\rpingsReceived\x12/\n" +
 	"\x14time_since_last_ping\x18\x04 \x01(\x03R\x11timeSinceLastPing\x12,\n" +
-	"\x12pings_missed_total\x18\x05 \x01(\x03R\x10pingsMissedTotalBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12pings_missed_total\x18\x05 \x01(\x03R\x10pingsMissedTotalBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopWatchdogSessionExpirationNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopWatchdogSessionExpirationNonAuth_proto_goTypes = []any{

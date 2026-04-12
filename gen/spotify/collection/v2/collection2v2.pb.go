@@ -7,7 +7,7 @@
 package v2
 
 import (
-	itemdata "github.com/pyrorhythm/libspot/api/spotify/collection/itemdata"
+	itemdata "github.com/pyrorhythm/libspot/gen/spotify/collection/itemdata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -798,7 +798,7 @@ const file_collection2v2_proto_rawDesc = "" +
 	"\x03set\x18\x02 \x01(\tR\x03set\"7\n" +
 	"\x13InitializedResponse\x12 \n" +
 	"\vinitialized\x18\x01 \x01(\bR\vinitializedB^\n" +
-	" com.spotify.collection2.v2.protoZ:github.com/pyrorhythm/libspot/api/spotify/collection/v2;v2b\x06proto3"
+	" com.spotify.collection2.v2.protoZ:github.com/pyrorhythm/libspot/gen/spotify/collection/v2;v2b\x06proto3"
 
 var file_collection2v2_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_collection2v2_proto_goTypes = []any{

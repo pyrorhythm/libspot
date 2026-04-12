@@ -882,7 +882,7 @@ const file_include_ShowRequestDebug_proto_rawDesc = "" +
 	"3last_load_show_v4_episode_offline_expiry_timestamps\x18\x1a \x03(\x05R,lastLoadShowV4EpisodeOfflineExpiryTimestamps\x12C\n" +
 	"\x1flast_load_show_v4_episode_etags\x18\x1b \x03(\tR\x1alastLoadShowV4EpisodeEtags\x12P\n" +
 	"&last_load_show_v4_episode_status_codes\x18\x1c \x03(\x05R lastLoadShowV4EpisodeStatusCodes\x12_\n" +
-	".last_load_show_v4_episode_stored_at_timestamps\x18\x1d \x03(\x05R'lastLoadShowV4EpisodeStoredAtTimestampsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	".last_load_show_v4_episode_stored_at_timestamps\x18\x1d \x03(\x05R'lastLoadShowV4EpisodeStoredAtTimestampsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ShowRequestDebug_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ShowRequestDebug_proto_goTypes = []any{

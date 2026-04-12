@@ -414,7 +414,7 @@ const file_video_proto_rawDesc = "" +
 	"\bHLSVideo\x12\x1f\n" +
 	"\vmanifest_id\x18\x01 \x01(\tR\n" +
 	"manifestIdBc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_video_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_video_proto_goTypes = []any{

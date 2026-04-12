@@ -775,7 +775,7 @@ const file_include_BoomboxPlaybackSession_proto_rawDesc = "" +
 	"\x0eexclusive_mode\x18\x13 \x01(\bR\rexclusiveMode\x12'\n" +
 	"\x0fdevice_selected\x18\x14 \x01(\bR\x0edeviceSelected\x12.\n" +
 	"\x13entry_reset_counter\x18\x15 \x01(\x03R\x11entryResetCounter\x12H\n" +
-	"!track_stuck_timer_elapsed_counter\x18\x16 \x01(\x03R\x1dtrackStuckTimerElapsedCounterBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"!track_stuck_timer_elapsed_counter\x18\x16 \x01(\x03R\x1dtrackStuckTimerElapsedCounterBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_BoomboxPlaybackSession_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_BoomboxPlaybackSession_proto_goTypes = []any{

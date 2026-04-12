@@ -132,7 +132,7 @@ const file_include_ClientAllowlistFetchNonAuth_proto_rawDesc = "" +
 	")include/ClientAllowlistFetchNonAuth.proto\x12\x1aspotify.event_sender.proto\"e\n" +
 	"\x1bClientAllowlistFetchNonAuth\x12#\n" +
 	"\rfallback_used\x18\x01 \x01(\bR\ffallbackUsed\x12!\n" +
-	"\fexpired_used\x18\x02 \x01(\bR\vexpiredUsedBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\fexpired_used\x18\x02 \x01(\bR\vexpiredUsedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ClientAllowlistFetchNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ClientAllowlistFetchNonAuth_proto_goTypes = []any{

@@ -645,7 +645,7 @@ const file_playlist_play_options_proto_rawDesc = "" +
 	"\x14_original_session_idB\x11\n" +
 	"\x0f_is_video_firstB\f\n" +
 	"\n" +
-	"_focus_uidB=Z;github.com/pyrorhythm/libspot/api/spotify/playlist;playlistb\x06proto3"
+	"_focus_uidB=Z;github.com/pyrorhythm/libspot/gen/spotify/playlist;playlistb\x06proto3"
 
 var file_playlist_play_options_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_playlist_play_options_proto_goTypes = []any{

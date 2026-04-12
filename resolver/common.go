@@ -86,7 +86,7 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 	)
 
 	u := fasthttp.AcquireURI()
-	u.Parse(nil, []byte(resolveEndpoint))
+	_ = u.Parse(nil, []byte(resolveEndpoint))
 	u.SetQueryString(v.Encode())
 
 	req := fasthttp.AcquireRequest()
@@ -128,6 +128,6 @@ retryPoint:
 	return t.endpoints, nil
 }
 
-func NewFetcher(clientToken string) (libspot.EndpointResolver, error) {
-	return &fetcher{clientToken: clientToken, endpoints: &endpoints{}}, nil
+func New(clientToken string) libspot.EndpointResolver {
+	return &fetcher{clientToken: clientToken, endpoints: &endpoints{}}
 }

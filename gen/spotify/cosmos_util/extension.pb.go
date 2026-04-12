@@ -7,7 +7,7 @@
 package cosmos_util
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -139,7 +139,7 @@ const file_metadata_extension_proto_rawDesc = "" +
 	"\tExtension\x12N\n" +
 	"\x0eextension_kind\x18\x01 \x01(\x0e2'.spotify.extendedmetadata.ExtensionKindR\rextensionKind\x12\x12\n" +
 	"\x04data\x18\x02 \x01(\fR\x04dataBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metadata_extension_proto_goTypes = []any{

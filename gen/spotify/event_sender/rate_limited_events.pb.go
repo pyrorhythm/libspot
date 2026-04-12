@@ -174,7 +174,7 @@ const file_rate_limited_events_proto_rawDesc = "" +
 	"\tmap_field\x18\x02 \x03(\v2A.spotify.event_sender.proto.RateLimitedEventsEntity.MapFieldEntryR\bmapField\x1a7\n" +
 	"\rMapFieldEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\rR\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x05value\x18\x02 \x01(\rR\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_rate_limited_events_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_rate_limited_events_proto_goTypes = []any{

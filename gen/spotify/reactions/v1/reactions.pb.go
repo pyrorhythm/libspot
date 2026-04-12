@@ -231,7 +231,7 @@ const file_reactions_proto_rawDesc = "" +
 	"\x10is_podcast_short\x18\x02 \x01(\bR\x0eisPodcastShort*\x18\n" +
 	"\fReactionType\x12\b\n" +
 	"\x04LIKE\x10\x00Bm\n" +
-	"\x1ecom.spotify.reactions.v1.protoB\x0eReactionsProtoP\x01Z9github.com/pyrorhythm/libspot/api/spotify/reactions/v1;v1b\x06proto3"
+	"\x1ecom.spotify.reactions.v1.protoB\x0eReactionsProtoP\x01Z9github.com/pyrorhythm/libspot/gen/spotify/reactions/v1;v1b\x06proto3"
 
 var file_reactions_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_reactions_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

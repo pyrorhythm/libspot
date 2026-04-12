@@ -915,7 +915,7 @@ const file_product_state_proto_rawDesc = "" +
 	"\rPutValuesSync\x12;.spotify.product_state.esperanto.proto.PutValuesSyncRequest\x1a<.spotify.product_state.esperanto.proto.PutValuesSyncResponse\"\x00\x12\x9b\x01\n" +
 	"\x12PutOverridesValues\x12@.spotify.product_state.esperanto.proto.PutOverridesValuesRequest\x1aA.spotify.product_state.esperanto.proto.PutOverridesValuesResponse\"\x00\x12\x9b\x01\n" +
 	"\x12DelOverridesValues\x12@.spotify.product_state.esperanto.proto.DelOverridesValuesRequest\x1aA.spotify.product_state.esperanto.proto.DelOverridesValuesResponse\"\x00B\x87\x01\n" +
-	"6com.spotify.connectivity.product_state.esperanto.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/product_state/esperanto;esperantob\x06proto3"
+	"6com.spotify.connectivity.product_state.esperanto.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/product_state/esperanto;esperantob\x06proto3"
 
 var file_product_state_proto_msgTypes = make([]protoimpl.MessageInfo, 15)
 var file_product_state_proto_goTypes = []any{

@@ -406,7 +406,7 @@ const file_include_AudioRouteSegmentEnd_proto_rawDesc = "" +
 	"\x13previous_route_type\x18\b \x01(\tR\x11previousRouteType\x12H\n" +
 	"!current_route_car_connection_type\x18\t \x01(\x05R\x1dcurrentRouteCarConnectionType\x12J\n" +
 	"\"previous_route_car_connection_type\x18\n" +
-	" \x01(\x05R\x1epreviousRouteCarConnectionTypeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\x05R\x1epreviousRouteCarConnectionTypeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioRouteSegmentEnd_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioRouteSegmentEnd_proto_goTypes = []any{

@@ -158,7 +158,7 @@ const file_segment_switch_node_proto_rawDesc = "" +
 	"\x11SegmentSwitchNode\x12W\n" +
 	"\x15injected_full_episode\x18\x01 \x01(\v2#.spotify.player.proto.TrackInstanceR\x13injectedFullEpisode\x12;\n" +
 	"\x1ashould_play_injected_track\x18\x02 \x01(\bR\x17shouldPlayInjectedTrack\x127\n" +
-	"\x18full_episode_position_ms\x18\x03 \x01(\x03R\x15fullEpisodePositionMsB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x18full_episode_position_ms\x18\x03 \x01(\x03R\x15fullEpisodePositionMsB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_segment_switch_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_segment_switch_node_proto_goTypes = []any{

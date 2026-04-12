@@ -130,7 +130,7 @@ const file_es_remote_config_dummy_proto_rawDesc = "" +
 	"\x05value\x18\x01 \x01(\tR\x05value2\xae\x01\n" +
 	"\x18RemoteConfigDummyResolve\x12\x91\x01\n" +
 	"\x14ResolveDummyProperty\x12:.spotify.remote_config.esperanto.proto.ResolveDummyRequest\x1a;.spotify.remote_config.esperanto.proto.ResolveDummyResponse\"\x00B}\n" +
-	"(com.spotify.remoteconfig.esperanto.protoZKgithub.com/pyrorhythm/libspot/api/spotify/remote_config/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"(com.spotify.remoteconfig.esperanto.protoZKgithub.com/pyrorhythm/libspot/gen/spotify/remote_config/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_remote_config_dummy_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_remote_config_dummy_proto_goTypes = []any{

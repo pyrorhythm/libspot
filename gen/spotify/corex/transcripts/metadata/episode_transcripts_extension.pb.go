@@ -222,7 +222,7 @@ const file_episode_transcripts_extension_proto_rawDesc = "" +
 	"\acurated\x18\x03 \x01(\bR\acurated\x12\x17\n" +
 	"\acdn_url\x18\x04 \x01(\tR\x06cdnUrl\x12\x1b\n" +
 	"\tis_static\x18\x05 \x01(\bR\bisStaticB\x98\x01\n" +
-	",com.spotify.corex.transcripts.metadata.protoB\x17TranscriptMetadataProtoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/corex/transcripts/metadata;metadatab\x06proto3"
+	",com.spotify.corex.transcripts.metadata.protoB\x17TranscriptMetadataProtoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/corex/transcripts/metadata;metadatab\x06proto3"
 
 var file_episode_transcripts_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_episode_transcripts_extension_proto_goTypes = []any{

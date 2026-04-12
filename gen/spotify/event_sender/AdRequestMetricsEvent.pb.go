@@ -751,7 +751,7 @@ const file_include_AdRequestMetricsEvent_proto_rawDesc = "" +
 	"\x0eDecoratorTimes\x12\x1c\n" +
 	"\tdecorator\x18\x01 \x01(\tR\tdecorator\x12\x14\n" +
 	"\x05start\x18\x02 \x01(\x03R\x05start\x12\x10\n" +
-	"\x03end\x18\x03 \x01(\x03R\x03endBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x03end\x18\x03 \x01(\x03R\x03endBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdRequestMetricsEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_include_AdRequestMetricsEvent_proto_goTypes = []any{

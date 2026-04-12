@@ -298,7 +298,7 @@ const file_include_CoreAutoplayLoadingResults_proto_rawDesc = "" +
 	"session_id\x18\x04 \x01(\tR\tsessionId\x12'\n" +
 	"\x0frequest_latency\x18\x05 \x01(\x05R\x0erequestLatency\x122\n" +
 	"\x15autoplay_tracks_count\x18\x06 \x01(\x05R\x13autoplayTracksCount\x12*\n" +
-	"\x11client_error_code\x18\a \x01(\x05R\x0fclientErrorCodeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11client_error_code\x18\a \x01(\x05R\x0fclientErrorCodeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CoreAutoplayLoadingResults_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CoreAutoplayLoadingResults_proto_goTypes = []any{

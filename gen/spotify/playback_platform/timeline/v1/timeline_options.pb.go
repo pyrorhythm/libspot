@@ -103,7 +103,7 @@ const file_spotify_playback_platform_timeline_v1_timeline_options_proto_rawDesc 
 	"\x0fTimelineOptions\x12*\n" +
 	"\x0eplayback_speed\x18\x01 \x01(\x02H\x00R\rplaybackSpeed\x88\x01\x01B\x11\n" +
 	"\x0f_playback_speedBu\n" +
-	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_timeline_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_timeline_v1_timeline_options_proto_goTypes = []any{

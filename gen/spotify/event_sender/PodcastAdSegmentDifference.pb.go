@@ -299,7 +299,7 @@ const file_include_PodcastAdSegmentDifference_proto_rawDesc = "" +
 	"\vrhs_segment\x18\x05 \x01(\tR\n" +
 	"rhsSegment\x12\x1b\n" +
 	"\trhs_start\x18\x06 \x01(\x03R\brhsStart\x12\x19\n" +
-	"\brhs_stop\x18\a \x01(\x03R\arhsStopBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\brhs_stop\x18\a \x01(\x03R\arhsStopBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PodcastAdSegmentDifference_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PodcastAdSegmentDifference_proto_goTypes = []any{

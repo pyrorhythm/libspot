@@ -268,7 +268,7 @@ const file_include_ConnectTransferIncarnation_proto_rawDesc = "" +
 	"\x15incarnation_device_id\x18\x03 \x01(\tR\x13incarnationDeviceId\x12.\n" +
 	"\x13incarnation_is_cast\x18\x04 \x01(\bR\x11incarnationIsCast\x128\n" +
 	"\x18incarnation_is_preferred\x18\x05 \x01(\bR\x16incarnationIsPreferred\x12:\n" +
-	"\x19preferred_protocol_reason\x18\x06 \x01(\tR\x17preferredProtocolReasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x19preferred_protocol_reason\x18\x06 \x01(\tR\x17preferredProtocolReasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectTransferIncarnation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectTransferIncarnation_proto_goTypes = []any{

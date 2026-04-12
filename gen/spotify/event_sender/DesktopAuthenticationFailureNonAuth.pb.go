@@ -402,7 +402,7 @@ const file_include_DesktopAuthenticationFailureNonAuth_proto_rawDesc = "" +
 	"\buse_dpop\x18\b \x01(\bR\auseDpop\x12,\n" +
 	"\x12tracing_request_id\x18\t \x01(\tR\x10tracingRequestId\x12;\n" +
 	"\x1atracing_initial_request_id\x18\n" +
-	" \x01(\tR\x17tracingInitialRequestIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\tR\x17tracingInitialRequestIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopAuthenticationFailureNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopAuthenticationFailureNonAuth_proto_goTypes = []any{

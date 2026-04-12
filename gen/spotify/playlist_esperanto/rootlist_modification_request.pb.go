@@ -7,7 +7,7 @@
 package playlist_esperanto
 
 import (
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -208,7 +208,7 @@ const file_rootlist_modification_request_proto_rawDesc = "" +
 	"\x1cRootlistModificationResponse\x12H\n" +
 	"\x06status\x18\x01 \x01(\v20.spotify.playlist_esperanto.proto.ResponseStatusR\x06status\x12O\n" +
 	"\bresponse\x18\x02 \x01(\v23.spotify.playlist.cosmos.proto.ModificationResponseR\bresponseB{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_rootlist_modification_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_rootlist_modification_request_proto_goTypes = []any{

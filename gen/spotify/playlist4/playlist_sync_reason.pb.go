@@ -352,7 +352,7 @@ const file_playlist_sync_reason_proto_rawDesc = "" +
 	"\x1fLIST_PLAYER_KEEP_PLAYING_FILTER\x102\x12\x0f\n" +
 	"\vLIST_CLIENT\x103\x12\x1b\n" +
 	"\x17INTERACTIVE_PLAY_SOURCE\x104Bu\n" +
-	"\x1bcom.spotify.playlist4.protoB\x17PlaylistSyncReasonProtoZ=github.com/pyrorhythm/libspot/api/spotify/playlist4;playlist4b\x06proto3"
+	"\x1bcom.spotify.playlist4.protoB\x17PlaylistSyncReasonProtoZ=github.com/pyrorhythm/libspot/gen/spotify/playlist4;playlist4b\x06proto3"
 
 var file_playlist_sync_reason_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playlist_sync_reason_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

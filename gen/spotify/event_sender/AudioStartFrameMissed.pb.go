@@ -137,7 +137,7 @@ const file_include_AudioStartFrameMissed_proto_rawDesc = "" +
 	"\vplayback_id\x18\x01 \x01(\fR\n" +
 	"playbackId\x12 \n" +
 	"\fmissed_by_ms\x18\x02 \x01(\x03R\n" +
-	"missedByMsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"missedByMsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioStartFrameMissed_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioStartFrameMissed_proto_goTypes = []any{

@@ -721,7 +721,7 @@ const file_pin_request_proto_rawDesc = "" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12\x1d\n" +
 	"\n" +
 	"in_library\x18\x02 \x01(\bR\tinLibraryBm\n" +
-	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_pin_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_pin_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

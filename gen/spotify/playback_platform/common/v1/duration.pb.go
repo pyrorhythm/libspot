@@ -506,7 +506,7 @@ const file_spotify_playback_platform_common_v1_duration_proto_rawDesc = "" +
 	"\t_value_dyB\x14\n" +
 	"\x12_value_lower_boundB\x14\n" +
 	"\x12_value_upper_boundBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_duration_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_spotify_playback_platform_common_v1_duration_proto_goTypes = []any{

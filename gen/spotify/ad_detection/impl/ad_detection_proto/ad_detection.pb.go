@@ -881,7 +881,7 @@ const file_ad_detection_proto_rawDesc = "" +
 	"\vAdDetection\x12\x87\x01\n" +
 	"\x06Detect\x12;.spotify.ad_detection.impl.ad_detection_proto.DetectRequest\x1a<.spotify.ad_detection.impl.ad_detection_proto.DetectResponse\"\x000\x01\x12\x97\x01\n" +
 	"\fMapTimestamp\x12A.spotify.ad_detection.impl.ad_detection_proto.MapTimestampRequest\x1aB.spotify.ad_detection.impl.ad_detection_proto.MapTimestampResponse\"\x00B\x8d\x01\n" +
-	"(com.spotify.ad.detection.esperanto.protoZagithub.com/pyrorhythm/libspot/api/spotify/ad_detection/impl/ad_detection_proto;ad_detection_protob\x06proto3"
+	"(com.spotify.ad.detection.esperanto.protoZagithub.com/pyrorhythm/libspot/gen/spotify/ad_detection/impl/ad_detection_proto;ad_detection_protob\x06proto3"
 
 var file_ad_detection_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_ad_detection_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

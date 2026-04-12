@@ -259,7 +259,7 @@ const file_include_AudioStreamingSettingsReport_proto_rawDesc = "" +
 	"\x1fuser_selected_play_bitrate_wifi\x18\x03 \x01(\x03R\x1buserSelectedPlayBitrateWifi\x122\n" +
 	"\x15play_bitrate_cellular\x18\x04 \x01(\x03R\x13playBitrateCellular\x12*\n" +
 	"\x11play_bitrate_wifi\x18\x05 \x01(\x03R\x0fplayBitrateWifi\x12'\n" +
-	"\x0fallow_downgrade\x18\x06 \x01(\bR\x0eallowDowngradeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fallow_downgrade\x18\x06 \x01(\bR\x0eallowDowngradeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioStreamingSettingsReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioStreamingSettingsReport_proto_goTypes = []any{

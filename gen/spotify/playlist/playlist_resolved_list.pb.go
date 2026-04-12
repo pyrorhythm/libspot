@@ -1163,7 +1163,7 @@ const file_playlist_resolved_list_proto_rawDesc = "" +
 	"\aUNKNOWN\x10\x00\x12\x12\n" +
 	"\x0eRESTART_PAUSED\x10\x01\x12\b\n" +
 	"\x04STOP\x10\x02\x12\b\n" +
-	"\x04WAIT\x10\x03B=Z;github.com/pyrorhythm/libspot/api/spotify/playlist;playlistb\x06proto3"
+	"\x04WAIT\x10\x03B=Z;github.com/pyrorhythm/libspot/gen/spotify/playlist;playlistb\x06proto3"
 
 var file_playlist_resolved_list_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_playlist_resolved_list_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

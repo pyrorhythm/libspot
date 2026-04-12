@@ -857,7 +857,7 @@ const file_your_library_request_proto_rawDesc = "" +
 	"\x06header\x18\x01 \x01(\v24.spotify.your_library.proto.YourLibraryRequestHeaderR\x06header\x12\x80\x01\n" +
 	"\x1bpredefined_playlist_configs\x18\x04 \x01(\v2@.spotify.your_library.proto.YourLibraryPredefinedPlaylistConfigsR\x19predefinedPlaylistConfigs\x12+\n" +
 	"\x11update_throttling\x18\x05 \x01(\x05R\x10updateThrottlingBm\n" +
-	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_your_library_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

@@ -484,7 +484,7 @@ const file_storage_proto_rawDesc = "" +
 	"\x16AUDIOBOOK_SUBSCRIPTION\x10\x01\x12\x14\n" +
 	"\x10PICK_AND_SHUFFLE\x10\x02\x12\n" +
 	"\n" +
-	"\x06LYRICS\x10\x03BFZDgithub.com/pyrorhythm/libspot/api/spotify/cappingapi/storage;storageb\x06proto3"
+	"\x06LYRICS\x10\x03BFZDgithub.com/pyrorhythm/libspot/gen/spotify/cappingapi/storage;storageb\x06proto3"
 
 var file_storage_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_storage_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

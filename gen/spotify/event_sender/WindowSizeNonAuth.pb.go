@@ -227,7 +227,7 @@ const file_include_WindowSizeNonAuth_proto_rawDesc = "" +
 	"\vshell_width\x18\x03 \x01(\x03R\n" +
 	"shellWidth\x12!\n" +
 	"\fshell_height\x18\x04 \x01(\x03R\vshellHeight\x12\x12\n" +
-	"\x04mode\x18\x05 \x01(\x03R\x04modeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x04mode\x18\x05 \x01(\x03R\x04modeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_WindowSizeNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_WindowSizeNonAuth_proto_goTypes = []any{

@@ -98,7 +98,7 @@ const file_context_os_proto_rawDesc = "" +
 	"\x10context_os.proto\x12\x1aspotify.event_sender.proto\"2\n" +
 	"\x02Os\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x18\n" +
-	"\aversion\x18\x02 \x01(\tR\aversionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\aversion\x18\x02 \x01(\tR\aversionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_os_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_os_proto_goTypes = []any{

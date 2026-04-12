@@ -319,7 +319,7 @@ const file_es_context_resolve_mock_proto_rawDesc = "" +
 	"\rUpdateContext\x12-.spotify.player.esperanto.proto.ContextUpdate\x1a\x16.google.protobuf.Empty\"\x00\x12s\n" +
 	"\x0eGetRequestInfo\x122.spotify.player.esperanto.proto.RequestInfoRequest\x1a+.spotify.player.esperanto.proto.RequestInfo\"\x00\x12k\n" +
 	"\x1aGetLastAutoplayRequestInfo\x12\x16.google.protobuf.Empty\x1a3.spotify.player.esperanto.proto.AutoplayRequestInfo\"\x00Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_context_resolve_mock_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_context_resolve_mock_proto_goTypes = []any{

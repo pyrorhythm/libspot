@@ -472,7 +472,7 @@ const file_ad_testing_proto_rawDesc = "" +
 	"\vAddPlaytime\x12/.spotify.ads.esperanto.proto.AddPlaytimeRequest\x1a0.spotify.ads.esperanto.proto.AddPlaytimeResponse\"\x00\x12~\n" +
 	"\x0fRequestOverride\x123.spotify.ads.esperanto.proto.RequestOverrideRequest\x1a4.spotify.ads.esperanto.proto.RequestOverrideResponse\"\x00\x12l\n" +
 	"\tInsertAds\x12-.spotify.ads.esperanto.proto.InsertAdsRequest\x1a..spotify.ads.esperanto.proto.InsertAdsResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_testing_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_ad_testing_proto_msgTypes = make([]protoimpl.MessageInfo, 6)

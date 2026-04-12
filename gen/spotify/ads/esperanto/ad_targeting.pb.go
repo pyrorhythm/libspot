@@ -462,7 +462,7 @@ const file_ad_targeting_proto_rawDesc = "" +
 	"\x0fGetAllTargeting\x123.spotify.ads.esperanto.proto.GetAllTargetingRequest\x1a..spotify.ads.esperanto.proto.TargetingResponse\"\x00\x12r\n" +
 	"\fPutTargeting\x120.spotify.ads.esperanto.proto.PutTargetingRequest\x1a..spotify.ads.esperanto.proto.TargetingResponse\"\x00\x12x\n" +
 	"\x0fDeleteTargeting\x123.spotify.ads.esperanto.proto.DeleteTargetingRequest\x1a..spotify.ads.esperanto.proto.TargetingResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_targeting_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_ad_targeting_proto_goTypes = []any{

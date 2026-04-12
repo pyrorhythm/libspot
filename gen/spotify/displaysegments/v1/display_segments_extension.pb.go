@@ -720,7 +720,7 @@ const file_display_segments_extension_proto_rawDesc = "" +
 	"\x11SEGMENT_TYPE_TALK\x10\x01\x12\x16\n" +
 	"\x12SEGMENT_TYPE_MUSIC\x10\x02\x12\x18\n" +
 	"\x14SEGMENT_TYPE_CHAPTER\x10\x03B\x8e\x01\n" +
-	"$com.spotify.displaysegments.v1.protoB\x1dDisplaySegmentsExtensionProtoP\x01Z?github.com/pyrorhythm/libspot/api/spotify/displaysegments/v1;v1\xa2\x02\x03ESPb\x06proto3"
+	"$com.spotify.displaysegments.v1.protoB\x1dDisplaySegmentsExtensionProtoP\x01Z?github.com/pyrorhythm/libspot/gen/spotify/displaysegments/v1;v1\xa2\x02\x03ESPb\x06proto3"
 
 var file_display_segments_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_display_segments_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

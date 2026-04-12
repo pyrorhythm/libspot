@@ -226,7 +226,7 @@ const file_associations_extension_proto_rawDesc = "" +
 	"\n" +
 	"origin_uri\x18\x01 \x01(\tR\toriginUri\x12-\n" +
 	"\x05assoc\x18\x02 \x03(\v2\x17.spotify.assoc.v1.AssocR\x05assocBw\n" +
-	"\x1acom.spotify.assoc.v1.protoB EntityAssociationsExtensionProtoP\x01Z5github.com/pyrorhythm/libspot/api/spotify/assoc/v1;v1b\x06proto3"
+	"\x1acom.spotify.assoc.v1.protoB EntityAssociationsExtensionProtoP\x01Z5github.com/pyrorhythm/libspot/gen/spotify/assoc/v1;v1b\x06proto3"
 
 var file_associations_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_associations_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

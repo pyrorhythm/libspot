@@ -7,7 +7,7 @@
 package collection_esperanto
 
 import (
-	collection_cosmos "github.com/pyrorhythm/libspot/api/spotify/collection_cosmos"
+	collection_cosmos "github.com/pyrorhythm/libspot/gen/spotify/collection_cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -155,7 +155,7 @@ const file_collection_unplayed_proto_rawDesc = "" +
 	"\x03uri\x18\x01 \x03(\tR\x03uri\"]\n" +
 	"\x1aCollectionUnplayedResponse\x12?\n" +
 	"\x06status\x18\x01 \x01(\v2'.spotify.collection_cosmos.proto.StatusR\x06statusB\x85\x01\n" +
-	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/api/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/gen/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_unplayed_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_collection_unplayed_proto_goTypes = []any{

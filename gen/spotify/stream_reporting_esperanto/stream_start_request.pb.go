@@ -935,7 +935,7 @@ const file_stream_start_request_proto_rawDesc = "" +
 	"\t_list_uriJ\x04\b\x03\x10\x04J\x04\b\t\x10\n" +
 	"J\x04\b\n" +
 	"\x10\vJ\x04\b\r\x10\x0eJ\x04\b\x0e\x10\x0fJ\x04\b\x1b\x10\x1cJ\x04\b\x19\x10\x1aJ\x04\b#\x10$J\x04\b-\x10.J\x04\b2\x103J\x04\b6\x107B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_stream_start_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_stream_start_request_proto_goTypes = []any{

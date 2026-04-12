@@ -275,7 +275,7 @@ const file_playlist_track_state_proto_rawDesc = "" +
 	"\acan_ban\x18\x04 \x01(\bR\x06canBan\"-\n" +
 	"\x11TrackOfflineState\x12\x18\n" +
 	"\aoffline\x18\x01 \x01(\tR\aofflineBn\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos\xa2\x02\vSPTPlaylist"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos\xa2\x02\vSPTPlaylist"
 
 var file_playlist_track_state_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_playlist_track_state_proto_goTypes = []any{

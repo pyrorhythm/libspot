@@ -84,7 +84,7 @@ const file_es_key_proto_rawDesc = "" +
 	"\fes_key.proto\x12+spotify.connectivity.pubsub.esperanto.proto\"\x17\n" +
 	"\x03Key\x12\x10\n" +
 	"\x03Key\x18\x01 \x01(\tR\x03KeyB\x84\x01\n" +
-	"/com.spotify.connectivity.pubsub.esperanto.protoZQgithub.com/pyrorhythm/libspot/api/spotify/connectivity/pubsub/esperanto;esperantob\x06proto3"
+	"/com.spotify.connectivity.pubsub.esperanto.protoZQgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/pubsub/esperanto;esperantob\x06proto3"
 
 var file_es_key_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_key_proto_goTypes = []any{

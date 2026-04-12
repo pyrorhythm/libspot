@@ -7,7 +7,7 @@
 package v1
 
 import (
-	metadata "github.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1/metadata"
+	metadata "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1/metadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -187,7 +187,7 @@ const file_spotify_playback_platform_context_v1_context_metadata_proto_rawDesc =
 	"\rUnmappedEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05valueBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_context_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_context_v1_context_metadata_proto_goTypes = []any{

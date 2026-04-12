@@ -163,7 +163,7 @@ const file_ad_break_context_proto_rawDesc = "" +
 	"\x0eAdBreakContext\x122\n" +
 	"\x15max_seconds_remaining\x18\x01 \x01(\x04R\x13maxSecondsRemaining\x12>\n" +
 	"\x1cposition_in_current_ad_break\x18\x02 \x01(\x04R\x18positionInCurrentAdBreak\x12<\n" +
-	"\x1btotal_ads_in_break_estimate\x18\x03 \x01(\x04R\x17totalAdsInBreakEstimateB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x1btotal_ads_in_break_estimate\x18\x03 \x01(\x04R\x17totalAdsInBreakEstimateB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_ad_break_context_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_ad_break_context_proto_goTypes = []any{

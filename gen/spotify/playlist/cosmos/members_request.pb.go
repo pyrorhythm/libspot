@@ -169,7 +169,7 @@ const file_members_request_proto_rawDesc = "" +
 	"\x16PlaylistMembersRequest\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12B\n" +
 	"\x05limit\x18\x02 \x01(\v2,.spotify.playlist.cosmos.proto.OptionalLimitR\x05limitB`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_members_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_members_request_proto_goTypes = []any{

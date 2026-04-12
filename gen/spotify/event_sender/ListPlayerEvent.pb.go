@@ -339,7 +339,7 @@ const file_include_ListPlayerEvent_proto_rawDesc = "" +
 	"\x0fnumber_of_items\x18\x05 \x01(\x05R\rnumberOfItems\x12%\n" +
 	"\x0etransformer_id\x18\x06 \x01(\tR\rtransformerId\x12)\n" +
 	"\x10transform_reason\x18\a \x01(\tR\x0ftransformReason\x12\x1c\n" +
-	"\tchangeset\x18\b \x01(\tR\tchangesetBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\tchangeset\x18\b \x01(\tR\tchangesetBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ListPlayerEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ListPlayerEvent_proto_goTypes = []any{

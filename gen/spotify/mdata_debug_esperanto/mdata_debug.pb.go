@@ -7,7 +7,7 @@
 package mdata_debug_esperanto
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	anypb "google.golang.org/protobuf/types/known/anypb"
@@ -647,7 +647,7 @@ const file_mdata_debug_proto_rawDesc = "" +
 	"\x13STATUS_NOT_RESOLVED\x10\x02\x12\x14\n" +
 	"\x10STATUS_NOT_FOUND\x10\x03\x12(\n" +
 	"$STATUS_UNAVAILABLE_FOR_LEGAL_REASONS\x10\x04B\x82\x01\n" +
-	"'com.spotify.mdata.debug.esperanto.protoP\x01ZUgithub.com/pyrorhythm/libspot/api/spotify/mdata_debug_esperanto;mdata_debug_esperantob\x06proto3"
+	"'com.spotify.mdata.debug.esperanto.protoP\x01ZUgithub.com/pyrorhythm/libspot/gen/spotify/mdata_debug_esperanto;mdata_debug_esperantob\x06proto3"
 
 var file_mdata_debug_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_mdata_debug_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

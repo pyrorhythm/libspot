@@ -84,7 +84,7 @@ const file_es_ident_filter_proto_rawDesc = "" +
 	"\x15es_ident_filter.proto\x12+spotify.connectivity.pubsub.esperanto.proto\"%\n" +
 	"\vIdentFilter\x12\x16\n" +
 	"\x06Prefix\x18\x01 \x01(\tR\x06PrefixB\x84\x01\n" +
-	"/com.spotify.connectivity.pubsub.esperanto.protoZQgithub.com/pyrorhythm/libspot/api/spotify/connectivity/pubsub/esperanto;esperantob\x06proto3"
+	"/com.spotify.connectivity.pubsub.esperanto.protoZQgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/pubsub/esperanto;esperantob\x06proto3"
 
 var file_es_ident_filter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_ident_filter_proto_goTypes = []any{

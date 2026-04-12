@@ -7,7 +7,7 @@
 package v1
 
 import (
-	behavior "github.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1/behavior"
+	behavior "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1/behavior"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -385,7 +385,7 @@ const file_spotify_playback_platform_context_v1_context_behavior_proto_rawDesc =
 	" \x01(\v25.spotify.playback_platform.context.v1.behavior.LedgerR\x06ledger\x12l\n" +
 	"\x11shuffle_algorithm\x18\x0e \x01(\v2?.spotify.playback_platform.context.v1.behavior.ShuffleAlgorithmR\x10shuffleAlgorithm\x12l\n" +
 	"\x11shuffle_placement\x18\x0f \x01(\v2?.spotify.playback_platform.context.v1.behavior.ShufflePlacementR\x10shufflePlacementJ\x04\b\v\x10\x0eBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_context_behavior_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_context_v1_context_behavior_proto_goTypes = []any{

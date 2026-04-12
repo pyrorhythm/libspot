@@ -199,7 +199,7 @@ const file_spotify_playback_platform_context_v1_sequence_options_proto_rawDesc =
 	"\x13_enhancing_sequenceB\x15\n" +
 	"\x13_repeating_sequenceB\x15\n" +
 	"\x13_repeating_timelineBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_sequence_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_context_v1_sequence_options_proto_goTypes = []any{

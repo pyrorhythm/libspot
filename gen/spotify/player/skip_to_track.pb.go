@@ -236,7 +236,7 @@ const file_skip_to_track_proto_rawDesc = "" +
 	"\ttrack_uid\x18\x03 \x01(\tR\btrackUid\x12\x1b\n" +
 	"\ttrack_uri\x18\x04 \x01(\tR\btrackUri\x12\x1f\n" +
 	"\vtrack_index\x18\x05 \x01(\x04R\n" +
-	"trackIndexB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"trackIndexB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_skip_to_track_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_skip_to_track_proto_goTypes = []any{

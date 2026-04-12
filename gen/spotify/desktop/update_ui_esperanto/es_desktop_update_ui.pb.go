@@ -462,7 +462,7 @@ const file_es_desktop_update_ui_proto_rawDesc = "" +
 	"\x0fDesktopUpdateUi\x12\xa3\x01\n" +
 	"\x14UpdateTitlebarHeight\x12F.spotify.desktop.update_ui_esperanto.proto.UpdateTitlebarHeightRequest\x1aA.spotify.desktop.update_ui_esperanto.proto.UpdateTitlebarResponse\"\x00\x12\xa9\x01\n" +
 	"\x14SetButtonsVisibility\x12F.spotify.desktop.update_ui_esperanto.proto.SetButtonsVisibilityRequest\x1aG.spotify.desktop.update_ui_esperanto.proto.SetButtonsVisibilityResponse\"\x00\x12\x9a\x01\n" +
-	"\x0fUpdateMenuState\x12A.spotify.desktop.update_ui_esperanto.proto.UpdateMenuStateRequest\x1aB.spotify.desktop.update_ui_esperanto.proto.UpdateMenuStateResponse\"\x00B[ZYgithub.com/pyrorhythm/libspot/api/spotify/desktop/update_ui_esperanto;update_ui_esperantob\x06proto3"
+	"\x0fUpdateMenuState\x12A.spotify.desktop.update_ui_esperanto.proto.UpdateMenuStateRequest\x1aB.spotify.desktop.update_ui_esperanto.proto.UpdateMenuStateResponse\"\x00B[ZYgithub.com/pyrorhythm/libspot/gen/spotify/desktop/update_ui_esperanto;update_ui_esperantob\x06proto3"
 
 var file_es_desktop_update_ui_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_desktop_update_ui_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

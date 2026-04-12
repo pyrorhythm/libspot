@@ -145,7 +145,7 @@ const file_podcast_paywalls_proto_rawDesc = "" +
 	"\x12is_user_subscribed\x18\x01 \x01(\bR\x10isUserSubscribed2\xd0\x01\n" +
 	"\x0fPodcastPaywalls\x12\xbc\x01\n" +
 	"\x13PutShowSubscription\x12P.spotify.podcast_paywalls_esperanto.proto.PodcastPaywallsShowSubscriptionRequest\x1aQ.spotify.podcast_paywalls_esperanto.proto.PodcastPaywallsShowSubscriptionResponse\"\x00B\x91\x01\n" +
-	",com.spotify.podcast_paywalls_esperanto.protoP\x01Z_github.com/pyrorhythm/libspot/api/spotify/podcast_paywalls_esperanto;podcast_paywalls_esperantob\x06proto3"
+	",com.spotify.podcast_paywalls_esperanto.protoP\x01Z_github.com/pyrorhythm/libspot/gen/spotify/podcast_paywalls_esperanto;podcast_paywalls_esperantob\x06proto3"
 
 var file_podcast_paywalls_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_podcast_paywalls_proto_goTypes = []any{

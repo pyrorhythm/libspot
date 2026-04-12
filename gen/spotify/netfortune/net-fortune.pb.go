@@ -224,7 +224,7 @@ const file_net_fortune_proto_rawDesc = "" +
 	" advised_prefetch_bitrate_metered\x18\x03 \x01(\x05H\x00R\x1dadvisedPrefetchBitrateMetered\x88\x01\x01\x12S\n" +
 	"$advised_prefetch_bitrate_non_metered\x18\x04 \x01(\x05H\x01R advisedPrefetchBitrateNonMetered\x88\x01\x01B#\n" +
 	"!_advised_prefetch_bitrate_meteredB'\n" +
-	"%_advised_prefetch_bitrate_non_meteredBAZ?github.com/pyrorhythm/libspot/api/spotify/netfortune;netfortuneb\x06proto3"
+	"%_advised_prefetch_bitrate_non_meteredBAZ?github.com/pyrorhythm/libspot/gen/spotify/netfortune;netfortuneb\x06proto3"
 
 var file_net_fortune_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_net_fortune_proto_goTypes = []any{

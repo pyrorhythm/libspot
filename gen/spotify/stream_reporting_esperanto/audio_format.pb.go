@@ -170,7 +170,7 @@ const file_audio_format_proto_rawDesc = "" +
 	"\x13FORMAT_FLAC_FLAC_24\x10\x18\x12 \n" +
 	"\x1cFORMAT_OGG_VORBIS_320_PARROT\x10\x19\x12\x1b\n" +
 	"\x17FORMAT_FLAC_FLAC_PARROT\x10\x1aB\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_audio_format_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_audio_format_proto_goTypes = []any{

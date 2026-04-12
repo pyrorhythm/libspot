@@ -406,7 +406,7 @@ const file_spotify_playback_platform_context_v1_behavior_navigation_proto_rawDes
 	"\x11MOVE_STACK_UNUSED\x10\x00\x12\x17\n" +
 	"\x13MOVE_STACK_REQUIRED\x10\x01\x12\x18\n" +
 	"\x14MOVE_STACK_PREFERRED\x10\x02B|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_navigation_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_spotify_playback_platform_context_v1_behavior_navigation_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

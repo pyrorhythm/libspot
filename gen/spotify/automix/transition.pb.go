@@ -2575,7 +2575,7 @@ const file_transition_proto_rawDesc = "" +
 	"\x0fPRESET_TYPE_CUT\x10\x02\x12 \n" +
 	"\x1cPRESET_TYPE_BEATMATCHED_FADE\x10\x03\x12\x1f\n" +
 	"\x1bPRESET_TYPE_BEATMATCHED_CUT\x10\x04BV\n" +
-	"\x19com.spotify.automix.protoZ9github.com/pyrorhythm/libspot/api/spotify/automix;automixb\x06proto3"
+	"\x19com.spotify.automix.protoZ9github.com/pyrorhythm/libspot/gen/spotify/automix;automixb\x06proto3"
 
 var file_transition_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_transition_proto_msgTypes = make([]protoimpl.MessageInfo, 17)

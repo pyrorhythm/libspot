@@ -2508,7 +2508,7 @@ const file_include_DesktopPerformanceIssue_proto_rawDesc = "" +
 	"\x1aapplication_is_playing_now\x18K \x01(\bR\x17applicationIsPlayingNow\x12K\n" +
 	"\"application_currently_playing_type\x18L \x01(\tR\x1fapplicationCurrentlyPlayingType\x12I\n" +
 	"!application_currently_playing_uri\x18M \x01(\tR\x1eapplicationCurrentlyPlayingUri\x12L\n" +
-	"#application_currently_playing_ad_id\x18N \x01(\tR\x1fapplicationCurrentlyPlayingAdIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"#application_currently_playing_ad_id\x18N \x01(\tR\x1fapplicationCurrentlyPlayingAdIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopPerformanceIssue_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopPerformanceIssue_proto_goTypes = []any{

@@ -200,7 +200,7 @@ const file_offline_playlists_containing_proto_rawDesc = "" +
 	"\rplaylist_name\x18\x02 \x01(\tR\fplaylistName\"\x84\x01\n" +
 	"&OfflinePlaylistsContainingItemResponse\x12Z\n" +
 	"\tplaylists\x18\x01 \x03(\v2<.spotify.playlist.cosmos.proto.OfflinePlaylistContainingItemR\tplaylistsBn\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos\xa2\x02\vSPTPlaylist"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos\xa2\x02\vSPTPlaylist"
 
 var file_offline_playlists_containing_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_offline_playlists_containing_proto_goTypes = []any{

@@ -140,7 +140,7 @@ const file_played_state_track_played_state_proto_rawDesc = "" +
 	"\vis_playable\x18\x01 \x01(\bR\n" +
 	"isPlayable\x12s\n" +
 	"\x17playability_restriction\x18\x02 \x01(\x0e21.spotify.cosmos_util.proto.PlayabilityRestriction:\aUNKNOWNR\x16playabilityRestrictionBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_played_state_track_played_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_played_state_track_played_state_proto_goTypes = []any{

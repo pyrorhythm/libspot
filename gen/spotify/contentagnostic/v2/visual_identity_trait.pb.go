@@ -176,7 +176,7 @@ const file_visual_identity_trait_proto_rawDesc = "" +
 	"\x1c_sixteen_by_nine_cover_imageB\x1e\n" +
 	"\x1c_nine_by_sixteen_cover_imageB\x1e\n" +
 	"\x1c_nine_by_sixteen_cover_videoBc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_visual_identity_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_visual_identity_trait_proto_goTypes = []any{

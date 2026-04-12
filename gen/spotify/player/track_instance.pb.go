@@ -278,7 +278,7 @@ const file_track_instance_proto_rawDesc = "" +
 	"\x10initially_paused\x18\x04 \x01(\bR\x0finitiallyPaused\x128\n" +
 	"\x05index\x18\x05 \x01(\v2\".spotify.player.proto.ContextIndexR\x05index\x12\x1a\n" +
 	"\bprovider\x18\x06 \x01(\tR\bprovider\x129\n" +
-	"\x19seek_to_creator_timestamp\x18\t \x01(\tR\x16seekToCreatorTimestampJ\x04\b\x03\x10\x04B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x19seek_to_creator_timestamp\x18\t \x01(\tR\x16seekToCreatorTimestampJ\x04\b\x03\x10\x04B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_track_instance_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_track_instance_proto_goTypes = []any{

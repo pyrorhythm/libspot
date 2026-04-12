@@ -295,7 +295,7 @@ const file_include_Prefetch_proto_rawDesc = "" +
 	"\x05track\x18\x04 \x01(\tR\x05track\x12%\n" +
 	"\x0eprefetch_index\x18\x05 \x01(\x03R\rprefetchIndex\x12.\n" +
 	"\x13current_window_size\x18\x06 \x01(\x03R\x11currentWindowSize\x12&\n" +
-	"\x0fmax_window_size\x18\a \x01(\x03R\rmaxWindowSizeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fmax_window_size\x18\a \x01(\x03R\rmaxWindowSizeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_Prefetch_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_Prefetch_proto_goTypes = []any{

@@ -692,7 +692,7 @@ const file_include_CoreShuffleStateEvent_proto_rawDesc = "" +
 	"\x16state_internal_shuffle\x18\x10 \x01(\tR\x14stateInternalShuffle\x12`\n" +
 	".state_is_enhance_lens_applied_context_metadata\x18\x11 \x01(\bR(stateIsEnhanceLensAppliedContextMetadata\x12<\n" +
 	"\x1aplayback_settings_shuffled\x18\x12 \x01(\bR\x18playbackSettingsShuffled\x12;\n" +
-	"\x1aplayback_settings_sms_mode\x18\x13 \x01(\tR\x17playbackSettingsSmsModeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x1aplayback_settings_sms_mode\x18\x13 \x01(\tR\x17playbackSettingsSmsModeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CoreShuffleStateEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CoreShuffleStateEvent_proto_goTypes = []any{

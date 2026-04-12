@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	automix "github.com/pyrorhythm/libspot/api/spotify/automix"
+	automix "github.com/pyrorhythm/libspot/gen/spotify/automix"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -1354,7 +1354,7 @@ const file_es_automix_proto_rawDesc = "" +
 	"#GetFilterFxStylesForFilterFxStyleId\x12K.spotify.automix.esperanto.proto.GetFilterFxStylesForFilterFxStyleIdRequest\x1aL.spotify.automix.esperanto.proto.GetFilterFxStylesForFilterFxStyleIdResponse\"\x00\x12\x9e\x01\n" +
 	"\x17GetFxStylesForFxStyleId\x12?.spotify.automix.esperanto.proto.GetFxStylesForFxStyleIdRequest\x1a@.spotify.automix.esperanto.proto.GetFxStylesForFxStyleIdResponse\"\x00\x12s\n" +
 	"\x16GetMaxTransitionLength\x12\x16.google.protobuf.Empty\x1a?.spotify.automix.esperanto.proto.GetMaxTransitionLengthResponse\"\x00Br\n" +
-	"#com.spotify.automix.esperanto.protoZEgithub.com/pyrorhythm/libspot/api/spotify/automix/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#com.spotify.automix.esperanto.protoZEgithub.com/pyrorhythm/libspot/gen/spotify/automix/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_automix_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
 var file_es_automix_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package mdata_esperanto
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -193,7 +193,7 @@ const file_mdata_observe_request_proto_rawDesc = "" +
 	"\n" +
 	"entity_uri\x18\x01 \x01(\tR\tentityUri\x12N\n" +
 	"\x0eextension_kind\x18\x02 \x01(\x0e2'.spotify.extendedmetadata.ExtensionKindR\rextensionKindBp\n" +
-	"!com.spotify.mdata.esperanto.protoP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/mdata_esperanto;mdata_esperantob\x06proto3"
+	"!com.spotify.mdata.esperanto.protoP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/mdata_esperanto;mdata_esperantob\x06proto3"
 
 var file_mdata_observe_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_mdata_observe_request_proto_goTypes = []any{

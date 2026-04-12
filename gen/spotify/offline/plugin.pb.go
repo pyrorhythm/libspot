@@ -7,7 +7,7 @@
 package offline
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	anypb "google.golang.org/protobuf/types/known/anypb"
@@ -2375,7 +2375,7 @@ const file_plugin_proto_rawDesc = "" +
 	"\x06remove\x18\x04 \x01(\v2%.spotify.offline.proto.RemoveResponseH\x00R\x06remove\x12R\n" +
 	"\rstop_download\x18\x05 \x01(\v2+.spotify.offline.proto.StopDownloadResponseH\x00R\fstopDownloadB\n" +
 	"\n" +
-	"\bresponseB;Z9github.com/pyrorhythm/libspot/api/spotify/offline;offlineb\x06proto3"
+	"\bresponseB;Z9github.com/pyrorhythm/libspot/gen/spotify/offline;offlineb\x06proto3"
 
 var file_plugin_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_plugin_proto_msgTypes = make([]protoimpl.MessageInfo, 24)

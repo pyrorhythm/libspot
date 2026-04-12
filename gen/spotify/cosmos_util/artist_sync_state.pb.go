@@ -170,7 +170,7 @@ const file_sync_artist_sync_state_proto_rawDesc = "" +
 	"\aoffline\x18\x01 \x01(\tR\aoffline\x12)\n" +
 	"\x10inferred_offline\x18\x02 \x01(\tR\x0finferredOffline\x12#\n" +
 	"\rsync_progress\x18\x03 \x01(\rR\fsyncProgressBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_sync_artist_sync_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_sync_artist_sync_state_proto_goTypes = []any{

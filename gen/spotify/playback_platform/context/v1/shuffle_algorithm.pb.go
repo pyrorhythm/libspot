@@ -722,7 +722,7 @@ const file_spotify_playback_platform_context_v1_behavior_shuffle_algorithm_proto
 	"\x0eSIMPLE_SHUFFLE\x10\x02\x12\x12\n" +
 	"\x0eSIMPLE_REVERSE\x10\x03B\v\n" +
 	"\talgorithmB|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_shuffle_algorithm_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_playback_platform_context_v1_behavior_shuffle_algorithm_proto_msgTypes = make([]protoimpl.MessageInfo, 6)

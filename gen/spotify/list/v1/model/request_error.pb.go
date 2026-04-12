@@ -969,7 +969,7 @@ const file_spotify_list_v1_model_request_error_proto_rawDesc = "" +
 	"_transportB\n" +
 	"\n" +
 	"\b_messageBo\n" +
-	"\x19com.spotify.list.v1.modelB\x11RequestErrorProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x11RequestErrorProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_request_error_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_spotify_list_v1_model_request_error_proto_goTypes = []any{

@@ -80,7 +80,7 @@ const file_resource_type_proto_rawDesc = "" +
 	"\x05AUDIO\x10\x01\x12\a\n" +
 	"\x03DRM\x10\x02\x12\t\n" +
 	"\x05IMAGE\x10\x03\x12\t\n" +
-	"\x05VIDEO\x10\x04B;Z9github.com/pyrorhythm/libspot/api/spotify/offline;offlineb\x06proto3"
+	"\x05VIDEO\x10\x04B;Z9github.com/pyrorhythm/libspot/gen/spotify/offline;offlineb\x06proto3"
 
 var file_resource_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_resource_type_proto_goTypes = []any{

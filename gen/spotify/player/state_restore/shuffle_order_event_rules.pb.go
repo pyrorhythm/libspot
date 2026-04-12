@@ -148,7 +148,7 @@ const file_state_restore_shuffle_order_event_rules_proto_rawDesc = "" +
 	"\vShuffleMode\x12\n" +
 	"\n" +
 	"\x06RANDOM\x10\x00\x12\t\n" +
-	"\x05FRESH\x10\x01BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x05FRESH\x10\x01BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_shuffle_order_event_rules_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_state_restore_shuffle_order_event_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

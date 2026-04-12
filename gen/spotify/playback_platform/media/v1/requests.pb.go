@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -854,7 +854,7 @@ const file_spotify_playback_platform_media_v1_requests_proto_rawDesc = "" +
 	"\x05error\x18\x05 \x01(\v21.spotify.playback_platform.common.v1.RequestErrorH\x00R\x05errorB\n" +
 	"\n" +
 	"\bmanifestBo\n" +
-	"\"spotify.playback_platform.media.v1P\x01ZGgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/media/v1;v1b\x06proto3"
+	"\"spotify.playback_platform.media.v1P\x01ZGgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/media/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_media_v1_requests_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_spotify_playback_platform_media_v1_requests_proto_goTypes = []any{

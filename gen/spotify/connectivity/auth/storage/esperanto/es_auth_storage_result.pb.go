@@ -132,7 +132,7 @@ const file_es_auth_storage_result_proto_rawDesc = "" +
 	"\asuccess\x10\x00\x12\x10\n" +
 	"\fuserNotFound\x10\x01\x12\x15\n" +
 	"\x11userAlreadyExists\x10\x02B\x90\x01\n" +
-	"5com.spotify.connectivity.auth.storage.esperanto.protoZWgithub.com/pyrorhythm/libspot/api/spotify/connectivity/auth/storage/esperanto;esperantob\x06proto3"
+	"5com.spotify.connectivity.auth.storage.esperanto.protoZWgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/storage/esperanto;esperantob\x06proto3"
 
 var file_es_auth_storage_result_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_auth_storage_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

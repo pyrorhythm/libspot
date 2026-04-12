@@ -994,7 +994,7 @@ const file_common_capping_proto_rawDesc = "" +
 	"GetCapInfo\x12C.spotify.common_capping.impl.common_capping_proto.GetCapInfoRequest\x1aD.spotify.common_capping.impl.common_capping_proto.GetCapInfoResponse\"\x00\x12e\n" +
 	"\aRefresh\x12@.spotify.common_capping.impl.common_capping_proto.RefreshRequest\x1a\x16.google.protobuf.Empty\"\x00\x12\xa8\x01\n" +
 	"\x0fGetQuotaStateAt\x12H.spotify.common_capping.impl.common_capping_proto.GetQuotaStateAtRequest\x1aI.spotify.common_capping.impl.common_capping_proto.GetQuotaStateAtResponse\"\x00B\x95\x01\n" +
-	"*com.spotify.common_capping.esperanto.protoZggithub.com/pyrorhythm/libspot/api/spotify/common_capping/impl/common_capping_proto;common_capping_protob\x06proto3"
+	"*com.spotify.common_capping.esperanto.protoZggithub.com/pyrorhythm/libspot/gen/spotify/common_capping/impl/common_capping_proto;common_capping_protob\x06proto3"
 
 var file_common_capping_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_common_capping_proto_msgTypes = make([]protoimpl.MessageInfo, 12)

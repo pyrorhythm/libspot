@@ -250,7 +250,7 @@ const file_spotify_list_v1_model_pagination_proto_rawDesc = "" +
 	"\vnext_offset\x18\x02 \x01(\x05H\x00R\n" +
 	"nextOffset\x88\x01\x01B\x0e\n" +
 	"\f_next_offsetBm\n" +
-	"\x19com.spotify.list.v1.modelB\x0fPaginationProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x0fPaginationProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_pagination_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_list_v1_model_pagination_proto_goTypes = []any{

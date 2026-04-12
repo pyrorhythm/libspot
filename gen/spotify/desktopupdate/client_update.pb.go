@@ -459,7 +459,7 @@ const file_client_update_proto_rawDesc = "" +
 	"\x0eLOGIN_CRITICAL\x10\x01\x12\n" +
 	"\n" +
 	"\x06NORMAL\x10\x02B}\n" +
-	"\x1fcom.spotify.desktopupdate.protoB\x11ClientUpdateProtoP\x01ZEgithub.com/pyrorhythm/libspot/api/spotify/desktopupdate;desktopupdateb\x06proto3"
+	"\x1fcom.spotify.desktopupdate.protoB\x11ClientUpdateProtoP\x01ZEgithub.com/pyrorhythm/libspot/gen/spotify/desktopupdate;desktopupdateb\x06proto3"
 
 var file_client_update_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_client_update_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

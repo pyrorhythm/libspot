@@ -677,7 +677,7 @@ const file_companion_content_extension_proto_rawDesc = "" +
 	"\vFULL_SCREEN\x10\x02B\n" +
 	"\n" +
 	"\b_captionB\x88\x01\n" +
-	"%com.spotify.figs.companion.content.v0B\x15CompanionContentProtoP\x01ZFgithub.com/pyrorhythm/libspot/api/spotify/figs/companion_content/v0;v0b\x06proto3"
+	"%com.spotify.figs.companion.content.v0B\x15CompanionContentProtoP\x01ZFgithub.com/pyrorhythm/libspot/gen/spotify/figs/companion_content/v0;v0b\x06proto3"
 
 var file_companion_content_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_companion_content_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

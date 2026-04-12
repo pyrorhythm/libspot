@@ -181,7 +181,7 @@ const file_include_RemainingSkips_proto_rawDesc = "" +
 	"\x0einteraction_id\x18\x01 \x01(\tR\rinteractionId\x12=\n" +
 	"\x1bremaining_skips_before_skip\x18\x02 \x01(\x05R\x18remainingSkipsBeforeSkip\x12;\n" +
 	"\x1aremaining_skips_after_skip\x18\x03 \x01(\x05R\x17remainingSkipsAfterSkip\x12'\n" +
-	"\x0finteraction_ids\x18\x04 \x03(\tR\x0einteractionIdsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0finteraction_ids\x18\x04 \x03(\tR\x0einteractionIdsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_RemainingSkips_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_RemainingSkips_proto_goTypes = []any{

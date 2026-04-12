@@ -1083,7 +1083,7 @@ const file_collection_index_proto_rawDesc = "" +
 	"\bshow_uri\x18\x03 \x01(\tR\ashowUri\x12\x1b\n" +
 	"\tshow_name\x18\x04 \x01(\tR\bshowName\x12\x19\n" +
 	"\badd_time\x18\x05 \x01(\x03R\aaddTime\x12!\n" +
-	"\fpublish_time\x18\x06 \x01(\x03R\vpublishTimeBAZ?github.com/pyrorhythm/libspot/api/spotify/collection;collectionb\x06proto3"
+	"\fpublish_time\x18\x06 \x01(\x03R\vpublishTimeBAZ?github.com/pyrorhythm/libspot/gen/spotify/collection;collectionb\x06proto3"
 
 var file_collection_index_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_collection_index_proto_goTypes = []any{

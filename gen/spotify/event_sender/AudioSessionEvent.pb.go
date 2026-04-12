@@ -431,7 +431,7 @@ const file_include_AudioSessionEvent_proto_rawDesc = "" +
 	"\x05speed\x18\t \x01(\x03R\x05speed\x12.\n" +
 	"\x13fade_start_position\x18\n" +
 	" \x01(\x05R\x11fadeStartPosition\x122\n" +
-	"\x15seek_creator_position\x18\v \x01(\x05R\x13seekCreatorPositionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15seek_creator_position\x18\v \x01(\x05R\x13seekCreatorPositionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioSessionEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioSessionEvent_proto_goTypes = []any{

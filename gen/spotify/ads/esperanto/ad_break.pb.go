@@ -245,7 +245,7 @@ const file_ad_break_proto_rawDesc = "" +
 	"\x05Break\x12k\n" +
 	"\bSubBreak\x12,.spotify.ads.esperanto.proto.SubBreakRequest\x1a-.spotify.ads.esperanto.proto.SubBreakResponse\"\x000\x01\x12z\n" +
 	"\rSubBreakState\x121.spotify.ads.esperanto.proto.SubBreakStateRequest\x1a2.spotify.ads.esperanto.proto.SubBreakStateResponse\"\x000\x01Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_break_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_ad_break_proto_goTypes = []any{

@@ -174,7 +174,7 @@ const file_include_DesktopUIShellInteractionNonAuth_proto_rawDesc = "" +
 	"section_id\x18\x01 \x01(\tR\tsectionId\x12)\n" +
 	"\x10interaction_type\x18\x02 \x01(\tR\x0finteractionType\x12\x1f\n" +
 	"\vuser_intent\x18\x03 \x01(\tR\n" +
-	"userIntentBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"userIntentBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopUIShellInteractionNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopUIShellInteractionNonAuth_proto_goTypes = []any{

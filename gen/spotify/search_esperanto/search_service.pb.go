@@ -7,7 +7,7 @@
 package search_esperanto
 
 import (
-	search "github.com/pyrorhythm/libspot/api/spotify/search"
+	search "github.com/pyrorhythm/libspot/gen/spotify/search"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -229,7 +229,7 @@ const file_search_service_proto_rawDesc = "" +
 	"\x06tracks\x18\x04 \x03(\v2\".spotify.search.proto.OfflineTrackR\x06tracks2\x8e\x01\n" +
 	"\x14OfflineSearchService\x12v\n" +
 	"\x05Query\x124.spotify.search_esperanto.proto.OfflineSearchRequest\x1a5.spotify.search_esperanto.proto.OfflineSearchResponse\"\x00B\x88\x01\n" +
-	"\"com.spotify.search.esperanto.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/search_esperanto;search_esperanto\xa2\x02\x12SPTSearchEsperantob\x06proto3"
+	"\"com.spotify.search.esperanto.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/search_esperanto;search_esperanto\xa2\x02\x12SPTSearchEsperantob\x06proto3"
 
 var file_search_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_search_service_proto_goTypes = []any{

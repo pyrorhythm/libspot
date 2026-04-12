@@ -190,7 +190,7 @@ const file_es_play_origin_proto_rawDesc = "" +
 	"\x11device_identifier\x18\x06 \x01(\tR\x10deviceIdentifier\x12'\n" +
 	"\x0ffeature_classes\x18\a \x03(\tR\x0efeatureClasses\x125\n" +
 	"\x16restriction_identifier\x18\b \x01(\tR\x15restrictionIdentifierBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_play_origin_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_play_origin_proto_goTypes = []any{

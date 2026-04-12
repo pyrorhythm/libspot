@@ -347,7 +347,7 @@ const file_consumption_experience_trait_proto_rawDesc = "" +
 	"\fFORMAT_AUDIO\x10\x01\x12\x10\n" +
 	"\fFORMAT_VIDEO\x10\x02\x12\x11\n" +
 	"\rFORMAT_PARROT\x10\x03Bc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_consumption_experience_trait_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_consumption_experience_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

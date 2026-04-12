@@ -684,7 +684,7 @@ const file_spotify_playback_platform_external_legacy_v1_legacy_metadata_proto_ra
 	"\x14ARTIST_ROLE_COMPOSER\x10\x05\x12\x19\n" +
 	"\x15ARTIST_ROLE_CONDUCTOR\x10\x06\x12\x19\n" +
 	"\x15ARTIST_ROLE_ORCHESTRA\x10\aB\x83\x01\n" +
-	",spotify.playback_platform.external.legacy.v1P\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/external/legacy/v1;v1b\x06proto3"
+	",spotify.playback_platform.external.legacy.v1P\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/external/legacy/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_external_legacy_v1_legacy_metadata_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_playback_platform_external_legacy_v1_legacy_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

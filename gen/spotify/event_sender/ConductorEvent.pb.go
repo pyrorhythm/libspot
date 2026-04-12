@@ -376,7 +376,7 @@ const file_include_ConductorEvent_proto_rawDesc = "" +
 	"\x10item_instance_id\x18\x06 \x01(\tR\x0eitemInstanceId\x12\x19\n" +
 	"\bclip_uri\x18\a \x01(\tR\aclipUri\x12\x19\n" +
 	"\bclip_uid\x18\b \x01(\tR\aclipUid\x12\x14\n" +
-	"\x05event\x18\t \x01(\tR\x05eventBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05event\x18\t \x01(\tR\x05eventBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConductorEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConductorEvent_proto_goTypes = []any{

@@ -104,7 +104,7 @@ const file_pause_resume_origin_proto_rawDesc = "" +
 	"\n" +
 	"\x19pause_resume_origin.proto\x12\x14spotify.player.proto\"B\n" +
 	"\x11PauseResumeOrigin\x12-\n" +
-	"\x12feature_identifier\x18\x01 \x01(\tR\x11featureIdentifierB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x12feature_identifier\x18\x01 \x01(\tR\x11featureIdentifierB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_pause_resume_origin_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_pause_resume_origin_proto_goTypes = []any{

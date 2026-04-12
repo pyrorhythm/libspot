@@ -236,7 +236,7 @@ const file_es_send_event_response_proto_rawDesc = "" +
 	"\x11FAILED_CORRUPTION\x10\x02\x12\x1b\n" +
 	"\x17FAILED_PERMISSION_ERROR\x10\x03\x12\x16\n" +
 	"\x12FAILED_OTHER_ERROR\x10\x04B{\n" +
-	"'com.spotify.eventsender.esperanto.protoZJgithub.com/pyrorhythm/libspot/api/spotify/event_sender/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"'com.spotify.eventsender.esperanto.protoZJgithub.com/pyrorhythm/libspot/gen/spotify/event_sender/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_send_event_response_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_es_send_event_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

@@ -384,7 +384,7 @@ const file_include_DesktopHighMemoryUsageNonAuth_proto_rawDesc = "" +
 	"\x17mac_resident_size_bytes\x18\b \x01(\x03R\x14macResidentSizeBytes\x12.\n" +
 	"\x13mac_footprint_bytes\x18\t \x01(\x03R\x11macFootprintBytes\x12!\n" +
 	"\fprocess_name\x18\n" +
-	" \x01(\tR\vprocessNameBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\tR\vprocessNameBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopHighMemoryUsageNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopHighMemoryUsageNonAuth_proto_goTypes = []any{

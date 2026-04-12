@@ -275,7 +275,7 @@ const file_include_AdvanceStuck_proto_rawDesc = "" +
 	"\fsource_start\x18\x03 \x01(\tR\vsourceStart\x12!\n" +
 	"\freason_start\x18\x04 \x01(\tR\vreasonStart\x12!\n" +
 	"\faudio_driver\x18\x05 \x01(\tR\vaudioDriver\x12!\n" +
-	"\freason_stuck\x18\x06 \x01(\tR\vreasonStuckBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\freason_stuck\x18\x06 \x01(\tR\vreasonStuckBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdvanceStuck_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdvanceStuck_proto_goTypes = []any{

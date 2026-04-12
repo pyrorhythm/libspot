@@ -89,7 +89,7 @@ const file_playback_stack_v2_proto_rawDesc = "" +
 	"\x16PLAYBACK_STACK_HARMONY\x10\x04\x12\x18\n" +
 	"\x14PLAYBACK_STACK_MIXED\x10\x05\x12$\n" +
 	" PLAYBACK_STACK_FAKE_VIDEO_PLAYER\x10\x06B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playback_stack_v2_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playback_stack_v2_proto_goTypes = []any{

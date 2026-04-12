@@ -290,7 +290,7 @@ const file_podcast_ad_segments_proto_rawDesc = "" +
 	"\x11PODCAST_MIDROLL_3\x10\x05\x12\x15\n" +
 	"\x11PODCAST_MIDROLL_4\x10\x06\x12\x15\n" +
 	"\x11PODCAST_MIDROLL_5\x10\aBw\n" +
-	"\x1dcom.spotify.ads.formats.protoB\x0fPodcastAdsProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/ads/formats;formats\xa2\x02\x03SPTb\x06proto3"
+	"\x1dcom.spotify.ads.formats.protoB\x0fPodcastAdsProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/ads/formats;formats\xa2\x02\x03SPTb\x06proto3"
 
 var file_podcast_ad_segments_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_podcast_ad_segments_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

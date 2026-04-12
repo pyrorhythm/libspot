@@ -485,7 +485,7 @@ const file_include_ShuffleSequenceEvent_proto_rawDesc = "" +
 	"\x11skip_to_track_uri\x18\v \x01(\tR\x0eskipToTrackUri\x12(\n" +
 	"\x10root_seed_number\x18\f \x01(\tR\x0erootSeedNumber\x12,\n" +
 	"\x12chosen_seed_number\x18\r \x01(\tR\x10chosenSeedNumber\x122\n" +
-	"\x15shuffle_sequence_uuid\x18\x0e \x01(\tR\x13shuffleSequenceUuidBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15shuffle_sequence_uuid\x18\x0e \x01(\tR\x13shuffleSequenceUuidBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ShuffleSequenceEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ShuffleSequenceEvent_proto_goTypes = []any{

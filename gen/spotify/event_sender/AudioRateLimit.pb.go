@@ -332,7 +332,7 @@ const file_include_AudioRateLimit_proto_rawDesc = "" +
 	"\x10frames_requested\x18\x06 \x01(\x03R\x0fframesRequested\x12'\n" +
 	"\x0fframes_acquired\x18\a \x01(\x03R\x0eframesAcquired\x12\x1f\n" +
 	"\vplayback_id\x18\b \x01(\fR\n" +
-	"playbackIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"playbackIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioRateLimit_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioRateLimit_proto_goTypes = []any{

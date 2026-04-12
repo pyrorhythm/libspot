@@ -258,7 +258,7 @@ const file_remote_proto_rawDesc = "" +
 	"\x03uri\x18\x01 \x02(\tR\x03uri\x12\x10\n" +
 	"\x03uid\x18\x02 \x02(\tR\x03uid\"'\n" +
 	"\x0fServiceResponse\x12\x14\n" +
-	"\x05order\x18\x01 \x03(\rR\x05orderBHZFgithub.com/pyrorhythm/libspot/api/spotify/player/shuffle/remote;remote"
+	"\x05order\x18\x01 \x03(\rR\x05orderBHZFgithub.com/pyrorhythm/libspot/gen/spotify/player/shuffle/remote;remote"
 
 var file_remote_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_remote_proto_goTypes = []any{

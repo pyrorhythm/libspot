@@ -171,7 +171,7 @@ const file_preloaded_proto_rawDesc = "" +
 	"\x10PreloadedContext\x12\x1d\n" +
 	"\n" +
 	"context_id\x18\x01 \x01(\tR\tcontextId\x12G\n" +
-	"\acontext\x18\x02 \x01(\v2-.spotify.playback_platform.context.v1.ContextR\acontextBMP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"\acontext\x18\x02 \x01(\v2-.spotify.playback_platform.context.v1.ContextR\acontextBMP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_preloaded_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_preloaded_proto_goTypes = []any{

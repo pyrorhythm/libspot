@@ -1778,7 +1778,7 @@ const file_your_library_index_proto_rawDesc = "" +
 	"\x06status\x18\x05 \x01(\x0e2F.spotify.your_library.proto.YourLibraryConcertCampaignExtraInfo.StatusR\x06status\x12\x1d\n" +
 	"\n" +
 	"start_time\x18\x06 \x01(\x03R\tstartTime\x12\x19\n" +
-	"\bend_time\x18\a \x01(\x03R\aendTimeBEZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"\bend_time\x18\a \x01(\x03R\aendTimeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_index_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_your_library_index_proto_msgTypes = make([]protoimpl.MessageInfo, 9)

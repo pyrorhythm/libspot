@@ -643,7 +643,7 @@ const file_include_WebsocketConnectionNonAuth_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x01R\x05value\x1a>\n" +
 	"\x14ReceivedConnIdsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05value\x18\x02 \x01(\tR\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_WebsocketConnectionNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_include_WebsocketConnectionNonAuth_proto_goTypes = []any{

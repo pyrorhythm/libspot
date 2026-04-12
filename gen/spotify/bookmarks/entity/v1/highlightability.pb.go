@@ -84,7 +84,7 @@ const file_highlightability_proto_rawDesc = "" +
 	"\x16highlightability.proto\x12\x1bspotify.bookmarks.entity.v1\"A\n" +
 	"\x10Highlightability\x12-\n" +
 	"\x12user_highlightable\x18\x01 \x01(\bR\x11userHighlightableB_\n" +
-	"\x1bspotify.bookmarks.entity.v1Z@github.com/pyrorhythm/libspot/api/spotify/bookmarks/entity/v1;v1b\x06proto3"
+	"\x1bspotify.bookmarks.entity.v1Z@github.com/pyrorhythm/libspot/gen/spotify/bookmarks/entity/v1;v1b\x06proto3"
 
 var file_highlightability_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_highlightability_proto_goTypes = []any{

@@ -170,7 +170,7 @@ const file_spotify_list_v1_model_attribute_kinds_proto_rawDesc = "" +
 	"\x16KIND_ITEM_ID_ALGORITHM\x10\x19\x12\x14\n" +
 	"\x10KIND_RECOVERABLE\x10\x1a\x12\x14\n" +
 	"\x10KIND_SOURCE_LENS\x10\x1bBq\n" +
-	"\x19com.spotify.list.v1.modelB\x13AttributeKindsProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x13AttributeKindsProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attribute_kinds_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_attribute_kinds_proto_goTypes = []any{

@@ -140,7 +140,7 @@ const file_include_CorePlaybackCommandCorrelation_proto_rawDesc = "" +
 	"\vplayback_id\x18\x01 \x01(\fR\n" +
 	"playbackId\x12\x1d\n" +
 	"\n" +
-	"command_id\x18\x02 \x01(\fR\tcommandIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"command_id\x18\x02 \x01(\fR\tcommandIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CorePlaybackCommandCorrelation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CorePlaybackCommandCorrelation_proto_goTypes = []any{

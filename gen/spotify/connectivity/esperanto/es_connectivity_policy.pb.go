@@ -1132,7 +1132,7 @@ const file_es_connectivity_policy_proto_rawDesc = "" +
 	"\bgetState\x125.spotify.connectivity.esperanto.proto.GetStateRequest\x1a6.spotify.connectivity.esperanto.proto.GetStateResponse\"\x00\x12{\n" +
 	"\bgetRules\x125.spotify.connectivity.esperanto.proto.GetRulesRequest\x1a6.spotify.connectivity.esperanto.proto.GetRulesResponse\"\x00\x12\x96\x01\n" +
 	"\x11setConnectionType\x12>.spotify.connectivity.esperanto.proto.SetConnectionTypeRequest\x1a?.spotify.connectivity.esperanto.proto.SetConnectionTypeResponse\"\x00Bx\n" +
-	"(com.spotify.connectivity.esperanto.protoP\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/connectivity/esperanto;esperantob\x06proto3"
+	"(com.spotify.connectivity.esperanto.protoP\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/esperanto;esperantob\x06proto3"
 
 var file_es_connectivity_policy_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_es_connectivity_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 11)

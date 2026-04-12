@@ -595,7 +595,7 @@ const file_include_TrackErrorBypass_proto_rawDesc = "" +
 	"\fretry_reason\x18\x0e \x01(\tR\vretryReason\x12\x1f\n" +
 	"\vmax_retries\x18\x0f \x01(\x03R\n" +
 	"maxRetries\x12+\n" +
-	"\x11retries_exhausted\x18\x10 \x01(\bR\x10retriesExhaustedBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11retries_exhausted\x18\x10 \x01(\bR\x10retriesExhaustedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_TrackErrorBypass_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_TrackErrorBypass_proto_goTypes = []any{

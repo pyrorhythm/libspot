@@ -170,7 +170,7 @@ const file_include_DesktopBleErrorNonAuth_proto_rawDesc = "" +
 	"\x0eerror_category\x18\x01 \x01(\tR\rerrorCategory\x12\x1d\n" +
 	"\n" +
 	"error_code\x18\x02 \x01(\x05R\terrorCode\x12#\n" +
-	"\rerror_message\x18\x03 \x01(\tR\ferrorMessageBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\rerror_message\x18\x03 \x01(\tR\ferrorMessageBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopBleErrorNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopBleErrorNonAuth_proto_goTypes = []any{

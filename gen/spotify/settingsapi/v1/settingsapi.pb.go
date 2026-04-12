@@ -271,7 +271,7 @@ const file_settingsapi_proto_rawDesc = "" +
 	"\x14UpdateSettingRequest\x12-\n" +
 	"\x12setting_identifier\x18\x01 \x01(\tR\x11settingIdentifier\x12A\n" +
 	"\tnew_value\x18\x02 \x01(\v2$.spotify.settingsapi.v1.SettingValueR\bnewValue\"\x17\n" +
-	"\x15UpdateSettingResponseB=Z;github.com/pyrorhythm/libspot/api/spotify/settingsapi/v1;v1b\x06proto3"
+	"\x15UpdateSettingResponseB=Z;github.com/pyrorhythm/libspot/gen/spotify/settingsapi/v1;v1b\x06proto3"
 
 var file_settingsapi_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_settingsapi_proto_goTypes = []any{

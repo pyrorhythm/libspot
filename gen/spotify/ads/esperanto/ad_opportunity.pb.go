@@ -486,7 +486,7 @@ const file_ad_opportunity_proto_rawDesc = "" +
 	"\rAdOpportunity\x12l\n" +
 	"\tpostEvent\x12-.spotify.ads.esperanto.proto.PostEventRequest\x1a..spotify.ads.esperanto.proto.PostEventResponse\"\x00\x12r\n" +
 	"\vpostEventV2\x12/.spotify.ads.esperanto.proto.PostEventV2Request\x1a0.spotify.ads.esperanto.proto.PostEventV2Response\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_opportunity_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_ad_opportunity_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

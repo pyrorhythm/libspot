@@ -113,7 +113,7 @@ const file_context_device_proto_rawDesc = "" +
 	"\x06Device\x12\"\n" +
 	"\fmanufacturer\x18\x01 \x01(\tR\fmanufacturer\x12\x14\n" +
 	"\x05model\x18\x02 \x01(\tR\x05model\x12\x12\n" +
-	"\x04type\x18\x03 \x01(\tR\x04typeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x04type\x18\x03 \x01(\tR\x04typeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_device_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_device_proto_goTypes = []any{

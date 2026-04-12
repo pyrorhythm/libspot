@@ -7,8 +7,8 @@
 package unfinished_episodes_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	show_cosmos "github.com/pyrorhythm/libspot/api/spotify/show_cosmos"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	show_cosmos "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -271,7 +271,7 @@ const file_unfinished_episodes_request_proto_rawDesc = "" +
 	"\x12episode_play_state\x18\x04 \x01(\v2+.spotify.cosmos_util.proto.EpisodePlayStateR\x10episodePlayState\x12\x12\n" +
 	"\x04link\x18\x05 \x01(\tR\x04link\"j\n" +
 	"\bResponse\x12X\n" +
-	"\aepisode\x18\x02 \x03(\v2>.spotify.show_cosmos.unfinished_episodes_request.proto.EpisodeR\aepisodeJ\x04\b\x01\x10\x02B\x90\x01Zmgithub.com/pyrorhythm/libspot/api/spotify/show_cosmos/unfinished_episodes_request;unfinished_episodes_request\xa2\x02\x1eSPTShowCosmosUnfinshedEpisodes"
+	"\aepisode\x18\x02 \x03(\v2>.spotify.show_cosmos.unfinished_episodes_request.proto.EpisodeR\aepisodeJ\x04\b\x01\x10\x02B\x90\x01Zmgithub.com/pyrorhythm/libspot/gen/spotify/show_cosmos/unfinished_episodes_request;unfinished_episodes_request\xa2\x02\x1eSPTShowCosmosUnfinshedEpisodes"
 
 var file_unfinished_episodes_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_unfinished_episodes_request_proto_goTypes = []any{

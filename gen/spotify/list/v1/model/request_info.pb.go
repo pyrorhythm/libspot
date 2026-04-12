@@ -380,7 +380,7 @@ const file_spotify_list_v1_model_request_info_proto_rawDesc = "" +
 	"\x17MultiListRequestOptions\x12x\n" +
 	"\x1cadditional_responses_options\x18\x01 \x01(\v21.spotify.list.v1.model.AdditionalResponsesOptionsH\x00R\x1aadditionalResponsesOptions\x88\x01\x01B\x1f\n" +
 	"\x1d_additional_responses_optionsBn\n" +
-	"\x19com.spotify.list.v1.modelB\x10RequestInfoProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x10RequestInfoProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_request_info_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_spotify_list_v1_model_request_info_proto_goTypes = []any{

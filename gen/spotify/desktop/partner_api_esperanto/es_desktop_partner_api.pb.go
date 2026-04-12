@@ -405,7 +405,7 @@ const file_es_desktop_partner_api_proto_rawDesc = "" +
 	"\x11DesktopPartnerApi\x12\xb9\x01\n" +
 	"\x18EnablePartnerApiEndpoint\x12L.spotify.desktop.partner_api_esperanto.proto.EnablePartnerApiEndpointRequest\x1aM.spotify.desktop.partner_api_esperanto.proto.EnablePartnerApiEndpointResponse\"\x00\x12\xaa\x01\n" +
 	"\x15SetPartnerApiTcpPorts\x12F.spotify.desktop.partner_api_esperanto.proto.PartnerApiTcpPortsRequest\x1aG.spotify.desktop.partner_api_esperanto.proto.PartnerApiTcpPortsResponse\"\x00\x12\x8c\x01\n" +
-	"\rNotifyUIReady\x12;.spotify.desktop.partner_api_esperanto.proto.UIReadyRequest\x1a<.spotify.desktop.partner_api_esperanto.proto.UIReadyResponse\"\x00B_Z]github.com/pyrorhythm/libspot/api/spotify/desktop/partner_api_esperanto;partner_api_esperantob\x06proto3"
+	"\rNotifyUIReady\x12;.spotify.desktop.partner_api_esperanto.proto.UIReadyRequest\x1a<.spotify.desktop.partner_api_esperanto.proto.UIReadyResponse\"\x00B_Z]github.com/pyrorhythm/libspot/gen/spotify/desktop/partner_api_esperanto;partner_api_esperantob\x06proto3"
 
 var file_es_desktop_partner_api_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_es_desktop_partner_api_proto_goTypes = []any{

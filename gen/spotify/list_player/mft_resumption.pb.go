@@ -274,7 +274,7 @@ const file_mft_resumption_proto_rawDesc = "" +
 	"\aentries\x18\x01 \x03(\v2:.spotify.list_player.proto.MftResumptionState.EntriesEntryR\aentries\x1ae\n" +
 	"\fEntriesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12C\n" +
-	"\x05value\x18\x02 \x01(\v2-.spotify.list_player.proto.MftResumptionEntryR\x05valueBCZAgithub.com/pyrorhythm/libspot/api/spotify/list_player;list_playerb\x06proto3"
+	"\x05value\x18\x02 \x01(\v2-.spotify.list_player.proto.MftResumptionEntryR\x05valueBCZAgithub.com/pyrorhythm/libspot/gen/spotify/list_player;list_playerb\x06proto3"
 
 var file_mft_resumption_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_mft_resumption_proto_goTypes = []any{

@@ -732,7 +732,7 @@ const file_include_AdDetectionResult_proto_rawDesc = "" +
 	"\x15detection_used_search\x18\x14 \x01(\bR\x13detectionUsedSearch\x12*\n" +
 	"\x11loaded_from_cache\x18\x15 \x01(\bR\x0floadedFromCache\x12;\n" +
 	"\x1aquick_detection_latency_ms\x18\x16 \x01(\x03R\x17quickDetectionLatencyMs\x129\n" +
-	"\x19full_detection_latency_ms\x18\x17 \x01(\x03R\x16fullDetectionLatencyMsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x19full_detection_latency_ms\x18\x17 \x01(\x03R\x16fullDetectionLatencyMsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdDetectionResult_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdDetectionResult_proto_goTypes = []any{

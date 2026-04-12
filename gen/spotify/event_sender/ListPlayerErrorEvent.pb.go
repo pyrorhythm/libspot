@@ -271,7 +271,7 @@ const file_include_ListPlayerErrorEvent_proto_rawDesc = "" +
 	"\blist_uri\x18\x03 \x01(\tR\alistUri\x12\x19\n" +
 	"\blist_ref\x18\x04 \x01(\fR\alistRef\x12(\n" +
 	"\x10list_instance_id\x18\x05 \x01(\tR\x0elistInstanceId\x12&\n" +
-	"\x0fnumber_of_items\x18\x06 \x01(\x05R\rnumberOfItemsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fnumber_of_items\x18\x06 \x01(\x05R\rnumberOfItemsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ListPlayerErrorEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ListPlayerErrorEvent_proto_goTypes = []any{

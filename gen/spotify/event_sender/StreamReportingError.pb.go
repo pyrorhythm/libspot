@@ -410,7 +410,7 @@ const file_include_StreamReportingError_proto_rawDesc = "" +
 	"\rerror_message\x18\b \x01(\tR\ferrorMessage\x12)\n" +
 	"\x10client_timestamp\x18\t \x01(\tR\x0fclientTimestamp\x12/\n" +
 	"\x13orchestration_stack\x18\n" +
-	" \x01(\tR\x12orchestrationStackBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\tR\x12orchestrationStackBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_StreamReportingError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_StreamReportingError_proto_goTypes = []any{

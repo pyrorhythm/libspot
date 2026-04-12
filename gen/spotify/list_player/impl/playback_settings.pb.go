@@ -163,7 +163,7 @@ const file_playback_settings_proto_rawDesc = "" +
 	"\x0fMediaPreference\x12\x0f\n" +
 	"\vUNSPECIFIED\x10\x00\x12\t\n" +
 	"\x05AUDIO\x10\x01\x12\t\n" +
-	"\x05VIDEO\x10\x02BAZ?github.com/pyrorhythm/libspot/api/spotify/list_player/impl;implb\x06proto3"
+	"\x05VIDEO\x10\x02BAZ?github.com/pyrorhythm/libspot/gen/spotify/list_player/impl;implb\x06proto3"
 
 var file_playback_settings_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playback_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

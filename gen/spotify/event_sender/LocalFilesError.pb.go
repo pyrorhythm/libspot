@@ -170,7 +170,7 @@ const file_include_LocalFilesError_proto_rawDesc = "" +
 	"\n" +
 	"error_code\x18\x01 \x01(\x03R\terrorCode\x12\x18\n" +
 	"\acontext\x18\x02 \x01(\tR\acontext\x12\x12\n" +
-	"\x04info\x18\x03 \x01(\tR\x04infoBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x04info\x18\x03 \x01(\tR\x04infoBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_LocalFilesError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_LocalFilesError_proto_goTypes = []any{

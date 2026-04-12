@@ -86,7 +86,7 @@ const file_spotify_list_v1_model_list_diff_proto_rawDesc = "" +
 	"%spotify/list/v1/model/list_diff.proto\x12\x15spotify.list.v1.model\x1a\x1fspotify/list/v1/model/ops.proto\"7\n" +
 	"\bListDiff\x12+\n" +
 	"\x03ops\x18\x01 \x03(\v2\x19.spotify.list.v1.model.OpR\x03opsBg\n" +
-	"\x19com.spotify.list.v1.modelB\tDiffProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\tDiffProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_list_diff_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_list_diff_proto_goTypes = []any{

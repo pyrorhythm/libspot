@@ -347,7 +347,7 @@ const file_common_messages_proto_rawDesc = "" +
 	"\tNOT_FOUND\x10\x01\x12\x15\n" +
 	"\x11INVALID_ARGUMENTS\x10\x02\x12\x13\n" +
 	"\x0fBACKEND_FAILURE\x10\x03Bl\n" +
-	"#com.spotify.connect.esperanto.protoZEgithub.com/pyrorhythm/libspot/api/spotify/connect/esperanto;esperantob\x06proto3"
+	"#com.spotify.connect.esperanto.protoZEgithub.com/pyrorhythm/libspot/gen/spotify/connect/esperanto;esperantob\x06proto3"
 
 var file_common_messages_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

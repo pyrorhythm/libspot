@@ -311,7 +311,7 @@ const file_es_play_proto_rawDesc = "" +
 	"\fplay_options\x18\x02 \x01(\v2+.spotify.player.esperanto.proto.PlayOptionsR\vplayOptions\x12H\n" +
 	"\aoptions\x18\x03 \x01(\v2..spotify.player.esperanto.proto.CommandOptionsR\aoptions\x12T\n" +
 	"\x0elogging_params\x18\x04 \x01(\v2-.spotify.player.esperanto.proto.LoggingParamsR\rloggingParamsBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_play_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_play_proto_goTypes = []any{

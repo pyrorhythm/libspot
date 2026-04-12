@@ -677,7 +677,7 @@ const file_prepare_play_options_proto_rawDesc = "" +
 	"\x05MEDIA\x10\x01*%\n" +
 	"\vAudioStream\x12\v\n" +
 	"\aDEFAULT\x10\x00\x12\t\n" +
-	"\x05ALARM\x10\x01B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05ALARM\x10\x01B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_prepare_play_options_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_prepare_play_options_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

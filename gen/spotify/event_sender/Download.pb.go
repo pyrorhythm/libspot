@@ -1598,7 +1598,7 @@ const file_include_Download_proto_rawDesc = "" +
 	"\x12initial_disk_state\x18, \x01(\tR\x10initialDiskState\x12\x16\n" +
 	"\x06locked\x18- \x01(\bR\x06locked\x126\n" +
 	"\x17storage_resolve_latency\x18/ \x01(\x03R\x15storageResolveLatency\x12.\n" +
-	"\x13original_cdn_domain\x180 \x01(\tR\x11originalCdnDomainBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x13original_cdn_domain\x180 \x01(\tR\x11originalCdnDomainBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_Download_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_Download_proto_goTypes = []any{

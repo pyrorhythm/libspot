@@ -1202,7 +1202,7 @@ const file_tts_resolve_proto_rawDesc = "" +
 	"\x03url\x18\x04 \x01(\tR\x03url\x12\x14\n" +
 	"\x04text\x18\x01 \x01(\tH\x00R\x04text\x12\x14\n" +
 	"\x04ssml\x18\x02 \x01(\tH\x00R\x04ssmlB\x05\n" +
-	"\x03ttsB?Z=github.com/pyrorhythm/libspot/api/spotify/narration;narrationb\x06proto3"
+	"\x03ttsB?Z=github.com/pyrorhythm/libspot/gen/spotify/narration;narrationb\x06proto3"
 
 var file_tts_resolve_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_tts_resolve_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

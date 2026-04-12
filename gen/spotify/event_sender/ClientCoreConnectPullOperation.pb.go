@@ -436,7 +436,7 @@ const file_include_ClientCoreConnectPullOperation_proto_rawDesc = "" +
 	"\x12feature_identifier\x18\b \x01(\tR\x11featureIdentifier\x1a=\n" +
 	"\x13FailureReasonsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05value\x18\x02 \x01(\tR\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ClientCoreConnectPullOperation_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_include_ClientCoreConnectPullOperation_proto_goTypes = []any{

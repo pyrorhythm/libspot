@@ -217,7 +217,7 @@ const file_include_Login5TaskNonAuth_proto_rawDesc = "" +
 	"\rhttp_response\x18\x03 \x03(\x05R\fhttpResponse\x12'\n" +
 	"\x0flogin5_response\x18\x04 \x03(\tR\x0elogin5Response\x12+\n" +
 	"\x11response_duration\x18\x05 \x03(\x03R\x10responseDuration\x12!\n" +
-	"\fclient_error\x18\x06 \x01(\tR\vclientErrorBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\fclient_error\x18\x06 \x01(\tR\vclientErrorBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_Login5TaskNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_Login5TaskNonAuth_proto_goTypes = []any{

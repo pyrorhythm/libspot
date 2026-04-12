@@ -84,7 +84,7 @@ const file_es_pauseresume_origin_proto_rawDesc = "" +
 	"\x1bes_pauseresume_origin.proto\x12\x1espotify.player.esperanto.proto\"B\n" +
 	"\x11PauseResumeOrigin\x12-\n" +
 	"\x12feature_identifier\x18\x01 \x01(\tR\x11featureIdentifierBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_pauseresume_origin_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_pauseresume_origin_proto_goTypes = []any{

@@ -84,7 +84,7 @@ const file_mix_state_proto_rawDesc = "" +
 	"\x0fmix_state.proto\x12*spotify.playlistmixing.extensions.mixstate\"%\n" +
 	"\bMixState\x12\x19\n" +
 	"\bis_mixed\x18\x01 \x01(\bR\aisMixedB\x9c\x01\n" +
-	"4com.spotify.playlistmixing.extensions.mixstate.protoB\rMixStateProtoZUgithub.com/pyrorhythm/libspot/api/spotify/playlistmixing/extensions/mixstate;mixstateb\x06proto3"
+	"4com.spotify.playlistmixing.extensions.mixstate.protoB\rMixStateProtoZUgithub.com/pyrorhythm/libspot/gen/spotify/playlistmixing/extensions/mixstate;mixstateb\x06proto3"
 
 var file_mix_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_mix_state_proto_goTypes = []any{

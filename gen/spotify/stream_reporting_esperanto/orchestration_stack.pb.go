@@ -81,7 +81,7 @@ const file_orchestration_stack_proto_rawDesc = "" +
 	"\"ORCHESTRATION_STACK_CONTEXT_PLAYER\x10\x02\x12#\n" +
 	"\x1fORCHESTRATION_STACK_MULTIPLAYER\x10\x03\x12\"\n" +
 	"\x1eORCHESTRATION_STACK_STANDALONE\x10\x04B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_orchestration_stack_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_orchestration_stack_proto_goTypes = []any{

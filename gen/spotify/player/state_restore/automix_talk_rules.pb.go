@@ -127,7 +127,7 @@ const file_state_restore_automix_talk_rules_proto_rawDesc = "" +
 	"&state_restore/automix_talk_rules.proto\x12\"spotify.player.proto.state_restore\x1a\"state_restore/provided_track.proto\"\x99\x01\n" +
 	"\x10AutomixTalkRules\x12V\n" +
 	"\rcurrent_track\x18\x01 \x01(\v21.spotify.player.proto.state_restore.ProvidedTrackR\fcurrentTrack\x12-\n" +
-	"\x12narration_duration\x18\x02 \x01(\x03R\x11narrationDurationBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x12narration_duration\x18\x02 \x01(\x03R\x11narrationDurationBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_automix_talk_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_automix_talk_rules_proto_goTypes = []any{

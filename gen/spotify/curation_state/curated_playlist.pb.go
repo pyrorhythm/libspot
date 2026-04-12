@@ -180,7 +180,7 @@ const file_curated_playlist_proto_rawDesc = "" +
 	"\aitem_id\x18\x02 \x01(\fR\x06itemId\"t\n" +
 	"\x0fCuratedPlaylist\x12E\n" +
 	"\x04item\x18\x01 \x03(\v21.spotify.curation_state.proto.CuratedPlaylistItemR\x04item\x12\x1a\n" +
-	"\brevision\x18\x02 \x01(\fR\brevisionBIZGgithub.com/pyrorhythm/libspot/api/spotify/curation_state;curation_stateb\x06proto3"
+	"\brevision\x18\x02 \x01(\fR\brevisionBIZGgithub.com/pyrorhythm/libspot/gen/spotify/curation_state;curation_stateb\x06proto3"
 
 var file_curated_playlist_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_curated_playlist_proto_goTypes = []any{

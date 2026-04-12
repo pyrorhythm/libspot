@@ -245,7 +245,7 @@ const file_spotify_playback_platform_context_v1_sequence_patch_proto_rawDesc = "
 	"\a_beforeB\f\n" +
 	"\n" +
 	"_iterationBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_sequence_patch_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_context_v1_sequence_patch_proto_goTypes = []any{

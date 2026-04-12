@@ -613,7 +613,7 @@ const file_popcount2_external_proto_rawDesc = "" +
 	"\fis_truncated\x18\x01 \x01(\bR\visTruncated\x12\x17\n" +
 	"\auser_id\x18\x02 \x03(\fR\x06userId\">\n" +
 	"&PopcountSetFollowerCounterValueRequest\x12\x14\n" +
-	"\x05count\x18\x01 \x01(\x03R\x05countB?Z=github.com/pyrorhythm/libspot/api/spotify/popcount2;popcount2"
+	"\x05count\x18\x01 \x01(\x03R\x05countB?Z=github.com/pyrorhythm/libspot/gen/spotify/popcount2;popcount2"
 
 var file_popcount2_external_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_popcount2_external_proto_goTypes = []any{

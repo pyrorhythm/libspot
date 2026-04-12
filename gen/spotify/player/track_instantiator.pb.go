@@ -166,7 +166,7 @@ const file_track_instantiator_proto_rawDesc = "" +
 	"\x11TrackInstantiator\x12\x16\n" +
 	"\x06unique\x18\x01 \x01(\x04R\x06unique\x12\x14\n" +
 	"\x05count\x18\x02 \x01(\x04R\x05count\x12\x1a\n" +
-	"\bprovider\x18\x03 \x01(\tR\bproviderB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\bprovider\x18\x03 \x01(\tR\bproviderB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_track_instantiator_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_track_instantiator_proto_goTypes = []any{

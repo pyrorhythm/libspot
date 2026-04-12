@@ -270,7 +270,7 @@ const file_context_view_entry_proto_rawDesc = "" +
 	"\x05TRACK\x10\x00\x12\r\n" +
 	"\tDELIMITER\x10\x01\x12\x14\n" +
 	"\x10PAGE_PLACEHOLDER\x10\x02\x12\x17\n" +
-	"\x13CONTEXT_PLACEHOLDER\x10\x03B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x13CONTEXT_PLACEHOLDER\x10\x03B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_view_entry_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_context_view_entry_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

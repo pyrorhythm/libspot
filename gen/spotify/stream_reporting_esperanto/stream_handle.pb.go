@@ -103,7 +103,7 @@ const file_stream_handle_proto_rawDesc = "" +
 	"\n" +
 	"raw_handle\x18\x02 \x01(\rR\trawHandle\x12\x1b\n" +
 	"\tstream_id\x18\x03 \x01(\fR\bstreamIdJ\x04\b\x01\x10\x02B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_stream_handle_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_stream_handle_proto_goTypes = []any{

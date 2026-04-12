@@ -337,7 +337,7 @@ const file_storylines_proto_rawDesc = "" +
 	"entity_uri\x18\x02 \x01(\tR\tentityUri\x125\n" +
 	"\x06artist\x18\x03 \x01(\v2\x1d.spotify.storylines.v1.ArtistR\x06artist\x121\n" +
 	"\x05cards\x18\x04 \x03(\v2\x1b.spotify.storylines.v1.CardR\x05cardsB|\n" +
-	"+com.spotify.storylines.v1.extended_metadataB\x0fStorylinesProtoP\x01Z:github.com/pyrorhythm/libspot/api/spotify/storylines/v1;v1b\x06proto3"
+	"+com.spotify.storylines.v1.extended_metadataB\x0fStorylinesProtoP\x01Z:github.com/pyrorhythm/libspot/gen/spotify/storylines/v1;v1b\x06proto3"
 
 var file_storylines_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_storylines_proto_goTypes = []any{

@@ -7,8 +7,8 @@
 package playlist
 
 import (
-	esperanto "github.com/pyrorhythm/libspot/api/spotify/player/esperanto"
-	playlist_esperanto "github.com/pyrorhythm/libspot/api/spotify/playlist_esperanto"
+	esperanto "github.com/pyrorhythm/libspot/gen/spotify/player/esperanto"
+	playlist_esperanto "github.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -637,7 +637,7 @@ const file_playlist_play_proto_rawDesc = "" +
 	"\x1dREASON_START_CONNECT_TRANSFER\x10\x02\x12 \n" +
 	"\x1cREASON_START_CONNECT_RESTORE\x10\x03\x12\x1e\n" +
 	"\x1aREASON_START_STATE_RESTORE\x10\x04\x12\x1b\n" +
-	"\x17REASON_START_LOCAL_PLAY\x10\x05B=Z;github.com/pyrorhythm/libspot/api/spotify/playlist;playlistb\x06proto3"
+	"\x17REASON_START_LOCAL_PLAY\x10\x05B=Z;github.com/pyrorhythm/libspot/gen/spotify/playlist;playlistb\x06proto3"
 
 var file_playlist_play_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_playlist_play_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

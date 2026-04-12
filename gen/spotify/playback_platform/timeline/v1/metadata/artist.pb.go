@@ -183,7 +183,7 @@ const file_spotify_playback_platform_timeline_v1_metadata_artist_proto_rawDesc =
 	"\x14ARTIST_ROLE_COMPOSER\x10\x05\x12\x19\n" +
 	"\x15ARTIST_ROLE_CONDUCTOR\x10\x06\x12\x19\n" +
 	"\x15ARTIST_ROLE_ORCHESTRA\x10\aB\x8d\x01\n" +
-	".spotify.playback_platform.timeline.v1.metadataP\x01ZYgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1/metadata;metadatab\x06proto3"
+	".spotify.playback_platform.timeline.v1.metadataP\x01ZYgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1/metadata;metadatab\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_metadata_artist_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_playback_platform_timeline_v1_metadata_artist_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

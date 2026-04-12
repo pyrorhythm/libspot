@@ -7,7 +7,7 @@
 package transfer
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -146,7 +146,7 @@ const file_queue_proto_rawDesc = "" +
 	"\x05Queue\x12:\n" +
 	"\x06tracks\x18\x01 \x03(\v2\".spotify.player.proto.ContextTrackR\x06tracks\x12(\n" +
 	"\x10is_playing_queue\x18\x02 \x01(\bR\x0eisPlayingQueue\x12X\n" +
-	"\x1aexpiration_start_timestamp\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\x18expirationStartTimestampBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/transfer;transfer"
+	"\x1aexpiration_start_timestamp\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\x18expirationStartTimestampBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/transfer;transfer"
 
 var file_queue_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_proto_goTypes = []any{

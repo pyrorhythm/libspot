@@ -683,7 +683,7 @@ const file_image_proto_rawDesc = "" +
 	"\x10IMAGE_SIZE_LARGE\x10\x03\x12\x15\n" +
 	"\x11IMAGE_SIZE_XLARGE\x10\x04\x12\x16\n" +
 	"\x12IMAGE_SIZE_XXLARGE\x10\x05Bc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_image_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_image_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

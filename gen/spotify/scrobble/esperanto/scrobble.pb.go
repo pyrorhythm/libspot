@@ -235,7 +235,7 @@ const file_scrobble_proto_rawDesc = "" +
 	"\x10GetIncognitoMode\x129.spotify.scrobble.esperanto.proto.GetIncognitoModeRequest\x1a:.spotify.scrobble.esperanto.proto.GetIncognitoModeResponse\"\x00\x12\x8b\x01\n" +
 	"\x10PutIncognitoMode\x129.spotify.scrobble.esperanto.proto.PutIncognitoModeRequest\x1a:.spotify.scrobble.esperanto.proto.GetIncognitoModeResponse\"\x00\x12\x8d\x01\n" +
 	"\x10SubIncognitoMode\x129.spotify.scrobble.esperanto.proto.SubIncognitoModeRequest\x1a:.spotify.scrobble.esperanto.proto.GetIncognitoModeResponse\"\x000\x01Bv\n" +
-	"$com.spotify.scrobble.esperanto.protoP\x01ZFgithub.com/pyrorhythm/libspot/api/spotify/scrobble/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$com.spotify.scrobble.esperanto.protoP\x01ZFgithub.com/pyrorhythm/libspot/gen/spotify/scrobble/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_scrobble_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_scrobble_proto_goTypes = []any{

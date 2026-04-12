@@ -584,7 +584,7 @@ const file_collection_get_track_list_request_proto_rawDesc = "" +
 	"\aoffline\x18\x05 \x01(\tR\aoffline\x12#\n" +
 	"\rsync_progress\x18\x06 \x01(\rR\fsyncProgress\x12B\n" +
 	"\x04item\x18\b \x03(\v2..spotify.collection_cosmos.proto.TrackListItemR\x04itemB{\n" +
-	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
+	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_get_track_list_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_collection_get_track_list_request_proto_goTypes = []any{

@@ -452,7 +452,7 @@ const file_es_client_token_proto_rawDesc = "" +
 	"\adomains\x18\x05 \x03(\tR\adomains\">\n" +
 	"\x14EncryptedClientToken\x12&\n" +
 	"\x0eencryptedToken\x18\x01 \x01(\tR\x0eencryptedTokenB\x99\x01\n" +
-	"9com.spotify.connectivity.auth.clienttoken.esperanto.protoZ\\github.com/pyrorhythm/libspot/api/spotify/connectivity/auth/client_token/esperanto;esperantob\x06proto3"
+	"9com.spotify.connectivity.auth.clienttoken.esperanto.protoZ\\github.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/client_token/esperanto;esperantob\x06proto3"
 
 var file_es_client_token_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_client_token_proto_goTypes = []any{

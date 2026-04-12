@@ -265,7 +265,7 @@ const file_spotify_venueextendedmetadata_v1_venueextendedmetadata_proto_rawDesc 
 	"postalcode\x18\b \x01(\tR\n" +
 	"postalcode\x12\x1a\n" +
 	"\btimezone\x18\t \x01(\tR\btimezoneBo\n" +
-	"$com.spotify.venueextendedmetadata.v1P\x01ZEgithub.com/pyrorhythm/libspot/api/spotify/venueextendedmetadata/v1;v1b\x06proto3"
+	"$com.spotify.venueextendedmetadata.v1P\x01ZEgithub.com/pyrorhythm/libspot/gen/spotify/venueextendedmetadata/v1;v1b\x06proto3"
 
 var file_spotify_venueextendedmetadata_v1_venueextendedmetadata_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_venueextendedmetadata_v1_venueextendedmetadata_proto_goTypes = []any{

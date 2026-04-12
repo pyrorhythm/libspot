@@ -190,7 +190,7 @@ const file_collection_ban_in_play_context_proto_rawDesc = "" +
 	"\vcontext_uri\x18\x01 \x01(\tR\n" +
 	"contextUri\x12\x19\n" +
 	"\bitem_uri\x18\x02 \x01(\tR\aitemUriB\x85\x01\n" +
-	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/api/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/gen/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_ban_in_play_context_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_collection_ban_in_play_context_proto_goTypes = []any{

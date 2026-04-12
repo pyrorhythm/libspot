@@ -69,7 +69,7 @@ const file_es_get_error_request_proto_rawDesc = "" +
 	"\n" +
 	"\x1aes_get_error_request.proto\x12\x1espotify.player.esperanto.proto\"\x11\n" +
 	"\x0fGetErrorRequestBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_get_error_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_get_error_request_proto_goTypes = []any{

@@ -699,7 +699,7 @@ const file_volume_messages_proto_rawDesc = "" +
 	"\x04USER\x10\x00\x12\n" +
 	"\n" +
 	"\x06SYSTEM\x10\x01Bl\n" +
-	"#com.spotify.connect.esperanto.protoZEgithub.com/pyrorhythm/libspot/api/spotify/connect/esperanto;esperantob\x06proto3"
+	"#com.spotify.connect.esperanto.protoZEgithub.com/pyrorhythm/libspot/gen/spotify/connect/esperanto;esperantob\x06proto3"
 
 var file_volume_messages_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_volume_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 6)

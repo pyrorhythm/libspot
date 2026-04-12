@@ -216,7 +216,7 @@ const file_policy_rootlist_request_decoration_policy_proto_rawDesc = "" +
 	"\x13is_loading_contents\x18\x03 \x01(\bR\x11isLoadingContents\x12[\n" +
 	"\bplaylist\x18\x04 \x01(\v2?.spotify.playlist.cosmos.proto.RootlistPlaylistDecorationPolicyR\bplaylist\x12U\n" +
 	"\x06folder\x18\x05 \x01(\v2=.spotify.playlist.cosmos.proto.RootlistFolderDecorationPolicyR\x06folderBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_policy_rootlist_request_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_policy_rootlist_request_decoration_policy_proto_goTypes = []any{

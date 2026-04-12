@@ -290,7 +290,7 @@ const file_extracted_colors_proto_rawDesc = "" +
 	"\x02OK\x10\x00\x12\x0f\n" +
 	"\vIN_PROGRESS\x10\x01\x12\x0f\n" +
 	"\vINVALID_URL\x10\x02\x12\f\n" +
-	"\bINTERNAL\x10\x03BSZQgithub.com/pyrorhythm/libspot/api/spotify/context_track_color;context_track_colorb\x06proto3"
+	"\bINTERNAL\x10\x03BSZQgithub.com/pyrorhythm/libspot/gen/spotify/context_track_color;context_track_colorb\x06proto3"
 
 var file_extracted_colors_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_extracted_colors_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

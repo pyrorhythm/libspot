@@ -1218,7 +1218,7 @@ const file_es_desktop_local_jam_proto_rawDesc = "" +
 	"\x10StopBroadcasting\x125.spotify.desktop.local_jam.proto.StopBroadcastRequest\x1a6.spotify.desktop.local_jam.proto.StopBroadcastResponse\"\x00\x12\x8f\x01\n" +
 	"\x14StartBleBroadcasting\x129.spotify.desktop.local_jam.proto.StartBleBroadcastRequest\x1a:.spotify.desktop.local_jam.proto.StartBleBroadcastResponse\"\x00\x12\x8c\x01\n" +
 	"\x13StopBleBroadcasting\x128.spotify.desktop.local_jam.proto.StopBleBroadcastRequest\x1a9.spotify.desktop.local_jam.proto.StopBleBroadcastResponse\"\x00\x12\x94\x01\n" +
-	"\x14SubNetworkInterfaces\x12<.spotify.desktop.local_jam.proto.SubNetworkInterfacesRequest\x1a:.spotify.desktop.local_jam.proto.NetworkInterfacesResponse\"\x000\x01BGZEgithub.com/pyrorhythm/libspot/api/spotify/desktop/local_jam;local_jamb\x06proto3"
+	"\x14SubNetworkInterfaces\x12<.spotify.desktop.local_jam.proto.SubNetworkInterfacesRequest\x1a:.spotify.desktop.local_jam.proto.NetworkInterfacesResponse\"\x000\x01BGZEgithub.com/pyrorhythm/libspot/gen/spotify/desktop/local_jam;local_jamb\x06proto3"
 
 var file_es_desktop_local_jam_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_es_desktop_local_jam_proto_msgTypes = make([]protoimpl.MessageInfo, 17)

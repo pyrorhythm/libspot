@@ -253,7 +253,7 @@ const file_include_StreamReportingProbe_proto_rawDesc = "" +
 	"\acontent\x18\x04 \x01(\tR\acontent\x12#\n" +
 	"\rconfig_params\x18\x05 \x03(\tR\fconfigParams\x12\x1f\n" +
 	"\vplayback_id\x18\x06 \x01(\fR\n" +
-	"playbackIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"playbackIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_StreamReportingProbe_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_StreamReportingProbe_proto_goTypes = []any{

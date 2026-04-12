@@ -259,7 +259,7 @@ const file_include_PickAndShuffleCapStateRestore_proto_rawDesc = "" +
 	"\fstream_count\x18\x03 \x01(\x03R\vstreamCount\x12\x19\n" +
 	"\btime_cap\x18\x04 \x01(\x03R\atimeCap\x128\n" +
 	"\x18cap_configuration_origin\x18\x05 \x01(\tR\x16capConfigurationOrigin\x12.\n" +
-	"\x13dynamic_cap_enabled\x18\x06 \x01(\bR\x11dynamicCapEnabledBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x13dynamic_cap_enabled\x18\x06 \x01(\bR\x11dynamicCapEnabledBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PickAndShuffleCapStateRestore_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PickAndShuffleCapStateRestore_proto_goTypes = []any{

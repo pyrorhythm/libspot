@@ -323,7 +323,7 @@ const file_include_DesktopUpdateMessageAction_proto_rawDesc = "" +
 	"\x1ealready_downloaded_to_revision\x18\x06 \x01(\x03R\x1balreadyDownloadedToRevision\x12\x16\n" +
 	"\x06source\x18\a \x01(\tR\x06source\x12\x1f\n" +
 	"\vis_employee\x18\b \x01(\bR\n" +
-	"isEmployeeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"isEmployeeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopUpdateMessageAction_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopUpdateMessageAction_proto_goTypes = []any{

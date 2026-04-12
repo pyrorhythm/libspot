@@ -1018,7 +1018,7 @@ const file_audio_sink_chain_wrapper_esperanto_proto_rawDesc = "" +
 	"\x04MONO\x10\x00\x12\n" +
 	"\n" +
 	"\x06STEREO\x10\x01B\xad\x01\n" +
-	"4com.spotify.audio_sink_chain_wrapper_esperanto.protoZogithub.com/pyrorhythm/libspot/api/spotify/audio_sink_chain_wrapper_esperanto;audio_sink_chain_wrapper_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"4com.spotify.audio_sink_chain_wrapper_esperanto.protoZogithub.com/pyrorhythm/libspot/gen/spotify/audio_sink_chain_wrapper_esperanto;audio_sink_chain_wrapper_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_audio_sink_chain_wrapper_esperanto_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_audio_sink_chain_wrapper_esperanto_proto_msgTypes = make([]protoimpl.MessageInfo, 12)

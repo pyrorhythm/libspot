@@ -385,7 +385,7 @@ const file_policy_album_decoration_policy_proto_rawDesc = "" +
 	"\x10inferred_offline\x18\x01 \x01(\bR\x0finferredOffline\x12#\n" +
 	"\roffline_state\x18\x02 \x01(\bR\fofflineState\x12#\n" +
 	"\rsync_progress\x18\x03 \x01(\bR\fsyncProgressBk\n" +
-	"$com.spotify.cosmos.util.policy.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_utilb\x06proto3"
+	"$com.spotify.cosmos.util.policy.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_utilb\x06proto3"
 
 var file_policy_album_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_policy_album_decoration_policy_proto_goTypes = []any{

@@ -143,7 +143,7 @@ const file_collection_ban_global_proto_rawDesc = "" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\"&\n" +
 	"\x12UnbanGlobalRequest\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uriB\x85\x01\n" +
-	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/api/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/gen/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_ban_global_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_collection_ban_global_proto_goTypes = []any{

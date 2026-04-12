@@ -295,7 +295,7 @@ const file_include_PendingEventsStatsNonAuth_proto_rawDesc = "" +
 	"\x1fcounter_commit_failed_bad_input\x18\f \x03(\x03R\x1bcounterCommitFailedBadInput\x12L\n" +
 	"#counter_commit_failed_storage_error\x18\r \x03(\x03R\x1fcounterCommitFailedStorageError\x12U\n" +
 	"(counter_commit_failed_event_sender_error\x18\x0e \x03(\x03R#counterCommitFailedEventSenderError\x12B\n" +
-	"\x1ecounter_passed_to_event_sender\x18\x0f \x03(\x03R\x1acounterPassedToEventSenderBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x1ecounter_passed_to_event_sender\x18\x0f \x03(\x03R\x1acounterPassedToEventSenderBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PendingEventsStatsNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PendingEventsStatsNonAuth_proto_goTypes = []any{

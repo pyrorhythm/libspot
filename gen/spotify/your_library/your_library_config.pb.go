@@ -813,7 +813,7 @@ const file_your_library_config_proto_rawDesc = "" +
 	"\x18RECENTLY_PLAYED_OR_ADDED\x10\x06\x12\r\n" +
 	"\tRELEVANCE\x10\a\x12\x14\n" +
 	"\x10EVENT_START_TIME\x10\b\x12\x10\n" +
-	"\fRELEASE_DATE\x10\tBEZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"\fRELEASE_DATE\x10\tBEZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_config_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_your_library_config_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

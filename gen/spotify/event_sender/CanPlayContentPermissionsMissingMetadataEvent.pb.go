@@ -150,7 +150,7 @@ const file_include_CanPlayContentPermissionsMissingMetadataEvent_proto_rawDesc =
 	"-CanPlayContentPermissionsMissingMetadataEvent\x12!\n" +
 	"\fcontent_uris\x18\x01 \x03(\tR\vcontentUris\x12>\n" +
 	"\x1cnumber_of_total_content_uris\x18\x02 \x01(\x05R\x18numberOfTotalContentUris\x12#\n" +
-	"\rcaller_source\x18\x03 \x01(\tR\fcallerSourceBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\rcaller_source\x18\x03 \x01(\tR\fcallerSourceBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CanPlayContentPermissionsMissingMetadataEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CanPlayContentPermissionsMissingMetadataEvent_proto_goTypes = []any{

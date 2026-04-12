@@ -127,7 +127,7 @@ const file_cosmos_get_tags_info_request_proto_rawDesc = "" +
 	"\"cosmos_get_tags_info_request.proto\x121spotify.collection_cosmos.tags_info_request.proto\"\t\n" +
 	"\aRequest\"'\n" +
 	"\bResponse\x12\x1b\n" +
-	"\tis_synced\x18\x01 \x01(\bR\bisSyncedB\x7fZ_github.com/pyrorhythm/libspot/api/spotify/collection_cosmos/tags_info_request;tags_info_request\xa2\x02\x1bSPTCollectionCosmosTagsInfob\x06proto3"
+	"\tis_synced\x18\x01 \x01(\bR\bisSyncedB\x7fZ_github.com/pyrorhythm/libspot/gen/spotify/collection_cosmos/tags_info_request;tags_info_request\xa2\x02\x1bSPTCollectionCosmosTagsInfob\x06proto3"
 
 var file_cosmos_get_tags_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_cosmos_get_tags_info_request_proto_goTypes = []any{

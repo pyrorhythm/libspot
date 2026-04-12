@@ -525,7 +525,7 @@ const file_podcast_segments_proto_rawDesc = "" +
 	"\n" +
 	"\x06UPSELL\x10\x03\x12\x13\n" +
 	"\x0fPODCAST_CHAPTER\x10\x04B\x8e\x01\n" +
-	"!com.spotify.podcastsegments.protoB\x14PodcastSegmentsProtoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/podcast_segments;podcast_segments\xa2\x02\x03SPTb\x06proto3"
+	"!com.spotify.podcastsegments.protoB\x14PodcastSegmentsProtoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/podcast_segments;podcast_segments\xa2\x02\x03SPTb\x06proto3"
 
 var file_podcast_segments_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_podcast_segments_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

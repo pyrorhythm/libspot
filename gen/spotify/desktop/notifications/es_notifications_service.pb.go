@@ -449,7 +449,7 @@ const file_es_notifications_service_proto_rawDesc = "" +
 	"\x14NotificationsService\x12\x84\x01\n" +
 	"\tShowToast\x128.spotify.desktop.notifications.proto.NotificationRequest\x1a9.spotify.desktop.notifications.proto.NotificationResponse\"\x000\x01\x12f\n" +
 	"\x0fGetAvailability\x12\x16.google.protobuf.Empty\x1a9.spotify.desktop.notifications.proto.AvailabilityResponse\"\x00\x12L\n" +
-	"\x18OpenNotificationsSetting\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00BOZMgithub.com/pyrorhythm/libspot/api/spotify/desktop/notifications;notificationsb\x06proto3"
+	"\x18OpenNotificationsSetting\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00BOZMgithub.com/pyrorhythm/libspot/gen/spotify/desktop/notifications;notificationsb\x06proto3"
 
 var file_es_notifications_service_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_notifications_service_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

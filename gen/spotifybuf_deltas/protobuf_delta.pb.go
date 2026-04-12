@@ -212,7 +212,7 @@ const file_protobuf_delta_proto_rawDesc = "" +
 	"\x06DELETE\x10\x00\x12\n" +
 	"\n" +
 	"\x06INSERT\x10\x01Bh\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZEgithub.com/pyrorhythm/libspot/api/spotifybuf_deltas;spotifybuf_deltas"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZEgithub.com/pyrorhythm/libspot/gen/spotifybuf_deltas;spotifybuf_deltas"
 
 var file_protobuf_delta_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_protobuf_delta_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

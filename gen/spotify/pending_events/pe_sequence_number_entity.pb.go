@@ -114,7 +114,7 @@ const file_pe_sequence_number_entity_proto_rawDesc = "" +
 	"\x13file_format_version\x18\x01 \x01(\rR\x11fileFormatVersion\x12\x1d\n" +
 	"\n" +
 	"event_name\x18\x02 \x01(\tR\teventName\x120\n" +
-	"\x14sequence_number_next\x18\x04 \x01(\x04R\x12sequenceNumberNextBIZGgithub.com/pyrorhythm/libspot/api/spotify/pending_events;pending_eventsb\x06proto3"
+	"\x14sequence_number_next\x18\x04 \x01(\x04R\x12sequenceNumberNextBIZGgithub.com/pyrorhythm/libspot/gen/spotify/pending_events;pending_eventsb\x06proto3"
 
 var file_pe_sequence_number_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_pe_sequence_number_entity_proto_goTypes = []any{

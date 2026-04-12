@@ -267,7 +267,7 @@ const file_include_DesktopAuthenticationSuccess_proto_rawDesc = "" +
 	"authMethod\x12&\n" +
 	"\x0fuse_auth_client\x18\x04 \x01(\bR\ruseAuthClient\x12\x18\n" +
 	"\aattempt\x18\x05 \x01(\x05R\aattempt\x12\x19\n" +
-	"\buse_dpop\x18\x06 \x01(\bR\auseDpopBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\buse_dpop\x18\x06 \x01(\bR\auseDpopBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopAuthenticationSuccess_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopAuthenticationSuccess_proto_goTypes = []any{

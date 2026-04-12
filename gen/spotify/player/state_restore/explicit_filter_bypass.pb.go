@@ -83,7 +83,7 @@ const file_state_restore_explicit_filter_bypass_proto_rawDesc = "" +
 	"\n" +
 	"*state_restore/explicit_filter_bypass.proto\x12\"spotify.player.proto.state_restore\"*\n" +
 	"\x14ExplicitFilterBypass\x12\x12\n" +
-	"\x04uris\x18\x01 \x03(\tR\x04urisBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x04uris\x18\x01 \x03(\tR\x04urisBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_explicit_filter_bypass_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_explicit_filter_bypass_proto_goTypes = []any{

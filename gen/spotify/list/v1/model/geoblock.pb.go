@@ -136,7 +136,7 @@ const file_spotify_list_v1_model_attributes_geoblock_proto_rawDesc = "" +
 	"\x1cGEOBLOCK_BLOCKING_TYPE_TITLE\x10\x01\x12&\n" +
 	"\"GEOBLOCK_BLOCKING_TYPE_DESCRIPTION\x10\x02\x12 \n" +
 	"\x1cGEOBLOCK_BLOCKING_TYPE_IMAGE\x10\x03B\x82\x01\n" +
-	"$com.spotify.list.v1.model.attributesB\x19GeoblockBlockingTypeProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x19GeoblockBlockingTypeProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_geoblock_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_attributes_geoblock_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

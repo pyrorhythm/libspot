@@ -363,7 +363,7 @@ const file_include_CacheError_proto_rawDesc = "" +
 	"\x04size\x18\a \x01(\x03R\x04size\x12\x1f\n" +
 	"\vrange_start\x18\b \x01(\x03R\n" +
 	"rangeStart\x12\x1b\n" +
-	"\trange_end\x18\t \x01(\x03R\brangeEndBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\trange_end\x18\t \x01(\x03R\brangeEndBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CacheError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CacheError_proto_goTypes = []any{

@@ -455,7 +455,7 @@ const file_include_ShuffleContextEvent_proto_rawDesc = "" +
 	"\x19shuffle_algorithm_setting\x18\n" +
 	" \x01(\tR\x17shuffleAlgorithmSetting\x12:\n" +
 	"\x19context_shuffle_algorithm\x18\v \x01(\tR\x17contextShuffleAlgorithm\x122\n" +
-	"\x15shuffle_sequence_uuid\x18\f \x01(\tR\x13shuffleSequenceUuidBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15shuffle_sequence_uuid\x18\f \x01(\tR\x13shuffleSequenceUuidBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ShuffleContextEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ShuffleContextEvent_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -849,7 +849,7 @@ const file_spotify_playback_platform_context_v1_behavior_timers_proto_rawDesc = 
 	"\btimer_id\x18\x03 \x01(\tR\atimerId\x127\n" +
 	"\bduration\x18\x04 \x01(\v2\x19.google.protobuf.DurationH\x00R\bdurationB\x06\n" +
 	"\x04whenB|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_timers_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_spotify_playback_platform_context_v1_behavior_timers_proto_goTypes = []any{

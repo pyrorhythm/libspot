@@ -144,7 +144,7 @@ const file_mix_vocal_activity_proto_rawDesc = "" +
 	"\x19first_window_sample_start\x18\x03 \x01(\x05R\x16firstWindowSampleStart\x126\n" +
 	"\x17samples_between_windows\x18\x04 \x01(\x05R\x15samplesBetweenWindows\x12@\n" +
 	"\x1cvocal_activity_probabilities\x18\x05 \x03(\x05R\x1avocalActivityProbabilitiesB\xbc\x01\n" +
-	"<com.spotify.playlistmixing.extensions.mixvocalactivity.protoB\x15MixVocalActivityProtoZegithub.com/pyrorhythm/libspot/api/spotify/playlistmixing/extensions/mixvocalactivity;mixvocalactivityb\x06proto3"
+	"<com.spotify.playlistmixing.extensions.mixvocalactivity.protoB\x15MixVocalActivityProtoZegithub.com/pyrorhythm/libspot/gen/spotify/playlistmixing/extensions/mixvocalactivity;mixvocalactivityb\x06proto3"
 
 var file_mix_vocal_activity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_mix_vocal_activity_proto_goTypes = []any{

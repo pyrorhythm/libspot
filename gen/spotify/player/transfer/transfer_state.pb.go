@@ -7,7 +7,7 @@
 package transfer
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -217,7 +217,7 @@ const file_transfer_state_proto_rawDesc = "" +
 	"\x05queue\x18\x04 \x01(\v2$.spotify.player.proto.transfer.QueueR\x05queue\x12a\n" +
 	"\x14play_history_entries\x18\x06 \x03(\v2/.spotify.player.proto.transfer.PlayHistoryEntryR\x12playHistoryEntries\x12J\n" +
 	"\vsleep_timer\x18\a \x01(\v2).spotify.player.proto.transfer.SleepTimerR\n" +
-	"sleepTimerJ\x04\b\x05\x10\x06BDZBgithub.com/pyrorhythm/libspot/api/spotify/player/transfer;transfer"
+	"sleepTimerJ\x04\b\x05\x10\x06BDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/transfer;transfer"
 
 var file_transfer_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_transfer_state_proto_goTypes = []any{

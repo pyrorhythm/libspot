@@ -141,7 +141,7 @@ const file_spotify_list_v1_model_list_identifier_proto_rawDesc = "" +
 	"\brevision\x18\x02 \x01(\fH\x01R\brevision\x88\x01\x01B\x06\n" +
 	"\x04_uriB\v\n" +
 	"\t_revisionBq\n" +
-	"\x19com.spotify.list.v1.modelB\x13ListIdentifierProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x13ListIdentifierProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_list_identifier_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_list_identifier_proto_goTypes = []any{

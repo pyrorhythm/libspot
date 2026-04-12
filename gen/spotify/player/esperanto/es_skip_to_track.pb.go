@@ -168,7 +168,7 @@ const file_es_skip_to_track_proto_rawDesc = "" +
 	"\ttrack_uri\x18\x04 \x01(\tR\btrackUri\x12N\n" +
 	"\vtrack_index\x18\x05 \x01(\v2-.spotify.player.esperanto.proto.OptionalInt64R\n" +
 	"trackIndexBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_skip_to_track_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_skip_to_track_proto_goTypes = []any{

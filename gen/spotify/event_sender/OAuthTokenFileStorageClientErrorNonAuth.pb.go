@@ -138,7 +138,7 @@ const file_include_OAuthTokenFileStorageClientErrorNonAuth_proto_rawDesc = "" +
 	"5include/OAuthTokenFileStorageClientErrorNonAuth.proto\x12\x1aspotify.event_sender.proto\"r\n" +
 	"'OAuthTokenFileStorageClientErrorNonAuth\x12\x1a\n" +
 	"\bfilename\x18\x01 \x01(\tR\bfilename\x12+\n" +
-	"\x11error_description\x18\x02 \x01(\tR\x10errorDescriptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11error_description\x18\x02 \x01(\tR\x10errorDescriptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_OAuthTokenFileStorageClientErrorNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_OAuthTokenFileStorageClientErrorNonAuth_proto_goTypes = []any{

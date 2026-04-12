@@ -738,7 +738,7 @@ const file_spotify_list_v1_model_requested_fields_proto_rawDesc = "" +
 	"\rlist_response\x18\x02 \x01(\v22.spotify.list.v1.model.ListResponseRequestedFieldsH\x01R\flistResponse\x88\x01\x01B\x06\n" +
 	"\x04_allB\x10\n" +
 	"\x0e_list_responseBr\n" +
-	"\x19com.spotify.list.v1.modelB\x14RequestedFieldsProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x14RequestedFieldsProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_requested_fields_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_spotify_list_v1_model_requested_fields_proto_goTypes = []any{

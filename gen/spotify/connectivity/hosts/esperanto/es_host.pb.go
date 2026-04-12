@@ -84,7 +84,7 @@ const file_es_host_proto_rawDesc = "" +
 	"\res_host.proto\x12*spotify.connectivity.hosts.esperanto.proto\"\x1a\n" +
 	"\x04Host\x12\x12\n" +
 	"\x04host\x18\x01 \x01(\tR\x04hostB\x82\x01\n" +
-	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/api/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
+	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
 
 var file_es_host_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_host_proto_goTypes = []any{

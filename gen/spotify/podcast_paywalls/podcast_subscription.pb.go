@@ -158,7 +158,7 @@ const file_podcast_subscription_proto_rawDesc = "" +
 	"\x0fUserExplanation\x12\x17\n" +
 	"\x13SUBSCRIPTION_DIALOG\x10\x00\x12\b\n" +
 	"\x04NONE\x10\x01B\x96\x01\n" +
-	"%com.spotify.podcastsubscription.protoB\x18PodcastSubscriptionProtoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/podcast_paywalls;podcast_paywalls\xa2\x02\x03SPTb\x06proto3"
+	"%com.spotify.podcastsubscription.protoB\x18PodcastSubscriptionProtoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/podcast_paywalls;podcast_paywalls\xa2\x02\x03SPTb\x06proto3"
 
 var file_podcast_subscription_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_podcast_subscription_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

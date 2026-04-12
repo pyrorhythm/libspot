@@ -7,8 +7,8 @@
 package recently_played_esperanto
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1314,7 +1314,7 @@ const file_recently_played_decoration_policy_proto_rawDesc = "" +
 	"\x04link\x18\x01 \x01(\bR\x04link\x12\x12\n" +
 	"\x04type\x18\x02 \x01(\bR\x04type\x12\x1c\n" +
 	"\ttimestamp\x18\x03 \x01(\bR\ttimestampB\x94\x01\n" +
-	"+com.spotify.recently_played_esperanto.protoP\x01Z]github.com/pyrorhythm/libspot/api/spotify/recently_played_esperanto;recently_played_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"+com.spotify.recently_played_esperanto.protoP\x01Z]github.com/pyrorhythm/libspot/gen/spotify/recently_played_esperanto;recently_played_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_recently_played_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_recently_played_decoration_policy_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package playback_metadata
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -111,7 +111,7 @@ const file_generated_audio_proto_rawDesc = "" +
 	"\x12GeneratedAudioFile\x12\x1d\n" +
 	"\n" +
 	"context_id\x18\x01 \x01(\tR\tcontextId\x12g\n" +
-	"\x0fgenerated_audio\x18\x02 \x01(\v2>.spotify.playback_platform.timeline.v1.Timespan.GeneratedAudioR\x0egeneratedAudioBOZMgithub.com/pyrorhythm/libspot/api/spotify/playback_metadata;playback_metadatab\x06proto3"
+	"\x0fgenerated_audio\x18\x02 \x01(\v2>.spotify.playback_platform.timeline.v1.Timespan.GeneratedAudioR\x0egeneratedAudioBOZMgithub.com/pyrorhythm/libspot/gen/spotify/playback_metadata;playback_metadatab\x06proto3"
 
 var file_generated_audio_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_generated_audio_proto_goTypes = []any{

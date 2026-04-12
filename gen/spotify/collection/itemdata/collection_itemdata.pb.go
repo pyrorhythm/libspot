@@ -7,7 +7,7 @@
 package itemdata
 
 import (
-	save_source "github.com/pyrorhythm/libspot/api/spotify/list_collection/save_source"
+	save_source "github.com/pyrorhythm/libspot/gen/spotify/list_collection/save_source"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -1041,7 +1041,7 @@ const file_collection_itemdata_proto_rawDesc = "" +
 	"\bRATING_5\x10\x05\"Z\n" +
 	"\x11PageMatchItemData\x12E\n" +
 	"\x11page_match_offset\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\x0fpageMatchOffsetBp\n" +
-	"&com.spotify.collection2.itemdata.protoZFgithub.com/pyrorhythm/libspot/api/spotify/collection/itemdata;itemdatab\x06proto3"
+	"&com.spotify.collection2.itemdata.protoZFgithub.com/pyrorhythm/libspot/gen/spotify/collection/itemdata;itemdatab\x06proto3"
 
 var file_collection_itemdata_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_collection_itemdata_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

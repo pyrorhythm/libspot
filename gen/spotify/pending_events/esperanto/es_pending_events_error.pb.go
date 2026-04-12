@@ -114,7 +114,7 @@ const file_es_pending_events_error_proto_rawDesc = "" +
 	"\x12%\n" +
 	"!FAILED_ALLOCATING_SEQUENCE_NUMBER\x10\v\x12\"\n" +
 	"\x1eBAD_INPUT_PENDING_EVENTS_TOKEN\x10\fB\x82\x01\n" +
-	"*com.spotify.pending_events.esperanto.protoP\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/pending_events/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"*com.spotify.pending_events.esperanto.protoP\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/pending_events/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_pending_events_error_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_pending_events_error_proto_goTypes = []any{

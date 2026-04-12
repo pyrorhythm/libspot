@@ -360,7 +360,7 @@ const file_concert_marketing_extension_proto_rawDesc = "" +
 	"\tMarketing\x12N\n" +
 	"\vcover_image\x18\x01 \x01(\v2(.spotify.concerts.metadata.v1.ImageGroupH\x00R\n" +
 	"coverImage\x88\x01\x01B\x0e\n" +
-	"\f_cover_imageBCZAgithub.com/pyrorhythm/libspot/api/spotify/concerts/metadata/v1;v1b\x06proto3"
+	"\f_cover_imageBCZAgithub.com/pyrorhythm/libspot/gen/spotify/concerts/metadata/v1;v1b\x06proto3"
 
 var file_concert_marketing_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_concert_marketing_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

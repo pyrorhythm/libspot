@@ -352,7 +352,7 @@ const file_include_PickAndShuffleCapStateSave_proto_rawDesc = "" +
 	"\x13dynamic_cap_enabled\x18\x06 \x01(\bR\x11dynamicCapEnabled\x127\n" +
 	"\x18common_capping_is_capped\x18\a \x01(\bR\x15commonCappingIsCapped\x12<\n" +
 	"\x1acommon_capping_consumption\x18\b \x01(\x03R\x18commonCappingConsumption\x128\n" +
-	"\x18common_capping_allowance\x18\t \x01(\x03R\x16commonCappingAllowanceBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x18common_capping_allowance\x18\t \x01(\x03R\x16commonCappingAllowanceBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PickAndShuffleCapStateSave_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PickAndShuffleCapStateSave_proto_goTypes = []any{

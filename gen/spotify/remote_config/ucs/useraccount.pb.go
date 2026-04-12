@@ -234,7 +234,7 @@ const file_useraccount_proto_rawDesc = "" +
 	"\n" +
 	"long_value\x18\x03 \x01(\x03H\x00R\tlongValue\x12#\n" +
 	"\fstring_value\x18\x04 \x01(\tH\x00R\vstringValueB\a\n" +
-	"\x05valueBAZ?github.com/pyrorhythm/libspot/api/spotify/remote_config/ucs;ucsb\x06proto3"
+	"\x05valueBAZ?github.com/pyrorhythm/libspot/gen/spotify/remote_config/ucs;ucsb\x06proto3"
 
 var file_useraccount_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_useraccount_proto_goTypes = []any{

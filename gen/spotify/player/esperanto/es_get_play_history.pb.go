@@ -130,7 +130,7 @@ const file_es_get_play_history_proto_rawDesc = "" +
 	"\x15GetPlayHistoryRequest\"^\n" +
 	"\x16GetPlayHistoryResponse\x12D\n" +
 	"\x06tracks\x18\x01 \x03(\v2,.spotify.player.esperanto.proto.ContextTrackR\x06tracksBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_get_play_history_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_get_play_history_proto_goTypes = []any{

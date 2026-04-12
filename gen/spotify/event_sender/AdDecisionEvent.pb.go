@@ -241,7 +241,7 @@ const file_include_AdDecisionEvent_proto_rawDesc = "" +
 	"\x13decision_request_id\x18\x02 \x01(\tR\x11decisionRequestId\x12#\n" +
 	"\rdecision_type\x18\x03 \x01(\tR\fdecisionType\x12\x13\n" +
 	"\x05ad_id\x18\x04 \x01(\tR\x04adId\x12%\n" +
-	"\x0edecision_state\x18\x05 \x01(\tR\rdecisionStateBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0edecision_state\x18\x05 \x01(\tR\rdecisionStateBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdDecisionEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdDecisionEvent_proto_goTypes = []any{

@@ -229,7 +229,7 @@ const file_include_BoomboxExtraGappySilence_proto_rawDesc = "" +
 	"\x0esilence_frames\x18\x03 \x01(\x03R\rsilenceFrames\x12\x1f\n" +
 	"\vsample_rate\x18\x04 \x01(\x03R\n" +
 	"sampleRate\x12*\n" +
-	"\x11audio_driver_name\x18\x05 \x01(\tR\x0faudioDriverNameBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11audio_driver_name\x18\x05 \x01(\tR\x0faudioDriverNameBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_BoomboxExtraGappySilence_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_BoomboxExtraGappySilence_proto_goTypes = []any{

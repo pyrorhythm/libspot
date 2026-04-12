@@ -84,7 +84,7 @@ const file_timestamp_response_proto_rawDesc = "" +
 	"\x18timestamp_response.proto\x12(spotify.stream_reporting_esperanto.proto\"1\n" +
 	"\x11TimestampResponse\x12\x1c\n" +
 	"\ttimestamp\x18\x01 \x01(\x04R\ttimestampB\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_timestamp_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_timestamp_response_proto_goTypes = []any{

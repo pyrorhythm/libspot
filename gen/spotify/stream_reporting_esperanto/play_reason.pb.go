@@ -159,7 +159,7 @@ const file_play_reason_proto_rawDesc = "" +
 	"\x1dPLAY_REASON_SWITCHED_TO_AUDIO\x10\x15\x12!\n" +
 	"\x1dPLAY_REASON_SWITCHED_TO_VIDEO\x10\x16\x12\x19\n" +
 	"\x15PLAY_REASON_RECONNECT\x10\x17B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_play_reason_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_play_reason_proto_goTypes = []any{

@@ -140,7 +140,7 @@ const file_ad_capabilities_proto_rawDesc = "" +
 	"\fCapabilities\x12Y\n" +
 	"\raddCapability\x12..spotify.ads.esperanto.proto.CapabilityRequest\x1a\x16.google.protobuf.Empty\"\x00\x12\\\n" +
 	"\x10removeCapability\x12..spotify.ads.esperanto.proto.CapabilityRequest\x1a\x16.google.protobuf.Empty\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_capabilities_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_ad_capabilities_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

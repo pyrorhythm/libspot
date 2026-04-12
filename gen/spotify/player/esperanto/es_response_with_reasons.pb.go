@@ -151,7 +151,7 @@ const file_es_response_with_reasons_proto_rawDesc = "" +
 	"\tFORBIDDEN\x10\x01\x12\r\n" +
 	"\tNOT_FOUND\x10\x02\x12\f\n" +
 	"\bCONFLICT\x10\x03Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_response_with_reasons_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_response_with_reasons_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

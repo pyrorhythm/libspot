@@ -401,7 +401,7 @@ const file_collection_decorate_request_proto_rawDesc = "" +
 	"\x05album\x18\x04 \x03(\v20.spotify.collection_cosmos.proto.CollectionAlbumR\x05album\x12I\n" +
 	"\x06artist\x18\x05 \x03(\v21.spotify.collection_cosmos.proto.CollectionArtistR\x06artist\x12F\n" +
 	"\x05track\x18\x06 \x03(\v20.spotify.collection_cosmos.proto.CollectionTrackR\x05trackB{\n" +
-	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
+	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_decorate_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_collection_decorate_request_proto_goTypes = []any{

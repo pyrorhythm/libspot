@@ -1163,7 +1163,7 @@ const file_ad_events_proto_rawDesc = "" +
 	"\tpostEvent\x12).spotify.ads.esperanto.proto.EventRequest\x1a*.spotify.ads.esperanto.proto.EventResponse\"\x00\x12\x7f\n" +
 	"\x12postUnmanagedEvent\x122.spotify.ads.esperanto.proto.UnmanagedEventRequest\x1a3.spotify.ads.esperanto.proto.UnmanagedEventResponse\"\x00\x12k\n" +
 	"\bsubEvent\x12,.spotify.ads.esperanto.proto.SubEventRequest\x1a-.spotify.ads.esperanto.proto.SubEventResponse\"\x000\x01Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_events_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_ad_events_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

@@ -264,7 +264,7 @@ const file_es_desktop_window_state_proto_rawDesc = "" +
 	"\x0eGetWindowState\x12\x16.google.protobuf.Empty\x1aD.spotify.desktop.window_state_esperanto.proto.GetWindowStateResponse\"\x00\x12o\n" +
 	"\x0eSetWindowState\x12C.spotify.desktop.window_state_esperanto.proto.SetWindowStateRequest\x1a\x16.google.protobuf.Empty\"\x00\x12?\n" +
 	"\vFocusWindow\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00\x12?\n" +
-	"\vCloseWindow\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00BaZ_github.com/pyrorhythm/libspot/api/spotify/desktop/window_state_esperanto;window_state_esperantob\x06proto3"
+	"\vCloseWindow\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00BaZ_github.com/pyrorhythm/libspot/gen/spotify/desktop/window_state_esperanto;window_state_esperantob\x06proto3"
 
 var file_es_desktop_window_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_desktop_window_state_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

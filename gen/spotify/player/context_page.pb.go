@@ -317,7 +317,7 @@ const file_context_page_proto_rawDesc = "" +
 	"\aloading\x18\x05 \x01(\bR\aloading\x1a7\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05valueB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05value\x18\x02 \x01(\tR\x05valueB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_page_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_context_page_proto_goTypes = []any{

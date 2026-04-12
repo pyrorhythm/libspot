@@ -279,7 +279,7 @@ const file_spotify_metadata_contentratings_v1_content_ratings_proto_rawDesc = ""
 	"\"CONTENT_RATING_TAG_SPOTIFY_18_PLUS\x10\x03\x12\x1d\n" +
 	"\x19CONTENT_RATING_TAG_EROTIC\x10\x04\x12'\n" +
 	"#CONTENT_RATING_TAG_NOT_FOR_CHILDREN\x10\x05B\x88\x01\n" +
-	"&com.spotify.metadata.contentratings.v1B\x13ContentRatingsProtoP\x01ZGgithub.com/pyrorhythm/libspot/api/spotify/metadata/contentratings/v1;v1b\x06proto3"
+	"&com.spotify.metadata.contentratings.v1B\x13ContentRatingsProtoP\x01ZGgithub.com/pyrorhythm/libspot/gen/spotify/metadata/contentratings/v1;v1b\x06proto3"
 
 var file_spotify_metadata_contentratings_v1_content_ratings_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_metadata_contentratings_v1_content_ratings_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

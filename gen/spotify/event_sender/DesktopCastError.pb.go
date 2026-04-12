@@ -204,7 +204,7 @@ const file_include_DesktopCastError_proto_rawDesc = "" +
 	"\n" +
 	"cast_error\x18\x02 \x01(\tR\tcastError\x12\x1b\n" +
 	"\terror_msg\x18\x03 \x01(\tR\berrorMsg\x12.\n" +
-	"\x13platform_error_code\x18\x04 \x01(\x03R\x11platformErrorCodeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x13platform_error_code\x18\x04 \x01(\x03R\x11platformErrorCodeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopCastError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopCastError_proto_goTypes = []any{

@@ -145,7 +145,7 @@ const file_ad_preview_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess2q\n" +
 	"\aPreview\x12f\n" +
 	"\aPreview\x12+.spotify.ads.esperanto.proto.PreviewRequest\x1a,.spotify.ads.esperanto.proto.PreviewResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_preview_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_ad_preview_proto_goTypes = []any{

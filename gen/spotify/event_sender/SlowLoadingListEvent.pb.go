@@ -636,7 +636,7 @@ const file_include_SlowLoadingListEvent_proto_rawDesc = "" +
 	"#esperanto_waiting_for_item_metadata\x18\x0f \x01(\bR\x1fesperantoWaitingForItemMetadata\x12a\n" +
 	".esperanto_waiting_for_item_metadata_extensions\x18\x10 \x01(\bR)esperantoWaitingForItemMetadataExtensions\x123\n" +
 	"\x16list_is_in_transaction\x18\x11 \x01(\bR\x13listIsInTransaction\x12#\n" +
-	"\roffline_state\x18\x12 \x01(\x05R\fofflineStateBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\roffline_state\x18\x12 \x01(\x05R\fofflineStateBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_SlowLoadingListEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_SlowLoadingListEvent_proto_goTypes = []any{

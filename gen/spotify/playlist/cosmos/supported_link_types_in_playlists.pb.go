@@ -107,7 +107,7 @@ const file_policy_supported_link_types_in_playlists_proto_rawDesc = "" +
 	"\n" +
 	"\x06KALLAX\x10d\x12\x12\n" +
 	"\x0eUSER_HIGHLIGHT\x10eBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_policy_supported_link_types_in_playlists_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_policy_supported_link_types_in_playlists_proto_goTypes = []any{

@@ -720,7 +720,7 @@ const file_include_ProgressiveDownload_proto_rawDesc = "" +
 	"session_id\x18\x11 \x01(\tR\tsessionId\x12\"\n" +
 	"\rreqs_from_cdn\x18\x12 \x01(\x03R\vreqsFromCdn\x12$\n" +
 	"\x0eerror_from_cdn\x18\x13 \x01(\x03R\ferrorFromCdn\x12&\n" +
-	"\x0fhad_cache_error\x18\x14 \x01(\bR\rhadCacheErrorBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fhad_cache_error\x18\x14 \x01(\bR\rhadCacheErrorBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ProgressiveDownload_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ProgressiveDownload_proto_goTypes = []any{

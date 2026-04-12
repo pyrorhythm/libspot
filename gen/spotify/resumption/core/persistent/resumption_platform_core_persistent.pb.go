@@ -926,7 +926,7 @@ const file_resumption_platform_core_persistent_proto_rawDesc = "" +
 	"\x14ResumePointRevisions\x12U\n" +
 	"\trevisions\x18\x01 \x03(\v27.spotify.resumption.core.persistent.ResumePointRevisionR\trevisions\x12M\n" +
 	"\bmetadata\x18\x02 \x01(\v2,.spotify.resumption.core.persistent.MetadataH\x00R\bmetadata\x88\x01\x01B\v\n" +
-	"\t_metadataBQZOgithub.com/pyrorhythm/libspot/api/spotify/resumption/core/persistent;persistentb\x06proto3"
+	"\t_metadataBQZOgithub.com/pyrorhythm/libspot/gen/spotify/resumption/core/persistent;persistentb\x06proto3"
 
 var file_resumption_platform_core_persistent_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_resumption_platform_core_persistent_proto_goTypes = []any{

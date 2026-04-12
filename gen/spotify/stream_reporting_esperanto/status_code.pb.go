@@ -86,7 +86,7 @@ const file_status_code_proto_rawDesc = "" +
 	"\x15INVALID_STREAM_HANDLE\x10\x03\x12\x18\n" +
 	"\x14PENDING_EVENTS_ERROR\x10\x04\x12\v\n" +
 	"\aIGNORED\x10\x05B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_status_code_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_status_code_proto_goTypes = []any{

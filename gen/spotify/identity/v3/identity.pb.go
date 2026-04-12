@@ -898,7 +898,7 @@ const file_identity_proto_rawDesc = "" +
 	"\x06userid\x18\x01 \x01(\tR\x06userid\x12C\n" +
 	"\fuser_profile\x18\x02 \x01(\v2 .spotify.identity.v3.UserProfileR\vuserProfileBe\n" +
 	"\x1dcom.spotify.identity.proto.v3B\n" +
-	"IdentityV3Z8github.com/pyrorhythm/libspot/api/spotify/identity/v3;v3b\x06proto3"
+	"IdentityV3Z8github.com/pyrorhythm/libspot/gen/spotify/identity/v3;v3b\x06proto3"
 
 var file_identity_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_identity_proto_goTypes = []any{

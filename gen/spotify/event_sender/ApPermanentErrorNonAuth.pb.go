@@ -104,7 +104,7 @@ const file_include_ApPermanentErrorNonAuth_proto_rawDesc = "" +
 	"\n" +
 	"%include/ApPermanentErrorNonAuth.proto\x12\x1aspotify.event_sender.proto\"O\n" +
 	"\x17ApPermanentErrorNonAuth\x124\n" +
-	"\x16error_code_description\x18\x01 \x01(\tR\x14errorCodeDescriptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x16error_code_description\x18\x01 \x01(\tR\x14errorCodeDescriptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ApPermanentErrorNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ApPermanentErrorNonAuth_proto_goTypes = []any{

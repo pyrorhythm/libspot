@@ -234,7 +234,7 @@ const file_include_PlaylistSyncEvent_proto_rawDesc = "" +
 	"\ftimestamp_ms\x18\x03 \x01(\x03R\vtimestampMs\x12\x1d\n" +
 	"\n" +
 	"error_code\x18\x04 \x01(\x05R\terrorCode\x12+\n" +
-	"\x11event_description\x18\x05 \x01(\tR\x10eventDescriptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11event_description\x18\x05 \x01(\tR\x10eventDescriptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PlaylistSyncEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PlaylistSyncEvent_proto_goTypes = []any{

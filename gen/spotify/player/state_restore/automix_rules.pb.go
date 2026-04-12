@@ -135,7 +135,7 @@ const file_state_restore_automix_rules_proto_rawDesc = "" +
 	"!state_restore/automix_rules.proto\x12\"spotify.player.proto.state_restore\"T\n" +
 	"\fAutomixRules\x12\x18\n" +
 	"\aautomix\x18\x01 \x02(\bR\aautomix\x12*\n" +
-	"\x11current_track_uri\x18\x02 \x02(\tR\x0fcurrentTrackUriBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x11current_track_uri\x18\x02 \x02(\tR\x0fcurrentTrackUriBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_automix_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_automix_rules_proto_goTypes = []any{

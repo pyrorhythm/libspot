@@ -336,7 +336,7 @@ const file_mix_audio_attributes_v2_proto_rawDesc = "" +
 	"MODE_MINOR\x10\x01\x12\x0e\n" +
 	"\n" +
 	"MODE_MAJOR\x10\x02B\x9d\x01\n" +
-	"?com.spotify.playlistmixing.extensions.audio_attributes.v2.protoZZgithub.com/pyrorhythm/libspot/api/spotify/playlistmixing/extensions/audio_attributes/v2;v2b\x06proto3"
+	"?com.spotify.playlistmixing.extensions.audio_attributes.v2.protoZZgithub.com/pyrorhythm/libspot/gen/spotify/playlistmixing/extensions/audio_attributes/v2;v2b\x06proto3"
 
 var file_mix_audio_attributes_v2_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_mix_audio_attributes_v2_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

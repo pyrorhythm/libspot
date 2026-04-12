@@ -389,7 +389,7 @@ const file_policy_user_decoration_policy_proto_rawDesc = "" +
 	"\x05count\x18\x01 \x01(\bR\x05count\x12\x14\n" +
 	"\x05limit\x18\x02 \x01(\x05R\x05limit\x12U\n" +
 	"\fcollaborator\x18\x03 \x01(\v21.spotify.playlist.cosmos.proto.CollaboratorPolicyR\fcollaboratorBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_policy_user_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_policy_user_decoration_policy_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package cosmos_util
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -601,7 +601,7 @@ const file_policy_show_decoration_policy_proto_rawDesc = "" +
 	" ShowOfflineStateDecorationPolicy\x12\x18\n" +
 	"\aoffline\x18\x01 \x01(\bR\aoffline\x12#\n" +
 	"\rsync_progress\x18\x02 \x01(\bR\fsyncProgressBk\n" +
-	"$com.spotify.cosmos.util.policy.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_utilb\x06proto3"
+	"$com.spotify.cosmos.util.policy.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_utilb\x06proto3"
 
 var file_policy_show_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_policy_show_decoration_policy_proto_goTypes = []any{

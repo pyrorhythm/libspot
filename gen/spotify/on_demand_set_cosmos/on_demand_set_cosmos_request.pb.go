@@ -195,7 +195,7 @@ const file_on_demand_set_cosmos_request_proto_rawDesc = "" +
 	"\tTemporary\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12/\n" +
 	"\x14valid_for_in_seconds\x18\x02 \x01(\x03R\x11validForInSecondsB~\n" +
-	"\x1fcom.spotify.on_demand_set.protoP\x01ZSgithub.com/pyrorhythm/libspot/api/spotify/on_demand_set_cosmos;on_demand_set_cosmos\xa2\x02\x03SPT"
+	"\x1fcom.spotify.on_demand_set.protoP\x01ZSgithub.com/pyrorhythm/libspot/gen/spotify/on_demand_set_cosmos;on_demand_set_cosmos\xa2\x02\x03SPT"
 
 var file_on_demand_set_cosmos_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_on_demand_set_cosmos_request_proto_goTypes = []any{

@@ -357,7 +357,7 @@ const file_spotify_playback_platform_context_v1_behavior_queue_proto_rawDesc = "
 	"\x1e_clear_user_queue_when_loadingB\n" +
 	"\n" +
 	"\b_displayB|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_queue_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_context_v1_behavior_queue_proto_goTypes = []any{

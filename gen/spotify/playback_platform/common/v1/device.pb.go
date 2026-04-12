@@ -99,7 +99,7 @@ const file_spotify_playback_platform_common_v1_device_proto_rawDesc = "" +
 	"\x06Device\x12\x1b\n" +
 	"\tclient_id\x18\x01 \x01(\tR\bclientId\x12\x1b\n" +
 	"\tdevice_id\x18\x02 \x01(\tR\bdeviceIdBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_device_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_common_v1_device_proto_goTypes = []any{

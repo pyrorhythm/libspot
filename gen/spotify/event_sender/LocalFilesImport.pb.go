@@ -259,7 +259,7 @@ const file_include_LocalFilesImport_proto_rawDesc = "" +
 	"\rfailed_tracks\x18\x03 \x01(\x03R\ffailedTracks\x12%\n" +
 	"\x0ematched_tracks\x18\x04 \x01(\x03R\rmatchedTracks\x12\x16\n" +
 	"\x06source\x18\x05 \x01(\tR\x06source\x12%\n" +
-	"\x0einvalid_tracks\x18\x06 \x01(\x03R\rinvalidTracksBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0einvalid_tracks\x18\x06 \x01(\x03R\rinvalidTracksBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_LocalFilesImport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_LocalFilesImport_proto_goTypes = []any{

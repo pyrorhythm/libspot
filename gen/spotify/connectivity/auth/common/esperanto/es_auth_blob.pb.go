@@ -181,7 +181,7 @@ const file_es_auth_blob_proto_rawDesc = "" +
 	"\x1cunencryptedStoredCredentials\x18\x02 \x01(\v2N.spotify.connectivity.auth.common.esperanto.proto.UnencryptedStoredCredentialsR\x1cunencryptedStoredCredentials\x12|\n" +
 	"\x11storedCredentials\x18\x01 \x01(\v2L.spotify.connectivity.auth.common.esperanto.proto.EncryptedStoredCredentialsH\x00R\x11storedCredentialsB\x06\n" +
 	"\x04blobB\xa1\x01\n" +
-	"4com.spotify.connectivity.auth.common.esperanto.protoZVgithub.com/pyrorhythm/libspot/api/spotify/connectivity/auth/common/esperanto;esperanto\xa2\x02\x10SPTAuthEsperantob\x06proto3"
+	"4com.spotify.connectivity.auth.common.esperanto.protoZVgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/common/esperanto;esperanto\xa2\x02\x10SPTAuthEsperantob\x06proto3"
 
 var file_es_auth_blob_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_auth_blob_proto_goTypes = []any{

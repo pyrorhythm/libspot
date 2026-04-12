@@ -294,7 +294,7 @@ const file_connect_service_proto_rawDesc = "" +
 	"\x13reporting_device_id\x18\x01 \x01(\tR\x11reportingDeviceId\x12F\n" +
 	"\rlocal_devices\x18\x02 \x03(\v2!.spotify.connectstate.LocalDeviceR\flocalDevices\"\x1c\n" +
 	"\x1aUpdateLocalDevicesResponseBe\n" +
-	"\x1ecom.spotify.connectstate.modelZCgithub.com/pyrorhythm/libspot/api/spotify/connectstate;connectstateb\x06proto3"
+	"\x1ecom.spotify.connectstate.modelZCgithub.com/pyrorhythm/libspot/gen/spotify/connectstate;connectstateb\x06proto3"
 
 var file_connect_service_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_connect_service_proto_goTypes = []any{

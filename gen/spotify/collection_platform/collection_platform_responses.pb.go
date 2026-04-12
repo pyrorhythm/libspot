@@ -461,7 +461,7 @@ const file_collection_platform_responses_proto_rawDesc = "" +
 	"(CollectionPlatformEsperantoItemsResponse\x12A\n" +
 	"\x06status\x18\x01 \x01(\v2).spotify.collection_platform.proto.StatusR\x06status\x12O\n" +
 	"\x05items\x18\x02 \x03(\v29.spotify.collection_platform.proto.CollectionPlatformItemR\x05itemsB\x8c\x01\n" +
-	"/com.spotify.collection_platform.esperanto.protoP\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/collection_platform;collection_platform\xa2\x02\x03ESPb\x06proto3"
+	"/com.spotify.collection_platform.esperanto.protoP\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/collection_platform;collection_platform\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_platform_responses_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_collection_platform_responses_proto_goTypes = []any{

@@ -474,7 +474,7 @@ const file_ad_state_proto_rawDesc = "" +
 	"\bGetState\x12).spotify.ads.esperanto.proto.StateRequest\x1a*.spotify.ads.esperanto.proto.StateResponse\"\x00\x12e\n" +
 	"\bSubState\x12).spotify.ads.esperanto.proto.StateRequest\x1a*.spotify.ads.esperanto.proto.StateResponse\"\x000\x01\x12i\n" +
 	"\bPutState\x12,.spotify.ads.esperanto.proto.PutStateRequest\x1a-.spotify.ads.esperanto.proto.PutStateResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_state_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_ad_state_proto_goTypes = []any{

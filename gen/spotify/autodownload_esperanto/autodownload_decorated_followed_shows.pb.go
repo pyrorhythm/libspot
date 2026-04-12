@@ -354,7 +354,7 @@ const file_autodownload_decorated_followed_shows_proto_rawDesc = "" +
 	"\x05shows\x18\x01 \x03(\v23.spotify.autodownload_esperanto.proto.DecoratedShowR\x05shows\x12'\n" +
 	"\x0fremaining_shows\x18\x02 \x01(\x05R\x0eremainingShows\x12\x14\n" +
 	"\x05error\x18c \x01(\tR\x05errorB\x87\x01\n" +
-	"$spotify.autodownload.esperanto.protoP\x01ZWgithub.com/pyrorhythm/libspot/api/spotify/autodownload_esperanto;autodownload_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$spotify.autodownload.esperanto.protoP\x01ZWgithub.com/pyrorhythm/libspot/gen/spotify/autodownload_esperanto;autodownload_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_autodownload_decorated_followed_shows_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_autodownload_decorated_followed_shows_proto_goTypes = []any{

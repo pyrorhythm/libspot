@@ -84,7 +84,7 @@ const file_sync_request_proto_rawDesc = "" +
 	"\x12sync_request.proto\x12\x1dspotify.playlist.cosmos.proto\"2\n" +
 	"\vSyncRequest\x12#\n" +
 	"\rplaylist_uris\x18\x01 \x03(\tR\fplaylistUrisBn\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos\xa2\x02\vSPTPlaylistb\x06proto3"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos\xa2\x02\vSPTPlaylistb\x06proto3"
 
 var file_sync_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_sync_request_proto_goTypes = []any{

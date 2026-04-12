@@ -300,7 +300,7 @@ const file_transition_metadata_extension_proto_rawDesc = "" +
 	"\x1dtransition_audio_true_peak_db\x18\v \x01(\x02H\x00R\x19transitionAudioTruePeakDb\x88\x01\x01\x12D\n" +
 	"\x1ctransition_audio_loudness_db\x18\f \x01(\x02H\x01R\x19transitionAudioLoudnessDb\x88\x01\x01B \n" +
 	"\x1e_transition_audio_true_peak_dbB\x1f\n" +
-	"\x1d_transition_audio_loudness_dbBDZBgithub.com/pyrorhythm/libspot/api/spotify/timbrefademetadata/v1;v1b\x06proto3"
+	"\x1d_transition_audio_loudness_dbBDZBgithub.com/pyrorhythm/libspot/gen/spotify/timbrefademetadata/v1;v1b\x06proto3"
 
 var file_transition_metadata_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_transition_metadata_extension_proto_goTypes = []any{

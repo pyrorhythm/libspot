@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -1076,7 +1076,7 @@ const file_spotify_playback_platform_media_v1_manifests_proto_rawDesc = "" +
 	"\x0f_video_fallback\"\x18\n" +
 	"\x16StreamingAudioManifest\"\x18\n" +
 	"\x16StreamingVideoManifestBo\n" +
-	"\"spotify.playback_platform.media.v1P\x01ZGgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/media/v1;v1b\x06proto3"
+	"\"spotify.playback_platform.media.v1P\x01ZGgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/media/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_media_v1_manifests_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_spotify_playback_platform_media_v1_manifests_proto_goTypes = []any{

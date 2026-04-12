@@ -404,7 +404,7 @@ const file_spotify_list_v1_model_caching_proto_rawDesc = "" +
 	"\x0fCACHE_POLICY_NO\x10\x01\x12\x18\n" +
 	"\x14CACHE_POLICY_PRIVATE\x10\x02\x12\x17\n" +
 	"\x13CACHE_POLICY_PUBLIC\x10\x03Bj\n" +
-	"\x19com.spotify.list.v1.modelB\fCachingProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\fCachingProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_caching_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_caching_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

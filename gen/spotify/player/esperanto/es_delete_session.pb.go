@@ -129,7 +129,7 @@ const file_es_delete_session_proto_rawDesc = "" +
 	"\n" +
 	"session_id\x18\x01 \x01(\tR\tsessionId\"\x17\n" +
 	"\x15DeleteSessionResponseBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_delete_session_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_delete_session_proto_goTypes = []any{

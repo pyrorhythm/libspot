@@ -342,7 +342,7 @@ const file_shared_enums_proto_rawDesc = "" +
 	"\aMP3_128\x103\x12\v\n" +
 	"\aMP3_192\x104\x12\v\n" +
 	"\aMP3_224\x105B_\n" +
-	"\x1ccom.spotify.audiophile.protoZ?github.com/pyrorhythm/libspot/api/spotify/audiophile;audiophileb\x06proto3"
+	"\x1ccom.spotify.audiophile.protoZ?github.com/pyrorhythm/libspot/gen/spotify/audiophile;audiophileb\x06proto3"
 
 var file_shared_enums_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_shared_enums_proto_goTypes = []any{

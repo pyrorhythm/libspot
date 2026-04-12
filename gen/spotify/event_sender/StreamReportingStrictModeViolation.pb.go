@@ -292,7 +292,7 @@ const file_include_StreamReportingStrictModeViolation_proto_rawDesc = "" +
 	"\fcore_version\x18\x05 \x01(\x03R\vcoreVersion\x12\x1b\n" +
 	"\tms_played\x18\x06 \x01(\x05R\bmsPlayed\x12.\n" +
 	"\x13ms_played_deviation\x18\a \x01(\x05R\x11msPlayedDeviation\x128\n" +
-	"\x18start_position_deviation\x18\b \x01(\x05R\x16startPositionDeviationBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x18start_position_deviation\x18\b \x01(\x05R\x16startPositionDeviationBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_StreamReportingStrictModeViolation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_StreamReportingStrictModeViolation_proto_goTypes = []any{

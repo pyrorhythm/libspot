@@ -148,7 +148,7 @@ const file_es_prepare_play_proto_rawDesc = "" +
 	"\aoptions\x18\x02 \x01(\v22.spotify.player.esperanto.proto.PreparePlayOptionsR\aoptions\x12K\n" +
 	"\vplay_origin\x18\x03 \x01(\v2*.spotify.player.esperanto.proto.PlayOriginR\n" +
 	"playOriginBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_prepare_play_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_prepare_play_proto_goTypes = []any{

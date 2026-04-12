@@ -135,7 +135,7 @@ const file_include_LocalFilesSourceReport_proto_rawDesc = "" +
 	"$include/LocalFilesSourceReport.proto\x12\x1aspotify.event_sender.proto\"@\n" +
 	"\x16LocalFilesSourceReport\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n" +
-	"\x06tracks\x18\x02 \x01(\x03R\x06tracksBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x06tracks\x18\x02 \x01(\x03R\x06tracksBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_LocalFilesSourceReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_LocalFilesSourceReport_proto_goTypes = []any{

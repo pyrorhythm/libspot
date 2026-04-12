@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v3 "github.com/pyrorhythm/libspot/api/spotify/identity/v3"
+	v3 "github.com/pyrorhythm/libspot/gen/spotify/identity/v3"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -300,7 +300,7 @@ const file_profile_service_proto_rawDesc = "" +
 	"\vGetProfiles\x126.spotify.profile_esperanto.proto.v1.GetProfilesRequest\x1a7.spotify.profile_esperanto.proto.v1.GetProfilesResponse\"\x00\x12\x8a\x01\n" +
 	"\x13SubscribeToProfiles\x126.spotify.profile_esperanto.proto.v1.GetProfilesRequest\x1a7.spotify.profile_esperanto.proto.v1.GetProfilesResponse\"\x000\x01\x12\x92\x01\n" +
 	"\x11ChangeDisplayName\x12<.spotify.profile_esperanto.proto.v1.ChangeDisplayNameRequest\x1a=.spotify.profile_esperanto.proto.v1.ChangeDisplayNameResponse\"\x00Bf\n" +
-	"\x1fspotify.profile_esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/profile_esperanto/v1;v1b\x06proto3"
+	"\x1fspotify.profile_esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/profile_esperanto/v1;v1b\x06proto3"
 
 var file_profile_service_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_profile_service_proto_goTypes = []any{

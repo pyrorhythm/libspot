@@ -143,7 +143,7 @@ const file_karaoke_post_status_request_proto_rawDesc = "" +
 	"\x06status\x18\x01 \x01(\x0e2..spotify.karaoke_esperanto.proto.KaraokeStatusR\x06status\"5\n" +
 	"\x19KaraokePostStatusResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccessB|\n" +
-	"#com.spotify.karaoke.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/karaoke_esperanto;karaoke_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#com.spotify.karaoke.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/karaoke_esperanto;karaoke_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_karaoke_post_status_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_karaoke_post_status_request_proto_goTypes = []any{

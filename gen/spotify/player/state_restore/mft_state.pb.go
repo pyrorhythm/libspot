@@ -626,7 +626,7 @@ const file_state_restore_mft_state_proto_rawDesc = "" +
 	"\x06artist\x18\x04 \x02(\v2+.spotify.player.proto.state_restore.HistoryR\x06artist\x12A\n" +
 	"\x04skip\x18\x05 \x01(\v2-.spotify.player.proto.state_restore.EventListR\x04skip\x12\x12\n" +
 	"\x04time\x18\x06 \x02(\x04R\x04time\x12\x19\n" +
-	"\bdid_skip\x18\a \x02(\bR\adidSkipBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\bdid_skip\x18\a \x02(\bR\adidSkipBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_mft_state_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_state_restore_mft_state_proto_goTypes = []any{

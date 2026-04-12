@@ -84,7 +84,7 @@ const file_spotify_list_v1_model_additional_responses_options_proto_rawDesc = ""
 	"8spotify/list/v1/model/additional_responses_options.proto\x12\x15spotify.list.v1.model\"Z\n" +
 	"\x1aAdditionalResponsesOptions\x12<\n" +
 	"\x1aallow_additional_responses\x18\x01 \x01(\bR\x18allowAdditionalResponsesB}\n" +
-	"\x19com.spotify.list.v1.modelB\x1fAdditionalResponsesOptionsProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x1fAdditionalResponsesOptionsProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_additional_responses_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_additional_responses_options_proto_goTypes = []any{

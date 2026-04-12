@@ -204,7 +204,7 @@ const file_include_ResumptionContentResumed_proto_rawDesc = "" +
 	"playbackId\x12\x10\n" +
 	"\x03key\x18\x02 \x01(\tR\x03key\x12)\n" +
 	"\x10client_timestamp\x18\x03 \x01(\x03R\x0fclientTimestamp\x12#\n" +
-	"\rplay_position\x18\x04 \x01(\tR\fplayPositionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\rplay_position\x18\x04 \x01(\tR\fplayPositionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionContentResumed_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionContentResumed_proto_goTypes = []any{

@@ -79,7 +79,7 @@ const file_playback_state_proto_rawDesc = "" +
 	"\x06PAUSED\x10\x01\x12\r\n" +
 	"\tSUSPENDED\x10\x02\x12\x1a\n" +
 	"\x16INVALID_PLAYBACK_STATE\x10\x03B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playback_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playback_state_proto_goTypes = []any{

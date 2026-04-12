@@ -104,7 +104,7 @@ const file_es_add_pending_event_request_proto_rawDesc = "" +
 	"proto_name\x18\x01 \x01(\tR\tprotoName\x12\x1d\n" +
 	"\n" +
 	"proto_data\x18\x02 \x01(\fR\tprotoDataB\x82\x01\n" +
-	"*com.spotify.pending_events.esperanto.protoP\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/pending_events/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"*com.spotify.pending_events.esperanto.protoP\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/pending_events/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_add_pending_event_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_add_pending_event_request_proto_goTypes = []any{

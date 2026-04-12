@@ -305,7 +305,7 @@ const file_play_history_proto_rawDesc = "" +
 	"\rmft_played_at\x18\b \x01(\x04R\vmftPlayedAt\x12&\n" +
 	"\fshuffle_seed\x18\a \x01(\tH\x00R\vshuffleSeed\x88\x01\x01B\x0f\n" +
 	"\r_shuffle_seedJ\x04\b\x05\x10\x06B\x13\n" +
-	"\x11_current_item_uidBCZAgithub.com/pyrorhythm/libspot/api/spotify/list_player;list_playerb\x06proto3"
+	"\x11_current_item_uidBCZAgithub.com/pyrorhythm/libspot/gen/spotify/list_player;list_playerb\x06proto3"
 
 var file_play_history_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_play_history_proto_goTypes = []any{

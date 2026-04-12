@@ -251,7 +251,7 @@ const file_transition_map_proto_rawDesc = "" +
 	"\x13TransitionDirection\x12$\n" +
 	" TRANSITION_DIRECTION_UNSPECIFIED\x10\x00\x12&\n" +
 	"\"TRANSITION_DIRECTION_BIDIRECTIONAL\x10\x01\x12 \n" +
-	"\x1cTRANSITION_DIRECTION_FORWARD\x10\x02B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x1cTRANSITION_DIRECTION_FORWARD\x10\x02B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_transition_map_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_transition_map_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

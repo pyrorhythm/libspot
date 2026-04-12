@@ -83,7 +83,7 @@ const file_comment_count_proto_rawDesc = "" +
 	"\n" +
 	"\x13comment_count.proto\x12(spotify.extendedmetadata.commentcount.v1\"7\n" +
 	"\x1fGetCommentCountMetadataResponse\x12\x14\n" +
-	"\x05count\x18\x01 \x01(\x03R\x05countBOZMgithub.com/pyrorhythm/libspot/api/spotify/extendedmetadata/commentcount/v1;v1b\x06proto3"
+	"\x05count\x18\x01 \x01(\x03R\x05countBOZMgithub.com/pyrorhythm/libspot/gen/spotify/extendedmetadata/commentcount/v1;v1b\x06proto3"
 
 var file_comment_count_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_comment_count_proto_goTypes = []any{

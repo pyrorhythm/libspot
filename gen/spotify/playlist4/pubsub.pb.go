@@ -1027,7 +1027,7 @@ const file_pubsub_proto_rawDesc = "" +
 	"\fnew_revision\x18\x03 \x01(\fR\vnewRevision\x126\n" +
 	"\x06deltas\x18\x04 \x03(\v2\x1e.spotify.playlist4.proto.DeltaR\x06deltas\x12#\n" +
 	"\rtruncated_ops\x18\x05 \x01(\bR\ftruncatedOpsBr\n" +
-	"\x1bcom.spotify.playlist4.protoB\x14Playlist4PubSubProtoZ=github.com/pyrorhythm/libspot/api/spotify/playlist4;playlist4"
+	"\x1bcom.spotify.playlist4.protoB\x14Playlist4PubSubProtoZ=github.com/pyrorhythm/libspot/gen/spotify/playlist4;playlist4"
 
 var file_pubsub_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_pubsub_proto_goTypes = []any{

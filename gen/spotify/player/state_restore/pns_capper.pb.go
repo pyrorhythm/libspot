@@ -256,7 +256,7 @@ const file_state_restore_pns_capper_proto_rawDesc = "" +
 	"\fstream_count\x18\x03 \x01(\x03R\vstreamCount\x12\x18\n" +
 	"\atimecap\x18\x04 \x01(\x03R\atimecap\x129\n" +
 	"\x19remote_enable_dynamic_cap\x18\x05 \x01(\bR\x16remoteEnableDynamicCap\x12%\n" +
-	"\x0eremote_timecap\x18\x06 \x01(\x03R\rremoteTimecapBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x0eremote_timecap\x18\x06 \x01(\x03R\rremoteTimecapBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_pns_capper_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_pns_capper_proto_goTypes = []any{

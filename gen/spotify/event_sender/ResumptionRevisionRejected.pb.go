@@ -172,7 +172,7 @@ const file_include_ResumptionRevisionRejected_proto_rawDesc = "" +
 	"\x1aResumptionRevisionRejected\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x16\n" +
 	"\x06reason\x18\x02 \x01(\tR\x06reason\x12\x1a\n" +
-	"\brevision\x18\x03 \x01(\tR\brevisionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\brevision\x18\x03 \x01(\tR\brevisionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionRevisionRejected_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionRevisionRejected_proto_goTypes = []any{

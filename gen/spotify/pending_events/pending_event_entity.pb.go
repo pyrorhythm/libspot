@@ -117,7 +117,7 @@ const file_pending_event_entity_proto_rawDesc = "" +
 	"\n" +
 	"event_name\x18\x01 \x01(\tR\teventName\x12\x18\n" +
 	"\apayload\x18\x02 \x01(\fR\apayload\x12\x1a\n" +
-	"\busername\x18\x03 \x01(\tR\busernameBIZGgithub.com/pyrorhythm/libspot/api/spotify/pending_events;pending_eventsb\x06proto3"
+	"\busername\x18\x03 \x01(\tR\busernameBIZGgithub.com/pyrorhythm/libspot/gen/spotify/pending_events;pending_eventsb\x06proto3"
 
 var file_pending_event_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_pending_event_entity_proto_goTypes = []any{

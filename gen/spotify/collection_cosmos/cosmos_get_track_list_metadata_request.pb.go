@@ -197,7 +197,7 @@ const file_cosmos_get_track_list_metadata_request_proto_rawDesc = "" +
 	"\x11unfiltered_length\x18\x01 \x01(\rR\x10unfilteredLength\x12\x16\n" +
 	"\x06length\x18\x02 \x01(\rR\x06length\x12\x18\n" +
 	"\aoffline\x18\x03 \x01(\tR\aoffline\x12#\n" +
-	"\rsync_progress\x18\x04 \x01(\rR\fsyncProgressBeZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmos\xa2\x02\x13SPTCollectionCosmos"
+	"\rsync_progress\x18\x04 \x01(\rR\fsyncProgressBeZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmos\xa2\x02\x13SPTCollectionCosmos"
 
 var file_cosmos_get_track_list_metadata_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_cosmos_get_track_list_metadata_request_proto_goTypes = []any{

@@ -132,7 +132,7 @@ const file_content_experience_trait_proto_rawDesc = "" +
 	"\x1eCONTENT_EXPERIENCE_UNSPECIFIED\x10\x00\x12\x1c\n" +
 	"\x18CONTENT_EXPERIENCE_MUSIC\x10\x01\x12\x1b\n" +
 	"\x17CONTENT_EXPERIENCE_TALK\x10\x02Bc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_content_experience_trait_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_content_experience_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

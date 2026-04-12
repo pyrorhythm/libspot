@@ -545,7 +545,7 @@ const file_include_ConnectDeviceDiscovered_proto_rawDesc = "" +
 	"\x15capabilities_resolved\x18\f \x01(\bR\x14capabilitiesResolved\x12\x1d\n" +
 	"\n" +
 	"local_time\x18\r \x01(\tR\tlocalTime\x122\n" +
-	"\x15discovered_token_type\x18\x0e \x01(\tR\x13discoveredTokenTypeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15discovered_token_type\x18\x0e \x01(\tR\x13discoveredTokenTypeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectDeviceDiscovered_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectDeviceDiscovered_proto_goTypes = []any{

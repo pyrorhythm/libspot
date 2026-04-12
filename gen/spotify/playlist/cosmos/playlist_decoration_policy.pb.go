@@ -7,7 +7,7 @@
 package cosmos
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1123,7 +1123,7 @@ const file_policy_playlist_decoration_policy_proto_rawDesc = "" +
 	"created_at\x183 \x01(\bR\tcreatedAt\x12_\n" +
 	"\x12available_concepts\x184 \x01(\v20.spotify.playlist.cosmos.proto.AvailableConceptsR\x11availableConcepts\x12+\n" +
 	"\x11content_signature\x185 \x01(\bR\x10contentSignatureBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_policy_playlist_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_policy_playlist_decoration_policy_proto_goTypes = []any{

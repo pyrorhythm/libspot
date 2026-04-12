@@ -7,7 +7,7 @@
 package cosmos
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1124,7 +1124,7 @@ const file_playlist_playlist_state_proto_rawDesc = "" +
 	"\x14PlaylistOfflineState\x12\x18\n" +
 	"\aoffline\x18\x01 \x01(\tR\aoffline\x12#\n" +
 	"\rsync_progress\x18\x02 \x01(\rR\fsyncProgressB`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_playlist_playlist_state_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_playlist_playlist_state_proto_goTypes = []any{

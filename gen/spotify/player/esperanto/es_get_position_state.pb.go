@@ -217,7 +217,7 @@ const file_es_get_position_state_proto_rawDesc = "" +
 	"\x05Error\x12\x06\n" +
 	"\x02OK\x10\x00\x12\r\n" +
 	"\tNOT_FOUND\x10\x01Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_get_position_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_get_position_state_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

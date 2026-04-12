@@ -265,7 +265,7 @@ const file_include_DesktopUpdateMessageProcessed_proto_rawDesc = "" +
 	"\vbinary_hash\x18\x05 \x01(\tR\n" +
 	"binaryHash\x12\x1f\n" +
 	"\vis_employee\x18\x06 \x01(\bR\n" +
-	"isEmployeeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"isEmployeeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopUpdateMessageProcessed_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopUpdateMessageProcessed_proto_goTypes = []any{

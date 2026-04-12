@@ -411,7 +411,7 @@ const file_es_desktop_zoom_proto_rawDesc = "" +
 	"\fGetZoomLevel\x129.spotify.desktop.zoom_esperanto.proto.GetZoomLevelRequest\x1a:.spotify.desktop.zoom_esperanto.proto.GetZoomLevelResponse\"\x00\x12\x87\x01\n" +
 	"\fSetZoomLevel\x129.spotify.desktop.zoom_esperanto.proto.SetZoomLevelRequest\x1a:.spotify.desktop.zoom_esperanto.proto.SetZoomLevelResponse\"\x00\x12u\n" +
 	"\x06ZoomIn\x123.spotify.desktop.zoom_esperanto.proto.ZoomInRequest\x1a4.spotify.desktop.zoom_esperanto.proto.ZoomInResponse\"\x00\x12x\n" +
-	"\aZoomOut\x124.spotify.desktop.zoom_esperanto.proto.ZoomOutRequest\x1a5.spotify.desktop.zoom_esperanto.proto.ZoomOutResponse\"\x00BQZOgithub.com/pyrorhythm/libspot/api/spotify/desktop/zoom_esperanto;zoom_esperantob\x06proto3"
+	"\aZoomOut\x124.spotify.desktop.zoom_esperanto.proto.ZoomOutRequest\x1a5.spotify.desktop.zoom_esperanto.proto.ZoomOutResponse\"\x00BQZOgithub.com/pyrorhythm/libspot/gen/spotify/desktop/zoom_esperanto;zoom_esperantob\x06proto3"
 
 var file_es_desktop_zoom_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_es_desktop_zoom_proto_goTypes = []any{

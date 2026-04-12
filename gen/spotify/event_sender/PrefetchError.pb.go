@@ -135,7 +135,7 @@ const file_include_PrefetchError_proto_rawDesc = "" +
 	"\x1binclude/PrefetchError.proto\x12\x1aspotify.event_sender.proto\"M\n" +
 	"\rPrefetchError\x12\x1a\n" +
 	"\bstrategy\x18\x01 \x01(\x03R\bstrategy\x12 \n" +
-	"\vdescription\x18\x02 \x01(\tR\vdescriptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\vdescription\x18\x02 \x01(\tR\vdescriptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PrefetchError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PrefetchError_proto_goTypes = []any{

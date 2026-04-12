@@ -7,7 +7,7 @@
 package state_restore
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -95,7 +95,7 @@ const file_state_restore_context_loader_proto_rawDesc = "" +
 	"\n" +
 	"\"state_restore/context_loader.proto\x12\"spotify.player.proto.state_restore\x1a\rcontext.proto\"H\n" +
 	"\rContextLoader\x127\n" +
-	"\acontext\x18\x01 \x02(\v2\x1d.spotify.player.proto.ContextR\acontextBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\acontext\x18\x01 \x02(\v2\x1d.spotify.player.proto.ContextR\acontextBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_context_loader_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_context_loader_proto_goTypes = []any{

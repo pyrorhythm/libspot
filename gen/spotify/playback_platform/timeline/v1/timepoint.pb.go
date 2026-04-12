@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -733,7 +733,7 @@ const file_spotify_playback_platform_timeline_v1_timepoint_proto_rawDesc = "" +
 	"\bspan_end\x18\x02 \x01(\v25.spotify.playback_platform.timeline.v1.TimespanAnchorH\x00R\aspanEnd\x12^\n" +
 	"\x0etimeline_begin\x18\x03 \x01(\v25.spotify.playback_platform.timeline.v1.TimelineAnchorH\x00R\rtimelineBeginB\b\n" +
 	"\x06anchorBu\n" +
-	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_timepoint_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_spotify_playback_platform_timeline_v1_timepoint_proto_goTypes = []any{

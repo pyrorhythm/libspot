@@ -144,7 +144,7 @@ const file_context_device_desktop_proto_rawDesc = "" +
 	"\fdevice_model\x18\x03 \x01(\tR\vdeviceModel\x12\x1b\n" +
 	"\tdevice_id\x18\x04 \x01(\tR\bdeviceId\x12\x1d\n" +
 	"\n" +
-	"os_version\x18\x05 \x01(\tR\tosVersionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"os_version\x18\x05 \x01(\tR\tosVersionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_device_desktop_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_device_desktop_proto_goTypes = []any{

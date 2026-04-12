@@ -1158,7 +1158,7 @@ const file_get_recently_played_proto_rawDesc = "" +
 	"\x1aHideRecentlyPlayedResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\rR\x06status\x12\x14\n" +
 	"\x05error\x18\x02 \x01(\tR\x05errorB\x94\x01\n" +
-	"+com.spotify.recently_played_esperanto.protoP\x01Z]github.com/pyrorhythm/libspot/api/spotify/recently_played_esperanto;recently_played_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"+com.spotify.recently_played_esperanto.protoP\x01Z]github.com/pyrorhythm/libspot/gen/spotify/recently_played_esperanto;recently_played_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_get_recently_played_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_get_recently_played_proto_goTypes = []any{

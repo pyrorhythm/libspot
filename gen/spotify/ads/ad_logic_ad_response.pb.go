@@ -2586,7 +2586,7 @@ const file_ad_logic_ad_response_proto_rawDesc = "" +
 	"\fduration_sec\x18\x06 \x01(\x05R\vdurationSec\"Q\n" +
 	"\bDecision\x12\x17\n" +
 	"\amax_ads\x18\x01 \x01(\x05R\x06maxAds\x12,\n" +
-	"\x12max_length_seconds\x18\x02 \x01(\x05R\x10maxLengthSecondsB3Z1github.com/pyrorhythm/libspot/api/spotify/ads;adsb\x06proto3"
+	"\x12max_length_seconds\x18\x02 \x01(\x05R\x10maxLengthSecondsB3Z1github.com/pyrorhythm/libspot/gen/spotify/ads;adsb\x06proto3"
 
 var file_ad_logic_ad_response_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
 var file_ad_logic_ad_response_proto_goTypes = []any{

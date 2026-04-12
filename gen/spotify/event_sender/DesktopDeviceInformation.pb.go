@@ -3133,7 +3133,7 @@ const file_include_DesktopDeviceInformation_proto_rawDesc = "" +
 	"#system_user_preferred_language_code\x18] \x01(\tR\x1fsystemUserPreferredLanguageCode\x12?\n" +
 	"\x1csystem_user_preferred_locale\x18^ \x01(\tR\x19systemUserPreferredLocale\x12N\n" +
 	"$mac_app_system_localization_language\x18_ \x01(\tR macAppSystemLocalizationLanguage\x12:\n" +
-	"\x19app_localization_language\x18` \x01(\tR\x17appLocalizationLanguageBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x19app_localization_language\x18` \x01(\tR\x17appLocalizationLanguageBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopDeviceInformation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopDeviceInformation_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package queue
 
 import (
-	timeline_reporter "github.com/pyrorhythm/libspot/api/spotify/timeline_reporter"
+	timeline_reporter "github.com/pyrorhythm/libspot/gen/spotify/timeline_reporter"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -186,7 +186,7 @@ const file_user_queue_proto_rawDesc = "" +
 	"\x03uri\x18\x02 \x01(\tR\x03uri\x12k\n" +
 	"\x16item_reporting_context\x18\x03 \x01(\v25.spotify.timeline_reporter.proto.ItemReportingContextR\x14itemReportingContext\"<\n" +
 	"\tUserQueue\x12/\n" +
-	"\x05items\x18\x01 \x03(\v2\x19.spotify.queue.proto.ItemR\x05itemsB7Z5github.com/pyrorhythm/libspot/api/spotify/queue;queueb\x06proto3"
+	"\x05items\x18\x01 \x03(\v2\x19.spotify.queue.proto.ItemR\x05itemsB7Z5github.com/pyrorhythm/libspot/gen/spotify/queue;queueb\x06proto3"
 
 var file_user_queue_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_user_queue_proto_goTypes = []any{

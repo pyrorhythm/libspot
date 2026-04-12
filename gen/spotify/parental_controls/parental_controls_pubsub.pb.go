@@ -199,7 +199,7 @@ const file_parental_controls_pubsub_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x02(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x02(\tR\x05value\"[\n" +
 	"\x14UserAttributesUpdate\x12C\n" +
-	"\x05pairs\x18\x01 \x03(\v2-.spotify.parental_controls.proto.KeyValuePairR\x05pairsBOZMgithub.com/pyrorhythm/libspot/api/spotify/parental_controls;parental_controls"
+	"\x05pairs\x18\x01 \x03(\v2-.spotify.parental_controls.proto.KeyValuePairR\x05pairsBOZMgithub.com/pyrorhythm/libspot/gen/spotify/parental_controls;parental_controls"
 
 var file_parental_controls_pubsub_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_parental_controls_pubsub_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	_ "github.com/pyrorhythm/libspot/api/spotify/esperanto"
+	_ "github.com/pyrorhythm/libspot/gen/spotify/esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -2182,7 +2182,7 @@ const file_es_download_proto_rawDesc = "" +
 	"\x10GetVideoManifest\x125.spotify.download.esperanto.proto.VideoManifestParams\x1a7.spotify.download.esperanto.proto.VideoManifestResponse\"\x00\x12\x8a\x01\n" +
 	"\x10GetMediaHandleId\x126.spotify.download.esperanto.proto.GetMediaHandleParams\x1a:.spotify.download.esperanto.proto.GetMediaHandleIdResponse\"\x000\x01\x12o\n" +
 	"\x17SubscribeVideoBandwidth\x12\x16.google.protobuf.Empty\x1a8.spotify.download.esperanto.proto.VideoBandwidthResponse\"\x000\x01Bt\n" +
-	"$com.spotify.download.esperanto.protoZFgithub.com/pyrorhythm/libspot/api/spotify/download/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$com.spotify.download.esperanto.protoZFgithub.com/pyrorhythm/libspot/gen/spotify/download/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_download_proto_enumTypes = make([]protoimpl.EnumInfo, 8)
 var file_es_download_proto_msgTypes = make([]protoimpl.MessageInfo, 18)

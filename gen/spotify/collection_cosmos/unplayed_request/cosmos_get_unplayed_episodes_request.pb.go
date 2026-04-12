@@ -7,7 +7,7 @@
 package unplayed_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -365,7 +365,7 @@ const file_cosmos_get_unplayed_episodes_request_proto_rawDesc = "" +
 	"\x04item\x18\x01 \x03(\v26.spotify.collection_cosmos.unplayed_request.proto.ItemR\x04item\x12+\n" +
 	"\x11unfiltered_length\x18\x02 \x01(\rR\x10unfilteredLength\x12'\n" +
 	"\x0funranged_length\x18\x03 \x01(\rR\x0eunrangedLength\x12)\n" +
-	"\x10loading_contents\x18\x04 \x01(\bR\x0floadingContentsB\x85\x01Z]github.com/pyrorhythm/libspot/api/spotify/collection_cosmos/unplayed_request;unplayed_request\xa2\x02#SPTCollectionCosmosUnplayedEpisodes"
+	"\x10loading_contents\x18\x04 \x01(\bR\x0floadingContentsB\x85\x01Z]github.com/pyrorhythm/libspot/gen/spotify/collection_cosmos/unplayed_request;unplayed_request\xa2\x02#SPTCollectionCosmosUnplayedEpisodes"
 
 var file_cosmos_get_unplayed_episodes_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_cosmos_get_unplayed_episodes_request_proto_goTypes = []any{

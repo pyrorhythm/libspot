@@ -7,11 +7,11 @@
 package show_esperanto
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	esperanto "github.com/pyrorhythm/libspot/api/spotify/player/esperanto"
-	show_cosmos "github.com/pyrorhythm/libspot/api/spotify/show_cosmos"
-	decorate_request "github.com/pyrorhythm/libspot/api/spotify/show_cosmos/decorate_request"
-	unfinished_episodes_request "github.com/pyrorhythm/libspot/api/spotify/show_cosmos/unfinished_episodes_request"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	esperanto "github.com/pyrorhythm/libspot/gen/spotify/player/esperanto"
+	show_cosmos "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos"
+	decorate_request "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos/decorate_request"
+	unfinished_episodes_request "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos/unfinished_episodes_request"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -2950,7 +2950,7 @@ const file_show_service_proto_rawDesc = "" +
 	"\x15SubUnfinishedEpisodes\x12:.spotify.show_esperanto.proto.GetUnfinishedEpisodesRequest\x1a;.spotify.show_esperanto.proto.GetUnfinishedEpisodesResponse\"\x000\x01\x12k\n" +
 	"\bPlayShow\x12-.spotify.show_esperanto.proto.PlayShowRequest\x1a..spotify.show_esperanto.proto.PlayShowResponse\"\x00\x12\x83\x01\n" +
 	"\x10MarkShowAsPlayed\x125.spotify.show_esperanto.proto.MarkShowAsPlayedRequest\x1a6.spotify.show_esperanto.proto.MarkShowAsPlayedResponse\"\x00Bs\n" +
-	" com.spotify.show_esperanto.protoP\x01ZGgithub.com/pyrorhythm/libspot/api/spotify/show_esperanto;show_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" com.spotify.show_esperanto.protoP\x01ZGgithub.com/pyrorhythm/libspot/gen/spotify/show_esperanto;show_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_show_service_proto_enumTypes = make([]protoimpl.EnumInfo, 10)
 var file_show_service_proto_msgTypes = make([]protoimpl.MessageInfo, 17)

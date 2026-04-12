@@ -201,7 +201,7 @@ const file_include_ClientCoreConnectPlayCommand_proto_rawDesc = "" +
 	"\x0estate_duration\x18\x02 \x01(\x03R\rstateDuration\x12\x1b\n" +
 	"\tintent_id\x18\x03 \x01(\tR\bintentId\x12\x1f\n" +
 	"\vcontext_url\x18\x04 \x01(\tR\n" +
-	"contextUrlBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"contextUrlBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ClientCoreConnectPlayCommand_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ClientCoreConnectPlayCommand_proto_goTypes = []any{

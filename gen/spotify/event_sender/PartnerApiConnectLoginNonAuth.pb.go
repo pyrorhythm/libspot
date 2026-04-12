@@ -269,7 +269,7 @@ const file_include_PartnerApiConnectLoginNonAuth_proto_rawDesc = "" +
 	"error_code\x18\x03 \x01(\x05R\terrorCode\x12#\n" +
 	"\rerror_message\x18\x04 \x01(\tR\ferrorMessage\x12\x16\n" +
 	"\x06source\x18\x05 \x01(\tR\x06source\x12!\n" +
-	"\futm_campaign\x18\x06 \x01(\tR\vutmCampaignBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\futm_campaign\x18\x06 \x01(\tR\vutmCampaignBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PartnerApiConnectLoginNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PartnerApiConnectLoginNonAuth_proto_goTypes = []any{

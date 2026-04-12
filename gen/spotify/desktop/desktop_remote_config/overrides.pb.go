@@ -543,7 +543,7 @@ const file_overrides_proto_rawDesc = "" +
 	"\x05value\x18\x01 \x01(\x05R\x05value\x1a!\n" +
 	"\tEnumValue\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\tR\x05valueB\x12\n" +
-	"\x10structured_valueB_Z]github.com/pyrorhythm/libspot/api/spotify/desktop/desktop_remote_config;desktop_remote_configb\x06proto3"
+	"\x10structured_valueB_Z]github.com/pyrorhythm/libspot/gen/spotify/desktop/desktop_remote_config;desktop_remote_configb\x06proto3"
 
 var file_overrides_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_overrides_proto_goTypes = []any{

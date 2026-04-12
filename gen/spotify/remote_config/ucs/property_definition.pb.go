@@ -667,7 +667,7 @@ const file_property_definition_proto_rawDesc = "" +
 	"\bEnumSpec\x12\x18\n" +
 	"\adefault\x18\x01 \x01(\tR\adefault\x12\x16\n" +
 	"\x06values\x18\x02 \x03(\tR\x06valuesB\x0f\n" +
-	"\rspecificationJ\x04\b\x02\x10\x03R\x04hashBAZ?github.com/pyrorhythm/libspot/api/spotify/remote_config/ucs;ucsb\x06proto3"
+	"\rspecificationJ\x04\b\x02\x10\x03R\x04hashBAZ?github.com/pyrorhythm/libspot/gen/spotify/remote_config/ucs;ucsb\x06proto3"
 
 var file_property_definition_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_property_definition_proto_goTypes = []any{

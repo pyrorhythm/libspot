@@ -7,7 +7,7 @@
 package your_library
 
 import (
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -3166,7 +3166,7 @@ const file_your_library_decorated_entity_proto_rawDesc = "" +
 	"\x06author\x18\x11 \x01(\v26.spotify.your_library.proto.YourLibraryAuthorExtraInfoH\x00R\x06author\x12M\n" +
 	"\x05venue\x18\x13 \x01(\v25.spotify.your_library.proto.YourLibraryVenueExtraInfoH\x00R\x05venue\x12l\n" +
 	"\x10concert_campaign\x18\x14 \x01(\v2?.spotify.your_library.proto.YourLibraryConcertCampaignExtraInfoH\x00R\x0fconcertCampaignB\b\n" +
-	"\x06entityBEZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"\x06entityBEZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_decorated_entity_proto_enumTypes = make([]protoimpl.EnumInfo, 8)
 var file_your_library_decorated_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 20)

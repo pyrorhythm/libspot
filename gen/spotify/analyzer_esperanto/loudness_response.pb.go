@@ -115,7 +115,7 @@ const file_loudness_response_proto_rawDesc = "" +
 	"\vplayback_id\x18\x02 \x01(\tR\n" +
 	"playbackId\x12\x1a\n" +
 	"\bposition\x18\x03 \x01(\x04R\bpositionB}\n" +
-	"$com.spotify.analyzer_esperanto.protoZOgithub.com/pyrorhythm/libspot/api/spotify/analyzer_esperanto;analyzer_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$com.spotify.analyzer_esperanto.protoZOgithub.com/pyrorhythm/libspot/gen/spotify/analyzer_esperanto;analyzer_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_loudness_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_loudness_response_proto_goTypes = []any{

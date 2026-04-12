@@ -391,7 +391,7 @@ const file_include_ConnectInstallationResult_proto_rawDesc = "" +
 	"\n" +
 	"error_code\x18\t \x01(\tR\terrorCode\x12'\n" +
 	"\x0finteraction_ids\x18\n" +
-	" \x03(\tR\x0einteractionIdsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x03(\tR\x0einteractionIdsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectInstallationResult_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectInstallationResult_proto_goTypes = []any{

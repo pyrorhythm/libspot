@@ -468,7 +468,7 @@ const file_metadata_album_metadata_proto_rawDesc = "" +
 	"\vplayability\x18\t \x01(\bR\vplayability\x12&\n" +
 	"\x0fis_premium_only\x18\n" +
 	" \x01(\bR\risPremiumOnlyBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_album_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metadata_album_metadata_proto_goTypes = []any{

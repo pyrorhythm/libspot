@@ -289,7 +289,7 @@ const file_podcastextensions_proto_rawDesc = "" +
 	"\x06header\x18\x01 \x01(\v29.spotify.podcast.extensions.PodcastHtmlDescription.HeaderR\x06header\x12)\n" +
 	"\x10html_description\x18\x02 \x01(\tR\x0fhtmlDescription\x1a\b\n" +
 	"\x06HeaderB\x8e\x01\n" +
-	"#com.spotify.podcastextensions.protoB\x16PodcastExtensionsProtoP\x01ZGgithub.com/pyrorhythm/libspot/api/spotify/podcast/extensions;extensions\xa2\x02\x03SPTb\x06proto3"
+	"#com.spotify.podcastextensions.protoB\x16PodcastExtensionsProtoP\x01ZGgithub.com/pyrorhythm/libspot/gen/spotify/podcast/extensions;extensions\xa2\x02\x03SPTb\x06proto3"
 
 var file_podcastextensions_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_podcastextensions_proto_goTypes = []any{

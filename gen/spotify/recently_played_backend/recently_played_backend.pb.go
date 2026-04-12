@@ -260,7 +260,7 @@ const file_recently_played_backend_proto_rawDesc = "" +
 	"\x0eRecentlyPlayed\x12J\n" +
 	"\bcontexts\x18\x01 \x03(\v2..spotify.recently_played_backend.proto.ContextR\bcontexts\x12\x16\n" +
 	"\x06offset\x18\x02 \x01(\x05R\x06offset\x12\x14\n" +
-	"\x05total\x18\x03 \x01(\x05R\x05totalB[ZYgithub.com/pyrorhythm/libspot/api/spotify/recently_played_backend;recently_played_backend"
+	"\x05total\x18\x03 \x01(\x05R\x05totalB[ZYgithub.com/pyrorhythm/libspot/gen/spotify/recently_played_backend;recently_played_backend"
 
 var file_recently_played_backend_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_recently_played_backend_proto_goTypes = []any{

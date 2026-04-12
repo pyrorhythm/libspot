@@ -99,7 +99,7 @@ const file_collection_status_proto_rawDesc = "" +
 	"\x06Status\x12\x12\n" +
 	"\x04code\x18\x01 \x01(\x05R\x04code\x12\x16\n" +
 	"\x06reason\x18\x02 \x01(\tR\x06reasonB\x85\x01\n" +
-	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/api/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/gen/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_collection_status_proto_goTypes = []any{

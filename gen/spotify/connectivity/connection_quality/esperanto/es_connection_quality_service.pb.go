@@ -144,7 +144,7 @@ const file_es_connection_quality_service_proto_rawDesc = "" +
 	"\x06ABSENT\x10\x042\xab\x01\n" +
 	"\x18ConnectionQualityService\x12\x8e\x01\n" +
 	"\x1flistenToConnectionQualityEvents\x12\x16.google.protobuf.Empty\x1aO.spotify.connectivity.connection_quality.esperanto.proto.ConnectionQualityEvent\"\x000\x01B\x91\x01\n" +
-	"0com.spotify.connectivity.quality.esperanto.protoZ]github.com/pyrorhythm/libspot/api/spotify/connectivity/connection_quality/esperanto;esperantob\x06proto3"
+	"0com.spotify.connectivity.quality.esperanto.protoZ]github.com/pyrorhythm/libspot/gen/spotify/connectivity/connection_quality/esperanto;esperantob\x06proto3"
 
 var file_es_connection_quality_service_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_connection_quality_service_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

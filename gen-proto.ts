@@ -7,9 +7,11 @@ import { fileURLToPath } from "url";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const ROOT = SCRIPT_DIR;
-const PROTO_DIR = join(ROOT, "proto");
-const OUT_DIR = join(ROOT, "gen");
-const TMP_DIR = "/tmp/spdproto";
+const IN = "proto";
+const OUT = "gen";
+const PROTO_DIR = join(ROOT, IN);
+const OUT_DIR = join(ROOT, OUT);
+const TMP_DIR = `/tmp/libspot-${Bun.randomUUIDv7()}`;
 
 let goMod = Bun.file(join(SCRIPT_DIR, `go.mod`));
 let contents = (await goMod.text()).split("\n")[0]
@@ -58,7 +60,7 @@ async function processProto(protoPath: string): Promise<string> {
 
   if (baseName === "ledger" && dirname(protoPath).endsWith("behavior")) {
     const alias = pkg.split("/").pop() ?? pkg;
-    const goPackage = `${MODULE}/api/${pkg};${alias}`;
+    const goPackage = `${MODULE}/${OUT}/${pkg};${alias}`;
     const goPackageLine = `option go_package="${goPackage}";`;
 
     await Bun.write(file, content.replace(/^syntax\s*=\s*"[^"]+";/m, `$&\n${goPackageLine}`))
@@ -72,7 +74,7 @@ async function processProto(protoPath: string): Promise<string> {
   }
 
   const alias = pkg.split("/").pop() ?? pkg;
-  const goPackage = `${MODULE}/api/${pkg};${alias}`;
+  const goPackage = `${MODULE}/${OUT}/${pkg};${alias}`;
   const goPackageLine = `option go_package="${goPackage}";`;
 
   let patched = content;
@@ -109,7 +111,7 @@ try {
   console.log(`Generating ${newProtos.length} protos`);
 
   // Run protoc with explicit cwd - no need for process.chdir()
-  await $`protoc --proto_path=${TMP_DIR} --go_out=${OUT_DIR} --go_opt=default_api_level=API_OPAQUE --go_opt=module=${MODULE}/api ${newProtos}`.cwd(TMP_DIR);
+  await $`protoc --proto_path=${TMP_DIR} --go_out=${OUT_DIR} --go_opt=default_api_level=API_OPAQUE --go_opt=module=${MODULE}/${OUT} ${newProtos}`.cwd(TMP_DIR);
 } finally {
   // Always cleanup temp directory
   await rm(TMP_DIR, { recursive: true, force: true });

@@ -290,7 +290,7 @@ const file_autoplay_node_proto_rawDesc = "" +
 	"\x15called_play_on_filler\x18\x04 \x01(\bR\x12calledPlayOnFiller\x1a9\n" +
 	"\x0fFillerNodeEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\fR\x05valueB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05value\x18\x02 \x01(\fR\x05valueB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_autoplay_node_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_autoplay_node_proto_goTypes = []any{

@@ -132,7 +132,7 @@ const file_context_index_proto_rawDesc = "" +
 	"\x13context_index.proto\x12\x14spotify.player.proto\"8\n" +
 	"\fContextIndex\x12\x12\n" +
 	"\x04page\x18\x01 \x01(\rR\x04page\x12\x14\n" +
-	"\x05track\x18\x02 \x01(\rR\x05trackB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05track\x18\x02 \x01(\rR\x05trackB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_index_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_index_proto_goTypes = []any{

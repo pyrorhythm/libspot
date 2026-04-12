@@ -85,7 +85,7 @@ const file_es_session_response_proto_rawDesc = "" +
 	"\x0fSessionResponse\x12\x1d\n" +
 	"\n" +
 	"session_id\x18\x01 \x01(\tR\tsessionIdBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_session_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_session_response_proto_goTypes = []any{

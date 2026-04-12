@@ -7,8 +7,8 @@
 package v2
 
 import (
-	audiophile "github.com/pyrorhythm/libspot/api/spotify/audiophile"
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/transition/v1"
+	audiophile "github.com/pyrorhythm/libspot/gen/spotify/audiophile"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/transition/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -1704,7 +1704,7 @@ const file_playback_trait_proto_rawDesc = "" +
 	"\x19AUDIO_MEDIA_FORMAT_STEREO\x10\x01\x12\x1e\n" +
 	"\x1aAUDIO_MEDIA_FORMAT_SPATIAL\x10\x02\x12\x1f\n" +
 	"\x1bAUDIO_MEDIA_FORMAT_ADAPTIVE\x10\x03Bc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_playback_trait_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_playback_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 13)

@@ -100,7 +100,7 @@ const file_mixability_proto_rawDesc = "" +
 	"Mixability\x12\x18\n" +
 	"\amixable\x18\x01 \x01(\bR\amixable\x12@\n" +
 	"\x1cgenre_based_beatmatchability\x18\x02 \x01(\x01R\x1agenreBasedBeatmatchabilityB\xa4\x01\n" +
-	"6com.spotify.playlistmixing.extensions.mixability.protoB\x0fMixabilityProtoZYgithub.com/pyrorhythm/libspot/api/spotify/playlistmixing/extensions/mixability;mixabilityb\x06proto3"
+	"6com.spotify.playlistmixing.extensions.mixability.protoB\x0fMixabilityProtoZYgithub.com/pyrorhythm/libspot/gen/spotify/playlistmixing/extensions/mixability;mixabilityb\x06proto3"
 
 var file_mixability_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_mixability_proto_goTypes = []any{

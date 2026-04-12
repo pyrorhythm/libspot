@@ -375,7 +375,7 @@ const file_include_AdTransparencyEvent_proto_rawDesc = "" +
 	"\x12total_ads_estimate\x18\b \x01(\x05R\x10totalAdsEstimate\x12\"\n" +
 	"\rplayed_ad_ids\x18\t \x03(\tR\vplayedAdIds\x12\x12\n" +
 	"\x04slot\x18\n" +
-	" \x01(\tR\x04slotBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\tR\x04slotBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdTransparencyEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdTransparencyEvent_proto_goTypes = []any{

@@ -240,7 +240,7 @@ const file_include_ConnectConnectivityError_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\tR\x05error\x126\n" +
 	"\x17connection_type_initial\x18\x03 \x01(\tR\x15connectionTypeInitial\x122\n" +
 	"\x15connection_type_error\x18\x04 \x01(\tR\x13connectionTypeError\x12\x16\n" +
-	"\x06reason\x18\x05 \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x06reason\x18\x05 \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectConnectivityError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectConnectivityError_proto_goTypes = []any{

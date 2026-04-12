@@ -137,7 +137,7 @@ const file_context_view_entry_key_proto_rawDesc = "" +
 	"\x1ccontext_view_entry_key.proto\x12!spotify.player.context_view.proto\x1a\x18context_view_entry.proto\"a\n" +
 	"\bEntryKey\x12A\n" +
 	"\x04type\x18\x01 \x01(\x0e2-.spotify.player.context_view.proto.Entry.TypeR\x04type\x12\x12\n" +
-	"\x04data\x18\x02 \x01(\tR\x04dataB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x04data\x18\x02 \x01(\tR\x04dataB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_view_entry_key_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_view_entry_key_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package cosmos
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -356,7 +356,7 @@ const file_policy_playlist_track_decoration_policy_proto_rawDesc = "" +
 	"\x06artist\x18\x0e \x01(\v21.spotify.cosmos_util.proto.ArtistDecorationPolicyR\x06artist\x12\x18\n" +
 	"\asignals\x18\x0f \x01(\bR\asignals\x12+\n" +
 	"\x11is_recommendation\x18\x10 \x01(\bR\x10isRecommendationBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_policy_playlist_track_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_policy_playlist_track_decoration_policy_proto_goTypes = []any{

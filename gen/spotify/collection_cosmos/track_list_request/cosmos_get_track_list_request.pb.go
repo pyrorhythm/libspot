@@ -7,7 +7,7 @@
 package track_list_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -686,7 +686,7 @@ const file_cosmos_get_track_list_request_proto_rawDesc = "" +
 	"\x0funranged_length\x18\x03 \x01(\rR\x0eunrangedLength\x12)\n" +
 	"\x10loading_contents\x18\x04 \x01(\bR\x0floadingContents\x12\x18\n" +
 	"\aoffline\x18\x05 \x01(\tR\aoffline\x12#\n" +
-	"\rsync_progress\x18\x06 \x01(\rR\fsyncProgressB\x82\x01Zagithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos/track_list_request;track_list_request\xa2\x02\x1cSPTCollectionCosmosTrackList"
+	"\rsync_progress\x18\x06 \x01(\rR\fsyncProgressB\x82\x01Zagithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos/track_list_request;track_list_request\xa2\x02\x1cSPTCollectionCosmosTrackList"
 
 var file_cosmos_get_track_list_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_cosmos_get_track_list_request_proto_goTypes = []any{

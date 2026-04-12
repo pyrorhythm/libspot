@@ -328,7 +328,7 @@ const file_client_tts_proto_rawDesc = "" +
 	"\vTtsResponse\x12\x10\n" +
 	"\x03url\x18\x01 \x01(\tR\x03url2l\n" +
 	"\x10ClientTtsService\x12X\n" +
-	"\tGetTtsUrl\x12#.spotify.narration.proto.TtsRequest\x1a$.spotify.narration.proto.TtsResponse\"\x00B?Z=github.com/pyrorhythm/libspot/api/spotify/narration;narrationb\x06proto3"
+	"\tGetTtsUrl\x12#.spotify.narration.proto.TtsRequest\x1a$.spotify.narration.proto.TtsResponse\"\x00B?Z=github.com/pyrorhythm/libspot/gen/spotify/narration;narrationb\x06proto3"
 
 var file_client_tts_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_client_tts_proto_goTypes = []any{

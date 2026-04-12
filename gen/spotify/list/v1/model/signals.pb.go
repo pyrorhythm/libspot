@@ -460,7 +460,7 @@ const file_spotify_list_v1_model_signals_proto_rawDesc = "" +
 	"\n" +
 	"\b_item_idB\x12\n" +
 	"\x10_additional_dataBj\n" +
-	"\x19com.spotify.list.v1.modelB\fSignalsProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\fSignalsProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_signals_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_list_v1_model_signals_proto_goTypes = []any{

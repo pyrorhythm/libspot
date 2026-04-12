@@ -213,7 +213,7 @@ const file_spotify_playback_platform_context_v1_behavior_signals_proto_rawDesc =
 	"\apublish\x18\x03 \x01(\x0e26.spotify.playback_platform.context.v1.behavior.EnabledR\apublish\x12\x1d\n" +
 	"\n" +
 	"signal_ids\x18\x04 \x03(\tR\tsignalIdsB|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_signals_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_context_v1_behavior_signals_proto_goTypes = []any{

@@ -819,7 +819,7 @@ const file_socialgraphv2_proto_rawDesc = "" +
 	"\n" +
 	"\x06FOLLOW\x10\x01\x12\f\n" +
 	"\bUNFOLLOW\x10\x02B\\\n" +
-	"\x15com.socialgraph.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/socialgraph;socialgraph"
+	"\x15com.socialgraph.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/socialgraph;socialgraph"
 
 var file_socialgraphv2_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_socialgraphv2_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

@@ -211,7 +211,7 @@ const file_spotify_audiobookcashier_v1_audiobook_price_proto_rawDesc = "" +
 	"\vfinal_price\x18\x01 \x01(\v2\".spotify.audiobookcashier.v1.PriceR\n" +
 	"finalPrice\x12L\n" +
 	"\x10final_list_price\x18\x02 \x01(\v2\".spotify.audiobookcashier.v1.PriceR\x0efinalListPriceBe\n" +
-	"\x1fcom.spotify.audiobookcashier.v1P\x01Z@github.com/pyrorhythm/libspot/api/spotify/audiobookcashier/v1;v1b\x06proto3"
+	"\x1fcom.spotify.audiobookcashier.v1P\x01Z@github.com/pyrorhythm/libspot/gen/spotify/audiobookcashier/v1;v1b\x06proto3"
 
 var file_spotify_audiobookcashier_v1_audiobook_price_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_audiobookcashier_v1_audiobook_price_proto_goTypes = []any{

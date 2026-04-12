@@ -167,7 +167,7 @@ const file_include_Login5PermanentErrorNonAuth_proto_rawDesc = "" +
 	"\n" +
 	"error_code\x18\x01 \x01(\x05R\terrorCode\x12#\n" +
 	"\rerror_message\x18\x02 \x01(\tR\ferrorMessage\x12\x1b\n" +
-	"\tfrom_core\x18\x03 \x01(\bR\bfromCoreBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\tfrom_core\x18\x03 \x01(\bR\bfromCoreBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_Login5PermanentErrorNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_Login5PermanentErrorNonAuth_proto_goTypes = []any{

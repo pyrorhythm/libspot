@@ -1003,7 +1003,7 @@ const file_ucs_proto_rawDesc = "" +
 	"\n" +
 	"error_code\x18\x01 \x01(\x05R\terrorCode\x12#\n" +
 	"\rerror_message\x18\x02 \x01(\tR\ferrorMessageB\b\n" +
-	"\x06resultBAZ?github.com/pyrorhythm/libspot/api/spotify/remote_config/ucs;ucsb\x06proto3"
+	"\x06resultBAZ?github.com/pyrorhythm/libspot/gen/spotify/remote_config/ucs;ucsb\x06proto3"
 
 var file_ucs_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_ucs_proto_goTypes = []any{

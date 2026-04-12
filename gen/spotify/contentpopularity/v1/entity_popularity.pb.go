@@ -84,7 +84,7 @@ const file_entity_popularity_proto_rawDesc = "" +
 	"\x17entity_popularity.proto\x12\x1cspotify.contentpopularity.v1\"=\n" +
 	"\x10EntityPopularity\x12)\n" +
 	"\x10popularity_score\x18\x01 \x01(\x05R\x0fpopularityScoreBg\n" +
-	" com.spotify.contentpopularity.v1P\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/contentpopularity/v1;v1b\x06proto3"
+	" com.spotify.contentpopularity.v1P\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/contentpopularity/v1;v1b\x06proto3"
 
 var file_entity_popularity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_entity_popularity_proto_goTypes = []any{

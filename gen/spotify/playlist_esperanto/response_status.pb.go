@@ -100,7 +100,7 @@ const file_response_status_proto_rawDesc = "" +
 	"\vstatus_code\x18\x01 \x01(\x05R\n" +
 	"statusCode\x12\x16\n" +
 	"\x06reason\x18\x02 \x01(\tR\x06reasonB\x8c\x01\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x14SPTPlaylistEsperantob\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x14SPTPlaylistEsperantob\x06proto3"
 
 var file_response_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_response_status_proto_goTypes = []any{

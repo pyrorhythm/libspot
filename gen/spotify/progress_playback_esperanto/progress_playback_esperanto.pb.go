@@ -473,7 +473,7 @@ const file_progress_playback_esperanto_proto_rawDesc = "" +
 	"$RESPONSE_RESULT_PLAYBACK_ID_TOO_LONG\x10\v\x12%\n" +
 	"!RESPONSE_RESULT_PLAYBACK_ID_EMPTY\x10\f2\xa4\x01\n" +
 	"\x1aResumptionProgressPlayback\x12\x85\x01\n" +
-	"\bOnUpdate\x12:.spotify.progress_playback_esperanto.proto.OnUpdateRequest\x1a;.spotify.progress_playback_esperanto.proto.OnUpdateResponse\"\x00BcZagithub.com/pyrorhythm/libspot/api/spotify/progress_playback_esperanto;progress_playback_esperantob\x06proto3"
+	"\bOnUpdate\x12:.spotify.progress_playback_esperanto.proto.OnUpdateRequest\x1a;.spotify.progress_playback_esperanto.proto.OnUpdateResponse\"\x00BcZagithub.com/pyrorhythm/libspot/gen/spotify/progress_playback_esperanto;progress_playback_esperantob\x06proto3"
 
 var file_progress_playback_esperanto_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_progress_playback_esperanto_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

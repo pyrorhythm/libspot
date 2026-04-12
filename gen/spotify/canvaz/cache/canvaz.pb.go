@@ -437,7 +437,7 @@ const file_canvaz_proto_rawDesc = "" +
 	"\rVIDEO_LOOPING\x10\x02\x12\x18\n" +
 	"\x14VIDEO_LOOPING_RANDOM\x10\x03\x12\a\n" +
 	"\x03GIF\x10\x04B_\n" +
-	"\x1dcom.spotify.canvazcache.protoP\x01Z<github.com/pyrorhythm/libspot/api/spotify/canvaz/cache;cacheb\x06proto3"
+	"\x1dcom.spotify.canvazcache.protoP\x01Z<github.com/pyrorhythm/libspot/gen/spotify/canvaz/cache;cacheb\x06proto3"
 
 var file_canvaz_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_canvaz_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

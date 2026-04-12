@@ -229,7 +229,7 @@ const file_es_pushed_message_proto_rawDesc = "" +
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05valueB\x84\x01\n" +
-	"/com.spotify.connectivity.pubsub.esperanto.protoZQgithub.com/pyrorhythm/libspot/api/spotify/connectivity/pubsub/esperanto;esperantob\x06proto3"
+	"/com.spotify.connectivity.pubsub.esperanto.protoZQgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/pubsub/esperanto;esperantob\x06proto3"
 
 var file_es_pushed_message_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_pushed_message_proto_goTypes = []any{

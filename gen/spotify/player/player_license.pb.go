@@ -106,7 +106,7 @@ const file_player_license_proto_rawDesc = "" +
 	"\rPlayerLicense\x12\x1e\n" +
 	"\n" +
 	"identifier\x18\x01 \x01(\tR\n" +
-	"identifierB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"identifierB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_player_license_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_player_license_proto_goTypes = []any{

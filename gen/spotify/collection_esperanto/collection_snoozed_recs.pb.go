@@ -362,7 +362,7 @@ const file_collection_snoozed_recs_proto_rawDesc = "" +
 	"\x0eSnoozeDuration\x12\x1b\n" +
 	"\x17SNOOZE_DURATION_30_DAYS\x10\x00\x12\x1b\n" +
 	"\x17SNOOZE_DURATION_10_SECS\x10cB\x85\x01\n" +
-	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/api/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"&com.spotify.collection_esperanto.protoP\x01ZSgithub.com/pyrorhythm/libspot/gen/spotify/collection_esperanto;collection_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_snoozed_recs_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_collection_snoozed_recs_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

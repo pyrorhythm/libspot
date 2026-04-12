@@ -207,7 +207,7 @@ const file_include_AudioDriverInfo_proto_rawDesc = "" +
 	"driverName\x12,\n" +
 	"\x12output_device_name\x18\x02 \x01(\tR\x10outputDeviceName\x124\n" +
 	"\x16output_device_category\x18\x03 \x01(\tR\x14outputDeviceCategory\x12\x16\n" +
-	"\x06reason\x18\x04 \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x06reason\x18\x04 \x01(\tR\x06reasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioDriverInfo_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioDriverInfo_proto_goTypes = []any{

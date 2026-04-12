@@ -158,7 +158,7 @@ const file_pnscapper_proto_rawDesc = "" +
 	"\x18pick_and_shuffle_timecap\x18\x02 \x01(\x05R\x15pickAndShuffleTimecap\"\x1f\n" +
 	"\x05Empty\x12\x16\n" +
 	"\x06unused\x18\x01 \x01(\bR\x06unusedBW\n" +
-	"\x18com.spotify.pnscapper.v1P\x01Z9github.com/pyrorhythm/libspot/api/spotify/pnscapper/v1;v1b\x06proto3"
+	"\x18com.spotify.pnscapper.v1P\x01Z9github.com/pyrorhythm/libspot/gen/spotify/pnscapper/v1;v1b\x06proto3"
 
 var file_pnscapper_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_pnscapper_proto_goTypes = []any{

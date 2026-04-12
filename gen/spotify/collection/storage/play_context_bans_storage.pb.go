@@ -101,7 +101,7 @@ const file_play_context_bans_storage_proto_rawDesc = "" +
 	"\n" +
 	"\x1fplay_context_bans_storage.proto\x12 spotify.collection.proto.storage\"8\n" +
 	"\x18PlayContextBansTimestamp\x12\x1c\n" +
-	"\ttimestamp\x18\x01 \x02(\x03R\ttimestampBFZDgithub.com/pyrorhythm/libspot/api/spotify/collection/storage;storage"
+	"\ttimestamp\x18\x01 \x02(\x03R\ttimestampBFZDgithub.com/pyrorhythm/libspot/gen/spotify/collection/storage;storage"
 
 var file_play_context_bans_storage_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_play_context_bans_storage_proto_goTypes = []any{

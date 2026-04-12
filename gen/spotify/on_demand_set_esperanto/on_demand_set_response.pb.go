@@ -100,7 +100,7 @@ const file_on_demand_set_response_proto_rawDesc = "" +
 	"\vstatus_code\x18\x01 \x01(\x05R\n" +
 	"statusCode\x12\x16\n" +
 	"\x06reason\x18\x02 \x01(\tR\x06reasonB\x84\x01\n" +
-	"\x1fcom.spotify.on_demand_set.protoP\x01ZYgithub.com/pyrorhythm/libspot/api/spotify/on_demand_set_esperanto;on_demand_set_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.on_demand_set.protoP\x01ZYgithub.com/pyrorhythm/libspot/gen/spotify/on_demand_set_esperanto;on_demand_set_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_on_demand_set_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_on_demand_set_response_proto_goTypes = []any{

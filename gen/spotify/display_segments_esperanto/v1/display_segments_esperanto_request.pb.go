@@ -7,7 +7,7 @@
 package v1
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -481,7 +481,7 @@ const file_display_segments_esperanto_request_proto_rawDesc = "" +
 	"\x17EpisodeDecorationPolicy\x12Y\n" +
 	"\x0eepisode_policy\x18\x01 \x01(\v22.spotify.cosmos_util.proto.EpisodeDecorationPolicyR\repisodePolicy\x12e\n" +
 	"\x16show_decoration_policy\x18\x02 \x01(\v2/.spotify.cosmos_util.proto.ShowDecorationPolicyR\x14showDecorationPolicyB\x82\x01\n" +
-	",com.spotify.display_segments_esperanto.protoP\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/display_segments_esperanto/v1;v1\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.display_segments_esperanto.protoP\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/display_segments_esperanto/v1;v1\xa2\x02\x03ESPb\x06proto3"
 
 var file_display_segments_esperanto_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_display_segments_esperanto_request_proto_goTypes = []any{

@@ -325,7 +325,7 @@ const file_context_node_proto_rawDesc = "" +
 	"\titeration\x18\b \x01(\x11R\titeration\x12#\n" +
 	"\rpending_pause\x18\t \x01(\bR\fpendingPause\x12i\n" +
 	"\x1finjected_connect_transfer_track\x18\n" +
-	" \x01(\v2\".spotify.player.proto.ContextTrackR\x1cinjectedConnectTransferTrackB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	" \x01(\v2\".spotify.player.proto.ContextTrackR\x1cinjectedConnectTransferTrackB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_node_proto_goTypes = []any{

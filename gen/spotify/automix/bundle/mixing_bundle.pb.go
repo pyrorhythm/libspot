@@ -2434,7 +2434,7 @@ const file_mixing_bundle_proto_rawDesc = "" +
 	"\x1flegacy_filter_fx_style_mappings\x18\f \x03(\v28.spotify.automix.bundle.proto.LegacyFilterFxStyleMappingR\x1blegacyFilterFxStyleMappings\x12a\n" +
 	"\x14legacy_volume_styles\x18\r \x03(\v2/.spotify.automix.bundle.proto.LegacyVolumeStyleR\x12legacyVolumeStyles\x12U\n" +
 	"\x10legacy_eq_styles\x18\x0e \x03(\v2+.spotify.automix.bundle.proto.LegacyEqStyleR\x0elegacyEqStyles\x12h\n" +
-	"\x17legacy_filter_fx_styles\x18\x0f \x03(\v21.spotify.automix.bundle.proto.LegacyFilterFxStyleR\x14legacyFilterFxStylesBAZ?github.com/pyrorhythm/libspot/api/spotify/automix/bundle;bundleb\x06proto3"
+	"\x17legacy_filter_fx_styles\x18\x0f \x03(\v21.spotify.automix.bundle.proto.LegacyFilterFxStyleR\x14legacyFilterFxStylesBAZ?github.com/pyrorhythm/libspot/gen/spotify/automix/bundle;bundleb\x06proto3"
 
 var file_mixing_bundle_proto_msgTypes = make([]protoimpl.MessageInfo, 23)
 var file_mixing_bundle_proto_goTypes = []any{

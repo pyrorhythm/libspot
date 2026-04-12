@@ -125,7 +125,7 @@ const file_your_library_decorate_request_proto_rawDesc = "" +
 	"\rrequested_uri\x18\x03 \x03(\tR\frequestedUri\x12\x80\x01\n" +
 	"\x1bpredefined_playlist_configs\x18\x06 \x01(\v2@.spotify.your_library.proto.YourLibraryPredefinedPlaylistConfigsR\x19predefinedPlaylistConfigs\x12+\n" +
 	"\x11update_throttling\x18\a \x01(\x05R\x10updateThrottlingBm\n" +
-	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_decorate_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_your_library_decorate_request_proto_goTypes = []any{

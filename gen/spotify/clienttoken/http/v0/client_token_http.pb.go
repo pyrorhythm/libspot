@@ -7,7 +7,7 @@
 package v0
 
 import (
-	v0 "github.com/pyrorhythm/libspot/api/spotify/clienttoken/data/v0"
+	v0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1967,7 +1967,7 @@ const file_spotify_client_token_v0_client_token_http_proto_rawDesc = "" +
 	"\x1cCHALLENGE_CLIENT_SECRET_HMAC\x10\x01\x12\x19\n" +
 	"\x15CHALLENGE_EVALUATE_JS\x10\x02\x12\x17\n" +
 	"\x13CHALLENGE_HASH_CASH\x10\x03Ba\n" +
-	"\x1bspotify.clienttoken.http.v0P\x01Z@github.com/pyrorhythm/libspot/api/spotify/clienttoken/http/v0;v0b\x06proto3"
+	"\x1bspotify.clienttoken.http.v0P\x01Z@github.com/pyrorhythm/libspot/gen/spotify/clienttoken/http/v0;v0b\x06proto3"
 
 var file_spotify_client_token_v0_client_token_http_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_spotify_client_token_v0_client_token_http_proto_msgTypes = make([]protoimpl.MessageInfo, 16)

@@ -239,7 +239,7 @@ const file_include_PendingEventsInternalErrorNonAuth_proto_rawDesc = "" +
 	"\x10underlying_error\x18\x03 \x01(\tR\x0funderlyingError\x12\x1d\n" +
 	"\n" +
 	"event_type\x18\x04 \x01(\tR\teventType\x12*\n" +
-	"\x11event_sequence_no\x18\x05 \x01(\x03R\x0feventSequenceNoBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11event_sequence_no\x18\x05 \x01(\x03R\x0feventSequenceNoBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PendingEventsInternalErrorNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PendingEventsInternalErrorNonAuth_proto_goTypes = []any{

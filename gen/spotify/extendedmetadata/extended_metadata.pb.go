@@ -740,7 +740,7 @@ const file_extended_metadata_proto_rawDesc = "" +
 	"\aUNKNOWN\x10\x00\x12\v\n" +
 	"\aGENERIC\x10\x01\x12\t\n" +
 	"\x05ASSOC\x10\x02Bv\n" +
-	"\"com.spotify.extendedmetadata.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/extendedmetadata;extendedmetadata\xf8\x01\x01b\x06proto3"
+	"\"com.spotify.extendedmetadata.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/extendedmetadata;extendedmetadata\xf8\x01\x01b\x06proto3"
 
 var file_extended_metadata_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_extended_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

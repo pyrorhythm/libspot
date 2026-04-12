@@ -842,7 +842,7 @@ const file_cappingapi_proto_rawDesc = "" +
 	"\x10PICK_AND_SHUFFLE\x10\x02\x12\n" +
 	"\n" +
 	"\x06LYRICS\x10\x03BY\n" +
-	"\x19com.spotify.cappingapi.v1P\x01Z:github.com/pyrorhythm/libspot/api/spotify/cappingapi/v1;v1b\x06proto3"
+	"\x19com.spotify.cappingapi.v1P\x01Z:github.com/pyrorhythm/libspot/gen/spotify/cappingapi/v1;v1b\x06proto3"
 
 var file_cappingapi_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_cappingapi_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

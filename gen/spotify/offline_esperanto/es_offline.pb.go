@@ -3837,7 +3837,7 @@ const file_es_offline_proto_rawDesc = "" +
 	"\x13BulkRedownloadStart\x12\x16.google.protobuf.Empty\x1a<.spotify.offline_esperanto.proto.BulkRedownloadStartResponse\"\x00\x12o\n" +
 	"\x14BulkRedownloadCancel\x12\x16.google.protobuf.Empty\x1a=.spotify.offline_esperanto.proto.BulkRedownloadCancelResponse\"\x00\x12h\n" +
 	"\x1fSubscribeBulkRedownloadProgress\x12\x16.google.protobuf.Empty\x1a).spotify.offline_esperanto.proto.Progress\"\x000\x01B\x81\x01\n" +
-	"#com.spotify.offline_esperanto.protoZMgithub.com/pyrorhythm/libspot/api/spotify/offline_esperanto;offline_esperanto\xa2\x02\n" +
+	"#com.spotify.offline_esperanto.protoZMgithub.com/pyrorhythm/libspot/gen/spotify/offline_esperanto;offline_esperanto\xa2\x02\n" +
 	"ESPOfflineb\x06proto3"
 
 var file_es_offline_proto_enumTypes = make([]protoimpl.EnumInfo, 5)

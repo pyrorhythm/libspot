@@ -1698,7 +1698,7 @@ const file_resumption_platform_proto_rawDesc = "" +
 	"\x19ListCurrentStatesResponse\x12J\n" +
 	"\x0ecurrent_states\x18\x01 \x03(\v2#.spotify.resumption.v1.CurrentStateR\rcurrentStates\x12&\n" +
 	"\x0fnext_page_token\x18\x02 \x01(\tR\rnextPageTokenBk\n" +
-	"\x19com.spotify.resumption.v1B\x10ResumePointProtoP\x01Z:github.com/pyrorhythm/libspot/api/spotify/resumption/v1;v1b\x06proto3"
+	"\x19com.spotify.resumption.v1B\x10ResumePointProtoP\x01Z:github.com/pyrorhythm/libspot/gen/spotify/resumption/v1;v1b\x06proto3"
 
 var file_resumption_platform_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_resumption_platform_proto_goTypes = []any{

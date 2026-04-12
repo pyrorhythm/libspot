@@ -98,7 +98,7 @@ const file_context_sdk_proto_rawDesc = "" +
 	"\x11context_sdk.proto\x12\x1aspotify.event_sender.proto\"<\n" +
 	"\x03Sdk\x12!\n" +
 	"\fversion_name\x18\x01 \x01(\tR\vversionName\x12\x12\n" +
-	"\x04type\x18\x02 \x01(\tR\x04typeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x04type\x18\x02 \x01(\tR\x04typeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_sdk_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_sdk_proto_goTypes = []any{

@@ -158,7 +158,7 @@ const file_permissions_state_proto_rawDesc = "" +
 	"\x10MOBILE_FREE_TIER\x10\x02\x12\b\n" +
 	"\x04DMCA\x10\x03\x12\x13\n" +
 	"\x0fMUSIC_ON_DEMAND\x10\x04\x12\v\n" +
-	"\aUNKNOWN\x10\x05BEZCgithub.com/pyrorhythm/libspot/api/spotify/restrictions;restrictionsb\x06proto3"
+	"\aUNKNOWN\x10\x05BEZCgithub.com/pyrorhythm/libspot/gen/spotify/restrictions;restrictionsb\x06proto3"
 
 var file_permissions_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_permissions_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

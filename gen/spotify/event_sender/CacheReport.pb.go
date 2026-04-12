@@ -955,7 +955,7 @@ const file_include_CacheReport_proto_rawDesc = "" +
 	"\x0elocked_size_kb\x18\x14 \x01(\x03R\flockedSizeKb\x12\x16\n" +
 	"\x06reason\x18\x1a \x01(\tR\x06reason\x12#\n" +
 	"\rmissing_files\x18\x1b \x01(\x03R\fmissingFiles\x12&\n" +
-	"\x0fmissing_size_kb\x18\x1c \x01(\x03R\rmissingSizeKbBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fmissing_size_kb\x18\x1c \x01(\x03R\rmissingSizeKbBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CacheReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CacheReport_proto_goTypes = []any{

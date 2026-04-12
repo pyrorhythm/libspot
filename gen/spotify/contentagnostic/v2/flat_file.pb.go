@@ -84,7 +84,7 @@ const file_flat_file_proto_rawDesc = "" +
 	"\x0fflat_file.proto\x12\x1aspotify.contentagnostic.v2\"#\n" +
 	"\bFlatFile\x12\x17\n" +
 	"\acdn_url\x18\x01 \x01(\tR\x06cdnUrlBc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_flat_file_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_flat_file_proto_goTypes = []any{

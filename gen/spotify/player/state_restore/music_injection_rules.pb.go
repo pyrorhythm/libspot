@@ -433,7 +433,7 @@ const file_state_restore_music_injection_rules_proto_rawDesc = "" +
 	"\x13MusicInjectionRules\x12[\n" +
 	"\x0finjection_model\x18\x01 \x01(\v22.spotify.player.proto.state_restore.InjectionModelR\x0einjectionModel\x12\x1f\n" +
 	"\vplayback_id\x18\x02 \x01(\fR\n" +
-	"playbackIdBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"playbackIdBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_music_injection_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_state_restore_music_injection_rules_proto_goTypes = []any{

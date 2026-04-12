@@ -322,7 +322,7 @@ const file_include_CacheRealmReport_proto_rawDesc = "" +
 	"\x1fnum_locked_entries_current_user\x18\x05 \x01(\x03R\x1bnumLockedEntriesCurrentUser\x12(\n" +
 	"\x10num_full_entries\x18\x06 \x01(\x03R\x0enumFullEntries\x12\x17\n" +
 	"\asize_kb\x18\a \x01(\x03R\x06sizeKb\x12$\n" +
-	"\x0elocked_size_kb\x18\b \x01(\x03R\flockedSizeKbBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0elocked_size_kb\x18\b \x01(\x03R\flockedSizeKbBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CacheRealmReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CacheRealmReport_proto_goTypes = []any{

@@ -340,7 +340,7 @@ const file_include_ResumptionProgressUpdateError_proto_rawDesc = "" +
 	"durationMs\x12\x16\n" +
 	"\x06reason\x18\a \x01(\tR\x06reason\x12\x1f\n" +
 	"\vplayback_id\x18\b \x01(\tR\n" +
-	"playbackIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"playbackIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionProgressUpdateError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionProgressUpdateError_proto_goTypes = []any{

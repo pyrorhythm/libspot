@@ -142,7 +142,7 @@ const file_save_source_proto_rawDesc = "" +
 	"\x0einteraction_id\x18\x02 \x01(\tH\x01R\rinteractionId\x88\x01\x01B\x0f\n" +
 	"\r_original_uriB\x11\n" +
 	"\x0f_interaction_idB\x84\x01\n" +
-	"-com.spotify.list_collection.save_source.protoP\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/list_collection/save_source;save_sourceb\x06proto3"
+	"-com.spotify.list_collection.save_source.protoP\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/list_collection/save_source;save_sourceb\x06proto3"
 
 var file_save_source_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_save_source_proto_goTypes = []any{

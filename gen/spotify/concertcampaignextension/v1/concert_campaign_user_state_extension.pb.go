@@ -1000,7 +1000,7 @@ const file_concert_campaign_user_state_extension_proto_rawDesc = "" +
 	".CAMPAIGN_USER_STATE_INELIGIBLE_AGE_RESTRICTION\x10\x03\x12+\n" +
 	"'CAMPAIGN_USER_STATE_INELIGIBLE_SOLD_OUT\x10\x04\x12,\n" +
 	"(CAMPAIGN_USER_STATE_INELIGIBLE_CANCELLED\x10\x05\x12-\n" +
-	")CAMPAIGN_USER_STATE_INELIGIBLE_SALE_ENDED\x10\x06BJZHgithub.com/pyrorhythm/libspot/api/spotify/concertcampaignextension/v1;v1b\x06proto3"
+	")CAMPAIGN_USER_STATE_INELIGIBLE_SALE_ENDED\x10\x06BJZHgithub.com/pyrorhythm/libspot/gen/spotify/concertcampaignextension/v1;v1b\x06proto3"
 
 var file_concert_campaign_user_state_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_concert_campaign_user_state_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

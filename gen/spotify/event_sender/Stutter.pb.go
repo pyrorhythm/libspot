@@ -521,7 +521,7 @@ const file_include_Stutter_proto_rawDesc = "" +
 	"\x12total_prebuffer_ms\x18\f \x01(\x05R\x10totalPrebufferMs\x12.\n" +
 	"\x13driver_prebuffer_ms\x18\r \x01(\x05R\x11driverPrebufferMs\x12\x1f\n" +
 	"\vbuffered_ms\x18\x0e \x01(\x03R\n" +
-	"bufferedMsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"bufferedMsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_Stutter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_Stutter_proto_goTypes = []any{

@@ -488,7 +488,7 @@ const file_es_context_player_options_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05valueB\x11\n" +
 	"\x0f_playback_speedBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_context_player_options_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_context_player_options_proto_goTypes = []any{

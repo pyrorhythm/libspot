@@ -383,7 +383,7 @@ const file_include_LocalFilesReport_proto_rawDesc = "" +
 	"\x15tracks_unknown_pruned\x18\b \x01(\x03R\x13tracksUnknownPruned\x12>\n" +
 	"\x1btracks_reallocated_repaired\x18\t \x01(\x03R\x19tracksReallocatedRepaired\x12'\n" +
 	"\x0fenabled_sources\x18\n" +
-	" \x01(\x03R\x0eenabledSourcesBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\x03R\x0eenabledSourcesBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_LocalFilesReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_LocalFilesReport_proto_goTypes = []any{

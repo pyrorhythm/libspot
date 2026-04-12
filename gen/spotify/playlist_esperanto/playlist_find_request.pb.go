@@ -260,7 +260,7 @@ const file_playlist_find_request_proto_rawDesc = "" +
 	"\x14PlaylistFindResponse\x12H\n" +
 	"\x06status\x18\x01 \x01(\v20.spotify.playlist_esperanto.proto.ResponseStatusR\x06status\x12G\n" +
 	"\x05items\x18\x02 \x03(\v21.spotify.playlist_esperanto.proto.ItemUriToRowIdsR\x05itemsB{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playlist_find_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_playlist_find_request_proto_goTypes = []any{

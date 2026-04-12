@@ -274,7 +274,7 @@ const file_collection_get_artist_view_request_proto_rawDesc = "" +
 	"\x1fCollectionGetArtistViewResponse\x12?\n" +
 	"\x06status\x18\x01 \x01(\v2'.spotify.collection_cosmos.proto.StatusR\x06status\x12I\n" +
 	"\x06artist\x18\x02 \x01(\v21.spotify.collection_cosmos.proto.CollectionArtistR\x06artistB{\n" +
-	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
+	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_get_artist_view_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_collection_get_artist_view_request_proto_goTypes = []any{

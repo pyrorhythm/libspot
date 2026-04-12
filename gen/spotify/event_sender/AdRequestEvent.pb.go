@@ -354,7 +354,7 @@ const file_include_AdRequestEvent_proto_rawDesc = "" +
 	"\vcontent_uri\x18\a \x01(\tR\n" +
 	"contentUri\x12$\n" +
 	"\x0eapp_startup_id\x18\b \x01(\tR\fappStartupId\x12'\n" +
-	"\x0fconnection_type\x18\t \x01(\tR\x0econnectionTypeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fconnection_type\x18\t \x01(\tR\x0econnectionTypeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdRequestEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdRequestEvent_proto_goTypes = []any{

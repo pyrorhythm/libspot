@@ -156,7 +156,7 @@ const file_ad_formats_proto_rawDesc = "" +
 	"\rad_slot_event\x18\x01 \x01(\v2(.spotify.ads.esperanto.proto.AdSlotEventR\vadSlotEvent2y\n" +
 	"\aFormats\x12n\n" +
 	"\tSubFormat\x12-.spotify.ads.esperanto.proto.SubFormatRequest\x1a..spotify.ads.esperanto.proto.SubFormatResponse\"\x000\x01Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_formats_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_ad_formats_proto_goTypes = []any{

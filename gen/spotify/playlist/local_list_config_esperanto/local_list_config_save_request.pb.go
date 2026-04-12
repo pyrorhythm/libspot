@@ -234,7 +234,7 @@ const file_local_list_config_save_request_proto_rawDesc = "" +
 	"\x1aLocalListConfigSaveRequest\x12]\n" +
 	"\aconfigs\x18\x01 \x03(\v2C.spotify.playlist.local_list_config_esperanto.proto.LocalListConfigR\aconfigs\"\x1d\n" +
 	"\x1bLocalListConfigSaveResponseB\xa2\x01\n" +
-	"2spotify.playlist.local_list_config_esperanto.protoP\x01Zjgithub.com/pyrorhythm/libspot/api/spotify/playlist/local_list_config_esperanto;local_list_config_esperantob\x06proto3"
+	"2spotify.playlist.local_list_config_esperanto.protoP\x01Zjgithub.com/pyrorhythm/libspot/gen/spotify/playlist/local_list_config_esperanto;local_list_config_esperantob\x06proto3"
 
 var file_local_list_config_save_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_local_list_config_save_request_proto_goTypes = []any{

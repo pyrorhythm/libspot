@@ -7,7 +7,7 @@
 package collection_cosmos
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1003,7 +1003,7 @@ const file_collection_item_proto_rawDesc = "" +
 	"\x12episode_play_state\x18\x04 \x01(\v2+.spotify.cosmos_util.proto.EpisodePlayStateR\x10episodePlayState\x12C\n" +
 	"\x04show\x18\x05 \x01(\v2/.spotify.collection_cosmos.proto.CollectionShowR\x04show\x12\x12\n" +
 	"\x04link\x18\x06 \x01(\tR\x04linkB{\n" +
-	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
+	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_item_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_collection_item_proto_goTypes = []any{

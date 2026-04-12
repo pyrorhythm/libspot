@@ -84,7 +84,7 @@ const file_client_restrictions_extension_proto_rawDesc = "" +
 	"#client_restrictions_extension.proto\x12\x1dspotify.clientrestrictions.v1\"H\n" +
 	"\x1fClientRestrictionsExtensionData\x12%\n" +
 	"\x0erestriction_id\x18\x01 \x03(\tR\rrestrictionIdB\x8b\x01\n" +
-	"!com.spotify.clientrestrictions.v1B ClientRestrictionsExtensionProtoP\x01ZBgithub.com/pyrorhythm/libspot/api/spotify/clientrestrictions/v1;v1b\x06proto3"
+	"!com.spotify.clientrestrictions.v1B ClientRestrictionsExtensionProtoP\x01ZBgithub.com/pyrorhythm/libspot/gen/spotify/clientrestrictions/v1;v1b\x06proto3"
 
 var file_client_restrictions_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_client_restrictions_extension_proto_goTypes = []any{

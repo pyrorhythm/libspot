@@ -85,7 +85,7 @@ const file_show_access_update_proto_rawDesc = "" +
 	"\x10ShowAccessUpdate\x12\x1f\n" +
 	"\ventity_uris\x18\x01 \x03(\tR\n" +
 	"entityUrisBp\n" +
-	"\x19com.spotify.showaccess.v1B\x15ShowAccessUpdateProtoP\x01Z:github.com/pyrorhythm/libspot/api/spotify/showaccess/v1;v1b\x06proto3"
+	"\x19com.spotify.showaccess.v1B\x15ShowAccessUpdateProtoP\x01Z:github.com/pyrorhythm/libspot/gen/spotify/showaccess/v1;v1b\x06proto3"
 
 var file_show_access_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_show_access_update_proto_goTypes = []any{

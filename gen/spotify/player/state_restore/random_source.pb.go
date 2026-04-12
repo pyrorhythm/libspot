@@ -132,7 +132,7 @@ const file_state_restore_random_source_proto_rawDesc = "" +
 	"!state_restore/random_source.proto\x12\"spotify.player.proto.state_restore\"D\n" +
 	"\fRandomSource\x12\x19\n" +
 	"\brandom_0\x18\x01 \x02(\x04R\arandom0\x12\x19\n" +
-	"\brandom_1\x18\x02 \x02(\x04R\arandom1BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\brandom_1\x18\x02 \x02(\x04R\arandom1BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_random_source_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_random_source_proto_goTypes = []any{

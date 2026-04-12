@@ -129,7 +129,7 @@ const file_entity_capping_proto_rawDesc = "" +
 	"\n" +
 	"NO_CAPPING\x10\x00\x12\a\n" +
 	"\x03ABP\x10\x01Be\n" +
-	"\x1fcom.spotify.capping.metadata.v1P\x01Z@github.com/pyrorhythm/libspot/api/spotify/capping/metadata/v1;v1b\x06proto3"
+	"\x1fcom.spotify.capping.metadata.v1P\x01Z@github.com/pyrorhythm/libspot/gen/spotify/capping/metadata/v1;v1b\x06proto3"
 
 var file_entity_capping_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_entity_capping_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

@@ -7,7 +7,7 @@
 package cosmos
 
 import (
-	playlist_permission "github.com/pyrorhythm/libspot/api/spotify/playlist_permission"
+	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -493,7 +493,7 @@ const file_members_response_proto_rawDesc = "" +
 	"\x04NONE\x10\x00\x12\x13\n" +
 	"\x0fCAN_BE_FOLLOWED\x10\x01\x12\x15\n" +
 	"\x11CAN_BE_UNFOLLOWED\x10\x02B`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_members_response_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_members_response_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

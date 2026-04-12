@@ -1850,7 +1850,7 @@ const file_connectivity_proto_rawDesc = "" +
 	"\x12systems_integrator\x18\x05 \x01(\tR\x11systemsIntegrator\x12\x1f\n" +
 	"\vsdk_version\x18\x06 \x01(\tR\n" +
 	"sdkVersionBa\n" +
-	"\x1bspotify.clienttoken.data.v0P\x01Z@github.com/pyrorhythm/libspot/api/spotify/clienttoken/data/v0;v0b\x06proto3"
+	"\x1bspotify.clienttoken.data.v0P\x01Z@github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0;v0b\x06proto3"
 
 var file_connectivity_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_connectivity_proto_goTypes = []any{

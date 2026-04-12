@@ -84,7 +84,7 @@ const file_recently_played_playlist_proto_rawDesc = "" +
 	"\x1erecently_played_playlist.proto\x12\x1aspotify.your_library.proto\"9\n" +
 	"\x16RecentlyPlayedPlaylist\x12\x1f\n" +
 	"\vlast_played\x18\x01 \x01(\x03R\n" +
-	"lastPlayedBEZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"lastPlayedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_recently_played_playlist_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_recently_played_playlist_proto_goTypes = []any{

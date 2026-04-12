@@ -1034,7 +1034,7 @@ const file_es_restrictions_proto_rawDesc = "" +
 	"\x14DisallowSignalsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12H\n" +
 	"\x05value\x18\x02 \x01(\v22.spotify.player.esperanto.proto.RestrictionReasonsR\x05valueJ\x04\b\x18\x10\x19Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_restrictions_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_es_restrictions_proto_goTypes = []any{

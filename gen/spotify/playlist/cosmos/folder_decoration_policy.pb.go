@@ -204,7 +204,7 @@ const file_policy_folder_decoration_policy_proto_rawDesc = "" +
 	"\x11recursive_folders\x18\a \x01(\bR\x10recursiveFolders\x12/\n" +
 	"\x13recursive_playlists\x18\b \x01(\bR\x12recursivePlaylists\x12\x12\n" +
 	"\x04rows\x18\t \x01(\bR\x04rowsBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_policy_folder_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_policy_folder_decoration_policy_proto_goTypes = []any{

@@ -470,7 +470,7 @@ const file_audio_associations_proto_rawDesc = "" +
 	"\x05_sizeB\b\n" +
 	"\x06_widthB\t\n" +
 	"\a_heightB|\n" +
-	"*com.spotify.bumblebee.AudioAssociations.v1P\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/bumblebee/audio_associations/v1;v1b\x06proto3"
+	"*com.spotify.bumblebee.AudioAssociations.v1P\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/bumblebee/audio_associations/v1;v1b\x06proto3"
 
 var file_audio_associations_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_audio_associations_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

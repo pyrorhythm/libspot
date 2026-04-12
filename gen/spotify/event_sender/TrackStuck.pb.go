@@ -435,7 +435,7 @@ const file_include_TrackStuck_proto_rawDesc = "" +
 	"\x13is_processing_audio\x18\t \x01(\bR\x11isProcessingAudio\x120\n" +
 	"\x14timeline_instance_id\x18\n" +
 	" \x01(\fR\x12timelineInstanceId\x12,\n" +
-	"\x12audio_driver_state\x18\v \x01(\tR\x10audioDriverStateBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12audio_driver_state\x18\v \x01(\tR\x10audioDriverStateBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_TrackStuck_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_TrackStuck_proto_goTypes = []any{

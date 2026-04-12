@@ -274,7 +274,7 @@ const file_playlist_play_state_proto_rawDesc = "" +
 	"\rSMART_SHUFFLE\x10\x02B\v\n" +
 	"\t_head_uidB\x0f\n" +
 	"\r_shuffle_seedJ\x04\b\x02\x10\x03B\x10\n" +
-	"\x0e_shuffle_stateB=Z;github.com/pyrorhythm/libspot/api/spotify/playlist;playlistb\x06proto3"
+	"\x0e_shuffle_stateB=Z;github.com/pyrorhythm/libspot/gen/spotify/playlist;playlistb\x06proto3"
 
 var file_playlist_play_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playlist_play_state_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

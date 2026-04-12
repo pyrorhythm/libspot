@@ -317,7 +317,7 @@ const file_spotify_playback_platform_context_v1_context_environment_proto_rawDes
 	"\v_item_indexJ\x04\b\x04\x10\x05J\x04\b\x05\x10\x06R\n" +
 	"page_indexR\bpage_urlB\b\n" +
 	"\x06_patchBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_context_environment_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_context_v1_context_environment_proto_goTypes = []any{

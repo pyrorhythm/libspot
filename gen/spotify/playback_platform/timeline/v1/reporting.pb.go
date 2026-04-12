@@ -253,7 +253,7 @@ const file_spotify_playback_platform_timeline_v1_behavior_reporting_proto_rawDes
 	"\f_decision_idB\x1f\n" +
 	"\x1d_custom_reporting_attributionB\x17\n" +
 	"\x15_sequence_provider_idB~\n" +
-	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_behavior_reporting_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_timeline_v1_behavior_reporting_proto_goTypes = []any{

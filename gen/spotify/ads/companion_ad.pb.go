@@ -2193,7 +2193,7 @@ const file_companion_ad_proto_rawDesc = "" +
 	"\x1cSURVEY_QUESTION_TYPE_UNKNOWN\x10\x00\x12\x11\n" +
 	"\rSINGLE_SELECT\x10\x01\x12\x10\n" +
 	"\fMULTI_SELECT\x10\x02BT\n" +
-	"\x1dcom.spotify.ads.companions.v1P\x01Z1github.com/pyrorhythm/libspot/api/spotify/ads;adsb\x06proto3"
+	"\x1dcom.spotify.ads.companions.v1P\x01Z1github.com/pyrorhythm/libspot/gen/spotify/ads;adsb\x06proto3"
 
 var file_companion_ad_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_companion_ad_proto_msgTypes = make([]protoimpl.MessageInfo, 14)

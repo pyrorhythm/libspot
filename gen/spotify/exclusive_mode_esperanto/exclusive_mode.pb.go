@@ -650,7 +650,7 @@ const file_exclusive_mode_proto_rawDesc = "" +
 	"\rUNKNOWN_ERROR\x10\x00\x12\x06\n" +
 	"\x02OK\x10\x01\x12\x11\n" +
 	"\rNOT_SUPPORTED\x10\x02B\x8f\x01\n" +
-	"*com.spotify.exclusive_mode_esperanto.protoZ[github.com/pyrorhythm/libspot/api/spotify/exclusive_mode_esperanto;exclusive_mode_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"*com.spotify.exclusive_mode_esperanto.protoZ[github.com/pyrorhythm/libspot/gen/spotify/exclusive_mode_esperanto;exclusive_mode_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_exclusive_mode_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_exclusive_mode_proto_msgTypes = make([]protoimpl.MessageInfo, 7)

@@ -211,7 +211,7 @@ const file_metadata_image_group_proto_rawDesc = "" +
 	"large_link\x18\x03 \x01(\tR\tlargeLink\x12\x1f\n" +
 	"\vxlarge_link\x18\x04 \x01(\tR\n" +
 	"xlargeLinkBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_image_group_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metadata_image_group_proto_goTypes = []any{

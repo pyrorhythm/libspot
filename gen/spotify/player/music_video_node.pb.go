@@ -406,7 +406,7 @@ const file_music_video_node_proto_rawDesc = "" +
 	"\x17did_transitionmap_query\x18\t \x01(\bR\x15didTransitionmapQuery\x12*\n" +
 	"\x11audio_is_filtered\x18\n" +
 	" \x01(\bR\x0faudioIsFiltered\x12*\n" +
-	"\x11video_is_filtered\x18\v \x01(\bR\x0fvideoIsFilteredB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x11video_is_filtered\x18\v \x01(\bR\x0fvideoIsFilteredB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_music_video_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_music_video_node_proto_goTypes = []any{

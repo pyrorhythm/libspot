@@ -80,7 +80,7 @@ const file_on_demand_in_free_reason_proto_rawDesc = "" +
 	"\rNOT_ON_DEMAND\x10\x01\x12\r\n" +
 	"\tON_DEMAND\x10\x02\x12\x1b\n" +
 	"\x17ON_DEMAND_EPISODES_ONLY\x10\x03\x12\x1c\n" +
-	"\x18ON_DEMAND_NON_MUSIC_ONLY\x10\x04BGZEgithub.com/pyrorhythm/libspot/api/spotify/on_demand_set;on_demand_set"
+	"\x18ON_DEMAND_NON_MUSIC_ONLY\x10\x04BGZEgithub.com/pyrorhythm/libspot/gen/spotify/on_demand_set;on_demand_set"
 
 var file_on_demand_in_free_reason_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_on_demand_in_free_reason_proto_goTypes = []any{

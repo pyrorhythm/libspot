@@ -7,7 +7,7 @@
 package metadata
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/metadata/contentratings/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/metadata/contentratings/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -6194,7 +6194,7 @@ const file_metadata_proto_rawDesc = "" +
 	"\rContentRating\x12\x18\n" +
 	"\acountry\x18\x01 \x01(\tR\acountry\x12\x10\n" +
 	"\x03tag\x18\x02 \x03(\tR\x03tagBc\n" +
-	"\x1acom.spotify.metadata.protoB\bMetadataZ;github.com/pyrorhythm/libspot/api/spotify/metadata;metadata"
+	"\x1acom.spotify.metadata.protoB\bMetadataZ;github.com/pyrorhythm/libspot/gen/spotify/metadata;metadata"
 
 var file_metadata_proto_enumTypes = make([]protoimpl.EnumInfo, 11)
 var file_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 26)

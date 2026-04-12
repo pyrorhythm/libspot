@@ -133,7 +133,7 @@ const file_sequence_number_entity_proto_rawDesc = "" +
 	"event_name\x18\x02 \x01(\tR\teventName\x12\x1f\n" +
 	"\vsequence_id\x18\x03 \x01(\fR\n" +
 	"sequenceId\x120\n" +
-	"\x14sequence_number_next\x18\x04 \x01(\x04R\x12sequenceNumberNextBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x14sequence_number_next\x18\x04 \x01(\x04R\x12sequenceNumberNextBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_sequence_number_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_sequence_number_entity_proto_goTypes = []any{

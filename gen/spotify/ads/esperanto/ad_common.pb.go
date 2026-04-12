@@ -3304,7 +3304,7 @@ const file_ad_common_proto_rawDesc = "" +
 	"\x1cSURVEY_QUESTION_TYPE_UNKNOWN\x10\x00\x12\x11\n" +
 	"\rSINGLE_SELECT\x10\x01\x12\x10\n" +
 	"\fMULTI_SELECT\x10\x02Bf\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperantob\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperantob\x06proto3"
 
 var file_ad_common_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_ad_common_proto_msgTypes = make([]protoimpl.MessageInfo, 21)

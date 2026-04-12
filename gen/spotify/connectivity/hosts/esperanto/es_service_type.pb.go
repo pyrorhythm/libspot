@@ -128,7 +128,7 @@ const file_es_service_type_proto_rawDesc = "" +
 	"\x0fServiceTypeEnum\x12\x0f\n" +
 	"\vBACKEND_RPC\x10\x00\x12\x15\n" +
 	"\x11BACKEND_STREAMING\x10\x01B\x82\x01\n" +
-	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/api/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
+	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
 
 var file_es_service_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_service_type_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

@@ -138,7 +138,7 @@ const file_include_ClientLocale_proto_rawDesc = "" +
 	"\x1ainclude/ClientLocale.proto\x12\x1aspotify.event_sender.proto\"v\n" +
 	"\fClientLocale\x122\n" +
 	"\x15client_default_locale\x18\x01 \x01(\tR\x13clientDefaultLocale\x122\n" +
-	"\x15user_specified_locale\x18\x02 \x01(\tR\x13userSpecifiedLocaleBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15user_specified_locale\x18\x02 \x01(\tR\x13userSpecifiedLocaleBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ClientLocale_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ClientLocale_proto_goTypes = []any{

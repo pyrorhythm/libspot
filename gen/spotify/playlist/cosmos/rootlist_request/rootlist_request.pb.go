@@ -7,9 +7,9 @@
 package rootlist_request
 
 import (
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
-	playlist_permission "github.com/pyrorhythm/libspot/api/spotify/playlist_permission"
-	spotifybuf_deltas "github.com/pyrorhythm/libspot/api/spotifybuf_deltas"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
+	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
+	spotifybuf_deltas "github.com/pyrorhythm/libspot/gen/spotifybuf_deltas"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -795,7 +795,7 @@ const file_rootlist_request_proto_rawDesc = "" +
 	"\x11unfiltered_length\x18\x02 \x01(\x05R\x10unfilteredLength\x12'\n" +
 	"\x0funranged_length\x18\x03 \x01(\x05R\x0eunrangedLength\x12.\n" +
 	"\x13is_loading_contents\x18\x04 \x01(\bR\x11isLoadingContentsB\x95\x01\n" +
-	"\x1acom.spotify.playlist.protoZ[github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos/rootlist_request;rootlist_request\xa2\x02\x19SPTPlaylistCosmosRootlist"
+	"\x1acom.spotify.playlist.protoZ[github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos/rootlist_request;rootlist_request\xa2\x02\x19SPTPlaylistCosmosRootlist"
 
 var file_rootlist_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_rootlist_request_proto_goTypes = []any{

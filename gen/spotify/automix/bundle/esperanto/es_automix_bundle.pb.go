@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	bundle "github.com/pyrorhythm/libspot/api/spotify/automix/bundle"
+	bundle "github.com/pyrorhythm/libspot/gen/spotify/automix/bundle"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -142,7 +142,7 @@ const file_es_automix_bundle_proto_rawDesc = "" +
 	"\rmixing_bundle\x18\x01 \x01(\v2*.spotify.automix.bundle.proto.MixingBundleR\fmixingBundle2\xa6\x01\n" +
 	"\rAutomixBundle\x12\x94\x01\n" +
 	"\x0fGetMixingBundle\x12>.spotify.automix.bundle.esperanto.proto.GetMixingBundleRequest\x1a?.spotify.automix.bundle.esperanto.proto.GetMixingBundleResponse\"\x00B\x80\x01\n" +
-	"*com.spotify.automix.bundle.esperanto.protoZLgithub.com/pyrorhythm/libspot/api/spotify/automix/bundle/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"*com.spotify.automix.bundle.esperanto.protoZLgithub.com/pyrorhythm/libspot/gen/spotify/automix/bundle/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_automix_bundle_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_automix_bundle_proto_goTypes = []any{

@@ -156,7 +156,7 @@ const file_skip_nexts_proto_rawDesc = "" +
 	"\tSkipNexts\x12P\n" +
 	"\tskip_next\x18\x01 \x03(\v23.spotify.restrictions.impl.proto.SkipNexts.SkipNextR\bskipNext\x1aD\n" +
 	"\bSkipNext\x128\n" +
-	"\ttimestamp\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestampBBZ@github.com/pyrorhythm/libspot/api/spotify/restrictions/impl;implb\x06proto3"
+	"\ttimestamp\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestampBBZ@github.com/pyrorhythm/libspot/gen/spotify/restrictions/impl;implb\x06proto3"
 
 var file_skip_nexts_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_skip_nexts_proto_goTypes = []any{

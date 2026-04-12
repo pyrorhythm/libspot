@@ -83,7 +83,7 @@ const file_context_time_proto_rawDesc = "" +
 	"\n" +
 	"\x12context_time.proto\x12\x1aspotify.event_sender.proto\"\x1c\n" +
 	"\x04Time\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\x03R\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x05value\x18\x01 \x01(\x03R\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_time_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_time_proto_goTypes = []any{

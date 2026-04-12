@@ -84,7 +84,7 @@ const file_spotify_playback_platform_context_v1_metadata_basic_proto_rawDesc = "
 	"9spotify/playback_platform/context/v1/metadata/basic.proto\x12-spotify.playback_platform.context.v1.metadata\"\x1d\n" +
 	"\x05Basic\x12\x14\n" +
 	"\x05title\x18\x01 \x01(\tR\x05titleB\x8b\x01\n" +
-	"-spotify.playback_platform.context.v1.metadataP\x01ZXgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1/metadata;metadatab\x06proto3"
+	"-spotify.playback_platform.context.v1.metadataP\x01ZXgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1/metadata;metadatab\x06proto3"
 
 var file_spotify_playback_platform_context_v1_metadata_basic_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_context_v1_metadata_basic_proto_goTypes = []any{

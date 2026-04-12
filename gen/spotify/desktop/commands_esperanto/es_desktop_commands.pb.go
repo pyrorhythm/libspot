@@ -417,7 +417,7 @@ const file_es_desktop_commands_proto_rawDesc = "" +
 	"%DESKTOP_COMMAND_SET_RTL_EMULATION_OFF\x10\xb2\x022\xab\x02\n" +
 	"\x0fDesktopCommands\x12\x9d\x01\n" +
 	"\x10SubscribeCommand\x12A.spotify.desktop.commands_esperanto.proto.SubscribeCommandRequest\x1aB.spotify.desktop.commands_esperanto.proto.SubscribeCommandResponse\"\x000\x01\x12x\n" +
-	"\x13SubscribeNavigation\x12\x16.google.protobuf.Empty\x1aE.spotify.desktop.commands_esperanto.proto.SubscribeNavigationResponse\"\x000\x01BYZWgithub.com/pyrorhythm/libspot/api/spotify/desktop/commands_esperanto;commands_esperantob\x06proto3"
+	"\x13SubscribeNavigation\x12\x16.google.protobuf.Empty\x1aE.spotify.desktop.commands_esperanto.proto.SubscribeNavigationResponse\"\x000\x01BYZWgithub.com/pyrorhythm/libspot/gen/spotify/desktop/commands_esperanto;commands_esperantob\x06proto3"
 
 var file_es_desktop_commands_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_desktop_commands_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

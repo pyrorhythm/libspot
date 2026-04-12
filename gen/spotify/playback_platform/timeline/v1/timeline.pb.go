@@ -201,7 +201,7 @@ const file_spotify_playback_platform_timeline_v1_timeline_proto_rawDesc = "" +
 	"\x04_uidB\f\n" +
 	"\n" +
 	"_format_idBu\n" +
-	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_timeline_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_timeline_v1_timeline_proto_goTypes = []any{

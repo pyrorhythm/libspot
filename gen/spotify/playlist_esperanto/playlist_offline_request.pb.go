@@ -243,7 +243,7 @@ const file_playlist_offline_request_proto_rawDesc = "" +
 	"\x04NONE\x10\x00\x12\x1c\n" +
 	"\x18SET_AS_AVAILABLE_OFFLINE\x10\x01\x12\x1f\n" +
 	"\x1bREMOVE_AS_AVAILABLE_OFFLINE\x10\x02B{\n" +
-	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
+	" spotify.playlist.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto;playlist_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playlist_offline_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playlist_offline_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

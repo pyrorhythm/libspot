@@ -365,7 +365,7 @@ const file_context_view_cyclic_list_proto_rawDesc = "" +
 	"\x12CyclicEntryKeyList\x12I\n" +
 	"\tdelimiter\x18\x01 \x01(\v2+.spotify.player.context_view.proto.EntryKeyR\tdelimiter\x12A\n" +
 	"\x05items\x18\x02 \x03(\v2+.spotify.player.context_view.proto.EntryKeyR\x05items\x12J\n" +
-	"\x05patch\x18\x03 \x01(\v24.spotify.player.context_view.cyclic_list.proto.PatchR\x05patchB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05patch\x18\x03 \x01(\v24.spotify.player.context_view.cyclic_list.proto.PatchR\x05patchB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_view_cyclic_list_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_context_view_cyclic_list_proto_goTypes = []any{

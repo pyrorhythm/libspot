@@ -319,7 +319,7 @@ const file_mft_play_history_proto_rawDesc = "" +
 	"\ttrack_uid\x18\x05 \x01(\tR\btrackUid\"\xb7\x01\n" +
 	"\vPlayHistory\x12J\n" +
 	"\x05items\x18\x01 \x03(\v24.spotify.playlist.proto.mft_lens_poc.PlayHistoryItemR\x05items\x12\\\n" +
-	"\x0fcurrent_context\x18\x02 \x01(\v23.spotify.playlist.proto.mft_lens_poc.CurrentContextR\x0ecurrentContextBNZLgithub.com/pyrorhythm/libspot/api/spotify/playlist/mft_lens_poc;mft_lens_pocb\x06proto3"
+	"\x0fcurrent_context\x18\x02 \x01(\v23.spotify.playlist.proto.mft_lens_poc.CurrentContextR\x0ecurrentContextBNZLgithub.com/pyrorhythm/libspot/gen/spotify/playlist/mft_lens_poc;mft_lens_pocb\x06proto3"
 
 var file_mft_play_history_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_mft_play_history_proto_goTypes = []any{

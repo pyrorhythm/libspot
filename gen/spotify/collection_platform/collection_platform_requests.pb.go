@@ -202,7 +202,7 @@ const file_collection_platform_requests_proto_rawDesc = "" +
 	"\x0eNOT_INTERESTED\x10\x0e\x12\x0e\n" +
 	"\n" +
 	"PAGE_MATCH\x10\x10B\x8c\x01\n" +
-	"/com.spotify.collection_platform.esperanto.protoP\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/collection_platform;collection_platform\xa2\x02\x03ESPb\x06proto3"
+	"/com.spotify.collection_platform.esperanto.protoP\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/collection_platform;collection_platform\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_platform_requests_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_collection_platform_requests_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

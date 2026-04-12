@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -426,7 +426,7 @@ const file_spotify_playback_platform_timeline_v1_behavior_restrictions_proto_raw
 	"\fadd_to_queue\x181 \x03(\x0e20.spotify.playback_platform.common.v1.RestrictionR\n" +
 	"addToQueue\x12L\n" +
 	"\btransfer\x182 \x03(\x0e20.spotify.playback_platform.common.v1.RestrictionR\btransferJ\x04\b&\x100B~\n" +
-	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_behavior_restrictions_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_timeline_v1_behavior_restrictions_proto_goTypes = []any{

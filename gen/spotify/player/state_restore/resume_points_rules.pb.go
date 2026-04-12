@@ -330,7 +330,7 @@ const file_state_restore_resume_points_rules_proto_rawDesc = "" +
 	"\rresume_points\x18\x01 \x03(\v2G.spotify.player.proto.state_restore.ResumePointsRules.ResumePointsEntryR\fresumePoints\x1al\n" +
 	"\x11ResumePointsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12E\n" +
-	"\x05value\x18\x02 \x01(\v2/.spotify.player.proto.state_restore.ResumePointR\x05valueBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x05value\x18\x02 \x01(\v2/.spotify.player.proto.state_restore.ResumePointR\x05valueBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_resume_points_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_state_restore_resume_points_rules_proto_goTypes = []any{

@@ -187,7 +187,7 @@ const file_stream_seek_request_proto_rawDesc = "" +
 	"\x10client_timestamp\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\x0fclientTimestamp\x123\n" +
 	"\x13is_system_initiated\x18\x06 \x01(\bH\x00R\x11isSystemInitiated\x88\x01\x01B\x16\n" +
 	"\x14_is_system_initiatedJ\x04\b\x02\x10\x03B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_stream_seek_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_stream_seek_request_proto_goTypes = []any{

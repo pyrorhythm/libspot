@@ -129,7 +129,7 @@ const file_es_add_pending_event_response_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\x0e2:.spotify.pending_events.esperanto.proto.PendingEventsErrorR\x05error\x12(\n" +
 	"\x10token_event_name\x18\x03 \x01(\tR\x0etokenEventName\x12*\n" +
 	"\x11token_sequence_no\x18\x04 \x01(\rR\x0ftokenSequenceNoB\x82\x01\n" +
-	"*com.spotify.pending_events.esperanto.protoP\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/pending_events/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"*com.spotify.pending_events.esperanto.protoP\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/pending_events/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_add_pending_event_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_add_pending_event_response_proto_goTypes = []any{

@@ -274,7 +274,7 @@ const file_show_episode_state_proto_rawDesc = "" +
 	"\x12is_in_listen_later\x18\x03 \x01(\bR\x0fisInListenLater\"_\n" +
 	"\x13EpisodeOfflineState\x12#\n" +
 	"\roffline_state\x18\x01 \x01(\tR\fofflineState\x12#\n" +
-	"\rsync_progress\x18\x02 \x01(\rR\fsyncProgressBCZAgithub.com/pyrorhythm/libspot/api/spotify/show_cosmos;show_cosmos"
+	"\rsync_progress\x18\x02 \x01(\rR\fsyncProgressBCZAgithub.com/pyrorhythm/libspot/gen/spotify/show_cosmos;show_cosmos"
 
 var file_show_episode_state_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_show_episode_state_proto_goTypes = []any{

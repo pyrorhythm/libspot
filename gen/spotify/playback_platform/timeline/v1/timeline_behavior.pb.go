@@ -227,7 +227,7 @@ const file_spotify_playback_platform_timeline_v1_timeline_behavior_proto_rawDesc
 	"seekToNext\x12U\n" +
 	"\tseek_snap\x18\x05 \x01(\v28.spotify.playback_platform.timeline.v1.behavior.SeekSnapR\bseekSnap\x12U\n" +
 	"\tseek_into\x18\x06 \x01(\v28.spotify.playback_platform.timeline.v1.behavior.SeekIntoR\bseekIntoBu\n" +
-	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_timeline_behavior_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_timeline_v1_timeline_behavior_proto_goTypes = []any{

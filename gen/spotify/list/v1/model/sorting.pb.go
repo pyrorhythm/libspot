@@ -259,7 +259,7 @@ const file_spotify_list_v1_model_sorting_proto_rawDesc = "" +
 	"\x15SORTING_TYPE_ADD_TIME\x10\x06\x12 \n" +
 	"\x1cSORTING_TYPE_RECENTLY_PLAYED\x10\a\x12\x1d\n" +
 	"\x19SORTING_TYPE_RELEASE_DATE\x10\bBj\n" +
-	"\x19com.spotify.list.v1.modelB\fSortingProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\fSortingProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_sorting_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_spotify_list_v1_model_sorting_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

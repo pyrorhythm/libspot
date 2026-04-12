@@ -169,7 +169,7 @@ const file_followed_users_request_proto_rawDesc = "" +
 	"\x15FollowedUsersResponse\x12K\n" +
 	"\x06status\x18\x01 \x01(\v23.spotify.socialgraph_esperanto.proto.ResponseStatusR\x06status\x12\x14\n" +
 	"\x05users\x18\x02 \x03(\tR\x05usersB\x84\x01\n" +
-	"#spotify.socialgraph.esperanto.protoP\x01ZUgithub.com/pyrorhythm/libspot/api/spotify/socialgraph_esperanto;socialgraph_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#spotify.socialgraph.esperanto.protoP\x01ZUgithub.com/pyrorhythm/libspot/gen/spotify/socialgraph_esperanto;socialgraph_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_followed_users_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_followed_users_request_proto_goTypes = []any{

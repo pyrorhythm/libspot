@@ -652,7 +652,7 @@ const file_include_MetadataExtensionClientStatistic_proto_rawDesc = "" +
 	"\x16extension_kinds_needed\x18\x10 \x03(\x05R\x14extensionKindsNeeded\x123\n" +
 	"\x16cache_peek_duration_ms\x18\x11 \x01(\x05R\x13cachePeekDurationMs\x125\n" +
 	"\x17request_task_error_code\x18\x12 \x01(\x05R\x14requestTaskErrorCode\x123\n" +
-	"\x16cache_peek_duration_ns\x18\x13 \x01(\x03R\x13cachePeekDurationNsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x16cache_peek_duration_ns\x18\x13 \x01(\x03R\x13cachePeekDurationNsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_MetadataExtensionClientStatistic_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_MetadataExtensionClientStatistic_proto_goTypes = []any{

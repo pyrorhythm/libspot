@@ -426,7 +426,7 @@ const file_include_EventSenderCanaryNonAuth_proto_rawDesc = "" +
 	"\x12experiment_variant\x18\t \x01(\tR\x11experimentVariant\x12%\n" +
 	"\x0emutation_count\x18\n" +
 	" \x01(\x03R\rmutationCount\x126\n" +
-	"\x17expected_mutation_count\x18\v \x01(\x03R\x15expectedMutationCountBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x17expected_mutation_count\x18\v \x01(\x03R\x15expectedMutationCountBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_EventSenderCanaryNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_EventSenderCanaryNonAuth_proto_goTypes = []any{

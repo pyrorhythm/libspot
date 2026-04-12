@@ -203,7 +203,7 @@ const file_spotify_list_v1_model_attributes_picture_size_proto_rawDesc = "" +
 	"\x03url\x18\x02 \x01(\tH\x01R\x03url\x88\x01\x01B\x0e\n" +
 	"\f_target_nameB\x06\n" +
 	"\x04_urlBz\n" +
-	"$com.spotify.list.v1.model.attributesB\x11PictureSizesProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x11PictureSizesProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_picture_size_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_list_v1_model_attributes_picture_size_proto_goTypes = []any{

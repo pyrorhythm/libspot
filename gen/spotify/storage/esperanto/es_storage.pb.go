@@ -935,7 +935,7 @@ const file_es_storage_proto_rawDesc = "" +
 	"\x13DeleteUnlockedItems\x12:.spotify.storage.esperanto.proto.DeleteUnlockedItemsParams\x1a\x16.google.protobuf.Empty\"\x00\x12e\n" +
 	"\bGetStats\x12/.spotify.storage.esperanto.proto.GetStatsParams\x1a&.spotify.storage.esperanto.proto.Stats\"\x00\x12t\n" +
 	"\rGetFileRanges\x124.spotify.storage.esperanto.proto.GetFileRangesParams\x1a+.spotify.storage.esperanto.proto.FileRanges\"\x00Br\n" +
-	"#com.spotify.storage.esperanto.protoZEgithub.com/pyrorhythm/libspot/api/spotify/storage/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#com.spotify.storage.esperanto.protoZEgithub.com/pyrorhythm/libspot/gen/spotify/storage/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_storage_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_storage_proto_msgTypes = make([]protoimpl.MessageInfo, 11)

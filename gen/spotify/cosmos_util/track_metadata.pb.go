@@ -1257,7 +1257,7 @@ const file_metadata_track_metadata_proto_rawDesc = "" +
 	"\n" +
 	"is_curated\x18\x15 \x01(\bR\tisCurated\x12(\n" +
 	"\x10to_be_obfuscated\x18\x16 \x01(\bR\x0etoBeObfuscatedBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_track_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_metadata_track_metadata_proto_goTypes = []any{

@@ -132,7 +132,7 @@ const file_es_command_options_proto_rawDesc = "" +
 	"\x15only_for_local_device\x18\x02 \x01(\bR\x12onlyForLocalDevice\x12)\n" +
 	"\x10system_initiated\x18\x03 \x01(\bR\x0fsystemInitiated\x12/\n" +
 	"\x14only_for_playback_id\x18\x04 \x01(\fR\x11onlyForPlaybackIdBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_command_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_command_options_proto_goTypes = []any{

@@ -99,7 +99,7 @@ const file_es_hosts_proto_rawDesc = "" +
 	"\x05Hosts\x122\n" +
 	"\x14backendStreamingHost\x18\x01 \x01(\tR\x14backendStreamingHost\x12&\n" +
 	"\x0ebackendRpcHost\x18\x02 \x01(\tR\x0ebackendRpcHostB\x82\x01\n" +
-	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/api/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
+	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
 
 var file_es_hosts_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_hosts_proto_goTypes = []any{

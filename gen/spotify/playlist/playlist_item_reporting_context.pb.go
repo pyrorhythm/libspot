@@ -206,7 +206,7 @@ const file_playlist_item_reporting_context_proto_rawDesc = "" +
 	"\x1cconnect_controller_device_id\x18\v \x01(\tR\x19connectControllerDeviceId\x12%\n" +
 	"\x0eentrypoint_uri\x18\x10 \x01(\tR\rentrypointUri\x12%\n" +
 	"\x0einteraction_id\x18\x11 \x01(\tR\rinteractionId\x12(\n" +
-	"\x10page_instance_id\x18\x12 \x01(\tR\x0epageInstanceIdJ\x04\b\x03\x10\x04J\x04\b\x04\x10\x05J\x04\b\x05\x10\x06J\x04\b\x06\x10\aJ\x04\b\b\x10\tJ\x04\b\f\x10\rJ\x04\b\r\x10\x0eJ\x04\b\x0e\x10\x0fJ\x04\b\x0f\x10\x10B=Z;github.com/pyrorhythm/libspot/api/spotify/playlist;playlistb\x06proto3"
+	"\x10page_instance_id\x18\x12 \x01(\tR\x0epageInstanceIdJ\x04\b\x03\x10\x04J\x04\b\x04\x10\x05J\x04\b\x05\x10\x06J\x04\b\x06\x10\aJ\x04\b\b\x10\tJ\x04\b\f\x10\rJ\x04\b\r\x10\x0eJ\x04\b\x0e\x10\x0fJ\x04\b\x0f\x10\x10B=Z;github.com/pyrorhythm/libspot/gen/spotify/playlist;playlistb\x06proto3"
 
 var file_playlist_item_reporting_context_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_playlist_item_reporting_context_proto_goTypes = []any{

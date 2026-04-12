@@ -7,7 +7,7 @@
 package pubsub
 
 import (
-	playbacksettings "github.com/pyrorhythm/libspot/api/spotify/playbacksettings"
+	playbacksettings "github.com/pyrorhythm/libspot/gen/spotify/playbacksettings"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -256,7 +256,7 @@ const file_playback_settings_pubsub_proto_rawDesc = "" +
 	"\x0echanged_fields\x18\x03 \x03(\v2\x1f.spotify.playbacksettings.FieldR\rchangedFieldsJ\x04\b\x01\x10\x02\"h\n" +
 	"\x18UserSettingsChangedEvent\x12F\n" +
 	"\x0echanged_fields\x18\x02 \x03(\v2\x1f.spotify.playbacksettings.FieldR\rchangedFieldsJ\x04\b\x01\x10\x02Bw\n" +
-	")com.spotify.playbacksettings.model.pubsubP\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playbacksettings/pubsub;pubsubb\x06proto3"
+	")com.spotify.playbacksettings.model.pubsubP\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playbacksettings/pubsub;pubsubb\x06proto3"
 
 var file_playback_settings_pubsub_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_playback_settings_pubsub_proto_goTypes = []any{

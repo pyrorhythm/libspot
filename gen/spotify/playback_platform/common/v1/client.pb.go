@@ -121,7 +121,7 @@ const file_spotify_playback_platform_common_v1_client_proto_rawDesc = "" +
 	"\x06Client\x12C\n" +
 	"\x06device\x18\x01 \x01(\v2+.spotify.playback_platform.common.v1.DeviceR\x06device\x12C\n" +
 	"\x06locale\x18\x02 \x01(\v2+.spotify.playback_platform.common.v1.LocaleR\x06localeBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_client_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_common_v1_client_proto_goTypes = []any{

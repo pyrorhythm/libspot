@@ -501,7 +501,7 @@ const file_podcast_poll_proto_rawDesc = "" +
 	"\n" +
 	"\x06CLOSED\x10\x03\x12\v\n" +
 	"\aBLOCKED\x10\x04B~\n" +
-	"*com.spotify.podcastcreatorinteractivity.v1B\x11PollMetadataProtoP\x01Z5github.com/pyrorhythm/libspot/api/spotify/polls;polls\xa2\x02\x03SPTb\x06proto3"
+	"*com.spotify.podcastcreatorinteractivity.v1B\x11PollMetadataProtoP\x01Z5github.com/pyrorhythm/libspot/gen/spotify/polls;polls\xa2\x02\x03SPTb\x06proto3"
 
 var file_podcast_poll_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_podcast_poll_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

@@ -200,7 +200,7 @@ const file_include_PubSubCountPerIdent_proto_rawDesc = "" +
 	"\fident_filter\x18\x01 \x01(\tR\videntFilter\x125\n" +
 	"\x17no_of_messages_received\x18\x02 \x01(\x05R\x14noOfMessagesReceived\x127\n" +
 	"\x18no_of_failed_conversions\x18\x03 \x01(\x05R\x15noOfFailedConversions\x12&\n" +
-	"\x0eimplementation\x18\x04 \x01(\tR\x0eimplementationBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0eimplementation\x18\x04 \x01(\tR\x0eimplementationBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PubSubCountPerIdent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PubSubCountPerIdent_proto_goTypes = []any{

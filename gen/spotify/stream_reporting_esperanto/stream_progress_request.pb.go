@@ -481,7 +481,7 @@ const file_stream_progress_request_proto_rawDesc = "" +
 	"\f_content_uriB\x0e\n" +
 	"\f_is_audio_onB\x13\n" +
 	"\x11_video_surface_v2J\x04\b\x11\x10\x12J\x04\b\x13\x10\x14B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_stream_progress_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_stream_progress_request_proto_goTypes = []any{

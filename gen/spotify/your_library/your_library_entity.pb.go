@@ -7,7 +7,7 @@
 package your_library
 
 import (
-	collection "github.com/pyrorhythm/libspot/api/spotify/collection"
+	collection "github.com/pyrorhythm/libspot/gen/spotify/collection"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -563,7 +563,7 @@ const file_your_library_entity_proto_rawDesc = "" +
 	"\x05venue\x18\n" +
 	" \x01(\v22.spotify.your_library.proto.YourLibraryVenueEntityH\x00R\x05venue\x12i\n" +
 	"\x10concert_campaign\x18\v \x01(\v2<.spotify.your_library.proto.YourLibraryConcertCampaignEntityH\x00R\x0fconcertCampaignB\b\n" +
-	"\x06entityBEZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"\x06entityBEZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_your_library_entity_proto_goTypes = []any{

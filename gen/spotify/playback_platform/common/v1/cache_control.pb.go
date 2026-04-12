@@ -166,7 +166,7 @@ const file_spotify_playback_platform_common_v1_cache_control_proto_rawDesc = "" 
 	"validUntil\x88\x01\x01B\r\n" +
 	"\v_entity_tagB\x0e\n" +
 	"\f_valid_untilBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_cache_control_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_common_v1_cache_control_proto_goTypes = []any{

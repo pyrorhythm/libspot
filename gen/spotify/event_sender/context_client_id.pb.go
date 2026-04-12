@@ -86,7 +86,7 @@ const file_context_client_id_proto_rawDesc = "" +
 	"\n" +
 	"\x17context_client_id.proto\x12\x1aspotify.event_sender.proto\" \n" +
 	"\bClientId\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\fR\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x05value\x18\x01 \x01(\fR\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_client_id_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_client_id_proto_goTypes = []any{

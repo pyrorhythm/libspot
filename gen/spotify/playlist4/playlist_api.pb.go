@@ -7,9 +7,9 @@
 package playlist4
 
 import (
-	lens "github.com/pyrorhythm/libspot/api/spotify/lens"
-	signal "github.com/pyrorhythm/libspot/api/spotify/playlist/signal"
-	playlist_permission "github.com/pyrorhythm/libspot/api/spotify/playlist_permission"
+	lens "github.com/pyrorhythm/libspot/gen/spotify/lens"
+	signal "github.com/pyrorhythm/libspot/gen/spotify/playlist/signal"
+	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -6917,7 +6917,7 @@ const file_playlist_api_proto_rawDesc = "" +
 	"\x1cGEOBLOCK_BLOCKING_TYPE_TITLE\x10\x01\x12&\n" +
 	"\"GEOBLOCK_BLOCKING_TYPE_DESCRIPTION\x10\x02\x12 \n" +
 	"\x1cGEOBLOCK_BLOCKING_TYPE_IMAGE\x10\x03Bo\n" +
-	"\x1bcom.spotify.playlist4.protoB\x11Playlist4ApiProtoZ=github.com/pyrorhythm/libspot/api/spotify/playlist4;playlist4"
+	"\x1bcom.spotify.playlist4.protoB\x11Playlist4ApiProtoZ=github.com/pyrorhythm/libspot/gen/spotify/playlist4;playlist4"
 
 var file_playlist_api_proto_enumTypes = make([]protoimpl.EnumInfo, 6)
 var file_playlist_api_proto_msgTypes = make([]protoimpl.MessageInfo, 40)

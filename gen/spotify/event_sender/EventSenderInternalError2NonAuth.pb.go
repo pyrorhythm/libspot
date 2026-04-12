@@ -114,7 +114,7 @@ const file_include_EventSenderInternalError2NonAuth_proto_rawDesc = "" +
 	"\verror_types\x18\x01 \x03(\tR\n" +
 	"errorTypes\x12,\n" +
 	"\x12error_total_counts\x18\x02 \x03(\x05R\x10errorTotalCounts\x126\n" +
-	"\x17error_unreported_counts\x18\x03 \x03(\x05R\x15errorUnreportedCountsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x17error_unreported_counts\x18\x03 \x03(\x05R\x15errorUnreportedCountsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_EventSenderInternalError2NonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_EventSenderInternalError2NonAuth_proto_goTypes = []any{

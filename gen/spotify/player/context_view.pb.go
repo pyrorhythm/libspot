@@ -251,7 +251,7 @@ const file_context_view_proto_rawDesc = "" +
 	"cyclicList\x1a[\n" +
 	"\rPatchMapEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x128\n" +
-	"\x05value\x18\x02 \x01(\v2\".spotify.player.proto.ContextTrackR\x05valueJ\x04\b\x04\x10\x05B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05value\x18\x02 \x01(\v2\".spotify.player.proto.ContextTrackR\x05valueJ\x04\b\x04\x10\x05B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_view_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_context_view_proto_goTypes = []any{

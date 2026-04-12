@@ -568,7 +568,7 @@ const file_cast_messages_proto_rawDesc = "" +
 	"\x1bSSL_CERTIFICATE_NOT_TRUSTED\x10\x16\x12\v\n" +
 	"\aTIMEOUT\x10\x17\x12\v\n" +
 	"\aUNKNOWN\x10\x18B\xa4\x01\n" +
-	"2com.spotify.connect.discovery.cast.esperanto.protoZTgithub.com/pyrorhythm/libspot/api/spotify/connect/discovery/cast/esperanto;esperanto\xa2\x02\x17SPTConnectCastEsperantob\x06proto3"
+	"2com.spotify.connect.discovery.cast.esperanto.protoZTgithub.com/pyrorhythm/libspot/gen/spotify/connect/discovery/cast/esperanto;esperanto\xa2\x02\x17SPTConnectCastEsperantob\x06proto3"
 
 var file_cast_messages_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_cast_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

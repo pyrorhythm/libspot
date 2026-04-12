@@ -246,7 +246,7 @@ const file_track_content_filter_proto_rawDesc = "" +
 	"\bREPORTED\x10\x1b\x12\x10\n" +
 	"\fCOST_CONTROL\x10\x1c\x12\a\n" +
 	"\x03RDC\x10\x1dB\x96\x01\n" +
-	"+com.spotify.bumblebee.trackcontentfilter.v1B\x17TrackContentFilterProtoP\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/bumblebee/trackcontentfilter/v1;v1b\x06proto3"
+	"+com.spotify.bumblebee.trackcontentfilter.v1B\x17TrackContentFilterProtoP\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/bumblebee/trackcontentfilter/v1;v1b\x06proto3"
 
 var file_track_content_filter_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_track_content_filter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

@@ -539,7 +539,7 @@ const file_include_CachePruningReport_proto_rawDesc = "" +
 	"!num_entries_pruned_max_realm_size\x18\f \x01(\x03R\x1cnumEntriesPrunedMaxRealmSize\x12?\n" +
 	"\x1dsize_pruned_max_realm_size_kb\x18\r \x01(\x03R\x18sizePrunedMaxRealmSizeKb\x12G\n" +
 	"!num_entries_pruned_min_free_space\x18\x0e \x01(\x03R\x1cnumEntriesPrunedMinFreeSpace\x12?\n" +
-	"\x1dsize_pruned_min_free_space_kb\x18\x0f \x01(\x03R\x18sizePrunedMinFreeSpaceKbBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x1dsize_pruned_min_free_space_kb\x18\x0f \x01(\x03R\x18sizePrunedMinFreeSpaceKbBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CachePruningReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CachePruningReport_proto_goTypes = []any{

@@ -371,7 +371,7 @@ const file_spotify_list_v1_model_list_sync_reason_proto_rawDesc = "" +
 	"\x1fLIST_PLAYER_KEEP_PLAYING_FILTER\x102\x12\x0f\n" +
 	"\vLIST_CLIENT\x103\x12\x1b\n" +
 	"\x17INTERACTIVE_PLAY_SOURCE\x104Bq\n" +
-	"\x19com.spotify.list.v1.modelB\x13ListSyncReasonProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x13ListSyncReasonProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_list_sync_reason_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_list_sync_reason_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

@@ -174,7 +174,7 @@ const file_tags_data_proto_rawDesc = "" +
 	"\atag_uri\x18\x01 \x01(\tR\x06tagUri\x12\x1d\n" +
 	"\n" +
 	"entity_uri\x18\x02 \x01(\tR\tentityUri\x12'\n" +
-	"\x0frelevance_score\x18\x03 \x01(\x05R\x0erelevanceScoreBOZMgithub.com/pyrorhythm/libspot/api/spotify/your_library_tags;your_library_tagsb\x06proto3"
+	"\x0frelevance_score\x18\x03 \x01(\x05R\x0erelevanceScoreBOZMgithub.com/pyrorhythm/libspot/gen/spotify/your_library_tags;your_library_tagsb\x06proto3"
 
 var file_tags_data_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_tags_data_proto_goTypes = []any{

@@ -135,7 +135,7 @@ const file_player_sequence_player_state_session_context_state_proto_rawDesc = ""
 	"\x13SessionContextState\x12&\n" +
 	"\x0froot_context_id\x18\x01 \x01(\tR\rrootContextId\x12A\n" +
 	"\x05stack\x18\x02 \x01(\v2+.spotify.player.sequence.proto.ContextStackR\x05stack\x12M\n" +
-	"\fcontext_tree\x18\x03 \x01(\v2*.spotify.player.sequence.proto.ContextTreeR\vcontextTreeBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/sequence;sequenceb\x06proto3"
+	"\fcontext_tree\x18\x03 \x01(\v2*.spotify.player.sequence.proto.ContextTreeR\vcontextTreeBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/sequence;sequenceb\x06proto3"
 
 var file_player_sequence_player_state_session_context_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_player_sequence_player_state_session_context_state_proto_goTypes = []any{

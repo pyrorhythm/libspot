@@ -350,7 +350,7 @@ const file_identity_trait_proto_rawDesc = "" +
 	"\x0fEntityReference\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12\x10\n" +
 	"\x03uri\x18\x02 \x01(\tR\x03uriBc\n" +
-	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/api/spotify/contentagnostic/v2;v2b\x06proto3"
+	"\x1ecom.spotify.contentagnostic.v2P\x01Z?github.com/pyrorhythm/libspot/gen/spotify/contentagnostic/v2;v2b\x06proto3"
 
 var file_identity_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_identity_trait_proto_goTypes = []any{

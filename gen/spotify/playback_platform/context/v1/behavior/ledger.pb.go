@@ -138,7 +138,7 @@ const file_spotify_playback_platform_context_v1_behavior_ledger_proto_rawDesc = 
 	"\x14include_playing_info\x18\x03 \x01(\bH\x01R\x12includePlayingInfo\x88\x01\x01B\v\n" +
 	"\t_entry_idB\x17\n" +
 	"\x15_include_playing_infoJ\x04\b\x01\x10\x02R\aenabledB\x8b\x01\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZXgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1/behavior;behaviorb\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZXgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1/behavior;behaviorb\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_ledger_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_context_v1_behavior_ledger_proto_goTypes = []any{

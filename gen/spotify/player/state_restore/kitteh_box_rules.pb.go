@@ -458,7 +458,7 @@ const file_state_restore_kitteh_box_rules_proto_rawDesc = "" +
 	"\bPosition\x12\x12\n" +
 	"\x0eBETWEEN_TRACKS\x10\x00\x12\x10\n" +
 	"\fON_DELIMITER\x10\x01\x12\x11\n" +
-	"\rON_NODE_TRACK\x10\x02BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\rON_NODE_TRACK\x10\x02BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_kitteh_box_rules_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_state_restore_kitteh_box_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

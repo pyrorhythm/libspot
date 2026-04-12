@@ -135,7 +135,7 @@ const file_show_offline_state_proto_rawDesc = "" +
 	"\x18show_offline_state.proto\x12\x19spotify.show_cosmos.proto\"\\\n" +
 	"\x10ShowOfflineState\x12#\n" +
 	"\roffline_state\x18\x01 \x01(\tR\fofflineState\x12#\n" +
-	"\rsync_progress\x18\x02 \x01(\rR\fsyncProgressBCZAgithub.com/pyrorhythm/libspot/api/spotify/show_cosmos;show_cosmos"
+	"\rsync_progress\x18\x02 \x01(\rR\fsyncProgressBCZAgithub.com/pyrorhythm/libspot/gen/spotify/show_cosmos;show_cosmos"
 
 var file_show_offline_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_show_offline_state_proto_goTypes = []any{

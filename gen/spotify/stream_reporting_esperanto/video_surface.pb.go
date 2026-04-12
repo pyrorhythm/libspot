@@ -101,7 +101,7 @@ const file_video_surface_proto_rawDesc = "" +
 	"\x14VIDEO_SURFACE_CINEMA\x10\a\x12\x1a\n" +
 	"\x16VIDEO_SURFACE_EXTERNAL\x10\b\x12\x17\n" +
 	"\x13VIDEO_SURFACE_OTHER\x10\tB\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_video_surface_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_video_surface_proto_goTypes = []any{

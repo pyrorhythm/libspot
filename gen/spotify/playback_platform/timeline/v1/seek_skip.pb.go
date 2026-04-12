@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -113,7 +113,7 @@ const file_spotify_playback_platform_timeline_v1_behavior_seek_skip_proto_rawDes
 	"\bSeekSkip\x12O\n" +
 	"\tpositions\x18\x01 \x03(\v21.spotify.playback_platform.timeline.v1.TimepointsR\tpositions\x12K\n" +
 	"\x04skip\x18\x02 \x01(\v27.spotify.playback_platform.common.v1.StochasticDurationR\x04skipB~\n" +
-	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	".spotify.playback_platform.timeline.v1.behaviorP\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_behavior_seek_skip_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_timeline_v1_behavior_seek_skip_proto_goTypes = []any{

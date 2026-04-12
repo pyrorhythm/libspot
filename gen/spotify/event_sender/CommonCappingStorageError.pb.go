@@ -138,7 +138,7 @@ const file_include_CommonCappingStorageError_proto_rawDesc = "" +
 	"'include/CommonCappingStorageError.proto\x12\x1aspotify.event_sender.proto\"O\n" +
 	"\x19CommonCappingStorageError\x12\x1c\n" +
 	"\toperation\x18\x01 \x01(\tR\toperation\x12\x14\n" +
-	"\x05error\x18\x02 \x01(\tR\x05errorBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05error\x18\x02 \x01(\tR\x05errorBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CommonCappingStorageError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CommonCappingStorageError_proto_goTypes = []any{

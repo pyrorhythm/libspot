@@ -3358,7 +3358,7 @@ const file_player_proto_rawDesc = "" +
 	"\x04none\x10\x00\x12\a\n" +
 	"\x03off\x10\x01\x12\x06\n" +
 	"\x02on\x10\x02Be\n" +
-	"\x1ecom.spotify.connectstate.modelZCgithub.com/pyrorhythm/libspot/api/spotify/connectstate;connectstateb\x06proto3"
+	"\x1ecom.spotify.connectstate.modelZCgithub.com/pyrorhythm/libspot/gen/spotify/connectstate;connectstateb\x06proto3"
 
 var file_player_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_player_proto_msgTypes = make([]protoimpl.MessageInfo, 22)

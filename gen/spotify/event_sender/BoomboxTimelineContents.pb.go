@@ -138,7 +138,7 @@ const file_include_BoomboxTimelineContents_proto_rawDesc = "" +
 	"%include/BoomboxTimelineContents.proto\x12\x1aspotify.event_sender.proto\"\x89\x01\n" +
 	"\x17BoomboxTimelineContents\x120\n" +
 	"\x14timeline_instance_id\x18\x01 \x01(\fR\x12timelineInstanceId\x12<\n" +
-	"\x1atimeline_instance_contents\x18\x02 \x01(\tR\x18timelineInstanceContentsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x1atimeline_instance_contents\x18\x02 \x01(\tR\x18timelineInstanceContentsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_BoomboxTimelineContents_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_BoomboxTimelineContents_proto_goTypes = []any{

@@ -86,7 +86,7 @@ const file_lfs_secret_provider_proto_rawDesc = "" +
 	"\n" +
 	"\x19lfs_secret_provider.proto\x12\x1fspotify.lfssecretprovider.proto\"+\n" +
 	"\x11GetSecretResponse\x12\x16\n" +
-	"\x06secret\x18\x01 \x01(\fR\x06secretBOZMgithub.com/pyrorhythm/libspot/api/spotify/lfssecretprovider;lfssecretproviderb\x06proto3"
+	"\x06secret\x18\x01 \x01(\fR\x06secretBOZMgithub.com/pyrorhythm/libspot/gen/spotify/lfssecretprovider;lfssecretproviderb\x06proto3"
 
 var file_lfs_secret_provider_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_lfs_secret_provider_proto_goTypes = []any{

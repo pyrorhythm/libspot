@@ -4,26 +4,28 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"log/slog"
 	"time"
 
 	ws "github.com/coder/websocket"
+	"github.com/pyrorhythm/libspot/dealer/types"
 	"golang.org/x/sync/errgroup"
 )
 
 const maxReqHandlers = 16
 
 type conn struct {
-	dealer *DealerG2 // backref to access router
+	dealer *Dealer // backref to access router
 
 	ws           *ws.Conn
 	send         chan []byte
-	reqCh        chan *Msg // buffered channel for incoming requests
+	reqCh        chan *types.Request
 	pingInterval time.Duration
 	pingTimeout  time.Duration
 
 	suicideTimer *time.Timer
 
-	// coordination
+	// lifespan
 	ctx    context.Context
 	cancel context.CancelFunc
 	wg     *errgroup.Group
@@ -63,7 +65,7 @@ func (c *conn) recvLoop() error {
 		_, msg, err := c.ws.Read(c.ctx)
 		if err != nil {
 			wsErr, ok := errors.AsType[ws.CloseError](err)
-			
+
 			if ok && wsErr.Code == ws.StatusNormalClosure {
 				return nil
 			}
@@ -72,23 +74,25 @@ func (c *conn) recvLoop() error {
 
 		c.resetSuicideTimer()
 
-		var m Msg
-		if err := json.Unmarshal(msg, &m); err != nil {
+		var env types.Envelope
+		if err := json.Unmarshal(msg, &env); err != nil {
 			continue
 		}
 
-		if m.Type == "request" {
+		slog.Debug("[dealer] recv envelope", "typ", env.Type, "uri", env.Uri)
+
+		switch {
+		case env.IsMessage():
+			c.dealer.router.handleMsg(env.ToMessage())
+		case env.IsRequest():
+			req, err := env.ToRequest()
+			if err != nil {
+				continue
+			}
 			select {
-			case c.reqCh <- &m:
+			case c.reqCh <- req:
 			default:
 			}
-			continue
-		}
-
-		switch m.Type {
-		case "message":
-			c.dealer.router.handleMsg(&m)
-		default:
 		}
 	}
 }
@@ -111,8 +115,8 @@ func (c *conn) reqLoop() error {
 	}
 }
 
-func (c *conn) handleReq(msg *Msg) {
-	replyCh, found := c.dealer.router.handleReq(c.ctx, msg)
+func (c *conn) handleReq(req *types.Request) {
+	replyCh, found := c.dealer.router.handleReq(c.ctx, req)
 	if !found {
 		return
 	}
@@ -124,7 +128,7 @@ func (c *conn) handleReq(msg *Msg) {
 	case ok = <-replyCh:
 	}
 
-	reply := Reply{Type: "response", Key: msg.Key}
+	reply := types.Reply{Type: "response", Key: req.Key}
 	reply.Payload.Success = ok
 
 	payload, err := json.Marshal(reply)

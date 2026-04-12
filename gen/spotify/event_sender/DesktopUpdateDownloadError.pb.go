@@ -233,7 +233,7 @@ const file_include_DesktopUpdateDownloadError_proto_rawDesc = "" +
 	"\rerror_message\x18\x03 \x01(\tR\ferrorMessage\x12\x16\n" +
 	"\x06source\x18\x04 \x01(\tR\x06source\x12\x1f\n" +
 	"\vis_employee\x18\x05 \x01(\bR\n" +
-	"isEmployeeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"isEmployeeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopUpdateDownloadError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopUpdateDownloadError_proto_goTypes = []any{

@@ -195,7 +195,7 @@ const file_collection_track_collection_state_proto_rawDesc = "" +
 	"\x15can_add_to_collection\x18\x02 \x01(\bR\x12canAddToCollection\x12\x1b\n" +
 	"\tis_banned\x18\x03 \x01(\bR\bisBanned\x12\x17\n" +
 	"\acan_ban\x18\x04 \x01(\bR\x06canBanBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_collection_track_collection_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_collection_track_collection_state_proto_goTypes = []any{

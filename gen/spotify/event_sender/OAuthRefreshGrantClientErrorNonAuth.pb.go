@@ -153,7 +153,7 @@ const file_include_OAuthRefreshGrantClientErrorNonAuth_proto_rawDesc = "" +
 	"#OAuthRefreshGrantClientErrorNonAuth\x127\n" +
 	"\x18error_response_http_code\x18\x01 \x01(\tR\x15errorResponseHttpCode\x12+\n" +
 	"\x11error_description\x18\x02 \x01(\tR\x10errorDescription\x12-\n" +
-	"\x12sender_constraints\x18\x03 \x03(\tR\x11senderConstraintsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12sender_constraints\x18\x03 \x03(\tR\x11senderConstraintsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_OAuthRefreshGrantClientErrorNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_OAuthRefreshGrantClientErrorNonAuth_proto_goTypes = []any{

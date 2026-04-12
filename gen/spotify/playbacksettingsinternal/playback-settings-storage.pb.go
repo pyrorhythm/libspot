@@ -7,7 +7,7 @@
 package playbacksettingsinternal
 
 import (
-	playbacksettings "github.com/pyrorhythm/libspot/api/spotify/playbacksettings"
+	playbacksettings "github.com/pyrorhythm/libspot/gen/spotify/playbacksettings"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -374,7 +374,7 @@ const file_playback_settings_storage_proto_rawDesc = "" +
 	"\rsetting_value\x18\x03 \x01(\v2$.spotify.playbacksettings.FieldValueR\fsettingValue\"S\n" +
 	"\tCacheFile\x12F\n" +
 	"\aentries\x18\x01 \x03(\v2,.spotify.playbacksettingsinternal.CacheEntryR\aentriesB\x83\x01\n" +
-	"\"com.spotify.playbacksettings.modelP\x01Z[github.com/pyrorhythm/libspot/api/spotify/playbacksettingsinternal;playbacksettingsinternalb\x06proto3"
+	"\"com.spotify.playbacksettings.modelP\x01Z[github.com/pyrorhythm/libspot/gen/spotify/playbacksettingsinternal;playbacksettingsinternalb\x06proto3"
 
 var file_playback_settings_storage_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_playback_settings_storage_proto_goTypes = []any{

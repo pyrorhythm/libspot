@@ -7,7 +7,7 @@
 package playback
 
 import (
-	podcast_segments "github.com/pyrorhythm/libspot/api/spotify/podcast_segments"
+	podcast_segments "github.com/pyrorhythm/libspot/gen/spotify/podcast_segments"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -87,7 +87,7 @@ const file_playback_segments_proto_rawDesc = "" +
 	"\x17playback_segments.proto\x12!spotify.podcast_segments.playback\x1a\x16podcast_segments.proto\"j\n" +
 	"\x10PlaybackSegments\x12V\n" +
 	"\x11playback_segments\x18\x01 \x03(\v2).spotify.podcast_segments.PlaybackSegmentR\x10playbackSegmentsB\x99\x01\n" +
-	"*com.spotify.podcastsegments.playback.protoB\x15PlaybackSegmentsProtoP\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/podcast_segments/playback;playback\xa2\x02\x03SPTb\x06proto3"
+	"*com.spotify.podcastsegments.playback.protoB\x15PlaybackSegmentsProtoP\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/podcast_segments/playback;playback\xa2\x02\x03SPTb\x06proto3"
 
 var file_playback_segments_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_playback_segments_proto_goTypes = []any{

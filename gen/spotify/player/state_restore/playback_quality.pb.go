@@ -409,7 +409,7 @@ const file_state_restore_playback_quality_proto_rawDesc = "" +
 	"HiFiStatus\x12\b\n" +
 	"\x04NONE\x10\x00\x12\a\n" +
 	"\x03OFF\x10\x01\x12\x06\n" +
-	"\x02ON\x10\x02BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x02ON\x10\x02BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_playback_quality_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_state_restore_playback_quality_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

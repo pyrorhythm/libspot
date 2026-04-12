@@ -170,7 +170,7 @@ const file_automix_mode_proto_rawDesc = "" +
 	"\aBACKEND\x10\t\x12\a\n" +
 	"\x03PRO\x10\n" +
 	"\x12\a\n" +
-	"\x03CUT\x10\vB;Z9github.com/pyrorhythm/libspot/api/spotify/automix;automixb\x06proto3"
+	"\x03CUT\x10\vB;Z9github.com/pyrorhythm/libspot/gen/spotify/automix;automixb\x06proto3"
 
 var file_automix_mode_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_automix_mode_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

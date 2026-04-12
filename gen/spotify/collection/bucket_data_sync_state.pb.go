@@ -98,7 +98,7 @@ const file_bucket_data_sync_state_proto_rawDesc = "" +
 	"\x1cbucket_data_sync_state.proto\x12\x18spotify.collection.proto\"Q\n" +
 	"\x13BucketDataSyncState\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12(\n" +
-	"\x10sync_is_complete\x18\x02 \x01(\bR\x0esyncIsCompleteBAZ?github.com/pyrorhythm/libspot/api/spotify/collection;collectionb\x06proto3"
+	"\x10sync_is_complete\x18\x02 \x01(\bR\x0esyncIsCompleteBAZ?github.com/pyrorhythm/libspot/gen/spotify/collection;collectionb\x06proto3"
 
 var file_bucket_data_sync_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_bucket_data_sync_state_proto_goTypes = []any{

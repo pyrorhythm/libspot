@@ -25,7 +25,7 @@ var File_esperanto_options_proto protoreflect.FileDescriptor
 
 const file_esperanto_options_proto_rawDesc = "" +
 	"\n" +
-	"\x17esperanto_options.proto\x12\x11spotify.esperanto\x1a google/protobuf/descriptor.protoB?Z=github.com/pyrorhythm/libspot/api/spotify/esperanto;esperantob\x06proto3"
+	"\x17esperanto_options.proto\x12\x11spotify.esperanto\x1a google/protobuf/descriptor.protoB?Z=github.com/pyrorhythm/libspot/gen/spotify/esperanto;esperantob\x06proto3"
 
 var file_esperanto_options_proto_goTypes = []any{}
 var file_esperanto_options_proto_depIdxs = []int32{

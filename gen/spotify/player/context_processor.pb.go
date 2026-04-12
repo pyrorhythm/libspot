@@ -213,7 +213,7 @@ const file_context_processor_proto_rawDesc = "" +
 	"\fcontext_view\x18\x02 \x01(\v2..spotify.player.context_view.proto.ContextViewR\vcontextView\x12I\n" +
 	"\x0fpending_skip_to\x18\x03 \x01(\v2!.spotify.player.proto.SkipToTrackR\rpendingSkipTo\x12!\n" +
 	"\fshuffle_seed\x18\x04 \x01(\tR\vshuffleSeed\x12\x14\n" +
-	"\x05index\x18\x05 \x01(\x05R\x05indexB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05index\x18\x05 \x01(\x05R\x05indexB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_context_processor_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_processor_proto_goTypes = []any{

@@ -147,7 +147,7 @@ const file_route_switcher_node_proto_rawDesc = "" +
 	"\x04mode\x18\x01 \x01(\x0e2,.spotify.player.proto.RouteSwitcherNode.ModeR\x04mode\"\"\n" +
 	"\x04Mode\x12\v\n" +
 	"\aPRIMARY\x10\x00\x12\r\n" +
-	"\tSECONDARY\x10\x01B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\tSECONDARY\x10\x01B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_route_switcher_node_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_route_switcher_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

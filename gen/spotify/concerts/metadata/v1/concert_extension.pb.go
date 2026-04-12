@@ -269,7 +269,7 @@ const file_concert_extension_proto_rawDesc = "" +
 	"\aConcert\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12\x14\n" +
 	"\x05title\x18\x02 \x01(\tR\x05title\x12@\n" +
-	"\x05times\x18\x03 \x01(\v2*.spotify.concerts.metadata.v1.ConcertTimesR\x05timesBCZAgithub.com/pyrorhythm/libspot/api/spotify/concerts/metadata/v1;v1b\x06proto3"
+	"\x05times\x18\x03 \x01(\v2*.spotify.concerts.metadata.v1.ConcertTimesR\x05timesBCZAgithub.com/pyrorhythm/libspot/gen/spotify/concerts/metadata/v1;v1b\x06proto3"
 
 var file_concert_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_concert_extension_proto_goTypes = []any{

@@ -372,7 +372,7 @@ const file_is_curated_request_proto_rawDesc = "" +
 	"is_curated\x18\x02 \x01(\bR\tisCurated\x12(\n" +
 	"\x10is_in_collection\x18\x03 \x01(\bR\x0eisInCollection\x12\x1b\n" +
 	"\tis_banned\x18\x04 \x01(\bR\bisBannedBm\n" +
-	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_is_curated_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_is_curated_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

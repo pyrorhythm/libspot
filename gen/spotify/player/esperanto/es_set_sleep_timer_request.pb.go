@@ -459,7 +459,7 @@ const file_es_set_sleep_timer_request_proto_rawDesc = "" +
 	"\x05ClearB\f\n" +
 	"\n" +
 	"timer_typeBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_set_sleep_timer_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_set_sleep_timer_request_proto_goTypes = []any{

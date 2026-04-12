@@ -425,7 +425,7 @@ const file_es_desktop_version_proto_rawDesc = "" +
 	"\x12CEF_RUNTIME_CHROME\x10\x01\x12\x15\n" +
 	"\x11CEF_RUNTIME_ALLOY\x10\x022\x9f\x01\n" +
 	"\x0eDesktopVersion\x12\x8c\x01\n" +
-	"\x0eGetVersionInfo\x12:.spotify.desktop.version_esperanto.proto.GetVersionRequest\x1a<.spotify.desktop.version_esperanto.proto.VersionInfoResponse\"\x00BWZUgithub.com/pyrorhythm/libspot/api/spotify/desktop/version_esperanto;version_esperantob\x06proto3"
+	"\x0eGetVersionInfo\x12:.spotify.desktop.version_esperanto.proto.GetVersionRequest\x1a<.spotify.desktop.version_esperanto.proto.VersionInfoResponse\"\x00BWZUgithub.com/pyrorhythm/libspot/gen/spotify/desktop/version_esperanto;version_esperantob\x06proto3"
 
 var file_es_desktop_version_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_es_desktop_version_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

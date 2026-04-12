@@ -168,7 +168,7 @@ const file_autopodcast_familiar_show_request_proto_rawDesc = "" +
 	"\x16MEDIA_TYPE_UNSPECIFIED\x10\x00\x12\t\n" +
 	"\x05MIXED\x10\x01\x12\x0e\n" +
 	"\n" +
-	"VIDEO_ONLY\x10\x02B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"VIDEO_ONLY\x10\x02B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_autopodcast_familiar_show_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_autopodcast_familiar_show_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

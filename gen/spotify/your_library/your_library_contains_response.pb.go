@@ -277,7 +277,7 @@ const file_your_library_contains_response_proto_rawDesc = "" +
 	"\vstatus_code\x18b \x01(\rR\n" +
 	"statusCode\x12\x14\n" +
 	"\x05error\x18c \x01(\tR\x05errorBm\n" +
-	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/your_library;your_libraryb\x06proto3"
+	"$spotify.your_library.esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/your_library;your_libraryb\x06proto3"
 
 var file_your_library_contains_response_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_your_library_contains_response_proto_goTypes = []any{

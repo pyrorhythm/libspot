@@ -1394,7 +1394,7 @@ const file_es_desktop_login_proto_rawDesc = "" +
 	"\x11LoginWithAccounts\x12?.spotify.desktop.login_esperanto.proto.LoginWithAccountsRequest\x1a@.spotify.desktop.login_esperanto.proto.LoginWithAccountsResponse\"\x00\x12\x97\x01\n" +
 	"\x10LoginWithConnect\x12>.spotify.desktop.login_esperanto.proto.LoginWithConnectRequest\x1a?.spotify.desktop.login_esperanto.proto.LoginWithConnectResponse\"\x000\x01\x12\x9e\x01\n" +
 	"\x13ApproveConnectLogin\x12A.spotify.desktop.login_esperanto.proto.ApproveConnectLoginRequest\x1aB.spotify.desktop.login_esperanto.proto.ApproveConnectLoginResponse\"\x00\x12w\n" +
-	"\x06Logout\x124.spotify.desktop.login_esperanto.proto.LogoutRequest\x1a5.spotify.desktop.login_esperanto.proto.LogoutResponse\"\x00BSZQgithub.com/pyrorhythm/libspot/api/spotify/desktop/login_esperanto;login_esperantob\x06proto3"
+	"\x06Logout\x124.spotify.desktop.login_esperanto.proto.LogoutRequest\x1a5.spotify.desktop.login_esperanto.proto.LogoutResponse\"\x00BSZQgithub.com/pyrorhythm/libspot/gen/spotify/desktop/login_esperanto;login_esperantob\x06proto3"
 
 var file_es_desktop_login_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_es_desktop_login_proto_goTypes = []any{

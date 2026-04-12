@@ -132,7 +132,7 @@ const file_state_restore_repeat_settings_node_proto_rawDesc = "" +
 	"(state_restore/repeat_settings_node.proto\x12\"spotify.player.proto.state_restore\"\x7f\n" +
 	"\x12RepeatSettingsNode\x120\n" +
 	"\x14search_tracks_repeat\x18\x01 \x01(\bR\x12searchTracksRepeat\x127\n" +
-	"\x18non_search_tracks_repeat\x18\x02 \x01(\bR\x15nonSearchTracksRepeatBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x18non_search_tracks_repeat\x18\x02 \x01(\bR\x15nonSearchTracksRepeatBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_repeat_settings_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_repeat_settings_node_proto_goTypes = []any{

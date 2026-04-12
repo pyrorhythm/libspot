@@ -7,7 +7,7 @@
 package mdata
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	anypb "google.golang.org/protobuf/types/known/anypb"
@@ -562,7 +562,7 @@ const file_mdata_proto_rawDesc = "" +
 	"\x0eextension_data\x18\x03 \x01(\v2\x14.google.protobuf.AnyR\rextensionData\x1a\xca\x01\n" +
 	"\tExtension\x12N\n" +
 	"\x0eextension_kind\x18\x01 \x01(\x0e2'.spotify.extendedmetadata.ExtensionKindR\rextensionKind\x12m\n" +
-	"\x10entity_extension\x18\x02 \x03(\v2B.spotify.mdata.proto.LocalBatchedExtensionResponse.EntityExtensionR\x0fentityExtensionB:Z5github.com/pyrorhythm/libspot/api/spotify/mdata;mdata\xf8\x01\x01b\x06proto3"
+	"\x10entity_extension\x18\x02 \x03(\v2B.spotify.mdata.proto.LocalBatchedExtensionResponse.EntityExtensionR\x0fentityExtensionB:Z5github.com/pyrorhythm/libspot/gen/spotify/mdata;mdata\xf8\x01\x01b\x06proto3"
 
 var file_mdata_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_mdata_proto_goTypes = []any{

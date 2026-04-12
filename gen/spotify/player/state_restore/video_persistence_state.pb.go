@@ -232,7 +232,7 @@ const file_state_restore_video_persistence_state_proto_rawDesc = "" +
 	"\x04NONE\x10\x01\x12\x12\n" +
 	"\x0eIS_VIDEO_FIRST\x10\x02\x12\x19\n" +
 	"\x15PLAYLIST_VIDEO_TOGGLE\x10\x03\x12!\n" +
-	"\x1dIS_SINGLE_TRACK_VIDEO_CONTENT\x10\x04BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x1dIS_SINGLE_TRACK_VIDEO_CONTENT\x10\x04BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_video_persistence_state_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_state_restore_video_persistence_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

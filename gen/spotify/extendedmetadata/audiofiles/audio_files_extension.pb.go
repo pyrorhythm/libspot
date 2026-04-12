@@ -7,7 +7,7 @@
 package audiofiles
 
 import (
-	metadata "github.com/pyrorhythm/libspot/api/spotify/metadata"
+	metadata "github.com/pyrorhythm/libspot/gen/spotify/metadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -318,7 +318,7 @@ const file_audio_files_extension_proto_rawDesc = "" +
 	"!default_file_normalization_params\x18\x02 \x01(\v28.spotify.extendedmetadata.audiofiles.NormalizationParamsR\x1edefaultFileNormalizationParams\x12\x85\x01\n" +
 	"\"default_album_normalization_params\x18\x03 \x01(\v28.spotify.extendedmetadata.audiofiles.NormalizationParamsR\x1fdefaultAlbumNormalizationParams\x12\x19\n" +
 	"\baudio_id\x18\x04 \x01(\fR\aaudioIdBp\n" +
-	"\x1ccom.spotify.audiophile.protoZPgithub.com/pyrorhythm/libspot/api/spotify/extendedmetadata/audiofiles;audiofilesb\x06proto3"
+	"\x1ccom.spotify.audiophile.protoZPgithub.com/pyrorhythm/libspot/gen/spotify/extendedmetadata/audiofiles;audiofilesb\x06proto3"
 
 var file_audio_files_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_audio_files_extension_proto_goTypes = []any{

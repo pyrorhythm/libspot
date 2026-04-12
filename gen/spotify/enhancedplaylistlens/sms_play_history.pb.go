@@ -533,7 +533,7 @@ const file_sms_play_history_proto_rawDesc = "" +
 	"\n" +
 	"\b_current\"]\n" +
 	"\rSignalPayload\x12L\n" +
-	"\fplay_history\x18\x01 \x01(\v2).spotify.enhancedplaylistlens.PlayHistoryR\vplayHistoryBUZSgithub.com/pyrorhythm/libspot/api/spotify/enhancedplaylistlens;enhancedplaylistlensb\x06proto3"
+	"\fplay_history\x18\x01 \x01(\v2).spotify.enhancedplaylistlens.PlayHistoryR\vplayHistoryBUZSgithub.com/pyrorhythm/libspot/gen/spotify/enhancedplaylistlens;enhancedplaylistlensb\x06proto3"
 
 var file_sms_play_history_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_sms_play_history_proto_goTypes = []any{

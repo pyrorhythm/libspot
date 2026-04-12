@@ -273,7 +273,7 @@ const file_devices_proto_rawDesc = "" +
 	"\bOBSERVER\x10f\x12\x0e\n" +
 	"\n" +
 	"HOME_THING\x10gBb\n" +
-	"\x18com.spotify.common.protoZFgithub.com/pyrorhythm/libspot/api/spotify/connectstate/devices;devicesb\x06proto3"
+	"\x18com.spotify.common.protoZFgithub.com/pyrorhythm/libspot/gen/spotify/connectstate/devices;devicesb\x06proto3"
 
 var file_devices_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_devices_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

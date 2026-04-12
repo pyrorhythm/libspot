@@ -324,7 +324,7 @@ const file_play_origin_proto_rawDesc = "" +
 	"\x13referrer_identifier\x18\x05 \x01(\tR\x12referrerIdentifier\x12+\n" +
 	"\x11device_identifier\x18\x06 \x01(\tR\x10deviceIdentifier\x12'\n" +
 	"\x0ffeature_classes\x18\a \x03(\tR\x0efeatureClasses\x125\n" +
-	"\x16restriction_identifier\x18\b \x01(\tR\x15restrictionIdentifierB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x16restriction_identifier\x18\b \x01(\tR\x15restrictionIdentifierB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_play_origin_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_play_origin_proto_goTypes = []any{

@@ -237,7 +237,7 @@ const file_socialgraph_v4_proto_rawDesc = "" +
 	"\x05users\x18\x01 \x03(\v2$.spotify.socialgraph.v4.UsernameUserR\x05users\x12+\n" +
 	"\x0fnext_page_token\x18\x02 \x01(\tH\x00R\rnextPageToken\x88\x01\x01B\x12\n" +
 	"\x10_next_page_tokenB{\n" +
-	" com.spotify.socialgraph.v4.protoB\x18SocialgraphV4SchemaProtoP\x01Z;github.com/pyrorhythm/libspot/api/spotify/socialgraph/v4;v4b\x06proto3"
+	" com.spotify.socialgraph.v4.protoB\x18SocialgraphV4SchemaProtoP\x01Z;github.com/pyrorhythm/libspot/gen/spotify/socialgraph/v4;v4b\x06proto3"
 
 var file_socialgraph_v4_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_socialgraph_v4_proto_goTypes = []any{

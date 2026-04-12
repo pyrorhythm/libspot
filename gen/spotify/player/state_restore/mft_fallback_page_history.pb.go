@@ -200,7 +200,7 @@ const file_state_restore_mft_fallback_page_history_proto_rawDesc = "" +
 	"contextUri\x12*\n" +
 	"\x11fallback_page_url\x18\x02 \x02(\tR\x0ffallbackPageUrl\"\x85\x01\n" +
 	"\x16MftFallbackPageHistory\x12k\n" +
-	"\x18context_to_fallback_page\x18\x01 \x03(\v22.spotify.player.proto.state_restore.ContextAndPageR\x15contextToFallbackPageBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x18context_to_fallback_page\x18\x01 \x03(\v22.spotify.player.proto.state_restore.ContextAndPageR\x15contextToFallbackPageBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_mft_fallback_page_history_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_state_restore_mft_fallback_page_history_proto_goTypes = []any{

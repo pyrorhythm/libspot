@@ -504,7 +504,7 @@ const file_es_prepare_play_options_proto_rawDesc = "" +
 	"\aDEFAULT\x10\x00\x12\t\n" +
 	"\x05ALARM\x10\x01B\x1c\n" +
 	"\x1a_seek_to_creator_timestampBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_prepare_play_options_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_es_prepare_play_options_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

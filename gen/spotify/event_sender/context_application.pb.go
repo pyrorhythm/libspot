@@ -83,7 +83,7 @@ const file_context_application_proto_rawDesc = "" +
 	"\n" +
 	"\x19context_application.proto\x12\x1aspotify.event_sender.proto\"'\n" +
 	"\vApplication\x12\x18\n" +
-	"\aversion\x18\x01 \x01(\tR\aversionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\aversion\x18\x01 \x01(\tR\aversionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_application_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_application_proto_goTypes = []any{

@@ -344,7 +344,7 @@ const file_track_descriptor_proto_rawDesc = "" +
 	"\fRECORD_STORE\x10\x16\x12\f\n" +
 	"\bRELIGION\x10\x17\x12\t\n" +
 	"\x05SLANG\x10\x18B|\n" +
-	"%com.spotify.descriptorextension.protoP\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/descriptorextension;descriptorextensionb\x06proto3"
+	"%com.spotify.descriptorextension.protoP\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/descriptorextension;descriptorextensionb\x06proto3"
 
 var file_track_descriptor_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_track_descriptor_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

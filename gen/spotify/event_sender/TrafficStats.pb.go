@@ -518,7 +518,7 @@ const file_include_TrafficStats_proto_rawDesc = "" +
 	"\x14sampling_probability\x18\v \x01(\x01R\x13samplingProbability\x12\x16\n" +
 	"\x06cached\x18\f \x01(\bR\x06cached\x12#\n" +
 	"\rredirect_time\x18\r \x01(\x03R\fredirectTime\x12'\n" +
-	"\x0fconnection_type\x18\x0e \x01(\tR\x0econnectionTypeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fconnection_type\x18\x0e \x01(\tR\x0econnectionTypeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_TrafficStats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_TrafficStats_proto_goTypes = []any{

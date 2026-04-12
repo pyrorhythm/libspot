@@ -1022,7 +1022,7 @@ const file_modification_request_proto_rawDesc = "" +
 	"\x1cCREATE_ITEM_KIND_UNSPECIFIED\x10\x00\x12\x1d\n" +
 	"\x19CREATE_ITEM_KIND_PLAYLIST\x10\x01\x12\x1b\n" +
 	"\x17CREATE_ITEM_KIND_FOLDER\x10\x02B`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_modification_request_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_modification_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

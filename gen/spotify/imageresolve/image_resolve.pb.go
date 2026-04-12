@@ -465,7 +465,7 @@ const file_image_resolve_proto_rawDesc = "" +
 	"\vcollections\x18\x03 \x03(\v2&.spotify.imageresolve.proto.CollectionR\vcollections\"g\n" +
 	"\x13ProjectionsResponse\x12P\n" +
 	"\x0eprojection_map\x18\x01 \x01(\v2).spotify.imageresolve.proto.ProjectionMapR\rprojectionMapB\x86\x01\n" +
-	"\x1ecom.spotify.imageresolve.protoB\x12ImageResolveProtosP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/imageresolve;imageresolve\xa2\x02\bSPTImageb\x06proto3"
+	"\x1ecom.spotify.imageresolve.protoB\x12ImageResolveProtosP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/imageresolve;imageresolve\xa2\x02\bSPTImageb\x06proto3"
 
 var file_image_resolve_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_image_resolve_proto_goTypes = []any{

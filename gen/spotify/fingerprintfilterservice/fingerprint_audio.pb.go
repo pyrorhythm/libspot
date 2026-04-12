@@ -259,7 +259,7 @@ const file_fingerprint_audio_proto_rawDesc = "" +
 	"\vsample_rate\x18\x04 \x01(\x05H\x00R\n" +
 	"sampleRate\x88\x01\x01B\x0e\n" +
 	"\f_sample_rateB\x85\x01\n" +
-	"$com.spotify.fingerprintfilterserviceP\x01Z[github.com/pyrorhythm/libspot/api/spotify/fingerprintfilterservice;fingerprintfilterserviceb\x06proto3"
+	"$com.spotify.fingerprintfilterserviceP\x01Z[github.com/pyrorhythm/libspot/gen/spotify/fingerprintfilterservice;fingerprintfilterserviceb\x06proto3"
 
 var file_fingerprint_audio_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_fingerprint_audio_proto_goTypes = []any{

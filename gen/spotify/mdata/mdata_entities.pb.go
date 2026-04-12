@@ -504,7 +504,7 @@ const file_mdata_entities_proto_rawDesc = "" +
 	"\x04name\x18\x02 \x01(\tR\x04nameJ\x04\b\x01\x10\x02\x1a$\n" +
 	"\bNarrator\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04nameJ\x04\b\x01\x10\x02J\x04\b\x01\x10\x02BR\n" +
-	"\x17com.spotify.mdata.protoP\x01Z5github.com/pyrorhythm/libspot/api/spotify/mdata;mdatab\x06proto3"
+	"\x17com.spotify.mdata.protoP\x01Z5github.com/pyrorhythm/libspot/gen/spotify/mdata;mdatab\x06proto3"
 
 var file_mdata_entities_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_mdata_entities_proto_goTypes = []any{

@@ -117,7 +117,7 @@ const file_es_encrypted_stored_credentials_proto_rawDesc = "" +
 	"\busername\x18\x01 \x01(\tR\busername\x12\x1b\n" +
 	"\tauth_blob\x18\x02 \x01(\fR\bauthBlob\x12\x1b\n" +
 	"\tdevice_id\x18\x03 \x01(\tR\bdeviceIdB\xa1\x01\n" +
-	"4com.spotify.connectivity.auth.common.esperanto.protoZVgithub.com/pyrorhythm/libspot/api/spotify/connectivity/auth/common/esperanto;esperanto\xa2\x02\x10SPTAuthEsperantob\x06proto3"
+	"4com.spotify.connectivity.auth.common.esperanto.protoZVgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/common/esperanto;esperanto\xa2\x02\x10SPTAuthEsperantob\x06proto3"
 
 var file_es_encrypted_stored_credentials_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_encrypted_stored_credentials_proto_goTypes = []any{

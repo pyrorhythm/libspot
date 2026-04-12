@@ -1090,7 +1090,7 @@ const file_metadata_episode_metadata_proto_rawDesc = "" +
 	"\aVODCAST\x10\x00\x12\t\n" +
 	"\x05AUDIO\x10\x01\x12\t\n" +
 	"\x05VIDEO\x10\x02J\x04\b\x14\x10\x15J\x04\b\x15\x10\x16Bd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_episode_metadata_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_metadata_episode_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

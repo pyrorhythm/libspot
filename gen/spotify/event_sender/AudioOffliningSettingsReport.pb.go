@@ -231,7 +231,7 @@ const file_include_AudioOffliningSettingsReport_proto_rawDesc = "" +
 	"\x1auser_selected_sync_bitrate\x18\x02 \x01(\x03R\x17userSelectedSyncBitrate\x12!\n" +
 	"\fsync_bitrate\x18\x03 \x01(\x03R\vsyncBitrate\x12,\n" +
 	"\x12sync_over_cellular\x18\x04 \x01(\bR\x10syncOverCellular\x122\n" +
-	"\x15primary_resource_type\x18\x05 \x01(\tR\x13primaryResourceTypeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15primary_resource_type\x18\x05 \x01(\tR\x13primaryResourceTypeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioOffliningSettingsReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioOffliningSettingsReport_proto_goTypes = []any{

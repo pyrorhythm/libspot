@@ -203,7 +203,7 @@ const file_request_failure_proto_rawDesc = "" +
 	"\arequest\x18\x01 \x01(\tR\arequest\x12\x16\n" +
 	"\x06source\x18\x02 \x01(\tR\x06source\x12\x14\n" +
 	"\x05error\x18\x03 \x01(\tR\x05error\x12\x16\n" +
-	"\x06result\x18\x04 \x01(\x03R\x06resultB7Z5github.com/pyrorhythm/libspot/api/spotify/image;image"
+	"\x06result\x18\x04 \x01(\x03R\x06resultB7Z5github.com/pyrorhythm/libspot/gen/spotify/image;image"
 
 var file_request_failure_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_request_failure_proto_goTypes = []any{

@@ -849,7 +849,7 @@ const file_include_EndAd_proto_rawDesc = "" +
 	"ad_clicked\x18\x15 \x01(\bR\tadClicked\x12\x14\n" +
 	"\x05token\x18\x16 \x01(\tR\x05token\x12&\n" +
 	"\x0fclient_ad_count\x18\x17 \x01(\x03R\rclientAdCount\x122\n" +
-	"\x15client_campaign_count\x18\x18 \x01(\x03R\x13clientCampaignCountBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15client_campaign_count\x18\x18 \x01(\x03R\x13clientCampaignCountBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_EndAd_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_EndAd_proto_goTypes = []any{

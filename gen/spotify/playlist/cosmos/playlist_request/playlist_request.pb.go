@@ -7,10 +7,10 @@
 package playlist_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	on_demand_set "github.com/pyrorhythm/libspot/api/spotify/on_demand_set"
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
-	playlist_permission "github.com/pyrorhythm/libspot/api/spotify/playlist_permission"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	on_demand_set "github.com/pyrorhythm/libspot/gen/spotify/on_demand_set"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
+	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -3118,7 +3118,7 @@ const file_playlist_request_proto_rawDesc = "" +
 	"\vSignalState\x12\t\n" +
 	"\x05READY\x10\x00\x12\v\n" +
 	"\aPENDING\x10\x01B\x95\x01\n" +
-	"\x1acom.spotify.playlist.protoZ[github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos/playlist_request;playlist_request\xa2\x02\x19SPTPlaylistCosmosPlaylist"
+	"\x1acom.spotify.playlist.protoZ[github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos/playlist_request;playlist_request\xa2\x02\x19SPTPlaylistCosmosPlaylist"
 
 var file_playlist_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_playlist_request_proto_msgTypes = make([]protoimpl.MessageInfo, 15)

@@ -135,7 +135,7 @@ const file_state_restore_mft_rules_core_proto_rawDesc = "" +
 	"\fMftRulesCore\x12p\n" +
 	"\x14inject_filler_tracks\x18\x01 \x02(\v2>.spotify.player.proto.state_restore.MftRulesInjectFillerTracksR\x12injectFillerTracks\x12k\n" +
 	"\x14context_switch_rules\x18\x02 \x02(\v29.spotify.player.proto.state_restore.MftContextSwitchRulesR\x12contextSwitchRules\x12'\n" +
-	"\x0ffeature_classes\x18\x03 \x03(\tR\x0efeatureClassesBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x0ffeature_classes\x18\x03 \x03(\tR\x0efeatureClassesBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_mft_rules_core_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_mft_rules_core_proto_goTypes = []any{

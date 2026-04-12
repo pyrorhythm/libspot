@@ -395,7 +395,7 @@ const file_include_ExternalDeviceInfo_proto_rawDesc = "" +
 	"\x05error\x18\b \x01(\tR\x05error\x12\x12\n" +
 	"\x04full\x18\t \x01(\bR\x04full\x12\x19\n" +
 	"\bsync_all\x18\n" +
-	" \x01(\bR\asyncAllBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\bR\asyncAllBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ExternalDeviceInfo_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ExternalDeviceInfo_proto_goTypes = []any{

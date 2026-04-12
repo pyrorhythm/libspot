@@ -1936,7 +1936,7 @@ const file_playback_esperanto_proto_rawDesc = "" +
 	"\n" +
 	"\x06SYSTEM\x10\x01\x12\v\n" +
 	"\aCONNECT\x10\x02B}\n" +
-	"$com.spotify.playback_esperanto.protoZOgithub.com/pyrorhythm/libspot/api/spotify/playback_esperanto;playback_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$com.spotify.playback_esperanto.protoZOgithub.com/pyrorhythm/libspot/gen/spotify/playback_esperanto;playback_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_playback_esperanto_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_playback_esperanto_proto_msgTypes = make([]protoimpl.MessageInfo, 18)

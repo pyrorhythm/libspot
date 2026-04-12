@@ -107,7 +107,7 @@ const file_spotify_list_v1_model_attributes_ai_curation_proto_rawDesc = "" +
 	"AiCuration\x12&\n" +
 	"\freference_id\x18\x01 \x01(\fH\x00R\vreferenceId\x88\x01\x01B\x0f\n" +
 	"\r_reference_idBx\n" +
-	"$com.spotify.list.v1.model.attributesB\x0fAiCurationProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x0fAiCurationProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_ai_curation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_attributes_ai_curation_proto_goTypes = []any{

@@ -517,7 +517,7 @@ const file_search_proto_rawDesc = "" +
 	"\bexplicit\x18\x06 \x01(\bR\bexplicit\x12\x18\n" +
 	"\amogef19\x18\a \x01(\bR\amogef19\x12!\n" +
 	"\fpremium_only\x18\b \x01(\bR\vpremiumOnlyBj\n" +
-	"\x18com.spotify.search.protoP\x01Z7github.com/pyrorhythm/libspot/api/spotify/search;search\xa2\x02\x12SPTSearchCoreProtob\x06proto3"
+	"\x18com.spotify.search.protoP\x01Z7github.com/pyrorhythm/libspot/gen/spotify/search;search\xa2\x02\x12SPTSearchCoreProtob\x06proto3"
 
 var file_search_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_search_proto_goTypes = []any{

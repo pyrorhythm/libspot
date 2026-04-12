@@ -232,7 +232,7 @@ const file_play_queue_node_proto_rawDesc = "" +
 	"\finstantiator\x18\x03 \x01(\v2'.spotify.player.proto.TrackInstantiatorR\finstantiator\x12\x19\n" +
 	"\bnext_uid\x18\x04 \x01(\rR\anextUid\x12\x1c\n" +
 	"\titeration\x18\x05 \x01(\x11R\titeration\x122\n" +
-	"\x15delay_enqueued_tracks\x18\x06 \x01(\bR\x13delayEnqueuedTracksB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x15delay_enqueued_tracks\x18\x06 \x01(\bR\x13delayEnqueuedTracksB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_play_queue_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_play_queue_node_proto_goTypes = []any{

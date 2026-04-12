@@ -545,7 +545,7 @@ const file_play_history_entry_proto_rawDesc = "" +
 	"\x17PROVIDER_AD_REPEAT_PLAY\x10\x06\x12!\n" +
 	"\x1dPROVIDER_AD_ACTIVE_PLAY_LIMIT\x10\a\x12\x1b\n" +
 	"\x17PROVIDER_RECOMMENDATION\x10\b\x12\x10\n" +
-	"\fPROVIDER_TTS\x10\tBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/transfer;transfer"
+	"\fPROVIDER_TTS\x10\tBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/transfer;transfer"
 
 var file_play_history_entry_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_play_history_entry_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

@@ -252,7 +252,7 @@ const file_es_desktop_proxy_settings_proto_rawDesc = "" +
 	"\x06SOCKS5\x10\x042\xf0\x01\n" +
 	"\x14DesktopProxySettings\x12k\n" +
 	"\x10GetProxySettings\x12\x16.google.protobuf.Empty\x1a=.spotify.desktop.proxy_settings_esperanto.proto.ProxySettings\"\x00\x12k\n" +
-	"\x10SetProxySettings\x12=.spotify.desktop.proxy_settings_esperanto.proto.ProxySettings\x1a\x16.google.protobuf.Empty\"\x00BeZcgithub.com/pyrorhythm/libspot/api/spotify/desktop/proxy_settings_esperanto;proxy_settings_esperantob\x06proto3"
+	"\x10SetProxySettings\x12=.spotify.desktop.proxy_settings_esperanto.proto.ProxySettings\x1a\x16.google.protobuf.Empty\"\x00BeZcgithub.com/pyrorhythm/libspot/gen/spotify/desktop/proxy_settings_esperanto;proxy_settings_esperantob\x06proto3"
 
 var file_es_desktop_proxy_settings_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_desktop_proxy_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

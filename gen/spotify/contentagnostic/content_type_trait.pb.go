@@ -180,7 +180,7 @@ const file_content_type_trait_proto_rawDesc = "" +
 	"\x13CONTENT_TYPE_LESSON\x10\n" +
 	"\x12\x1f\n" +
 	"\x1bCONTENT_TYPE_USER_HIGHLIGHT\x10\vBj\n" +
-	"\x1bcom.spotify.contentagnosticP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/contentagnostic;contentagnosticb\x06proto3"
+	"\x1bcom.spotify.contentagnosticP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/contentagnostic;contentagnosticb\x06proto3"
 
 var file_content_type_trait_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_content_type_trait_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

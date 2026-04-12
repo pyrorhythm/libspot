@@ -135,7 +135,7 @@ const file_include_CommonCappingFallback_proto_rawDesc = "" +
 	"#include/CommonCappingFallback.proto\x12\x1aspotify.event_sender.proto\"b\n" +
 	"\x15CommonCappingFallback\x12\x18\n" +
 	"\afeature\x18\x01 \x01(\tR\afeature\x12/\n" +
-	"\x13pending_consumption\x18\x02 \x01(\x03R\x12pendingConsumptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x13pending_consumption\x18\x02 \x01(\x03R\x12pendingConsumptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_CommonCappingFallback_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_CommonCappingFallback_proto_goTypes = []any{

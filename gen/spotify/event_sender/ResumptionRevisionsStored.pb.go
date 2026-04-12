@@ -225,7 +225,7 @@ const file_include_ResumptionRevisionsStored_proto_rawDesc = "" +
 	"\fkeys_written\x18\x02 \x01(\x05R\vkeysWritten\x12!\n" +
 	"\fkeys_deleted\x18\x03 \x01(\x05R\vkeysDeleted\x12'\n" +
 	"\x0fseconds_writing\x18\x04 \x01(\x02R\x0esecondsWriting\x12#\n" +
-	"\rbytes_written\x18\x05 \x01(\x03R\fbytesWrittenBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\rbytes_written\x18\x05 \x01(\x03R\fbytesWrittenBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionRevisionsStored_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionRevisionsStored_proto_goTypes = []any{

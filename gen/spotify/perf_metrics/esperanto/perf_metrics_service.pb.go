@@ -160,7 +160,7 @@ const file_perf_metrics_perf_metrics_service_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess2\x9e\x01\n" +
 	"\x12PerfMetricsService\x12\x87\x01\n" +
 	"\x0eTerminateState\x128.spotify.perf_metrics.esperanto.proto.PerfMetricsRequest\x1a9.spotify.perf_metrics.esperanto.proto.PerfMetricsResponse\"\x00Bv\n" +
-	"(com.spotify.performance.perfmetricsprotoZJgithub.com/pyrorhythm/libspot/api/spotify/perf_metrics/esperanto;esperantob\x06proto3"
+	"(com.spotify.performance.perfmetricsprotoZJgithub.com/pyrorhythm/libspot/gen/spotify/perf_metrics/esperanto;esperantob\x06proto3"
 
 var file_perf_metrics_perf_metrics_service_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_perf_metrics_perf_metrics_service_proto_goTypes = []any{

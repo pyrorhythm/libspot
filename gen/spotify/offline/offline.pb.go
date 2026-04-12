@@ -1178,7 +1178,7 @@ const file_offline_proto_rawDesc = "" +
 	"3CHANGE_REASON_USER_ACTION_DISALLOW_OFFLINE_PLAYBACK\x10\x04\x12&\n" +
 	"\"CHANGE_REASON_DEVICE_LIMIT_REACHED\x10\x05\x12)\n" +
 	"%CHANGE_REASON_UNSUPPORTED_LINK_PRUNED\x10\x06\x12+\n" +
-	"'CHANGE_REASON_REMOVED_FROM_LISTEN_LATER\x10\aB;Z9github.com/pyrorhythm/libspot/api/spotify/offline;offlineb\x06proto3"
+	"'CHANGE_REASON_REMOVED_FROM_LISTEN_LATER\x10\aB;Z9github.com/pyrorhythm/libspot/gen/spotify/offline;offlineb\x06proto3"
 
 var file_offline_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_offline_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

@@ -453,7 +453,7 @@ const file_include_StreamReportingDebugTracerTest_proto_rawDesc = "" +
 	"\ttimestamp\x18\v \x03(\x03R\ttimestamp\x12+\n" +
 	"\x11initial_timestamp\x18\f \x01(\x03R\x10initialTimestamp\x12*\n" +
 	"\x11core_version_tiny\x18\r \x01(\x03R\x0fcoreVersionTiny\x12$\n" +
-	"\rconfiguration\x18\x0e \x01(\tR\rconfigurationBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\rconfiguration\x18\x0e \x01(\tR\rconfigurationBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_StreamReportingDebugTracerTest_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_StreamReportingDebugTracerTest_proto_goTypes = []any{

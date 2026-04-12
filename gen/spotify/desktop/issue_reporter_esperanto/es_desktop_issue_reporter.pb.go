@@ -349,7 +349,7 @@ const file_es_desktop_issue_reporter_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\tH\x00R\x05error\x88\x01\x01B\b\n" +
 	"\x06_error2\xb1\x01\n" +
 	"\x14DesktopIssueReporter\x12\x98\x01\n" +
-	"\vSubmitIssue\x12B.spotify.desktop.issue_reporter_esperanto.proto.SubmitIssueRequest\x1aC.spotify.desktop.issue_reporter_esperanto.proto.SubmitIssueResponse\"\x00BeZcgithub.com/pyrorhythm/libspot/api/spotify/desktop/issue_reporter_esperanto;issue_reporter_esperantob\x06proto3"
+	"\vSubmitIssue\x12B.spotify.desktop.issue_reporter_esperanto.proto.SubmitIssueRequest\x1aC.spotify.desktop.issue_reporter_esperanto.proto.SubmitIssueResponse\"\x00BeZcgithub.com/pyrorhythm/libspot/gen/spotify/desktop/issue_reporter_esperanto;issue_reporter_esperantob\x06proto3"
 
 var file_es_desktop_issue_reporter_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_es_desktop_issue_reporter_proto_goTypes = []any{

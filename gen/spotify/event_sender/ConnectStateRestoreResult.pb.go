@@ -525,7 +525,7 @@ const file_include_ConnectStateRestoreResult_proto_rawDesc = "" +
 	"\x19before_track_uri_category\x18\v \x01(\tR\x16beforeTrackUriCategory\x12E\n" +
 	"\x1fsynchronous_restore_duration_ms\x18\f \x01(\x03R\x1csynchronousRestoreDurationMs\x122\n" +
 	"\x16time_to_playback_id_ms\x18\r \x01(\x03R\x12timeToPlaybackIdMs\x12(\n" +
-	"\x10did_change_track\x18\x0e \x01(\bR\x0edidChangeTrackBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x10did_change_track\x18\x0e \x01(\bR\x0edidChangeTrackBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectStateRestoreResult_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectStateRestoreResult_proto_goTypes = []any{

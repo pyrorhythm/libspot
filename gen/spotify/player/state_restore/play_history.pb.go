@@ -7,7 +7,7 @@
 package state_restore
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -250,7 +250,7 @@ const file_state_restore_play_history_proto_rawDesc = "" +
 	"\aentries\x18\x01 \x03(\v27.spotify.player.proto.state_restore.PlayHistoryV1.EntryR\aentries\x1a_\n" +
 	"\x05Entry\x12\x1c\n" +
 	"\ttimestamp\x18\x01 \x02(\x04R\ttimestamp\x128\n" +
-	"\x05track\x18\x02 \x02(\v2\".spotify.player.proto.ContextTrackR\x05trackBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x05track\x18\x02 \x02(\v2\".spotify.player.proto.ContextTrackR\x05trackBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_play_history_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_state_restore_play_history_proto_goTypes = []any{

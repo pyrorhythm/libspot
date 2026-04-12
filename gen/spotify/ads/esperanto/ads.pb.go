@@ -361,7 +361,7 @@ const file_ads_proto_rawDesc = "" +
 	"\x06_error2j\n" +
 	"\x03Ads\x12c\n" +
 	"\x06GetAds\x12*.spotify.ads.esperanto.proto.GetAdsRequest\x1a+.spotify.ads.esperanto.proto.GetAdsResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ads_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_ads_proto_goTypes = []any{

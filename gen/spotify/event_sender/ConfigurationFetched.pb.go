@@ -932,7 +932,7 @@ const file_include_ConfigurationFetched_proto_rawDesc = "" +
 	"\videntifiers\x18\x17 \x03(\v2A.spotify.event_sender.proto.ConfigurationFetched.IdentifiersEntryR\videntifiers\x1a:\n" +
 	"\x10IdentifiersEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05valueBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05value\x18\x02 \x01(\tR\x05valueBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConfigurationFetched_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_include_ConfigurationFetched_proto_goTypes = []any{

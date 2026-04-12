@@ -1177,7 +1177,7 @@ const file_ad_slots_proto_rawDesc = "" +
 	"\x11ClearAvailableAds\x12-.spotify.ads.esperanto.proto.ClearSlotRequest\x1a..spotify.ads.esperanto.proto.ClearSlotResponse\"\x00\x12n\n" +
 	"\vClearAllAds\x12-.spotify.ads.esperanto.proto.ClearSlotRequest\x1a..spotify.ads.esperanto.proto.ClearSlotResponse\"\x00\x12\x8a\x01\n" +
 	"\x13ClearNextSlotIntent\x127.spotify.ads.esperanto.proto.ClearNextSlotIntentRequest\x1a8.spotify.ads.esperanto.proto.ClearNextSlotIntentResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_slots_proto_msgTypes = make([]protoimpl.MessageInfo, 17)
 var file_ad_slots_proto_goTypes = []any{

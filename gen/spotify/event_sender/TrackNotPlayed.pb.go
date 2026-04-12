@@ -551,7 +551,7 @@ const file_include_TrackNotPlayed_proto_rawDesc = "" +
 	"\x10referrer_version\x18\v \x01(\tR\x0freferrerVersion\x12'\n" +
 	"\x0freferrer_vendor\x18\f \x01(\tR\x0ereferrerVendor\x12\x1e\n" +
 	"\vgaia_dev_id\x18\r \x01(\tR\tgaiaDevId\x12*\n" +
-	"\x11reason_not_played\x18\x0e \x01(\tR\x0freasonNotPlayedBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11reason_not_played\x18\x0e \x01(\tR\x0freasonNotPlayedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_TrackNotPlayed_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_TrackNotPlayed_proto_goTypes = []any{

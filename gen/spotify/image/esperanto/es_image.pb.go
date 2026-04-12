@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	imageresolve "github.com/pyrorhythm/libspot/api/spotify/imageresolve"
+	imageresolve "github.com/pyrorhythm/libspot/gen/spotify/imageresolve"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -703,7 +703,7 @@ const file_es_image_proto_rawDesc = "" +
 	"\bGetImage\x12-.spotify.image.esperanto.proto.GetImageParams\x1a(.spotify.image.esperanto.proto.ImageData\"\x00\x12s\n" +
 	"\x0eGetCacheStatus\x123.spotify.image.esperanto.proto.GetCacheStatusParams\x1a*.spotify.image.esperanto.proto.CacheStatus\"\x00\x12c\n" +
 	"\x10SetProjectionMap\x125.spotify.image.esperanto.proto.SetProjectionMapParams\x1a\x16.google.protobuf.Empty\"\x00Bn\n" +
-	"!com.spotify.image.esperanto.protoZCgithub.com/pyrorhythm/libspot/api/spotify/image/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"!com.spotify.image.esperanto.protoZCgithub.com/pyrorhythm/libspot/gen/spotify/image/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_image_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_image_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

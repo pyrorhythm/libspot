@@ -1635,7 +1635,7 @@ const file_rcs_proto_rawDesc = "" +
 	"\x10ANDROID_PLATFORM\x10\x01\x12\x14\n" +
 	"\x10BACKEND_PLATFORM\x10\x02\x12\x10\n" +
 	"\fIOS_PLATFORM\x10\x03\x12\x10\n" +
-	"\fWEB_PLATFORM\x10\x04BGZEgithub.com/pyrorhythm/libspot/api/spotify/remote_config;remote_configb\x06proto3"
+	"\fWEB_PLATFORM\x10\x04BGZEgithub.com/pyrorhythm/libspot/gen/spotify/remote_config;remote_configb\x06proto3"
 
 var file_rcs_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_rcs_proto_msgTypes = make([]protoimpl.MessageInfo, 13)

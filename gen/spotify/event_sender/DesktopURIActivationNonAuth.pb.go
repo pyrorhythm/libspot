@@ -138,7 +138,7 @@ const file_include_DesktopURIActivationNonAuth_proto_rawDesc = "" +
 	")include/DesktopURIActivationNonAuth.proto\x12\x1aspotify.event_sender.proto\"\\\n" +
 	"\x1bDesktopURIActivationNonAuth\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12+\n" +
-	"\x11activation_source\x18\x02 \x01(\tR\x10activationSourceBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11activation_source\x18\x02 \x01(\tR\x10activationSourceBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopURIActivationNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopURIActivationNonAuth_proto_goTypes = []any{

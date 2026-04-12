@@ -166,7 +166,7 @@ const file_chapter_specifics_proto_rawDesc = "" +
 	"\x13cumulative_duration\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\x12cumulativeDuration\"]\n" +
 	"\x0fEpisodeMetadata\x12J\n" +
 	"\x13cumulative_duration\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\x12cumulativeDurationBs\n" +
-	"\"com.spotify.chapterspecifics.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/chapterspecifics;chapterspecificsb\x06proto3"
+	"\"com.spotify.chapterspecifics.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/chapterspecifics;chapterspecificsb\x06proto3"
 
 var file_chapter_specifics_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_chapter_specifics_proto_goTypes = []any{

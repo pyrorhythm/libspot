@@ -634,7 +634,7 @@ const file_include_AdContext_proto_rawDesc = "" +
 	"\x15playback_rendering_id\x18\x02 \x01(\tR\x13playbackRenderingId\x12\"\n" +
 	"\rad_request_id\x18\x03 \x01(\tR\vadRequestId\x12\x1c\n" +
 	"\n" +
-	"ad_slot_id\x18\x04 \x01(\tR\badSlotIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"ad_slot_id\x18\x04 \x01(\tR\badSlotIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdContext_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_include_AdContext_proto_goTypes = []any{

@@ -104,7 +104,7 @@ const file_include_ConnectUnmappedAudioOutputType_proto_rawDesc = "" +
 	"\n" +
 	",include/ConnectUnmappedAudioOutputType.proto\x12\x1aspotify.event_sender.proto\"Z\n" +
 	"\x1eConnectUnmappedAudioOutputType\x128\n" +
-	"\x18unmapped_connection_type\x18\x01 \x01(\tR\x16unmappedConnectionTypeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x18unmapped_connection_type\x18\x01 \x01(\tR\x16unmappedConnectionTypeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectUnmappedAudioOutputType_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectUnmappedAudioOutputType_proto_goTypes = []any{

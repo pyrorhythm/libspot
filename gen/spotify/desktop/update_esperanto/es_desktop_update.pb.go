@@ -358,7 +358,7 @@ const file_es_desktop_update_proto_rawDesc = "" +
 	"\rDesktopUpdate\x12n\n" +
 	"\x0fSubscribeStatus\x12\x16.google.protobuf.Empty\x1a?.spotify.desktop.update_esperanto.proto.SubscribeStatusResponse\"\x000\x01\x12\x94\x01\n" +
 	"\x0fTriggerDownload\x12>.spotify.desktop.update_esperanto.proto.TriggerDownloadRequest\x1a?.spotify.desktop.update_esperanto.proto.TriggerDownloadResponse\"\x00\x12\x88\x01\n" +
-	"\vApplyUpdate\x12:.spotify.desktop.update_esperanto.proto.ApplyUpdateRequest\x1a;.spotify.desktop.update_esperanto.proto.ApplyUpdateResponse\"\x00BUZSgithub.com/pyrorhythm/libspot/api/spotify/desktop/update_esperanto;update_esperantob\x06proto3"
+	"\vApplyUpdate\x12:.spotify.desktop.update_esperanto.proto.ApplyUpdateRequest\x1a;.spotify.desktop.update_esperanto.proto.ApplyUpdateResponse\"\x00BUZSgithub.com/pyrorhythm/libspot/gen/spotify/desktop/update_esperanto;update_esperantob\x06proto3"
 
 var file_es_desktop_update_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_desktop_update_proto_msgTypes = make([]protoimpl.MessageInfo, 5)

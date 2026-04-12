@@ -7,9 +7,9 @@
 package playlist_cache
 
 import (
-	messages "github.com/pyrorhythm/libspot/api/spotify/playlist/messages"
-	playlist4 "github.com/pyrorhythm/libspot/api/spotify/playlist4"
-	playlist_permission "github.com/pyrorhythm/libspot/api/spotify/playlist_permission"
+	messages "github.com/pyrorhythm/libspot/gen/spotify/playlist/messages"
+	playlist4 "github.com/pyrorhythm/libspot/gen/spotify/playlist4"
+	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -926,7 +926,7 @@ const file_playlist_cache_proto_rawDesc = "" +
 	"\x1c_owner_capabilities_responseB \n" +
 	"\x1e_owner_capabilities_expires_atB%\n" +
 	"#_current_content_generation_versionBe\n" +
-	"\x1acom.spotify.playlist.protoZGgithub.com/pyrorhythm/libspot/api/spotify/playlist_cache;playlist_cacheb\x06proto3"
+	"\x1acom.spotify.playlist.protoZGgithub.com/pyrorhythm/libspot/gen/spotify/playlist_cache;playlist_cacheb\x06proto3"
 
 var file_playlist_cache_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_playlist_cache_proto_goTypes = []any{

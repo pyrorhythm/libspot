@@ -292,7 +292,7 @@ const file_es_play_options_proto_rawDesc = "" +
 	"\x13ADVANCED_PAST_TRACK\x10\x01\x12\x19\n" +
 	"\x15ADVANCED_PAST_CONTEXT\x10\x02B\x11\n" +
 	"\x0f_playback_speedBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_play_options_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_es_play_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

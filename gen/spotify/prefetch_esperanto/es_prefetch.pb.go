@@ -323,7 +323,7 @@ const file_es_prefetch_proto_rawDesc = "" +
 	"\bPrefetch\x12X\n" +
 	"\bGetQueue\x12\x16.google.protobuf.Empty\x1a2.spotify.prefetch_esperanto.proto.GetQueueResponse\"\x00\x12f\n" +
 	"\x0fGetEventHistory\x12\x16.google.protobuf.Empty\x1a9.spotify.prefetch_esperanto.proto.GetEventHistoryResponse\"\x00B}\n" +
-	"$com.spotify.prefetch_esperanto.protoZOgithub.com/pyrorhythm/libspot/api/spotify/prefetch_esperanto;prefetch_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"$com.spotify.prefetch_esperanto.protoZOgithub.com/pyrorhythm/libspot/gen/spotify/prefetch_esperanto;prefetch_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_prefetch_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_prefetch_proto_goTypes = []any{

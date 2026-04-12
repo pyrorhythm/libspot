@@ -7,7 +7,7 @@
 package collection_platform
 
 import (
-	itemdata "github.com/pyrorhythm/libspot/api/spotify/collection/itemdata"
+	itemdata "github.com/pyrorhythm/libspot/gen/spotify/collection/itemdata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -128,7 +128,7 @@ const file_collection_platform_items_proto_rawDesc = "" +
 	"\titem_data\x18\x03 \x01(\v2%.spotify.collection.itemdata.ItemDataH\x00R\bitemData\x88\x01\x01B\f\n" +
 	"\n" +
 	"_item_dataB\x8c\x01\n" +
-	"/com.spotify.collection_platform.esperanto.protoP\x01ZQgithub.com/pyrorhythm/libspot/api/spotify/collection_platform;collection_platform\xa2\x02\x03ESPb\x06proto3"
+	"/com.spotify.collection_platform.esperanto.protoP\x01ZQgithub.com/pyrorhythm/libspot/gen/spotify/collection_platform;collection_platform\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_platform_items_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_collection_platform_items_proto_goTypes = []any{

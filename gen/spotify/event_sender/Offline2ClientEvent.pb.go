@@ -172,7 +172,7 @@ const file_include_Offline2ClientEvent_proto_rawDesc = "" +
 	"\x13Offline2ClientEvent\x12\x14\n" +
 	"\x05event\x18\x01 \x01(\tR\x05event\x12\x1b\n" +
 	"\tdevice_id\x18\x02 \x01(\tR\bdeviceId\x12\x19\n" +
-	"\bcache_id\x18\x03 \x01(\tR\acacheIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\bcache_id\x18\x03 \x01(\tR\acacheIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_Offline2ClientEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_Offline2ClientEvent_proto_goTypes = []any{

@@ -117,7 +117,7 @@ const file_context_application_desktop_proto_rawDesc = "" +
 	"\x0eversion_string\x18\x01 \x01(\tR\rversionString\x12!\n" +
 	"\fversion_code\x18\x02 \x01(\x03R\vversionCode\x12\x1d\n" +
 	"\n" +
-	"session_id\x18\x03 \x01(\fR\tsessionIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"session_id\x18\x03 \x01(\fR\tsessionIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_context_application_desktop_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_context_application_desktop_proto_goTypes = []any{

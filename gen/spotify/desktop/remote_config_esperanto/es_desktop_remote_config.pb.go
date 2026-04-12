@@ -7,7 +7,7 @@
 package remote_config_esperanto
 
 import (
-	remote_config "github.com/pyrorhythm/libspot/api/spotify/remote_config"
+	remote_config "github.com/pyrorhythm/libspot/gen/spotify/remote_config"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -459,7 +459,7 @@ const file_es_desktop_remote_config_proto_rawDesc = "" +
 	"\x10GetConfiguration\x12\x16.google.protobuf.Empty\x1aG.spotify.desktop.remote_config_esperanto.proto.GetConfigurationResponse\"\x00\x12m\n" +
 	"\fGetOverrides\x12\x16.google.protobuf.Empty\x1aC.spotify.desktop.remote_config_esperanto.proto.GetOverridesResponse\"\x00\x12\x96\x01\n" +
 	"\vSetOverride\x12A.spotify.desktop.remote_config_esperanto.proto.SetOverrideRequest\x1aB.spotify.desktop.remote_config_esperanto.proto.SetOverrideResponse\"\x00\x12q\n" +
-	"\x0eClearOverrides\x12\x16.google.protobuf.Empty\x1aE.spotify.desktop.remote_config_esperanto.proto.ClearOverridesResponse\"\x00BcZagithub.com/pyrorhythm/libspot/api/spotify/desktop/remote_config_esperanto;remote_config_esperantob\x06proto3"
+	"\x0eClearOverrides\x12\x16.google.protobuf.Empty\x1aE.spotify.desktop.remote_config_esperanto.proto.ClearOverridesResponse\"\x00BcZagithub.com/pyrorhythm/libspot/gen/spotify/desktop/remote_config_esperanto;remote_config_esperantob\x06proto3"
 
 var file_es_desktop_remote_config_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_es_desktop_remote_config_proto_goTypes = []any{

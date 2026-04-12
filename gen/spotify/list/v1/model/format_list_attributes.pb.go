@@ -162,7 +162,7 @@ const file_spotify_list_v1_model_attributes_format_list_attributes_proto_rawDesc
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
 	"\x05value\x18\x02 \x01(\tR\x05valueB\x82\x01\n" +
-	"$com.spotify.list.v1.model.attributesB\x19FormatListAttributesProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x19FormatListAttributesProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_format_list_attributes_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_list_v1_model_attributes_format_list_attributes_proto_goTypes = []any{

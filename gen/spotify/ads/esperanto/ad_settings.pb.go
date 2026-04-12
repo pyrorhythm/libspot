@@ -1311,7 +1311,7 @@ const file_ad_settings_proto_rawDesc = "" +
 	"\x11setRequestHeaders\x125.spotify.ads.esperanto.proto.SetRequestHeadersRequest\x1a6.spotify.ads.esperanto.proto.SetRequestHeadersResponse\"\x00\x12\x8d\x01\n" +
 	"\x14deleteRequestHeaders\x128.spotify.ads.esperanto.proto.DeleteRequestHeadersRequest\x1a9.spotify.ads.esperanto.proto.DeleteRequestHeadersResponse\"\x00\x12\x90\x01\n" +
 	"\x15updateAdStateEndpoint\x129.spotify.ads.esperanto.proto.UpdateAdStateEndpointRequest\x1a:.spotify.ads.esperanto.proto.UpdateAdStateEndpointResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_settings_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_ad_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 18)

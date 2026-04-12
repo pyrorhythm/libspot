@@ -141,7 +141,7 @@ const file_es_send_event_request_proto_rawDesc = "" +
 	"event_data\x18\x02 \x01(\fR\teventData\x12*\n" +
 	"\x0eoverride_owner\x18\x03 \x01(\tH\x00R\roverrideOwner\x88\x01\x01B\x11\n" +
 	"\x0f_override_ownerB{\n" +
-	"'com.spotify.eventsender.esperanto.protoZJgithub.com/pyrorhythm/libspot/api/spotify/event_sender/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"'com.spotify.eventsender.esperanto.protoZJgithub.com/pyrorhythm/libspot/gen/spotify/event_sender/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_send_event_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_send_event_request_proto_goTypes = []any{

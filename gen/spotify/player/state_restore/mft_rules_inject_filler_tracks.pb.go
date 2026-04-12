@@ -7,7 +7,7 @@
 package state_restore
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -289,7 +289,7 @@ const file_state_restore_mft_rules_inject_filler_tracks_proto_rawDesc = "" +
 	"\x17padding_track_injection\x18\x02 \x02(\v2;.spotify.player.proto.state_restore.MftRandomTrackInjectionR\x15paddingTrackInjection\x12U\n" +
 	"\rrandom_source\x18\x03 \x02(\v20.spotify.player.proto.state_restore.RandomSourceR\frandomSource\x126\n" +
 	"\x17filter_explicit_content\x18\x04 \x02(\bR\x15filterExplicitContent\x12'\n" +
-	"\x0ffeature_classes\x18\x05 \x03(\tR\x0efeatureClassesBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x0ffeature_classes\x18\x05 \x03(\tR\x0efeatureClassesBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_mft_rules_inject_filler_tracks_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_state_restore_mft_rules_inject_filler_tracks_proto_goTypes = []any{

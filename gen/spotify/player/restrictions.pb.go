@@ -1096,7 +1096,7 @@ const file_restrictions_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\v2&.spotify.player.proto.ModeRestrictionsR\x05value\x1ah\n" +
 	"\x14DisallowSignalsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12>\n" +
-	"\x05value\x18\x02 \x01(\v2(.spotify.player.proto.RestrictionReasonsR\x05valueJ\x04\b\x18\x10\x19B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05value\x18\x02 \x01(\v2(.spotify.player.proto.RestrictionReasonsR\x05valueJ\x04\b\x18\x10\x19B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_restrictions_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_restrictions_proto_goTypes = []any{

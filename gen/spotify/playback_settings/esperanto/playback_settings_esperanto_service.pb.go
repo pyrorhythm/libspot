@@ -2847,7 +2847,7 @@ const file_playback_settings_esperanto_service_proto_rawDesc = "" +
 	"\x11GetDeviceSettings\x12C.spotify.playback_settings.esperanto.proto.GetDeviceSettingsRequest\x1aD.spotify.playback_settings.esperanto.proto.GetDeviceSettingsResponse\"\x00\x12\x9f\x01\n" +
 	"\x16SetDeviceStreamQuality\x12H.spotify.playback_settings.esperanto.proto.SetDeviceStreamQualityRequest\x1a9.spotify.playback_settings.esperanto.proto.StatusResponse\"\x00\x12\xbd\x01\n" +
 	"\x1fStreamDeviceSettingFieldChanges\x12Q.spotify.playback_settings.esperanto.proto.StreamDeviceSettingFieldChangesRequest\x1aC.spotify.playback_settings.esperanto.proto.DeviceSettingFieldChange\"\x000\x01B\x9f\x01\n" +
-	"-com.spotify.playback_settings.esperanto.protoZOgithub.com/pyrorhythm/libspot/api/spotify/playback_settings/esperanto;esperanto\xa2\x02\x1cSPTPlaybackSettingsEsperantob\x06proto3"
+	"-com.spotify.playback_settings.esperanto.protoZOgithub.com/pyrorhythm/libspot/gen/spotify/playback_settings/esperanto;esperanto\xa2\x02\x1cSPTPlaybackSettingsEsperantob\x06proto3"
 
 var file_playback_settings_esperanto_service_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
 var file_playback_settings_esperanto_service_proto_msgTypes = make([]protoimpl.MessageInfo, 27)

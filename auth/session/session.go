@@ -14,9 +14,12 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/pyrorhythm/fn"
 	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth/dpop"
+	"github.com/pyrorhythm/libspot/auth"
 	"github.com/pyrorhythm/libspot/auth/store"
+	"github.com/pyrorhythm/libspot/pkg/keychain"
+	"github.com/pyrorhythm/libspot/resolver"
 	"golang.org/x/oauth2"
 )
 
@@ -39,12 +42,33 @@ type session struct {
 	mu      sync.RWMutex
 	nonceMu sync.RWMutex
 
-	kcer store.Keychainer[storedCredentials]
+	kcer keychain.Keychainer[storedCredentials]
 
 	creds *storedCredentials
 	conf  *oauth2.Config
 
 	dpopClient *http.Client
+
+	resolver    libspot.EndpointResolver
+	gracefulCtx context.Context
+}
+
+func (s *session) Resolver() (libspot.EndpointResolver, error) {
+	if s.resolver != nil {
+		return s.resolver, nil
+	}
+
+	ctok, err := s.safeClientToken()
+	if err != nil {
+		return nil, fmt.Errorf("failed to get valid client-token: %w", err)
+	}
+
+	s.resolver = resolver.New(ctok)
+	return s.resolver, nil
+}
+
+func (s *session) ClientToken() (string, error) {
+	return s.safeClientToken()
 }
 
 func (s *session) GetNonce() (string, bool) {
@@ -59,15 +83,44 @@ func (s *session) SetNonce(nonce string) {
 	s.creds.Proof.LastNonce = nonce
 }
 
-func New(
-	conf *oauth2.Config,
-	keychainerFunc func(key string) store.Keychainer[storedCredentials],
-) Session {
-	return &session{
-		conf:  conf,
-		kcer:  keychainerFunc(sessionKey),
-		creds: &storedCredentials{Token: &oauth2.Token{}},
+type Option func(*session)
+
+func WithRedirectPort(c int) Option {
+	return func(s *session) {
+		s.conf = auth.NewDefaultOAuthConfig(c)
 	}
+}
+
+func WithKeychainerFunc(kcfn func(key string) keychain.Keychainer[storedCredentials]) Option {
+	return func(s *session) {
+		s.kcer = kcfn(sessionKey)
+	}
+}
+
+func WithGracefulContext(ctx context.Context) Option {
+	return func(s *session) {
+		s.gracefulCtx = ctx
+	}
+}
+
+func applyDefaults(s *session) {
+	s.conf = auth.NewDefaultOAuthConfig(9292)
+	s.kcer = store.Zalando[storedCredentials](sessionKey)
+	s.gracefulCtx = context.Background()
+}
+
+func New(
+	opts ...Option,
+) Session {
+	s := &session{}
+	
+	for _, opt := range opts {
+		opt(s)
+	}
+	
+	applyDefaults(s)
+	
+	return s
 }
 
 func generateDeviceId() string {
@@ -151,7 +204,7 @@ func (s *session) injectDPoPClient(ctx context.Context) (context.Context, error)
 		if err != nil {
 			return nil, err
 		}
-		s.dpopClient = dpop.NewClientWithKey(clientToken, s, key)
+		s.dpopClient = newSessionDpopClient(clientToken, s, key)
 	}
 	return context.WithValue(ctx, oauth2.HTTPClient, s.dpopClient), nil
 }
@@ -177,7 +230,16 @@ func (s *session) AuthCode(ctx context.Context, code, pkce string) error {
 	return s.SaveToken(tok)
 }
 
-func (s *session) AccessToken(ctx context.Context) (string, error) {
+func (s *session) GetToken() (string, bool) {
+	s.mu.RLock()
+	valid := s.creds.Valid()
+	accessToken := s.creds.AccessToken
+	s.mu.RUnlock()
+
+	return fn.If(valid, accessToken, ""), valid
+}
+
+func (s *session) GetOrRefreshToken(ctx context.Context) (string, error) {
 	s.mu.RLock()
 	valid := s.creds.Valid()
 	accessToken := s.creds.AccessToken

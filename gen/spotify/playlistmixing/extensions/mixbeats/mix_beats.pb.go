@@ -236,7 +236,7 @@ const file_mix_beats_proto_rawDesc = "" +
 	"\x05beats\x18\x02 \x03(\v20.spotify.playlistmixing.extensions.mixbeats.BeatR\x05beats\x12\x1d\n" +
 	"\n" +
 	"beats_hash\x18\x03 \x01(\tR\tbeatsHashB\x9c\x01\n" +
-	"4com.spotify.playlistmixing.extensions.mixbeats.protoB\rMixBeatsProtoZUgithub.com/pyrorhythm/libspot/api/spotify/playlistmixing/extensions/mixbeats;mixbeatsb\x06proto3"
+	"4com.spotify.playlistmixing.extensions.mixbeats.protoB\rMixBeatsProtoZUgithub.com/pyrorhythm/libspot/gen/spotify/playlistmixing/extensions/mixbeats;mixbeatsb\x06proto3"
 
 var file_mix_beats_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_mix_beats_proto_goTypes = []any{

@@ -274,7 +274,7 @@ const file_include_MediaPrefetch_proto_rawDesc = "" +
 	"\rresource_type\x18\x04 \x01(\tR\fresourceType\x12\x1d\n" +
 	"\n" +
 	"error_code\x18\x05 \x01(\x03R\terrorCode\x12#\n" +
-	"\rerror_details\x18\x06 \x01(\tR\ferrorDetailsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\rerror_details\x18\x06 \x01(\tR\ferrorDetailsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_MediaPrefetch_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_MediaPrefetch_proto_goTypes = []any{

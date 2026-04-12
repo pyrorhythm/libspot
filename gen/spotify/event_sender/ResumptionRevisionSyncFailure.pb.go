@@ -132,7 +132,7 @@ const file_include_ResumptionRevisionSyncFailure_proto_rawDesc = "" +
 	"+include/ResumptionRevisionSyncFailure.proto\x12\x1aspotify.event_sender.proto\"t\n" +
 	"\x1dResumptionRevisionSyncFailure\x12)\n" +
 	"\x10number_revisions\x18\x01 \x01(\x05R\x0fnumberRevisions\x12(\n" +
-	"\x10http_status_code\x18\x02 \x01(\x05R\x0ehttpStatusCodeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x10http_status_code\x18\x02 \x01(\x05R\x0ehttpStatusCodeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionRevisionSyncFailure_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionRevisionSyncFailure_proto_goTypes = []any{

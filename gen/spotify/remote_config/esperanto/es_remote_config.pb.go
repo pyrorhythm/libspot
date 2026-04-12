@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	_ "github.com/pyrorhythm/libspot/api/spotify/esperanto"
+	_ "github.com/pyrorhythm/libspot/gen/spotify/esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -343,7 +343,7 @@ const file_es_remote_config_proto_rawDesc = "" +
 	"\tlookupInt\x124.spotify.remote_config.esperanto.proto.LookupRequest\x1a2.spotify.remote_config.esperanto.proto.IntResponse\"\x00\x12y\n" +
 	"\n" +
 	"lookupEnum\x124.spotify.remote_config.esperanto.proto.LookupRequest\x1a3.spotify.remote_config.esperanto.proto.EnumResponse\"\x00B}\n" +
-	"(com.spotify.remoteconfig.esperanto.protoZKgithub.com/pyrorhythm/libspot/api/spotify/remote_config/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"(com.spotify.remoteconfig.esperanto.protoZKgithub.com/pyrorhythm/libspot/gen/spotify/remote_config/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_remote_config_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_remote_config_proto_goTypes = []any{

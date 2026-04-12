@@ -184,7 +184,7 @@ const file_es_stop_proto_rawDesc = "" +
 	"\vINTERACTIVE\x10\x00\x12\x13\n" +
 	"\x0fREMOTE_TRANSFER\x10\x01\x12\f\n" +
 	"\bSHUTDOWN\x10\x02Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_stop_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_stop_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

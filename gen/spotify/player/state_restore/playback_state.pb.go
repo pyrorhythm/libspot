@@ -333,7 +333,7 @@ const file_state_restore_playback_state_proto_rawDesc = "" +
 	"\aUNKNOWN\x10\x00\x12\v\n" +
 	"\aDEFAULT\x10\x01\x12\n" +
 	"\n" +
-	"\x06PARROT\x10\x02BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x06PARROT\x10\x02BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_playback_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_state_restore_playback_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

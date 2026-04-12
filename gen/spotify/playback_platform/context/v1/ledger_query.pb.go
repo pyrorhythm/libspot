@@ -300,7 +300,7 @@ const file_spotify_playback_platform_context_v1_ledger_query_proto_rawDesc = "" 
 	"\x12filter_with_suffix\x18\x03 \x01(\tH\x01R\x10filterWithSuffix\x88\x01\x01B\x15\n" +
 	"\x13_filter_with_prefixB\x15\n" +
 	"\x13_filter_with_suffixBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_ledger_query_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_spotify_playback_platform_context_v1_ledger_query_proto_goTypes = []any{

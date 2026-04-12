@@ -688,7 +688,7 @@ const file_time_measurement_builder_snapshot_proto_rawDesc = "" +
 	"\n" +
 	"feature_id\x18\x02 \x01(\tH\x00R\tfeatureId\x88\x01\x01B\r\n" +
 	"\v_feature_idB|\n" +
-	"+com.spotify.performancesdk.timekeeper.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/timekeeper_proto;timekeeper_protob\x06proto3"
+	"+com.spotify.performancesdk.timekeeper.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/timekeeper_proto;timekeeper_protob\x06proto3"
 
 var file_time_measurement_builder_snapshot_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_time_measurement_builder_snapshot_proto_goTypes = []any{

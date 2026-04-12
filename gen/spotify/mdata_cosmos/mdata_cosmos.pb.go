@@ -7,7 +7,7 @@
 package mdata_cosmos
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/api/spotify/extendedmetadata"
+	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -145,7 +145,7 @@ const file_mdata_cosmos_proto_rawDesc = "" +
 	"\n" +
 	"entity_uri\x18\x02 \x03(\tR\tentityUri\"\x19\n" +
 	"\x17InvalidateCacheResponseBj\n" +
-	"\x1ecom.spotify.mdata.cosmos.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/mdata_cosmos;mdata_cosmos\xf8\x01\x01b\x06proto3"
+	"\x1ecom.spotify.mdata.cosmos.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/mdata_cosmos;mdata_cosmos\xf8\x01\x01b\x06proto3"
 
 var file_mdata_cosmos_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_mdata_cosmos_proto_goTypes = []any{

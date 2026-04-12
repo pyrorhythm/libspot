@@ -118,7 +118,7 @@ const file_state_restore_ads_rules_inject_tracks_proto_rawDesc = "" +
 	"+state_restore/ads_rules_inject_tracks.proto\x12\"spotify.player.proto.state_restore\x1a\"state_restore/provided_track.proto\"\x83\x01\n" +
 	"\x14AdsRulesInjectTracks\x12C\n" +
 	"\x03ads\x18\x01 \x03(\v21.spotify.player.proto.state_restore.ProvidedTrackR\x03ads\x12&\n" +
-	"\x0fis_playing_slot\x18\x02 \x01(\bR\risPlayingSlotBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x0fis_playing_slot\x18\x02 \x01(\bR\risPlayingSlotBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_ads_rules_inject_tracks_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_ads_rules_inject_tracks_proto_goTypes = []any{

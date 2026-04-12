@@ -143,7 +143,7 @@ const file_contains_request_proto_rawDesc = "" +
 	"\x05items\x18\x01 \x03(\tR\x05items\"(\n" +
 	"\x10ContainsResponse\x12\x14\n" +
 	"\x05found\x18\x01 \x03(\bR\x05foundB`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmosb\x06proto3"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmosb\x06proto3"
 
 var file_contains_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_contains_request_proto_goTypes = []any{

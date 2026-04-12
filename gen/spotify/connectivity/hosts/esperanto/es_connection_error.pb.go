@@ -111,7 +111,7 @@ const file_es_connection_error_proto_rawDesc = "" +
 	"\fservice_type\x18\x01 \x01(\v27.spotify.connectivity.hosts.esperanto.proto.ServiceTypeR\vserviceType\x12\x1d\n" +
 	"\n" +
 	"error_code\x18\x02 \x01(\x05R\terrorCodeB\x82\x01\n" +
-	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/api/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
+	".com.spotify.connectivity.hosts.esperanto.protoZPgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/hosts/esperanto;esperantob\x06proto3"
 
 var file_es_connection_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_connection_error_proto_goTypes = []any{

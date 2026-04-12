@@ -819,7 +819,7 @@ const file_include_AudioSettingsReport_proto_rawDesc = "" +
 	"\vchange_list\x18\x16 \x03(\tR\n" +
 	"changeList\x12)\n" +
 	"\x10enable_equalizer\x18\x17 \x01(\bR\x0fenableEqualizer\x12:\n" +
-	"\x19enable_dynamic_normalizer\x18\x18 \x01(\bR\x17enableDynamicNormalizerBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x19enable_dynamic_normalizer\x18\x18 \x01(\bR\x17enableDynamicNormalizerBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioSettingsReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioSettingsReport_proto_goTypes = []any{

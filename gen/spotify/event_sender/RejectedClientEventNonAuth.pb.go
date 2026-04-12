@@ -139,7 +139,7 @@ const file_include_RejectedClientEventNonAuth_proto_rawDesc = "" +
 	"\x1aRejectedClientEventNonAuth\x12#\n" +
 	"\rreject_reason\x18\x01 \x01(\tR\frejectReason\x12\x1d\n" +
 	"\n" +
-	"event_name\x18\x02 \x01(\tR\teventNameBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"event_name\x18\x02 \x01(\tR\teventNameBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_RejectedClientEventNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_RejectedClientEventNonAuth_proto_goTypes = []any{

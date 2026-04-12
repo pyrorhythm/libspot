@@ -105,7 +105,7 @@ const file_play_request_state_proto_rawDesc = "" +
 	"\x18play_request_state.proto\x12\x19spotify.list_player.proto\"S\n" +
 	"\x10PlayRequestState\x12+\n" +
 	"\x0fplay_request_id\x18\x01 \x01(\tH\x00R\rplayRequestId\x88\x01\x01B\x12\n" +
-	"\x10_play_request_idBCZAgithub.com/pyrorhythm/libspot/api/spotify/list_player;list_playerb\x06proto3"
+	"\x10_play_request_idBCZAgithub.com/pyrorhythm/libspot/gen/spotify/list_player;list_playerb\x06proto3"
 
 var file_play_request_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_play_request_state_proto_goTypes = []any{

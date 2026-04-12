@@ -7,7 +7,7 @@
 package state_restore
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -531,7 +531,7 @@ const file_state_restore_player_model_proto_rawDesc = "" +
 	"\x12PLAY_CONTEXT_TRACK\x10\x02\x12\x11\n" +
 	"\rSTATE_RESTORE\x10\x03\x12\x13\n" +
 	"\x0fREMOTE_TRANSFER\x10\x04\x12\x12\n" +
-	"\x0eREMOTE_RESTORE\x10\x05BNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x0eREMOTE_RESTORE\x10\x05BNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_player_model_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_state_restore_player_model_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

@@ -160,7 +160,7 @@ const file_policy_rootlist_playlist_decoration_policy_proto_rawDesc = "" +
 	"\bplaylist\x18\x02 \x01(\v27.spotify.playlist.cosmos.proto.PlaylistDecorationPolicyR\bplaylist\x12\x1f\n" +
 	"\vgroup_label\x18\x03 \x01(\bR\n" +
 	"groupLabelBg\n" +
-	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"!com.spotify.playlist.policy.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_policy_rootlist_playlist_decoration_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_policy_rootlist_playlist_decoration_policy_proto_goTypes = []any{

@@ -295,7 +295,7 @@ const file_state_restore_remove_banned_tracks_rules_proto_rawDesc = "" +
 	"\x15banned_context_tracks\x18\x04 \x03(\v2T.spotify.player.proto.state_restore.RemoveBannedTracksRules.BannedContextTracksEntryR\x13bannedContextTracks\x1ao\n" +
 	"\x18BannedContextTracksEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12A\n" +
-	"\x05value\x18\x02 \x01(\v2+.spotify.player.proto.state_restore.StringsR\x05valueBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x05value\x18\x02 \x01(\v2+.spotify.player.proto.state_restore.StringsR\x05valueBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_remove_banned_tracks_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_state_restore_remove_banned_tracks_rules_proto_goTypes = []any{

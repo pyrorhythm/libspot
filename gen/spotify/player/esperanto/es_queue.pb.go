@@ -146,7 +146,7 @@ const file_es_queue_proto_rawDesc = "" +
 	"nextTracks\x12N\n" +
 	"\vprev_tracks\x18\x04 \x03(\v2-.spotify.player.esperanto.proto.ProvidedTrackR\n" +
 	"prevTracksBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_queue_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_queue_proto_goTypes = []any{

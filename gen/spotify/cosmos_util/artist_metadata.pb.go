@@ -196,7 +196,7 @@ const file_metadata_artist_metadata_proto_rawDesc = "" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12,\n" +
 	"\x12is_various_artists\x18\x03 \x01(\bR\x10isVariousArtists\x12C\n" +
 	"\tportraits\x18\x04 \x01(\v2%.spotify.cosmos_util.proto.ImageGroupR\tportraitsBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_metadata_artist_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metadata_artist_metadata_proto_goTypes = []any{

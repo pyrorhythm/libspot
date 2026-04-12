@@ -527,7 +527,7 @@ const file_include_SegmentedDownload_proto_rawDesc = "" +
 	"\x12initial_disk_state\x18\f \x01(\tR\x10initialDiskState\x12\x1b\n" +
 	"\tmedia_url\x18\r \x01(\tR\bmediaUrl\x12\x1d\n" +
 	"\n" +
-	"session_id\x18\x0e \x01(\tR\tsessionIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"session_id\x18\x0e \x01(\tR\tsessionIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_SegmentedDownload_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_SegmentedDownload_proto_goTypes = []any{

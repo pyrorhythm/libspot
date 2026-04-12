@@ -7,8 +7,8 @@
 package decorate_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	show_cosmos "github.com/pyrorhythm/libspot/api/spotify/show_cosmos"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	show_cosmos "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -474,7 +474,7 @@ const file_decorate_request_proto_rawDesc = "" +
 	"\x10\vJ\x04\b\v\x10\fJ\x04\b\f\x10\rJ\x04\b\r\x10\x0e\"\x9f\x01\n" +
 	"\bResponse\x12D\n" +
 	"\x04show\x18\x01 \x03(\v20.spotify.show_cosmos.decorate_request.proto.ShowR\x04show\x12M\n" +
-	"\aepisode\x18\x02 \x03(\v23.spotify.show_cosmos.decorate_request.proto.EpisodeR\aepisodeBqZWgithub.com/pyrorhythm/libspot/api/spotify/show_cosmos/decorate_request;decorate_request\xa2\x02\x15SPTShowCosmosDecorate"
+	"\aepisode\x18\x02 \x03(\v23.spotify.show_cosmos.decorate_request.proto.EpisodeR\aepisodeBqZWgithub.com/pyrorhythm/libspot/gen/spotify/show_cosmos/decorate_request;decorate_request\xa2\x02\x15SPTShowCosmosDecorate"
 
 var file_decorate_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_decorate_request_proto_goTypes = []any{

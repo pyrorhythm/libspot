@@ -89,7 +89,7 @@ const file_played_state_playability_restriction_proto_rawDesc = "" +
 	"\x10NOT_IN_CATALOGUE\x10\x04\x12\x19\n" +
 	"\x15NOT_AVAILABLE_OFFLINE\x10\x05\x12\x10\n" +
 	"\fPREMIUM_ONLY\x10\x06Bd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_played_state_playability_restriction_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_played_state_playability_restriction_proto_goTypes = []any{

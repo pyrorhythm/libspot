@@ -2916,7 +2916,7 @@ const file_apiv1_proto_rawDesc = "" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\"_\n" +
 	"\x15LicenseStatusResponse\x12!\n" +
 	"\fmax_licenses\x18\x01 \x01(\x05R\vmaxLicenses\x12#\n" +
-	"\rfree_licenses\x18\x02 \x01(\x05R\ffreeLicensesB;Z9github.com/pyrorhythm/libspot/api/spotify/offline;offlineb\x06proto3"
+	"\rfree_licenses\x18\x02 \x01(\x05R\ffreeLicensesB;Z9github.com/pyrorhythm/libspot/gen/spotify/offline;offlineb\x06proto3"
 
 var file_apiv1_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_apiv1_proto_msgTypes = make([]protoimpl.MessageInfo, 34)

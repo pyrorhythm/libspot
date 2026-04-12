@@ -196,7 +196,7 @@ const file_installation_data_proto_rawDesc = "" +
 	"\x10InstallationData\x12'\n" +
 	"\x0finstallation_id\x18\x01 \x01(\fR\x0einstallationId\x12-\n" +
 	"\x13last_seen_device_id\x18\x02 \x01(\fR\x10lastSeenDeviceId\x12,\n" +
-	"\x12monotonic_clock_id\x18\x03 \x01(\x03R\x10monotonicClockIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\x12monotonic_clock_id\x18\x03 \x01(\x03R\x10monotonicClockIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_installation_data_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_installation_data_proto_goTypes = []any{

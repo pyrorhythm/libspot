@@ -463,7 +463,7 @@ const file_include_VideoManifestDownload_proto_rawDesc = "" +
 	" \x01(\tR\vrequestType\x12.\n" +
 	"\x13cdn_initial_latency\x18\v \x01(\x03R\x11cdnInitialLatency\x12\x1d\n" +
 	"\n" +
-	"total_time\x18\f \x01(\x03R\ttotalTimeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"total_time\x18\f \x01(\x03R\ttotalTimeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_VideoManifestDownload_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_VideoManifestDownload_proto_goTypes = []any{

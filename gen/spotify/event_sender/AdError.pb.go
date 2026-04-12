@@ -563,7 +563,7 @@ const file_include_AdError_proto_rawDesc = "" +
 	"request_id\x18\f \x01(\tR\trequestId\x12\x19\n" +
 	"\bslot_ids\x18\r \x03(\tR\aslotIds\x12\x12\n" +
 	"\x04type\x18\x0e \x01(\tR\x04type\x12$\n" +
-	"\x0eapp_startup_id\x18\x0f \x01(\tR\fappStartupIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0eapp_startup_id\x18\x0f \x01(\tR\fappStartupIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdError_proto_goTypes = []any{

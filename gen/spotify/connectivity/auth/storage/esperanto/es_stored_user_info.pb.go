@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	esperanto "github.com/pyrorhythm/libspot/api/spotify/connectivity/auth/common/esperanto"
+	esperanto "github.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/common/esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	structpb "google.golang.org/protobuf/types/known/structpb"
@@ -283,7 +283,7 @@ const file_es_stored_user_info_proto_rawDesc = "" +
 	"\x10stored_user_info\x18\x01 \x01(\v2A.spotify.connectivity.auth.storage.esperanto.proto.StoredUserInfoH\x00R\x0estoredUserInfo\x120\n" +
 	"\x04null\x18\x02 \x01(\x0e2\x1a.google.protobuf.NullValueH\x00R\x04nullB\v\n" +
 	"\tuser_infoB\x90\x01\n" +
-	"5com.spotify.connectivity.auth.storage.esperanto.protoZWgithub.com/pyrorhythm/libspot/api/spotify/connectivity/auth/storage/esperanto;esperantob\x06proto3"
+	"5com.spotify.connectivity.auth.storage.esperanto.protoZWgithub.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/storage/esperanto;esperantob\x06proto3"
 
 var file_es_stored_user_info_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_es_stored_user_info_proto_goTypes = []any{

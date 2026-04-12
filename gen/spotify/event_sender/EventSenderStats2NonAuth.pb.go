@@ -385,7 +385,7 @@ const file_include_EventSenderStats2NonAuth_proto_rawDesc = "" +
 	"\"states_list_persisted_counts_total\x18\x13 \x03(\x03R\x1estatesListPersistedCountsTotal\x12W\n" +
 	")states_list_rejected_backend_counts_total\x18\x14 \x03(\x03R$statesListRejectedBackendCountsTotal\x12J\n" +
 	"\"states_list_delivered_counts_total\x18\x15 \x03(\x03R\x1estatesListDeliveredCountsTotal\x12F\n" +
-	" states_list_deleted_counts_total\x18\x16 \x03(\x03R\x1cstatesListDeletedCountsTotalBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" states_list_deleted_counts_total\x18\x16 \x03(\x03R\x1cstatesListDeletedCountsTotalBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_EventSenderStats2NonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_EventSenderStats2NonAuth_proto_goTypes = []any{

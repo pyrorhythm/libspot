@@ -235,7 +235,7 @@ const file_es_desktop_logs_proto_rawDesc = "" +
 	"\vDesktopLogs\x12\x9f\x01\n" +
 	"\x14CopyLogsToTempFolder\x12A.spotify.desktop.logs_esperanto.proto.CopyLogsToTempFolderRequest\x1aB.spotify.desktop.logs_esperanto.proto.CopyLogsToTempFolderResponse\"\x00\x12\x81\x01\n" +
 	"\n" +
-	"OpenFolder\x127.spotify.desktop.logs_esperanto.proto.OpenFolderRequest\x1a8.spotify.desktop.logs_esperanto.proto.OpenFolderResponse\"\x00BQZOgithub.com/pyrorhythm/libspot/api/spotify/desktop/logs_esperanto;logs_esperantob\x06proto3"
+	"OpenFolder\x127.spotify.desktop.logs_esperanto.proto.OpenFolderRequest\x1a8.spotify.desktop.logs_esperanto.proto.OpenFolderResponse\"\x00BQZOgithub.com/pyrorhythm/libspot/gen/spotify/desktop/logs_esperanto;logs_esperantob\x06proto3"
 
 var file_es_desktop_logs_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_es_desktop_logs_proto_goTypes = []any{

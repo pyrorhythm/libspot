@@ -196,7 +196,7 @@ const file_spotify_playback_platform_context_v1_sequence_query_proto_rawDesc = "
 	"\x16ORDER_RELATIVE_REVERSE\x10\x01\x12\x17\n" +
 	"\x13ORDER_FIRST_TO_LAST\x10\x03\x12\x17\n" +
 	"\x13ORDER_LAST_TO_FIRST\x10\x04Bs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_sequence_query_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_playback_platform_context_v1_sequence_query_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

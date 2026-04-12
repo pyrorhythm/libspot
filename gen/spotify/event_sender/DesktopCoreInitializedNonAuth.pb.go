@@ -104,7 +104,7 @@ const file_include_DesktopCoreInitializedNonAuth_proto_rawDesc = "" +
 	"\n" +
 	"+include/DesktopCoreInitializedNonAuth.proto\x12\x1aspotify.event_sender.proto\"A\n" +
 	"\x1dDesktopCoreInitializedNonAuth\x12 \n" +
-	"\vbuildsystem\x18\x01 \x01(\tR\vbuildsystemBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\vbuildsystem\x18\x01 \x01(\tR\vbuildsystemBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopCoreInitializedNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopCoreInitializedNonAuth_proto_goTypes = []any{

@@ -470,7 +470,7 @@ const file_video_associations_proto_rawDesc = "" +
 	"\x05_sizeB\b\n" +
 	"\x06_widthB\t\n" +
 	"\a_heightB|\n" +
-	"*com.spotify.bumblebee.VideoAssociations.v1P\x01ZLgithub.com/pyrorhythm/libspot/api/spotify/bumblebee/video_associations/v1;v1b\x06proto3"
+	"*com.spotify.bumblebee.VideoAssociations.v1P\x01ZLgithub.com/pyrorhythm/libspot/gen/spotify/bumblebee/video_associations/v1;v1b\x06proto3"
 
 var file_video_associations_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_video_associations_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

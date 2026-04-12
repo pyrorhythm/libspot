@@ -933,7 +933,7 @@ const file_autodownload_backend_service_proto_rawDesc = "" +
 	"\n" +
 	"is_removed\x18\x02 \x01(\bH\x00R\tisRemoved\x12L\n" +
 	"\bsettings\x18\x03 \x01(\v2..spotify.autodownloadservice.v1.proto.SettingsH\x00R\bsettingsB\t\n" +
-	"\apendingBEZCgithub.com/pyrorhythm/libspot/api/spotify/autodownloadservice/v1;v1b\x06proto3"
+	"\apendingBEZCgithub.com/pyrorhythm/libspot/gen/spotify/autodownloadservice/v1;v1b\x06proto3"
 
 var file_autodownload_backend_service_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_autodownload_backend_service_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package playbacksettings
 
 import (
-	media "github.com/pyrorhythm/libspot/api/spotify/common/media"
+	media "github.com/pyrorhythm/libspot/gen/spotify/common/media"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -2206,7 +2206,7 @@ const file_playback_settings_proto_rawDesc = "" +
 	"\x11WriteContentValue\x122.spotify.playbacksettings.WriteContentValueRequest\x1a3.spotify.playbacksettings.WriteContentValueResponse\"\x00\x12\x96\x01\n" +
 	"\x19GetAllStoredContentValues\x12:.spotify.playbacksettings.GetAllStoredContentValuesRequest\x1a;.spotify.playbacksettings.GetAllStoredContentValuesResponse\"\x00\x12\x99\x01\n" +
 	"\x1aGetSettingsDeviceSelection\x12;.spotify.playbacksettings.GetSettingsDeviceSelectionRequest\x1a<.spotify.playbacksettings.GetSettingsDeviceSelectionResponse\"\x00Bs\n" +
-	"\"com.spotify.playbacksettings.modelP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/playbacksettings;playbacksettingsb\x06proto3"
+	"\"com.spotify.playbacksettings.modelP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/playbacksettings;playbacksettingsb\x06proto3"
 
 var file_playback_settings_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_playback_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 24)

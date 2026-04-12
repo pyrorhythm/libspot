@@ -7,7 +7,7 @@
 package podcast_paywalls
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/audiobookcashier/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/audiobookcashier/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -1856,7 +1856,7 @@ const file_show_access_proto_rawDesc = "" +
 	"\x16AUDIOBOOK_DIRECT_SALES\x10\x04\x12\a\n" +
 	"\x03ABP\x10\x05\x12\x17\n" +
 	"\x13AUDIOBOOK_PROMOTION\x10\x06B\x88\x01\n" +
-	" com.spotify.podcast.access.protoB\x0fShowAccessProtoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/podcast_paywalls;podcast_paywalls\xa2\x02\x03SPTb\x06proto3"
+	" com.spotify.podcast.access.protoB\x0fShowAccessProtoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/podcast_paywalls;podcast_paywalls\xa2\x02\x03SPTb\x06proto3"
 
 var file_show_access_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_show_access_proto_msgTypes = make([]protoimpl.MessageInfo, 14)

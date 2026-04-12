@@ -6,11 +6,14 @@ import (
 	"fmt"
 	"log/slog"
 	"os/signal"
+	"runtime/debug"
 	"syscall"
+	"time"
 
 	"github.com/pyrorhythm/libspot/auth"
 	"github.com/pyrorhythm/libspot/auth/session"
 	"github.com/pyrorhythm/libspot/auth/store"
+	"github.com/pyrorhythm/libspot/dealer"
 )
 
 func main() {
@@ -21,8 +24,8 @@ func main() {
 
 	redirectPort := 4382
 	sess := session.New(
-		auth.NewDefaultOAuthConfig(redirectPort),
-		store.NewZalandoKeychainer,
+		session.WithRedirectPort(redirectPort),
+		session.WithGracefulContext(ctx),
 	)
 	err := sess.Load()
 	if err != nil && errors.Is(err, store.ErrItemNotFound) {
@@ -40,10 +43,27 @@ func main() {
 		panic(err)
 	}
 
-	at, err := sess.AccessToken(ctx)
+	at, err := sess.GetOrRefreshToken(ctx)
 	if err != nil {
 		panic(err)
 	}
 
 	fmt.Printf("access token: %s\n", at)
+
+	testDealer(sess)
+}
+
+func testDealer(sess session.Session) {
+	d, err := dealer.NewSession(sess, dealer.ExponentialJitter2Delay(time.Second))
+	if err != nil {
+		debug.Stack()
+		panic(err)
+	}
+
+	if err = d.Start(); err != nil {
+		debug.Stack()
+		panic(err)
+	}
+
+	time.Sleep(1 * time.Hour) // lol
 }

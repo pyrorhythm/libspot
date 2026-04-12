@@ -459,7 +459,7 @@ const file_entity_extension_data_proto_rawDesc = "" +
 	"\x06header\x18\x01 \x01(\v2%.spotify.extendedmetadata.AssocHeaderR\x06header\x12G\n" +
 	"\n" +
 	"plain_list\x18\x02 \x01(\v2(.spotify.extendedmetadata.PlainListAssocR\tplainListBv\n" +
-	"\"com.spotify.extendedmetadata.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/extendedmetadata;extendedmetadata\xf8\x01\x01b\x06proto3"
+	"\"com.spotify.extendedmetadata.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/extendedmetadata;extendedmetadata\xf8\x01\x01b\x06proto3"
 
 var file_entity_extension_data_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_entity_extension_data_proto_goTypes = []any{

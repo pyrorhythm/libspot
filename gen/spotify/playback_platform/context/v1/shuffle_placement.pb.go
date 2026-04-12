@@ -774,7 +774,7 @@ const file_spotify_playback_platform_context_v1_behavior_shuffle_placement_proto
 	"\x11_partition_layoutB\x0f\n" +
 	"\r_group_numberB\x0f\n" +
 	"\r_group_layoutB|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_shuffle_placement_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_playback_platform_context_v1_behavior_shuffle_placement_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

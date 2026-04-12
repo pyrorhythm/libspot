@@ -101,7 +101,7 @@ const file_audiobooks_common_capping_proto_rawDesc = "" +
 	"\n" +
 	"\x1faudiobooks_common_capping.proto\x12\x14spotify.player.proto\"I\n" +
 	"\x17AudiobooksCommonCapping\x12.\n" +
-	"\x13should_block_resume\x18\x03 \x01(\bR\x11shouldBlockResumeB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x13should_block_resume\x18\x03 \x01(\bR\x11shouldBlockResumeB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_audiobooks_common_capping_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_audiobooks_common_capping_proto_goTypes = []any{

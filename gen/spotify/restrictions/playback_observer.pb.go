@@ -290,7 +290,7 @@ const file_playback_observer_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\tR\x05value\"\xad\x01\n" +
 	"\x10PlaybackObserver\x12`\n" +
 	"\x0eobserved_state\x18\x01 \x01(\v29.spotify.restrictions.proto.PlaybackObserverObservedStateR\robservedState\x127\n" +
-	"\x17accumulated_consumption\x18\x02 \x01(\x03R\x16accumulatedConsumptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/restrictions;restrictionsb\x06proto3"
+	"\x17accumulated_consumption\x18\x02 \x01(\x03R\x16accumulatedConsumptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/restrictions;restrictionsb\x06proto3"
 
 var file_playback_observer_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_playback_observer_proto_goTypes = []any{

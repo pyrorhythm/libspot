@@ -808,7 +808,7 @@ const file_attributes_cache_proto_rawDesc = "" +
 	"\x0f_ai_curation_idB\x0e\n" +
 	"\f_status_codeB\x14\n" +
 	"\x12_item_id_algorithmBe\n" +
-	"\x1acom.spotify.playlist.protoZGgithub.com/pyrorhythm/libspot/api/spotify/playlist_cache;playlist_cacheb\x06proto3"
+	"\x1acom.spotify.playlist.protoZGgithub.com/pyrorhythm/libspot/gen/spotify/playlist_cache;playlist_cacheb\x06proto3"
 
 var file_attributes_cache_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_attributes_cache_proto_goTypes = []any{

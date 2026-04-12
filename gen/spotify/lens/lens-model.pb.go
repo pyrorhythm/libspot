@@ -251,7 +251,7 @@ const file_lens_model_proto_rawDesc = "" +
 	"identifier\x12\x1a\n" +
 	"\brevision\x18\x02 \x01(\fR\brevision\x126\n" +
 	"\x06status\x18\x03 \x01(\v2\x1e.spotify.lens.proto.LensStatusR\x06statusBc\n" +
-	"\x1ccom.spotify.lens.model.protoB\x0eLensModelProtoZ3github.com/pyrorhythm/libspot/api/spotify/lens;lensb\x06proto3"
+	"\x1ccom.spotify.lens.model.protoB\x0eLensModelProtoZ3github.com/pyrorhythm/libspot/gen/spotify/lens;lensb\x06proto3"
 
 var file_lens_model_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_lens_model_proto_goTypes = []any{

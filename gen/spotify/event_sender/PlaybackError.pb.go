@@ -398,7 +398,7 @@ const file_include_PlaybackError_proto_rawDesc = "" +
 	"\vposition_ms\x18\t \x01(\x03R\n" +
 	"positionMs\x12!\n" +
 	"\fkey_checksum\x18\n" +
-	" \x01(\x03R\vkeyChecksumBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\x03R\vkeyChecksumBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PlaybackError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PlaybackError_proto_goTypes = []any{

@@ -69,7 +69,7 @@ const file_spotify_list_v1_model_attributes_item_id_algorithm_proto_rawDesc = ""
 	"\x0fItemIdAlgorithm\x12\x19\n" +
 	"\x15ALGORITHM_UNSPECIFIED\x10\x00\x12\x1c\n" +
 	"\x18ALGORITHM_TRUNCATED_SHA1\x10\x01B}\n" +
-	"$com.spotify.list.v1.model.attributesB\x14ItemIdAlgorithmProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x14ItemIdAlgorithmProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_item_id_algorithm_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_attributes_item_id_algorithm_proto_goTypes = []any{

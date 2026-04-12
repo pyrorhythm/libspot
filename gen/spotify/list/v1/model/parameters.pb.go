@@ -107,7 +107,7 @@ const file_spotify_list_v1_model_parameters_proto_rawDesc = "" +
 	"Parameters\x12&\n" +
 	"\fplay_history\x18\x01 \x01(\fH\x00R\vplayHistory\x88\x01\x01B\x0f\n" +
 	"\r_play_historyBm\n" +
-	"\x19com.spotify.list.v1.modelB\x0fParametersProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x0fParametersProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_parameters_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_parameters_proto_goTypes = []any{

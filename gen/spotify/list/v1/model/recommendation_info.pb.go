@@ -103,7 +103,7 @@ const file_spotify_list_v1_model_attributes_recommendation_info_proto_rawDesc = 
 	"\x12RecommendationInfo\x120\n" +
 	"\x11is_recommendation\x18\x01 \x01(\bH\x00R\x10isRecommendation\x88\x01\x01B\x14\n" +
 	"\x12_is_recommendationB\x80\x01\n" +
-	"$com.spotify.list.v1.model.attributesB\x17RecommendationInfoProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x17RecommendationInfoProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_recommendation_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_attributes_recommendation_info_proto_goTypes = []any{

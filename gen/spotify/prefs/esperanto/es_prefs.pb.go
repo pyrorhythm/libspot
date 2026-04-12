@@ -885,7 +885,7 @@ const file_es_prefs_proto_rawDesc = "" +
 	"\x06SubAll\x12+.spotify.prefs.esperanto.proto.SubAllParams\x1a).spotify.prefs.esperanto.proto.PrefValues\"\x000\x01\x12\\\n" +
 	"\x03Set\x12(.spotify.prefs.esperanto.proto.SetParams\x1a).spotify.prefs.esperanto.proto.PrefValues\"\x00\x12b\n" +
 	"\x06Create\x12+.spotify.prefs.esperanto.proto.CreateParams\x1a).spotify.prefs.esperanto.proto.PrefValues\"\x00Bn\n" +
-	"!com.spotify.prefs.esperanto.protoZCgithub.com/pyrorhythm/libspot/api/spotify/prefs/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"!com.spotify.prefs.esperanto.protoZCgithub.com/pyrorhythm/libspot/gen/spotify/prefs/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_prefs_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_es_prefs_proto_goTypes = []any{

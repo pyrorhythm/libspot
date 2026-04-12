@@ -1081,7 +1081,7 @@ const file_extension_kind_proto_rawDesc = "" +
 	"\x1aTRACK_ALTERNATIVE_VERSIONS\x10\xfa\x01\x12 \n" +
 	"\x1bLICENSING_IDENTIFIERS_TRAIT\x10\xfb\x01\x12\x10\n" +
 	"\vSPONSORSHIP\x10\xfc\x01B\x8c\x01\n" +
-	"\"com.spotify.extendedmetadata.protoP\x01ZKgithub.com/pyrorhythm/libspot/api/spotify/extendedmetadata;extendedmetadata\xf8\x01\x01\xa2\x02\x13SPTExtendedMetadatab\x06proto3"
+	"\"com.spotify.extendedmetadata.protoP\x01ZKgithub.com/pyrorhythm/libspot/gen/spotify/extendedmetadata;extendedmetadata\xf8\x01\x01\xa2\x02\x13SPTExtendedMetadatab\x06proto3"
 
 var file_extension_kind_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_extension_kind_proto_goTypes = []any{

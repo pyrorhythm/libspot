@@ -308,7 +308,7 @@ const file_preview_proto_rawDesc = "" +
 	"\x11transition_recipe\x18\t \x01(\v2!.spotify.automix.proto.TransitionH\x01R\x10transitionRecipe\x88\x01\x01B\x13\n" +
 	"\x11_stop_position_msB\x14\n" +
 	"\x12_transition_recipeBV\n" +
-	"\x19com.spotify.automix.protoZ9github.com/pyrorhythm/libspot/api/spotify/automix;automixb\x06proto3"
+	"\x19com.spotify.automix.protoZ9github.com/pyrorhythm/libspot/gen/spotify/automix;automixb\x06proto3"
 
 var file_preview_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_preview_proto_goTypes = []any{

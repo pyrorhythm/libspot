@@ -297,7 +297,7 @@ const file_rec_pool_loader_proto_rawDesc = "" +
 	"\aRecPool\x12J\n" +
 	"\x04recs\x18\x01 \x03(\v26.spotify.list_player.impl.proto.RecPoolLoaderState.RecR\x04recsB\x10\n" +
 	"\x0e_next_page_urlB\v\n" +
-	"\t_rec_poolBAZ?github.com/pyrorhythm/libspot/api/spotify/list_player/impl;implb\x06proto3"
+	"\t_rec_poolBAZ?github.com/pyrorhythm/libspot/gen/spotify/list_player/impl;implb\x06proto3"
 
 var file_rec_pool_loader_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_rec_pool_loader_proto_goTypes = []any{

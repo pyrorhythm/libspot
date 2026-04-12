@@ -219,7 +219,7 @@ const file_karaoke_sub_events_request_proto_rawDesc = "" +
 	"\n" +
 	"MASK_READY\x10\x00\x12\t\n" +
 	"\x05ERROR\x10\x01B|\n" +
-	"#com.spotify.karaoke.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/karaoke_esperanto;karaoke_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#com.spotify.karaoke.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/karaoke_esperanto;karaoke_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_karaoke_sub_events_request_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_karaoke_sub_events_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

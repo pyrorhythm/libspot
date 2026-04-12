@@ -354,7 +354,7 @@ const file_include_ExtHostedPlaybackAdPositionAdjustmentException_proto_rawDesc 
 	"\rmapping_error\x18\x06 \x01(\bR\fmappingError\x121\n" +
 	"\x15position_out_of_range\x18\a \x01(\bR\x12positionOutOfRange\x12.\n" +
 	"\x13creator_position_ms\x18\b \x01(\x03R\x11creatorPositionMs\x122\n" +
-	"\x15converted_position_ms\x18\t \x01(\x03R\x13convertedPositionMsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15converted_position_ms\x18\t \x01(\x03R\x13convertedPositionMsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ExtHostedPlaybackAdPositionAdjustmentException_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ExtHostedPlaybackAdPositionAdjustmentException_proto_goTypes = []any{

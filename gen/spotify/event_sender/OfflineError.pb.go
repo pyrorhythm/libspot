@@ -204,7 +204,7 @@ const file_include_OfflineError_proto_rawDesc = "" +
 	"error_code\x18\x01 \x01(\x03R\terrorCode\x12\x14\n" +
 	"\x05track\x18\x02 \x01(\tR\x05track\x12\x19\n" +
 	"\bcache_id\x18\x03 \x01(\tR\acacheId\x12\x18\n" +
-	"\adetails\x18\x04 \x01(\tR\adetailsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\adetails\x18\x04 \x01(\tR\adetailsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_OfflineError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_OfflineError_proto_goTypes = []any{

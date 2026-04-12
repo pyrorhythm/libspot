@@ -257,7 +257,7 @@ const file_include_ResumptionRevisionsRestored_proto_rawDesc = "" +
 	"!number_of_revision_parse_failures\x18\x04 \x01(\x05R\x1dnumberOfRevisionParseFailures\x12'\n" +
 	"\x0fseconds_reading\x18\x05 \x01(\x02R\x0esecondsReading\x12\x1d\n" +
 	"\n" +
-	"bytes_read\x18\x06 \x01(\x03R\tbytesReadBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"bytes_read\x18\x06 \x01(\x03R\tbytesReadBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionRevisionsRestored_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionRevisionsRestored_proto_goTypes = []any{

@@ -151,7 +151,7 @@ const file_autoplay_context_request_proto_rawDesc = "" +
 	"\vcontext_uri\x18\x01 \x02(\tR\n" +
 	"contextUri\x12(\n" +
 	"\x10recent_track_uri\x18\x02 \x03(\tR\x0erecentTrackUri\x12\x19\n" +
-	"\bis_video\x18\x03 \x01(\bR\aisVideoB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\bis_video\x18\x03 \x01(\bR\aisVideoB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_autoplay_context_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_autoplay_context_request_proto_goTypes = []any{

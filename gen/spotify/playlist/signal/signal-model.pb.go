@@ -233,7 +233,7 @@ const file_signal_model_proto_rawDesc = "" +
 	"\x03uri\x18\x02 \x01(\tR\x03uri\x12\x17\n" +
 	"\aitem_id\x18\x03 \x01(\fR\x06itemId\x12'\n" +
 	"\x0fadditional_data\x18\x04 \x01(\fR\x0eadditionalDataB}\n" +
-	"'com.spotify.playlist_signal.model.protoB\x10SignalModelProtoZ@github.com/pyrorhythm/libspot/api/spotify/playlist/signal;signalb\x06proto3"
+	"'com.spotify.playlist_signal.model.protoB\x10SignalModelProtoZ@github.com/pyrorhythm/libspot/gen/spotify/playlist/signal;signalb\x06proto3"
 
 var file_signal_model_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_signal_model_proto_goTypes = []any{

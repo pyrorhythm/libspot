@@ -298,7 +298,7 @@ const file_playlist_folder_state_proto_rawDesc = "" +
 	"\x15num_recursive_folders\x18\x05 \x01(\rR\x13numRecursiveFolders\x126\n" +
 	"\x17num_recursive_playlists\x18\x06 \x01(\rR\x15numRecursivePlaylists\x12\x12\n" +
 	"\x04link\x18\a \x01(\tR\x04linkB`\n" +
-	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos;cosmos"
+	"\x1acom.spotify.playlist.protoP\x01Z@github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos;cosmos"
 
 var file_playlist_folder_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_playlist_folder_state_proto_goTypes = []any{

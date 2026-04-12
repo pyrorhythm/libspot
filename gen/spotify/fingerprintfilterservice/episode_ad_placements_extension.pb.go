@@ -245,7 +245,7 @@ const file_episode_ad_placements_extension_proto_rawDesc = "" +
 	"\vduration_ms\x18\x02 \x01(\x05R\n" +
 	"durationMs\x12#\n" +
 	"\rroll_position\x18\x03 \x01(\x05R\frollPositionB\x9f\x01\n" +
-	"$com.spotify.fingerprintfilterserviceB\x18EpisodeAdPlacementsProtoP\x01Z[github.com/pyrorhythm/libspot/api/spotify/fingerprintfilterservice;fingerprintfilterserviceb\x06proto3"
+	"$com.spotify.fingerprintfilterserviceB\x18EpisodeAdPlacementsProtoP\x01Z[github.com/pyrorhythm/libspot/gen/spotify/fingerprintfilterservice;fingerprintfilterserviceb\x06proto3"
 
 var file_episode_ad_placements_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_episode_ad_placements_extension_proto_goTypes = []any{

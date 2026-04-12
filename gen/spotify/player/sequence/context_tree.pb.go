@@ -7,7 +7,7 @@
 package sequence
 
 import (
-	v1 "github.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1"
+	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -364,7 +364,7 @@ const file_player_sequence_player_state_context_tree_proto_rawDesc = "" +
 	"\bchildren\x18\x02 \x03(\v2=.spotify.player.sequence.proto.ContextTree.Node.ChildrenEntryR\bchildren\x1ah\n" +
 	"\rChildrenEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12E\n" +
-	"\x05value\x18\x02 \x01(\v2/.spotify.player.sequence.proto.ContextTree.NodeR\x05valueBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/sequence;sequenceb\x06proto3"
+	"\x05value\x18\x02 \x01(\v2/.spotify.player.sequence.proto.ContextTree.NodeR\x05valueBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/sequence;sequenceb\x06proto3"
 
 var file_player_sequence_player_state_context_tree_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_player_sequence_player_state_context_tree_proto_goTypes = []any{

@@ -68,7 +68,7 @@ var File_include_MigrationOAuthClientCreatedNonAuth_proto protoreflect.FileDescr
 const file_include_MigrationOAuthClientCreatedNonAuth_proto_rawDesc = "" +
 	"\n" +
 	"0include/MigrationOAuthClientCreatedNonAuth.proto\x12\x1aspotify.event_sender.proto\"$\n" +
-	"\"MigrationOAuthClientCreatedNonAuthBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\"MigrationOAuthClientCreatedNonAuthBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_MigrationOAuthClientCreatedNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_MigrationOAuthClientCreatedNonAuth_proto_goTypes = []any{

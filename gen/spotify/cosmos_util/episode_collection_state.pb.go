@@ -164,7 +164,7 @@ const file_collection_episode_collection_state_proto_rawDesc = "" +
 	"\x11is_following_show\x18\x01 \x01(\bR\x0fisFollowingShow\x12\x15\n" +
 	"\x06is_new\x18\x02 \x01(\bR\x05isNew\x12+\n" +
 	"\x12is_in_listen_later\x18\x03 \x01(\bR\x0fisInListenLaterBt\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util\xa2\x02\rSPTCosmosUtil"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util\xa2\x02\rSPTCosmosUtil"
 
 var file_collection_episode_collection_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_collection_episode_collection_state_proto_goTypes = []any{

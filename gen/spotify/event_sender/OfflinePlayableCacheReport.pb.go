@@ -353,7 +353,7 @@ const file_include_OfflinePlayableCacheReport_proto_rawDesc = "" +
 	"total_time\x18\a \x01(\x03R\ttotalTime\x12\x1f\n" +
 	"\vnum_batches\x18\b \x01(\x03R\n" +
 	"numBatches\x122\n" +
-	"\x15num_previously_played\x18\t \x01(\x03R\x13numPreviouslyPlayedBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x15num_previously_played\x18\t \x01(\x03R\x13numPreviouslyPlayedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_OfflinePlayableCacheReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_OfflinePlayableCacheReport_proto_goTypes = []any{

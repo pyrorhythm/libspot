@@ -7,7 +7,7 @@
 package metadata_esperanto
 
 import (
-	metadata_cosmos "github.com/pyrorhythm/libspot/api/spotify/metadata_cosmos"
+	metadata_cosmos "github.com/pyrorhythm/libspot/gen/spotify/metadata_cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -158,7 +158,7 @@ const file_metadata_esperanto_proto_rawDesc = "" +
 	"\x16ClassicMetadataService\x12v\n" +
 	"\tGetEntity\x122.spotify.metadata_esperanto.proto.GetEntityRequest\x1a3.spotify.metadata_esperanto.proto.GetEntityResponse\"\x00\x12m\n" +
 	"\x0eMultigetEntity\x12+.spotify.metadata_cosmos.proto.MultiRequest\x1a,.spotify.metadata_cosmos.proto.MultiResponse\"\x00By\n" +
-	"$com.spotify.metadata.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/api/spotify/metadata_esperanto;metadata_esperantob\x06proto3"
+	"$com.spotify.metadata.esperanto.protoP\x01ZOgithub.com/pyrorhythm/libspot/gen/spotify/metadata_esperanto;metadata_esperantob\x06proto3"
 
 var file_metadata_esperanto_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metadata_esperanto_proto_goTypes = []any{

@@ -319,7 +319,7 @@ const file_state_restore_context_player_restorable_proto_rawDesc = "" +
 	"\n" +
 	"pns_capper\x18\t \x01(\v2-.spotify.player.proto.state_restore.PnsCapperR\tpnsCapper\x12Y\n" +
 	"\x0fplay_history_v1\x18\n" +
-	" \x01(\v21.spotify.player.proto.state_restore.PlayHistoryV1R\rplayHistoryV1J\x04\b\b\x10\tBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	" \x01(\v21.spotify.player.proto.state_restore.PlayHistoryV1R\rplayHistoryV1J\x04\b\b\x10\tBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_context_player_restorable_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_context_player_restorable_proto_goTypes = []any{

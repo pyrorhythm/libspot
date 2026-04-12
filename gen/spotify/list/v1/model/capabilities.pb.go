@@ -1389,7 +1389,7 @@ const file_spotify_list_v1_model_attributes_capabilities_proto_rawDesc = "" +
 	"\vCONTRIBUTOR\x10\x03\x12\f\n" +
 	"\bMADE_FOR\x10\x04\x12\t\n" +
 	"\x05ADMIN\x10\x05Bz\n" +
-	"$com.spotify.list.v1.model.attributesB\x11CapabilitiesProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"$com.spotify.list.v1.model.attributesB\x11CapabilitiesProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_capabilities_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_list_v1_model_attributes_capabilities_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

@@ -668,7 +668,7 @@ const file_include_AdEvent_proto_rawDesc = "" +
 	"\bduration\x18\x0f \x01(\x05R\bduration\x12\x19\n" +
 	"\bin_focus\x18\x10 \x01(\bR\ainFocus\x12\x16\n" +
 	"\x06volume\x18\x11 \x01(\x02R\x06volume\x12!\n" +
-	"\fproduct_name\x18\x12 \x01(\tR\vproductNameBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\fproduct_name\x18\x12 \x01(\tR\vproductNameBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdEvent_proto_goTypes = []any{

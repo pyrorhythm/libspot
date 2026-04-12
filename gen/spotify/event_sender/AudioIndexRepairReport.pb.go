@@ -381,7 +381,7 @@ const file_include_AudioIndexRepairReport_proto_rawDesc = "" +
 	"\x18episodes_num_parse_error\x18\b \x01(\x03R\x15episodesNumParseError\x12@\n" +
 	"\x1depisodes_num_missing_audio_id\x18\t \x01(\x03R\x19episodesNumMissingAudioId\x127\n" +
 	"\x18episodes_num_write_error\x18\n" +
-	" \x01(\x03R\x15episodesNumWriteErrorBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	" \x01(\x03R\x15episodesNumWriteErrorBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioIndexRepairReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioIndexRepairReport_proto_goTypes = []any{

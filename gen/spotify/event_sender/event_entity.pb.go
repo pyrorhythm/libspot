@@ -196,7 +196,7 @@ const file_event_entity_proto_rawDesc = "" +
 	"\apayload\x18\x05 \x01(\fR\apayload\x12\x14\n" +
 	"\x05owner\x18\x06 \x01(\tR\x05owner\x12$\n" +
 	"\rauthenticated\x18\a \x01(\bR\rauthenticated\x12\x1b\n" +
-	"\trecord_id\x18\b \x01(\x04R\brecordIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\trecord_id\x18\b \x01(\x04R\brecordIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_event_entity_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_event_entity_proto_goTypes = []any{

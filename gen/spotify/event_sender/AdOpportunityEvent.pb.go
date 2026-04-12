@@ -592,7 +592,7 @@ const file_include_AdOpportunityEvent_proto_rawDesc = "" +
 	"\x12eligibility_status\x18\r \x01(\tR\x11eligibilityStatus\x12#\n" +
 	"\rsupply_status\x18\x0e \x01(\tR\fsupplyStatus\x12%\n" +
 	"\x0etrigger_origin\x18\x0f \x01(\tR\rtriggerOrigin\x12%\n" +
-	"\x0etrigger_states\x18\x10 \x03(\tR\rtriggerStatesBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0etrigger_states\x18\x10 \x03(\tR\rtriggerStatesBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AdOpportunityEvent_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AdOpportunityEvent_proto_goTypes = []any{

@@ -327,7 +327,7 @@ const file_your_library_tags_request_proto_rawDesc = "" +
 	"classGroup\"E\n" +
 	"\x16YourLibraryTagsRequest\x12+\n" +
 	"\x11update_throttling\x18\x01 \x01(\x05R\x10updateThrottlingB\x96\x01\n" +
-	")spotify.your_library_tags_esperanto.protoP\x01Zagithub.com/pyrorhythm/libspot/api/spotify/your_library_tags_esperanto;your_library_tags_esperanto\xa2\x02\x03ESPb\x06proto3"
+	")spotify.your_library_tags_esperanto.protoP\x01Zagithub.com/pyrorhythm/libspot/gen/spotify/your_library_tags_esperanto;your_library_tags_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_your_library_tags_request_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_your_library_tags_request_proto_goTypes = []any{

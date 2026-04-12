@@ -85,7 +85,7 @@ const file_local_sync_state_proto_rawDesc = "" +
 	"\x05State\x12\x1f\n" +
 	"\vsafe_secret\x18\x01 \x01(\tR\n" +
 	"safeSecretBq\n" +
-	"\"com.spotify.local_sync_state.protoZKgithub.com/pyrorhythm/libspot/api/spotify/local_sync_state;local_sync_stateb\x06proto3"
+	"\"com.spotify.local_sync_state.protoZKgithub.com/pyrorhythm/libspot/gen/spotify/local_sync_state;local_sync_stateb\x06proto3"
 
 var file_local_sync_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_local_sync_state_proto_goTypes = []any{

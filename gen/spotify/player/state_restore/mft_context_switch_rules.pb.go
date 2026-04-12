@@ -132,7 +132,7 @@ const file_state_restore_mft_context_switch_rules_proto_rawDesc = "" +
 	",state_restore/mft_context_switch_rules.proto\x12\"spotify.player.proto.state_restore\"[\n" +
 	"\x15MftContextSwitchRules\x12(\n" +
 	"\x10has_played_track\x18\x01 \x02(\bR\x0ehasPlayedTrack\x12\x18\n" +
-	"\aenabled\x18\x02 \x02(\bR\aenabledBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\aenabled\x18\x02 \x02(\bR\aenabledBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_mft_context_switch_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_mft_context_switch_rules_proto_goTypes = []any{

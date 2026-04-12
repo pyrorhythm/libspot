@@ -7,8 +7,8 @@
 package connectstate
 
 import (
-	media "github.com/pyrorhythm/libspot/api/spotify/common/media"
-	devices "github.com/pyrorhythm/libspot/api/spotify/connectstate/devices"
+	media "github.com/pyrorhythm/libspot/gen/spotify/common/media"
+	devices "github.com/pyrorhythm/libspot/gen/spotify/connectstate/devices"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -4875,7 +4875,7 @@ const file_connect_proto_rawDesc = "" +
 	"\x15DEVICE_VOLUME_CHANGED\x10\x04\x12\x18\n" +
 	"\x14DEVICE_ALIAS_CHANGED\x10\x05\x12\x19\n" +
 	"\x15DEVICE_NEW_CONNECTION\x10\x06Be\n" +
-	"\x1ecom.spotify.connectstate.modelZCgithub.com/pyrorhythm/libspot/api/spotify/connectstate;connectstateb\x06proto3"
+	"\x1ecom.spotify.connectstate.modelZCgithub.com/pyrorhythm/libspot/gen/spotify/connectstate;connectstateb\x06proto3"
 
 var file_connect_proto_enumTypes = make([]protoimpl.EnumInfo, 8)
 var file_connect_proto_msgTypes = make([]protoimpl.MessageInfo, 27)

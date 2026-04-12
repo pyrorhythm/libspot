@@ -98,7 +98,7 @@ const file_recently_played_proto_rawDesc = "" +
 	"\x15recently_played.proto\x12\x1dspotify.recently_played.proto\"<\n" +
 	"\x04Item\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12\x1c\n" +
-	"\ttimestamp\x18\x02 \x01(\x03R\ttimestampJ\x04\b\x03\x10\x04BKZIgithub.com/pyrorhythm/libspot/api/spotify/recently_played;recently_playedb\x06proto3"
+	"\ttimestamp\x18\x02 \x01(\x03R\ttimestampJ\x04\b\x03\x10\x04BKZIgithub.com/pyrorhythm/libspot/gen/spotify/recently_played;recently_playedb\x06proto3"
 
 var file_recently_played_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_recently_played_proto_goTypes = []any{

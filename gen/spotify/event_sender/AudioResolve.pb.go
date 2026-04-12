@@ -240,7 +240,7 @@ const file_include_AudioResolve_proto_rawDesc = "" +
 	"\n" +
 	"entity_uri\x18\x03 \x01(\tR\tentityUri\x12\x19\n" +
 	"\baudio_id\x18\x04 \x01(\fR\aaudioId\x12,\n" +
-	"\x12generated_audio_id\x18\x05 \x01(\fR\x10generatedAudioIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12generated_audio_id\x18\x05 \x01(\fR\x10generatedAudioIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioResolve_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioResolve_proto_goTypes = []any{

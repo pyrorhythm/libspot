@@ -673,7 +673,7 @@ const file_include_ClientCoreConnectCommand_proto_rawDesc = "" +
 	"playOrigin\x12\x1d\n" +
 	"\n" +
 	"command_id\x18\x11 \x01(\tR\tcommandId\x12-\n" +
-	"\x12feature_identifier\x18\x12 \x01(\tR\x11featureIdentifierBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12feature_identifier\x18\x12 \x01(\tR\x11featureIdentifierBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ClientCoreConnectCommand_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ClientCoreConnectCommand_proto_goTypes = []any{

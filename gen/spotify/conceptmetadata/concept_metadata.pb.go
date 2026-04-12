@@ -183,7 +183,7 @@ const file_concept_metadata_proto_rawDesc = "" +
 	"\flibraryClass\x18\x05 \x01(\v2%.spotify.conceptmetadata.ConceptClassR\flibraryClass\"I\n" +
 	"\fConceptClass\x12\x10\n" +
 	"\x03uri\x18\x01 \x01(\tR\x03uri\x12'\n" +
-	"\x0ftranslated_name\x18\x02 \x01(\tR\x0etranslatedNameBKZIgithub.com/pyrorhythm/libspot/api/spotify/conceptmetadata;conceptmetadatab\x06proto3"
+	"\x0ftranslated_name\x18\x02 \x01(\tR\x0etranslatedNameBKZIgithub.com/pyrorhythm/libspot/gen/spotify/conceptmetadata;conceptmetadatab\x06proto3"
 
 var file_concept_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_concept_metadata_proto_goTypes = []any{

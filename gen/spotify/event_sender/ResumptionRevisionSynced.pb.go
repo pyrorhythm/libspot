@@ -277,7 +277,7 @@ const file_include_ResumptionRevisionSynced_proto_rawDesc = "" +
 	"\vcreate_time\x18\x05 \x01(\tR\n" +
 	"createTime\x12\x1f\n" +
 	"\vupdate_time\x18\x06 \x01(\tR\n" +
-	"updateTimeBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"updateTimeBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ResumptionRevisionSynced_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ResumptionRevisionSynced_proto_goTypes = []any{

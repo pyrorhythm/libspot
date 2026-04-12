@@ -7,7 +7,7 @@
 package player
 
 import (
-	sequence "github.com/pyrorhythm/libspot/api/spotify/player/sequence"
+	sequence "github.com/pyrorhythm/libspot/gen/spotify/player/sequence"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -329,7 +329,7 @@ const file_sequence_player_node_proto_rawDesc = "" +
 	"\x0elogging_params\x18\x06 \x01(\v2#.spotify.player.proto.LoggingParamsR\rloggingParams\x1a\x97\x01\n" +
 	"\x0fSequenceSession\x12f\n" +
 	"\x15session_context_state\x18\x01 \x02(\v22.spotify.player.sequence.proto.SessionContextStateR\x13sessionContextState\x12\x1c\n" +
-	"\titeration\x18\x02 \x02(\x11R\titerationB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\titeration\x18\x02 \x02(\x11R\titerationB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_sequence_player_node_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_sequence_player_node_proto_goTypes = []any{

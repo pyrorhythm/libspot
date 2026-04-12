@@ -206,7 +206,7 @@ const file_ad_reward_proto_rawDesc = "" +
 	"\x06Reward\x12i\n" +
 	"\tGetReward\x12-.spotify.ads.esperanto.proto.GetRewardRequest\x1a+.spotify.ads.esperanto.proto.RewardResponse\"\x00\x12i\n" +
 	"\tSetReward\x12-.spotify.ads.esperanto.proto.SetRewardRequest\x1a+.spotify.ads.esperanto.proto.RewardResponse\"\x00Bl\n" +
-	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\x1fcom.spotify.ads.esperanto.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/ads/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_ad_reward_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_ad_reward_proto_goTypes = []any{

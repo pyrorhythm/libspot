@@ -263,7 +263,7 @@ const file_include_ImageDownload_proto_rawDesc = "" +
 	"\x11cdn_total_latency\x18\x03 \x01(\x03R\x0fcdnTotalLatency\x12.\n" +
 	"\x13cdn_initial_latency\x18\x04 \x01(\x03R\x11cdnInitialLatency\x12!\n" +
 	"\fcdn_protocol\x18\x05 \x01(\tR\vcdnProtocol\x12%\n" +
-	"\x0enew_connection\x18\x06 \x01(\bR\rnewConnectionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0enew_connection\x18\x06 \x01(\bR\rnewConnectionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ImageDownload_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ImageDownload_proto_goTypes = []any{

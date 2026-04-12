@@ -83,7 +83,7 @@ const file_suppressions_proto_rawDesc = "" +
 	"\n" +
 	"\x12suppressions.proto\x12\x14spotify.player.proto\",\n" +
 	"\fSuppressions\x12\x1c\n" +
-	"\tproviders\x18\x01 \x03(\tR\tprovidersB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\tproviders\x18\x01 \x03(\tR\tprovidersB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_suppressions_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_suppressions_proto_goTypes = []any{

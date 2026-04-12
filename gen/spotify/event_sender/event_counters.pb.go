@@ -244,7 +244,7 @@ const file_event_counters_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12H\n" +
 	"\x05value\x18\x02 \x01(\v22.spotify.event_sender.proto.EventCounters.CountersR\x05value\x1a&\n" +
 	"\bCounters\x12\x1a\n" +
-	"\bcounters\x18\x01 \x03(\x05R\bcountersBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_senderb\x06proto3"
+	"\bcounters\x18\x01 \x03(\x05R\bcountersBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_senderb\x06proto3"
 
 var file_event_counters_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_event_counters_proto_goTypes = []any{

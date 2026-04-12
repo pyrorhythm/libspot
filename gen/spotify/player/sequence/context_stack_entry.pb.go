@@ -105,7 +105,7 @@ const file_player_sequence_player_state_context_stack_entry_proto_rawDesc = "" +
 	"6player_sequence/player/state/context_stack_entry.proto\x12\x1dspotify.player.sequence.proto\"]\n" +
 	"\x11ContextStackEntry\x121\n" +
 	"\x12selected_child_uid\x18\x01 \x01(\tH\x00R\x10selectedChildUid\x88\x01\x01B\x15\n" +
-	"\x13_selected_child_uidBDZBgithub.com/pyrorhythm/libspot/api/spotify/player/sequence;sequenceb\x06proto3"
+	"\x13_selected_child_uidBDZBgithub.com/pyrorhythm/libspot/gen/spotify/player/sequence;sequenceb\x06proto3"
 
 var file_player_sequence_player_state_context_stack_entry_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_player_sequence_player_state_context_stack_entry_proto_goTypes = []any{

@@ -132,7 +132,7 @@ const file_state_restore_explicit_content_rules_proto_rawDesc = "" +
 	"*state_restore/explicit_content_rules.proto\x12\"spotify.player.proto.state_restore\"\x91\x01\n" +
 	"\x14ExplicitContentRules\x126\n" +
 	"\x17filter_explicit_content\x18\x01 \x02(\bR\x15filterExplicitContent\x12A\n" +
-	"\x1dfilter_age_restricted_content\x18\x02 \x02(\bR\x1afilterAgeRestrictedContentBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x1dfilter_age_restricted_content\x18\x02 \x02(\bR\x1afilterAgeRestrictedContentBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_explicit_content_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_explicit_content_rules_proto_goTypes = []any{

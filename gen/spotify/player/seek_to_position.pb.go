@@ -132,7 +132,7 @@ const file_seek_to_position_proto_rawDesc = "" +
 	"\x16seek_to_position.proto\x12\x14spotify.player.proto\"B\n" +
 	"\x0eSeekToPosition\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\x04R\x05value\x12\x1a\n" +
-	"\brevision\x18\x02 \x01(\rR\brevisionB9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\brevision\x18\x02 \x01(\rR\brevisionB9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_seek_to_position_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_seek_to_position_proto_goTypes = []any{

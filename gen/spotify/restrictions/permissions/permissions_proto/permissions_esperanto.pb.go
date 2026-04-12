@@ -883,7 +883,7 @@ const file_permissions_esperanto_proto_rawDesc = "" +
 	"\x15CanSwitchToMusicVideo\x12\x16.google.protobuf.Empty\x1a[.spotify.restrictions.permissions.permissions_proto.MusicVideoAccessPermissionQueryResponse\"\x00\x12\x90\x01\n" +
 	"\x15CanSkipPodcastVideoAd\x12\x16.google.protobuf.Empty\x1a].spotify.restrictions.permissions.permissions_proto.PodcastVideoAdSkipPermissionQueryResponse\"\x00\x12\xa9\x01\n" +
 	"\x0eCanPlayContent\x12I.spotify.restrictions.permissions.permissions_proto.CanPlayContentRequest\x1aJ.spotify.restrictions.permissions.permissions_proto.CanPlayContentResponse\"\x00\x12\x82\x01\n" +
-	"\x13ObserveInvalidation\x12\x16.google.protobuf.Empty\x1aO.spotify.restrictions.permissions.permissions_proto.ObserveInvalidationResponse\"\x000\x01BhZfgithub.com/pyrorhythm/libspot/api/spotify/restrictions/permissions/permissions_proto;permissions_protob\x06proto3"
+	"\x13ObserveInvalidation\x12\x16.google.protobuf.Empty\x1aO.spotify.restrictions.permissions.permissions_proto.ObserveInvalidationResponse\"\x000\x01BhZfgithub.com/pyrorhythm/libspot/gen/spotify/restrictions/permissions/permissions_proto;permissions_protob\x06proto3"
 
 var file_permissions_esperanto_proto_enumTypes = make([]protoimpl.EnumInfo, 5)
 var file_permissions_esperanto_proto_msgTypes = make([]protoimpl.MessageInfo, 8)

@@ -356,7 +356,7 @@ const file_played_state_show_played_state_proto_rawDesc = "" +
 	"\vNOT_STARTED\x10\x01\x12\x0f\n" +
 	"\vIN_PROGRESS\x10\x02\x12\r\n" +
 	"\tCOMPLETED\x10\x03Bt\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util\xa2\x02\rSPTCosmosUtil"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util\xa2\x02\rSPTCosmosUtil"
 
 var file_played_state_show_played_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_played_state_show_played_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

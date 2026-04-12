@@ -7,8 +7,8 @@
 package offline_playable_cache_esperanto
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
@@ -1864,7 +1864,7 @@ const file_es_offline_playable_cache_proto_rawDesc = "" +
 	"\tGetTracks\x12@.spotify.offline_playable_cache_esperanto.proto.GetTracksRequest\x1aA.spotify.offline_playable_cache_esperanto.proto.GetTracksResponse\"\x00\x12\x9a\x01\n" +
 	"\x0fSubscribeTracks\x12@.spotify.offline_playable_cache_esperanto.proto.GetTracksRequest\x1aA.spotify.offline_playable_cache_esperanto.proto.GetTracksResponse\"\x000\x01\x12\x98\x01\n" +
 	"\vRemoveTrack\x12B.spotify.offline_playable_cache_esperanto.proto.RemoveTrackRequest\x1aC.spotify.offline_playable_cache_esperanto.proto.RemoveTrackResponse\"\x00B\xa7\x01\n" +
-	"2com.spotify.offline_playable_cache_esperanto.protoZkgithub.com/pyrorhythm/libspot/api/spotify/offline_playable_cache_esperanto;offline_playable_cache_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"2com.spotify.offline_playable_cache_esperanto.protoZkgithub.com/pyrorhythm/libspot/gen/spotify/offline_playable_cache_esperanto;offline_playable_cache_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_offline_playable_cache_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_offline_playable_cache_proto_msgTypes = make([]protoimpl.MessageInfo, 13)

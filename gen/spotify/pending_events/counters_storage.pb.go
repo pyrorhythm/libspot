@@ -229,7 +229,7 @@ const file_counters_storage_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12A\n" +
 	"\x05value\x18\x02 \x01(\v2+.spotify.pending_events.proto.CountersArrayR\x05value\"+\n" +
 	"\rCountersArray\x12\x1a\n" +
-	"\bcounters\x18\x01 \x03(\x03R\bcountersBIZGgithub.com/pyrorhythm/libspot/api/spotify/pending_events;pending_eventsb\x06proto3"
+	"\bcounters\x18\x01 \x03(\x03R\bcountersBIZGgithub.com/pyrorhythm/libspot/gen/spotify/pending_events;pending_eventsb\x06proto3"
 
 var file_counters_storage_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_counters_storage_proto_goTypes = []any{

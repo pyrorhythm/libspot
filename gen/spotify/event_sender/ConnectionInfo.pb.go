@@ -337,7 +337,7 @@ const file_include_ConnectionInfo_proto_rawDesc = "" +
 	"\x11ap_resolve_source\x18\x06 \x01(\tR\x0fapResolveSource\x12!\n" +
 	"\faddress_type\x18\a \x01(\tR\vaddressType\x12\x1f\n" +
 	"\vipv6_failed\x18\b \x01(\bR\n" +
-	"ipv6FailedBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"ipv6FailedBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectionInfo_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectionInfo_proto_goTypes = []any{

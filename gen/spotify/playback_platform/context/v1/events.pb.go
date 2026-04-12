@@ -1822,7 +1822,7 @@ const file_spotify_playback_platform_context_v1_behavior_events_proto_rawDesc = 
 	"\atrigger\x18\x01 \x01(\v26.spotify.playback_platform.context.v1.behavior.TriggerR\atrigger\x12P\n" +
 	"\aactions\x18\x02 \x01(\v26.spotify.playback_platform.context.v1.behavior.ActionsR\aactions\x12%\n" +
 	"\x0esequence_patch\x18\b \x01(\bR\rsequencePatchJ\x04\b\t\x10 B|\n" +
-	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"-spotify.playback_platform.context.v1.behaviorP\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_behavior_events_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_spotify_playback_platform_context_v1_behavior_events_proto_goTypes = []any{

@@ -880,7 +880,7 @@ const file_spotify_list_v1_model_attributes_proto_rawDesc = "" +
 	"\x12_item_id_algorithmB\x0e\n" +
 	"\f_recoverableB\x0e\n" +
 	"\f_source_lensJ\x04\b\x02\x10\x03Bm\n" +
-	"\x19com.spotify.list.v1.modelB\x0fAttributesProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\x0fAttributesProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_attributes_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_list_v1_model_attributes_proto_goTypes = []any{

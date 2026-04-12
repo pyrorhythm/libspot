@@ -423,7 +423,7 @@ const file_es_context_player_error_proto_rawDesc = "" +
 	"\x16PLAYBACK_STUCK_TIMEOUT\x10.\x12(\n" +
 	"$PLAYBACK_CLIENT_VERSION_IS_SUNSETTED\x10/\x12*\n" +
 	"&PLAYBACK_AUDIO_FORMAT_NEGOTIATION_FAIL\x100Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_context_player_error_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_es_context_player_error_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

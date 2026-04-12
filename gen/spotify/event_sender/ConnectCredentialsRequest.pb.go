@@ -139,7 +139,7 @@ const file_include_ConnectCredentialsRequest_proto_rawDesc = "" +
 	"\x19ConnectCredentialsRequest\x12\x1d\n" +
 	"\n" +
 	"token_type\x18\x01 \x01(\tR\ttokenType\x12\x1b\n" +
-	"\tclient_id\x18\x02 \x01(\tR\bclientIdBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\tclient_id\x18\x02 \x01(\tR\bclientIdBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectCredentialsRequest_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectCredentialsRequest_proto_goTypes = []any{

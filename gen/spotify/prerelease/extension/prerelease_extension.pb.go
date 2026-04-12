@@ -518,7 +518,7 @@ const file_prerelease_extension_proto_rawDesc = "" +
 	"\x05Agent\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12\x15\n" +
 	"\x03uri\x18\x01 \x01(\tH\x00R\x03uri\x88\x01\x01B\x06\n" +
-	"\x04_uriBJZHgithub.com/pyrorhythm/libspot/api/spotify/prerelease/extension;extensionb\x06proto3"
+	"\x04_uriBJZHgithub.com/pyrorhythm/libspot/gen/spotify/prerelease/extension;extensionb\x06proto3"
 
 var file_prerelease_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_prerelease_extension_proto_goTypes = []any{

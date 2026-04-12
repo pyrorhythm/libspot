@@ -182,7 +182,7 @@ const file_video_switch_node_proto_rawDesc = "" +
 	"\tMediaType\x12\v\n" +
 	"\aUNKNOWN\x10\x00\x12\t\n" +
 	"\x05AUDIO\x10\x01\x12\t\n" +
-	"\x05VIDEO\x10\x02B9Z7github.com/pyrorhythm/libspot/api/spotify/player;player"
+	"\x05VIDEO\x10\x02B9Z7github.com/pyrorhythm/libspot/gen/spotify/player;player"
 
 var file_video_switch_node_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_video_switch_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

@@ -121,7 +121,7 @@ const file_spotify_playback_platform_common_v1_restriction_proto_rawDesc = "" +
 	"&RESTRICTION_LICENSE_TIME_LIMIT_REACHED\x10\x1a\x12*\n" +
 	"&RESTRICTION_LICENSE_PLAY_LIMIT_REACHED\x10\x1b\x12*\n" +
 	"&RESTRICTION_LICENSE_SKIP_LIMIT_REACHED\x10\x1cBq\n" +
-	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/common/v1;v1b\x06proto3"
+	"#spotify.playback_platform.common.v1P\x01ZHgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_common_v1_restriction_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_spotify_playback_platform_common_v1_restriction_proto_goTypes = []any{

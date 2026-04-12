@@ -1370,7 +1370,7 @@ const file_include_RawCoreStreamSegment_proto_rawDesc = "" +
 	"\x0ejam_session_id\x18% \x01(\tR\fjamSessionId\x12(\n" +
 	"\x10clip_playback_id\x18& \x01(\fR\x0eclipPlaybackId\x12/\n" +
 	"\x13orchestration_stack\x18' \x01(\tR\x12orchestrationStack\x12\x19\n" +
-	"\blist_uri\x18( \x01(\tR\alistUriBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\blist_uri\x18( \x01(\tR\alistUriBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_RawCoreStreamSegment_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_RawCoreStreamSegment_proto_goTypes = []any{

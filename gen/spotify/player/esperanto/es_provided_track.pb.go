@@ -140,7 +140,7 @@ const file_es_provided_track_proto_rawDesc = "" +
 	"\aremoved\x18\x02 \x03(\tR\aremoved\x12\x18\n" +
 	"\ablocked\x18\x03 \x03(\tR\ablocked\x12\x1a\n" +
 	"\bprovider\x18\x04 \x01(\tR\bproviderBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_provided_track_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_provided_track_proto_goTypes = []any{

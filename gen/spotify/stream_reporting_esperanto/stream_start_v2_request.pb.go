@@ -822,7 +822,7 @@ const file_stream_start_v2_request_proto_rawDesc = "" +
 	"\x0f_on_demand_typeB\x11\n" +
 	"\x0f_entrypoint_uriB\x17\n" +
 	"\x15_agentic_product_typeJ\x04\b \x10!J\x04\b#\x10$B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_stream_start_v2_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_stream_start_v2_request_proto_goTypes = []any{

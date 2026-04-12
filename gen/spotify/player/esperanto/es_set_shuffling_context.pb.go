@@ -136,7 +136,7 @@ const file_es_set_shuffling_context_proto_rawDesc = "" +
 	"\x11shuffling_context\x18\x01 \x01(\bR\x10shufflingContext\x12H\n" +
 	"\aoptions\x18\x02 \x01(\v2..spotify.player.esperanto.proto.CommandOptionsR\aoptions\x12T\n" +
 	"\x0elogging_params\x18\x03 \x01(\v2-.spotify.player.esperanto.proto.LoggingParamsR\rloggingParamsBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_set_shuffling_context_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_set_shuffling_context_proto_goTypes = []any{

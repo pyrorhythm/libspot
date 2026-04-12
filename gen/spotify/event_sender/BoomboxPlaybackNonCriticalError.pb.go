@@ -368,7 +368,7 @@ const file_include_BoomboxPlaybackNonCriticalError_proto_rawDesc = "" +
 	"\vposition_ms\x18\a \x01(\x03R\n" +
 	"positionMs\x12\x14\n" +
 	"\x05error\x18\b \x01(\x03R\x05error\x12+\n" +
-	"\x11error_description\x18\t \x01(\tR\x10errorDescriptionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11error_description\x18\t \x01(\tR\x10errorDescriptionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_BoomboxPlaybackNonCriticalError_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_BoomboxPlaybackNonCriticalError_proto_goTypes = []any{

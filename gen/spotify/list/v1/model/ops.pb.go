@@ -1195,7 +1195,7 @@ const file_spotify_list_v1_model_ops_proto_rawDesc = "" +
 	"\x11update_attributes\x18\x05 \x01(\v2'.spotify.list.v1.model.UpdateAttributesH\x00R\x10updateAttributes\x12K\n" +
 	"\x0eupdate_item_id\x18\x06 \x01(\v2#.spotify.list.v1.model.UpdateItemIdH\x00R\fupdateItemIdB\x06\n" +
 	"\x04KindBf\n" +
-	"\x19com.spotify.list.v1.modelB\bOpsProtoP\x01Z=github.com/pyrorhythm/libspot/api/spotify/list/v1/model;modelb\x06proto3"
+	"\x19com.spotify.list.v1.modelB\bOpsProtoP\x01Z=github.com/pyrorhythm/libspot/gen/spotify/list/v1/model;modelb\x06proto3"
 
 var file_spotify_list_v1_model_ops_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_spotify_list_v1_model_ops_proto_goTypes = []any{

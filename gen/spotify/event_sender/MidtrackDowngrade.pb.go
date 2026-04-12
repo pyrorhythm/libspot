@@ -167,7 +167,7 @@ const file_include_MidtrackDowngrade_proto_rawDesc = "" +
 	"\vplayback_id\x18\x01 \x01(\fR\n" +
 	"playbackId\x12#\n" +
 	"\rdid_downgrade\x18\x02 \x01(\bR\fdidDowngrade\x12\x1a\n" +
-	"\bposition\x18\x03 \x01(\x03R\bpositionBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\bposition\x18\x03 \x01(\x03R\bpositionBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_MidtrackDowngrade_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_MidtrackDowngrade_proto_goTypes = []any{

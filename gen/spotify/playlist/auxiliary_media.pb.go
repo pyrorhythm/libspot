@@ -1808,7 +1808,7 @@ const file_auxiliary_media_proto_rawDesc = "" +
 	"\vintro_items\x18\x01 \x01(\v2+.spotify.playlist.proto.AuxiliaryMediaItemsR\n" +
 	"introItems\x12L\n" +
 	"\voutro_items\x18\x02 \x01(\v2+.spotify.playlist.proto.AuxiliaryMediaItemsR\n" +
-	"outroItemsB=Z;github.com/pyrorhythm/libspot/api/spotify/playlist;playlistb\x06proto3"
+	"outroItemsB=Z;github.com/pyrorhythm/libspot/gen/spotify/playlist;playlistb\x06proto3"
 
 var file_auxiliary_media_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
 var file_auxiliary_media_proto_goTypes = []any{

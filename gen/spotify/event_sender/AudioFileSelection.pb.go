@@ -305,7 +305,7 @@ const file_include_AudioFileSelection_proto_rawDesc = "" +
 	"\vfile_origin\x18\x05 \x01(\tR\n" +
 	"fileOrigin\x12%\n" +
 	"\x0etarget_bitrate\x18\x06 \x01(\x05R\rtargetBitrate\x12)\n" +
-	"\x10downgrade_reason\x18\a \x01(\tR\x0fdowngradeReasonBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x10downgrade_reason\x18\a \x01(\tR\x0fdowngradeReasonBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_AudioFileSelection_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_AudioFileSelection_proto_goTypes = []any{

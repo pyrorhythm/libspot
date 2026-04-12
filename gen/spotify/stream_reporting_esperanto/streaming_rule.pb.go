@@ -85,7 +85,7 @@ const file_streaming_rule_proto_rawDesc = "" +
 	"\x13STREAMING_RULE_WIFI\x10\x03\x12\x1f\n" +
 	"\x1bSTREAMING_RULE_SHUFFLE_MODE\x10\x04\x12\x1e\n" +
 	"\x1aSTREAMING_RULE_TABLET_FREE\x10\x05B\x95\x01\n" +
-	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/api/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
+	",com.spotify.stream_reporting_esperanto.protoZ_github.com/pyrorhythm/libspot/gen/spotify/stream_reporting_esperanto;stream_reporting_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_streaming_rule_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_streaming_rule_proto_goTypes = []any{

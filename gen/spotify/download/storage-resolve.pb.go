@@ -165,7 +165,7 @@ const file_storage_resolve_proto_rawDesc = "" +
 	"\x03CDN\x10\x00\x12\v\n" +
 	"\aSTORAGE\x10\x01\x12\x0e\n" +
 	"\n" +
-	"RESTRICTED\x10\x03B=Z;github.com/pyrorhythm/libspot/api/spotify/download;downloadb\x06proto3"
+	"RESTRICTED\x10\x03B=Z;github.com/pyrorhythm/libspot/gen/spotify/download;downloadb\x06proto3"
 
 var file_storage_resolve_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_storage_resolve_proto_msgTypes = make([]protoimpl.MessageInfo, 1)

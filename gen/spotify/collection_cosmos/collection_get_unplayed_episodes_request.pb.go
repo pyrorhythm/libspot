@@ -402,7 +402,7 @@ const file_collection_get_unplayed_episodes_request_proto_rawDesc = "" +
 	"\x11unfiltered_length\x18\x03 \x01(\rR\x10unfilteredLength\x12'\n" +
 	"\x0funranged_length\x18\x04 \x01(\rR\x0eunrangedLength\x12'\n" +
 	"\x0floading_content\x18\x05 \x01(\bR\x0eloadingContentB{\n" +
-	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/api/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
+	"\"spotify.collection.esperanto.protoP\x01ZMgithub.com/pyrorhythm/libspot/gen/spotify/collection_cosmos;collection_cosmos\xa2\x02\x03ESPb\x06proto3"
 
 var file_collection_get_unplayed_episodes_request_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_collection_get_unplayed_episodes_request_proto_goTypes = []any{

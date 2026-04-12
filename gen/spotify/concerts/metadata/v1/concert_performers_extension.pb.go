@@ -226,7 +226,7 @@ const file_concert_performers_extension_proto_rawDesc = "" +
 	"\x03Act\x12\x0f\n" +
 	"\vACT_UNKNOWN\x10\x00\x12\x11\n" +
 	"\rACT_HEADLINER\x10\x01\x12\x12\n" +
-	"\x0eACT_SUPPORTING\x10\x02BCZAgithub.com/pyrorhythm/libspot/api/spotify/concerts/metadata/v1;v1b\x06proto3"
+	"\x0eACT_SUPPORTING\x10\x02BCZAgithub.com/pyrorhythm/libspot/gen/spotify/concerts/metadata/v1;v1b\x06proto3"
 
 var file_concert_performers_extension_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_concert_performers_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

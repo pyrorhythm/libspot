@@ -129,7 +129,7 @@ const file_spotify_playback_platform_timeline_v1_timeline_query_proto_rawDesc = 
 	"\fexclude_uids\x18\x02 \x03(\tR\vexcludeUids\x12!\n" +
 	"\finclude_tags\x18\x03 \x03(\x04R\vincludeTags\x12!\n" +
 	"\fexclude_tags\x18\x04 \x03(\x04R\vexcludeTagsBu\n" +
-	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/timeline/v1;v1b\x06proto3"
+	"%spotify.playback_platform.timeline.v1P\x01ZJgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_timeline_v1_timeline_query_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_spotify_playback_platform_timeline_v1_timeline_query_proto_goTypes = []any{

@@ -202,7 +202,7 @@ const file_es_optional_proto_rawDesc = "" +
 	"\x05value\x18\x01 \x01(\x01R\x05value\"'\n" +
 	"\x0fOptionalBoolean\x12\x14\n" +
 	"\x05value\x18\x01 \x01(\bR\x05valueBp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_optional_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_es_optional_proto_goTypes = []any{

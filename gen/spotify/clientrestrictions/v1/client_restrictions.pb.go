@@ -956,7 +956,7 @@ const file_client_restrictions_proto_rawDesc = "" +
 	"$CachedRestrictedIntegrationsResponse\x12Y\n" +
 	"\bresponse\x18\x01 \x01(\v2=.spotify.clientrestrictions.v1.RestrictedIntegrationsResponseR\bresponse\x12;\n" +
 	"\vexpiry_time\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
-	"expiryTimeBDZBgithub.com/pyrorhythm/libspot/api/spotify/clientrestrictions/v1;v1b\x06proto3"
+	"expiryTimeBDZBgithub.com/pyrorhythm/libspot/gen/spotify/clientrestrictions/v1;v1b\x06proto3"
 
 var file_client_restrictions_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_client_restrictions_proto_goTypes = []any{

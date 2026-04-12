@@ -703,7 +703,7 @@ const file_debug_tracer_proto_rawDesc = "" +
 	"\x05trace\x12..spotify.debug_tracer.proto.DebugTracerRequest\x1a/.spotify.debug_tracer.proto.DebugTracerResponse\"\x00\x12\x80\x01\n" +
 	"\x11trace_playback_id\x128.spotify.debug_tracer.proto.DebugTracerPlaybackIdRequest\x1a/.spotify.debug_tracer.proto.DebugTracerResponse\"\x00\x12\x84\x01\n" +
 	"\x13trace_stream_handle\x12:.spotify.debug_tracer.proto.DebugTracerStreamHandleRequest\x1a/.spotify.debug_tracer.proto.DebugTracerResponse\"\x00B\x88\x01\n" +
-	"9com.spotify.stream_reporting_debug_tracer_esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/api/spotify/debug_tracer;debug_tracer\xa2\x02\x03ESPb\x06proto3"
+	"9com.spotify.stream_reporting_debug_tracer_esperanto.protoP\x01ZCgithub.com/pyrorhythm/libspot/gen/spotify/debug_tracer;debug_tracer\xa2\x02\x03ESPb\x06proto3"
 
 var file_debug_tracer_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_debug_tracer_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

@@ -295,7 +295,7 @@ const file_podcast_qna_proto_rawDesc = "" +
 	"\n" +
 	"\x06CLOSED\x10\x03\x12\v\n" +
 	"\aDELETED\x10\x04B}\n" +
-	"*com.spotify.podcastcreatorinteractivity.v1B\x10QnAMetadataProtoP\x01Z5github.com/pyrorhythm/libspot/api/spotify/qanda;qanda\xa2\x02\x03SPTb\x06proto3"
+	"*com.spotify.podcastcreatorinteractivity.v1B\x10QnAMetadataProtoP\x01Z5github.com/pyrorhythm/libspot/gen/spotify/qanda;qanda\xa2\x02\x03SPTb\x06proto3"
 
 var file_podcast_qna_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_podcast_qna_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

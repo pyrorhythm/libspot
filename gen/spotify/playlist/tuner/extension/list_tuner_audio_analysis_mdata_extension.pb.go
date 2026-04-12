@@ -113,7 +113,7 @@ const file_list_tuner_audio_analysis_mdata_extension_proto_rawDesc = "" +
 	"\x16ListTunerAudioAnalysis\x12\x19\n" +
 	"\bstart_ms\x18\x01 \x01(\x05R\astartMs\x12\x1b\n" +
 	"\tperiod_ms\x18\x02 \x01(\x05R\bperiodMs\x12\x1a\n" +
-	"\bloudness\x18\x03 \x03(\x05R\bloudnessBNZLgithub.com/pyrorhythm/libspot/api/spotify/playlist/tuner/extension;extensionb\x06proto3"
+	"\bloudness\x18\x03 \x03(\x05R\bloudnessBNZLgithub.com/pyrorhythm/libspot/gen/spotify/playlist/tuner/extension;extensionb\x06proto3"
 
 var file_list_tuner_audio_analysis_mdata_extension_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_list_tuner_audio_analysis_mdata_extension_proto_goTypes = []any{

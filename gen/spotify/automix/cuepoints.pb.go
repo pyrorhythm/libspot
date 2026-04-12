@@ -306,7 +306,7 @@ const file_cuepoints_proto_rawDesc = "" +
 	"\x06Origin\x12\t\n" +
 	"\x05HUMAN\x10\x00\x12\x06\n" +
 	"\x02ML\x10\x01BV\n" +
-	"\x19com.spotify.automix.protoZ9github.com/pyrorhythm/libspot/api/spotify/automix;automixb\x06proto3"
+	"\x19com.spotify.automix.protoZ9github.com/pyrorhythm/libspot/gen/spotify/automix;automixb\x06proto3"
 
 var file_cuepoints_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_cuepoints_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

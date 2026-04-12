@@ -101,7 +101,7 @@ const file_show_show_state_proto_rawDesc = "" +
 	"\n" +
 	"\x15show_show_state.proto\x12\x19spotify.show_cosmos.proto\"?\n" +
 	"\x13ShowCollectionState\x12(\n" +
-	"\x10is_in_collection\x18\x01 \x01(\bR\x0eisInCollectionBSZAgithub.com/pyrorhythm/libspot/api/spotify/show_cosmos;show_cosmos\xa2\x02\rSPTShowCosmos"
+	"\x10is_in_collection\x18\x01 \x01(\bR\x0eisInCollectionBSZAgithub.com/pyrorhythm/libspot/gen/spotify/show_cosmos;show_cosmos\xa2\x02\rSPTShowCosmos"
 
 var file_show_show_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_show_show_state_proto_goTypes = []any{

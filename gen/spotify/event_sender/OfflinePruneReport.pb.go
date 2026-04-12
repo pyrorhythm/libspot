@@ -349,7 +349,7 @@ const file_include_OfflinePruneReport_proto_rawDesc = "" +
 	"\x1fabp_chapter_keys_moved_to_cache\x18\x06 \x01(\x03R\x1aabpChapterKeysMovedToCache\x125\n" +
 	"\x17keys_removed_from_cache\x18\a \x01(\x03R\x14keysRemovedFromCache\x12+\n" +
 	"\x12keys_left_in_cache\x18\b \x01(\x03R\x0fkeysLeftInCache\x12&\n" +
-	"\x0fmax_cached_keys\x18\t \x01(\x03R\rmaxCachedKeysBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x0fmax_cached_keys\x18\t \x01(\x03R\rmaxCachedKeysBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_OfflinePruneReport_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_OfflinePruneReport_proto_goTypes = []any{

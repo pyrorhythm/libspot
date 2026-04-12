@@ -390,7 +390,7 @@ const file_spotify_playback_platform_context_v1_sequences_proto_rawDesc = "" +
 	"\apage_id\x18\x01 \x01(\fH\x00R\x06pageId\x88\x01\x01B\n" +
 	"\n" +
 	"\b_page_idBs\n" +
-	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/api/spotify/playback_platform/context/v1;v1b\x06proto3"
+	"$spotify.playback_platform.context.v1P\x01ZIgithub.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1;v1b\x06proto3"
 
 var file_spotify_playback_platform_context_v1_sequences_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_spotify_playback_platform_context_v1_sequences_proto_goTypes = []any{

@@ -237,7 +237,7 @@ const file_include_HostsProviderNonAuth_proto_rawDesc = "" +
 	"\x19resolved_backend_rpc_host\x18\x02 \x01(\tR\x16resolvedBackendRpcHost\x120\n" +
 	"\x14resolved_dealer_host\x18\x03 \x01(\tR\x12resolvedDealerHost\x125\n" +
 	"\x17stored_backend_rpc_host\x18\x04 \x01(\tR\x14storedBackendRpcHost\x12,\n" +
-	"\x12stored_dealer_host\x18\x05 \x01(\tR\x10storedDealerHostBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x12stored_dealer_host\x18\x05 \x01(\tR\x10storedDealerHostBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_HostsProviderNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_HostsProviderNonAuth_proto_goTypes = []any{

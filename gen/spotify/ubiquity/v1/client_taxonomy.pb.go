@@ -618,7 +618,7 @@ const file_client_taxonomy_proto_rawDesc = "" +
 	" OUTPUT_CONNECTION_TYPE_BLUETOOTH\x10\x03\x12\"\n" +
 	"\x1eOUTPUT_CONNECTION_TYPE_AIRPLAY\x10\x04\x12+\n" +
 	"'OUTPUT_CONNECTION_TYPE_BUILT_IN_SPEAKER\x10\x05BU\n" +
-	"\x17com.spotify.ubiquity.v1P\x01Z8github.com/pyrorhythm/libspot/api/spotify/ubiquity/v1;v1b\x06proto3"
+	"\x17com.spotify.ubiquity.v1P\x01Z8github.com/pyrorhythm/libspot/gen/spotify/ubiquity/v1;v1b\x06proto3"
 
 var file_client_taxonomy_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_client_taxonomy_proto_msgTypes = make([]protoimpl.MessageInfo, 3)

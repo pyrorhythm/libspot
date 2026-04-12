@@ -338,7 +338,7 @@ const file_es_sequence_rules_proto_rawDesc = "" +
 	"\x0eskipsRemaining\x125.spotify.player.esperanto.proto.RemainingSkipsRequest\x1a6.spotify.player.esperanto.proto.RemainingSkipsResponse\"\x00\x12t\n" +
 	"\n" +
 	"resetSkips\x121.spotify.player.esperanto.proto.ResetSkipsRequest\x1a1.spotify.player.esperanto.proto.ResetSkipResponse\"\x00Bp\n" +
-	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/api/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
+	"\"com.spotify.player.esperanto.protoZDgithub.com/pyrorhythm/libspot/gen/spotify/player/esperanto;esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_sequence_rules_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
 var file_es_sequence_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 4)

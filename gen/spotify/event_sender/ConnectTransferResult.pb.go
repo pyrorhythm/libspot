@@ -894,7 +894,7 @@ const file_include_ConnectTransferResult_proto_rawDesc = "" +
 	"\x11add_user_duration\x18\x18 \x01(\x03R\x0faddUserDuration\x12\x1d\n" +
 	"\n" +
 	"command_id\x18\x19 \x01(\tR\tcommandId\x12*\n" +
-	"\x11is_proxy_transfer\x18\x1a \x01(\bR\x0fisProxyTransferBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x11is_proxy_transfer\x18\x1a \x01(\bR\x0fisProxyTransferBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectTransferResult_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectTransferResult_proto_goTypes = []any{

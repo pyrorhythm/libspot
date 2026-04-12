@@ -372,7 +372,7 @@ const file_include_PlaybackRetry_proto_rawDesc = "" +
 	"\vprev_expiry\x18\a \x01(\x03R\n" +
 	"prevExpiry\x12\x12\n" +
 	"\x04etag\x18\b \x01(\tR\x04etag\x12\x16\n" +
-	"\x06expiry\x18\t \x01(\x03R\x06expiryBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x06expiry\x18\t \x01(\x03R\x06expiryBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_PlaybackRetry_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_PlaybackRetry_proto_goTypes = []any{

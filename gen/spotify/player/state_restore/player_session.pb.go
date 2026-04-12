@@ -7,7 +7,7 @@
 package state_restore
 
 import (
-	player "github.com/pyrorhythm/libspot/api/spotify/player"
+	player "github.com/pyrorhythm/libspot/gen/spotify/player"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -638,7 +638,7 @@ const file_state_restore_player_session_proto_rawDesc = "" +
 	"\alicense\x18\x11 \x02(\v2#.spotify.player.proto.PlayerLicenseR\alicense\x12L\n" +
 	"\x05rules\x18\x12 \x02(\v26.spotify.player.proto.state_restore.ContextPlayerRulesR\x05rules\x12I\n" +
 	"\x06loader\x18\x13 \x02(\v21.spotify.player.proto.state_restore.ContextLoaderR\x06loader\x12I\n" +
-	"\x04fake\x18d \x01(\v25.spotify.player.proto.state_restore.PlayerSessionFakeR\x04fakeBNZLgithub.com/pyrorhythm/libspot/api/spotify/player/state_restore;state_restore"
+	"\x04fake\x18d \x01(\v25.spotify.player.proto.state_restore.PlayerSessionFakeR\x04fakeBNZLgithub.com/pyrorhythm/libspot/gen/spotify/player/state_restore;state_restore"
 
 var file_state_restore_player_session_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_state_restore_player_session_proto_goTypes = []any{

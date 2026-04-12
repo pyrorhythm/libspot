@@ -83,7 +83,7 @@ const file_include_ConnectionQualityInstrumentationBuckets_proto_rawDesc = "" +
 	"\n" +
 	"5include/ConnectionQualityInstrumentationBuckets.proto\x12\x1aspotify.event_sender.proto\"b\n" +
 	"'ConnectionQualityInstrumentationBuckets\x127\n" +
-	"\x17instrumentation_buckets\x18\x01 \x03(\tR\x16instrumentationBucketsBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x17instrumentation_buckets\x18\x01 \x03(\tR\x16instrumentationBucketsBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_ConnectionQualityInstrumentationBuckets_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_ConnectionQualityInstrumentationBuckets_proto_goTypes = []any{

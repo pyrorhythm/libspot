@@ -167,7 +167,7 @@ const file_collection_album_collection_state_proto_rawDesc = "" +
 	"\x0fcollection_link\x18\x01 \x01(\tR\x0ecollectionLink\x127\n" +
 	"\x18num_tracks_in_collection\x18\x02 \x01(\rR\x15numTracksInCollection\x12\x1a\n" +
 	"\bcomplete\x18\x03 \x01(\bR\bcompleteBd\n" +
-	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/api/spotify/cosmos_util;cosmos_util"
+	"\x1dcom.spotify.cosmos.util.protoP\x01ZAgithub.com/pyrorhythm/libspot/gen/spotify/cosmos_util;cosmos_util"
 
 var file_collection_album_collection_state_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_collection_album_collection_state_proto_goTypes = []any{

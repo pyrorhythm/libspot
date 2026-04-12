@@ -7,8 +7,8 @@
 package local_files_esperanto
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/api/spotify/cosmos_util"
-	cosmos "github.com/pyrorhythm/libspot/api/spotify/playlist/cosmos"
+	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
@@ -1536,7 +1536,7 @@ const file_es_local_files_proto_rawDesc = "" +
 	"\tAddFolder\x12+.spotify.local_files_esperanto.proto.Folder\x1a9.spotify.local_files_esperanto.proto.MutateSourceResponse\"\x00\x12x\n" +
 	"\fRemoveFolder\x12+.spotify.local_files_esperanto.proto.Folder\x1a9.spotify.local_files_esperanto.proto.MutateSourceResponse\"\x00\x12H\n" +
 	"\x14NotifyDefaultSources\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00B\x86\x01\n" +
-	"'com.spotify.local_files_esperanto.protoZUgithub.com/pyrorhythm/libspot/api/spotify/local_files_esperanto;local_files_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"'com.spotify.local_files_esperanto.protoZUgithub.com/pyrorhythm/libspot/gen/spotify/local_files_esperanto;local_files_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_local_files_proto_enumTypes = make([]protoimpl.EnumInfo, 4)
 var file_es_local_files_proto_msgTypes = make([]protoimpl.MessageInfo, 14)

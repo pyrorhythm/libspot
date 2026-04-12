@@ -118,7 +118,7 @@ const file_es_offline_debug_proto_rawDesc = "" +
 	"\fOfflineDebug\x12[\n" +
 	"\n" +
 	"OnKeyStats\x12\x16.google.protobuf.Empty\x1a1.spotify.offline_esperanto.proto.KeyStatsResponse\"\x000\x01Bz\n" +
-	"#com.spotify.offline_esperanto.protoZMgithub.com/pyrorhythm/libspot/api/spotify/offline_esperanto;offline_esperanto\xa2\x02\x03ESPb\x06proto3"
+	"#com.spotify.offline_esperanto.protoZMgithub.com/pyrorhythm/libspot/gen/spotify/offline_esperanto;offline_esperanto\xa2\x02\x03ESPb\x06proto3"
 
 var file_es_offline_debug_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_es_offline_debug_proto_goTypes = []any{

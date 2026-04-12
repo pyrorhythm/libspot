@@ -169,7 +169,7 @@ const file_include_DesktopConnectPullResumeNonAuth_proto_rawDesc = "" +
 	"\x1fDesktopConnectPullResumeNonAuth\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x10\n" +
 	"\x03uri\x18\x02 \x01(\tR\x03uri\x12\x14\n" +
-	"\x05error\x18\x03 \x01(\tR\x05errorBEZCgithub.com/pyrorhythm/libspot/api/spotify/event_sender;event_sender"
+	"\x05error\x18\x03 \x01(\tR\x05errorBEZCgithub.com/pyrorhythm/libspot/gen/spotify/event_sender;event_sender"
 
 var file_include_DesktopConnectPullResumeNonAuth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_include_DesktopConnectPullResumeNonAuth_proto_goTypes = []any{
