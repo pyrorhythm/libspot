@@ -67,12 +67,12 @@ func (d *Dealer) tryEndpointWithRetry(ctx context.Context, endpoint string) (*ws
 		case <-t.C:
 		}
 	}
-	
+
 	return nil, ErrEndpointRetriesExceeded
 }
 
 func (d *Dealer) connectEndpoint(ctx context.Context, endpoint string) (*ws.Conn, error) {
-	token, err := d.prov.GetOrRefreshToken(ctx)
+	token, err := d.prov.AccessToken(ctx, true)
 	if err != nil {
 		return nil, fmt.Errorf("token provider: %w", err)
 	}

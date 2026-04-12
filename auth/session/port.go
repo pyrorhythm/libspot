@@ -11,11 +11,8 @@ type Session interface {
 	AuthUrl(state string) (url, pkce string)
 	// AuthCode processes given code with pkce from AuthUrl and authorizes the session.
 	AuthCode(ctx context.Context, code, pkce string) error
-	// GetOrRefreshToken returns valid (and refreshed if needed) access token.
-	GetOrRefreshToken(ctx context.Context) (string, error)
-	// GetToken return token without refreshing, even if refresh token is availible.
-	GetToken() (string, bool)
 
+	AccessToken(ctx context.Context, refresh bool) (string, error)
 	// Load tries to load session from keychain,
 	// returning store.Error (store.ErrItemNotFound) if failed
 	Load() error

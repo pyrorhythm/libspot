@@ -2,89 +2,159 @@ package dealer
 
 import (
 	"context"
+	"errors"
 	"fmt"
+	"math"
+	"math/rand"
+	"sync"
+	"sync/atomic"
 	"time"
 
-	ws "github.com/coder/websocket"
-	"github.com/pyrorhythm/libspot/dealer/types"
+	"github.com/pyrorhythm/libspot"
+	"github.com/pyrorhythm/libspot/auth/session"
+	dtyp "github.com/pyrorhythm/libspot/dealer/types"
 )
 
-func (d *Dealer) loop(ctx context.Context) {
-	var globalAttempt int64
+var (
+	ErrNotConnected = errors.New("dealer: not connected")
+	ErrSendOverflow = errors.New("dealer: send buffer full")
+)
 
-	for {
-		select {
-		case <-ctx.Done():
-			return
-		default:
-		}
-
-		eps, err := d.fetchEndpoints()
-		if err != nil {
-			select {
-			case <-ctx.Done():
-				return
-			case <-time.After(time.Duration(d.GlobalRetryDelay) * time.Second):
-			}
-			continue
-		}
-
-		d.connMu.Lock()
-		if wsConn, ok := d.tryEndpoints(ctx, eps); ok {
-			d.newConn(wsConn)
-			d.connMu.Unlock()
-			// /
-			d.runConn(ctx)
-			// blocking here
-			globalAttempt = 0
-			continue
-		}
-		d.connMu.Unlock()
-
-		globalAttempt++
-		if d.RetryCap > 0 && globalAttempt > d.RetryCap {
-			panic(
-				fmt.Sprintf("dealer: all endpoints exhausted after %d attempts", globalAttempt),
-			)
-		}
-
-		select {
-		case <-ctx.Done():
-			return
-		case <-time.After(time.Duration(d.GlobalRetryDelay) * time.Second):
-		}
+func LinearDelay(base time.Duration, increment time.Duration) func(int64) time.Duration {
+	return func(att int64) time.Duration {
+		return base + increment*time.Duration(att-1)
 	}
 }
 
-func (d *Dealer) runConn(ctx context.Context) {
-	defer func() {
-		d.connMu.Lock()
-		defer d.connMu.Unlock()
-
-		d.conn.closeWS()
-	}()
-
-	d.conn.run(ctx)
+// ExponentialDelay / powBase -- seconds
+func ExponentialDelay(base time.Duration, powBase int64) func(int64) time.Duration {
+	return func(att int64) time.Duration {
+		return base + float64DurSec(math.Pow(float64(powBase), float64(att-1))) * time.Second
+	}
 }
 
-func (d *Dealer) newConn(ws *ws.Conn) {
-	pingIv := 30 * time.Second
-	pingTo := 10 * time.Second
-	if d.PingIntervalSec > 0 {
-		pingIv = time.Duration(d.PingIntervalSec) * time.Second
+func Exponential2Delay(base time.Duration) func(int64) time.Duration {
+	return func(att int64) time.Duration {
+		return base + float64DurSec(math.Pow(2, float64(att-1)))
 	}
-	if d.PingTimeout > 0 {
-		pingTo = time.Duration(d.PingTimeout) * time.Second
+}
+
+func ExponentialJitterDelay(base time.Duration, pow int64) func(int64) time.Duration {
+	return func(att int64) time.Duration {
+		return base + float64DurSec(math.Pow(float64(pow), float64(att-1))*(0.5+0.5*rand.Float64()))
+	}
+}
+
+func ExponentialJitter2Delay(base time.Duration) func(int64) time.Duration {
+	return func(att int64) time.Duration {
+		return base + float64DurSec(math.Pow(2, float64(att-1))*(0.5+0.5*rand.Float64()))
+	}
+}
+
+func float64DurSec(f float64) time.Duration {
+	return time.Duration(f) * time.Second
+}
+
+//goland:noinspection GoNameStartsWithPackageName
+type Dealer struct {
+	prov  libspot.TokenProvider
+	rslv  libspot.EndpointResolver
+	delay func(attempt int64) time.Duration
+
+	RetryCap         int64
+	GlobalRetryDelay int64 // seconds
+	PingIntervalSec  int64
+	PingTimeout      int64
+
+	OnClose func(err error)
+
+	router Router // main Router instance, persisted through connections
+
+	conn   *conn
+	connMu sync.RWMutex
+	
+	connectionId string
+
+	running atomic.Bool
+	loopCl  context.CancelFunc
+}
+
+func New(
+	prov libspot.TokenProvider,
+	rslv libspot.EndpointResolver,
+	delay func(attempt int64) time.Duration,
+) *Dealer {
+	return &Dealer{
+		prov:   prov,
+		rslv:   rslv,
+		delay:  delay,
+		router: newRouter(),
+	}
+}
+
+func NewSession(
+	sess session.Session,
+	delay func(attempt int64) time.Duration,
+) (*Dealer, error) {
+	rslv, err := sess.Resolver()
+	if err != nil {
+		return nil, fmt.Errorf("failed to get resolver from session: %w", err)
 	}
 
-	d.conn = &conn{
-		dealer:       d,
-		ws:           ws,
-		send:         make(chan []byte, 256),
-		reqCh:        make(chan *types.Request, 64),
-		pingInterval: pingIv,
-		pingTimeout:  pingTo,
+	return &Dealer{
+		prov:   sess,
+		rslv:   rslv,
+		delay:  delay,
+		router: newRouter(),
+	}, nil
+}
+
+func (d *Dealer) OnMsg(uri string, cb func(*dtyp.Message)) (unsubscribe func()) {
+	return d.router.onMsgUri(uri, cb)
+}
+
+func (d *Dealer) OnReq(uri string, cb func(*dtyp.Request) bool) (unsubscribe func()) {
+	return d.router.onReqUri(uri, cb)
+}
+
+func (d *Dealer) Start() error {
+	if !d.running.CompareAndSwap(false, true) {
+		return errors.New("dealer: already started")
 	}
 
-	d.conn.suicideTimer = time.AfterFunc(pingIv+pingTo, func() { _ = d.conn.Close() })
+	ctx, cancel := context.WithCancel(context.Background())
+	d.loopCl = cancel
+
+	go d.loop(ctx)
+	
+	Subscribe(d, TopicConnectionID, func(s string) {
+		d.connectionId = s 
+	})
+	
+	return nil
+}
+
+func (d *Dealer) Stop() error {
+	if !d.running.CompareAndSwap(true, false) {
+		return nil
+	}
+	d.loopCl()
+	return nil
+}
+
+func (d *Dealer) Send(msg []byte) error {
+	if d.conn == nil {
+		return ErrNotConnected
+	}
+
+	d.connMu.RLock()
+	ch := d.conn.send
+	d.connMu.RUnlock()
+
+	select {
+	case ch <- msg:
+		return nil
+	default:
+		return ErrSendOverflow
+	}
 }

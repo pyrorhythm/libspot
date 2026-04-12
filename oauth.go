@@ -1,9 +1,8 @@
-package auth
+package libspot
 
 import (
 	"fmt"
 
-	"github.com/pyrorhythm/libspot"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/spotify"
 )
@@ -70,9 +69,9 @@ func AllScopes() []string {
 	}
 }
 
-func NewDefaultOAuthConfig(port int) *oauth2.Config {
+func DefaultOAuthConfig(port int) *oauth2.Config {
 	return &oauth2.Config{
-		ClientID:    libspot.ClientIdHex,
+		ClientID:    ClientIdHex,
 		RedirectURL: fmt.Sprintf("http://127.0.0.1:%d/login", port),
 		Scopes:      AllScopes(),
 		Endpoint: oauth2.Endpoint{

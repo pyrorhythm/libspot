@@ -10,3 +10,7 @@ type StructuredLogger interface {
 	Warn(string, ...any)
 	Error(string, ...any)
 }
+
+func DefaultLogger() StructuredLogger {
+	return slog.Default()
+}

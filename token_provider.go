@@ -4,5 +4,5 @@ import "context"
 
 type TokenProvider interface {
 	ClientToken() (string, error)
-	GetOrRefreshToken(ctx context.Context) (string, error)
+	AccessToken(ctx context.Context, refresh bool) (string, error)
 }

@@ -1,6 +1,7 @@
 package session
 
 import (
+	"context"
 	"crypto/ecdsa"
 	"net/http"
 
@@ -19,7 +20,10 @@ func newSessionDpopClient(
 			base: &dpop.Transport{
 				Base: &transport.LoggingTransport{},
 				Prov: &dpop.Provider{
-					GetAccessToken: sess.GetToken,
+					GetAccessToken: func() (string, bool) {
+						at, err := sess.AccessToken(context.Background(), false)
+						return at, err == nil
+					},
 					GetNonce:       sess.GetNonce,
 					SetNonce:       sess.SetNonce,
 				},

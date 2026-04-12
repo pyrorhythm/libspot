@@ -14,9 +14,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/pyrorhythm/fn"
 	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth"
 	"github.com/pyrorhythm/libspot/auth/store"
 	"github.com/pyrorhythm/libspot/pkg/keychain"
 	"github.com/pyrorhythm/libspot/resolver"
@@ -24,6 +22,11 @@ import (
 )
 
 const sessionKey = "authorizationData"
+
+var (
+	ErrNoAccessToken  = errors.New("session: no access token")
+	ErrNoRefreshToken = errors.New("session: no refresh token")
+)
 
 type storedCredentials struct {
 	*oauth2.Token `json:"token,omitempty"`
@@ -87,7 +90,7 @@ type Option func(*session)
 
 func WithRedirectPort(c int) Option {
 	return func(s *session) {
-		s.conf = auth.NewDefaultOAuthConfig(c)
+		s.conf = libspot.DefaultOAuthConfig(c)
 	}
 }
 
@@ -104,7 +107,7 @@ func WithGracefulContext(ctx context.Context) Option {
 }
 
 func applyDefaults(s *session) {
-	s.conf = auth.NewDefaultOAuthConfig(9292)
+	s.conf = libspot.DefaultOAuthConfig(9292)
 	s.kcer = store.Zalando[storedCredentials](sessionKey)
 	s.gracefulCtx = context.Background()
 }
@@ -113,13 +116,13 @@ func New(
 	opts ...Option,
 ) Session {
 	s := &session{}
-	
+
 	for _, opt := range opts {
 		opt(s)
 	}
-	
+
 	applyDefaults(s)
-	
+
 	return s
 }
 
@@ -230,16 +233,7 @@ func (s *session) AuthCode(ctx context.Context, code, pkce string) error {
 	return s.SaveToken(tok)
 }
 
-func (s *session) GetToken() (string, bool) {
-	s.mu.RLock()
-	valid := s.creds.Valid()
-	accessToken := s.creds.AccessToken
-	s.mu.RUnlock()
-
-	return fn.If(valid, accessToken, ""), valid
-}
-
-func (s *session) GetOrRefreshToken(ctx context.Context) (string, error) {
+func (s *session) AccessToken(ctx context.Context, refresh bool) (string, error) {
 	s.mu.RLock()
 	valid := s.creds.Valid()
 	accessToken := s.creds.AccessToken
@@ -250,10 +244,13 @@ func (s *session) GetOrRefreshToken(ctx context.Context) (string, error) {
 		return accessToken, nil
 	}
 	if refreshToken == "" {
-		return "", errors.New("no refresh token available")
+		return "", ErrNoRefreshToken
+	}
+	// refresh required
+	if !refresh {
+		return "", ErrNoAccessToken
 	}
 
-	// refresh required
 	ctx, err := s.injectDPoPClient(ctx)
 	if err != nil {
 		return "", err

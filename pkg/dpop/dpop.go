@@ -31,7 +31,7 @@ type (
 type Provider struct {
 	GetAccessToken getter
 	GetNonce       getter
-	SetNonce    setter
+	SetNonce       setter
 }
 
 // Transport is an http.RoundTripper that attaches a DPoP proof to every request

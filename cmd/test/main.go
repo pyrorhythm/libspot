@@ -12,8 +12,8 @@ import (
 
 	"github.com/pyrorhythm/libspot/auth"
 	"github.com/pyrorhythm/libspot/auth/session"
-	"github.com/pyrorhythm/libspot/auth/store"
 	"github.com/pyrorhythm/libspot/dealer"
+	"github.com/pyrorhythm/libspot/pkg/keychain"
 )
 
 func main() {
@@ -28,7 +28,7 @@ func main() {
 		session.WithGracefulContext(ctx),
 	)
 	err := sess.Load()
-	if err != nil && errors.Is(err, store.ErrItemNotFound) {
+	if err != nil && errors.Is(err, keychain.ErrItemNotFound) {
 		srvctx, cancel := context.WithCancel(ctx)
 		codeCh := auth.StartOAuth2Server(srvctx, redirectPort)
 		url, pkce := sess.AuthUrl("")
@@ -43,7 +43,7 @@ func main() {
 		panic(err)
 	}
 
-	at, err := sess.GetOrRefreshToken(ctx)
+	at, err := sess.AccessToken(ctx, true)
 	if err != nil {
 		panic(err)
 	}
