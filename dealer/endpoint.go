@@ -46,7 +46,7 @@ func (d *Dealer) tryEndpoints(ctx context.Context, endpoints []string) (*ws.Conn
 }
 
 func (d *Dealer) tryEndpointWithRetry(ctx context.Context, endpoint string) (*ws.Conn, error) {
-	for attempt := range d.RetryCap {
+	for attempt := range d.endpoint.Cap {
 		select {
 		case <-ctx.Done():
 			return nil, ctx.Err()
@@ -57,14 +57,11 @@ func (d *Dealer) tryEndpointWithRetry(ctx context.Context, endpoint string) (*ws
 		if err == nil {
 			return wsConn, nil
 		}
-
-		delay := d.delay(attempt)
-		t := time.NewTimer(delay)
+		
 		select {
 		case <-ctx.Done():
-			t.Stop()
 			return nil, ctx.Err()
-		case <-t.C:
+		case <-time.After(d.endpoint.Fn(attempt)):
 		}
 	}
 

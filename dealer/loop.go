@@ -24,7 +24,7 @@ func (d *Dealer) loop(ctx context.Context) {
 			select {
 			case <-ctx.Done():
 				return
-			case <-time.After(time.Duration(d.GlobalRetryDelay) * time.Second):
+			case <-time.After(d.global.Fn(globalAttempt)):
 			}
 			continue
 		}
@@ -42,7 +42,7 @@ func (d *Dealer) loop(ctx context.Context) {
 		d.connMu.Unlock()
 
 		globalAttempt++
-		if d.RetryCap > 0 && globalAttempt > d.RetryCap {
+		if d.global.Cap > 0 && globalAttempt > d.global.Cap {
 			panic(
 				fmt.Sprintf("dealer: all endpoints exhausted after %d attempts", globalAttempt),
 			)
@@ -51,7 +51,7 @@ func (d *Dealer) loop(ctx context.Context) {
 		select {
 		case <-ctx.Done():
 			return
-		case <-time.After(time.Duration(d.GlobalRetryDelay) * time.Second):
+		case <-time.After(d.global.Fn(globalAttempt)):
 		}
 	}
 }
@@ -70,11 +70,11 @@ func (d *Dealer) runConn(ctx context.Context) {
 func (d *Dealer) newConn(ws *ws.Conn) {
 	pingIv := 30 * time.Second
 	pingTo := 10 * time.Second
-	if d.PingIntervalSec > 0 {
-		pingIv = time.Duration(d.PingIntervalSec) * time.Second
+	if d.intervalSec > 0 {
+		pingIv = d.intervalSec
 	}
-	if d.PingTimeout > 0 {
-		pingTo = time.Duration(d.PingTimeout) * time.Second
+	if d.timeout > 0 {
+		pingTo = d.timeout
 	}
 
 	d.conn = &conn{
@@ -84,6 +84,7 @@ func (d *Dealer) newConn(ws *ws.Conn) {
 		reqCh:        make(chan *types.Request, 64),
 		pingInterval: pingIv,
 		pingTimeout:  pingTo,
+		onShutdown:   d.onConnectionShutdown,
 	}
 
 	d.conn.suicideTimer = time.AfterFunc(pingIv+pingTo, func() { _ = d.conn.Close() })

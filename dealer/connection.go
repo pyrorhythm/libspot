@@ -24,6 +24,7 @@ type conn struct {
 	pingTimeout  time.Duration
 
 	suicideTimer *time.Timer
+	onShutdown   func(error)
 
 	// lifespan
 	ctx    context.Context
@@ -49,8 +50,8 @@ func (c *conn) run(ctx context.Context) {
 		c.suicideTimer.Stop()
 	}
 
-	if c.dealer.OnClose != nil {
-		c.dealer.OnClose(err)
+	if c.onShutdown != nil {
+		c.onShutdown(err)
 	}
 }
 

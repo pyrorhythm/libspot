@@ -54,23 +54,23 @@ func main() {
 }
 
 func testDealer(ctx context.Context, sess session.Session) {
-	d, err := dealer.NewSession(sess, dealer.ExponentialJitter2Delay(time.Second))
+	d, err := dealer.NewFromSession(sess)
 	if err != nil {
 		debug.Stack()
 		panic(err)
 	}
 
-	if err = d.Start(); err != nil {
+	if err = d.Start(ctx); err != nil {
 		debug.Stack()
 		panic(err)
 	}
 
 	timer := time.NewTimer(time.Hour)
-	
+
 	select {
 	case <-timer.C:
-	case <-ctx.Done():	
+	case <-ctx.Done():
 	}
-	
+
 	_ = d.Stop()
 }

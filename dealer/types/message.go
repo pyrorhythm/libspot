@@ -26,11 +26,9 @@ type Envelope struct {
 	MessageIdent string            `json:"message_ident"`
 	Key          string            `json:"key"`
 	Payloads     []json.RawMessage `json:"payloads"`
-	Payload      compressed        `json:"payload"`
-}
-
-type compressed struct {
-	Compressed []byte `json:"compressed"`
+	Payload      struct {
+		Compressed []byte `json:"compressed"`
+	} `json:"payload"`
 }
 
 func (e *Envelope) IsMessage() bool { return e.Type == envTypeMessage }
