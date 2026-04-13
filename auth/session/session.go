@@ -112,9 +112,7 @@ func applyDefaults(s *session) {
 	s.gracefulCtx = context.Background()
 }
 
-func New(
-	opts ...Option,
-) Session {
+func New(opts ...Option) Session {
 	s := &session{}
 
 	for _, opt := range opts {

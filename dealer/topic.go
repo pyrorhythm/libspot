@@ -2,7 +2,6 @@ package dealer
 
 import (
 	"github.com/pyrorhythm/libspot/dealer/types"
-	"github.com/pyrorhythm/libspot/gen/socialconnect"
 	"github.com/pyrorhythm/libspot/gen/spotify/connectstate"
 	"github.com/pyrorhythm/libspot/gen/spotify/parental_controls"
 	"github.com/pyrorhythm/libspot/gen/spotify/playbacksettings/pubsub"
@@ -57,9 +56,9 @@ var (
 		URI:    "hm://playlist/v2/playlist/",
 		Decode: DecodePB[*playlist4.PlaylistModificationInfo],
 	}
-	TopicSessionUpdate = Topic[*socialconnect.SessionUpdate]{
+	TopicSessionUpdate = Topic[*types.SessionUpdate]{
 		URI:    "social-connect/v2/session_update",
-		Decode: DecodeJSON[socialconnect.SessionUpdate],
+		Decode: DecodeJSON[types.SessionUpdate],
 	}
 	TopicUserAttributesUpdate = Topic[*parental_controls.UserAttributesUpdate]{
 		URI:    "spotify:user:attributes:update",
@@ -69,12 +68,12 @@ var (
 		URI:    "spotify:user:attributes:mutated",
 		Decode: DecodePB[*parental_controls.UserAttributesUpdate],
 	}
-	TopicDeviceBroadcastStatus = Topic[*types.DeviceBroadcastStatus]{
-		URI:    "hm://playback/device-broadcast-status",
-		Decode: decodeDeviceBroadcastStatus,
-	}
 	TopicDeviceSettingsChanged = Topic[*pubsub.DeviceSettingsFieldsChangedEvent]{
 		URI:    "hm://playback/v1/devicesettings",
 		Decode: DecodePB[*pubsub.DeviceSettingsFieldsChangedEvent],
+	}
+	TopicDeviceBroadcastStatus = Topic[*types.DeviceBroadcastStatus]{
+		URI:    "social-connect/v2/broadcast_status_updates",
+		Decode: decodeDeviceBroadcastStatus,
 	}
 )

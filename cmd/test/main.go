@@ -50,10 +50,10 @@ func main() {
 
 	fmt.Printf("access token: %s\n", at)
 
-	testDealer(sess)
+	testDealer(ctx, sess)
 }
 
-func testDealer(sess session.Session) {
+func testDealer(ctx context.Context, sess session.Session) {
 	d, err := dealer.NewSession(sess, dealer.ExponentialJitter2Delay(time.Second))
 	if err != nil {
 		debug.Stack()
@@ -65,5 +65,12 @@ func testDealer(sess session.Session) {
 		panic(err)
 	}
 
-	time.Sleep(1 * time.Hour) // lol
+	timer := time.NewTimer(time.Hour)
+	
+	select {
+	case <-timer.C:
+	case <-ctx.Done():	
+	}
+	
+	_ = d.Stop()
 }
