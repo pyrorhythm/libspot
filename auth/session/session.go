@@ -88,19 +88,19 @@ func (s *session) SetNonce(nonce string) {
 
 type Option func(*session)
 
-func WithRedirectPort(c int) Option {
+func RedirectPort(c int) Option {
 	return func(s *session) {
 		s.conf = libspot.DefaultOAuthConfig(c)
 	}
 }
 
-func WithKeychainerFunc(kcfn func(key string) keychain.Keychainer[storedCredentials]) Option {
+func Keychainer(kcfn func(key string) keychain.Keychainer[storedCredentials]) Option {
 	return func(s *session) {
 		s.kcer = kcfn(sessionKey)
 	}
 }
 
-func WithGracefulContext(ctx context.Context) Option {
+func GracefulContext(ctx context.Context) Option {
 	return func(s *session) {
 		s.gracefulCtx = ctx
 	}

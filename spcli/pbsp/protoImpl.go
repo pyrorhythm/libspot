@@ -5,6 +5,7 @@ import (
 	"context"
 
 	"github.com/pyrorhythm/libspot"
+	emd "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 )
 
 type PBClient struct {
@@ -24,7 +25,7 @@ func New(
 
 type SpclientProto interface {
 	// extended-metadata/v0
-	ExtendedMetadata(ctx context.Context)
+	ExtendedMetadata(ctx context.Context, req *emd.BatchedEntityRequest) (*emd.BatchedExtensionResponse, error)
 	// connect-state/v1
 	//
 }

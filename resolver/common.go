@@ -84,6 +84,11 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 		retries    int
 		retriesCap = 5
 	)
+	
+	urlu, _ := url.Parse(resolveEndpoint)
+	urlu.RawQuery = v.Encode()
+	
+	
 
 	u := fasthttp.AcquireURI()
 	_ = u.Parse(nil, []byte(resolveEndpoint))

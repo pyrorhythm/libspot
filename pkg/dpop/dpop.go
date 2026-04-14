@@ -22,16 +22,19 @@ import (
 	"github.com/google/uuid"
 )
 
-
 type (
 	getter func() (string, bool)
 	setter func(string)
 )
 
+type Nonce struct {
+	Get getter
+	Set setter
+}
+
 type Provider struct {
-	GetAccessToken getter
-	GetNonce       getter
-	SetNonce       setter
+	AccessToken getter
+	Nonce       Nonce
 }
 
 // Transport is an http.RoundTripper that attaches a DPoP proof to every request
@@ -59,7 +62,7 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	if !ok {
 		return nil, fmt.Errorf("dpop: server requested nonce but DPoP-Nonce header missing")
 	}
-	t.Prov.SetNonce(nonce)
+	t.Prov.Nonce.Set(nonce)
 
 	_, _ = io.Copy(io.Discard, resp.Body)
 	_ = resp.Body.Close()
@@ -83,8 +86,8 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 		return nil, err
 	}
 
-	if nonce, ok := parseDPoPNonceHeader(retryResp); ok {
-		t.Prov.SetNonce(nonce)
+	if nonce, ok = parseDPoPNonceHeader(retryResp); ok {
+		t.Prov.Nonce.Set(nonce)
 	}
 
 	return retryResp, nil
@@ -171,11 +174,11 @@ func (t *Transport) createProof(ctx context.Context, req *http.Request) (string,
 		"htu": htu.String(),
 	}
 
-	if nonce, ok := t.Prov.GetNonce(); ok {
+	if nonce, ok := t.Prov.Nonce.Get(); ok {
 		claims["nonce"] = nonce
 	}
 
-	if accessToken, ok := t.Prov.GetAccessToken(); ok && accessToken != "" {
+	if accessToken, ok := t.Prov.AccessToken(); ok && accessToken != "" {
 		hash := sha256.Sum256([]byte(accessToken))
 		claims["ath"] = base64.RawURLEncoding.EncodeToString(hash[:])
 	} else {

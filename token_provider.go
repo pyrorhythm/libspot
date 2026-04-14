@@ -1,6 +1,8 @@
 package libspot
 
-import "context"
+import (
+	"context"
+)
 
 type TokenProvider interface {
 	ClientToken() (string, error)

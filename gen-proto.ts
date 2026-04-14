@@ -53,7 +53,7 @@ async function processProto(protoPath: string): Promise<string> {
   const baseName = basename(protoPath, extname(protoPath));
 
 
-  const match = content.match(/^package\s+(\S+);/m);
+  const match = content.match(/^package\p+(\S+);/m);
   if (!match) throw new Error(`No package in ${protoPath}`);
 
   let pkg = (match[1] ?? "").replace(/\./g, "/");
@@ -63,7 +63,7 @@ async function processProto(protoPath: string): Promise<string> {
     const goPackage = `${MODULE}/${OUT}/${pkg};${alias}`;
     const goPackageLine = `option go_package="${goPackage}";`;
 
-    await Bun.write(file, content.replace(/^syntax\s*=\s*"[^"]+";/m, `$&\n${goPackageLine}`))
+    await Bun.write(file, content.replace(/^syntax\p*=\p*"[^"]+";/m, `$&\n${goPackageLine}`))
     return protoPath
   }
 
@@ -81,7 +81,7 @@ async function processProto(protoPath: string): Promise<string> {
   if (/^option go_package/m.test(content)) {
     patched = content.replace(/^option go_package="[^"]+";/m, goPackageLine);
   } else {
-    patched = content.replace(/^syntax\s*=\s*"[^"]+";/m, `$&\n${goPackageLine}`);
+    patched = content.replace(/^syntax\p*=\p*"[^"]+";/m, `$&\n${goPackageLine}`);
   }
 
   await Bun.write(protoPath, patched);

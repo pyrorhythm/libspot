@@ -11,6 +11,7 @@ import (
 	"github.com/pyrorhythm/libspot"
 	"github.com/pyrorhythm/libspot/auth/session"
 	"github.com/pyrorhythm/libspot/dealer/types"
+	"github.com/pyrorhythm/libspot/pkg/delay"
 )
 
 var (
@@ -19,7 +20,7 @@ var (
 )
 
 type DelayConfig struct {
-	Fn  func(attempt int64) time.Duration
+	Fn  delay.Delay
 	Cap int64
 }
 
@@ -49,7 +50,7 @@ type Dealer struct {
 }
 
 var commonDelayCfg = &DelayConfig{
-	Fn:  ExponentialJitter2Delay(2 * time.Second),
+	Fn:  delay.ExponentialJitter2Delay(2 * time.Second),
 	Cap: 5,
 }
 
