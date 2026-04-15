@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 type ColorDark struct {
 	Hex        string `json:"hex"`
@@ -21,10 +21,10 @@ type ExtractedColor struct {
 }
 
 type ExtractedColorSet struct {
-	EncoreBaseSetTextColor *RGBA            `json:"encoreBaseSetTextColor"`
-	HighContrast           *ExtractedColor  `json:"highContrast"`
-	HigherContrast         *ExtractedColor  `json:"higherContrast"`
-	MinContrast            *ExtractedColor  `json:"minContrast"`
+	EncoreBaseSetTextColor *RGBA           `json:"encoreBaseSetTextColor"`
+	HighContrast           *ExtractedColor `json:"highContrast"`
+	HigherContrast         *ExtractedColor `json:"higherContrast"`
+	MinContrast            *ExtractedColor `json:"minContrast"`
 }
 
 type VisualIdentity struct {

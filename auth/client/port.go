@@ -2,6 +2,8 @@ package client
 
 import (
 	"net/http"
+
+	"resty.dev/v3"
 )
 
 type authorizedClientBuilder interface {
@@ -11,5 +13,5 @@ type authorizedClientBuilder interface {
 	BaseTransport(http.RoundTripper) authorizedClientBuilder
 
 	Transport() http.RoundTripper
-	Client() *http.Client
+	Client() *resty.Client
 }

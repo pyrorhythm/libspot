@@ -1,4 +1,6 @@
-package types
+package pfrequest
+
+import pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
 
 type BadgeOperation Operation
 
@@ -84,8 +86,8 @@ func (o Operation) graphQLHash() string {
 	panic("not implemented")
 }
 
-func (o Operation) Extension() *PersistedQuery {
-	return &PersistedQuery{
+func (o Operation) Extension() *pfd.PersistedQuery {
+	return &pfd.PersistedQuery{
 		Version:    1,
 		Sha256Hash: o.graphQLHash(),
 	}

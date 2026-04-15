@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/pyrorhythm/libspot"
+	"resty.dev/v3"
 )
 
 type transportSettings struct {
@@ -54,8 +55,10 @@ func (a *AuthorizedClient) Transport() http.RoundTripper {
 	return &transport{prov: a.prov, transportSettings: setts}
 }
 
-func (a *AuthorizedClient) Client() *http.Client {
-	return &http.Client{Transport: a.Transport()}
+func (a *AuthorizedClient) Client() *resty.Client {
+	rc := resty.New()
+	rc.SetTransport(a.Transport())
+	return rc
 }
 
 func (a *AuthorizedClient) InjectClientToken(b bool) authorizedClientBuilder {

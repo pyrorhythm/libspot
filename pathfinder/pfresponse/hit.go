@@ -1,11 +1,11 @@
-package responsetypes
+package pfresponse
 
 import (
 	"log/slog"
 
 	"github.com/pkg/errors"
 	"github.com/pyrorhythm/fn/bjs"
-	"github.com/pyrorhythm/libspot/pathfinder/domaintypes"
+	"github.com/pyrorhythm/libspot/pathfinder/pfdomain"
 	"github.com/valyala/fastjson"
 )
 
@@ -32,10 +32,10 @@ type TopResultHit struct {
 type TopResultHitOneof struct {
 	typname topResultHitOneof
 
-	searchAutoComplete *domaintypes.SearchAutoCompleteEntity
-	artist             *domaintypes.ArtistResponseWrapper
-	track              *domaintypes.TrackResponseWrapper
-	album              *domaintypes.AlbumResponseWrapper
+	searchAutoComplete *pfdomain.SearchAutoCompleteEntity
+	artist             *pfdomain.ArtistResponseWrapper
+	track              *pfdomain.TrackResponseWrapper
+	album              *pfdomain.AlbumResponseWrapper
 }
 
 func (h *TopResultHitOneof) HasSearchAutoComplete() bool {
@@ -54,19 +54,19 @@ func (h *TopResultHitOneof) HasAlbum() bool {
 	return h.typname == oneofTopResultHitCaseAlbum
 }
 
-func (h *TopResultHitOneof) GetSearchAutoComplete() *domaintypes.SearchAutoCompleteEntity {
+func (h *TopResultHitOneof) GetSearchAutoComplete() *pfdomain.SearchAutoCompleteEntity {
 	return h.searchAutoComplete
 }
 
-func (h *TopResultHitOneof) GetArtist() *domaintypes.ArtistResponseWrapper {
+func (h *TopResultHitOneof) GetArtist() *pfdomain.ArtistResponseWrapper {
 	return h.artist
 }
 
-func (h *TopResultHitOneof) GetTrack() *domaintypes.TrackResponseWrapper {
+func (h *TopResultHitOneof) GetTrack() *pfdomain.TrackResponseWrapper {
 	return h.track
 }
 
-func (h *TopResultHitOneof) GetAlbum() *domaintypes.AlbumResponseWrapper {
+func (h *TopResultHitOneof) GetAlbum() *pfdomain.AlbumResponseWrapper {
 	return h.album
 }
 
@@ -84,13 +84,13 @@ func (h *TopResultHitOneof) UnmarshalJSON(data []byte) error {
 
 	switch h.typname {
 	case oneofTopResultHitCaseAutoComplete:
-		h.searchAutoComplete, err = bjs.Unmarshal[domaintypes.SearchAutoCompleteEntity](payload)
+		h.searchAutoComplete, err = bjs.Unmarshal[pfdomain.SearchAutoCompleteEntity](payload)
 	case oneofTopResultHitCaseArtist:
-		h.artist, err = bjs.Unmarshal[domaintypes.ArtistResponseWrapper](payload)
+		h.artist, err = bjs.Unmarshal[pfdomain.ArtistResponseWrapper](payload)
 	case oneofTopResultHitCaseTrack:
-		h.track, err = bjs.Unmarshal[domaintypes.TrackResponseWrapper](payload)
+		h.track, err = bjs.Unmarshal[pfdomain.TrackResponseWrapper](payload)
 	case oneofTopResultHitCaseAlbum:
-		h.album, err = bjs.Unmarshal[domaintypes.AlbumResponseWrapper](payload)
+		h.album, err = bjs.Unmarshal[pfdomain.AlbumResponseWrapper](payload)
 	default:
 		return errors.Wrapf(ErrUnknownTypename, "typename=%q", h.typname)
 	}

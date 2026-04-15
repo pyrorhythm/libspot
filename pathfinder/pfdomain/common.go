@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 type ContentRating struct {
 	Label string `json:"label"`

@@ -1,4 +1,4 @@
-package types
+package pfrequest
 
 type SearchPayloadCommons struct {
 	NumberOfTopResults             *int  `json:"numberOfTopResults,omitempty"`

@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/pyrorhythm/libspot"
+	"resty.dev/v3"
 )
 
 type authorizedCBImpl struct {
@@ -39,6 +40,8 @@ func (a *authorizedCBImpl) Transport() http.RoundTripper {
 	return &transport{prov: a.prov, transportSettings: a.setts}
 }
 
-func (a *authorizedCBImpl) Client() *http.Client {
-	return &http.Client{Transport: a.Transport()}
+func (a *authorizedCBImpl) Client() *resty.Client {
+	rc := resty.New()
+	rc.SetTransport(a.Transport())
+	return rc
 }

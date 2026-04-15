@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 type AssociationsV3 struct {
 	AudioAssociations TotalCount `json:"audioAssociations"`

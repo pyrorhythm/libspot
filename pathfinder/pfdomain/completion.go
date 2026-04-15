@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 type SearchAutoCompleteEntity struct {
 	Text string `json:"text"`

@@ -1,4 +1,4 @@
-package types
+package pfrequest
 
 type SuggestionsPayload struct {
 	*SearchPayloadCommons

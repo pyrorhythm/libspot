@@ -16,7 +16,7 @@ import (
 	"github.com/pyrorhythm/libspot/auth/store"
 	"github.com/pyrorhythm/libspot/dealer"
 	"github.com/pyrorhythm/libspot/pathfinder"
-	"github.com/pyrorhythm/libspot/pathfinder/types"
+	"github.com/pyrorhythm/libspot/pathfinder/pfrequest"
 	"github.com/pyrorhythm/libspot/pkg/keychain"
 	"github.com/pyrorhythm/zlog"
 )
@@ -70,9 +70,9 @@ func main() {
 	//defer d.Stop()
 
 	pf := pathfinder.New(sess)
-	sugg, err := pf.QuerySuggestions(ctx, types.SuggestionsPayload{
+	sugg, err := pf.QuerySuggestions(ctx, pfrequest.SuggestionsPayload{
 		Query: "7раса",
-		SearchPayloadCommons: &types.SearchPayloadCommons{
+		SearchPayloadCommons: &pfrequest.SearchPayloadCommons{
 			Limit: new(20),
 		},
 	})
@@ -83,7 +83,7 @@ func main() {
 	bs, _ := json.MarshalIndent(sugg, "", "\t")
 	fmt.Println(string(bs))
 
-	for _, item := range sugg.Data.Results.Items {
+	for _, item := range sugg.Results.Items {
 		hit := item.Item
 		switch {
 		case hit.HasSearchAutoComplete():

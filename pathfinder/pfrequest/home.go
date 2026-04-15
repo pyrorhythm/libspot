@@ -1,4 +1,4 @@
-package types
+package pfrequest
 
 // HomePayload TODO
 type HomePayload struct {

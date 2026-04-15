@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 type ImageSource struct {
 	Height int    `json:"height"`

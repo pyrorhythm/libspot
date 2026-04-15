@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 import (
 	"encoding/json"

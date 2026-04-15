@@ -1,16 +1,18 @@
 package resolver
 
 import (
+	"context"
 	"fmt"
 	"net/url"
 	"slices"
 	"strconv"
 	"time"
 
-	"github.com/goccy/go-json"
+	"github.com/cenkalti/backoff/v5"
 	"github.com/pyrorhythm/fn"
+	"github.com/pyrorhythm/fn/bjs"
 	"github.com/pyrorhythm/libspot"
-	"github.com/valyala/fasthttp"
+	"resty.dev/v3"
 )
 
 const resolveEndpoint = "https://apresolve.spotify.com/"
@@ -22,7 +24,11 @@ type endpoints struct {
 	AccesspointEps []string `json:"accesspoint"`
 }
 
-func (e *endpoints) merge(oth endpoints) {
+func (e *endpoints) merge(oth *endpoints) {
+	if oth == nil {
+		return
+	}
+
 	if len(oth.SpclientEps) != 0 {
 		e.SpclientEps = oth.SpclientEps
 	}
@@ -61,6 +67,7 @@ func tostring(kind libspot.ServiceKind) string {
 }
 
 type fetcher struct {
+	client      *resty.Client
 	endpoints   *endpoints
 	clientToken string
 }
@@ -75,62 +82,42 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 	}
 
 	if slices.Contains(kinds, libspot.ServiceKindAccesspoint) {
-		v["time"] = []string{strconv.FormatInt(time.Now().Unix(), 10)}
+		v.Set("time", strconv.FormatInt(time.Now().Unix(), 10))
 	}
 
-	var (
-		ep         endpoints
-		err        error
-		retries    int
-		retriesCap = 5
-	)
+	req := t.client.R().
+		SetQueryParamsFromValues(v).
+		SetHeaders(map[string]string{
+			"client-token": t.clientToken,
+			"user-agent":   "Spotify/128600502 (43; 0; 2)",
+		})
 
-	urlu, _ := url.Parse(resolveEndpoint)
-	urlu.RawQuery = v.Encode()
-
-	u := fasthttp.AcquireURI()
-	_ = u.Parse(nil, []byte(resolveEndpoint))
-	u.SetQueryString(v.Encode())
-
-	req := fasthttp.AcquireRequest()
-	defer fasthttp.ReleaseRequest(req)
-
-	req.SetURI(u)
-	req.Header.SetMethod(fasthttp.MethodGet)
-	req.Header.Set("Client-Token", t.clientToken)
-	req.Header.SetUserAgent("Spotify/128600502 (43; 0; 2)")
-
-retryPoint:
-	resp := fasthttp.AcquireResponse()
-	defer fasthttp.ReleaseResponse(resp)
-	err = fasthttp.Do(req, resp)
-	if err != nil {
-		// Error is not a bad status but a transport error
-		return nil, fmt.Errorf(
-			"internal transport failure: %w",
-			err,
-		)
-	}
-
-	if resp.StatusCode() < 200 || resp.StatusCode() >= 300 {
-		if retries < retriesCap {
-			fasthttp.ReleaseResponse(resp)
-			retries++
-			goto retryPoint
+	_, err := backoff.Retry(context.Background(), func() (any, error) {
+		resp, err := req.Get(resolveEndpoint)
+		if err != nil {
+			// Error is not a bad status but a transport error
+			return nil, backoff.Permanent(fmt.Errorf("internal transport failure: %w", err))
 		}
 
-		return nil, fmt.Errorf("max retries reached: %d", retries)
-	}
+		if resp.StatusCode() < 200 || resp.StatusCode() >= 300 {
+			return nil, backoff.RetryAfter(3)
+		}
 
-	if err = json.Unmarshal(resp.Body(), &ep); err != nil {
-		return nil, fmt.Errorf("failed to unmarshal endpoints: %w", err)
-	}
+		if endp, err := bjs.Unmarshal[endpoints](resp.Bytes()); err != nil {
+			return nil, backoff.Permanent(fmt.Errorf("failed to unmarshal endpoints: %w", err))
+		} else {
+			t.endpoints.merge(endp)
+			return nil, nil
+		}
+	}, backoff.WithBackOff(backoff.NewExponentialBackOff()), backoff.WithMaxTries(5))
 
-	t.endpoints.merge(ep)
+	if err != nil {
+		return nil, err
+	}
 
 	return t.endpoints, nil
 }
 
 func New(clientToken string) libspot.EndpointResolver {
-	return &fetcher{clientToken: clientToken, endpoints: &endpoints{}}
+	return &fetcher{client: resty.New(), clientToken: clientToken, endpoints: &endpoints{}}
 }

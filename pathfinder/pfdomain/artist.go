@@ -1,4 +1,4 @@
-package domaintypes
+package pfdomain
 
 type ArtistSnippet struct {
 	URI     string                `json:"uri"`

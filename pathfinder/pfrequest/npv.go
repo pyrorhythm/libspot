@@ -1,4 +1,4 @@
-package types
+package pfrequest
 
 type QueryNpvArtistPayload struct {
 	ArtistUri string `json:"artistUri"`
