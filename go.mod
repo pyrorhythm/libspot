@@ -4,22 +4,24 @@ go 1.26.1
 
 require (
 	github.com/bytedance/sonic v1.15.0
+	github.com/cenkalti/backoff/v5 v5.0.3
 	github.com/coder/websocket v1.8.14
 	github.com/go-jose/go-jose/v4 v4.1.4
+	github.com/goccy/go-json v0.10.6
 	github.com/google/uuid v1.6.0
 	github.com/keybase/go-keychain v0.0.1
-	github.com/pyrorhythm/zlog v0.5.0
+	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
+	github.com/pkg/errors v0.9.1
+	github.com/pyrorhythm/zlog v0.8.0
+	github.com/valyala/fastjson v1.6.10
 	golang.org/x/oauth2 v0.36.0
 	google.golang.org/protobuf v1.36.11
 )
 
 require (
-	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	github.com/fatih/color v1.19.0 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect
 	github.com/mattn/go-isatty v0.0.21 // indirect
-	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 )
 
 require (
@@ -31,7 +33,7 @@ require (
 	github.com/godbus/dbus/v5 v5.2.2 // indirect
 	github.com/klauspost/compress v1.18.5 // indirect
 	github.com/klauspost/cpuid/v2 v2.3.0 // indirect
-	github.com/pyrorhythm/fn v0.6.3
+	github.com/pyrorhythm/fn v0.7.2
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.70.0

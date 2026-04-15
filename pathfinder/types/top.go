@@ -1,7 +1,5 @@
 package types
 
-const OpTopSearch Operation = "searchTopResultsList"
-
 type SectionFilter string
 
 const (

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/bytedance/sonic"
+	"github.com/goccy/go-json"
 	"github.com/pyrorhythm/fn"
 	"github.com/pyrorhythm/libspot"
 	"github.com/valyala/fasthttp"
@@ -84,11 +84,9 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 		retries    int
 		retriesCap = 5
 	)
-	
+
 	urlu, _ := url.Parse(resolveEndpoint)
 	urlu.RawQuery = v.Encode()
-	
-	
 
 	u := fasthttp.AcquireURI()
 	_ = u.Parse(nil, []byte(resolveEndpoint))
@@ -124,7 +122,7 @@ retryPoint:
 		return nil, fmt.Errorf("max retries reached: %d", retries)
 	}
 
-	if err := sonic.Unmarshal(resp.Body(), &ep); err != nil {
+	if err = json.Unmarshal(resp.Body(), &ep); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal endpoints: %w", err)
 	}
 

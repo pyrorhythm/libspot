@@ -16,10 +16,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bytedance/sonic"
 	"github.com/go-jose/go-jose/v4"
 	"github.com/go-jose/go-jose/v4/jwt"
 	"github.com/google/uuid"
+	"github.com/valyala/fastjson"
 )
 
 type (
@@ -114,13 +114,7 @@ func parseUseDPoPNonceBody(resp *http.Response) bool {
 		return false
 	}
 
-	if nod, err := sonic.Get(bodyBytes, "error"); err != nil {
-		return false
-	} else if jserr, err := nod.String(); err != nil {
-		return false
-	} else {
-		return jserr == "use_dpop_nonce"
-	}
+	return fastjson.GetString(bodyBytes, "error") == "use_dpop_nonce"
 }
 
 func parseDPoPNonceHeader(resp *http.Response) (string, bool) {

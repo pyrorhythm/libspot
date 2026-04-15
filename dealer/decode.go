@@ -4,13 +4,15 @@ import (
 	"bytes"
 	"compress/gzip"
 	"encoding/base64"
-	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"strings"
 
-	"github.com/bytedance/sonic"
+	"github.com/goccy/go-json"
+	"github.com/pkg/errors"
+	"github.com/valyala/fastjson"
+
+	"github.com/pyrorhythm/fn/bjs"
 	"github.com/pyrorhythm/libspot/dealer/types"
 	"google.golang.org/protobuf/proto"
 )
@@ -28,9 +30,7 @@ var (
 const connectionIDURIPrefix = "hm://pusher/v1/connections/"
 
 // DecodePB is the standard TypedDecoder for payloads carrying a base64
-// (optionally gzip-wrapped) protobuf in payloads[0]. Exported so user
-// packages can compose their own Topic[T] without reimplementing the wire
-// unwrap logic.
+// (optionally gzip-wrapped) protobuf in payloads[0].
 func DecodePB[T proto.Message](m *types.Message) (T, error) {
 	var zero T
 	if len(m.Payloads) == 0 {
@@ -123,30 +123,15 @@ func decodeDeviceBroadcastStatus(m *types.Message) (*types.DeviceBroadcastStatus
 	if len(m.Payloads) == 0 {
 		return nil, ErrNoPayload
 	}
-	node, err := sonic.Get(m.Payloads[0])
+	val, err := fastjson.ParseBytes(m.Payloads[0])
 	if err != nil {
-		return nil, fmt.Errorf("sonic get: %w", err)
+		return nil, errors.Wrap(err, "parse json object")
 	}
-	keymap, err := node.Map()
-	if err != nil {
-		return nil, fmt.Errorf("sonic map: %w", err)
+
+	bytes := val.Get("deviceBroadcastStatus").GetStringBytes()
+	if bytes == nil {
+		return nil, errors.New("decodeDeviceBroadcastStatus: no valid key")
 	}
-	if len(keymap) != 1 {
-		return nil, fmt.Errorf("dealer: expected 1 discriminant key, got %d", len(keymap))
-	}
-	for k := range keymap {
-		if k != "deviceBroadcastStatus" {
-			return nil, fmt.Errorf("%w: %s", ErrUnknownDiscriminant, k)
-		}
-	}
-	sub := node.Get("deviceBroadcastStatus")
-	buf, err := sub.Raw()
-	if err != nil {
-		return nil, err
-	}
-	var v types.DeviceBroadcastStatus
-	if err := json.Unmarshal([]byte(buf), &v); err != nil {
-		return nil, err
-	}
-	return &v, nil
+
+	return bjs.Unmarshal[types.DeviceBroadcastStatus](bytes)
 }

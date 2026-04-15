@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/bytedance/sonic"
+	"github.com/goccy/go-json"
 	"github.com/keybase/go-keychain"
 )
 
@@ -34,14 +34,14 @@ func (k *keybaseKeychainer[T]) Load(invalidate bool) (*T, error) {
 	}
 
 	k.cached = new(T)
-	if err := sonic.Unmarshal(data, k.cached); err != nil {
+	if err := json.Unmarshal(data, k.cached); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal object %T: %w", *new(T), err)
 	}
 	return k.cached, nil
 }
 
 func (k *keybaseKeychainer[T]) Save(item *T) error {
-	data, err := sonic.Marshal(item)
+	data, err := json.Marshal(item)
 	if err != nil {
 		return fmt.Errorf("failed to marshal: %w", err)
 	}

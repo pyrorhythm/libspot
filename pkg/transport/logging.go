@@ -23,6 +23,7 @@ func (s *LoggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 
 	slog.Debug("request",
 		"id", id.String(),
+		"headers", r.Header,
 		"dest", r.URL.String(),
 		"body", string(body),
 	)

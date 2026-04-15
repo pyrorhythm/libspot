@@ -1,15 +1,14 @@
 package types
 
-type Operation string
-
 type SearchPayloadCommons struct {
-	NumberOfTopResults            *int  `json:"numberOfTopResults,omitempty"`
-	Offset                        *int  `json:"offset,omitempty"`
-	Limit                         *int  `json:"limit,omitempty"`
-	IncludePreReleases            *bool `json:"includePreReleases,omitempty"`
-	IncludeArtistHasConcertsField *bool `json:"includeArtistHasConcertsField,omitempty"`
-	IncludeAudiobooks             *bool `json:"includeAudiobooks,omitempty"`
-	IncludeAuthors                *bool `json:"includeAuthors,omitempty"`
+	NumberOfTopResults             *int  `json:"numberOfTopResults,omitempty"`
+	Offset                         *int  `json:"offset,omitempty"`
+	Limit                          *int  `json:"limit,omitempty"`
+	IncludePreReleases             *bool `json:"includePreReleases,omitempty"`
+	IncludeArtistHasConcertsField  *bool `json:"includeArtistHasConcertsField,omitempty"`
+	IncludeAudiobooks              *bool `json:"includeAudiobooks,omitempty"`
+	IncludeAuthors                 *bool `json:"includeAuthors,omitempty"`
+	IncludeEpisodeContentRatingsV2 *bool `json:"includeEpisodeContentRatingsV2,omitempty"`
 }
 
 type SearchCommonsOption func(*SearchPayloadCommons)

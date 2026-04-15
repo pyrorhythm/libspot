@@ -1,11 +1,5 @@
 package types
 
-const (
-	OpSuggestions          Operation = "searchSuggestions"
-	OpFeedBaselineLookup   Operation = "feedBaselineLookup"
-	OpFetchExtractedColors Operation = "fetchExtractedColors"
-)
-
 type SuggestionsPayload struct {
 	*SearchPayloadCommons
 

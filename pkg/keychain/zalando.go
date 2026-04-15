@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/bytedance/sonic"
+	"github.com/goccy/go-json"
 	"github.com/pyrorhythm/fn/errs"
 	"github.com/zalando/go-keyring"
 )
@@ -44,14 +44,14 @@ func (z *zalandoKeychainer[T]) Load(invalidate bool) (*T, error) {
 	}
 
 	z.cached = new(T)
-	if err := sonic.Unmarshal(b, z.cached); err != nil {
+	if err := json.Unmarshal(b, z.cached); err != nil {
 		return nil, fmt.Errorf("failed to unmarshal: %w", err)
 	}
 	return z.cached, nil
 }
 
 func (z *zalandoKeychainer[T]) Save(item *T) error {
-	b, err := sonic.Marshal(item)
+	b, err := json.Marshal(item)
 	if err != nil {
 		return fmt.Errorf("failed to marshal: %w", err)
 	}

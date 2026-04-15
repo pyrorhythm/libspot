@@ -1,16 +1,16 @@
 package main
 
 import (
-	"bytes"
 	"context"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"log/slog"
+	"os"
 	"os/signal"
 	"syscall"
 
 	"github.com/pkg/browser"
+	"github.com/pkg/errors"
 	"github.com/pyrorhythm/libspot/auth/server"
 	"github.com/pyrorhythm/libspot/auth/session"
 	"github.com/pyrorhythm/libspot/auth/store"
@@ -25,7 +25,13 @@ func main() {
 	ctx, cl := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cl()
 
-	logger := zlog.New(zlog.LevelTrace)
+	logger := zlog.New(zlog.Options{
+		Sinks: []zlog.Sink{{
+			Writer: os.Stdout,
+			Level:  zlog.LevelTrace,
+			Style:  zlog.DefaultStyle,
+		}},
+	})
 
 	slog.SetDefault(logger)
 
@@ -67,18 +73,32 @@ func main() {
 	sugg, err := pf.QuerySuggestions(ctx, types.SuggestionsPayload{
 		Query: "7раса",
 		SearchPayloadCommons: &types.SearchPayloadCommons{
-			NumberOfTopResults: new(20),
-			Limit:              new(20),
+			Limit: new(20),
 		},
 	})
 	if err != nil {
 		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
 	}
 
-	idsugg := new(bytes.Buffer)
-	_ = json.Indent(idsugg, sugg, "", "    ")
+	bs, _ := json.MarshalIndent(sugg, "", "\t")
+	fmt.Println(string(bs))
 
-	fmt.Printf("suggestions: %s\n", idsugg.String())
+	for _, item := range sugg.Data.Results.Items {
+		hit := item.Item
+		switch {
+		case hit.HasSearchAutoComplete():
+			fmt.Printf("autocomplete: %+v\n", hit.GetSearchAutoComplete())
+		case hit.HasArtist():
+			artist := hit.GetArtist()
+			fmt.Printf("artist: %+v (%s)\n", artist, artist.URI)
+		case hit.HasTrack():
+			track := hit.GetTrack()
+			fmt.Printf("track: %s — %+vms\n", track.Name, track)
+		case hit.HasAlbum():
+			album := hit.GetAlbum()
+			fmt.Printf("album: %s (%+v)\n", album.Name, album)
+		}
+	}
 }
 
 func startDealer(ctx context.Context, sess session.Session) (*dealer.Dealer, error) {

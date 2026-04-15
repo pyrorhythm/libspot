@@ -1,7 +1,5 @@
 package types
 
-const OpQueryNpvArtist Operation = "queryNpvArtist"
-
 type QueryNpvArtistPayload struct {
 	ArtistUri string `json:"artistUri"`
 	TrackUri  string `json:"trackUri"`
@@ -22,7 +20,7 @@ func WithContributorsLimit(limit int) QueryNpvArtistOption {
 
 func WithContributorsOffset(offset int) QueryNpvArtistOption {
 	return func(p *QueryNpvArtistPayload) {
-		p.ContributorsLimit = &offset
+		p.ContributorsOffset = &offset
 	}
 }
 

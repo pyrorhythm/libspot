@@ -1,7 +1,5 @@
 package types
 
-const OPHome Operation = "home"
-
 // HomePayload TODO
 type HomePayload struct {
 	HomeEndUserIntegration string `json:"homeEndUserIntegration"`

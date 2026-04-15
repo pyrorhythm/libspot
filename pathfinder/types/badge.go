@@ -2,29 +2,6 @@ package types
 
 import "fmt"
 
-type BadgeOperation Operation
-
-const (
-	BOTracks    BadgeOperation = "searchTracks"
-	BOAlbums    BadgeOperation = "searchAlbums"
-	BOArtists   BadgeOperation = "searchArtists"
-	BOPlaylists BadgeOperation = "searchPlaylists"
-	BOProfiles  BadgeOperation = "searchProfiles"
-)
-
-func (b BadgeOperation) String() string {
-	return string(b)
-}
-
-func (b BadgeOperation) Valid() bool {
-	switch b {
-	case BOTracks, BOAlbums, BOArtists, BOPlaylists, BOProfiles:
-		return true
-	}
-
-	return false
-}
-
 type BadgeSearchPayload struct {
 	*SearchPayloadCommons
 
@@ -33,7 +10,7 @@ type BadgeSearchPayload struct {
 }
 
 func (b BadgeSearchPayload) OperationType() (Operation, error) {
-	if !b.Kind.Valid() {
+	if b.Kind.Valid() {
 		return Operation(b.Kind), nil
 	}
 
