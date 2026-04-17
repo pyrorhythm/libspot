@@ -98,7 +98,6 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 		t.endpoints.merge(endp)
 		return nil, nil
 	}, backoff.WithBackOff(backoff.NewExponentialBackOff()), backoff.WithMaxTries(5))
-
 	if err != nil {
 		return nil, err
 	}

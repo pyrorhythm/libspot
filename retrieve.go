@@ -25,10 +25,9 @@ func RetrieveClientToken(deviceId string) (string, error) {
 
 	resp, err := resty.New().R().
 		SetHeaderMultiValues(map[string][]string{
-			"Accept":     []string{"application/x-protobuf"},
-			"User-Agent": []string{fmt.Sprintf("libspot/0.0.0 Go/%s", runtime.Version())},
+			"Accept":     {"application/x-protobuf"},
+			"User-Agent": {fmt.Sprintf("libspot/0.0.0 Go/%s", runtime.Version())},
 		}).SetBody(body).Post(ctUrl)
-
 	if err != nil {
 		return "", fmt.Errorf("failed requesting clienttoken: %w", err)
 	}
@@ -56,7 +55,6 @@ func RetrieveClientToken(deviceId string) (string, error) {
 	default:
 		return "", fmt.Errorf("unknown clienttoken response type: %v", protoResp.GetResponseType())
 	}
-
 }
 
 func clientTokenRequest(deviceID string) *httpv0.ClientTokenRequest {

@@ -1,25 +1,20 @@
-package pathfinder
+package spc
 
 import (
 	"context"
 	"fmt"
 
 	"github.com/cenkalti/backoff/v5"
+	"github.com/goccy/go-json"
+	"github.com/pkg/errors"
 	"github.com/pyrorhythm/libspot"
-	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
-	pfs "github.com/pyrorhythm/libspot/pathfinder/pfresponse"
 	"resty.dev/v3"
 )
 
-func (p *Pathfinder) makeRequest(
+func makeRequest[to any](
 	ctx context.Context,
-	rq pfq.Request,
-) (*pfs.Response, error) {
-	body, err := marshal(rq)
-	if err != nil {
-		return nil, err
-	}
-
+	rq *resty.Request,
+) (*to, error) {
 	headers := map[string]string{
 		"App-Platform": libspot.AppPlatform().String(),
 		"User-Agent":   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.246 Spotify/1.2.87.414 Safari/537.36",
@@ -28,13 +23,11 @@ func (p *Pathfinder) makeRequest(
 		"Content-Type": "application/json;charset=UTF-8",
 	}
 
+	rq = rq.SetHeaders(headers)
+
 	resp, err := backoff.Retry(
 		ctx, func() (*resty.Response, error) {
-			resp, err := p.client.R().
-				SetContext(ctx).
-				SetHeaders(headers).
-				SetBody(body).
-				Post(reqUrl)
+			resp, err := rq.Send()
 			if err != nil {
 				return nil, backoff.Permanent(err)
 			}
@@ -57,10 +50,11 @@ func (p *Pathfinder) makeRequest(
 		return nil, err
 	}
 
-	pl, err := unmarshal(resp.Bytes())
-	if err != nil {
-		return nil, err
+	var res to
+
+	if err = json.Unmarshal(resp.Bytes(), &res); err != nil {
+		return nil, errors.Wrapf(err, "failed to unmarshal response")
 	}
 
-	return pl.Get(), nil
+	return &res, nil
 }

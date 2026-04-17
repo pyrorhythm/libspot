@@ -36,7 +36,7 @@ func (b *BadgeSearchRequest) WithCommons(o CommonsOpts) *BadgeSearchRequest {
 }
 
 type BadgeRequestOpts struct {
-    SearchCommonsRequest
+	SearchCommonsRequest
 
 	SearchTerm string
 }

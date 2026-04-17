@@ -46,4 +46,3 @@ func (p PagingInfo) GetLimit() int {
 func (p PagingInfo) GetNextOffset() int {
 	return p.NextOffset
 }
-

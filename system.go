@@ -39,7 +39,12 @@ const (
 
 func (a AppPlatformEnum) String() string {
 	switch a {
-	case AppPlatformLinux, AppPlatformOSX, AppPlatformOSXArm, AppPlatformWin32, AppPlatformWin32X86, AppPlatformWin32Arm:
+	case AppPlatformLinux,
+		AppPlatformOSX,
+		AppPlatformOSXArm,
+		AppPlatformWin32,
+		AppPlatformWin32X86,
+		AppPlatformWin32Arm:
 		return string(a)
 	default:
 		return string(AppPlatformUnknown)

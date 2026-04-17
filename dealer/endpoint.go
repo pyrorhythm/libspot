@@ -57,7 +57,7 @@ func (d *Dealer) tryEndpointWithRetry(ctx context.Context, endpoint string) (*ws
 		if err == nil {
 			return wsConn, nil
 		}
-		
+
 		select {
 		case <-ctx.Done():
 			return nil, ctx.Err()

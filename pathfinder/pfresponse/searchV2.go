@@ -24,64 +24,71 @@ type SearchV2 struct {
 
 func (s *SearchV2) ToAlbums() *SearchV2Albums {
 	return &SearchV2Albums{
-		Albums: s.Albums,
-		Query:  s.Query,
+		Items: s.Albums,
+		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToArtists() *SearchV2Artists {
 	return &SearchV2Artists{
-		Artists: s.Artists,
-		Query:   s.Query,
+		Items: s.Artists,
+		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToGenres() *SearchV2Genres {
 	return &SearchV2Genres{
-		Genres: s.Genres,
-		Query:  s.Query,
+		Items: s.Genres,
+		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToPlaylists() *SearchV2Playlists {
 	return &SearchV2Playlists{
-		Playlists: s.Playlists,
-		Query:     s.Query,
+		Items: s.Playlists,
+		Query: s.Query,
+	}
+}
+
+func (s *SearchV2) ToEpisodes() *SearchV2Episodes {
+	return &SearchV2Episodes{
+		Items: s.Episodes,
+		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToPodcasts() *SearchV2Podcasts {
 	return &SearchV2Podcasts{
-		Podcasts: s.Podcasts,
-		Query:    s.Query,
+		Items: s.Podcasts,
+		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToTracks() *SearchV2Tracks {
 	return &SearchV2Tracks{
-		Tracks: s.Tracks,
-		Query:  s.Query,
+		Items: s.Tracks,
+		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToUsers() *SearchV2Users {
 	return &SearchV2Users{
-		Users: s.Users,
+		Items: s.Users,
 		Query: s.Query,
 	}
 }
 
 func (s *SearchV2) ToSuggestions() *SearchV2Suggestions {
 	return &SearchV2Suggestions{
-		TopResults: s.TopResults,
-		Query:      s.Query,
+		ItemsV2: s.TopResults,
+		Query:   s.Query,
 	}
 }
 
 func (s *SearchV2) ToTop() *SearchV2Top {
 	return &SearchV2Top{
-		TopResults: s.TopResults,
-		Query:      s.Query,
-		ChipOrder:  s.ChipOrder,
+		ItemsV2:   s.TopResults,
+		Query:     s.Query,
+		ChipOrder: s.ChipOrder,
 	}
 }

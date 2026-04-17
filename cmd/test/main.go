@@ -39,7 +39,8 @@ func main() {
 	sess := session.New(
 		session.RedirectPort(redirectPort),
 		session.GracefulContext(ctx),
-		session.Keychainer(store.Zalando))
+		session.Keychainer(store.Zalando),
+	)
 	err := sess.Load()
 	if err != nil && errors.Is(err, keychain.ErrItemNotFound) {
 		srvctx, cancel := context.WithCancel(ctx)
