@@ -1,26 +1,29 @@
 package pfrequest
 
-import "fmt"
-
-type BadgeSearchPayload struct {
-	*SearchPayloadCommons
+type BadgeSearchRequest struct {
+	SearchCommonsRequest
 
 	Kind       BadgeOperation `json:"-"`
 	SearchTerm string         `json:"searchTerm"`
 }
 
-func (b BadgeSearchPayload) OperationType() (Operation, error) {
-	if b.Kind.Valid() {
-		return Operation(b.Kind), nil
-	}
-
-	return "", fmt.Errorf("invalid badge search operation kind: %v", b.Kind)
+func (b BadgeSearchRequest) Op() Operation {
+	return Operation(b.Kind)
 }
 
-type BadgeSearchOption func(*BadgeSearchPayload)
-
-func WithKind(kind BadgeOperation) BadgeSearchOption {
-	return func(p *BadgeSearchPayload) {
-		p.Kind = kind
+func BadgeSearch(kind BadgeOperation) *BadgeSearchRequest {
+	return &BadgeSearchRequest{
+		SearchCommonsRequest: defaultSearchCommons(),
+		Kind:                 kind,
 	}
+}
+
+func (b *BadgeSearchRequest) WithTerm(t string) *BadgeSearchRequest {
+	b.SearchTerm = t
+	return b
+}
+
+func (b *BadgeSearchRequest) WithCommons(o CommonsOpts) *BadgeSearchRequest {
+	b.SearchCommonsRequest.merge(o)
+	return b
 }

@@ -7,6 +7,12 @@ import (
 	"github.com/valyala/fastjson"
 )
 
+type MediaType string
+
+const (
+	MediaTypeAudio MediaType = "AUDIO"
+)
+
 type PlayabilityReason string
 
 const (
@@ -23,6 +29,31 @@ type AlbumResponseType string
 
 const AlbumResponseTypeAlbum AlbumResponseType = "ALBUM"
 
+type ContentRatingEnum string
+
+const (
+	ContentRatingNone     ContentRatingEnum = "NONE"
+	ContentRatingExplicit ContentRatingEnum = "EXPLICIT"
+)
+
+type ImageV2Type string
+
+const (
+	ImageV2TypeUrl ImageV2Type = "IMAGE_URL"
+)
+
+type VideoType string
+
+const (
+	VideoTypeUrl VideoType = "URL"
+)
+
+type ImageFormat string
+
+const (
+	ImageFormatJpeg ImageFormat = "JPEG"
+)
+
 type Chip string
 
 func (c *Chip) UnmarshalJSON(bytes []byte) error {
@@ -31,7 +62,7 @@ func (c *Chip) UnmarshalJSON(bytes []byte) error {
 		return errors.Wrap(err, "failed to parse chip")
 	}
 
-	chipVal := v.Get("typeName").MarshalTo(nil)
+	chipVal := v.Get("typeName").GetStringBytes()
 	switch Chip(chipVal) {
 	case ChipAlbums, ChipArtists,
 		ChipAudiobooks, ChipAuthors,
@@ -74,4 +105,11 @@ const (
 	ChipAudiobooks Chip = "AUDIOBOOKS"
 	ChipAuthors    Chip = "AUTHORS"
 	ChipGenres     Chip = "GENRES"
+)
+
+type SectionFilter string
+
+const (
+	SectionFilterGeneric      SectionFilter = "GENERIC"
+	SectionFilterVideoContent SectionFilter = "VIDEO_CONTENT"
 )

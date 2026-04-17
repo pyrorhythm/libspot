@@ -1,8 +1,14 @@
 package pfdomain
 
-type ColorDark struct {
+type Color struct {
 	Hex        string `json:"hex"`
 	IsFallback bool   `json:"isFallback"`
+}
+
+type ExtractedColor struct {
+	ColorDark  *Color `json:"colorDark,omitempty"`
+	ColorLight *Color `json:"colorLight,omitempty"`
+	ColorRaw   *Color `json:"colorRaw,omitempty"`
 }
 
 type RGBA struct {
@@ -12,7 +18,7 @@ type RGBA struct {
 	Alpha int `json:"alpha"`
 }
 
-type ExtractedColor struct {
+type ExtractedColorExtended struct {
 	BackgroundBase       RGBA `json:"backgroundBase"`
 	BackgroundTintedBase RGBA `json:"backgroundTintedBase"`
 	TextBase             RGBA `json:"textBase"`
@@ -21,13 +27,15 @@ type ExtractedColor struct {
 }
 
 type ExtractedColorSet struct {
-	EncoreBaseSetTextColor *RGBA           `json:"encoreBaseSetTextColor"`
-	HighContrast           *ExtractedColor `json:"highContrast"`
-	HigherContrast         *ExtractedColor `json:"higherContrast"`
-	MinContrast            *ExtractedColor `json:"minContrast"`
+	EncoreBaseSetTextColor *RGBA                   `json:"encoreBaseSetTextColor"`
+	HighContrast           *ExtractedColorExtended `json:"highContrast"`
+	HigherContrast         *ExtractedColorExtended `json:"higherContrast"`
+	MinContrast            *ExtractedColorExtended `json:"minContrast"`
 }
 
-type VisualIdentity struct {
-	SixteenByNineCoverImage *VisualIdentityImage `json:"sixteenByNineCoverImage"`
-	SquareCoverImage        *VisualIdentityImage `json:"squareCoverImage"`
+type DynamicColorSet struct {
+	Status  string             `json:"status"` // "OK" or ....
+	BestFit string             `json:"bestFit"`
+	Dark    *ExtractedColorSet `json:"dark"`
+	Light   *ExtractedColorSet `json:"light"`
 }

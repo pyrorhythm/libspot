@@ -8,6 +8,7 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/pyrorhythm/fn"
 	"github.com/pyrorhythm/libspot"
 	"github.com/pyrorhythm/libspot/auth/session"
 	"github.com/pyrorhythm/libspot/dealer/types"
@@ -54,14 +55,16 @@ var commonDelayCfg = &DelayConfig{
 	Cap: 5,
 }
 
-func applyDefaults(dealer *Dealer) {
-	dealer.endpoint = commonDelayCfg
-	dealer.global = commonDelayCfg
+func applyDefaults(d *Dealer) *Dealer {
+	d.endpoint = commonDelayCfg
+	d.global = commonDelayCfg
 
-	dealer.intervalSec = 10 * time.Second
-	dealer.timeout = 30 * time.Second
+	d.intervalSec = 10 * time.Second
+	d.timeout = 30 * time.Second
 
-	dealer.onConnectionShutdown = func(error) {}
+	d.onConnectionShutdown = func(error) {}
+
+	return d
 }
 
 func coverNils(dealer *Dealer) {
@@ -98,7 +101,25 @@ func New(
 		router: newRouter(),
 	}
 
-	applyOptions(d, opts)
+	d = fn.Apply(applyDefaults(d), opts...)
+
+	if d.endpoint == nil && d.global == nil {
+		d.endpoint = commonDelayCfg
+		d.global = commonDelayCfg
+	} else if d.endpoint == nil {
+		d.endpoint = d.global
+	} else if d.global == nil {
+		d.global = commonDelayCfg
+	}
+	if d.intervalSec <= 0 {
+		d.intervalSec = 10 * time.Second
+	}
+	if d.timeout <= 0 {
+		d.timeout = 30 * time.Second
+	}
+	if d.onConnectionShutdown == nil {
+		d.onConnectionShutdown = func(error) {}
+	}
 
 	return d
 }
@@ -111,26 +132,7 @@ func NewFromSession(
 	if err != nil {
 		return nil, fmt.Errorf("failed to get resolver from session: %w", err)
 	}
-
-	d := &Dealer{
-		prov:   sess,
-		rslv:   rslv,
-		router: newRouter(),
-	}
-
-	applyOptions(d, opts)
-
-	return d, nil
-}
-
-func applyOptions(d *Dealer, opts []Option) {
-	applyDefaults(d)
-
-	for _, opt := range opts {
-		opt(d)
-	}
-
-	coverNils(d)
+	return New(sess, rslv, opts...), nil
 }
 
 func (d *Dealer) OnMsg(uri string, cb func(*types.Message)) (unsubscribe func()) {

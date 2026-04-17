@@ -10,28 +10,30 @@ type QueryNpvArtistPayload struct {
 	EnableRelatedAudioTracks *bool `json:"enableRelatedAudioTracks,omitempty"`
 }
 
-type QueryNpvArtistOption func(*QueryNpvArtistPayload)
-
-func WithContributorsLimit(limit int) QueryNpvArtistOption {
-	return func(p *QueryNpvArtistPayload) {
-		p.ContributorsLimit = &limit
-	}
+func (QueryNpvArtistPayload) Op() Operation {
+	return OpQueryNpvArtist
 }
 
-func WithContributorsOffset(offset int) QueryNpvArtistOption {
-	return func(p *QueryNpvArtistPayload) {
-		p.ContributorsOffset = &offset
-	}
+func QueryNpvArtist(artistUri, trackUri string) *QueryNpvArtistPayload {
+	return &QueryNpvArtistPayload{ArtistUri: artistUri, TrackUri: trackUri}
 }
 
-func WithEnableRelatedVideos(enableRelatedVideos bool) QueryNpvArtistOption {
-	return func(p *QueryNpvArtistPayload) {
-		p.EnableRelatedVideos = &enableRelatedVideos
-	}
+func (o *QueryNpvArtistPayload) WithContributorsLimit(n int) *QueryNpvArtistPayload {
+	o.ContributorsLimit = &n
+	return o
 }
 
-func WithEnableRelatedAudioTracks(enableRelatedAudio bool) QueryNpvArtistOption {
-	return func(p *QueryNpvArtistPayload) {
-		p.EnableRelatedAudioTracks = &enableRelatedAudio
-	}
+func (o *QueryNpvArtistPayload) WithContributorsOffset(n int) *QueryNpvArtistPayload {
+	o.ContributorsOffset = &n
+	return o
+}
+
+func (o *QueryNpvArtistPayload) WithRelatedVideos(v bool) *QueryNpvArtistPayload {
+	o.EnableRelatedVideos = &v
+	return o
+}
+
+func (o *QueryNpvArtistPayload) WithRelatedAudioTracks(v bool) *QueryNpvArtistPayload {
+	o.EnableRelatedAudioTracks = &v
+	return o
 }

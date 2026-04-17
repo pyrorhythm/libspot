@@ -145,7 +145,7 @@ func (t *Transport) createProof(ctx context.Context, req *http.Request) (string,
 
 	signer, err := jose.NewSigner(
 		jose.SigningKey{Algorithm: jose.ES256, Key: t.Key},
-		(&jose.SignerOptions{}).WithType("dpop+jwt").WithHeader("jwk", pub),
+		new(jose.SignerOptions).WithType("dpop+jwt").WithHeader("jwk", pub),
 	)
 	if err != nil {
 		return "", fmt.Errorf("dpop: create signer: %w", err)

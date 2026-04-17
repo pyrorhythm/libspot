@@ -16,7 +16,7 @@ import (
 	"github.com/pyrorhythm/libspot/auth/store"
 	"github.com/pyrorhythm/libspot/dealer"
 	"github.com/pyrorhythm/libspot/pathfinder"
-	"github.com/pyrorhythm/libspot/pathfinder/pfrequest"
+	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
 	"github.com/pyrorhythm/libspot/pkg/keychain"
 	"github.com/pyrorhythm/zlog"
 )
@@ -63,19 +63,17 @@ func main() {
 
 	fmt.Printf("access token: %s\n", at)
 
-	//d, err := startDealer(ctx, sess)
-	//if err != nil {
-	//	panic(err)
-	//}
-	//defer d.Stop()
+	d, err := startDealer(ctx, sess)
+	if err != nil {
+		panic(err)
+	}
+	defer d.Stop()
 
 	pf := pathfinder.New(sess)
-	sugg, err := pf.QuerySuggestions(ctx, pfrequest.SuggestionsPayload{
-		Query: "7раса",
-		SearchPayloadCommons: &pfrequest.SearchPayloadCommons{
-			Limit: new(20),
-		},
-	})
+	sugg, err := pf.Query(ctx,
+		pfq.Suggestions().
+			WithQuery("neonate").
+			WithCommons(pfq.Commons().WithLimit(1).WithTopResults(1)))
 	if err != nil {
 		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
 	}
@@ -83,22 +81,18 @@ func main() {
 	bs, _ := json.MarshalIndent(sugg, "", "\t")
 	fmt.Println(string(bs))
 
-	for _, item := range sugg.Results.Items {
-		hit := item.Item
-		switch {
-		case hit.HasSearchAutoComplete():
-			fmt.Printf("autocomplete: %+v\n", hit.GetSearchAutoComplete())
-		case hit.HasArtist():
-			artist := hit.GetArtist()
-			fmt.Printf("artist: %+v (%s)\n", artist, artist.URI)
-		case hit.HasTrack():
-			track := hit.GetTrack()
-			fmt.Printf("track: %s — %+vms\n", track.Name, track)
-		case hit.HasAlbum():
-			album := hit.GetAlbum()
-			fmt.Printf("album: %s (%+v)\n", album.Name, album)
-		}
+	top, err := pf.Query(ctx,
+		pfq.Top().
+			WithQuery("neonate").
+			WithCommons(pfq.Commons().WithLimit(1).WithTopResults(1)))
+	if err != nil {
+		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
 	}
+
+	bs, _ = json.MarshalIndent(top, "", "\t")
+	fmt.Println(string(bs))
+
+	<-ctx.Done()
 }
 
 func startDealer(ctx context.Context, sess session.Session) (*dealer.Dealer, error) {

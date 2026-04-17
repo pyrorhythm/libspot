@@ -1,6 +1,6 @@
 package pfdomain
 
-type SearchAutoCompleteEntity struct {
+type SearchCompletion struct {
 	Text string `json:"text"`
 	URI  string `json:"uri"`
 }

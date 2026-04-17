@@ -1,18 +1,46 @@
 package pfdomain
 
-type ContentRating struct {
-	Label string `json:"label"`
+type Data[T any] struct {
+	Data *T `json:"data"`
 }
 
-type Duration struct {
-	TotalMilliseconds int `json:"totalMilliseconds"`
+func (d Data[T]) Get() *T {
+	return d.Data
 }
 
-type Playability struct {
-	Playable bool              `json:"playable"`
-	Reason   PlayabilityReason `json:"reason"`
+type Item[T any] struct {
+	Item *T `json:"item"`
 }
 
-type DateSnippet struct {
-	Year int `json:"year"`
+func (d Item[T]) Get() *T {
+	return d.Item
+}
+
+type ItemList[T any] struct {
+	Items []*T `json:"items"`
+}
+
+type ItemCountList[T any] struct {
+	ItemList[T]
+	TotalCount
+}
+
+func (i ItemList[T]) Get() []*T {
+	return i.Items
+}
+
+type ItemV2List[T any] struct {
+	Items []*T `json:"itemsV2"`
+}
+
+func (i ItemV2List[T]) Get() []*T {
+	return i.Items
+}
+
+type TotalCount struct {
+	TotalCount int `json:"totalCount"`
+}
+
+func (c TotalCount) Count() int {
+	return c.TotalCount
 }

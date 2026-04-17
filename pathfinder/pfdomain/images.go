@@ -6,11 +6,37 @@ type ImageSource struct {
 	Width  int    `json:"width"`
 }
 
-type Image struct {
-	ExtractedColors ExtractedColors `json:"extractedColors"`
-	Sources         []*ImageSource  `json:"sources"`
+type ImageRaw struct {
+	Sources []*ImageSource `json:"sources"`
 }
 
-type ExtractedColors struct {
-	ColorDark ColorDark `json:"colorDark"`
+type ImageRawWithFormat struct {
+	ImageRaw
+
+	Format ImageFormat `json:"imageFormat"`
+}
+
+type Image struct {
+	ImageRaw
+
+	ExtractedColors *ExtractedColor `json:"extractedColors"`
+}
+
+type ThumbnailImage struct {
+	ImageID     string               `json:"imageId"`
+	ImageIDType ImageV2Type          `json:"imageIdType"`
+	Sources     []ImageRawWithFormat `json:"sources"`
+}
+
+type AvatarImage struct {
+	AvatarImage *Image `json:"avatarImage"`
+}
+
+type VisualIdentity struct {
+	SixteenByNineCoverImage *VisualIdentityImage `json:"sixteenByNineCoverImage"`
+	SquareCoverImage        *VisualIdentityImage `json:"squareCoverImage"`
+}
+
+type VisualIdentityImage struct {
+	ExtractedColorSet *ExtractedColorSet `json:"extractedColorSet"`
 }

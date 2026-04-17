@@ -1,24 +1,38 @@
 package pfrequest
 
-type SectionFilter string
-
-const (
-	SFGeneric      SectionFilter = "GENERIC"
-	SFVideoContent SectionFilter = "VIDEO_CONTENT"
+import (
+	"github.com/pyrorhythm/libspot/pathfinder/pfdomain"
 )
 
-type TopSearchPayload struct {
-	*SearchPayloadCommons
+type SearchTopRequest struct {
+	SearchSuggestionsRequest
 
-	Query          string          `json:"query"`
-	SectionFilters []SectionFilter `json:"sectionFilters,omitempty"`
-	// TODO: provide an enum
+	SectionFilters []pfdomain.SectionFilter `json:"sectionFilters,omitempty"`
 }
 
-type TopSearchOption func(payload *TopSearchPayload)
+func (SearchTopRequest) Op() Operation {
+	return OpSearchTop
+}
 
-func WithSectionFilters(filters ...SectionFilter) TopSearchOption {
-	return func(payload *TopSearchPayload) {
-		payload.SectionFilters = filters
+func Top() *SearchTopRequest {
+	return &SearchTopRequest{
+		SearchSuggestionsRequest: *Suggestions(),
 	}
+}
+
+func (st *SearchTopRequest) WithQuery(q string) *SearchTopRequest {
+	st.Query = q
+	return st
+}
+
+func (st *SearchTopRequest) WithCommons(o CommonsOpts) *SearchTopRequest {
+	st.merge(o)
+	return st
+}
+
+func (st *SearchTopRequest) WithSectionFilters(
+	filters ...pfdomain.SectionFilter,
+) *SearchTopRequest {
+	st.SectionFilters = filters
+	return st
 }

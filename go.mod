@@ -11,7 +11,7 @@ require (
 	github.com/keybase/go-keychain v0.0.1
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
 	github.com/pkg/errors v0.9.1
-	github.com/pyrorhythm/fn v0.7.2
+	github.com/pyrorhythm/fn v0.7.4
 	github.com/pyrorhythm/zlog v0.8.0
 	github.com/valyala/fastjson v1.6.10
 	github.com/zalando/go-keyring v0.2.8
