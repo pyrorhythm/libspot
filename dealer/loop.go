@@ -70,8 +70,8 @@ func (d *Dealer) runConn(ctx context.Context) {
 func (d *Dealer) newConn(ws *ws.Conn) {
 	pingIv := 30 * time.Second
 	pingTo := 10 * time.Second
-	if d.intervalSec > 0 {
-		pingIv = d.intervalSec
+	if d.interval > 0 {
+		pingIv = d.interval
 	}
 	if d.timeout > 0 {
 		pingTo = d.timeout

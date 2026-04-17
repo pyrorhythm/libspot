@@ -5,7 +5,7 @@ type Track struct {
 	Uri            string                  `json:"uri"`
 	TrackMediaType TrackMediaType          `json:"trackMediaType"`
 	Name           string                  `json:"name"`
-	Album          *AlbumSnippet           `json:"albumOfTrack"`
+	Album          *AlbumShort             `json:"albumOfTrack"`
 	Artists        ItemList[ArtistSnippet] `json:"artists"`
 	Associations   *AssociationsV3         `json:"associationsV3"`
 	ContentRating  *ContentRating          `json:"contentRating"`

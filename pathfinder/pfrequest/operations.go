@@ -1,19 +1,22 @@
 package pfrequest
 
-import pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+import (
+	pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+)
 
 type BadgeOperation Operation
 
 const (
-	OpSearchTracks       BadgeOperation = "searchTracks"
-	OpSearchAlbums       BadgeOperation = "searchAlbums"
-	OpSearchArtists      BadgeOperation = "searchArtists"
-	OpSearchPlaylists    BadgeOperation = "searchPlaylists"
-	OpSearchPodcasts     BadgeOperation = "searchPodcasts"
-	OpSearchFullEpisodes BadgeOperation = "searchFullEpisodes"
-	OpSearchUsers        BadgeOperation = "searchUsers"
-	OpSearchTop          Operation      = "searchTopResultsList"
-	OpSearchSuggestions  Operation      = "searchSuggestions"
+	OpSearchTracks      BadgeOperation = "searchTracks"
+	OpSearchAlbums      BadgeOperation = "searchAlbums"
+	OpSearchArtists     BadgeOperation = "searchArtists"
+	OpSearchPlaylists   BadgeOperation = "searchPlaylists"
+	OpSearchPodcasts    BadgeOperation = "searchPodcasts"
+	OpSearchEpisodes    BadgeOperation = "searchFullEpisodes"
+	OpSearchUsers       BadgeOperation = "searchUsers"
+	OpSearchGenres      BadgeOperation = "searchGenres"
+	OpSearchTop         Operation      = "searchTopResultsList"
+	OpSearchSuggestions Operation      = "searchSuggestions"
 
 	OpHome                   Operation = "home"
 	OpGetAlbum               Operation = "getAlbum"
@@ -28,13 +31,14 @@ const (
 )
 
 const (
-	opSearchTracks       = Operation(OpSearchTracks)
-	opSearchAlbums       = Operation(OpSearchAlbums)
-	opSearchArtists      = Operation(OpSearchArtists)
-	opSearchPlaylists    = Operation(OpSearchPlaylists)
-	opSearchPodcasts     = Operation(OpSearchPodcasts)
-	opSearchFullEpisodes = Operation(OpSearchFullEpisodes)
-	opSearchUsers        = Operation(OpSearchUsers)
+	opSearchTracks    = Operation(OpSearchTracks)
+	opSearchAlbums    = Operation(OpSearchAlbums)
+	opSearchArtists   = Operation(OpSearchArtists)
+	opSearchPlaylists = Operation(OpSearchPlaylists)
+	opSearchPodcasts  = Operation(OpSearchPodcasts)
+	opSearchEpisodes  = Operation(OpSearchEpisodes)
+	opSearchUsers     = Operation(OpSearchUsers)
+	opSearchGenres    = Operation(OpSearchGenres)
 )
 
 func (b BadgeOperation) String() string {
@@ -74,7 +78,7 @@ func (o Operation) graphQLHash() string {
 		return "43314b043ad59fe5d06d6a812be70ab3c062ee72633ad9ee460f0e74a86ef7c5"
 	case opSearchUsers:
 		return "d3f7547835dc86a4fdf3997e0f79314e7580eaf4aaf2f4cb1e71e189c5dfcb1f"
-	case opSearchFullEpisodes:
+	case opSearchEpisodes:
 		return "02f66233401a3cd965c038a2c2fede2911dd93517699b868cb3239e7e17a64f5"
 	case opSearchPodcasts:
 		return "0195d9f61b43606d490bca64c3456e3593528cea6cc05c7e822c7c42beed0f4e"
@@ -86,6 +90,8 @@ func (o Operation) graphQLHash() string {
 		return "72c8c7c1e789a9f11e261c4f9ae35a9465bbb90137c584428989573617b6c08d"
 	case opSearchTracks:
 		return "59ee4a659c32e9ad894a71308207594a65ba67bb6b632b183abe97303a51fa55"
+	case opSearchGenres:
+		return "9e1c0e056c46239dd1956ea915b988913c87c04ce3dadccdb537774490266f46"
 	}
 
 	panic("not implemented")

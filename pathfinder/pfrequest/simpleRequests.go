@@ -23,3 +23,14 @@ type DynamicColorsRequest ImageUris
 func (DynamicColorsRequest) Op() Operation {
 	return OpGetDynamicColorsByUris
 }
+
+type GetAlbumRequest struct {
+	Uri    string `json:"uri"`
+	Locale string `json:"locale"`
+	Offset int    `json:"offset"`
+	Limit  int    `json:"limit"`
+}
+
+func (g GetAlbumRequest) Op() Operation {
+	return OpGetAlbum
+}

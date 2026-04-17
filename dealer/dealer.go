@@ -34,8 +34,8 @@ type Dealer struct {
 	endpoint *DelayConfig
 	global   *DelayConfig
 
-	intervalSec time.Duration
-	timeout     time.Duration
+	interval time.Duration
+	timeout  time.Duration
 
 	onConnectionShutdown func(error)
 
@@ -59,7 +59,7 @@ func applyDefaults(d *Dealer) *Dealer {
 	d.endpoint = commonDelayCfg
 	d.global = commonDelayCfg
 
-	d.intervalSec = 10 * time.Second
+	d.interval = 10 * time.Second
 	d.timeout = 30 * time.Second
 
 	d.onConnectionShutdown = func(error) {}
@@ -77,8 +77,8 @@ func coverNils(dealer *Dealer) {
 		dealer.global = commonDelayCfg
 	}
 
-	if dealer.intervalSec <= 0 {
-		dealer.intervalSec = 10 * time.Second
+	if dealer.interval <= 0 {
+		dealer.interval = 10 * time.Second
 	}
 
 	if dealer.timeout <= 0 {
@@ -111,8 +111,8 @@ func New(
 	} else if d.global == nil {
 		d.global = commonDelayCfg
 	}
-	if d.intervalSec <= 0 {
-		d.intervalSec = 10 * time.Second
+	if d.interval <= 0 {
+		d.interval = 10 * time.Second
 	}
 	if d.timeout <= 0 {
 		d.timeout = 30 * time.Second

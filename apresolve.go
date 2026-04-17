@@ -7,6 +7,9 @@ type Endpoints interface {
 	Accesspoint() []string
 }
 
+// EndpointResolver keeps the historical two-method shape so existing callers
+// (notably the dealer package) keep compiling. New code should prefer the
+// Option/IOResult-returning methods when available on concrete types.
 type EndpointResolver interface {
 	Endpoints() (endpoints Endpoints, ok bool)
 	Fetch(...ServiceKind) (Endpoints, error)

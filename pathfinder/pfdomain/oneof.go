@@ -79,8 +79,6 @@ func (o *Oneof) UnmarshalJSON(data []byte) error {
 	}
 
 	typname := string(val.Get("__typename").GetStringBytes())
-	// slog.Debug("TopResultHitOneof.typename", "typname", typname)
-
 	o.typname = caseOneof(typname)
 
 	if !val.Exists("data") {
@@ -124,28 +122,30 @@ func (o *Oneof) MarshalJSON() ([]byte, error) {
 		"__typename": o.typname.String(),
 	}
 
+	var data any
 	switch o.typname {
 	case caseCompletion:
-		toMarshal["data"] = o.completion
+		data = o.completion
 	case caseArtist:
-		toMarshal["data"] = o.artist
+		data = o.artist
 	case caseTrack:
-		toMarshal["data"] = o.track
+		data = o.track
 	case caseAlbum:
-		toMarshal["data"] = o.album
+		data = o.album
 	case caseEpisode:
-		toMarshal["data"] = o.episode
+		data = o.episode
 	case casePodcast:
-		toMarshal["data"] = o.podcast
+		data = o.podcast
 	case casePlaylist:
-		toMarshal["data"] = o.playlist
+		data = o.playlist
 	case caseGenre:
-		toMarshal["data"] = o.genre
+		data = o.genre
 	case caseUser:
-		toMarshal["data"] = o.user
+		data = o.user
 	default:
-		toMarshal["data"] = nil
+		data = nil
 	}
+	toMarshal["data"] = data
 
 	return json.Marshal(toMarshal)
 }

@@ -183,7 +183,7 @@ func (s *session) safeClientToken() (string, error) {
 		s.creds.DeviceId = deviceId
 	}
 
-	token, err := libspot.RetrieveClientToken(http.DefaultClient, deviceId)
+	token, err := libspot.RetrieveClientToken(deviceId)
 	if err != nil {
 		return "", fmt.Errorf("fetch client token: %w", err)
 	}

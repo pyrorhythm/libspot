@@ -14,15 +14,10 @@ func (SearchTopRequest) Op() Operation {
 	return OpSearchTop
 }
 
-func Top() *SearchTopRequest {
+func Top(q string) *SearchTopRequest {
 	return &SearchTopRequest{
-		SearchSuggestionsRequest: *Suggestions(),
+		SearchSuggestionsRequest: *Suggestions(q),
 	}
-}
-
-func (st *SearchTopRequest) WithQuery(q string) *SearchTopRequest {
-	st.Query = q
-	return st
 }
 
 func (st *SearchTopRequest) WithCommons(o CommonsOpts) *SearchTopRequest {

@@ -17,10 +17,10 @@ func AsPayload[T pfq.Request](t T) pfq.Payload[T] {
 	}
 }
 
-func Marshal[T pfq.Request](t T) ([]byte, error) {
+func marshal[T pfq.Request](t T) ([]byte, error) {
 	return json.Marshal(AsPayload(t))
 }
 
-func Unmarshal[T any](data []byte) (*pfs.Payload[T], error) {
-	return bjs.Unmarshal[pfs.Payload[T]](data)
+func unmarshal(data []byte) (*pfs.Payload[pfs.Response], error) {
+	return bjs.Unmarshal[pfs.Payload[pfs.Response]](data)
 }

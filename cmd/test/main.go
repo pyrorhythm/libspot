@@ -70,10 +70,12 @@ func main() {
 	defer d.Stop()
 
 	pf := pathfinder.New(sess)
-	sugg, err := pf.Query(ctx,
-		pfq.Suggestions().
-			WithQuery("neonate").
-			WithCommons(pfq.Commons().WithLimit(1).WithTopResults(1)))
+	sugg, err := pf.Suggestions(
+		ctx, pfq.Suggestions("neonate").
+			WithCommons(pfq.Commons().
+				WithLimit(1).
+				WithTopResults(1)),
+	)
 	if err != nil {
 		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
 	}
@@ -81,10 +83,12 @@ func main() {
 	bs, _ := json.MarshalIndent(sugg, "", "\t")
 	fmt.Println(string(bs))
 
-	top, err := pf.Query(ctx,
-		pfq.Top().
-			WithQuery("neonate").
-			WithCommons(pfq.Commons().WithLimit(1).WithTopResults(1)))
+	top, err := pf.Top(
+		ctx, pfq.Top("neonate").
+			WithCommons(pfq.Commons().
+				WithLimit(1).
+				WithTopResults(1)),
+	)
 	if err != nil {
 		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
 	}

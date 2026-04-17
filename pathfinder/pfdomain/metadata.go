@@ -1,6 +1,8 @@
 package pfdomain
 
-import "time"
+import (
+	"time"
+)
 
 type AssociationsV3 struct {
 	AudioAssociations TotalCount `json:"audioAssociations"`
@@ -24,6 +26,10 @@ type Disc struct {
 
 type ContentRating struct {
 	Label ContentRatingEnum `json:"label"`
+}
+
+type Uri struct {
+	Uri string `json:"uri"`
 }
 
 type Url struct {

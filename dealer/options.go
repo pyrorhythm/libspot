@@ -18,7 +18,7 @@ func WithGlobalDelayConfig(cfg *DelayConfig) Option {
 
 func WithPingInterval(interval time.Duration) Option {
 	return func(dealer *Dealer) {
-		dealer.intervalSec = interval
+		dealer.interval = interval
 	}
 }
 

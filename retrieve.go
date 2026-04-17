@@ -1,59 +1,46 @@
 package libspot
 
 import (
-	"bytes"
 	"errors"
 	"fmt"
-	"io"
 	"net/http"
-	"net/url"
 	"runtime"
 
 	datav0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0"
 	httpv0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/http/v0"
 	"google.golang.org/protobuf/proto"
+	"resty.dev/v3"
 )
+
+const ctUrl = "https://clienttoken.spotify.com/v1/clienttoken"
 
 // RetrieveClientToken fetches a Spotify client token using the client-token API.
 //
-// sourced from devgianlu/go-librespot
-func RetrieveClientToken(c *http.Client, deviceId string) (string, error) {
+// Sourced from devgianlu/go-librespot.
+func RetrieveClientToken(deviceId string) (string, error) {
 	body, err := proto.Marshal(clientTokenRequest(deviceId))
 	if err != nil {
 		return "", fmt.Errorf("failed marshalling ClientTokenRequest: %w", err)
 	}
 
-	reqURL, err := url.Parse("https://clienttoken.spotify.com/v1/clienttoken")
-	if err != nil {
-		return "", fmt.Errorf("invalid clienttoken url: %w", err)
-	}
-
-	resp, err := c.Do(&http.Request{
-		Method: http.MethodPost,
-		URL:    reqURL,
-		Header: http.Header{
+	resp, err := resty.New().R().
+		SetHeaderMultiValues(map[string][]string{
 			"Accept":     []string{"application/x-protobuf"},
 			"User-Agent": []string{fmt.Sprintf("libspot/0.0.0 Go/%s", runtime.Version())},
-		},
-		Body: io.NopCloser(bytes.NewReader(body)),
-	})
+		}).SetBody(body).Post(ctUrl)
+
 	if err != nil {
 		return "", fmt.Errorf("failed requesting clienttoken: %w", err)
 	}
 
 	defer func() { _ = resp.Body.Close() }()
 
-	if resp.StatusCode != http.StatusOK {
+	if resp.StatusCode() != http.StatusOK {
 		return "", fmt.Errorf("invalid status code from clienttoken: %d", resp.StatusCode)
 	}
 
-	respBody, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return "", fmt.Errorf("failed reading clienttoken response: %w", err)
-	}
-
 	var protoResp httpv0.ClientTokenResponse
-	if err := proto.Unmarshal(respBody, &protoResp); err != nil {
+	if err := proto.Unmarshal(resp.Bytes(), &protoResp); err != nil {
 		return "", fmt.Errorf("failed unmarshalling clienttoken response: %w", err)
 	}
 
@@ -69,6 +56,7 @@ func RetrieveClientToken(c *http.Client, deviceId string) (string, error) {
 	default:
 		return "", fmt.Errorf("unknown clienttoken response type: %v", protoResp.GetResponseType())
 	}
+
 }
 
 func clientTokenRequest(deviceID string) *httpv0.ClientTokenRequest {

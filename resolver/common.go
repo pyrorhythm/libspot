@@ -46,21 +46,10 @@ func (e *endpoints) merge(oth *endpoints) {
 	}
 }
 
-func (e endpoints) Spclient() []string {
-	return e.SpclientEps
-}
-
-func (e endpoints) Dealer() []string {
-	return e.DealerEps
-}
-
-func (e endpoints) DealerG2() []string {
-	return e.DealerG2Eps
-}
-
-func (e endpoints) Accesspoint() []string {
-	return e.AccesspointEps
-}
+func (e endpoints) Spclient() []string    { return e.SpclientEps }
+func (e endpoints) Dealer() []string      { return e.DealerEps }
+func (e endpoints) DealerG2() []string    { return e.DealerG2Eps }
+func (e endpoints) Accesspoint() []string { return e.AccesspointEps }
 
 func tostring(kind libspot.ServiceKind) string {
 	return string(kind)
@@ -95,7 +84,6 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 	_, err := backoff.Retry(context.Background(), func() (any, error) {
 		resp, err := req.Get(resolveEndpoint)
 		if err != nil {
-			// Error is not a bad status but a transport error
 			return nil, backoff.Permanent(fmt.Errorf("internal transport failure: %w", err))
 		}
 
@@ -103,12 +91,12 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 			return nil, backoff.RetryAfter(3)
 		}
 
-		if endp, err := bjs.Unmarshal[endpoints](resp.Bytes()); err != nil {
+		endp, err := bjs.Unmarshal[endpoints](resp.Bytes())
+		if err != nil {
 			return nil, backoff.Permanent(fmt.Errorf("failed to unmarshal endpoints: %w", err))
-		} else {
-			t.endpoints.merge(endp)
-			return nil, nil
 		}
+		t.endpoints.merge(endp)
+		return nil, nil
 	}, backoff.WithBackOff(backoff.NewExponentialBackOff()), backoff.WithMaxTries(5))
 
 	if err != nil {

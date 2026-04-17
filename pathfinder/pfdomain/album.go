@@ -1,6 +1,6 @@
 package pfdomain
 
-type AlbumSnippet struct {
+type AlbumShort struct {
 	ID             string          `json:"id"`
 	URI            string          `json:"uri"`
 	Name           string          `json:"name"`

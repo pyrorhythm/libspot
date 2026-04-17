@@ -5,33 +5,6 @@ type PlaylistPreviewItems struct {
 	PreviewItems ItemList[Track] `json:"previewItems"`
 }
 
-type T struct {
-	Items []struct {
-		Typename string `json:"__typename"`
-		Data     struct {
-			Typename     string `json:"__typename"`
-			AlbumOfTrack struct {
-				CoverArt struct {
-					ExtractedColors struct {
-						ColorDark struct {
-							Hex string `json:"hex"`
-						} `json:"colorDark"`
-					} `json:"extractedColors"`
-					Sources []struct {
-						Height int    `json:"height"`
-						Url    string `json:"url"`
-						Width  int    `json:"width"`
-					} `json:"sources"`
-				} `json:"coverArt"`
-			} `json:"albumOfTrack"`
-			Canvas interface{} `json:"canvas"`
-			Name   string      `json:"name"`
-
-			Uri string `json:"uri"`
-		} `json:"data"`
-	} `json:"items"`
-}
-
 type Playlist struct {
 	URI            string          `json:"uri"`
 	Name           string          `json:"name"`
