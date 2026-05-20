@@ -14,17 +14,11 @@ type Typable interface {
 	Type() metadata.MdType
 }
 
-func validateGid(id string) error {
-	if len(id) != 40 {
-		return errors.Errorf("invalid gid %s", id)
+func validateGid(id string) (err error) {
+	if _, err = hex.DecodeString(id); err != nil {
+		err = errors.Wrapf(err, "invalid gid %s", id)
 	}
-
-	_, err := hex.DecodeString(id)
-	if err != nil {
-		return errors.Wrapf(err, "invalid gid %s", id)
-	}
-
-	return nil
+	return err
 }
 
 func Metadata[T Typable](c *Spclient, ctx context.Context, gid string) (*T, error) {
