@@ -15,15 +15,15 @@ func makeRequest[to any](
 	rq *resty.Request,
 ) (*to, error) {
 	headers := map[string]string{
-		"App-Platform": libspot.AppPlatform().String(),
-		"Accept":       "application/json",
-		"User-Agent":   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.246 Spotify/1.2.87.414 Safari/537.36",
-		"Origin":       "https://xpui.app.spotify.com",
-		"Referer":      "https://xpui.app.spotify.com",
-		"Content-Type": "application/json;charset=UTF-8",
+		"app-platform": libspot.AppPlatform().String(),
+		"accept":       "application/json",
+		"user-agent":   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.246 Spotify/1.2.87.414 Safari/537.36",
+		"origin":       "https://xpui.app.spotify.com",
+		"referer":      "https://xpui.app.spotify.com",
+		"content-type": "application/json;charset=UTF-8",
 	}
 
-	rq = rq.SetHeaders(headers)
+	rq = rq.SetHeaders(headers).SetQueryParam("market", "from_token")
 
 	resp, err := backoff.Retry(
 		ctx, func() (*resty.Response, error) {

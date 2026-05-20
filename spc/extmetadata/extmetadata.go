@@ -1,0 +1,310 @@
+package extmetadata
+
+import (
+	pb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
+)
+
+const Path = "extended-metadata/v0/extended-metadata"
+
+type ExtensionKind = pb.ExtensionKind
+
+type Request struct {
+	country   string
+	catalogue string
+	taskID    []byte
+	entities  []*pb.EntityRequest
+}
+
+func New() *Request { return &Request{} }
+
+func (r *Request) Country(v string) *Request   { r.country = v; return r }
+func (r *Request) Catalogue(v string) *Request { r.catalogue = v; return r }
+func (r *Request) TaskID(v []byte) *Request    { r.taskID = v; return r }
+
+func (r *Request) Query(uri string, kinds ...ExtensionKind) *Request {
+	queries := make([]*pb.ExtensionQuery, len(kinds))
+	for i, k := range kinds {
+		queries[i] = pb.ExtensionQuery_builder{ExtensionKind: k}.Build()
+	}
+	return r.Entity(pb.EntityRequest_builder{
+		EntityUri: uri,
+		Query:     queries,
+	}.Build())
+}
+
+func (r *Request) Entity(e *pb.EntityRequest) *Request {
+	r.entities = append(r.entities, e)
+	return r
+}
+
+func (r *Request) Build() *pb.BatchedEntityRequest {
+	var header *pb.BatchedEntityRequestHeader
+	if r.country != "" || r.catalogue != "" || r.taskID != nil {
+		header = pb.BatchedEntityRequestHeader_builder{
+			Country:   r.country,
+			Catalogue: r.catalogue,
+			TaskId:    r.taskID,
+		}.Build()
+	}
+
+	return pb.BatchedEntityRequest_builder{
+		Header:        header,
+		EntityRequest: r.entities,
+	}.Build()
+}
+
+/* Kind aliases */
+
+const (
+	KindCanvaz                         = pb.ExtensionKind_CANVAZ
+	KindStorylines                     = pb.ExtensionKind_STORYLINES
+	KindPodcastTopics                  = pb.ExtensionKind_PODCAST_TOPICS
+	KindPodcastSegments                = pb.ExtensionKind_PODCAST_SEGMENTS
+	KindAudioFiles                     = pb.ExtensionKind_AUDIO_FILES
+	KindTrackDescriptor                = pb.ExtensionKind_TRACK_DESCRIPTOR
+	KindPodcastCounter                 = pb.ExtensionKind_PODCAST_COUNTER
+	KindArtistV4                       = pb.ExtensionKind_ARTIST_V4
+	KindAlbumV4                        = pb.ExtensionKind_ALBUM_V4
+	KindTrackV4                        = pb.ExtensionKind_TRACK_V4
+	KindShowV4                         = pb.ExtensionKind_SHOW_V4
+	KindEpisodeV4                      = pb.ExtensionKind_EPISODE_V4
+	KindPodcastHtmlDescription         = pb.ExtensionKind_PODCAST_HTML_DESCRIPTION
+	KindPodcastQuotes                  = pb.ExtensionKind_PODCAST_QUOTES
+	KindUserProfile                    = pb.ExtensionKind_USER_PROFILE
+	KindCanvasV1                       = pb.ExtensionKind_CANVAS_V1
+	KindShowV4Base                     = pb.ExtensionKind_SHOW_V4_BASE
+	KindShowV4EpisodesAssoc            = pb.ExtensionKind_SHOW_V4_EPISODES_ASSOC
+	KindTrackDescriptorSignatures      = pb.ExtensionKind_TRACK_DESCRIPTOR_SIGNATURES
+	KindPodcastAdSegments              = pb.ExtensionKind_PODCAST_AD_SEGMENTS
+	KindEpisodeTranscripts             = pb.ExtensionKind_EPISODE_TRANSCRIPTS
+	KindPodcastSubscriptions           = pb.ExtensionKind_PODCAST_SUBSCRIPTIONS
+	KindExtractedColor                 = pb.ExtensionKind_EXTRACTED_COLOR
+	KindPodcastVirality                = pb.ExtensionKind_PODCAST_VIRALITY
+	KindImageSparklesHack              = pb.ExtensionKind_IMAGE_SPARKLES_HACK
+	KindPodcastPopularityHack          = pb.ExtensionKind_PODCAST_POPULARITY_HACK
+	KindAutomixMode                    = pb.ExtensionKind_AUTOMIX_MODE
+	KindCuepoints                      = pb.ExtensionKind_CUEPOINTS
+	KindPodcastPoll                    = pb.ExtensionKind_PODCAST_POLL
+	KindEpisodeAccess                  = pb.ExtensionKind_EPISODE_ACCESS
+	KindShowAccess                     = pb.ExtensionKind_SHOW_ACCESS
+	KindPodcastQna                     = pb.ExtensionKind_PODCAST_QNA
+	KindClips                          = pb.ExtensionKind_CLIPS
+	KindShowV5                         = pb.ExtensionKind_SHOW_V5
+	KindEpisodeV5                      = pb.ExtensionKind_EPISODE_V5
+	KindPodcastCtaCards                = pb.ExtensionKind_PODCAST_CTA_CARDS
+	KindPodcastRating                  = pb.ExtensionKind_PODCAST_RATING
+	KindDisplaySegments                = pb.ExtensionKind_DISPLAY_SEGMENTS
+	KindGreenroom                      = pb.ExtensionKind_GREENROOM
+	KindUserCreated                    = pb.ExtensionKind_USER_CREATED
+	KindShowDescription                = pb.ExtensionKind_SHOW_DESCRIPTION
+	KindShowHtmlDescription            = pb.ExtensionKind_SHOW_HTML_DESCRIPTION
+	KindShowPlayability                = pb.ExtensionKind_SHOW_PLAYABILITY
+	KindEpisodeDescription             = pb.ExtensionKind_EPISODE_DESCRIPTION
+	KindEpisodeHtmlDescription         = pb.ExtensionKind_EPISODE_HTML_DESCRIPTION
+	KindEpisodePlayability             = pb.ExtensionKind_EPISODE_PLAYABILITY
+	KindShowEpisodesAssoc              = pb.ExtensionKind_SHOW_EPISODES_ASSOC
+	KindClientConfig                   = pb.ExtensionKind_CLIENT_CONFIG
+	KindPlaylistability                = pb.ExtensionKind_PLAYLISTABILITY
+	KindAudiobookV5                    = pb.ExtensionKind_AUDIOBOOK_V5
+	KindChapterV5                      = pb.ExtensionKind_CHAPTER_V5
+	KindAudiobookSpecifics             = pb.ExtensionKind_AUDIOBOOK_SPECIFICS
+	KindEpisodeRanking                 = pb.ExtensionKind_EPISODE_RANKING
+	KindHtmlDescription                = pb.ExtensionKind_HTML_DESCRIPTION
+	KindCreatorChannel                 = pb.ExtensionKind_CREATOR_CHANNEL
+	KindAudiobookProviders             = pb.ExtensionKind_AUDIOBOOK_PROVIDERS
+	KindPlayTrait                      = pb.ExtensionKind_PLAY_TRAIT
+	KindContentWarning                 = pb.ExtensionKind_CONTENT_WARNING
+	KindImageCue                       = pb.ExtensionKind_IMAGE_CUE
+	KindStreamCount                    = pb.ExtensionKind_STREAM_COUNT
+	KindAudioAttributes                = pb.ExtensionKind_AUDIO_ATTRIBUTES
+	KindNavigableTrait                 = pb.ExtensionKind_NAVIGABLE_TRAIT
+	KindNextBestEpisode                = pb.ExtensionKind_NEXT_BEST_EPISODE
+	KindAudiobookPrice                 = pb.ExtensionKind_AUDIOBOOK_PRICE
+	KindExpressivePlaylists            = pb.ExtensionKind_EXPRESSIVE_PLAYLISTS
+	KindDynamicShowEpisode             = pb.ExtensionKind_DYNAMIC_SHOW_EPISODE
+	KindLive                           = pb.ExtensionKind_LIVE
+	KindSkipPlayed                     = pb.ExtensionKind_SKIP_PLAYED
+	KindAdBreakFreePodcasts            = pb.ExtensionKind_AD_BREAK_FREE_PODCASTS
+	KindAssociations                   = pb.ExtensionKind_ASSOCIATIONS
+	KindPlaylistEvaluation             = pb.ExtensionKind_PLAYLIST_EVALUATION
+	KindCacheInvalidations             = pb.ExtensionKind_CACHE_INVALIDATIONS
+	KindLivestreamEntity               = pb.ExtensionKind_LIVESTREAM_ENTITY
+	KindSingleTapReactions             = pb.ExtensionKind_SINGLE_TAP_REACTIONS
+	KindUserComments                   = pb.ExtensionKind_USER_COMMENTS
+	KindClientRestrictions             = pb.ExtensionKind_CLIENT_RESTRICTIONS
+	KindPodcastGuest                   = pb.ExtensionKind_PODCAST_GUEST
+	KindPlayability                    = pb.ExtensionKind_PLAYABILITY
+	KindCoverImage                     = pb.ExtensionKind_COVER_IMAGE
+	KindShareTrait                     = pb.ExtensionKind_SHARE_TRAIT
+	KindInstanceSharing                = pb.ExtensionKind_INSTANCE_SHARING
+	KindArtistTour                     = pb.ExtensionKind_ARTIST_TOUR
+	KindAudiobookGenre                 = pb.ExtensionKind_AUDIOBOOK_GENRE
+	KindConcept                        = pb.ExtensionKind_CONCEPT
+	KindOriginalVideo                  = pb.ExtensionKind_ORIGINAL_VIDEO
+	KindSmartShuffle                   = pb.ExtensionKind_SMART_SHUFFLE
+	KindLiveEvents                     = pb.ExtensionKind_LIVE_EVENTS
+	KindAudiobookRelations             = pb.ExtensionKind_AUDIOBOOK_RELATIONS
+	KindHomePocBasecard                = pb.ExtensionKind_HOME_POC_BASECARD
+	KindAudiobookSupplements           = pb.ExtensionKind_AUDIOBOOK_SUPPLEMENTS
+	KindPaidPodcastBanner              = pb.ExtensionKind_PAID_PODCAST_BANNER
+	KindFewerAds                       = pb.ExtensionKind_FEWER_ADS
+	KindWatchFeedShowExplorer          = pb.ExtensionKind_WATCH_FEED_SHOW_EXPLORER
+	KindTrackExtraDescriptors          = pb.ExtensionKind_TRACK_EXTRA_DESCRIPTORS
+	KindTrackExtraAudioAttributes      = pb.ExtensionKind_TRACK_EXTRA_AUDIO_ATTRIBUTES
+	KindTrackExtendedCredits           = pb.ExtensionKind_TRACK_EXTENDED_CREDITS
+	KindSimpleTrait                    = pb.ExtensionKind_SIMPLE_TRAIT
+	KindAudioAssociations              = pb.ExtensionKind_AUDIO_ASSOCIATIONS
+	KindVideoAssociations              = pb.ExtensionKind_VIDEO_ASSOCIATIONS
+	KindPlaylistTuner                  = pb.ExtensionKind_PLAYLIST_TUNER
+	KindArtistVideosEntrypoint         = pb.ExtensionKind_ARTIST_VIDEOS_ENTRYPOINT
+	KindAlbumPrerelease                = pb.ExtensionKind_ALBUM_PRERELEASE
+	KindContentAlternatives            = pb.ExtensionKind_CONTENT_ALTERNATIVES
+	KindSnapshotSharing                = pb.ExtensionKind_SNAPSHOT_SHARING
+	KindDisplaySegmentsCount           = pb.ExtensionKind_DISPLAY_SEGMENTS_COUNT
+	KindPodcastFeaturedEpisode         = pb.ExtensionKind_PODCAST_FEATURED_EPISODE
+	KindPodcastSponsoredContent        = pb.ExtensionKind_PODCAST_SPONSORED_CONTENT
+	KindPodcastEpisodeTopicsLlm        = pb.ExtensionKind_PODCAST_EPISODE_TOPICS_LLM
+	KindPodcastEpisodeTopicsKg         = pb.ExtensionKind_PODCAST_EPISODE_TOPICS_KG
+	KindEpisodeRankingPopularity       = pb.ExtensionKind_EPISODE_RANKING_POPULARITY
+	KindMerch                          = pb.ExtensionKind_MERCH
+	KindCompanionContent               = pb.ExtensionKind_COMPANION_CONTENT
+	KindWatchFeedEntityExplorer        = pb.ExtensionKind_WATCH_FEED_ENTITY_EXPLORER
+	KindAnchorCardTrait                = pb.ExtensionKind_ANCHOR_CARD_TRAIT
+	KindAudioPreviewPlaybackTrait      = pb.ExtensionKind_AUDIO_PREVIEW_PLAYBACK_TRAIT
+	KindVideoPreviewStillTrait         = pb.ExtensionKind_VIDEO_PREVIEW_STILL_TRAIT
+	KindPreviewCardTrait               = pb.ExtensionKind_PREVIEW_CARD_TRAIT
+	KindShortcutsCardTrait             = pb.ExtensionKind_SHORTCUTS_CARD_TRAIT
+	KindVideoPreviewPlaybackTrait      = pb.ExtensionKind_VIDEO_PREVIEW_PLAYBACK_TRAIT
+	KindCourseSpecifics                = pb.ExtensionKind_COURSE_SPECIFICS
+	KindConcert                        = pb.ExtensionKind_CONCERT
+	KindConcertLocation                = pb.ExtensionKind_CONCERT_LOCATION
+	KindConcertMarketing               = pb.ExtensionKind_CONCERT_MARKETING
+	KindConcertPerformers              = pb.ExtensionKind_CONCERT_PERFORMERS
+	KindTrackPairTransition            = pb.ExtensionKind_TRACK_PAIR_TRANSITION
+	KindContentTypeTrait               = pb.ExtensionKind_CONTENT_TYPE_TRAIT
+	KindNameTrait                      = pb.ExtensionKind_NAME_TRAIT
+	KindArtworkTrait                   = pb.ExtensionKind_ARTWORK_TRAIT
+	KindReleaseDateTrait               = pb.ExtensionKind_RELEASE_DATE_TRAIT
+	KindCreditsTrait                   = pb.ExtensionKind_CREDITS_TRAIT
+	KindReleaseUriTrait                = pb.ExtensionKind_RELEASE_URI_TRAIT
+	KindEntityCapping                  = pb.ExtensionKind_ENTITY_CAPPING
+	KindLessonSpecifics                = pb.ExtensionKind_LESSON_SPECIFICS
+	KindConcertOffers                  = pb.ExtensionKind_CONCERT_OFFERS
+	KindTransitionMaps                 = pb.ExtensionKind_TRANSITION_MAPS
+	KindArtistHasConcerts              = pb.ExtensionKind_ARTIST_HAS_CONCERTS
+	KindPrerelease                     = pb.ExtensionKind_PRERELEASE
+	KindPlaylistAttributesV2           = pb.ExtensionKind_PLAYLIST_ATTRIBUTES_V2
+	KindListAttributesV2               = pb.ExtensionKind_LIST_ATTRIBUTES_V2
+	KindListMetadata                   = pb.ExtensionKind_LIST_METADATA
+	KindListTunerAudioAnalysis         = pb.ExtensionKind_LIST_TUNER_AUDIO_ANALYSIS
+	KindListTunerCuepoints             = pb.ExtensionKind_LIST_TUNER_CUEPOINTS
+	KindContentRatingTrait             = pb.ExtensionKind_CONTENT_RATING_TRAIT
+	KindCopyrightTrait                 = pb.ExtensionKind_COPYRIGHT_TRAIT
+	KindSupportedBadges                = pb.ExtensionKind_SUPPORTED_BADGES
+	KindBadges                         = pb.ExtensionKind_BADGES
+	KindPreviewTrait                   = pb.ExtensionKind_PREVIEW_TRAIT
+	KindRootlistabilityTrait           = pb.ExtensionKind_ROOTLISTABILITY_TRAIT
+	KindLocalConcerts                  = pb.ExtensionKind_LOCAL_CONCERTS
+	KindRecommendedPlaylists           = pb.ExtensionKind_RECOMMENDED_PLAYLISTS
+	KindPopularReleases                = pb.ExtensionKind_POPULAR_RELEASES
+	KindRelatedReleases                = pb.ExtensionKind_RELATED_RELEASES
+	KindShareRestrictions              = pb.ExtensionKind_SHARE_RESTRICTIONS
+	KindConcertOffer                   = pb.ExtensionKind_CONCERT_OFFER
+	KindConcertOfferProvider           = pb.ExtensionKind_CONCERT_OFFER_PROVIDER
+	KindEntityBookmarks                = pb.ExtensionKind_ENTITY_BOOKMARKS
+	KindPrivacyTrait                   = pb.ExtensionKind_PRIVACY_TRAIT
+	KindDuplicateItemsTrait            = pb.ExtensionKind_DUPLICATE_ITEMS_TRAIT
+	KindReorderingTrait                = pb.ExtensionKind_REORDERING_TRAIT
+	KindPodcastResumptionSegments      = pb.ExtensionKind_PODCAST_RESUMPTION_SEGMENTS
+	KindArtistExpressionVideo          = pb.ExtensionKind_ARTIST_EXPRESSION_VIDEO
+	KindPrereleaseVideo                = pb.ExtensionKind_PRERELEASE_VIDEO
+	KindGatedEntityRelations           = pb.ExtensionKind_GATED_ENTITY_RELATIONS
+	KindRelatedCreatorsSection         = pb.ExtensionKind_RELATED_CREATORS_SECTION
+	KindCreatorsAppearsOnSection       = pb.ExtensionKind_CREATORS_APPEARS_ON_SECTION
+	KindPromoV1Trait                   = pb.ExtensionKind_PROMO_V1_TRAIT
+	KindSpeechlessShareCard            = pb.ExtensionKind_SPEECHLESS_SHARE_CARD
+	KindTopPlayablesSection            = pb.ExtensionKind_TOP_PLAYABLES_SECTION
+	KindAutoLens                       = pb.ExtensionKind_AUTO_LENS
+	KindPromoV3Trait                   = pb.ExtensionKind_PROMO_V3_TRAIT
+	KindTrackContentFilter             = pb.ExtensionKind_TRACK_CONTENT_FILTER
+	KindHighlightability               = pb.ExtensionKind_HIGHLIGHTABILITY
+	KindLinkCardWithImageTrait         = pb.ExtensionKind_LINK_CARD_WITH_IMAGE_TRAIT
+	KindTrackCloudSection              = pb.ExtensionKind_TRACK_CLOUD_SECTION
+	KindEpisodeTopics                  = pb.ExtensionKind_EPISODE_TOPICS
+	KindVideoThumbnail                 = pb.ExtensionKind_VIDEO_THUMBNAIL
+	KindIdentityTrait                  = pb.ExtensionKind_IDENTITY_TRAIT
+	KindVisualIdentityTrait            = pb.ExtensionKind_VISUAL_IDENTITY_TRAIT
+	KindContentTypeV2Trait             = pb.ExtensionKind_CONTENT_TYPE_V2_TRAIT
+	KindPreviewPlaybackTrait           = pb.ExtensionKind_PREVIEW_PLAYBACK_TRAIT
+	KindConsumptionExperienceTrait     = pb.ExtensionKind_CONSUMPTION_EXPERIENCE_TRAIT
+	KindPublishingMetadataTrait        = pb.ExtensionKind_PUBLISHING_METADATA_TRAIT
+	KindDetailedEvaluationTrait        = pb.ExtensionKind_DETAILED_EVALUATION_TRAIT
+	KindOnPlatformReputationTrait      = pb.ExtensionKind_ON_PLATFORM_REPUTATION_TRAIT
+	KindCreditsV2Trait                 = pb.ExtensionKind_CREDITS_V2_TRAIT
+	KindHighlightPlayabilityTrait      = pb.ExtensionKind_HIGHLIGHT_PLAYABILITY_TRAIT
+	KindShowEpisodeList                = pb.ExtensionKind_SHOW_EPISODE_LIST
+	KindAvailableReleases              = pb.ExtensionKind_AVAILABLE_RELEASES
+	KindPlaylistDescriptors            = pb.ExtensionKind_PLAYLIST_DESCRIPTORS
+	KindLinkCardWithAnimationsTrait    = pb.ExtensionKind_LINK_CARD_WITH_ANIMATIONS_TRAIT
+	KindRecap                          = pb.ExtensionKind_RECAP
+	KindAudiobookCompanionContent      = pb.ExtensionKind_AUDIOBOOK_COMPANION_CONTENT
+	KindThreeOhThreePlayTrait          = pb.ExtensionKind_THREE_OH_THREE_PLAY_TRAIT
+	KindArtistWrapped2024Video         = pb.ExtensionKind_ARTIST_WRAPPED_2024_VIDEO
+	KindContainedContentTypes          = pb.ExtensionKind_CONTAINED_CONTENT_TYPES
+	KindContentClassification          = pb.ExtensionKind_CONTENT_CLASSIFICATION
+	KindChapterSpecifics               = pb.ExtensionKind_CHAPTER_SPECIFICS
+	KindCreatorFanFunding              = pb.ExtensionKind_CREATOR_FAN_FUNDING
+	KindCreatorPlaylistsSection        = pb.ExtensionKind_CREATOR_PLAYLISTS_SECTION
+	KindCreatorPinnedItem              = pb.ExtensionKind_CREATOR_PINNED_ITEM
+	KindPodcastPollV2                  = pb.ExtensionKind_PODCAST_POLL_V2
+	KindCreatorAppearsOnSection        = pb.ExtensionKind_CREATOR_APPEARS_ON_SECTION
+	KindArtistConcerts                 = pb.ExtensionKind_ARTIST_CONCERTS
+	KindListMetadataV2                 = pb.ExtensionKind_LIST_METADATA_V2
+	KindArtistHeadline                 = pb.ExtensionKind_ARTIST_HEADLINE
+	KindEpisodeAdPlacements            = pb.ExtensionKind_EPISODE_AD_PLACEMENTS
+	KindVideoSocialProofPocTrait       = pb.ExtensionKind_VIDEO_SOCIAL_PROOF_POC_TRAIT
+	KindArtistMusicVideos              = pb.ExtensionKind_ARTIST_MUSIC_VIDEOS
+	KindArtistListeningParty           = pb.ExtensionKind_ARTIST_LISTENING_PARTY
+	KindContentByOrAbout               = pb.ExtensionKind_CONTENT_BY_OR_ABOUT
+	KindPlaybackTrait                  = pb.ExtensionKind_PLAYBACK_TRAIT
+	KindArtistMusicVideosUnmapped      = pb.ExtensionKind_ARTIST_MUSIC_VIDEOS_UNMAPPED
+	KindEntityConnections              = pb.ExtensionKind_ENTITY_CONNECTIONS
+	KindUserProfileV2                  = pb.ExtensionKind_USER_PROFILE_V2
+	KindVideoRelations                 = pb.ExtensionKind_VIDEO_RELATIONS
+	KindBeats                          = pb.ExtensionKind_BEATS
+	KindVocalActivity                  = pb.ExtensionKind_VOCAL_ACTIVITY
+	KindMixability                     = pb.ExtensionKind_MIXABILITY
+	KindEntityTypeTrait                = pb.ExtensionKind_ENTITY_TYPE_TRAIT
+	KindChatSharePreview               = pb.ExtensionKind_CHAT_SHARE_PREVIEW
+	KindAudioAttributesV2              = pb.ExtensionKind_AUDIO_ATTRIBUTES_V2
+	KindWatchFeedCategoriesTrait       = pb.ExtensionKind_WATCH_FEED_CATEGORIES_TRAIT
+	KindVenueArtistsPreview            = pb.ExtensionKind_VENUE_ARTISTS_PREVIEW
+	KindMixState                       = pb.ExtensionKind_MIX_STATE
+	KindWatchFeedSeedItemTrait         = pb.ExtensionKind_WATCH_FEED_SEED_ITEM_TRAIT
+	KindSongDnaEligibility             = pb.ExtensionKind_SONG_DNA_ELIGIBILITY
+	KindLearningMaterial               = pb.ExtensionKind_LEARNING_MATERIAL
+	KindBannerWithAnimations           = pb.ExtensionKind_BANNER_WITH_ANIMATIONS
+	KindVenueLocation                  = pb.ExtensionKind_VENUE_LOCATION
+	KindTranscriptSearch               = pb.ExtensionKind_TRANSCRIPT_SEARCH
+	KindSongdnaCredits                 = pb.ExtensionKind_SONGDNA_CREDITS
+	KindAudiobookToPhysicalBookMapping = pb.ExtensionKind_AUDIOBOOK_TO_PHYSICAL_BOOK_MAPPING
+	KindArtistWrapped2025Video         = pb.ExtensionKind_ARTIST_WRAPPED_2025_VIDEO
+	KindMixabilityTrait                = pb.ExtensionKind_MIXABILITY_TRAIT
+	KindSongdnaArtistFacts             = pb.ExtensionKind_SONGDNA_ARTIST_FACTS
+	KindThreebandWaveforms             = pb.ExtensionKind_THREEBAND_WAVEFORMS
+	KindAudiobookPartnerSales          = pb.ExtensionKind_AUDIOBOOK_PARTNER_SALES
+	KindContentCapabilityTrait         = pb.ExtensionKind_CONTENT_CAPABILITY_TRAIT
+	KindConcertCampaign                = pb.ExtensionKind_CONCERT_CAMPAIGN
+	KindConcertCampaignUserState       = pb.ExtensionKind_CONCERT_CAMPAIGN_USER_STATE
+	KindConcertCampaignStrings         = pb.ExtensionKind_CONCERT_CAMPAIGN_STRINGS
+	KindConcertCampaignRoutings        = pb.ExtensionKind_CONCERT_CAMPAIGN_ROUTINGS
+	KindTransitionData                 = pb.ExtensionKind_TRANSITION_DATA
+	KindChatRichMedia                  = pb.ExtensionKind_CHAT_RICH_MEDIA
+	KindCurationExperienceTrait        = pb.ExtensionKind_CURATION_EXPERIENCE_TRAIT
+	KindCommonTransitionPoint          = pb.ExtensionKind_COMMON_TRANSITION_POINT
+	KindPlayLinkCardTrait              = pb.ExtensionKind_PLAY_LINK_CARD_TRAIT
+	KindContentExperienceTrait         = pb.ExtensionKind_CONTENT_EXPERIENCE_TRAIT
+	KindTrackAlternativeVersions       = pb.ExtensionKind_TRACK_ALTERNATIVE_VERSIONS
+	KindLicensingIdentifiersTrait      = pb.ExtensionKind_LICENSING_IDENTIFIERS_TRAIT
+	KindSponsorship                    = pb.ExtensionKind_SPONSORSHIP
+)

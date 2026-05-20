@@ -67,8 +67,6 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	_, _ = io.Copy(io.Discard, resp.Body)
 	_ = resp.Body.Close()
 
-	slog.Debug("dpop: retrying with server nonce")
-
 	retryReq := req.Clone(req.Context())
 	if req.Body != nil {
 		if req.GetBody == nil {
