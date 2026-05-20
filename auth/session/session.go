@@ -107,10 +107,18 @@ func GracefulContext(ctx context.Context) Option {
 }
 
 func applyDefaults(s *session) {
-	s.conf = libspot.DefaultOAuthConfig(9292)
-	s.kcer = store.Zalando[storedCredentials](sessionKey)
-	s.gracefulCtx = context.Background()
-	s.creds = new(storedCredentials)
+	if s.conf == nil {
+		s.conf = libspot.DefaultOAuthConfig(9292)
+	}
+	if s.kcer == nil {
+		s.kcer = store.Zalando[storedCredentials](sessionKey)
+	}
+	if s.gracefulCtx == nil {
+		s.gracefulCtx = context.Background()
+	}
+	if s.creds == nil {
+		s.creds = new(storedCredentials)
+	}
 }
 
 func New(opts ...Option) Session {
