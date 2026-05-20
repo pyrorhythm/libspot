@@ -83,6 +83,20 @@ func main() {
 	bs, _ = json.MarshalIndent(top, "", "\t")
 	fmt.Println(string(bs))
 
+	trck, err := pf.Tracks(
+		ctx, pfq.BadgeOpts().
+			WithTerm("neonate").
+			WithCommons(pfq.Commons().
+				WithLimit(1).
+				WithTopResults(1)),
+	)
+	if err != nil {
+		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
+	}
+
+	bs, _ = json.MarshalIndent(trck, "", "\t")
+	fmt.Println(string(bs))
+
 	<-ctx.Done()
 }
 

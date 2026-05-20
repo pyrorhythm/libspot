@@ -1,5 +1,7 @@
 package pfdomain
 
+import "github.com/pyrorhythm/fn"
+
 type Data[T any] struct {
 	Data *T `json:"data"`
 }
@@ -14,6 +16,30 @@ type Item[T any] struct {
 
 func (d Item[T]) Get() *T {
 	return d.Item
+}
+
+type MatchedItem[T any] struct {
+	Item          *Data[T] `json:"item"`
+	MatchedFields []any    `json:"matchedFields"`
+}
+
+func (m MatchedItem[T]) Get() *T {
+	if m.Item == nil {
+		return nil
+	}
+	return m.Item.Data
+}
+
+type MatchedList[T any] struct {
+	Items []*MatchedItem[T] `json:"items"`
+}
+
+func (l MatchedList[T]) GetMatched() []*MatchedItem[T] {
+	return l.Items
+}
+
+func (l MatchedList[T]) Get() []*T {
+	return fn.Map(l.Items, func(i *MatchedItem[T]) *T { return i.Get() })
 }
 
 type ItemList[T any] struct {

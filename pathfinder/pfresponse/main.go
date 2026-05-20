@@ -23,7 +23,7 @@ func (p *Payload[T]) Get() *T {
 }
 
 type Items[T any] struct {
-	pfd.ItemList[T]
+	pfd.MatchedList[T]
 	pfd.TotalCount
 	PagingInfo `json:"pagingInfo"`
 }
