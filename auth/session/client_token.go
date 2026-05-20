@@ -1,4 +1,4 @@
-package libspot
+package session
 
 import (
 	"errors"
@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"runtime"
 
+	"github.com/pyrorhythm/libspot"
 	datav0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0"
 	httpv0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/http/v0"
 	"google.golang.org/protobuf/proto"
@@ -14,10 +15,10 @@ import (
 
 const ctUrl = "https://clienttoken.spotify.com/v1/clienttoken"
 
-// RetrieveClientToken fetches a Spotify client token using the client-token API.
+// retrieveClientToken fetches a Spotify client token using the client-token API.
 //
 // Sourced from devgianlu/go-librespot.
-func RetrieveClientToken(deviceId string) (string, error) {
+func retrieveClientToken(deviceId string) (string, error) {
 	body, err := proto.Marshal(clientTokenRequest(deviceId))
 	if err != nil {
 		return "", fmt.Errorf("failed marshalling ClientTokenRequest: %w", err)
@@ -35,7 +36,7 @@ func RetrieveClientToken(deviceId string) (string, error) {
 	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode() != http.StatusOK {
-		return "", fmt.Errorf("invalid status code from clienttoken: %d", resp.StatusCode)
+		return "", fmt.Errorf("invalid status code from clienttoken: %d", resp.StatusCode())
 	}
 
 	var protoResp httpv0.ClientTokenResponse
@@ -61,7 +62,7 @@ func clientTokenRequest(deviceID string) *httpv0.ClientTokenRequest {
 	return httpv0.ClientTokenRequest_builder{
 		RequestType: httpv0.ClientTokenRequestType_REQUEST_CLIENT_DATA_REQUEST,
 		ClientData: httpv0.ClientDataRequest_builder{
-			ClientId:      ClientIdHex,
+			ClientId:      libspot.ClientIdHex,
 			ClientVersion: "0.0.0",
 			ConnectivitySdkData: datav0.ConnectivitySdkData_builder{
 				DeviceId:             deviceID,
@@ -69,4 +70,23 @@ func clientTokenRequest(deviceID string) *httpv0.ClientTokenRequest {
 			}.Build(),
 		}.Build(),
 	}.Build()
+}
+
+func platformSpecificData() *datav0.PlatformSpecificData {
+	psd := datav0.PlatformSpecificData_builder{}
+
+	switch runtime.GOOS {
+	case "android":
+		psd.Android = &datav0.NativeAndroidData{}
+	case "darwin":
+		psd.Mac = &datav0.NativeDesktopMacOSData{}
+	case "ios":
+		psd.Ios = &datav0.NativeIOSData{}
+	case "linux", "freebsd":
+		psd.Linux = &datav0.NativeDesktopLinuxData{}
+	case "windows":
+		psd.Win = &datav0.NativeDesktopWindowsData{}
+	}
+
+	return psd.Build()
 }
