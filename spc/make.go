@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/cenkalti/backoff/v5"
-	"github.com/goccy/go-json"
 	"github.com/pkg/errors"
+	"github.com/pyrorhythm/fn/bjs"
 	"github.com/pyrorhythm/libspot"
 	"resty.dev/v3"
 )
@@ -16,6 +16,7 @@ func makeRequest[to any](
 ) (*to, error) {
 	headers := map[string]string{
 		"App-Platform": libspot.AppPlatform().String(),
+		"Accept":       "application/json",
 		"User-Agent":   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.7559.246 Spotify/1.2.87.414 Safari/537.36",
 		"Origin":       "https://xpui.app.spotify.com",
 		"Referer":      "https://xpui.app.spotify.com",
@@ -49,11 +50,11 @@ func makeRequest[to any](
 		return nil, err
 	}
 
-	var res to
+	var res *to
 
-	if err = json.Unmarshal(resp.Bytes(), &res); err != nil {
+	if res, err = bjs.Unmarshal[to](resp.Bytes()); err != nil {
 		return nil, errors.Wrapf(err, "failed to unmarshal response")
 	}
 
-	return &res, nil
+	return res, nil
 }
