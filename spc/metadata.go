@@ -8,15 +8,10 @@ import (
 
 	"github.com/pkg/errors"
 	"github.com/pyrorhythm/libspot/spc/metadata"
-	"resty.dev/v3"
 )
 
 type Typable interface {
 	Type() metadata.MdType
-}
-
-type Clientable interface {
-	Client() *resty.Client
 }
 
 func validateGid(id string) error {

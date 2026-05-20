@@ -23,6 +23,7 @@ require (
 
 require (
 	github.com/danieljoos/wincred v1.2.3 // indirect
+	github.com/devgianlu/shannon v0.0.0-20230613115856-82ec90b7fa7e // indirect
 	github.com/fatih/color v1.19.0 // indirect
 	github.com/godbus/dbus/v5 v5.2.2 // indirect
 	github.com/mattn/go-colorable v0.1.14 // indirect

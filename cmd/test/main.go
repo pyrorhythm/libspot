@@ -35,7 +35,7 @@ func main() {
 
 	slog.SetDefault(logger)
 
-	redirectPort := 4382
+	redirectPort := 9292
 	sess := session.New(
 		session.RedirectPort(redirectPort),
 		session.GracefulContext(ctx),

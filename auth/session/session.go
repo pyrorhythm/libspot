@@ -110,6 +110,7 @@ func applyDefaults(s *session) {
 	s.conf = libspot.DefaultOAuthConfig(9292)
 	s.kcer = store.Zalando[storedCredentials](sessionKey)
 	s.gracefulCtx = context.Background()
+	s.creds = new(storedCredentials)
 }
 
 func New(opts ...Option) Session {
@@ -233,6 +234,10 @@ func (s *session) AuthCode(ctx context.Context, code, pkce string) error {
 
 func (s *session) AccessToken(ctx context.Context, refresh bool) (string, error) {
 	s.mu.RLock()
+	if s.creds.Token == nil {
+		s.mu.RUnlock()
+		return "", ErrNoRefreshToken
+	}
 	valid := s.creds.Valid()
 	accessToken := s.creds.AccessToken
 	refreshToken := s.creds.RefreshToken

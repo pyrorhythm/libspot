@@ -22,6 +22,7 @@ func BadgeSearchFromOpts(kind BadgeOperation, opts *BadgeRequestOpts) *BadgeSear
 	return &BadgeSearchRequest{
 		SearchCommonsRequest: opts.SearchCommonsRequest,
 		Kind:                 kind,
+		SearchTerm:           opts.SearchTerm,
 	}
 }
 
