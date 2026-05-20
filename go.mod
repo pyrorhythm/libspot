@@ -8,7 +8,6 @@ require (
 	github.com/go-jose/go-jose/v4 v4.1.4
 	github.com/goccy/go-json v0.10.6
 	github.com/google/uuid v1.6.0
-	github.com/keybase/go-keychain v0.0.1
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
 	github.com/pkg/errors v0.9.1
 	github.com/pyrorhythm/fn v0.7.4
