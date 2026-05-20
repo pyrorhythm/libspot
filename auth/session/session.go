@@ -15,6 +15,7 @@ import (
 	"sync"
 
 	"github.com/pyrorhythm/libspot"
+	"github.com/pyrorhythm/libspot/auth/server"
 	"github.com/pyrorhythm/libspot/auth/store"
 	"github.com/pyrorhythm/libspot/pkg/keychain"
 	"github.com/pyrorhythm/libspot/resolver"
@@ -49,6 +50,9 @@ type session struct {
 
 	creds *storedCredentials
 	conf  *oauth2.Config
+
+	redirectPort int
+	onAuthURL    func(url string)
 
 	dpopClient *http.Client
 
@@ -91,6 +95,16 @@ type Option func(*session)
 func RedirectPort(c int) Option {
 	return func(s *session) {
 		s.conf = libspot.DefaultOAuthConfig(c)
+		s.redirectPort = c
+	}
+}
+
+// Interactive enables first-run login: when Load finds no stored credentials,
+// it runs the OAuth flow and passes the authorization URL to onAuthURL (e.g. to
+// print it). Without this option Load returns keychain.ErrItemNotFound as before.
+func Interactive(onAuthURL func(url string)) Option {
+	return func(s *session) {
+		s.onAuthURL = onAuthURL
 	}
 }
 
@@ -118,6 +132,9 @@ func applyDefaults(s *session) {
 	}
 	if s.creds == nil {
 		s.creds = new(storedCredentials)
+	}
+	if s.redirectPort == 0 {
+		s.redirectPort = 9292
 	}
 }
 
@@ -315,13 +332,34 @@ func (s *session) DeviceId() string {
 
 func (s *session) Load() error {
 	creds, err := s.kcer.Load(false)
-	if err != nil {
+	if err == nil {
+		s.mu.Lock()
+		s.creds = creds
+		s.mu.Unlock()
+		return nil
+	}
+	if !errors.Is(err, keychain.ErrItemNotFound) || s.onAuthURL == nil {
 		return err
 	}
-	s.mu.Lock()
-	defer s.mu.Unlock()
-	s.creds = creds
-	return nil
+	return s.interactiveAuth(s.gracefulCtx)
+}
+
+// interactiveAuth runs the OAuth flow: it serves the local redirect callback,
+// surfaces the authorization URL via onAuthURL, then exchanges the returned code.
+func (s *session) interactiveAuth(ctx context.Context) error {
+	srvctx, cancel := context.WithCancel(ctx)
+	defer cancel()
+
+	codeCh := server.StartOAuth2Server(srvctx, s.redirectPort)
+	url, pkce := s.AuthUrl("")
+	s.onAuthURL(url)
+
+	select {
+	case code := <-codeCh:
+		return s.AuthCode(ctx, code, pkce)
+	case <-ctx.Done():
+		return ctx.Err()
+	}
 }
 
 func (s *session) Valid() bool {

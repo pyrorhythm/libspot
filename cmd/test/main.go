@@ -9,15 +9,11 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/pkg/browser"
-	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot/auth/server"
 	"github.com/pyrorhythm/libspot/auth/session"
 	"github.com/pyrorhythm/libspot/auth/store"
 	"github.com/pyrorhythm/libspot/dealer"
 	"github.com/pyrorhythm/libspot/pathfinder"
 	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
-	"github.com/pyrorhythm/libspot/pkg/keychain"
 	"github.com/pyrorhythm/zlog"
 )
 
@@ -35,25 +31,15 @@ func main() {
 
 	slog.SetDefault(logger)
 
-	redirectPort := 9292
 	sess := session.New(
-		session.RedirectPort(redirectPort),
+		session.RedirectPort(9292),
 		session.GracefulContext(ctx),
 		session.Keychainer(store.Zalando),
+		session.Interactive(func(url string) {
+			fmt.Println("open this URL to log in:", url)
+		}),
 	)
-	err := sess.Load()
-	if err != nil && errors.Is(err, keychain.ErrItemNotFound) {
-		srvctx, cancel := context.WithCancel(ctx)
-		codeCh := server.StartOAuth2Server(srvctx, redirectPort)
-		url, pkce := sess.AuthUrl("")
-		_ = browser.OpenURL(url)
-		code := <-codeCh
-		cancel()
-		err = sess.AuthCode(ctx, code, pkce)
-		if err != nil {
-			panic(err)
-		}
-	} else if err != nil {
+	if err := sess.Load(); err != nil {
 		panic(err)
 	}
 
