@@ -17,7 +17,7 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v5"
-	"github.com/pyrorhythm/libspot/dh"
+	"github.com/pyrorhythm/libspot/audio/dh"
 	pb "github.com/pyrorhythm/libspot/gen/spotify"
 	"google.golang.org/protobuf/proto"
 )

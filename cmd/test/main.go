@@ -8,12 +8,12 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	"github.com/pyrorhythm/libspot/auth/session"
 	"github.com/pyrorhythm/libspot/auth/store"
+	"github.com/pyrorhythm/libspot/connect"
 	"github.com/pyrorhythm/libspot/dealer"
-	"github.com/pyrorhythm/libspot/pathfinder"
-	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
 	"github.com/pyrorhythm/zlog"
 )
 
@@ -43,59 +43,30 @@ func main() {
 		panic(err)
 	}
 
-	at, err := sess.AccessToken(ctx, true)
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Printf("access token: %s\n", at)
-
 	d, err := startDealer(ctx, sess)
 	if err != nil {
 		panic(err)
 	}
 	defer d.Stop()
 
-	pf := pathfinder.New(sess)
-	sugg, err := pf.Suggestions(
-		ctx, pfq.Suggestions("neonate").
-			WithCommons(pfq.Commons().
-				WithLimit(1).
-				WithTopResults(1)),
-	)
+	time.Sleep(5 * time.Second)
+
+	conn, err := connect.NewFromSession(sess, connect.ConnectOptions{})
 	if err != nil {
-		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
+		panic(err)
 	}
 
-	bs, _ := json.MarshalIndent(sugg, "", "\t")
-	fmt.Println(string(bs))
+	conn.Bind(d)
 
-	top, err := pf.Top(
-		ctx, pfq.Top("neonate").
-			WithCommons(pfq.Commons().
-				WithLimit(1).
-				WithTopResults(1)),
-	)
+	pb, err := conn.Playback(ctx)
 	if err != nil {
-		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
+		panic(err)
 	}
 
-	bs, _ = json.MarshalIndent(top, "", "\t")
+	bs, _ := json.MarshalIndent(pb, "", "\t")
 	fmt.Println(string(bs))
 
-	trck, err := pf.Tracks(
-		ctx, pfq.BadgeOpts().
-			WithTerm("neonate").
-			WithCommons(pfq.Commons().
-				WithLimit(1).
-				WithTopResults(1)),
-	)
-	if err != nil {
-		slog.Log(ctx, zlog.LevelPanic, "failed to query suggestions", "error", err)
-	}
-
-	bs, _ = json.MarshalIndent(trck, "", "\t")
-	fmt.Println(string(bs))
+	conn.Play(ctx, "")
 
 	<-ctx.Done()
 }

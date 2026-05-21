@@ -44,6 +44,7 @@ type Dealer struct {
 	conn   *conn
 	connMu sync.RWMutex
 
+	cidMu        sync.RWMutex
 	connectionId string
 
 	running    atomic.Bool
@@ -135,6 +136,22 @@ func NewFromSession(
 	return New(sess, rslv, opts...), nil
 }
 
+// ConnectionID returns the pusher connection id assigned to the live dealer
+// socket, or "" before the first connection frame arrives. Connect-state
+// controllers register their hidden device against this id so Spotify pushes
+// player state back over this same socket.
+func (d *Dealer) ConnectionID() string {
+	d.cidMu.RLock()
+	defer d.cidMu.RUnlock()
+	return d.connectionId
+}
+
+func (d *Dealer) setConnectionID(id string) {
+	d.cidMu.Lock()
+	defer d.cidMu.Unlock()
+	d.connectionId = id
+}
+
 func (d *Dealer) OnMsg(uri string, cb func(*types.Message)) (unsubscribe func()) {
 	return d.router.onMsgUri(uri, cb)
 }
@@ -154,7 +171,7 @@ func (d *Dealer) Start(ctx context.Context) error {
 	go d.loop(ctx)
 
 	Subscribe(d, TopicConnectionID, func(s string) {
-		d.connectionId = s
+		d.setConnectionID(s)
 	})
 
 	return nil

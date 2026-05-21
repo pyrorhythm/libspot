@@ -13,10 +13,12 @@ func Zalando[T any](key string) keychain.Keychainer[T] {
 	return keychain.NewZalandoKeychainer[T](storeService, key)
 }
 
-// File stores credentials in ~/.libspot as an alternative to the system
-// keychain, useful on headless hosts where no keychain is available.
 func File[T any](key string) keychain.Keychainer[T] {
 	return keychain.NewFileKeychainer[T](storeDir(), key)
+}
+
+func FileCustomDir[T any](key, dir string) keychain.Keychainer[T] {
+	return keychain.NewFileKeychainer[T](dir, key)
 }
 
 func storeDir() string {

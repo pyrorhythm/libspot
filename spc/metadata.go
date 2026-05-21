@@ -59,7 +59,11 @@ func validateGid(id string) (err error) {
 	return err
 }
 
-func Metadata[T metadata.HasMetadataType](c *Spclient, ctx context.Context, gid string) (*T, error) {
+func Metadata[T metadata.HasMetadataType](
+	c *Spclient,
+	ctx context.Context,
+	gid string,
+) (*T, error) {
 	var z T
 
 	if err := validateGid(gid); err != nil {

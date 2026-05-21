@@ -2,10 +2,9 @@ package spc
 
 import (
 	"context"
+	"log/slog"
 	"net/http"
 	"net/url"
-
-	"log/slog"
 
 	"github.com/pkg/errors"
 	"github.com/pyrorhythm/libspot"
@@ -22,10 +21,6 @@ import (
 //	resp, err := c.ExtendedMetadata(ctx, extmetadata.New().
 //		Country("US").Catalogue("premium").
 //		Query("spotify:track:"+id, extmetadata.KindAudioFiles, extmetadata.KindCanvaz))
-//
-// The response groups extensions per requested kind; each EntityExtensionData
-// carries the extension payload as an anypb.Any to be unmarshalled into the
-// concrete type for that kind.
 func (c *Spclient) ExtendedMetadata(
 	ctx context.Context,
 	req *extmetadata.Request,

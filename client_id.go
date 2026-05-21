@@ -3,7 +3,8 @@ package libspot
 import "encoding/hex"
 
 var (
-	ApplicationVer = 128900539
+	DottedApplicationVer = "1.2.89.539"
+	ApplicationVer       = 128900539
 
 	FallbackClientId = []byte{
 		0xd7, 0xdf, 0x08, 0x87,
