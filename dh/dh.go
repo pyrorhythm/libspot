@@ -1,5 +1,7 @@
 // Package dh implements the Diffie-Hellman key agreement used during the
 // Spotify accesspoint handshake.
+//
+// Sourced from devgianlu/go-librespot
 package dh
 
 import (

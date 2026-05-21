@@ -14,16 +14,19 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v5"
+	"github.com/pyrorhythm/libspot"
 )
 
 const (
 	DefaultChunkSize = 512 * 1024
 	PrefetchCount    = 3
-
-	userAgent = "Spotify/128900539 OSX_ARM64/OS X 26.4.0 [arm 2]"
 )
 
 var contentRangeRegexp = regexp.MustCompile(`^bytes (\d+)-(\d+)/(\d+)$`)
+
+func getUserAgent() string {
+	return fmt.Sprintf("Spotify/%d %s", libspot.ApplicationVer, libspot.AppPlatform())
+}
 
 func parseContentRange(resp *http.Response) (start, end, size int64, err error) {
 	header := resp.Header.Get("Content-Range")
@@ -117,7 +120,7 @@ func (r *HttpChunkedReader) downloadChunk(idx int) (*http.Response, error) {
 			Method: http.MethodGet,
 			URL:    r.url,
 			Header: http.Header{
-				"User-Agent": []string{userAgent},
+				"User-Agent": []string{getUserAgent()},
 				"Range": []string{fmt.Sprintf("bytes=%d-%d",
 					idx*DefaultChunkSize,
 					min(max(r.len, DefaultChunkSize), int64((idx+1)*DefaultChunkSize))-1,

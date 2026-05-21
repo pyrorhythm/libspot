@@ -8,6 +8,10 @@ const (
 	TypeArtist MdType = "artist"
 )
 
+type HasMetadataType interface {
+	Type() MdType
+}
+
 const (
 	Path = "metadata/4/{type}/{gid}"
 )

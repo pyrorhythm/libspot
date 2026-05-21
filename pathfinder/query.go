@@ -19,7 +19,7 @@ func (p *Pathfinder) Top(
 	ctx context.Context,
 	rq *pfq.SearchTopRequest,
 ) (*pfs.SearchV2Top, error) {
-	resp, err := p.makeRequest(ctx, rq)
+	resp, err := p.Query(ctx, rq)
 	if err != nil {
 		return nil, err
 	}
@@ -31,7 +31,7 @@ func (p *Pathfinder) Suggestions(
 	ctx context.Context,
 	rq *pfq.SearchSuggestionsRequest,
 ) (*pfs.SearchV2Suggestions, error) {
-	resp, err := p.makeRequest(ctx, rq)
+	resp, err := p.Query(ctx, rq)
 	if err != nil {
 		return nil, err
 	}
@@ -43,7 +43,7 @@ func (p *Pathfinder) Tracks(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Tracks, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchTracks, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchTracks, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -55,7 +55,7 @@ func (p *Pathfinder) Albums(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Albums, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchAlbums, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchAlbums, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -67,7 +67,7 @@ func (p *Pathfinder) Artists(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Artists, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchArtists, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchArtists, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -79,7 +79,7 @@ func (p *Pathfinder) Genres(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Genres, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchGenres, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchGenres, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -90,7 +90,7 @@ func (p *Pathfinder) Users(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Users, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchUsers, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchUsers, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -101,7 +101,7 @@ func (p *Pathfinder) Playlists(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Playlists, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchPlaylists, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchPlaylists, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -112,7 +112,7 @@ func (p *Pathfinder) Podcasts(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Podcasts, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchPodcasts, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchPodcasts, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -123,7 +123,7 @@ func (p *Pathfinder) Episodes(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Episodes, error) {
-	resp, err := p.makeRequest(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchEpisodes, rq))
+	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchEpisodes, rq))
 	if err != nil {
 		return nil, err
 	}
@@ -134,7 +134,7 @@ func (p *Pathfinder) Lookup(
 	ctx context.Context,
 	rq *pfq.SearchSuggestionsRequest,
 ) ([]*pfd.PlaylistPreviewItems, error) {
-	resp, err := p.makeRequest(ctx, rq)
+	resp, err := p.Query(ctx, rq)
 	if err != nil {
 		return nil, err
 	}
@@ -146,7 +146,7 @@ func (p *Pathfinder) GetAlbum(
 	ctx context.Context,
 	rq *pfq.GetAlbumRequest,
 ) (*pfd.AlbumFull, error) {
-	resp, err := p.makeRequest(ctx, rq)
+	resp, err := p.Query(ctx, rq)
 	if err != nil {
 		return nil, err
 	}

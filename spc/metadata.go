@@ -10,11 +10,24 @@ import (
 	"resty.dev/v3"
 )
 
+func (c *Spclient) MetadataTrack(ctx context.Context, gid string) (*metadata.Track, error) {
+	return Metadata[metadata.Track](c, ctx, gid)
+}
+
+func (c *Spclient) MetadataAlbum(ctx context.Context, gid string) (*metadata.Album, error) {
+	return Metadata[metadata.Album](c, ctx, gid)
+}
+
+func (c *Spclient) MetadataArtist(ctx context.Context, gid string) (*metadata.Artist, error) {
+	return Metadata[metadata.Artist](c, ctx, gid)
+}
+
+// -----
+//
+// -----
+
 const origin = "https://xpui.app.spotify.com"
 
-// preflight mirrors the CORS preflight the Spotify web client (xpui) issues
-// before the metadata GET. The server does not strictly require it for a
-// non-browser client, but we replicate the real request flow.
 func preflight(ctx context.Context, rq *resty.Request, method, requestHeaders string) error {
 	resp, err := rq.
 		SetContext(ctx).
@@ -39,10 +52,6 @@ func preflight(ctx context.Context, rq *resty.Request, method, requestHeaders st
 	return nil
 }
 
-type Typable interface {
-	Type() metadata.MdType
-}
-
 func validateGid(id string) (err error) {
 	if _, err = hex.DecodeString(id); err != nil {
 		err = errors.Wrapf(err, "invalid gid %s", id)
@@ -50,7 +59,7 @@ func validateGid(id string) (err error) {
 	return err
 }
 
-func Metadata[T Typable](c *Spclient, ctx context.Context, gid string) (*T, error) {
+func Metadata[T metadata.HasMetadataType](c *Spclient, ctx context.Context, gid string) (*T, error) {
 	var z T
 
 	if err := validateGid(gid); err != nil {

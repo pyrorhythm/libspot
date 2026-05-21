@@ -7,8 +7,6 @@ import (
 	"github.com/pkg/errors"
 	"github.com/pyrorhythm/libspot"
 	pb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
-	audiofilespb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata/audiofiles"
-	metadatapb "github.com/pyrorhythm/libspot/gen/spotify/metadata"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -73,10 +71,3 @@ func (e Extension[T, PT]) Fetch(ctx context.Context, c Client, id libspot.Spotif
 
 	return nil, errors.Errorf("extended metadata %s not found for %s", e.kind, uri)
 }
-
-var (
-	AudioFiles = Define[audiofilespb.AudioFilesExtensionResponse](KindAudioFiles)
-	Track      = Define[metadatapb.Track](KindTrackV4)
-	Album      = Define[metadatapb.Album](KindAlbumV4)
-	Artist     = Define[metadatapb.Artist](KindArtistV4)
-)

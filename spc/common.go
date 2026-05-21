@@ -9,7 +9,6 @@ import (
 	"github.com/pyrorhythm/libspot"
 	"github.com/pyrorhythm/libspot/auth/client"
 	"github.com/pyrorhythm/libspot/spc/extendp"
-	"github.com/pyrorhythm/libspot/spc/metadata"
 	"resty.dev/v3"
 )
 
@@ -29,18 +28,6 @@ func New(prov libspot.TokenProvider, endp libspot.EndpointResolver) *Spclient {
 			NewAuthorizedClient(prov, client.CanRefreshAccessToken(true)).
 			Client(),
 	}
-}
-
-func (c *Spclient) MetadataTrack(ctx context.Context, gid string) (*metadata.Track, error) {
-	return Metadata[metadata.Track](c, ctx, gid)
-}
-
-func (c *Spclient) MetadataAlbum(ctx context.Context, gid string) (*metadata.Album, error) {
-	return Metadata[metadata.Album](c, ctx, gid)
-}
-
-func (c *Spclient) MetadataArtist(ctx context.Context, gid string) (*metadata.Artist, error) {
-	return Metadata[metadata.Artist](c, ctx, gid)
 }
 
 func (c *Spclient) ExtendPlaylist(
