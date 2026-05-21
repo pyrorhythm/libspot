@@ -64,6 +64,7 @@ func main() {
 	}
 
 	bs, _ := json.MarshalIndent(pb, "", "\t")
+
 	fmt.Println(string(bs))
 
 	conn.Play(ctx, "")
