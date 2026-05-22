@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/google/uuid"
+	"github.com/pyrorhythm/zlog"
 )
 
 // LoggingTransport is an http.RoundTripper that logs request and response bodies.
@@ -21,7 +22,10 @@ func (s *LoggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 	}
 	r.Body = io.NopCloser(bytes.NewBuffer(body))
 
-	slog.Debug("request",
+	slog.Log(
+		r.Context(),
+		zlog.LevelTrace,
+		"request",
 		"id", id.String(),
 		"headers", r.Header,
 		"dest", r.URL.String(),
@@ -39,7 +43,10 @@ func (s *LoggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 	}
 	resp.Body = io.NopCloser(bytes.NewBuffer(respBody))
 
-	slog.Debug("response",
+	slog.Log(
+		r.Context(),
+		zlog.LevelTrace,
+		"response",
 		"id", id.String(),
 		"code", resp.StatusCode,
 		"body", string(respBody),

@@ -24,9 +24,7 @@ func (e KeyProviderError) Error() string {
 
 // KeyProvider requests per-file AES audio keys over the accesspoint channel.
 type KeyProvider struct {
-	ap  *ap.Accesspoint
-	log *slog.Logger
-
+	ap           *ap.Accesspoint
 	recvLoopOnce sync.Once
 
 	reqChan  chan keyRequest
@@ -44,9 +42,8 @@ type keyResponse struct {
 	err error
 }
 
-func NewKeyProvider(log *slog.Logger, accesspoint *ap.Accesspoint) *KeyProvider {
+func NewKeyProvider(accesspoint *ap.Accesspoint) *KeyProvider {
 	return &KeyProvider{
-		log:      log,
 		ap:       accesspoint,
 		reqChan:  make(chan keyRequest),
 		stopChan: make(chan struct{}, 1),
@@ -75,7 +72,7 @@ func (p *KeyProvider) recvLoop() {
 
 			req, ok := reqs[respSeq]
 			if !ok {
-				p.log.Warn("received aes key with invalid sequence", "seq", respSeq)
+				slog.Warn("received aes key with invalid sequence", "seq", respSeq)
 				continue
 			}
 
@@ -112,7 +109,7 @@ func (p *KeyProvider) recvLoop() {
 				continue
 			}
 
-			p.log.Debug("requested aes key", "file", hex.EncodeToString(req.fileId), "gid", libspot.GidToBase62(req.gid))
+			slog.Debug("requested aes key", "file", hex.EncodeToString(req.fileId), "gid", libspot.GidToBase62(req.gid))
 		}
 	}
 }

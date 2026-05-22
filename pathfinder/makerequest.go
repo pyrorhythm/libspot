@@ -2,7 +2,8 @@ package pathfinder
 
 import (
 	"context"
-	"fmt"
+
+	"github.com/pkg/errors"
 
 	"github.com/cenkalti/backoff/v5"
 	"pyrorhythm.dev/libspot"
@@ -40,11 +41,11 @@ func (p *Pathfinder) makeRequest(
 			}
 
 			if resp.StatusCode() == 401 {
-				return nil, backoff.Permanent(fmt.Errorf("unauthorized"))
+				return nil, backoff.Permanent(errors.New("unauthorized"))
 			}
 
 			if resp.StatusCode() == 400 {
-				return nil, backoff.Permanent(fmt.Errorf("bad request"))
+				return nil, backoff.Permanent(errors.New("bad request"))
 			}
 
 			if resp.StatusCode() >= 500 {

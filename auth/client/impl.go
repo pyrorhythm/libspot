@@ -25,7 +25,7 @@ func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
 
 	req = req.Clone(ctx)
 	if t.injectClientToken {
-		//slog.Log(ctx, zlog.LevelDebug, "injecting client token")
+		slog.Log(ctx, zlog.LevelTrace, "injecting client token")
 
 		ctok, err := t.prov.ClientToken()
 		if err != nil {
@@ -34,11 +34,11 @@ func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
 		}
 		ctx = zlog.AddToContext(ctx, slog.String("clientToken", ctok))
 
-		//slog.Log(ctx, zlog.LevelDebug, "got client token")
+		slog.Log(ctx, zlog.LevelTrace, "got client token")
 		req.Header.Set("Client-Token", ctok)
 	}
 	if t.injectAccessToken {
-		//slog.Log(ctx, zlog.LevelDebug, "injecting access token")
+		slog.Log(ctx, zlog.LevelTrace, "injecting access token")
 
 		act, err := t.prov.AccessToken(req.Context(), t.canRefreshAccessToken)
 		if err != nil {
@@ -50,10 +50,10 @@ func (t *transport) RoundTrip(req *http.Request) (*http.Response, error) {
 			)
 		}
 		ctx = zlog.AddToContext(ctx, slog.String("accessToken", act))
-		//slog.Log(ctx, zlog.LevelDebug, "got access token")
+		slog.Log(ctx, zlog.LevelTrace, "got access token")
 		req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", act))
 	}
 
-	//slog.Log(ctx, zlog.LevelDebug, "sending request", "req", req)
+	slog.Log(ctx, zlog.LevelTrace, "sending request", "req", req)
 	return t.baseTransport.RoundTrip(req)
 }

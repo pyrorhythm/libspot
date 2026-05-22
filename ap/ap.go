@@ -38,8 +38,6 @@ func (e *AccesspointLoginError) Error() string {
 }
 
 type Accesspoint struct {
-	log *slog.Logger
-
 	addr GetAddressFunc
 
 	nonce    []byte
@@ -65,8 +63,8 @@ type Accesspoint struct {
 	welcome *pb.APWelcome
 }
 
-func NewAccesspoint(log *slog.Logger, addr GetAddressFunc, deviceId string) *Accesspoint {
-	return &Accesspoint{log: log, addr: addr, deviceId: deviceId, recvChans: make(map[PacketType][]chan Packet)}
+func NewAccesspoint(addr GetAddressFunc, deviceId string) *Accesspoint {
+	return &Accesspoint{addr: addr, deviceId: deviceId, recvChans: make(map[PacketType][]chan Packet)}
 }
 
 func (ap *Accesspoint) init(ctx context.Context) (err error) {
@@ -96,12 +94,12 @@ func (ap *Accesspoint) init(ctx context.Context) (err error) {
 		cancel()
 		if err == nil {
 			ap.conn = conn
-			ap.log.Debug("connected to accesspoint", "addr", addr)
+			slog.Debug("connected to accesspoint", "addr", addr)
 			return nil
 		} else if attempts >= 6 {
 			return fmt.Errorf("failed to connect to AP %v: %w", addr, err)
 		}
-		ap.log.Warn("failed to connect to AP, retrying with a different AP", "addr", addr, "error", err)
+		slog.Warn("failed to connect to AP, retrying with a different AP", "addr", addr, "error", err)
 	}
 }
 
@@ -119,7 +117,7 @@ func (ap *Accesspoint) Connect(ctx context.Context, creds *pb.LoginCredentials) 
 
 	_, err := backoff.Retry(ctx, func() (struct{}, error) {
 		if err := ap.connect(ctx, creds); err != nil {
-			ap.log.Warn("failed connecting to accesspoint, retrying", "error", err)
+			slog.Warn("failed connecting to accesspoint, retrying", "error", err)
 			return struct{}{}, err
 		}
 		return struct{}{}, nil
@@ -195,7 +193,7 @@ func (ap *Accesspoint) Receive(types ...PacketType) <-chan Packet {
 
 func (ap *Accesspoint) startReceiving() {
 	ap.recvLoopOnce.Do(func() {
-		ap.log.Debug("starting accesspoint recv loop")
+		slog.Debug("starting accesspoint recv loop")
 		go ap.recvLoop()
 
 		// set last ping in the future
@@ -215,7 +213,7 @@ loop:
 			pkt, payload, err := ap.encConn.receivePacket(context.TODO())
 			if err != nil {
 				if !ap.stop {
-					ap.log.Error("failed receiving packet", "error", err)
+					slog.Error("failed receiving packet", "error", err)
 				}
 				break loop
 			}
@@ -223,7 +221,7 @@ loop:
 			switch pkt {
 			case PacketTypePing:
 				if err := ap.encConn.sendPacket(context.TODO(), PacketTypePong, payload); err != nil {
-					ap.log.Error("failed sending Pong packet", "error", err)
+					slog.Error("failed sending Pong packet", "error", err)
 					break loop
 				}
 			case PacketTypePongAck:
@@ -242,7 +240,7 @@ loop:
 				}
 
 				if !handled {
-					ap.log.Debug("skipping packet", "type", pkt, "len", len(payload))
+					slog.Debug("skipping packet", "type", pkt, "len", len(payload))
 				}
 			}
 		}
@@ -257,7 +255,7 @@ loop:
 		if _, err := backoff.Retry(context.TODO(), func() (struct{}, error) {
 			return struct{}{}, ap.reconnect()
 		}, backoff.WithBackOff(backoff.NewExponentialBackOff())); err != nil {
-			ap.log.Error("failed reconnecting accesspoint", "error", err)
+			slog.Error("failed reconnecting accesspoint", "error", err)
 			ap.connMu.Unlock()
 			ap.Close()
 			return
@@ -293,7 +291,7 @@ func (ap *Accesspoint) pongAckTicker() {
 			timePassed := time.Since(ap.lastPongAck)
 			ap.lastPongAckLock.Unlock()
 			if timePassed > pongAckInterval {
-				ap.log.Error("did not receive last pong ack from accesspoint", "seconds", timePassed.Seconds())
+				slog.Error("did not receive last pong ack from accesspoint", "seconds", timePassed.Seconds())
 				// closing the connection makes the read in recvLoop fail
 				_ = ap.conn.Close()
 			}
@@ -317,7 +315,7 @@ func (ap *Accesspoint) reconnect() error {
 	// if we are here the recvLoop has already died, restart it
 	go ap.recvLoop()
 
-	ap.log.Debug("re-established accesspoint connection")
+	slog.Debug("re-established accesspoint connection")
 	return nil
 }
 
@@ -364,7 +362,7 @@ func (ap *Accesspoint) performKeyExchange() ([]byte, error) {
 	// exchange keys and compute shared secret
 	ap.dh.Exchange(dhChallenge.GetGs())
 
-	ap.log.Debug("completed keyexchange")
+	slog.Debug("completed keyexchange")
 	return cc.Dump(), nil
 }
 
@@ -396,7 +394,7 @@ func (ap *Accesspoint) solveChallenge(exchangeData []byte) error {
 
 	// we are not sure if the challenge is actually completed, we check it in authenticate
 	ap.encConn = newShannonConn(ap.conn, macData[20:52], macData[52:84])
-	ap.log.Debug("completed challenge")
+	slog.Debug("completed challenge")
 	return nil
 }
 
@@ -447,7 +445,7 @@ func (ap *Accesspoint) authenticate(ctx context.Context, credentials *pb.LoginCr
 		}
 
 		ap.welcome = &welcome
-		ap.log.Info("authenticated AP", "username", obfuscateUsername(welcome.GetCanonicalUsername()))
+		slog.Info("authenticated AP", "username", obfuscateUsername(welcome.GetCanonicalUsername()))
 		return nil
 	case PacketTypeAuthFailure:
 		var loginFailed pb.APLoginFailed

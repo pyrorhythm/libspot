@@ -3,7 +3,6 @@ package audio
 import (
 	"context"
 	"fmt"
-	"log/slog"
 	"math/rand/v2"
 
 	"pyrorhythm.dev/libspot"
@@ -13,7 +12,7 @@ import (
 
 // NewKeyProviderFromSession connects an accesspoint using the session's OAuth
 // credentials and returns a KeyProvider ready to request AES audio keys.
-func NewKeyProviderFromSession(ctx context.Context, log *slog.Logger, sess session.Session) (*KeyProvider, error) {
+func NewKeyProviderFromSession(ctx context.Context, sess session.Session) (*KeyProvider, error) {
 	rslv, err := sess.Resolver()
 	if err != nil {
 		return nil, fmt.Errorf("failed to get resolver from session: %w", err)
@@ -33,7 +32,7 @@ func NewKeyProviderFromSession(ctx context.Context, log *slog.Logger, sess sessi
 		return addrs[rand.IntN(len(addrs))]
 	}
 
-	accesspoint := ap.NewAccesspoint(log, addrFn, sess.DeviceId())
+	accesspoint := ap.NewAccesspoint(addrFn, sess.DeviceId())
 
 	token, err := sess.AccessToken(ctx, true)
 	if err != nil {
@@ -44,5 +43,5 @@ func NewKeyProviderFromSession(ctx context.Context, log *slog.Logger, sess sessi
 		return nil, fmt.Errorf("failed to connect accesspoint: %w", err)
 	}
 
-	return NewKeyProvider(log, accesspoint), nil
+	return NewKeyProvider(accesspoint), nil
 }

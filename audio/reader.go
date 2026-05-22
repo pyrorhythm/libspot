@@ -59,7 +59,6 @@ type chunkItem struct {
 // HttpChunkedReader reads a CDN audio resource in fixed-size chunks via HTTP
 // range requests, prefetching ahead and serving random access through ReadAt.
 type HttpChunkedReader struct {
-	log    *slog.Logger
 	client *http.Client
 
 	url *url.URL
@@ -72,8 +71,8 @@ type HttpChunkedReader struct {
 	prefetchWg sync.WaitGroup
 }
 
-func NewHttpChunkedReader(log *slog.Logger, client *http.Client, audioUrl string) (_ *HttpChunkedReader, err error) {
-	r := &HttpChunkedReader{log: log, client: client}
+func NewHttpChunkedReader(client *http.Client, audioUrl string) (_ *HttpChunkedReader, err error) {
+	r := &HttpChunkedReader{client: client}
 
 	r.url, err = url.Parse(audioUrl)
 	if err != nil {
@@ -110,7 +109,7 @@ func NewHttpChunkedReader(log *slog.Logger, client *http.Client, audioUrl string
 		return nil, fmt.Errorf("failed reading first chunk: %w", err)
 	}
 
-	log.Debug("fetched first chunk", "chunks", len(r.chunks), "size", r.len)
+	slog.Debug("fetched first chunk", "chunks", len(r.chunks), "size", r.len)
 	return r, nil
 }
 
@@ -192,7 +191,7 @@ func (r *HttpChunkedReader) fetchChunk(idx int) ([]byte, error) {
 	chunk.Broadcast()
 	chunk.L.Unlock()
 
-	r.log.Debug("fetched chunk", "idx", idx, "total", len(r.chunks)-1, "size", len(data))
+	slog.Debug("fetched chunk", "idx", idx, "total", len(r.chunks)-1, "size", len(data))
 	return data, nil
 }
 

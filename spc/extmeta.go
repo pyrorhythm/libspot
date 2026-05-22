@@ -2,12 +2,10 @@ package spc
 
 import (
 	"context"
-	"log/slog"
 	"net/http"
 	"net/url"
 
 	"github.com/pkg/errors"
-	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
 	"pyrorhythm.dev/libspot"
 	extmetadatapb "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata"
@@ -39,8 +37,6 @@ func (c *Spclient) ExtendedMetadata(
 	); err != nil {
 		return nil, errors.Wrap(err, "failed to fetch extended metadata")
 	}
-
-	slog.Debug("extended metadata", "resp", protojson.Format(resp))
 
 	return resp, nil
 }

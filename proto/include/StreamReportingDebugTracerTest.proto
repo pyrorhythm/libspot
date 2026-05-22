@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package spotify.event_sender.proto;
 
-message StreamReportingDebugTracerTest {
+message StreamReportingTracerTest {
   optional int64 event_schema_version = 1;
   optional int64 message_version = 2;
   optional bytes playback_id = 3;
