@@ -7,7 +7,7 @@
 package playbacksettings
 
 import (
-	media "github.com/pyrorhythm/libspot/gen/spotify/common/media"
+	media "pyrorhythm.dev/libspot/gen/spotify/common/media"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

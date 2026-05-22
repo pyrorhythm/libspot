@@ -7,7 +7,7 @@
 package v1
 
 import (
-	v3 "github.com/pyrorhythm/libspot/gen/spotify/identity/v3"
+	v3 "pyrorhythm.dev/libspot/gen/spotify/identity/v3"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

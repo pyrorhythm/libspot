@@ -7,8 +7,8 @@
 package playlist
 
 import (
-	esperanto "github.com/pyrorhythm/libspot/gen/spotify/player/esperanto"
-	playlist_esperanto "github.com/pyrorhythm/libspot/gen/spotify/playlist_esperanto"
+	esperanto "pyrorhythm.dev/libspot/gen/spotify/player/esperanto"
+	playlist_esperanto "pyrorhythm.dev/libspot/gen/spotify/playlist_esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

@@ -14,12 +14,12 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth/server"
-	"github.com/pyrorhythm/libspot/auth/store"
-	"github.com/pyrorhythm/libspot/pkg/keychain"
-	"github.com/pyrorhythm/libspot/resolver"
 	"golang.org/x/oauth2"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/auth/server"
+	"pyrorhythm.dev/libspot/auth/store"
+	"pyrorhythm.dev/libspot/pkg/keychain"
+	"pyrorhythm.dev/libspot/resolver"
 )
 
 const sessionKey = "authorizationData"

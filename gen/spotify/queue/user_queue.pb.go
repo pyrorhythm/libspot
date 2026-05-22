@@ -7,7 +7,7 @@
 package queue
 
 import (
-	timeline_reporter "github.com/pyrorhythm/libspot/gen/spotify/timeline_reporter"
+	timeline_reporter "pyrorhythm.dev/libspot/gen/spotify/timeline_reporter"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

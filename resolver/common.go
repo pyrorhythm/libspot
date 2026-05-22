@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v5"
-	"github.com/pyrorhythm/fn"
-	"github.com/pyrorhythm/fn/bjs"
-	"github.com/pyrorhythm/libspot"
+	"pyrorhythm.dev/fn"
+	"pyrorhythm.dev/fn/bjs"
+	"pyrorhythm.dev/libspot"
 	"resty.dev/v3"
 )
 

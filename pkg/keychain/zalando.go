@@ -6,8 +6,8 @@ import (
 	"fmt"
 
 	"github.com/goccy/go-json"
-	"github.com/pyrorhythm/fn/errs"
 	"github.com/zalando/go-keyring"
+	"pyrorhythm.dev/fn/errs"
 )
 
 var _ Keychainer[any] = (*zalandoKeychainer[any])(nil)

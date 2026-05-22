@@ -7,11 +7,11 @@
 package show_esperanto
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
-	esperanto "github.com/pyrorhythm/libspot/gen/spotify/player/esperanto"
-	show_cosmos "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos"
-	decorate_request "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos/decorate_request"
-	unfinished_episodes_request "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos/unfinished_episodes_request"
+	cosmos_util "pyrorhythm.dev/libspot/gen/spotify/cosmos_util"
+	esperanto "pyrorhythm.dev/libspot/gen/spotify/player/esperanto"
+	show_cosmos "pyrorhythm.dev/libspot/gen/spotify/show_cosmos"
+	decorate_request "pyrorhythm.dev/libspot/gen/spotify/show_cosmos/decorate_request"
+	unfinished_episodes_request "pyrorhythm.dev/libspot/gen/spotify/show_cosmos/unfinished_episodes_request"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

@@ -7,7 +7,7 @@
 package remote_config_esperanto
 
 import (
-	remote_config "github.com/pyrorhythm/libspot/gen/spotify/remote_config"
+	remote_config "pyrorhythm.dev/libspot/gen/spotify/remote_config"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"

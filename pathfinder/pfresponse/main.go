@@ -1,6 +1,6 @@
 package pfresponse
 
-import pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+import pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
 
 type Response struct {
 	SearchV2       *SearchV2       `json:"searchV2"`

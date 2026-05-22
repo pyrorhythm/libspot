@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/pyrorhythm/libspot/dealer/types"
+	"pyrorhythm.dev/libspot/dealer/types"
 )
 
 type router struct {

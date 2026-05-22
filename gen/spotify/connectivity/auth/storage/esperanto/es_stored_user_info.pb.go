@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	esperanto "github.com/pyrorhythm/libspot/gen/spotify/connectivity/auth/common/esperanto"
+	esperanto "pyrorhythm.dev/libspot/gen/spotify/connectivity/auth/common/esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	structpb "google.golang.org/protobuf/types/known/structpb"

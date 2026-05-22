@@ -1,6 +1,6 @@
 package pfresponse
 
-import pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+import pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
 
 type SearchV2Albums struct {
 	*Items[pfd.Album] `json:"albumsV2,omitempty"`

@@ -7,7 +7,7 @@
 package player
 
 import (
-	sequence "github.com/pyrorhythm/libspot/gen/spotify/player/sequence"
+	sequence "pyrorhythm.dev/libspot/gen/spotify/player/sequence"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

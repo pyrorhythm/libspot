@@ -7,11 +7,11 @@ import (
 	"net/url"
 
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot"
-	extmetadatapb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
-	"github.com/pyrorhythm/libspot/spc/extmetadata"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
+	"pyrorhythm.dev/libspot"
+	extmetadatapb "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata"
+	"pyrorhythm.dev/libspot/spc/extmetadata"
 )
 
 // ExtendedMetadata fetches batched per-entity extensions (audio files, canvas,

@@ -17,9 +17,9 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v5"
-	"github.com/pyrorhythm/libspot/audio/dh"
-	pb "github.com/pyrorhythm/libspot/gen/spotify"
 	"google.golang.org/protobuf/proto"
+	"pyrorhythm.dev/libspot/audio/dh"
+	pb "pyrorhythm.dev/libspot/gen/spotify"
 )
 
 const pongAckInterval = 120 * time.Second

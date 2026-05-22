@@ -7,7 +7,7 @@
 package sequence
 
 import (
-	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1"
+	v1 "pyrorhythm.dev/libspot/gen/spotify/playback_platform/context/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

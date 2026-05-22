@@ -1,9 +1,9 @@
 package pathfinder
 
 import (
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth/client"
-	"github.com/pyrorhythm/libspot/pkg/transport"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/auth/client"
+	"pyrorhythm.dev/libspot/pkg/transport"
 	"resty.dev/v3"
 )
 

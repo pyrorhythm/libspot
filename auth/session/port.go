@@ -3,7 +3,7 @@ package session
 import (
 	"context"
 
-	"github.com/pyrorhythm/libspot"
+	"pyrorhythm.dev/libspot"
 )
 
 type Session interface {

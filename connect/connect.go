@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth/client"
-	"github.com/pyrorhythm/libspot/auth/session"
-	"github.com/pyrorhythm/libspot/dealer"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/auth/client"
+	"pyrorhythm.dev/libspot/auth/session"
+	"pyrorhythm.dev/libspot/dealer"
 	"resty.dev/v3"
 )
 

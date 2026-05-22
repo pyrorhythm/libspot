@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/cenkalti/backoff/v5"
-	"github.com/pyrorhythm/libspot"
-	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
-	pfs "github.com/pyrorhythm/libspot/pathfinder/pfresponse"
+	"pyrorhythm.dev/libspot"
+	pfq "pyrorhythm.dev/libspot/pathfinder/pfrequest"
+	pfs "pyrorhythm.dev/libspot/pathfinder/pfresponse"
 	"resty.dev/v3"
 )
 

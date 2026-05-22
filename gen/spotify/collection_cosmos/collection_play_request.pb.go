@@ -7,7 +7,7 @@
 package collection_cosmos
 
 import (
-	esperanto "github.com/pyrorhythm/libspot/gen/spotify/player/esperanto"
+	esperanto "pyrorhythm.dev/libspot/gen/spotify/player/esperanto"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/pyrorhythm/libspot"
 	"github.com/pyrorhythm/zlog"
+	"pyrorhythm.dev/libspot"
 )
 
 type transport struct {

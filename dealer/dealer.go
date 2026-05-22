@@ -8,11 +8,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pyrorhythm/fn"
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth/session"
-	"github.com/pyrorhythm/libspot/dealer/types"
-	"github.com/pyrorhythm/libspot/pkg/delay"
+	"pyrorhythm.dev/fn"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/auth/session"
+	"pyrorhythm.dev/libspot/dealer/types"
+	"pyrorhythm.dev/libspot/pkg/delay"
 )
 
 var (

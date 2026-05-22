@@ -7,7 +7,7 @@
 package itemdata
 
 import (
-	save_source "github.com/pyrorhythm/libspot/gen/spotify/list_collection/save_source"
+	save_source "pyrorhythm.dev/libspot/gen/spotify/list_collection/save_source"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"

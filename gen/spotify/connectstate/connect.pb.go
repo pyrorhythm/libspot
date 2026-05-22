@@ -7,8 +7,8 @@
 package connectstate
 
 import (
-	media "github.com/pyrorhythm/libspot/gen/spotify/common/media"
-	devices "github.com/pyrorhythm/libspot/gen/spotify/connectstate/devices"
+	media "pyrorhythm.dev/libspot/gen/spotify/common/media"
+	devices "pyrorhythm.dev/libspot/gen/spotify/connectstate/devices"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

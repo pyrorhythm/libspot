@@ -5,8 +5,8 @@ import (
 
 	"github.com/cenkalti/backoff/v5"
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/fn/bjs"
-	"github.com/pyrorhythm/libspot"
+	"pyrorhythm.dev/fn/bjs"
+	"pyrorhythm.dev/libspot"
 	"resty.dev/v3"
 )
 

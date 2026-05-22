@@ -7,7 +7,7 @@
 package v1
 
 import (
-	model "github.com/pyrorhythm/libspot/gen/spotify/list/v1/model"
+	model "pyrorhythm.dev/libspot/gen/spotify/list/v1/model"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

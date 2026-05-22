@@ -6,7 +6,7 @@ import (
 	"time"
 
 	ws "github.com/coder/websocket"
-	"github.com/pyrorhythm/libspot/dealer/types"
+	"pyrorhythm.dev/libspot/dealer/types"
 )
 
 func (d *Dealer) loop(ctx context.Context) {

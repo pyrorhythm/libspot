@@ -7,7 +7,7 @@
 package cosmos_util
 
 import (
-	extendedmetadata "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
+	extendedmetadata "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

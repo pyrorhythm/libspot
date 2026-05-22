@@ -1,6 +1,6 @@
 package extmetadata
 
-import pb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
+import pb "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata"
 
 type ExtensionKind = pb.ExtensionKind
 

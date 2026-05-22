@@ -1,6 +1,6 @@
 package pfrequest
 
-import pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+import pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
 
 type Payload[T Request] struct {
 	Variables     T               `json:"variables"`

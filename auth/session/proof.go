@@ -5,8 +5,8 @@ import (
 	"crypto/ecdsa"
 	"net/http"
 
-	"github.com/pyrorhythm/libspot/pkg/dpop"
-	"github.com/pyrorhythm/libspot/pkg/transport"
+	"pyrorhythm.dev/libspot/pkg/dpop"
+	"pyrorhythm.dev/libspot/pkg/transport"
 )
 
 func newSessionDpopClient(

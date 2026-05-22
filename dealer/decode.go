@@ -12,9 +12,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/valyala/fastjson"
 
-	"github.com/pyrorhythm/fn/bjs"
-	"github.com/pyrorhythm/libspot/dealer/types"
 	"google.golang.org/protobuf/proto"
+	"pyrorhythm.dev/fn/bjs"
+	"pyrorhythm.dev/libspot/dealer/types"
 )
 
 var (

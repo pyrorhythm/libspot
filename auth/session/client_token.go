@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"runtime"
 
-	"github.com/pyrorhythm/libspot"
-	datav0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/data/v0"
-	httpv0 "github.com/pyrorhythm/libspot/gen/spotify/clienttoken/http/v0"
 	"google.golang.org/protobuf/proto"
+	"pyrorhythm.dev/libspot"
+	datav0 "pyrorhythm.dev/libspot/gen/spotify/clienttoken/data/v0"
+	httpv0 "pyrorhythm.dev/libspot/gen/spotify/clienttoken/http/v0"
 	"resty.dev/v3"
 )
 

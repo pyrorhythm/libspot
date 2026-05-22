@@ -7,7 +7,7 @@
 package collection_platform
 
 import (
-	itemdata "github.com/pyrorhythm/libspot/gen/spotify/collection/itemdata"
+	itemdata "pyrorhythm.dev/libspot/gen/spotify/collection/itemdata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

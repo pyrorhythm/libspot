@@ -7,9 +7,9 @@
 package playlist4
 
 import (
-	lens "github.com/pyrorhythm/libspot/gen/spotify/lens"
-	signal "github.com/pyrorhythm/libspot/gen/spotify/playlist/signal"
-	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
+	lens "pyrorhythm.dev/libspot/gen/spotify/lens"
+	signal "pyrorhythm.dev/libspot/gen/spotify/playlist/signal"
+	playlist_permission "pyrorhythm.dev/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

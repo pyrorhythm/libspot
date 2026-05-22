@@ -9,7 +9,7 @@ import (
 	"time"
 
 	ws "github.com/coder/websocket"
-	"github.com/pyrorhythm/libspot"
+	"pyrorhythm.dev/libspot"
 )
 
 var ErrEndpointRetriesExceeded = errors.New("dealer: endpoint retries exceeded")

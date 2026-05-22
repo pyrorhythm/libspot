@@ -6,9 +6,9 @@ import (
 
 	"github.com/goccy/go-json"
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/auth/client"
-	"github.com/pyrorhythm/libspot/spc/extendp"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/auth/client"
+	"pyrorhythm.dev/libspot/spc/extendp"
 	"resty.dev/v3"
 )
 

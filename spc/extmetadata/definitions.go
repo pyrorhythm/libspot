@@ -1,8 +1,8 @@
 package extmetadata
 
 import (
-	audiofilespb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata/audiofiles"
-	metadatapb "github.com/pyrorhythm/libspot/gen/spotify/metadata"
+	audiofilespb "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata/audiofiles"
+	metadatapb "pyrorhythm.dev/libspot/gen/spotify/metadata"
 )
 
 var (

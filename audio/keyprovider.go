@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/ap"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/ap"
 )
 
 type KeyProviderError struct {

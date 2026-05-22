@@ -1,4 +1,4 @@
-module github.com/pyrorhythm/libspot
+module pyrorhythm.dev/libspot
 
 go 1.26.1
 
@@ -10,13 +10,13 @@ require (
 	github.com/goccy/go-json v0.10.6
 	github.com/google/uuid v1.6.0
 	github.com/pkg/errors v0.9.1
-	github.com/pyrorhythm/fn v0.7.4
 	github.com/pyrorhythm/zlog v0.8.0
 	github.com/valyala/fastjson v1.6.10
 	github.com/zalando/go-keyring v0.2.8
 	golang.org/x/oauth2 v0.36.0
 	golang.org/x/sync v0.20.0
 	google.golang.org/protobuf v1.36.11
+	pyrorhythm.dev/fn v0.7.5
 	resty.dev/v3 v3.0.0-beta.6
 )
 

@@ -7,7 +7,7 @@
 package search_esperanto
 
 import (
-	search "github.com/pyrorhythm/libspot/gen/spotify/search"
+	search "pyrorhythm.dev/libspot/gen/spotify/search"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

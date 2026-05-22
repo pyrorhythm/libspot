@@ -1,7 +1,7 @@
 package extmetadata
 
 import (
-	pb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
+	pb "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata"
 )
 
 const Path = "extended-metadata/v0/extended-metadata"

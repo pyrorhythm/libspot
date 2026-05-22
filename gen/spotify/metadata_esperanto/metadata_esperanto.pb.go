@@ -7,7 +7,7 @@
 package metadata_esperanto
 
 import (
-	metadata_cosmos "github.com/pyrorhythm/libspot/gen/spotify/metadata_cosmos"
+	metadata_cosmos "pyrorhythm.dev/libspot/gen/spotify/metadata_cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

@@ -7,7 +7,7 @@
 package playback
 
 import (
-	podcast_segments "github.com/pyrorhythm/libspot/gen/spotify/podcast_segments"
+	podcast_segments "pyrorhythm.dev/libspot/gen/spotify/podcast_segments"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

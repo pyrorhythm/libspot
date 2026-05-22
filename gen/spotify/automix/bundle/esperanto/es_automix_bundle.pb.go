@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	bundle "github.com/pyrorhythm/libspot/gen/spotify/automix/bundle"
+	bundle "pyrorhythm.dev/libspot/gen/spotify/automix/bundle"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

@@ -7,8 +7,8 @@
 package v1
 
 import (
-	v11 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/common/v1"
-	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/timeline/v1"
+	v11 "pyrorhythm.dev/libspot/gen/spotify/playback_platform/common/v1"
+	v1 "pyrorhythm.dev/libspot/gen/spotify/playback_platform/timeline/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"

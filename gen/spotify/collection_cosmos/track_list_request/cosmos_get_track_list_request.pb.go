@@ -7,7 +7,7 @@
 package track_list_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
+	cosmos_util "pyrorhythm.dev/libspot/gen/spotify/cosmos_util"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

@@ -7,7 +7,7 @@
 package your_library
 
 import (
-	collection "github.com/pyrorhythm/libspot/gen/spotify/collection"
+	collection "pyrorhythm.dev/libspot/gen/spotify/collection"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

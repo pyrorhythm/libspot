@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 
 	"github.com/goccy/go-json"
-	"github.com/pyrorhythm/fn/errs"
+	"pyrorhythm.dev/fn/errs"
 )
 
 var _ Keychainer[any] = (*fileKeychainer[any])(nil)

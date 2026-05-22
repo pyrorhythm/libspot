@@ -7,7 +7,7 @@
 package v1
 
 import (
-	behavior "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/context/v1/behavior"
+	behavior "pyrorhythm.dev/libspot/gen/spotify/playback_platform/context/v1/behavior"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

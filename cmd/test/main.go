@@ -10,11 +10,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/pyrorhythm/libspot/auth/session"
-	"github.com/pyrorhythm/libspot/auth/store"
-	"github.com/pyrorhythm/libspot/connect"
-	"github.com/pyrorhythm/libspot/dealer"
 	"github.com/pyrorhythm/zlog"
+	"pyrorhythm.dev/libspot/auth/session"
+	"pyrorhythm.dev/libspot/auth/store"
+	"pyrorhythm.dev/libspot/connect"
+	"pyrorhythm.dev/libspot/dealer"
 )
 
 func main() {

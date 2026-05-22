@@ -7,7 +7,7 @@
 package esperanto
 
 import (
-	imageresolve "github.com/pyrorhythm/libspot/gen/spotify/imageresolve"
+	imageresolve "pyrorhythm.dev/libspot/gen/spotify/imageresolve"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"

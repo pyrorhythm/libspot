@@ -7,8 +7,8 @@
 package transfer
 
 import (
-	player "github.com/pyrorhythm/libspot/gen/spotify/player"
-	playlist "github.com/pyrorhythm/libspot/gen/spotify/playlist"
+	player "pyrorhythm.dev/libspot/gen/spotify/player"
+	playlist "pyrorhythm.dev/libspot/gen/spotify/playlist"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

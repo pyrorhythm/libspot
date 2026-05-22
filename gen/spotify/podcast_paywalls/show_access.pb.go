@@ -7,7 +7,7 @@
 package podcast_paywalls
 
 import (
-	v1 "github.com/pyrorhythm/libspot/gen/spotify/audiobookcashier/v1"
+	v1 "pyrorhythm.dev/libspot/gen/spotify/audiobookcashier/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

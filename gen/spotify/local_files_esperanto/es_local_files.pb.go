@@ -7,8 +7,8 @@
 package local_files_esperanto
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
-	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
+	cosmos_util "pyrorhythm.dev/libspot/gen/spotify/cosmos_util"
+	cosmos "pyrorhythm.dev/libspot/gen/spotify/playlist/cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"

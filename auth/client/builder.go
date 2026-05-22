@@ -3,7 +3,7 @@ package client
 import (
 	"net/http"
 
-	"github.com/pyrorhythm/libspot"
+	"pyrorhythm.dev/libspot"
 	"resty.dev/v3"
 )
 

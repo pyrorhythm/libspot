@@ -7,9 +7,9 @@
 package playlist_cache
 
 import (
-	messages "github.com/pyrorhythm/libspot/gen/spotify/playlist/messages"
-	playlist4 "github.com/pyrorhythm/libspot/gen/spotify/playlist4"
-	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
+	messages "pyrorhythm.dev/libspot/gen/spotify/playlist/messages"
+	playlist4 "pyrorhythm.dev/libspot/gen/spotify/playlist4"
+	playlist_permission "pyrorhythm.dev/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"

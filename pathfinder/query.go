@@ -3,9 +3,9 @@ package pathfinder
 import (
 	"context"
 
-	pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
-	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
-	pfs "github.com/pyrorhythm/libspot/pathfinder/pfresponse"
+	pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
+	pfq "pyrorhythm.dev/libspot/pathfinder/pfrequest"
+	pfs "pyrorhythm.dev/libspot/pathfinder/pfresponse"
 )
 
 func (p *Pathfinder) Query(

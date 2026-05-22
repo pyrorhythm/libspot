@@ -6,8 +6,8 @@ import (
 
 	"github.com/cenkalti/backoff/v5"
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot"
 	"google.golang.org/protobuf/proto"
+	"pyrorhythm.dev/libspot"
 	"resty.dev/v3"
 )
 

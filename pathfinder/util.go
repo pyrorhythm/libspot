@@ -3,10 +3,10 @@ package pathfinder
 import (
 	"encoding/json"
 
-	"github.com/pyrorhythm/fn/bjs"
-	pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
-	pfq "github.com/pyrorhythm/libspot/pathfinder/pfrequest"
-	pfs "github.com/pyrorhythm/libspot/pathfinder/pfresponse"
+	"pyrorhythm.dev/fn/bjs"
+	pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
+	pfq "pyrorhythm.dev/libspot/pathfinder/pfrequest"
+	pfs "pyrorhythm.dev/libspot/pathfinder/pfresponse"
 )
 
 func AsPayload[T pfq.Request](t T) pfq.Payload[T] {

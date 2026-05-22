@@ -7,8 +7,8 @@
 package playlist_esperanto
 
 import (
-	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
-	rootlist_request "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos/rootlist_request"
+	cosmos "pyrorhythm.dev/libspot/gen/spotify/playlist/cosmos"
+	rootlist_request "pyrorhythm.dev/libspot/gen/spotify/playlist/cosmos/rootlist_request"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

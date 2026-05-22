@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot/spc/metadata"
+	"pyrorhythm.dev/libspot/spc/metadata"
 	"resty.dev/v3"
 )
 

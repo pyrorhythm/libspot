@@ -7,7 +7,7 @@
 package cosmos
 
 import (
-	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
+	playlist_permission "pyrorhythm.dev/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

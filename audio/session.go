@@ -6,9 +6,9 @@ import (
 	"log/slog"
 	"math/rand/v2"
 
-	"github.com/pyrorhythm/libspot"
-	"github.com/pyrorhythm/libspot/ap"
-	"github.com/pyrorhythm/libspot/auth/session"
+	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/ap"
+	"pyrorhythm.dev/libspot/auth/session"
 )
 
 // NewKeyProviderFromSession connects an accesspoint using the session's OAuth

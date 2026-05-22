@@ -5,8 +5,8 @@ import (
 	"log/slog"
 
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/fn/bjs"
 	"github.com/valyala/fastjson"
+	"pyrorhythm.dev/fn/bjs"
 )
 
 var (

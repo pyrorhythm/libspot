@@ -7,8 +7,8 @@
 package v2
 
 import (
-	audiophile "github.com/pyrorhythm/libspot/gen/spotify/audiophile"
-	v1 "github.com/pyrorhythm/libspot/gen/spotify/playback_platform/transition/v1"
+	audiophile "pyrorhythm.dev/libspot/gen/spotify/audiophile"
+	v1 "pyrorhythm.dev/libspot/gen/spotify/playback_platform/transition/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"

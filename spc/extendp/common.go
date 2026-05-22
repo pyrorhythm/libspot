@@ -1,7 +1,7 @@
 package extendp
 
 import (
-	"github.com/pyrorhythm/libspot/spc/metadata"
+	"pyrorhythm.dev/libspot/spc/metadata"
 )
 
 const Path = "playlistextender/extendp"

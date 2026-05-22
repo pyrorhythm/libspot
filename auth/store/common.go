@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/pyrorhythm/libspot/pkg/keychain"
+	"pyrorhythm.dev/libspot/pkg/keychain"
 )
 
 const storeService = "com.pyrorhythm.libspot"

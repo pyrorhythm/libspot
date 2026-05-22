@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v5"
-	"github.com/pyrorhythm/libspot"
+	"pyrorhythm.dev/libspot"
 )
 
 const (

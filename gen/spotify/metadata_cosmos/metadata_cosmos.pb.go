@@ -7,7 +7,7 @@
 package metadata_cosmos
 
 import (
-	metadata "github.com/pyrorhythm/libspot/gen/spotify/metadata"
+	metadata "pyrorhythm.dev/libspot/gen/spotify/metadata"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

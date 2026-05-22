@@ -1,6 +1,6 @@
 package pfresponse
 
-import pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+import pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
 
 type RecentSearches struct {
 	Items pfd.ItemList[pfd.Oneof] `json:"recentSearchesItems"`

@@ -1,11 +1,11 @@
 package dealer
 
 import (
-	"github.com/pyrorhythm/libspot/dealer/types"
-	"github.com/pyrorhythm/libspot/gen/spotify/connectstate"
-	"github.com/pyrorhythm/libspot/gen/spotify/parental_controls"
-	"github.com/pyrorhythm/libspot/gen/spotify/playbacksettings/pubsub"
-	"github.com/pyrorhythm/libspot/gen/spotify/playlist4"
+	"pyrorhythm.dev/libspot/dealer/types"
+	"pyrorhythm.dev/libspot/gen/spotify/connectstate"
+	"pyrorhythm.dev/libspot/gen/spotify/parental_controls"
+	"pyrorhythm.dev/libspot/gen/spotify/playbacksettings/pubsub"
+	"pyrorhythm.dev/libspot/gen/spotify/playlist4"
 )
 
 // TypedDecoder converts a raw dealer Message into a concrete typed value T.

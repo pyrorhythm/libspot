@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 
-	pb "github.com/pyrorhythm/libspot/gen/spotify"
+	pb "pyrorhythm.dev/libspot/gen/spotify"
 )
 
 // SpotifyVersionCode is the client version advertised during the handshake.

@@ -5,9 +5,9 @@ import (
 	"net/http"
 
 	"github.com/pkg/errors"
-	"github.com/pyrorhythm/libspot"
-	pb "github.com/pyrorhythm/libspot/gen/spotify/extendedmetadata"
 	"google.golang.org/protobuf/proto"
+	"pyrorhythm.dev/libspot"
+	pb "pyrorhythm.dev/libspot/gen/spotify/extendedmetadata"
 )
 
 type Client interface {

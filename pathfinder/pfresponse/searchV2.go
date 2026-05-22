@@ -1,7 +1,7 @@
 package pfresponse
 
 import (
-	pfd "github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+	pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
 )
 
 type SearchV2 struct {

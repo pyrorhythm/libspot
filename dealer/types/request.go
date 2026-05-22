@@ -1,8 +1,8 @@
 package types
 
 import (
-	"github.com/pyrorhythm/libspot/gen/spotify/connectstate"
-	"github.com/pyrorhythm/libspot/gen/spotify/player"
+	"pyrorhythm.dev/libspot/gen/spotify/connectstate"
+	"pyrorhythm.dev/libspot/gen/spotify/player"
 )
 
 type Request struct {
@@ -42,7 +42,7 @@ type Command struct {
 	Endpoint             string                   `json:"endpoint"`
 	SessionId            string                   `json:"session_id"`
 	Data                 []byte                   `json:"data"`
-	Value                interface{}              `json:"value"`
+	Value                any                      `json:"value"`
 	Position             int64                    `json:"position"`
 	Relative             string                   `json:"relative"`
 	Context              *player.Context          `json:"context"`

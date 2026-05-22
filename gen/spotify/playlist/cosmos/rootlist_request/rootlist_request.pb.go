@@ -7,9 +7,9 @@
 package rootlist_request
 
 import (
-	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
-	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
-	spotifybuf_deltas "github.com/pyrorhythm/libspot/gen/spotifybuf_deltas"
+	cosmos "pyrorhythm.dev/libspot/gen/spotify/playlist/cosmos"
+	playlist_permission "pyrorhythm.dev/libspot/gen/spotify/playlist_permission"
+	spotifybuf_deltas "pyrorhythm.dev/libspot/gen/spotifybuf_deltas"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

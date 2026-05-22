@@ -7,8 +7,8 @@
 package unfinished_episodes_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
-	show_cosmos "github.com/pyrorhythm/libspot/gen/spotify/show_cosmos"
+	cosmos_util "pyrorhythm.dev/libspot/gen/spotify/cosmos_util"
+	show_cosmos "pyrorhythm.dev/libspot/gen/spotify/show_cosmos"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

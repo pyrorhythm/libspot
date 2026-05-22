@@ -1,7 +1,7 @@
 package pfrequest
 
 import (
-	"github.com/pyrorhythm/libspot/pathfinder/pfdomain"
+	"pyrorhythm.dev/libspot/pathfinder/pfdomain"
 )
 
 type SearchTopRequest struct {

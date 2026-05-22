@@ -8,8 +8,8 @@ import (
 	"net/url"
 
 	"github.com/pkg/errors"
-	downloadpb "github.com/pyrorhythm/libspot/gen/spotify/download"
-	metadatapb "github.com/pyrorhythm/libspot/gen/spotify/metadata"
+	downloadpb "pyrorhythm.dev/libspot/gen/spotify/download"
+	metadatapb "pyrorhythm.dev/libspot/gen/spotify/metadata"
 )
 
 // ResolveStorageInteractive resolves the CDN storage for an interactive audio

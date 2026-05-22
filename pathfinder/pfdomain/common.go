@@ -1,6 +1,6 @@
 package pfdomain
 
-import "github.com/pyrorhythm/fn"
+import "pyrorhythm.dev/fn"
 
 type Data[T any] struct {
 	Data *T `json:"data"`

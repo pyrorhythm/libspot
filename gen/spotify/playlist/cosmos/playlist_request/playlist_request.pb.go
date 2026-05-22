@@ -7,10 +7,10 @@
 package playlist_request
 
 import (
-	cosmos_util "github.com/pyrorhythm/libspot/gen/spotify/cosmos_util"
-	on_demand_set "github.com/pyrorhythm/libspot/gen/spotify/on_demand_set"
-	cosmos "github.com/pyrorhythm/libspot/gen/spotify/playlist/cosmos"
-	playlist_permission "github.com/pyrorhythm/libspot/gen/spotify/playlist_permission"
+	cosmos_util "pyrorhythm.dev/libspot/gen/spotify/cosmos_util"
+	on_demand_set "pyrorhythm.dev/libspot/gen/spotify/on_demand_set"
+	cosmos "pyrorhythm.dev/libspot/gen/spotify/playlist/cosmos"
+	playlist_permission "pyrorhythm.dev/libspot/gen/spotify/playlist_permission"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"

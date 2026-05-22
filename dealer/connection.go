@@ -8,8 +8,8 @@ import (
 	"time"
 
 	ws "github.com/coder/websocket"
-	"github.com/pyrorhythm/libspot/dealer/types"
 	"golang.org/x/sync/errgroup"
+	"pyrorhythm.dev/libspot/dealer/types"
 )
 
 const maxReqHandlers = 16
