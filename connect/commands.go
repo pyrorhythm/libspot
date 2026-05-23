@@ -45,29 +45,29 @@ func (c *Connect) Play(ctx context.Context, uri string) error {
 			state.ActiveDeviceID = targetID
 		}
 		if uri == "" {
-			return c.sendPlayerCommand(ctx, state, "resume", nil)
+			return c.sendPlayerCommand(ctx, state, newSimpleCommand(EndpointResume))
 		}
-		return c.sendPlayerCommand(ctx, state, "play", newPlayCommand(uri))
+		return c.sendPlayerCommand(ctx, state, newPlayCommand(uri))
 	})
 }
 
 func (c *Connect) Pause(ctx context.Context) error {
-	return c.sendDirectCommand(ctx, "pause", nil)
+	return c.sendDirectCommand(ctx, newSimpleCommand(EndpointPause))
 }
 
 func (c *Connect) Next(ctx context.Context) error {
-	return c.sendDirectCommand(ctx, "skip_next", nil)
+	return c.sendDirectCommand(ctx, newSimpleCommand(EndpointSkipNext))
 }
 
 func (c *Connect) Previous(ctx context.Context) error {
-	return c.sendDirectCommand(ctx, "skip_prev", nil)
+	return c.sendDirectCommand(ctx, newSimpleCommand(EndpointSkipPrev))
 }
 
 func (c *Connect) Seek(ctx context.Context, positionMS int) error {
 	if positionMS < 0 {
 		positionMS = 0
 	}
-	return c.sendDirectCommand(ctx, "seek_to", newSeekCommand(positionMS))
+	return c.sendDirectCommand(ctx, newSeekCommand(positionMS))
 }
 
 func (c *Connect) Volume(ctx context.Context, volume int) error {
@@ -94,17 +94,17 @@ func (c *Connect) Volume(ctx context.Context, volume int) error {
 }
 
 func (c *Connect) Shuffle(ctx context.Context, enabled bool) error {
-	return c.sendDirectCommand(ctx, "set_shuffling_context", newShuffleCommand(enabled))
+	return c.sendDirectCommand(ctx, newShuffleCommand(enabled))
 }
 
-// Repeat sets the repeat mode: "track", "context" or anything else for off.
-func (c *Connect) Repeat(ctx context.Context, mode string) error {
+// Repeat sets the repeat mode.
+func (c *Connect) Repeat(ctx context.Context, mode RepeatMode) error {
 	repeatingTrack, repeatingContext := repeatFlags(mode)
-	return c.sendDirectCommand(ctx, "set_options", newSetOptionsCommand(repeatingTrack, repeatingContext))
+	return c.sendDirectCommand(ctx, newSetOptionsCommand(repeatingTrack, repeatingContext))
 }
 
 func (c *Connect) QueueAdd(ctx context.Context, uri string) error {
-	return c.sendDirectCommand(ctx, "add_to_queue", newAddToQueueCommand(uri))
+	return c.sendDirectCommand(ctx, newAddToQueueCommand(uri))
 }
 
 // Transfer moves playback to the device identified by deviceID.
@@ -128,17 +128,10 @@ func (c *Connect) Transfer(ctx context.Context, deviceID string) error {
 	})
 }
 
-func (c *Connect) sendDirectCommand(
-	ctx context.Context,
-	endpoint string,
-	payload any,
-) error {
-	if payload == nil {
-		payload = newSimpleCommand(endpoint)
-	}
+func (c *Connect) sendDirectCommand(ctx context.Context, payload endpointPayload) error {
 	fromID, toID, ok := c.commandRoute()
 	if !ok {
-		return c.sendStateCommand(ctx, endpoint, payload)
+		return c.sendStateCommand(ctx, payload)
 	}
 	base, err := c.connectStateBase()
 	if err != nil {
@@ -149,18 +142,14 @@ func (c *Connect) sendDirectCommand(
 		if !isBenignDeviceError(err) {
 			return err
 		}
-		return c.sendStateCommand(ctx, endpoint, payload)
+		return c.sendStateCommand(ctx, payload)
 	}
 	return nil
 }
 
-func (c *Connect) sendStateCommand(
-	ctx context.Context,
-	endpoint string,
-	payload any,
-) error {
+func (c *Connect) sendStateCommand(ctx context.Context, payload endpointPayload) error {
 	return withStateErr(ctx, c, func(state State) error {
-		return c.sendPlayerCommand(ctx, state, endpoint, payload)
+		return c.sendPlayerCommand(ctx, state, payload)
 	})
 }
 
@@ -214,11 +203,11 @@ func clampVolume(volume int) int {
 	return volume
 }
 
-func repeatFlags(mode string) (track, context bool) {
-	switch strings.ToLower(mode) {
-	case "track":
+func repeatFlags(mode RepeatMode) (track, context bool) {
+	switch mode {
+	case RepeatTrack:
 		return true, false
-	case "context":
+	case RepeatContext:
 		return false, true
 	default:
 		return false, false

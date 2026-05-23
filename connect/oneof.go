@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	ErrWrongMediaType = errors.New("connect: wrong media type — use Has*() before accessor")
+	ErrWrongMediaType = errors.New("connect: wrong media type - use Has*() before accessor")
 	ErrUnknownMedia   = errors.New("connect: unknown media type")
 )
 

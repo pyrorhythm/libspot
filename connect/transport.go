@@ -215,12 +215,8 @@ func (c *Connect) doRequest(
 func (c *Connect) sendPlayerCommand(
 	ctx context.Context,
 	state State,
-	endpoint string,
-	payload any,
+	payload endpointPayload,
 ) error {
-	if payload == nil {
-		payload = newSimpleCommand(endpoint)
-	}
 	fromID := state.OriginDeviceID
 	if fromID == "" {
 		c.mu.Lock()
@@ -244,7 +240,7 @@ func (c *Connect) sendPlayerCommand(
 func (c *Connect) sendConnectCommand(
 	ctx context.Context,
 	url string,
-	payload any,
+	payload connectBody,
 ) error {
 	return c.sendConnectRequest(ctx, http.MethodPost, url, payload)
 }
@@ -252,7 +248,7 @@ func (c *Connect) sendConnectCommand(
 func (c *Connect) sendConnectRequest(
 	ctx context.Context,
 	method, url string,
-	payload any,
+	payload connectBody,
 ) error {
 	err := c.doRequest(ctx, method, url, connectHeaders(), mustJSON(payload))
 	if err != nil {

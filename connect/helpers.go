@@ -17,7 +17,7 @@ func randomID() string {
 	return hex.EncodeToString(buf)
 }
 
-func mustJSON(payload any) []byte {
+func mustJSON(payload connectBody) []byte {
 	data, _ := json.Marshal(payload)
 	return data
 }

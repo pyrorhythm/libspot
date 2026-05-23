@@ -17,11 +17,12 @@ func File[T any](key string) keychain.Keychainer[T] {
 	return keychain.NewFileKeychainer[T](storeDir(), key)
 }
 
-func FileCustomDir[T any](key, dir string) keychain.Keychainer[T] {
-	return keychain.NewFileKeychainer[T](dir, key)
-}
-
 func storeDir() string {
+	envdir := os.Getenv("LIBSPOT_ROOT")
+	if envdir != "" {
+		return envdir
+	}
+
 	home, err := os.UserHomeDir()
 	if err != nil {
 		return ".libspot"
