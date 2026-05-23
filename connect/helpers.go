@@ -22,7 +22,8 @@ func mustJSON(payload any) []byte {
 	return data
 }
 
-func isRouteStaleError(err error) bool {
+// isBenignDeviceError reports API responses that mean the device or route is already gone.
+func isBenignDeviceError(err error) bool {
 	var e APIError
 	if !errors.As(err, &e) {
 		return false

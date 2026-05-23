@@ -25,7 +25,6 @@ type DelayConfig struct {
 	Cap int64
 }
 
-//goland:noinspection GoNameStartsWithPackageName
 type Dealer struct {
 	prov  libspot.TokenProvider
 	rslv  libspot.EndpointResolver
@@ -49,6 +48,7 @@ type Dealer struct {
 
 	running    atomic.Bool
 	cancelLoop context.CancelFunc
+	done       chan struct{}
 }
 
 var commonDelayCfg = &DelayConfig{
@@ -167,6 +167,7 @@ func (d *Dealer) Start(ctx context.Context) error {
 
 	ctx, cancel := context.WithCancel(ctx)
 	d.cancelLoop = cancel
+	d.done = make(chan struct{})
 
 	go d.loop(ctx)
 
@@ -178,11 +179,34 @@ func (d *Dealer) Start(ctx context.Context) error {
 }
 
 func (d *Dealer) Stop() error {
+	return d.Goodbye(context.Background())
+}
+
+// Goodbye closes the live websocket gracefully and stops the reconnect loop.
+func (d *Dealer) Goodbye(ctx context.Context) error {
 	if !d.running.CompareAndSwap(true, false) {
 		return nil
 	}
-	d.cancelLoop()
-	return nil
+
+	d.connMu.Lock()
+	if c := d.conn; c != nil {
+		c.goodbye()
+	}
+	d.connMu.Unlock()
+
+	if d.cancelLoop != nil {
+		d.cancelLoop()
+	}
+
+	if d.done == nil {
+		return nil
+	}
+	select {
+	case <-d.done:
+		return nil
+	case <-ctx.Done():
+		return ctx.Err()
+	}
 }
 
 func (d *Dealer) Send(msg []byte) error {

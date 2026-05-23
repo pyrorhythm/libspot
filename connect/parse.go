@@ -1,6 +1,8 @@
 package connect
 
 import (
+	"time"
+
 	"github.com/pkg/errors"
 	"github.com/valyala/fastjson"
 )
@@ -22,12 +24,43 @@ func parseState(body []byte) (State, error) {
 	if state.ActiveDeviceID == "" {
 		state.ActiveDeviceID = detectActiveDeviceID(val.Get("devices"))
 	}
-	if player := val.Get("player_state"); player != nil {
-		state.Player = parsePlayerState(player)
+	if player := extractConnectPlayerJSON(val); player != nil {
+		state.Player = parseConnectPlayer(player)
 		state.OriginDeviceID = playOriginDeviceID(player)
 	}
 
 	return state, nil
+}
+
+// extractConnectPlayerJSON locates the connect player snapshot in a connect-state body.
+// Spotify may return it at the root (track, context_uri, …) or nested under player_state / cluster.
+func extractConnectPlayerJSON(val *fastjson.Value) *fastjson.Value {
+	if val == nil {
+		return nil
+	}
+	if ps := val.Get("player_state"); ps != nil && ps.Type() == fastjson.TypeObject {
+		return ps
+	}
+	if cluster := val.Get("cluster"); cluster != nil {
+		if ps := cluster.Get("player_state"); ps != nil && ps.Type() == fastjson.TypeObject {
+			return ps
+		}
+	}
+	if looksLikeConnectPlayerJSON(val) {
+		return val
+	}
+	return nil
+}
+
+func looksLikeConnectPlayerJSON(v *fastjson.Value) bool {
+	if v == nil || v.Type() != fastjson.TypeObject {
+		return false
+	}
+	if track := v.Get("track"); track != nil && track.Type() == fastjson.TypeObject {
+		return true
+	}
+	return v.Get("context_uri").Exists() &&
+		(v.Get("is_playing").Exists() || v.Get("is_paused").Exists() || v.Get("position_as_of_timestamp").Exists())
 }
 
 func parseDevices(devices *fastjson.Value, activeID string) []Device {
@@ -53,8 +86,8 @@ func parseDevice(id string, v *fastjson.Value, active bool) Device {
 	}
 	device.Type = string(v.Get("device_type").GetStringBytes())
 	device.Volume = normalizeConnectVolume(
-		v.Get("volume").GetInt(),
-		v.Get("volume_percent").GetInt(),
+		jsonInt(v.Get("volume")),
+		jsonInt(v.Get("volume_percent")),
 	)
 	return device
 }
@@ -84,29 +117,79 @@ func playOriginDeviceID(player *fastjson.Value) string {
 	return string(player.Get("play_origin", "device_identifier").GetStringBytes())
 }
 
-func parsePlayerState(player *fastjson.Value) *PlayerState {
+func parseConnectPlayer(player *fastjson.Value) *PlayerState {
 	if player == nil || player.Type() != fastjson.TypeObject {
 		return nil
 	}
+
 	ps := &PlayerState{
-		Shuffle: player.Get("shuffle").GetBool(),
-		Repeat:  string(player.Get("repeat_mode").GetStringBytes()),
+		IsPlaying:  parseIsPlaying(player),
+		Shuffle:    parseShuffle(player),
+		Repeat:     parseRepeat(player),
+		ProgressMS: extrapolateProgress(player),
+		DurationMS: jsonInt(player.Get("duration")),
+		NowPlaying: parseNowPlaying(player),
+		UpNext:     parseUpNext(player.Get("next_tracks")),
 	}
-	if ps.Repeat == "" {
-		ps.Repeat = string(player.Get("repeat").GetStringBytes())
-	}
-	if player.Get("is_paused").Exists() {
-		ps.IsPlaying = !player.Get("is_paused").GetBool()
-	} else {
-		ps.IsPlaying = player.Get("is_playing").GetBool()
-	}
-	ps.ProgressMS = player.Get("position_as_of_timestamp").GetInt()
-	if ps.ProgressMS == 0 {
-		ps.ProgressMS = player.Get("position_ms").GetInt()
-	}
-	ps.NowPlaying = parseNowPlaying(player)
-	ps.UpNext = parseUpNext(player.Get("next_tracks"))
 	return ps
+}
+
+// parseIsPlaying treats is_paused as authoritative when present (Spotify may send both flags).
+func parseIsPlaying(player *fastjson.Value) bool {
+	if player.Get("is_paused").Exists() {
+		return !player.Get("is_paused").GetBool()
+	}
+	return player.Get("is_playing").GetBool()
+}
+
+func parseShuffle(player *fastjson.Value) bool {
+	if player.Get("shuffle").Exists() {
+		return player.Get("shuffle").GetBool()
+	}
+	return player.Get("options", "shuffling_context").GetBool()
+}
+
+func parseRepeat(player *fastjson.Value) string {
+	if r := string(player.Get("repeat_mode").GetStringBytes()); r != "" {
+		return r
+	}
+	if r := string(player.Get("repeat").GetStringBytes()); r != "" {
+		return r
+	}
+	opts := player.Get("options")
+	if opts == nil {
+		return ""
+	}
+	if opts.Get("repeating_track").GetBool() {
+		return "track"
+	}
+	if opts.Get("repeating_context").GetBool() {
+		return "context"
+	}
+	return "off"
+}
+
+func extrapolateProgress(player *fastjson.Value) int {
+	pos := jsonInt(player.Get("position_as_of_timestamp"))
+	if pos == 0 {
+		pos = jsonInt(player.Get("position_ms"))
+	}
+	if !parseIsPlaying(player) {
+		return pos
+	}
+	ts := jsonInt64(player.Get("timestamp"))
+	if ts <= 0 {
+		return pos
+	}
+	now := time.Now().UnixMilli()
+	if now <= ts {
+		return pos
+	}
+	pos += int(now - ts)
+	if dur := jsonInt(player.Get("duration")); dur > 0 && pos > dur {
+		return dur
+	}
+	return pos
 }
 
 func parseNowPlaying(player *fastjson.Value) *MediaOneof {
@@ -130,11 +213,32 @@ func parseUpNext(next *fastjson.Value) []MediaOneof {
 	}
 	out := make([]MediaOneof, 0, len(arr))
 	for _, entry := range arr {
+		if isSkippedQueueEntry(entry) {
+			continue
+		}
 		if o, ok := parseMediaOneof(entry); ok {
 			out = append(out, *o)
 		}
 	}
 	return out
+}
+
+func isSkippedQueueEntry(v *fastjson.Value) bool {
+	if v == nil {
+		return true
+	}
+	uri := string(v.Get("uri").GetStringBytes())
+	if uri == "" {
+		return true
+	}
+	kind := typeFromURI(uri)
+	if kind != string(mediaTrack) && kind != string(mediaEpisode) {
+		return true
+	}
+	if string(v.Get("metadata", "hidden").GetStringBytes()) == "true" {
+		return true
+	}
+	return false
 }
 
 func parseMediaOneof(v *fastjson.Value) (*MediaOneof, bool) {
@@ -145,22 +249,30 @@ func parseMediaOneof(v *fastjson.Value) (*MediaOneof, bool) {
 	if uri == "" {
 		uri = string(v.Get("metadata", "uri").GetStringBytes())
 	}
-	if uri == "" {
+	if uri == "" || isSkippedQueueEntry(v) {
 		return nil, false
 	}
+	meta := v.Get("metadata")
 	name := string(v.Get("name").GetStringBytes())
-	album := string(v.Get("metadata", "album_title").GetStringBytes())
-	var artists []string
-	if artist := string(v.Get("metadata", "artist_name").GetStringBytes()); artist != "" {
-		artists = []string{artist}
-	}
 	if name == "" {
-		name = string(v.Get("metadata", "title").GetStringBytes())
+		name = string(meta.Get("title").GetStringBytes())
 	}
+	album := string(meta.Get("album_title").GetStringBytes())
+	artists := parseArtists(meta)
 	if typeFromURI(uri) == string(mediaEpisode) {
 		return PartialEpisode(idFromURI(uri), uri, name), true
 	}
 	return PartialTrack(idFromURI(uri), uri, name, album, artists), true
+}
+
+func parseArtists(meta *fastjson.Value) []string {
+	if meta == nil {
+		return nil
+	}
+	if artist := string(meta.Get("artist_name").GetStringBytes()); artist != "" {
+		return []string{artist}
+	}
+	return nil
 }
 
 func mapPlayback(state State) Playback {
@@ -168,6 +280,7 @@ func mapPlayback(state State) Playback {
 	if state.Player != nil {
 		pb.IsPlaying = state.Player.IsPlaying
 		pb.ProgressMS = state.Player.ProgressMS
+		pb.DurationMS = state.Player.DurationMS
 		pb.Shuffle = state.Player.Shuffle
 		pb.Repeat = state.Player.Repeat
 		if state.Player.NowPlaying != nil {

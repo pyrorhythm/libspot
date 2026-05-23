@@ -10,6 +10,8 @@ import (
 )
 
 func (d *Dealer) loop(ctx context.Context) {
+	defer close(d.done)
+
 	var globalAttempt int64
 
 	for {

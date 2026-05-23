@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"runtime"
+	"strconv"
 	"time"
 
 	"github.com/pkg/errors"
@@ -107,6 +108,110 @@ func (c *Connect) registerDevice(ctx context.Context, connectionID string) error
 	return nil
 }
 
+func (c *Connect) ownedDevice() (deviceID, connectionID string, ok bool) {
+	c.mu.Lock()
+	deviceID = c.connectDeviceID
+	c.mu.Unlock()
+	if deviceID == "" {
+		return "", "", false
+	}
+	// Best-effort during shutdown; connect-state DELETE still works without it.
+	connectionID, _ = c.connectionID()
+	return deviceID, connectionID, true
+}
+
+func connectStateDeviceHeaders(connectionID string) map[string]string {
+	headers := connectHeaders()
+	if connectionID != "" {
+		headers["x-spotify-connection-id"] = connectionID
+	}
+	return headers
+}
+
+func hobsDeviceID(deviceID string) string {
+	return fmt.Sprintf("hobs_%s", deviceID)
+}
+
+func (c *Connect) markInactive(
+	ctx context.Context,
+	deviceID, connectionID string,
+	notify bool,
+) error {
+	base, err := c.connectStateBase()
+	if err != nil {
+		return err
+	}
+	url := fmt.Sprintf(
+		"%s/devices/%s/inactive?notify=%s",
+		base,
+		hobsDeviceID(deviceID),
+		strconv.FormatBool(notify),
+	)
+	err = c.doRequest(ctx, http.MethodPut, url, connectStateDeviceHeaders(connectionID), nil)
+	if err != nil && !isBenignDeviceError(err) {
+		return errors.Wrap(err, "connect: mark inactive")
+	}
+	return nil
+}
+
+func (c *Connect) deleteConnectStateDevice(
+	ctx context.Context,
+	deviceID, connectionID string,
+) error {
+	base, err := c.connectStateBase()
+	if err != nil {
+		return err
+	}
+	url := fmt.Sprintf("%s/devices/%s", base, hobsDeviceID(deviceID))
+	err = c.doRequest(ctx, http.MethodDelete, url, connectStateDeviceHeaders(connectionID), nil)
+	if err != nil && !isBenignDeviceError(err) {
+		return errors.Wrap(err, "connect: delete connect-state device")
+	}
+	return nil
+}
+
+func (c *Connect) deleteTrackPlaybackDevice(ctx context.Context, deviceID string) error {
+	base, err := c.trackPlaybackBase()
+	if err != nil {
+		return err
+	}
+	url := fmt.Sprintf("%s/devices/%s", base, deviceID)
+	err = c.doRequest(ctx, http.MethodDelete, url, connectHeaders(), nil)
+	if err != nil && !isBenignDeviceError(err) {
+		return errors.Wrap(err, "connect: delete track-playback device")
+	}
+	return nil
+}
+
+func (c *Connect) forgetLocalDevice() {
+	c.mu.Lock()
+	c.connectDeviceID = ""
+	c.lastCID = ""
+	c.registeredAt = time.Time{}
+	c.mu.Unlock()
+	c.invalidateCommandRoute()
+}
+
+func (c *Connect) doRequest(
+	ctx context.Context,
+	method, url string,
+	headers map[string]string,
+	body []byte,
+) error {
+	req := c.http.R().SetContext(ctx).SetMethod(method).SetURL(url).SetHeaders(headers)
+	if body != nil {
+		req = req.SetBody(body)
+	}
+	resp, err := req.Send()
+	if err != nil {
+		return err
+	}
+	if resp.StatusCode() >= 200 && resp.StatusCode() < 300 {
+		return nil
+	}
+	return newAPIError(resp.StatusCode(), resp.Bytes())
+}
+
 func (c *Connect) sendPlayerCommand(
 	ctx context.Context,
 	state State,
@@ -149,19 +254,10 @@ func (c *Connect) sendConnectRequest(
 	method, url string,
 	payload any,
 ) error {
-	resp, err := c.http.R().SetContext(ctx).
-		SetMethod(method).
-		SetURL(url).
-		SetHeaders(connectHeaders()).
-		SetBody(mustJSON(payload)).
-		Send()
+	err := c.doRequest(ctx, method, url, connectHeaders(), mustJSON(payload))
 	if err != nil {
 		c.invalidateCommandRoute()
 		return errors.Wrap(err, "connect: send command")
-	}
-	if resp.StatusCode() < 200 || resp.StatusCode() >= 300 {
-		c.invalidateCommandRoute()
-		return newAPIError(resp.StatusCode(), resp.Bytes())
 	}
 	return nil
 }

@@ -2,6 +2,7 @@ package connect
 
 import (
 	"context"
+	stderrors "errors"
 	"fmt"
 	"net/http"
 	"strings"
@@ -145,7 +146,7 @@ func (c *Connect) sendDirectCommand(
 	}
 	url := fmt.Sprintf("%s/player/command/from/%s/to/%s", base, fromID, toID)
 	if err := c.sendConnectCommand(ctx, url, payload); err != nil {
-		if !isRouteStaleError(err) {
+		if !isBenignDeviceError(err) {
 			return err
 		}
 		return c.sendStateCommand(ctx, endpoint, payload)
@@ -222,4 +223,37 @@ func repeatFlags(mode string) (track, context bool) {
 	default:
 		return false, false
 	}
+}
+
+// MarkInactive marks the hidden connect-state member inactive without removing it.
+// notify controls whether other Connect clients receive an update.
+func (c *Connect) MarkInactive(ctx context.Context, notify bool) error {
+	deviceID, connectionID, ok := c.ownedDevice()
+	if !ok {
+		return nil
+	}
+	return c.markInactive(ctx, deviceID, connectionID, notify)
+}
+
+// Disconnect removes the libspot member from connect-state and track-playback and
+// clears local registration state so a later State() can re-register.
+//
+// Typical shutdown: MarkInactive(ctx, false), then Disconnect(ctx), then
+// dealer.Goodbye(ctx). Reversing that order can leave a stale libspot device in
+// the Spotify UI.
+func (c *Connect) Disconnect(ctx context.Context) error {
+	deviceID, connectionID, ok := c.ownedDevice()
+	if !ok {
+		return nil
+	}
+
+	var errs []error
+	if err := c.deleteConnectStateDevice(ctx, deviceID, connectionID); err != nil {
+		errs = append(errs, err)
+	}
+	if err := c.deleteTrackPlaybackDevice(ctx, deviceID); err != nil {
+		errs = append(errs, err)
+	}
+	c.forgetLocalDevice()
+	return stderrors.Join(errs...)
 }

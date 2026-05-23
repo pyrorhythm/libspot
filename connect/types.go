@@ -21,6 +21,7 @@ type Device struct {
 type PlayerState struct {
 	IsPlaying  bool
 	ProgressMS int
+	DurationMS int
 	Shuffle    bool
 	Repeat     string
 	NowPlaying *MediaOneof
@@ -32,6 +33,7 @@ type PlayerState struct {
 type Playback struct {
 	IsPlaying  bool
 	ProgressMS int
+	DurationMS int
 	Shuffle    bool
 	Repeat     string
 	NowPlaying *MediaItem

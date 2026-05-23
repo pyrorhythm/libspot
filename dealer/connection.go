@@ -198,6 +198,16 @@ func (c *conn) Close() error {
 	return nil
 }
 
+// goodbye ends the websocket with a normal close frame before cancelling loops.
+func (c *conn) goodbye() {
+	if c.ws != nil {
+		_ = c.ws.Close(ws.StatusNormalClosure, "goodbye")
+	}
+	if c.cancel != nil {
+		c.cancel()
+	}
+}
+
 func (c *conn) closeWS() {
 	c.ws.CloseNow()
 }
