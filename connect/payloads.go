@@ -331,9 +331,12 @@ func newRegisterDevicePayload(deviceID, connectionID, platformID string) Registe
 				SupportsFileMediaType: true,
 				EnablePlayToken:       true,
 				PlayTokenLostBehavior: PlayTokenLostPause,
-				DisableConnect:        false,
-				AudioPodcasts:         true,
-				VideoPlayback:         true,
+				// DisableConnect keeps this member out of the Spotify Connect
+				// device picker: it is a hidden observer that only reads state
+				// and issues commands, never advertised as a playback target.
+				DisableConnect: true,
+				AudioPodcasts:  true,
+				VideoPlayback:  true,
 				ManifestFormats: []string{
 					ManifestFormatFileIDsMP3,
 					ManifestFormatFileURLsMP3,

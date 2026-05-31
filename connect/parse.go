@@ -128,6 +128,7 @@ func parseConnectPlayer(player *fastjson.Value) *PlayerState {
 		Repeat:     parseRepeat(player),
 		ProgressMS: extrapolateProgress(player),
 		DurationMS: jsonInt(player.Get("duration")),
+		ContextURI: string(player.Get("context_uri").GetStringBytes()),
 		NowPlaying: parseNowPlaying(player),
 		UpNext:     parseUpNext(player.Get("next_tracks")),
 	}
@@ -283,6 +284,7 @@ func mapPlayback(state State) Playback {
 		pb.DurationMS = state.Player.DurationMS
 		pb.Shuffle = state.Player.Shuffle
 		pb.Repeat = state.Player.Repeat
+		pb.ContextURI = state.Player.ContextURI
 		if state.Player.NowPlaying != nil {
 			item := state.Player.NowPlaying.Item()
 			pb.NowPlaying = &item

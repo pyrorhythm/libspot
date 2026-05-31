@@ -24,6 +24,7 @@ type PlayerState struct {
 	DurationMS int
 	Shuffle    bool
 	Repeat     string
+	ContextURI string
 	NowPlaying *MediaOneof
 	UpNext     []MediaOneof
 }
@@ -36,6 +37,7 @@ type Playback struct {
 	DurationMS int
 	Shuffle    bool
 	Repeat     string
+	ContextURI string
 	NowPlaying *MediaItem
 	Device     Device
 }
