@@ -5,6 +5,7 @@ import { cp, mkdir, readdir, rm, stat } from "fs/promises";
 import { basename, dirname, extname, join } from "path";
 import { fileURLToPath } from "url";
 
+
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const ROOT = SCRIPT_DIR;
 const IN = "proto";
