@@ -20,6 +20,7 @@ import (
 	"google.golang.org/protobuf/proto"
 	"pyrorhythm.dev/libspot/audio/dh"
 	pb "pyrorhythm.dev/libspot/gen/spotify"
+	"pyrorhythm.dev/libspot/pkg/transport"
 )
 
 const pongAckInterval = 120 * time.Second
@@ -86,11 +87,10 @@ func (ap *Accesspoint) init(ctx context.Context) (err error) {
 	}
 
 	// open connection to accesspoint
-	var dialer net.Dialer
 	for attempts := 1; ; attempts++ {
 		ctx_, cancel := context.WithTimeout(ctx, time.Second*30)
 		addr := ap.addr(ctx_)
-		conn, err := dialer.DialContext(ctx_, "tcp", addr)
+		conn, err := transport.DialContext(ctx_, "tcp", addr)
 		cancel()
 		if err == nil {
 			ap.conn = conn

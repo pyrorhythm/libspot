@@ -10,6 +10,7 @@ import (
 	"pyrorhythm.dev/libspot"
 	datav0 "pyrorhythm.dev/libspot/gen/spotify/clienttoken/data/v0"
 	httpv0 "pyrorhythm.dev/libspot/gen/spotify/clienttoken/http/v0"
+	"pyrorhythm.dev/libspot/pkg/transport"
 	"resty.dev/v3"
 )
 
@@ -24,7 +25,7 @@ func retrieveClientToken(deviceId string) (string, error) {
 		return "", fmt.Errorf("failed marshalling ClientTokenRequest: %w", err)
 	}
 
-	resp, err := resty.New().R().
+	resp, err := resty.NewWithClient(transport.HTTPClient(0)).R().
 		SetHeaderMultiValues(map[string][]string{
 			"Accept":     {"application/x-protobuf"},
 			"User-Agent": {fmt.Sprintf("libspot/0.0.0 Go/%s", runtime.Version())},

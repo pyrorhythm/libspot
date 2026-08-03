@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"pyrorhythm.dev/libspot"
+	libtransport "pyrorhythm.dev/libspot/pkg/transport"
 	"resty.dev/v3"
 )
 
@@ -34,7 +35,7 @@ func (a *authorizedCBImpl) CanRefreshAccessToken(b bool) authorizedClientBuilder
 
 func (a *authorizedCBImpl) Transport() http.RoundTripper {
 	if a.setts.baseTransport == nil {
-		a.setts.baseTransport = http.DefaultTransport
+		a.setts.baseTransport = libtransport.RoundTripper()
 	}
 
 	return &transport{prov: a.prov, transportSettings: a.setts}

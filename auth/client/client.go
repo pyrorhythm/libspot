@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"pyrorhythm.dev/libspot"
+	libtransport "pyrorhythm.dev/libspot/pkg/transport"
 	"resty.dev/v3"
 )
 
@@ -21,7 +22,6 @@ type AuthorizedClient struct {
 
 func defaults(ac *AuthorizedClient) {
 	ac.baseSettings = &transportSettings{
-		baseTransport:         http.DefaultTransport,
 		injectClientToken:     true,
 		injectAccessToken:     true,
 		canRefreshAccessToken: false,
@@ -49,7 +49,7 @@ func (a *AuthorizedClient) Transport() http.RoundTripper {
 	setts := *a.baseSettings
 
 	if setts.baseTransport == nil {
-		setts.baseTransport = http.DefaultTransport
+		setts.baseTransport = libtransport.RoundTripper()
 	}
 
 	return &transport{prov: a.prov, transportSettings: setts}

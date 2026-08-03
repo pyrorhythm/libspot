@@ -10,6 +10,7 @@ import (
 
 	ws "github.com/coder/websocket"
 	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/pkg/transport"
 )
 
 var ErrEndpointRetriesExceeded = errors.New("dealer: endpoint retries exceeded")
@@ -77,7 +78,7 @@ func (d *Dealer) connectEndpoint(ctx context.Context, endpoint string) (*ws.Conn
 	url := "wss://" + strings.TrimPrefix(endpoint, "https://")
 
 	conn, _, err := ws.Dial(ctx, url, &ws.DialOptions{
-		HTTPClient: &http.Client{Timeout: 45 * time.Second},
+		HTTPClient: transport.HTTPClient(45 * time.Second),
 		HTTPHeader: http.Header{
 			"Authorization": {"Bearer " + token},
 		},

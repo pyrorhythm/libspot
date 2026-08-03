@@ -12,6 +12,7 @@ import (
 	"pyrorhythm.dev/fn"
 	"pyrorhythm.dev/fn/bjs"
 	"pyrorhythm.dev/libspot"
+	"pyrorhythm.dev/libspot/pkg/transport"
 	"resty.dev/v3"
 )
 
@@ -106,5 +107,9 @@ func (t *fetcher) Fetch(kinds ...libspot.ServiceKind) (libspot.Endpoints, error)
 }
 
 func New(clientToken string) libspot.EndpointResolver {
-	return &fetcher{client: resty.New(), clientToken: clientToken, endpoints: &endpoints{}}
+	return &fetcher{
+		client:      resty.NewWithClient(transport.HTTPClient(0)),
+		clientToken: clientToken,
+		endpoints:   &endpoints{},
+	}
 }

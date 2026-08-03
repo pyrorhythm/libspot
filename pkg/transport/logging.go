@@ -11,7 +11,11 @@ import (
 )
 
 // LoggingTransport is an http.RoundTripper that logs request and response bodies.
-type LoggingTransport struct{}
+type LoggingTransport struct {
+	// Base carries the request. When nil, RoundTripper() is used, so the
+	// configured proxy and dialer apply.
+	Base http.RoundTripper
+}
 
 func (s *LoggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 	id := uuid.Must(uuid.NewV7())
@@ -32,7 +36,12 @@ func (s *LoggingTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 		"body", string(body),
 	)
 
-	resp, err := http.DefaultTransport.RoundTrip(r)
+	base := s.Base
+	if base == nil {
+		base = RoundTripper()
+	}
+
+	resp, err := base.RoundTrip(r)
 	if err != nil {
 		return nil, err
 	}
