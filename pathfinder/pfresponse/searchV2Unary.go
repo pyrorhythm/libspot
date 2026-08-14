@@ -3,37 +3,37 @@ package pfresponse
 import pfd "pyrorhythm.dev/libspot/pathfinder/pfdomain"
 
 type SearchV2Albums struct {
-	*Items[pfd.Album] `json:"albumsV2,omitempty"`
+	*Wrapped[pfd.Album] `json:"albumsV2,omitempty"`
 
 	Query string `json:"query"`
 }
 
 type SearchV2Artists struct {
-	*Items[pfd.Artist] `json:"artists,omitempty"`
+	*Wrapped[pfd.Artist] `json:"artists,omitempty"`
 
 	Query string `json:"query"`
 }
 
 type SearchV2Genres struct {
-	*Items[pfd.Genre] `json:"genres,omitempty"`
+	*Wrapped[pfd.Genre] `json:"genres,omitempty"`
 
 	Query string `json:"query"`
 }
 
 type SearchV2Playlists struct {
-	*Items[pfd.Playlist] `json:"playlists,omitempty"`
+	*Wrapped[pfd.Playlist] `json:"playlists,omitempty"`
 
 	Query string `json:"query"`
 }
 
 type SearchV2Episodes struct {
-	*Items[pfd.Episode] `json:"podcasts,omitempty"`
+	*Wrapped[pfd.Episode] `json:"podcasts,omitempty"`
 
 	Query string `json:"query"`
 }
 
 type SearchV2Podcasts struct {
-	*Items[pfd.Podcast] `json:"podcasts,omitempty"`
+	*Wrapped[pfd.Podcast] `json:"podcasts,omitempty"`
 
 	Query string `json:"query"`
 }
@@ -45,7 +45,7 @@ type SearchV2Tracks struct {
 }
 
 type SearchV2Users struct {
-	*Items[pfd.User] `json:"users,omitempty"`
+	*Wrapped[pfd.User] `json:"users,omitempty"`
 
 	Query string `json:"query"`
 }

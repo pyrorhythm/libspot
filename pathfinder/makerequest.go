@@ -2,8 +2,7 @@ package pathfinder
 
 import (
 	"context"
-
-	"github.com/pkg/errors"
+	"fmt"
 
 	"github.com/cenkalti/backoff/v5"
 	"pyrorhythm.dev/libspot"
@@ -11,6 +10,19 @@ import (
 	pfs "pyrorhythm.dev/libspot/pathfinder/pfresponse"
 	"resty.dev/v3"
 )
+
+const maxErrorBody = 512
+
+func responseError(resp *resty.Response) error {
+	body := resp.Bytes()
+	if len(body) > maxErrorBody {
+		body = body[:maxErrorBody]
+	}
+	if len(body) == 0 {
+		return fmt.Errorf("pathfinder: %s", resp.Status())
+	}
+	return fmt.Errorf("pathfinder: %s: %s", resp.Status(), body)
+}
 
 func (p *Pathfinder) makeRequest(
 	ctx context.Context,
@@ -40,16 +52,12 @@ func (p *Pathfinder) makeRequest(
 				return nil, backoff.Permanent(err)
 			}
 
-			if resp.StatusCode() == 401 {
-				return nil, backoff.Permanent(errors.New("unauthorized"))
-			}
-
-			if resp.StatusCode() == 400 {
-				return nil, backoff.Permanent(errors.New("bad request"))
-			}
-
 			if resp.StatusCode() >= 500 {
 				return nil, backoff.RetryAfter(3)
+			}
+
+			if resp.StatusCode() != 200 {
+				return nil, backoff.Permanent(responseError(resp))
 			}
 
 			return resp, nil

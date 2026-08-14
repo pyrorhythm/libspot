@@ -42,6 +42,27 @@ func (l MatchedList[T]) Get() []*T {
 	return fn.Map(l.Items, func(i *MatchedItem[T]) *T { return i.Get() })
 }
 
+type WrappedItem[T any] struct {
+	Typename string `json:"__typename"`
+	Data     *T     `json:"data"`
+}
+
+func (w WrappedItem[T]) Get() *T {
+	return w.Data
+}
+
+type WrappedList[T any] struct {
+	Items []*WrappedItem[T] `json:"items"`
+}
+
+func (l WrappedList[T]) GetWrapped() []*WrappedItem[T] {
+	return l.Items
+}
+
+func (l WrappedList[T]) Get() []*T {
+	return fn.Map(l.Items, func(i *WrappedItem[T]) *T { return i.Get() })
+}
+
 type ItemList[T any] struct {
 	Items []*T `json:"items"`
 }

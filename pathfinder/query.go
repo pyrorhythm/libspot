@@ -108,15 +108,29 @@ func (p *Pathfinder) Playlists(
 	return resp.SearchV2.ToPlaylists(), nil
 }
 
+// Podcasts goes through the aggregated desktop search: the dedicated
+// searchPodcasts hash is rejected with 412 "Invalid query hash".
 func (p *Pathfinder) Podcasts(
 	ctx context.Context,
 	rq *pfq.BadgeRequestOpts,
 ) (*pfs.SearchV2Podcasts, error) {
-	resp, err := p.Query(ctx, pfq.BadgeSearchFromOpts(pfq.OpSearchPodcasts, rq))
+	resp, err := p.Query(ctx, pfq.SearchDesktopFromOpts(rq))
 	if err != nil {
 		return nil, err
 	}
 	return resp.SearchV2.ToPodcasts(), nil
+}
+
+// Desktop runs the aggregated search and returns every bucket at once.
+func (p *Pathfinder) Desktop(
+	ctx context.Context,
+	rq *pfq.SearchDesktopRequest,
+) (*pfs.SearchV2, error) {
+	resp, err := p.Query(ctx, rq)
+	if err != nil {
+		return nil, err
+	}
+	return resp.SearchV2, nil
 }
 
 func (p *Pathfinder) Episodes(

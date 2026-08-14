@@ -28,6 +28,12 @@ type Items[T any] struct {
 	PagingInfo `json:"pagingInfo"`
 }
 
+type Wrapped[T any] struct {
+	pfd.WrappedList[T]
+	pfd.TotalCount
+	PagingInfo `json:"pagingInfo"`
+}
+
 type ItemsV2[T any] struct {
 	pfd.ItemV2List[T]
 	pfd.TotalCount

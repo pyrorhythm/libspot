@@ -4,10 +4,11 @@ type QueryNpvArtistPayload struct {
 	ArtistUri string `json:"artistUri"`
 	TrackUri  string `json:"trackUri"`
 
-	ContributorsLimit        *int  `json:"contributorsLimit,omitempty"`
-	ContributorsOffset       *int  `json:"contributorsOffset,omitempty"`
-	EnableRelatedVideos      *bool `json:"enableRelatedVideos,omitempty"`
-	EnableRelatedAudioTracks *bool `json:"enableRelatedAudioTracks,omitempty"`
+	ContributorsLimit  *int `json:"contributorsLimit,omitempty"`
+	ContributorsOffset *int `json:"contributorsOffset,omitempty"`
+
+	EnableRelatedVideos      bool `json:"enableRelatedVideos"`
+	EnableRelatedAudioTracks bool `json:"enableRelatedAudioTracks"`
 }
 
 func (QueryNpvArtistPayload) Op() Operation {
@@ -29,11 +30,11 @@ func (o *QueryNpvArtistPayload) WithContributorsOffset(n int) *QueryNpvArtistPay
 }
 
 func (o *QueryNpvArtistPayload) WithRelatedVideos(v bool) *QueryNpvArtistPayload {
-	o.EnableRelatedVideos = &v
+	o.EnableRelatedVideos = v
 	return o
 }
 
 func (o *QueryNpvArtistPayload) WithRelatedAudioTracks(v bool) *QueryNpvArtistPayload {
-	o.EnableRelatedAudioTracks = &v
+	o.EnableRelatedAudioTracks = v
 	return o
 }

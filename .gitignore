@@ -13,6 +13,10 @@
 !.gitignore
 !.golangci.yml
 
+# Local live probes
+/pathfinder/live_test.go
+/probe.sh
+
 # Build files
 /.gocache
 /vcpkg
@@ -25,3 +29,4 @@ bun.lock
 tsconfig.json
 
 /go.sum
+/pathfinder/dump_test.go

@@ -30,6 +30,7 @@ const (
 	casePlaylist   caseOneof = "PlaylistResponseWrapper"
 	caseUser       caseOneof = "UserResponseWrapper"
 	caseGenre      caseOneof = "GenreResponseWrapper"
+	caseSection    caseOneof = "SearchSectionEntity"
 )
 
 type OneofMatched struct {
@@ -50,6 +51,7 @@ type Oneof struct {
 	playlist   *Playlist
 	user       *User
 	genre      *Genre
+	section    *SearchSection
 }
 
 func (o *Oneof) HasArtist() bool     { return o.typname == caseArtist }
@@ -61,6 +63,7 @@ func (o *Oneof) HasPlaylist() bool   { return o.typname == casePlaylist }
 func (o *Oneof) HasUser() bool       { return o.typname == caseUser }
 func (o *Oneof) HasGenre() bool      { return o.typname == caseGenre }
 func (o *Oneof) HasCompletion() bool { return o.typname == caseCompletion }
+func (o *Oneof) HasSection() bool    { return o.typname == caseSection }
 
 func (o *Oneof) GetArtist() *Artist               { return o.artist }
 func (o *Oneof) GetTrack() *Track                 { return o.track }
@@ -71,6 +74,7 @@ func (o *Oneof) GetPlaylist() *Playlist           { return o.playlist }
 func (o *Oneof) GetUser() *User                   { return o.user }
 func (o *Oneof) GetGenre() *Genre                 { return o.genre }
 func (o *Oneof) GetCompletion() *SearchCompletion { return o.completion }
+func (o *Oneof) GetSection() *SearchSection       { return o.section }
 
 func (o *Oneof) UnmarshalJSON(data []byte) error {
 	val, err := fastjson.ParseBytes(data)
@@ -105,6 +109,8 @@ func (o *Oneof) UnmarshalJSON(data []byte) error {
 		o.genre, err = bjs.Unmarshal[Genre](payload)
 	case caseUser:
 		o.user, err = bjs.Unmarshal[User](payload)
+	case caseSection:
+		o.section, err = bjs.Unmarshal[SearchSection](payload)
 	default:
 		return errors.Wrapf(ErrUnknownTypename, "typename=%q", o.typname)
 	}
@@ -142,6 +148,8 @@ func (o *Oneof) MarshalJSON() ([]byte, error) {
 		data = o.genre
 	case caseUser:
 		data = o.user
+	case caseSection:
+		data = o.section
 	default:
 		data = nil
 	}
